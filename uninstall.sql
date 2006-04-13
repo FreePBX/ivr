@@ -1,2 +1,2 @@
-DROP TABLE ivr;
-DROP TABLE ivr_dests;
+DROP TABLE IF EXISTS ivr;
+DROP TABLE IF EXISTS ivr_dests;
