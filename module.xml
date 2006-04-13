@@ -1,13 +1,13 @@
 <module>
 	<rawname>ivr</rawname>
 	<name>IVR</name>
-	<version>2.1</version>
+	<version>2.1.1</version>
 	<type>setup</type>
 	<category>Module</category>
 	<menuitems>
 		<ivr>Digital Receptionist</ivr>
 	</menuitems>
-	<location>release/ivr-2.1.tgz</location>
+	<location>release/ivr-2.1.1.tgz</location>
 	<info>http://freepbx.org/wiki/IVR</info>
-	<md5sum>8981ab494883ac14d0f24119defe93ff</md5sum>
+	<md5sum>9d0ec4085819d5bdd98ed3f7a913fbbc</md5sum>
 </module>
