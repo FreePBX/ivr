@@ -106,7 +106,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
         <h3><?php echo _("Edit Menu")." ".$ivr_details['displayname']; ?></h3>
 <?php 
 ?>
-        <form name="prompt" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+        <form name="prompt" action="<?php $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return prompt_onsubmit();">
         <input type="hidden" name="action" value="edited" />
         <input type="hidden" name="display" value="ivr" />
         <input type="hidden" name="id" value="<?php echo $id ?>" />
@@ -169,12 +169,14 @@ function ivr_show_edit($id, $nbroptions, $post) {
 ?>
 
         <tr><td colspan=2><hr /></td></tr>
-	<tr><td colspan=2>
-	<input name="increase" type="submit" value="<?php echo _("Increase Options")?>"></h6>
+	<tr><td colspan=2>	
+	<input name="increase" type="submit" value="<?php echo _("Increase Options")?>">
 	&nbsp;
-	<input name="Submit" type="submit" value="<?php echo _("Save")?>"></h6>
+	<input name="Submit" type="submit" value="<?php echo _("Save")?>">
 	&nbsp;
-	<input name="decrease" type="submit" value="<?php echo _("Decrease Options")?>"></h6>
+	<?php if ($nbroptions > 1) { ?>
+	<input name="decrease" type="submit" value="<?php echo _("Decrease Options")?>">
+	<?php } ?>
 	</td></tr>
         <tr><td colspan=2><hr /></td></tr>
 <?php
@@ -201,11 +203,52 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		echo "<input type='hidden' name='nbroptions' value=$nbroptions />\n";
 	} 
 ?>
-	<input name="increase" type="submit" value="<?php echo _("Increase Options")?>"></h6>
+	<input name="increase" type="submit" value="<?php echo _("Increase Options")?>">
 	&nbsp;
-	<input name="Submit" type="submit" value="<?php echo _("Save")?>"></h6>
+	<input name="Submit" type="submit" value="<?php echo _("Save")?>">
 	&nbsp;
-	<input name="decrease" type="submit" value="<?php echo _("Decrease Options")?>"></h6>
+	<?php if ($nbroptions > 1) { ?>
+	<input name="decrease" type="submit" value="<?php echo _("Decrease Options")?>">
+	<?php } ?>
+	
+	<script language="javascript">
+	<!--
+	
+	var theForm = document.prompt;
+	
+	function prompt_onsubmit() {
+		var msgInvalidOption = "<?php echo _("Invalid option"); ?>";
+		
+		defaultEmptyOK = true;
+
+		// go thru the form looking for options
+		// where the option isn't blank (as that will be removed) do the validation
+	    var allelems = theForm.elements;
+        if (allelems != null)
+        {
+        	var i, elem;
+            for (i = 0; elem = allelems[i]; i++)
+            {
+            	if (elem.type == 'text' && elem.name.indexOf('option') == 0)
+                {
+                	if (elem.value != '') {
+                    	if (!isIVROption(elem.value))
+                        	return warnInvalid(elem, msgInvalidOption);
+                        
+                        var gotoNum = elem.name.charAt(6);
+                        var isok = validateSingleDestination(theForm,gotoNum,true);
+                        if (!isok)
+                        	return false;
+                    }
+                 }
+          	}
+        }
+                              	
+		return true;
+	}
+	
+	//-->
+	</script>
         </form>
         </div>
 
@@ -228,7 +271,7 @@ function drawdestinations($count, $sel,  $dest) { ?>
 <?php
 }
 
-
+/* this should be in /admin/functions.inc.php
 function runModuleSQL($moddir,$type){
         global $db;
         $data='';
@@ -253,5 +296,6 @@ function runModuleSQL($moddir,$type){
                 return true;
 }
 
+*/
 
 ?>
