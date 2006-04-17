@@ -145,6 +145,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
                 <td><input type="checkbox" name="ena_directdial" <?php echo $ivr_details['enable_directdial'] ?>></td>
         </tr>
 <?php
+    $annmsg = isset($ivr_details['announcement'])?$ivr_details['announcement']:'';
 	if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
         <tr>
                 <td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller. To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
@@ -152,11 +153,10 @@ function ivr_show_edit($id, $nbroptions, $post) {
                         <select name="annmsg"/>
                         <?php
                                 $tresults = recordings_list();
-                                $annmsg = isset($ivr_details['announcement'])?$ivr_details['announcement']:'';
                                 echo '<option value="">'._("None")."</option>";
                                 if (isset($tresults[0])) {
                                         foreach ($tresults as $tresult) {
-                                                echo '<option value="'.$tresult[0].'"'.($tresult[0] == $annmsg ? ' SELECTED' : '').'>'.$tresult[1]."</option>\n";
+                                                echo '<option value="'.$tresult[2].'"'.($tresult[2] == $annmsg ? ' SELECTED' : '').'>'.$tresult[1]."</option>\n";
                                         }
                                 }
                         ?>
@@ -165,8 +165,21 @@ function ivr_show_edit($id, $nbroptions, $post) {
         </tr>
 	
 <?php
+	} else {
+?>
+	<tr>
+                <td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option")?></span></a></td>
+                <td>&nbsp;
+			<?php
+				$default = (isset($annmsg) ? $annmsg : '');
+			?>
+			<input type="hidden" name="annmsg" value="<?php echo $default; ?>"><?php echo ($default != '' ? $default : 'None'); ?>
+		</td>
+	</tr>
+<?php
 	}
 ?>
+
 
         <tr><td colspan=2><hr /></td></tr>
 	<tr><td colspan=2>	

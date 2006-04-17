@@ -3,29 +3,30 @@
 
 
 function ivr_init() {
-        global $db;
+    global $db;
 
-        // Check to make sure that install.sql has been run
-        $sql = "SELECT deptname from ivr where displayname='__install_done' LIMIT 1";
+    // Check to make sure that install.sql has been run
+    $sql = "SELECT deptname from ivr where displayname='__install_done' LIMIT 1";
 
-        $results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
+    $results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
 
-        if (DB::IsError($results)) {
-                // It couldn't locate the table. This is bad. Lets try to re-create it, just
-                // in case the user has had the brilliant idea to delete it.
-                // runModuleSQL taken from page.module.php. It's inclusion here is probably
-                // A bad thing. It should be, I think, globally available.
-                runModuleSQL('ivr', 'uninstall');
-                if (runModuleSQL('ivr', 'install')==false) {
-                        echo _("There is a problem with install.sql, cannot re-create databases. Contact support\n");
-                        die;
-                } else {
-                        $results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
-                }
-        }
-        if (!isset($results[0])) {
-                // Note: There's an invalid entry created, __invalid, after this is run,
-                // so as long as this has been run _once_, there will always be a result.
+    if (DB::IsError($results)) {
+            // It couldn't locate the table. This is bad. Lets try to re-create it, just
+            // in case the user has had the brilliant idea to delete it.
+            // runModuleSQL taken from page.module.php. It's inclusion here is probably
+            // A bad thing. It should be, I think, globally available.
+            runModuleSQL('ivr', 'uninstall');
+            if (runModuleSQL('ivr', 'install')==false) {
+                    echo _("There is a problem with install.sql, cannot re-create databases. Contact support\n");
+                    die;
+            } else {
+                    $results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
+            }
+    }
+    
+    if (!isset($results[0])) {
+        // Note: There's an invalid entry created, __invalid, after this is run,
+        // so as long as this has been run _once_, there will always be a result.
 
 		// Read old IVR format, part of xtns..
 		$sql = "SELECT context,descr FROM extensions WHERE extension = 's' AND application LIKE 'DigitTimeout' AND context LIKE '".$dept."aa_%' ORDER BY context,priority";
@@ -61,9 +62,9 @@ function ivr_init() {
 					}
 				}
 			}
-
+	
 			// Upgrade everything using IVR as a destination. Ick.
-
+	
 			// Are queue's using an ivr failover?
 			// ***FIXME*** if upgrading queues away from legacy cruft.
 			$queues = $db->getAll("select extensions,args from extensions where args LIKE '%aa_%' and context='ext-queues' and priority='6'"); 
@@ -71,9 +72,9 @@ function ivr_init() {
 				foreach ($queues as $q) {
 					$arr=explode(',', $q['args']);
 					sql("UPDATE extensions set args='".$ivr_newname[$arr[0]].",s,1' where context='ext-queues' and priority='6' and extension='".$q['extension']."'");
-                                }
+	                            }
 			}
-
+	
 			// Now process everything else
 			foreach (array_keys($ivr_newname) as $old) {
 				// Timeconditions
@@ -87,19 +88,9 @@ function ivr_init() {
 		} 
 		// Note, the __install_done line is for internal version checking - the second field
 		// should be incremented and checked if the database ever changes.
-                $result = sql("INSERT INTO ivr (displayname, deptname) VALUES ('__install_done', '1')");
+		$result = sql("INSERT INTO ivr (displayname, deptname) VALUES ('__install_done', '1')");
 		needreload();
-        }
-	// Now, we need to check for upgrades. 
-	// V1.0, old IVR. You shouldn't see this, but check for it anyway, and assume that it's 2.0
-	// V2.0, Original Release
-	// V2.1, added 'directorycontext' to the schema
-	// 
-	if (modules_getversion('ivr') == "1.0" || modules_getversion('ivr') == "2.0") {
-		// Add the col
-		sql('ALTER TABLE ivr ADD COLUMN dircontext VARCHAR ( 50 ) DEFAULT "default"');
-		modules_setversion('ivr', '1.1');
-	}
+    }
 }
 
 // The destinations this module provides
@@ -131,29 +122,32 @@ function ivr_get_config($engine) {
 				foreach($ivrlist as $item) {
 					$id = "ivr-".$item['ivr_id'];
 					$details = ivr_get_details($item['ivr_id']);
+					
+					$announcement = (isset($details['announcement']) ? $details['announcement'] : '');
+					
 					if (!empty($details['enable_directdial'])) 
                                         	$ext->addInclude($id,'ext-local');
 					// I'm not sure I like the ability of people to send voicemail from the IVR.
 					// Make it a config option, possibly?
                                         // $ext->addInclude($item[0],'app-messagecenter');
 					if (!empty($details['enable_directory']))
-                                        	$ext->addInclude($id,'app-directory');
-                                        $ext->add($id, 'h', '', new ext_hangup(''));
-                                        $ext->add($id, 's', '', new ext_setvar('LOOPCOUNT', 0));
-                                        $ext->add($id, 's', '', new ext_setvar('__DIR-CONTEXT', $details['dircontext']));
-                                        $ext->add($id, 's', '', new ext_answer(''));
-                                        $ext->add($id, 's', '', new ext_wait('1'));
-                                        $ext->add($id, 's', 'begin', new ext_digittimeout(3));
-                                        $ext->add($id, 's', '', new ext_responsetimeout($details['timeout']));
-					if(function_exists('recordings_get')) {
-						$recording = recordings_get($details['announcement']);
-						$ext->add($id, 's', '', new ext_background($recording['filename']));
-					}
-                                        $ext->add($id, 'hang', '', new ext_playback('vm-goodbye'));
-                                        $ext->add($id, 'hang', '', new ext_hangup(''));
+						$ext->addInclude($id,'app-directory');
+                    
+					$ext->add($id, 'h', '', new ext_hangup(''));
+                    $ext->add($id, 's', '', new ext_setvar('LOOPCOUNT', 0));
+                    $ext->add($id, 's', '', new ext_setvar('__DIR-CONTEXT', $details['dircontext']));
+                    $ext->add($id, 's', '', new ext_answer(''));
+                    $ext->add($id, 's', '', new ext_wait('1'));
+                    $ext->add($id, 's', 'begin', new ext_digittimeout(3));
+                    $ext->add($id, 's', '', new ext_responsetimeout($details['timeout']));
+                    if ($announcement != '')
+						$ext->add($id, 's', '', new ext_background($announcement));
+                    $ext->add($id, 'hang', '', new ext_playback('vm-goodbye'));
+                    $ext->add($id, 'hang', '', new ext_hangup(''));
 
-                                        $default_t=true;
-					// Actually add the IVR commands now.
+                    $default_t=true;
+
+                    // Actually add the IVR commands now.
 					$dests = ivr_get_dests($item['ivr_id']);
 					if (!empty($dests)) {
 						foreach($dests as $dest) {
