@@ -11,18 +11,16 @@ global $db;
 
 $ivr_modcurrentvers = modules_getversion('ivr');
 
-if (version_compare($ivr_modcurrentvers, "2.1", "<")) {
-	// Add the col
-	$sql = "SELECT dircontext FROM ivr";
-	$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
-	if(DB::IsError($check)) {
-		// add new field
-	    $sql = 'ALTER TABLE ivr ADD COLUMN dircontext VARCHAR ( 50 ) DEFAULT "default"';
-	    $result = $db->query($sql);
-	    if(DB::IsError($result)) {
-	            die($result->getDebugInfo());
-	    }
-	}
+// Add the col
+$sql = "SELECT dircontext FROM ivr";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	// add new field
+    $sql = 'ALTER TABLE ivr ADD COLUMN dircontext VARCHAR ( 50 ) DEFAULT "default"';
+    $result = $db->query($sql);
+    if(DB::IsError($result)) {
+            die($result->getDebugInfo());
+    }
 }
 
 if (version_compare($ivr_modcurrentvers, "2.2", "<")) {
@@ -54,7 +52,5 @@ if (version_compare($ivr_modcurrentvers, "2.2", "<")) {
     }
 }
 
-// bump the version number
-modules_setversion('ivr', '2.2');
 ?>
 
