@@ -122,11 +122,18 @@ function ivr_get_config($engine) {
 				foreach($ivrlist as $item) {
 					$id = "ivr-".$item['ivr_id'];
 					$details = ivr_get_details($item['ivr_id']);
-					
+
 					$announcement = (isset($details['announcement']) ? $details['announcement'] : '');
-					
-					if (!empty($details['enable_directdial'])) 
+
+					if (!empty($details['enable_directdial'])) {
+						// MODIFIED (PL)
+						// if findmefollow is active, include it before ext-local since any
+						// defined Follow-Me group should take precedence over the actual extension.
+						if (isset($active_modules['findmefollow'])) {
+							$ext->addInclude($item[0],'ext-findmefollow');
+						}
                                         	$ext->addInclude($id,'ext-local');
+					}
 					// I'm not sure I like the ability of people to send voicemail from the IVR.
 					// Make it a config option, possibly?
                                         // $ext->addInclude($item[0],'app-messagecenter');
