@@ -1,13 +1,13 @@
 <module>
 	<rawname>ivr</rawname>
 	<name>IVR</name>
-	<version>2.2.2</version>
+	<version>2.2.3</version>
 	<type>setup</type>
 	<category>Module</category>
 	<menuitems>
 		<ivr>Digital Receptionist</ivr>
 	</menuitems>
-	<location>release/ivr-2.2.2.tgz</location>
+	<location>release/ivr-2.2.3.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-IVR</info>
-	<md5sum>69479714c621861d33cae5cf62112d94</md5sum>
+	<md5sum>d5638fa757cb22621764519c19df3481</md5sum>
 </module>
