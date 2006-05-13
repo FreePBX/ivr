@@ -312,6 +312,4 @@ function localrunModuleSQL($moddir,$type){
                 return true;
 }
 
-*/
-
 ?>
