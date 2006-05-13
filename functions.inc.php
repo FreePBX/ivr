@@ -15,8 +15,8 @@ function ivr_init() {
             // in case the user has had the brilliant idea to delete it.
             // runModuleSQL taken from page.module.php. It's inclusion here is probably
             // A bad thing. It should be, I think, globally available.
-            runModuleSQL('ivr', 'uninstall');
-            if (runModuleSQL('ivr', 'install')==false) {
+            localrunModuleSQL('ivr', 'uninstall');
+            if (localrunModuleSQL('ivr', 'install')==false) {
                     echo _("There is a problem with install.sql, cannot re-create databases. Contact support\n");
                     die;
             } else {

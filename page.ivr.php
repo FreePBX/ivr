@@ -284,8 +284,11 @@ function drawdestinations($count, $sel,  $dest) { ?>
 <?php
 }
 
-/* this should be in /admin/functions.inc.php
-function runModuleSQL($moddir,$type){
+// this can be removed in 2.2 and put back to just runModuleSQL which is in admin/functions.inc.php
+// I didn't want to do it in 2.1 as there's a significant user base out there, and it will break
+// them if we do it here.
+
+function localrunModuleSQL($moddir,$type){
         global $db;
         $data='';
         if (is_file("modules/{$moddir}/{$type}.sql")) {
