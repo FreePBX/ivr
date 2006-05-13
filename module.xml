@@ -7,7 +7,7 @@
 	<menuitems>
 		<ivr>Digital Receptionist</ivr>
 	</menuitems>
-	<location>release/ivr-2.2.4.tgz</location>
+	<location>release/ivr-2.2.5.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-IVR</info>
-	<md5sum>1da4213383eb93463a931ca8fae0962b</md5sum>
+	<md5sum>b4e0476317e4491af3f0d81e420b271f</md5sum>
 </module>
