@@ -129,11 +129,11 @@ function ivr_get_config($engine) {
 
 					if (!empty($details['enable_directdial'])) {
 						// MODIFIED (PL)
-						// if findmefollow is active, include it before ext-local since any
-						// defined Follow-Me group should take precedence over the actual extension.
-						if (isset($active_modules['findmefollow'])) {
-							$ext->addInclude($item[0],'ext-findmefollow');
-						}
+						// always include ext-findmefollow whether or not the module is currenlty
+						// enabled since subsequent activations should work without regenerating the
+						// ivr. (and no harm done if context does not exist.
+						//
+						$ext->addInclude($id,'ext-findmefollow');
                                         	$ext->addInclude($id,'ext-local');
 					}
 					// I'm not sure I like the ability of people to send voicemail from the IVR.
