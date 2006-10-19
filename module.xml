@@ -3,7 +3,10 @@
 	<name>IVR</name>
 	<version>2.4.0</version>
 	<type>setup</type>
-	<category>Module</category>
+	<category>Inbound Call Control</category>
+	<description>
+		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, "Press 1 for sales") and/or allow direct-dialing of extension numbers. 
+	</description>
 	<menuitems>
 		<ivr>Digital Receptionist</ivr>
 	</menuitems>
