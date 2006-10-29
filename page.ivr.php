@@ -81,7 +81,7 @@ echo _("After three invalid attempts, the line is hung up.")."\n"; ?>
 
 function ivr_sidebar($id)  {
 ?>
-        <div class="rnav">
+        <div class="rnav"><ul>
         <li><a id="<?php echo empty($id)?'current':'nul' ?>" href="config.php?display=ivr&amp;action=add"><?php echo _("Add IVR")?></a></li>
 <?php
 
@@ -92,7 +92,7 @@ function ivr_sidebar($id)  {
                         echo "&amp;action=edit&amp;id={$tresult['ivr_id']}\">{$tresult['displayname']}</a></li>\n";
                 }
         }
-        echo "</div>\n";
+        echo "</ul></div>\n";
 }
 
 function ivr_show_edit($id, $nbroptions, $post) {
