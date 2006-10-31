@@ -22,7 +22,6 @@ $id = isset($_REQUEST['id'])?$_REQUEST['id']:'';
 $dircontext = isset($_SESSION["AMP_user"]->_deptname)?$_SESSION["AMP_user"]->_deptname:'';
 $nbroptions = isset($_REQUEST['nbroptions'])?$_REQUEST['nbroptions']:'3';
 
-echo "</div>\n";
 if (empty($dircontext))
         $dircontext = 'default';
 // So. Lets check to make sure everything's happy
