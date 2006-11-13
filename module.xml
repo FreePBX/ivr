@@ -7,11 +7,13 @@
 	<description>
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, "Press 1 for sales") and/or allow direct-dialing of extension numbers. 
 	</description>
-	<changelog>*2.5* First release for FreePBX 2.2 - Fixed compatibility issue with new UI</changelog>
+	<changelog>*2.5* First release for FreePBX 2.2 - Fixed compatibility issue with new UI
+	           *2.5.1* Changed name to IVR (from Digital Receptionist)
+	       </changelog>
 	<menuitems>
-		<ivr>Digital Receptionist</ivr>
+		<ivr>IVR</ivr>
 	</menuitems>
 	<location>release/2.2/ivr-2.5.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-IVR</info>
-	<md5sum>9dc3caa9ab1b7520983760104c0b9d9d</md5sum>
+	<md5sum>f4248f583ecb2383e65e99086e581d66</md5sum>
 </module>
