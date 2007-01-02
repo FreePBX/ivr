@@ -1,0 +1,92 @@
+# Hebrew version for IVR FreePBX Module.
+# Copyright (C) 2006
+# This file is distributed under the same license as the PACKAGE package.
+# Shimi <shimi@shimi.net>, 2006.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FreePBX 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-17 17:20+0300\n"
+"PO-Revision-Date: 2006-10-17 17:30+0300\n"
+"Last-Translator: Shimi <shimi@shimi.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: page.ivr.php:67 page.ivr.php:105
+msgid "Digital Receptionist"
+msgstr "מענה קולי"
+
+#: page.ivr.php:69
+msgid "Instructions"
+msgstr "הנחיות"
+
+#: page.ivr.php:70
+msgid ""
+"You use the Digital Receptionist to make IVR's, Interactive Voice Responce "
+"systems."
+msgstr "השתמש במערכת המענה הקולי כדי ליצור IVR (מענה קולי אינטראקטיבי - Interactive Voice Response)"
+
+#: page.ivr.php:71
+msgid ""
+"When creating a menu option, apart from the standard options of 0-9,* and #, "
+"you can also use 'i' and 't' destinations."
+msgstr "כשיוצרים אפשרות תפריט, חוץ מהאפשרויות הסטנדרטיות של 0-9, כוכבית וסולמית, תוכל להשתמש גם ביעדים 'i' ו-'t'."
+
+#: page.ivr.php:72
+msgid ""
+"'i' is used when the caller pushes an invalid button, and 't' is used when "
+"there is no response."
+msgstr "ב-'i' משתמשים כשרוצים להפנות מתקשר שלחץ על אפשרות שלא קיימת, וב-'t' משתמשים כאשר לא מתקבלת לחיצה על אף אפשרות מהמשתמש."
+
+#: page.ivr.php:73
+msgid ""
+"If those options aren't supplied, the default 't' is to replay the menu "
+"three times and then hang up,"
+msgstr "אם אפשרויות אלה אינן נבחרות, ברירת המחדל של 't' היא להשמיע שוב את התפריט במשך עד שלוש פעמים, ולאחר מכן לנתק את השיחה, "
+
+#: page.ivr.php:74
+msgid ""
+"and the default 'i' is to say 'Invalid option, please try again' and replay "
+"the menu."
+msgstr "והאפשרות 'i' בברירת המחדל תשמיע את המשפט 'Invalid option, please try again' ותשמיע שוב את התפריט לאחר מכן."
+
+#: page.ivr.php:75
+msgid "After three invalid attempts, the line is hung up."
+msgstr "אחרי שלושה נסיונות כושלים, הקו ינותק."
+
+#: page.ivr.php:85
+msgid "Add IVR"
+msgstr "הוסף IVR"
+
+#: page.ivr.php:106
+msgid "Edit Menu"
+msgstr "ערוך תפריט"
+
+#: page.ivr.php:153 page.ivr.php:173
+msgid "Announcement"
+msgstr "הכרזה"
+
+#: page.ivr.php:153
+msgid ""
+"Message to be played to the caller. To add additional recordings please use "
+"the \"System Recordings\" MENU to the left"
+msgstr "הודעה שתושמע למתקשר. כדי להוסיף הקלטות נוספות, השתמש <em>בתפריט</em> \"הקלטות מערכת\" אשר בצד שמאל"
+
+#: page.ivr.php:158
+msgid "None"
+msgstr "אין"
+
+#: page.ivr.php:173
+msgid ""
+"Message to be played to the caller.<br><br>You must install and enable the "
+"\"Systems Recordings\" Module to edit this option"
+msgstr "הודעה אשר תושמע למתקשר.<br /><br />אתה חייב להתקין ולהפעיל את המודול \"הקלטות מערכת\" על מנת לערוך אפשרות זאת"
+
+#: functions.inc.php:20
+msgid ""
+"There is a problem with install.sql, cannot re-create databases. Contact "
+"support\n"
+msgstr "ישנה בעייה עם install.sql, לא יכול ליצור מחדש את מסדי הנתונים. צור קשר עם תמיכה\n"
