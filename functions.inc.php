@@ -165,6 +165,8 @@ function ivr_get_config($engine) {
 						foreach($dests as $dest) {
 							if ($dest['selection'] == 't') $timeout=true;
 							if ($dest['selection'] == 'i') $invalid=true;
+							$ext->add($id, $dest['selection'],'', new ext_dbdel('${BLKVM_OVERRIDE}'));
+							$ext->add($id, $dest['selection'],'', new ext_setvar('__NODEST', ''));
 							$ext->add($id, $dest['selection'],'', new ext_goto($dest['dest']));
 						}
 					}
@@ -238,10 +240,10 @@ function ivr_do_edit($id, $post) {
 
 	// Delete all the old dests
 	sql("DELETE FROM ivr_dests where ivr_id='$id'");
-	// Now, lets find all the goto's in the post. Destinations return goto_indicateN => foo and get fooN for the dest.
+	// Now, lets find all the goto's in the post. Destinations return gotoN => foo and get fooN for the dest.
 	// Is that right, or am I missing something?
 	foreach(array_keys($post) as $var) {
-		if (preg_match('/goto_indicate(\d+)/', $var, $match)) {
+		if (preg_match('/goto(\d+)/', $var, $match)) {
 			// This is a really horrible line of code. take N, and get value of fooN. See above. Note we
 			// get match[1] from the preg_match above
 			$dest = $post[$post[$var].$match[1]];

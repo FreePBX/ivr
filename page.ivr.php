@@ -56,7 +56,9 @@ switch ($action) {
 			}
 			if ($nbroptions < 1)
 				$nbroptions = 1;
-			ivr_show_edit($id, $nbroptions, $_POST);
+			//ivr_show_edit($id, $nbroptions, $_POST);
+			$url = 'config.php?type=setup&display=ivr&action=edit&id='.$id.'&nbroptions='.$nbroptions;
+			redirect($url);
 			break;
 		}
 	default:
