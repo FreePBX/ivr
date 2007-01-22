@@ -18,7 +18,7 @@
 	<menuitems>
 		<ivr>IVR</ivr>
 	</menuitems>
-	<location>release/2.2/ivr-2.5.5.tgz</location>
+	<location>release/2.3/ivr-2.5.5.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-IVR</info>
-	<md5sum>0161760546e28515637bef7b93a2930d</md5sum>
+	<md5sum>bfe51a270e8e0de1b4c1fc2eae43f3b0</md5sum>
 </module>
