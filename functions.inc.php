@@ -148,6 +148,7 @@ function ivr_get_config($engine) {
 					$ext->add($id, 'h', '', new ext_hangup(''));
                     $ext->add($id, 's', '', new ext_setvar('LOOPCOUNT', 0));
                     $ext->add($id, 's', '', new ext_setvar('__DIR-CONTEXT', $details['dircontext']));
+                    $ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
                     $ext->add($id, 's', '', new ext_answer(''));
                     $ext->add($id, 's', '', new ext_wait('1'));
                     $ext->add($id, 's', 'begin', new ext_digittimeout(3));
