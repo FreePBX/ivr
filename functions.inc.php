@@ -46,7 +46,7 @@ function ivr_init() {
 						$arr=explode(',', $cmd['args']);
 						// s == old stuff. We don't care.
 						if ($arr[0] != 's') 
-							ivr_add_command($id,$cmd['extension'],$cmd['args']);
+							ivr_add_command($id,$cmd['extension'],$cmd['args'],0);
 					}
 				}
 			}
@@ -148,6 +148,7 @@ function ivr_get_config($engine) {
 					$ext->add($id, 'h', '', new ext_hangup(''));
                     $ext->add($id, 's', '', new ext_setvar('LOOPCOUNT', 0));
                     $ext->add($id, 's', '', new ext_setvar('__DIR-CONTEXT', $details['dircontext']));
+                    $ext->add($id, 's', '', new ext_setvar('IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT}'));
                     $ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
                     $ext->add($id, 's', '', new ext_answer(''));
                     $ext->add($id, 's', '', new ext_wait('1'));
@@ -168,7 +169,11 @@ function ivr_get_config($engine) {
 							if ($dest['selection'] == 'i') $invalid=true;
 							$ext->add($id, $dest['selection'],'', new ext_dbdel('${BLKVM_OVERRIDE}'));
 							$ext->add($id, $dest['selection'],'', new ext_setvar('__NODEST', ''));
-							$ext->add($id, $dest['selection'],'', new ext_goto($dest['dest']));
+							if ($dest['ivr_ret']) {
+								$ext->add($id, $dest['selection'],'', new ext_gotoif('$["x${IVR_CONTEXT_${CONTEXT}}" = "x"]', $dest['dest'].':${IVR_CONTEXT_${CONTEXT}},s,1'));
+							} else {
+								$ext->add($id, $dest['selection'],'', new ext_goto($dest['dest']));
+							}
 						}
 					}
 					// Apply invalid if required
@@ -208,16 +213,17 @@ function ivr_get_ivr_id($name) {
 	
 }
 
-function ivr_add_command($id, $cmd, $dest) {
+function ivr_add_command($id, $cmd, $dest, $ivr_ret) {
 	global $db;
 	// Does it already exist?
 	$res = $db->getRow("SELECT * from ivr_dests where ivr_id='$id' and selection='$cmd'");
+	$ivr_ret = $ivr_ret ? 1 : 0;
 	if (count($res) == 0) {
 		// Just add it.
-		sql("INSERT INTO ivr_dests VALUES('$id', '$cmd', '$dest')");
+		sql("INSERT INTO ivr_dests VALUES('$id', '$cmd', '$dest', '$ivr_ret')");
 	} else {
 		// Update it.
-		sql("UPDATE ivr_dests SET dest='$dest' where ivr_id='$id' and selection='$cmd'");
+		sql("UPDATE ivr_dests SET dest='$dest', ivr_ret='$ivr_ret' where ivr_id='$id' and selection='$cmd'");
 	}
 	needreload();
 }
@@ -249,10 +255,11 @@ function ivr_do_edit($id, $post) {
 			// get match[1] from the preg_match above
 			$dest = $post[$post[$var].$match[1]];
 			$cmd = $post['option'.$match[1]];
+			$ivr_ret = $post['ivr_ret'.$match[1]];
 			// Debugging if it all goes pear shaped.
 			// print "I think pushing $cmd does $dest<br>\n";
 			if (strlen($cmd))
-				ivr_add_command($id, $cmd, $dest);
+				ivr_add_command($id, $cmd, $dest, $ivr_ret);
 		}
 	}
 	needreload();
@@ -284,7 +291,7 @@ function ivr_get_details($id) {
 function ivr_get_dests($id) {
 	global $db;
 
-	$sql = "SELECT selection, dest FROM ivr_dests where ivr_id='$id' ORDER BY selection";
+	$sql = "SELECT selection, dest, ivr_ret FROM ivr_dests where ivr_id='$id' ORDER BY selection";
         $res = $db->getAll($sql, DB_FETCHMODE_ASSOC);
         if(DB::IsError($res)) {
                 return null;

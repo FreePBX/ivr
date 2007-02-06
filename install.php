@@ -54,4 +54,14 @@ if (version_compare($ivr_modcurrentvers, "2.2", "<")) {
     }
 }
 
+// Version 2.5.7 adds auto-return to IVR
+$sql = "SELECT ivr_ret FROM ivr_dests";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	// add new field
+    $sql = "ALTER TABLE ivr_dests ADD ivr_ret TINYINT(1) NOT NULL DEFAULT 0;";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) { die($result->getDebugInfo()); }
+}
+
 ?>
