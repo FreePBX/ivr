@@ -148,7 +148,7 @@ function ivr_get_config($engine) {
 					$ext->add($id, 'h', '', new ext_hangup(''));
                     $ext->add($id, 's', '', new ext_setvar('LOOPCOUNT', 0));
                     $ext->add($id, 's', '', new ext_setvar('__DIR-CONTEXT', $details['dircontext']));
-                    $ext->add($id, 's', '', new ext_setvar('IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT}'));
+                    $ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT}'));
                     $ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
                     $ext->add($id, 's', '', new ext_answer(''));
                     $ext->add($id, 's', '', new ext_wait('1'));
@@ -170,7 +170,7 @@ function ivr_get_config($engine) {
 							$ext->add($id, $dest['selection'],'', new ext_dbdel('${BLKVM_OVERRIDE}'));
 							$ext->add($id, $dest['selection'],'', new ext_setvar('__NODEST', ''));
 							if ($dest['ivr_ret']) {
-								$ext->add($id, $dest['selection'],'', new ext_gotoif('$["x${IVR_CONTEXT_${CONTEXT}}" = "x"]', $dest['dest'].':${IVR_CONTEXT_${CONTEXT}},s,1'));
+								$ext->add($id, $dest['selection'],'', new ext_gotoif('$["x${IVR_CONTEXT_${CONTEXT}}" = "x"]', $dest['dest'].':${IVR_CONTEXT_${CONTEXT}},return,1'));
 							} else {
 								$ext->add($id, $dest['selection'],'', new ext_goto($dest['dest']));
 							}
@@ -190,6 +190,7 @@ function ivr_get_config($engine) {
 						$ext->add($id, 'loop', '', new ext_setvar('LOOPCOUNT','$[${LOOPCOUNT} + 1]'));	
 						$ext->add($id, 'loop', '', new ext_gotoif('$[${LOOPCOUNT} > 2]','hang,1'));
 						$ext->add($id, 'loop', '', new ext_goto($id.',s,begin'));
+						$ext->add($id, 'return', '', new ext_goto($id.',s,begin'));
 					}
 					$ext->add($id, 'fax', '', new ext_goto('ext-fax,in_fax,1'));
                                 }
