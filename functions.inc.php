@@ -190,6 +190,11 @@ function ivr_get_config($engine) {
 						$ext->add($id, 'loop', '', new ext_setvar('LOOPCOUNT','$[${LOOPCOUNT} + 1]'));	
 						$ext->add($id, 'loop', '', new ext_gotoif('$[${LOOPCOUNT} > 2]','hang,1'));
 						$ext->add($id, 'loop', '', new ext_goto($id.',s,begin'));
+
+						// these need to be reset or inheritance problems makes them go away in some conditions and infinite inheritance creates other problems
+						//
+						$ext->add($id, 'return', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
+						$ext->add($id, 'return', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT_${CONTEXT}}'));
 						$ext->add($id, 'return', '', new ext_goto($id.',s,begin'));
 					}
 					$ext->add($id, 'fax', '', new ext_goto('ext-fax,in_fax,1'));
