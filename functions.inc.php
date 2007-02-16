@@ -169,6 +169,14 @@ function ivr_get_config($engine) {
 							if ($dest['selection'] == 'i') $invalid=true;
 							$ext->add($id, $dest['selection'],'', new ext_dbdel('${BLKVM_OVERRIDE}'));
 							$ext->add($id, $dest['selection'],'', new ext_setvar('__NODEST', ''));
+
+							// if the goto goes loops back to this ivr, then don't go to the begining or it will break the return to previous ivr info
+							//
+							$dest_context = trim(strtok($dest['dest'],",|"));
+							if ($dest_context == $id) {
+								$dest['dest'] = $id.',s,begin';
+							}
+
 							if ($dest['ivr_ret']) {
 								$ext->add($id, $dest['selection'],'', new ext_gotoif('$["x${IVR_CONTEXT_${CONTEXT}}" = "x"]', $dest['dest'].':${IVR_CONTEXT_${CONTEXT}},return,1'));
 							} else {

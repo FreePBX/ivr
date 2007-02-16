@@ -111,7 +111,8 @@ function ivr_show_edit($id, $nbroptions, $post) {
         <input type="hidden" name="action" value="edited" />
         <input type="hidden" name="display" value="ivr" />
         <input type="hidden" name="id" value="<?php echo $id ?>" />
-	<input name="delete" type="submit" value="<?php echo _("Delete")." "._("Digital Receptionist")." {$ivr_details['displayname']}"; ?>">
+	<input name="Submit" type="submit" style="display:none;" value="save" />
+	<input name="delete" type="submit" value="<?php echo _("Delete")." "._("Digital Receptionist")." {$ivr_details['displayname']}"; ?>" />
         <table>
         <tr><td colspan=2><hr /></td></tr>
         <tr>
