@@ -1,13 +1,14 @@
 <module>
 	<rawname>ivr</rawname>
 	<name>IVR</name>
-	<version>2.5.11</version>
+	<version>2.5.12</version>
 	<type>setup</type>
 	<category>Inbound Call Control</category>
 	<description>
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, "Press 1 for sales") and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
+		*2.5.12* skip the answer/wait(1) if channel is already answered
 		*2.5.11* Allow option for IVR to loop back to itself without corrupting the return-to-ivr to the parent
 		*2.5.10* Fix bug where pressing enter in a field would delete the IVR
 		*2.5.9* some tweaks because of strange inheritance behavior, so need to reset IVR variables upon returns for some looping conditions

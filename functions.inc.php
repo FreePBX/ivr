@@ -150,6 +150,7 @@ function ivr_get_config($engine) {
                     $ext->add($id, 's', '', new ext_setvar('__DIR-CONTEXT', $details['dircontext']));
                     $ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT}'));
                     $ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
+										$ext->add($id, 's', '', new ext_gotoif('$["${CDR(disposition)}" = "ANSWERED"]','begin'));
                     $ext->add($id, 's', '', new ext_answer(''));
                     $ext->add($id, 's', '', new ext_wait('1'));
                     $ext->add($id, 's', 'begin', new ext_digittimeout(3));
