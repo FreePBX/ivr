@@ -186,16 +186,16 @@ function ivr_get_config($engine) {
 						}
 					}
 					// Apply invalid if required
-					if (!isset($invalid)) {
+					if (!isset($invalid) || !$invalid) {
 						$ext->add($id, 'i', '', new ext_playback('invalid'));
 						$ext->add($id, 'i', '', new ext_goto('loop,1'));
 						$addloop=true;
 					}
-					if (!isset($timeout)) {
+					if (!isset($timeout) || !$timeout) {
 						$ext->add($id, 't', '', new ext_goto('loop,1'));
 						$addloop=true;
 					}
-					if (isset($addloop)) {
+					if (isset($addloop) && $addloop) {
 						$ext->add($id, 'loop', '', new ext_setvar('LOOPCOUNT','$[${LOOPCOUNT} + 1]'));	
 						$ext->add($id, 'loop', '', new ext_gotoif('$[${LOOPCOUNT} > 2]','hang,1'));
 						$ext->add($id, 'loop', '', new ext_goto($id.',s,begin'));
@@ -207,10 +207,10 @@ function ivr_get_config($engine) {
 						$ext->add($id, 'return', '', new ext_goto($id.',s,begin'));
 					}
 					$ext->add($id, 'fax', '', new ext_goto('ext-fax,in_fax,1'));
-                                }
-                        }
-                break;
-        }
+				}
+			}
+		break;
+	}
 }
 
 
