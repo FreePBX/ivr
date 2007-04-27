@@ -164,6 +164,9 @@ function ivr_get_config($engine) {
 
                     // Actually add the IVR commands now.
 					$dests = ivr_get_dests($item['ivr_id']);
+					$timeout=false;
+					$invalid=false;
+					$addloop=false;
 					if (!empty($dests)) {
 						foreach($dests as $dest) {
 							if ($dest['selection'] == 't') $timeout=true;
@@ -186,16 +189,16 @@ function ivr_get_config($engine) {
 						}
 					}
 					// Apply invalid if required
-					if (!isset($invalid) || !$invalid) {
+					if (!$invalid) {
 						$ext->add($id, 'i', '', new ext_playback('invalid'));
 						$ext->add($id, 'i', '', new ext_goto('loop,1'));
 						$addloop=true;
 					}
-					if (!isset($timeout) || !$timeout) {
+					if (!$timeout) {
 						$ext->add($id, 't', '', new ext_goto('loop,1'));
 						$addloop=true;
 					}
-					if (isset($addloop) && $addloop) {
+					if ($addloop) {
 						$ext->add($id, 'loop', '', new ext_setvar('LOOPCOUNT','$[${LOOPCOUNT} + 1]'));	
 						$ext->add($id, 'loop', '', new ext_gotoif('$[${LOOPCOUNT} > 2]','hang,1'));
 						$ext->add($id, 'loop', '', new ext_goto($id.',s,begin'));
