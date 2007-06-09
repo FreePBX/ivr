@@ -7,10 +7,8 @@
 	<description>
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, "Press 1 for sales") and/or allow direct-dialing of extension numbers. 
 	</description>
-	<depends>
-		<version>2.2.2</version>
-	</depends> 
 	<changelog>
+		*2.5.14.1* removed depends on 2.2.2 - classes are in all version of 2.3
 		*2.5.14* add waitexten to 2.2
 		*2.5.13.1* make sure t ext getting put in (for some reason it wasn't always, this shoudl fix it)
 		*2.5.13* #1871 't' extension not being created by default fixed
