@@ -146,23 +146,25 @@ function ivr_get_config($engine) {
 					}
 
 					$ext->add($id, 'h', '', new ext_hangup(''));
-                    $ext->add($id, 's', '', new ext_setvar('LOOPCOUNT', 0));
-                    $ext->add($id, 's', '', new ext_setvar('__DIR-CONTEXT', $details['dircontext']));
-                    $ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT}'));
-                    $ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
-										$ext->add($id, 's', '', new ext_gotoif('$["${CDR(disposition)}" = "ANSWERED"]','begin'));
-                    $ext->add($id, 's', '', new ext_answer(''));
-                    $ext->add($id, 's', '', new ext_wait('1'));
-                    $ext->add($id, 's', 'begin', new ext_digittimeout(3));
-                    $ext->add($id, 's', '', new ext_responsetimeout($details['timeout']));
-                    if ($announcement != '')
-			$ext->add($id, 's', '', new ext_background($announcement));
-                    $ext->add($id, 'hang', '', new ext_playback('vm-goodbye'));
-                    $ext->add($id, 'hang', '', new ext_hangup(''));
+					$ext->add($id, 's', '', new ext_setvar('LOOPCOUNT', 0));
+					$ext->add($id, 's', '', new ext_setvar('__DIR-CONTEXT', $details['dircontext']));
+					$ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT}'));
+					$ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
+					$ext->add($id, 's', '', new ext_gotoif('$["${CDR(disposition)}" = "ANSWERED"]','begin'));
+					$ext->add($id, 's', '', new ext_answer(''));
+					$ext->add($id, 's', '', new ext_wait('1'));
+					$ext->add($id, 's', 'begin', new ext_digittimeout(3));
+					$ext->add($id, 's', '', new ext_responsetimeout($details['timeout']));
+					if ($announcement != '') {
+						$ext->add($id, 's', '', new ext_background($announcement));
+					}
+					$ext->add($id, 's', '', new ext_waitexten());
+					$ext->add($id, 'hang', '', new ext_playback('vm-goodbye'));
+					$ext->add($id, 'hang', '', new ext_hangup(''));
 
-                    $default_t=true;
+					$default_t=true;
 
-                    // Actually add the IVR commands now.
+					// Actually add the IVR commands now.
 					$dests = ivr_get_dests($item['ivr_id']);
 					$timeout=false;
 					$invalid=false;
