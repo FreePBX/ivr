@@ -64,4 +64,25 @@ if(DB::IsError($check)) {
     if(DB::IsError($result)) { die($result->getDebugInfo()); }
 }
 
+$results = array();
+$sql = "SELECT ivr_id, selection, dest FROM ivr_dests";
+$results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
+if (!DB::IsError($results)) { // error - table must not be there
+	foreach ($results as $result) {
+		$old_dest  = $result['dest'];
+		$ivr_id    = $result['ivr_id'];
+		$selection = $result['selection'];
+
+		$new_dest = merge_ext_followme(trim($old_dest));
+		if ($new_dest != $old_dest) {
+			$sql = "UPDATE ivr_dests SET dest = '$new_dest' WHERE ivr_id = $ivr_id AND selection = '$selection' AND dest = '$old_dest'";
+			$results = $db->query($sql);
+			if(DB::IsError($results)) {
+				die($results->getMessage());
+			}
+		}
+	}
+}
+
+
 ?>
