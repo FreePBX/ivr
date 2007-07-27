@@ -1,13 +1,14 @@
 <module>
 	<rawname>ivr</rawname>
 	<name>IVR</name>
-	<version>2.5.14.2</version>
+	<version>2.5.15</version>
 	<type>setup</type>
 	<category>Inbound Call Control</category>
 	<description>
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, "Press 1 for sales") and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
+		*2.5.15* bump version to be higher than 2.2 branch
 		*2.5.14.2* merge findmefollow/core extension destinations if any
 		*2.5.14.1* removed depends on 2.2.2 - classes are in all version of 2.3
 		*2.5.14* add waitexten to 2.2
@@ -30,7 +31,7 @@
 	<menuitems>
 		<ivr>IVR</ivr>
 	</menuitems>
-	<location>release/2.3/ivr-2.5.14.2.tgz</location>
+	<location>release/2.3/ivr-2.5.15.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-IVR</info>
-	<md5sum>13bbc99325ebb606cea506925258b037</md5sum>
+	<md5sum>a0dcac81ec7fb6aef80682dda539fa2c</md5sum>
 </module>
