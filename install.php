@@ -21,7 +21,7 @@ if(DB::IsError($check)) {
     $sql = 'ALTER TABLE ivr ADD COLUMN dircontext VARCHAR ( 50 ) DEFAULT "default"';
     $result = $db->query($sql);
     if(DB::IsError($result)) {
-            die($result->getDebugInfo());
+            die_freepbx($result->getDebugInfo());
     }
 }
 
@@ -30,7 +30,7 @@ if (version_compare($ivr_modcurrentvers, "2.2", "<")) {
 	$sql = "ALTER TABLE ivr CHANGE COLUMN announcement announcement VARCHAR ( 255 )";
     $result = $db->query($sql);
     if(DB::IsError($result)) {
-            die($result->getDebugInfo());
+            die_freepbx($result->getDebugInfo());
     } else {
     	// Change existing records
     	//echo "<p>Updating existing records</p>";
@@ -47,7 +47,7 @@ if (version_compare($ivr_modcurrentvers, "2.2", "<")) {
     				$sql = "UPDATE ivr SET announcement = '".str_replace("'", "''", $filename)."' WHERE announcement = '$recid'";
 				    $upcheck = $db->query($sql);
 				    if(DB::IsError($upcheck))
-				            die($upcheck->getDebugInfo());    				
+				            die_freepbx($upcheck->getDebugInfo());    				
     			}
     		}
     	}
@@ -61,7 +61,7 @@ if(DB::IsError($check)) {
 	// add new field
     $sql = "ALTER TABLE ivr_dests ADD ivr_ret TINYINT(1) NOT NULL DEFAULT 0;";
     $result = $db->query($sql);
-    if(DB::IsError($result)) { die($result->getDebugInfo()); }
+    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
 }
 
 $results = array();
@@ -78,7 +78,7 @@ if (!DB::IsError($results)) { // error - table must not be there
 			$sql = "UPDATE ivr_dests SET dest = '$new_dest' WHERE ivr_id = $ivr_id AND selection = '$selection' AND dest = '$old_dest'";
 			$results = $db->query($sql);
 			if(DB::IsError($results)) {
-				die($results->getMessage());
+				die_freepbx($results->getMessage());
 			}
 		}
 	}
