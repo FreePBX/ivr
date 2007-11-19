@@ -327,4 +327,32 @@ function ivr_get_name($id) {
 		return null;
 	}
 }
+
+function ivr_check_destinations($dest=true) {
+	global $active_modules;
+
+	$destlist = array();
+	if (is_array($dest) && empty($dest)) {
+		return $destlist;
+	}
+	$sql = "SELECT dest, displayname, selection, a.ivr_id ivr_id FROM ivr a INNER JOIN ivr_dests d ON a.ivr_id = d.ivr_id  ";
+	if ($dest !== true) {
+		$sql .= "WHERE dest in ('".implode("','",$dest)."')";
+	}
+	$sql .= "ORDER BY displayname";
+	$results = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
+
+	//$type = isset($active_modules['ivr']['type'])?$active_modules['ivr']['type']:'setup';
+
+	foreach ($results as $result) {
+		$thisdest = $result['dest'];
+		$thisid   = $result['ivr_id'];
+		$destlist[] = array(
+			'dest' => $thisdest,
+			'description' => 'IVR: '.$result['displayname'].' / Option: '.$result['selection'],
+			'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($thisid),
+		);
+	}
+	return $destlist;
+}
 ?>
