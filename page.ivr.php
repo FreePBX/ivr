@@ -103,99 +103,110 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	$ivr_dests = ivr_get_dests($id);
 ?>
 	<div class="content">
-        <h2><?php echo _("Digital Receptionist"); ?></h2>
-        <h3><?php echo _("Edit Menu")." ".$ivr_details['displayname']; ?></h3>
+	<h2><?php echo _("Digital Receptionist"); ?></h2>
+	<h3><?php echo _("Edit Menu")." ".$ivr_details['displayname']; ?></h3>
 <?php 
 ?>
-        <form name="prompt" action="<?php $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return prompt_onsubmit();">
-        <input type="hidden" name="action" value="edited" />
-        <input type="hidden" name="display" value="ivr" />
-        <input type="hidden" name="id" value="<?php echo $id ?>" />
+	<form name="prompt" action="<?php $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return prompt_onsubmit();">
+	<input type="hidden" name="action" value="edited" />
+	<input type="hidden" name="display" value="ivr" />
+	<input type="hidden" name="id" value="<?php echo $id ?>" />
 	<input name="Submit" type="submit" style="display:none;" value="save" />
 	<input name="delete" type="submit" value="<?php echo _("Delete")." "._("Digital Receptionist")." {$ivr_details['displayname']}"; ?>" />
-        <table>
-        <tr><td colspan=2><hr /></td></tr>
-        <tr>
-                <td><a href="#" class="info">Change Name<span>This changes the short name, visible on the right, of this IVR</span></a></td>
-                <td><input type="text" name="displayname" value="<?php echo $ivr_details['displayname'] ?>"></td>
-        </tr>
-        <tr>
-                <td><a href="#" class="info">Timeout<span>The amount of time (in seconds) before the 't' option, if specified, is used</span></a></td>
-                <td><input type="text" name="timeout" value="<?php echo $ivr_details['timeout'] ?>"></td>
-        </tr>
-        <?php if ( function_exists('voicemail_getVoicemail') ) { ?>
-        <tr>
-                <td><a href="#" class="info">Enable Directory<span>Let callers into the IVR dial '#' to access the directory</span></a></td>
-                <td><input type="checkbox" name="ena_directory" <?php echo $ivr_details['enable_directory'] ?>></td>
-        </tr>
-        <tr>
-                <td><a href="#" class="info">Directory Context<span>When # is selected, this is the voicemail directory context that is used</span></a></td>
-                <td>&nbsp;
-			 <select name="dircontext"/>
-                        <?php
-				$tresults = voicemail_getVoicemail();
-				$vmcontexts = array_keys($tresults);
-				foreach ($vmcontexts as $vmc) {
-					if ($vmc != 'general' ) 
-						echo '<option value="'.$vmc.'"'.($vmc == $ivr_details['dircontext'] ? ' SELECTED' : '').'>'.$vmc."</option>\n";
-				}
-                        ?>
-			</select>
-		</td>
-        </tr>
-        <?php } ?>
-        <tr>
-                <td><a href="#" class="info">Enable Direct Dial<span>Let callers into the IVR dial an extension directly</span></a></td>
-                <td><input type="checkbox" name="ena_directdial" <?php echo $ivr_details['enable_directdial'] ?>></td>
-        </tr>
+	<?php
+	if ($id) {
+		$usage_list = framework_display_destination_usage(ivr_getdest($id));
+		if (!empty($usage_list)) {
+		?>
+			<br /><a href="#" class="info"><?php echo $usage_list['text']?>:<span><?php echo $usage_list['tooltip']?></span></a>
+		<?php
+		}
+	}
+	?>
+	<table>
+		<tr><td colspan=2><hr /></td></tr>
+		<tr>
+			<td><a href="#" class="info">Change Name<span>This changes the short name, visible on the right, of this IVR</span></a></td>
+			<td><input type="text" name="displayname" value="<?php echo $ivr_details['displayname'] ?>"></td>
+		</tr>
+		<tr>
+			<td><a href="#" class="info">Timeout<span>The amount of time (in seconds) before the 't' option, if specified, is used</span></a></td>
+			<td><input type="text" name="timeout" value="<?php echo $ivr_details['timeout'] ?>"></td>
+		</tr>
+		<?php if ( function_exists('voicemail_getVoicemail') ) { ?>
+		<tr>
+			<td><a href="#" class="info">Enable Directory<span>Let callers into the IVR dial '#' to access the directory</span></a></td>
+			<td><input type="checkbox" name="ena_directory" <?php echo $ivr_details['enable_directory'] ?>></td>
+		</tr>
+		<tr>
+			<td><a href="#" class="info">Directory Context<span>When # is selected, this is the voicemail directory context that is used</span></a></td>
+			<td>&nbsp;
+				<select name="dircontext"/>
+					<?php
+					$tresults = voicemail_getVoicemail();
+					$vmcontexts = array_keys($tresults);
+					foreach ($vmcontexts as $vmc) {
+						if ($vmc != 'general' ) 
+							echo '<option value="'.$vmc.'"'.($vmc == $ivr_details['dircontext'] ? ' SELECTED' : '').'>'.$vmc."</option>\n";
+						}
+					?>
+				</select>
+			</td>
+		</tr>
+		<?php } ?>
+		<tr>
+			<td><a href="#" class="info">Enable Direct Dial<span>Let callers into the IVR dial an extension directly</span></a></td>
+			<td><input type="checkbox" name="ena_directdial" <?php echo $ivr_details['enable_directdial'] ?>></td>
+		</tr>
 <?php
-    $annmsg = isset($ivr_details['announcement'])?$ivr_details['announcement']:'';
-	if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
-        <tr>
-                <td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller. To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
-                <td>&nbsp;
-                        <select name="annmsg"/>
-                        <?php
-                                $tresults = recordings_list();
-                                echo '<option value="">'._("None")."</option>";
-                                if (isset($tresults[0])) {
-                                        foreach ($tresults as $tresult) {
-                                                echo '<option value="'.$tresult[2].'"'.($tresult[2] == $annmsg ? ' SELECTED' : '').'>'.$tresult[1]."</option>\n";
-                                        }
-                                }
-                        ?>
-                        </select>
-                </td>
-        </tr>
+			$annmsg = isset($ivr_details['announcement'])?$ivr_details['announcement']:'';
+			if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller. To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
+			<td>&nbsp;
+				<select name="annmsg"/>
+				<?php
+					$tresults = recordings_list();
+					echo '<option value="">'._("None")."</option>";
+					if (isset($tresults[0])) {
+						foreach ($tresults as $tresult) {
+							echo '<option value="'.$tresult[2].'"'.($tresult[2] == $annmsg ? ' SELECTED' : '').'>'.$tresult[1]."</option>\n";
+						}
+					}
+				?>
+				</select>
+			</td>
+		</tr>
 	
 <?php
 	} else {
 ?>
-	<tr>
-                <td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option")?></span></a></td>
-                <td>&nbsp;
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option")?></span></a></td>
+			<td>&nbsp;
 			<?php
 				$default = (isset($annmsg) ? $annmsg : '');
 			?>
-			<input type="hidden" name="annmsg" value="<?php echo $default; ?>"><?php echo ($default != '' ? $default : 'None'); ?>
-		</td>
-	</tr>
+				<input type="hidden" name="annmsg" value="<?php echo $default; ?>"><?php echo ($default != '' ? $default : 'None'); ?>
+			</td>
+		</tr>
 <?php
 	}
 ?>
 
 
-        <tr><td colspan=2><hr /></td></tr>
-	<tr><td colspan=2>	
-	<input name="increase" type="submit" value="<?php echo _("Increase Options")?>">
-	&nbsp;
-	<input name="Submit" type="submit" value="<?php echo _("Save")?>">
-	&nbsp;
-	<?php if ($nbroptions > 1) { ?>
-	<input name="decrease" type="submit" value="<?php echo _("Decrease Options")?>">
-	<?php } ?>
-	</td></tr>
-        <tr><td colspan=2><hr /></td></tr>
+		<tr><td colspan=2><hr /></td></tr>
+		<tr><td colspan=2>	
+			<input name="increase" type="submit" value="<?php echo _("Increase Options")?>">
+			&nbsp;
+			<input name="Submit" type="submit" value="<?php echo _("Save")?>">
+			&nbsp;
+			<?php if ($nbroptions > 1) { ?>
+			<input name="decrease" type="submit" value="<?php echo _("Decrease Options")?>">
+			<?php } ?>
+		</td>
+	</tr>
+	<tr><td colspan=2><hr /></td></tr>
 <?php
 	// Draw the destinations
 	$dests = ivr_get_dests($id);
@@ -212,7 +223,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	}
 ?>
 	
-        </table>
+</table>
 <?php
 	if ($nbroptions < $count) { 
 		echo "<input type='hidden' name='nbroptions' value=$count />\n";

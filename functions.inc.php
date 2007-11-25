@@ -113,6 +113,31 @@ function ivr_destinations() {
 		return null;
 }
 
+function ivr_getdest($exten) {
+	return array('ivr-'.$exten.',s,1');
+}
+
+function ivr_getdestinfo($dest) {
+	global $active_modules;
+
+	if (substr(trim($dest),0,4) == 'ivr-') {
+		$exten = explode(',',$dest);
+		$exten = substr($exten[0],4);
+
+		$thisexten = ivr_get_details($exten);
+		if (empty($thisexten)) {
+			return array();
+		} else {
+			//$type = isset($active_modules['announcement']['type'])?$active_modules['announcement']['type']:'setup';
+			return array('description' => 'IVR : '.$thisexten['displayname'],
+			             'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($exten),
+								  );
+		}
+	} else {
+		return false;
+	}
+}
+
 function ivr_get_config($engine) {
         global $ext;
         global $conferences_conf;
