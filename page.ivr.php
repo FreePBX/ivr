@@ -140,7 +140,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		</tr>
 		<tr>
 			<td><a href="#" class="info">Directory Context<span>When # is selected, this is the voicemail directory context that is used</span></a></td>
-			<td>&nbsp;
+			<td>
 				<select name="dircontext"/>
 					<?php
 					$tresults = voicemail_getVoicemail();
@@ -163,7 +163,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 			if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller. To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
-			<td>&nbsp;
+			<td>
 				<select name="annmsg"/>
 				<?php
 					$tresults = recordings_list();
@@ -183,7 +183,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 ?>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option")?></span></a></td>
-			<td>&nbsp;
+			<td>
 			<?php
 				$default = (isset($annmsg) ? $annmsg : '');
 			?>
