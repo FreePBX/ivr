@@ -158,8 +158,7 @@ function ivr_get_config($engine) {
 						// enabled since subsequent activations should work without regenerating the
 						// ivr. (and no harm done if context does not exist.
 						//
-						$ext->addInclude($id,'ext-findmefollow');
-                                        	$ext->addInclude($id,'ext-local');
+						$ext->addInclude($id,'from-did-direct-ivr');
 					}
 					// I'm not sure I like the ability of people to send voicemail from the IVR.
 					// Make it a config option, possibly?
