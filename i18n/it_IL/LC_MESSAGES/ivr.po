@@ -1,0 +1,159 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-26 13:36+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Francesco Romano\n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: functions.inc.php:20
+msgid ""
+"There is a problem with install.sql, cannot re-create databases. Contact "
+"support\n"
+msgstr "C'è un problema con install.sql, non posso ricreare il database. Contattare il supporto\n"
+
+#: page.ivr.php:68 page.ivr.php:106
+msgid "Digital Receptionist"
+msgstr "IVR"
+
+#: page.ivr.php:70
+msgid "Instructions"
+msgstr "Istruzioni"
+
+#: page.ivr.php:71
+msgid ""
+"You use the Digital Receptionist to make IVR's, Interactive Voice Responce "
+"systems."
+msgstr "Da qui puoi si può creare facilmente un sistema IVR (Interactive Voice Responce)."
+
+#: page.ivr.php:72
+msgid ""
+"When creating a menu option, apart from the standard options of 0-9,* and #, "
+"you can also use 'i' and 't' destinations."
+msgstr "Quando si aggiunge una voce di menu, a parte le opzioni standard tipo 0-9, * e #, si possono utilizzare anche destinazioni 'i' e 't'."
+
+#: page.ivr.php:73
+msgid ""
+"'i' is used when the caller pushes an invalid button, and 't' is used when "
+"there is no response."
+msgstr "'i' (invalid) viene utilizzato quando un chiamante digita un numero non valido, 't' (timeout) invece quando non c'è nessuna digitazione."
+
+#: page.ivr.php:74
+msgid ""
+"If those options aren't supplied, the default 't' is to replay the menu "
+"three times and then hang up,"
+msgstr "Se queste opzioni non sono inserite, 't' predefinito ripeterà tre volte il menu e poi riaggancerà la linea;"
+
+#: page.ivr.php:75
+msgid ""
+"and the default 'i' is to say 'Invalid option, please try again' and replay "
+"the menu."
+msgstr "'i' predefinito invece riprodurrà il messaggio 'Opzione non valida, prego riprovare' e riproporrà il menu."
+
+#: page.ivr.php:76
+msgid "After three invalid attempts, the line is hung up."
+msgstr "Dopo tre tentativi non validi, la linea verrà riagganciata."
+
+#: page.ivr.php:86
+msgid "Add IVR"
+msgstr "Aggiungi IVR"
+
+#: page.ivr.php:107
+msgid "Edit Menu"
+msgstr "Modifica Menu"
+
+#: page.ivr.php:154 page.ivr.php:174
+msgid "Announcement"
+msgstr "Annuncio"
+
+#: page.ivr.php:154
+msgid ""
+"Message to be played to the caller. To add additional recordings please use "
+"the \"System Recordings\" MENU to the left"
+msgstr "Il messaggio da riprodurre al chiamante. Per aggiungere ulteriori registrazioni, utilizzare \"Registrazioni di Sistema\" nel MENU di sinistra"
+
+#: page.ivr.php:159
+msgid "None"
+msgstr "Nessuno"
+
+#: page.ivr.php:174
+msgid ""
+"Message to be played to the caller.<br><br>You must install and enable the "
+"\"Systems Recordings\" Module to edit this option"
+msgstr "Il messaggio da riprodurre al chiamante. Per aggiungere ulteriori registrazioni, utilizzare \"Registrazioni di Sistema\" nel MENU di sinistra"
+
+msgid "Return to IVR"
+msgstr "Ritorna all'IVR"
+
+msgid "Check this box to have this option return to a parent IVR if it was called from a parent IVR. If not, it will go to the chosen destination.<br><br>The return path will be to any IVR that was in the call path prior to this IVR which could lead to strange results if there was an IVR called in the call path but not immediately before this"
+msgstr "Selezionare questa opzione se si vuole ritornare ad un IVR parente se è stato richiamato da esso. Se no, andrà nella destinazione scelta.<br><br>Il percorso di ritorno sarà un qualsiasi IVR che è precedente nel percorso ma puo' dare risultati strani se l'IVR non è proprio quello immediatamente prima di questo"
+
+msgid "Core"
+msgstr "Sistema"
+
+msgid "Voicemail"
+msgstr "Casella Vocale"
+
+msgid "Extensions"
+msgstr "Interni"
+
+msgid "Day Night Mode"
+msgstr "Controllo Giorno Notte"
+
+msgid "Terminate Call"
+msgstr "Termina Chiamata"
+
+msgid "Conferences"
+msgstr "Conferenze"
+
+msgid "Phonebook Directory"
+msgstr "Rubrica"
+
+msgid "Queues"
+msgstr "Code"
+
+msgid "Ring Groups"
+msgstr "Gruppi di chiamata"
+
+msgid "Speed dial functions"
+msgstr "Selezione breve"
+
+msgid "Time Conditions"
+msgstr "Condizioni Temporali"
+
+msgid "Custom Contexts"
+msgstr "Contesti Personalizzati"
+
+msgid "Extended Routing"
+msgstr "Rotte specifiche"
+
+msgid "Custom App<span><br>ADVANCED USERS ONLY<br><br>Uses Goto() to send caller to a custom context.<br><br>The context name should start with \"custom-\", and be in the format custom-context,extension,priority. Example entry:<br><br><b>custom-myapp,s,1</b><br><br>The <b>[custom-myapp]</b> context would need to be created and included in extensions_custom.conf</span>"
+msgstr "Applicazione Personalizzata<span>SOLO UTENTI AVANZATI<br>Utilizzare Goto() per inviare la chiamata verso un contesto personalizzato.<br><br>Il nome del contesto deve iniziare per \"custom-\" e deve essere nel formato custom-contesto,extension,priorità. Esempio: <br><br><b>custom-app,s,1</b><br><br><b>Il contesto [custom-app] </b> deve poi essere creato e incluso nel file extensions_custom.conf</span>"
+
+msgid "Submit Changes"
+msgstr "Invia"
+
+msgid "Increase Options"
+msgstr "+ Opzioni"
+
+msgid "Decrease Options"
+msgstr "- Opzioni"
+
+msgid "Save"
+msgstr "Salva"
+
+msgid "Change Name"
+msgstr "Cambia Nome"
+
+msgid "Delete"
+msgstr "Elimina"
