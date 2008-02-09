@@ -126,20 +126,20 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	<table>
 		<tr><td colspan=2><hr /></td></tr>
 		<tr>
-			<td><a href="#" class="info">Change Name<span>This changes the short name, visible on the right, of this IVR</span></a></td>
+			<td><a href="#" class="info"><?php echo _("Change Name"); ?><span><?php echo _("This changes the short name, visible on the right, of this IVR");?></span></a></td>
 			<td><input type="text" name="displayname" value="<?php echo $ivr_details['displayname'] ?>"></td>
 		</tr>
 		<tr>
-			<td><a href="#" class="info">Timeout<span>The amount of time (in seconds) before the 't' option, if specified, is used</span></a></td>
+			<td><a href="#" class="info"><?php echo _("Timeout");?><span><?php echo _("The amount of time (in seconds) before the 't' option, if specified, is used");?></span></a></td>
 			<td><input type="text" name="timeout" value="<?php echo $ivr_details['timeout'] ?>"></td>
 		</tr>
 		<?php if ( function_exists('voicemail_getVoicemail') ) { ?>
 		<tr>
-			<td><a href="#" class="info">Enable Directory<span>Let callers into the IVR dial '#' to access the directory</span></a></td>
+			<td><a href="#" class="info"><?php echo _("Enable Directory");?><span><?php echo _("Let callers into the IVR dial '#' to access the directory");?></span></a></td>
 			<td><input type="checkbox" name="ena_directory" <?php echo $ivr_details['enable_directory'] ?>></td>
 		</tr>
 		<tr>
-			<td><a href="#" class="info">Directory Context<span>When # is selected, this is the voicemail directory context that is used</span></a></td>
+			<td><a href="#" class="info"><?php echo _("Directory Context");?><span><?php echo _("When # is selected, this is the voicemail directory context that is used");?></span></a></td>
 			<td>
 				<select name="dircontext"/>
 					<?php
@@ -155,7 +155,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		</tr>
 		<?php } ?>
 		<tr>
-			<td><a href="#" class="info">Enable Direct Dial<span>Let callers into the IVR dial an extension directly</span></a></td>
+			<td><a href="#" class="info"><?php echo _("Enable Direct Dial");?><span><?php echo _("Let callers into the IVR dial an extension directly");?></span></a></td>
 			<td><input type="checkbox" name="ena_directdial" <?php echo $ivr_details['enable_directdial'] ?>></td>
 		</tr>
 <?php
