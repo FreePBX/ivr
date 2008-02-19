@@ -1,13 +1,14 @@
 <module>
 	<rawname>ivr</rawname>
 	<name>IVR</name>
-	<version>2.5.16.1</version>
+	<version>2.5.16.2</version>
 	<type>setup</type>
 	<category>Inbound Call Control</category>
 	<description>
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, "Press 1 for sales") and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
+		*2.5.16.2* #2687 breakout from Queue to Company Directory blocks voicemail
 		*2.5.16.1* #2591, added depends on 2.4.0
 		*2.5.16* Extension/dest registry, #2303, it translation
 		*2.5.15.1* bump for rc1

@@ -166,6 +166,8 @@ function ivr_get_config($engine) {
 					if (!empty($details['enable_directory'])) {
 						$ext->addInclude($id,'app-directory');
 						$dir = featurecodes_getFeatureCode('infoservices', 'directory');
+						$ext->add($id, '#' ,'', new ext_dbdel('${BLKVM_OVERRIDE}'));
+						$ext->add($id, '#' ,'', new ext_setvar('__NODEST', ''));
 						$ext->add($id, '#', '', new ext_goto("app-directory,$dir,1"));
 					}
 
