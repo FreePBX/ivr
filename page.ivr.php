@@ -141,7 +141,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Directory Context");?><span><?php echo _("When # is selected, this is the voicemail directory context that is used");?></span></a></td>
 			<td>
-				<select name="dircontext"/>
+				<select name="dircontext">
 					<?php
 					$tresults = voicemail_getVoicemail();
 					$vmcontexts = array_keys($tresults);
@@ -164,7 +164,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller. To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
 			<td>
-				<select name="annmsg"/>
+				<select name="annmsg">
 				<?php
 					$tresults = recordings_list();
 					echo '<option value="">'._("None")."</option>";
