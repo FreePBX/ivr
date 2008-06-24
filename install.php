@@ -1,6 +1,6 @@
 <?php
-sql('CREATE TABLE IF NOT EXISTS ivr ( ivr_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, displayname VARCHAR(50), deptname VARCHAR(50), enable_directory VARCHAR(8), enable_directdial VARCHAR(8), timeout INT, announcement VARCHAR(255), dircontext VARCHAR ( 50 ) DEFAULT "default" )');
-sql('CREATE TABLE IF NOT EXISTS ivr_dests ( ivr_id INT NOT NULL, selection VARCHAR(10), dest VARCHAR(50))');
+sql('CREATE TABLE IF NOT EXISTS ivr ( ivr_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, displayname VARCHAR(50), deptname VARCHAR(50), enable_directory VARCHAR(8), enable_directdial VARCHAR(8), timeout INT, announcement VARCHAR(255), dircontext VARCHAR ( 50 ) DEFAULT "default", alt_timeout VARCHAR(8), alt_invalid VARCHAR(8), `loops` TINYINT(1) NOT NULL DEFAULT 2 )');
+sql('CREATE TABLE IF NOT EXISTS ivr_dests ( ivr_id INT NOT NULL, selection VARCHAR(10), dest VARCHAR(50), ivr_ret TINYINT(1) NOT NULL DEFAULT 0)');
 
 global $db;
 
@@ -84,5 +84,29 @@ if (!DB::IsError($results)) { // error - table must not be there
 	}
 }
 
-
+// Version 2.5.17 adds improved i and t destination handling
+$sql = "SELECT alt_timeout FROM ivr";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	// add new field
+    $sql = "ALTER TABLE ivr ADD alt_timeout VARCHAR(8);";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+}
+$sql = "SELECT alt_invalid FROM ivr";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	// add new field
+    $sql = "ALTER TABLE ivr ADD alt_invalid VARCHAR(8);";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+}
+$sql = "SELECT `loops` FROM ivr";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	// add new field
+    $sql = "ALTER TABLE ivr ADD `loops` TINYINT(1) NOT NULL DEFAULT 2;";
+    $result = $db->query($sql);
+    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+}
 ?>

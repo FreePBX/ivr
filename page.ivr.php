@@ -158,6 +158,27 @@ function ivr_show_edit($id, $nbroptions, $post) {
 			<td><a href="#" class="info"><?php echo _("Enable Direct Dial");?><span><?php echo _("Let callers into the IVR dial an extension directly");?></span></a></td>
 			<td><input type="checkbox" name="ena_directdial" <?php echo $ivr_details['enable_directdial'] ?>></td>
 		</tr>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Loop Before t-dest");?><span><?php echo _("If checked, and there is a 't' (timeout) destination defined below, the IVR will loop back to the begining if no input is provided for the designated loop counts prior to going to the timeout (t) destination.");?></span></a></td>
+			<td><input type="checkbox" name="alt_timeout" <?php echo $ivr_details['alt_timeout'] ?>></td>
+		</tr>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Loop Before i-dest");?><span><?php echo _("If checked, and there is an 'i' (invalid extension) destination defined below, the IVR will play invalid option and then loop back to the begining for the designated loop counts prior to going to the invalid (i) destination.");?></span></a></td>
+			<td><input type="checkbox" name="alt_invalid" <?php echo $ivr_details['alt_invalid'] ?>></td>
+		</tr>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Repeat Loops:")?><span><?php echo _("The number of times we should loop when invalid input or no input has been entered before going to the defined or default generated 'i' or 't' options. If the 'i' or 't' options are defined, the above check boxes must be checked in order to loop.")?></span></a></td>
+			<td>
+				<select name="loops">
+				<?php 
+					$default = (isset($ivr_details['loops']) ? $ivr_details['loops'] : 2);
+					for ($i=0; $i <= 9; $i++) {
+						echo '<option value="'.$i.'" '.($i == $default ? 'SELECTED' : '').'>'.$i.'</option>';
+					}
+				?>		
+				</select>		
+			</td>
+		</tr>
 <?php
 			$annmsg = isset($ivr_details['announcement'])?$ivr_details['announcement']:'';
 			if(function_exists('recordings_list')) { //only include if recordings is enabled ?>

@@ -151,6 +151,7 @@ function ivr_get_config($engine) {
 					$details = ivr_get_details($item['ivr_id']);
 
 					$announcement = (isset($details['announcement']) ? $details['announcement'] : '');
+					$loops = (isset($details['loops']) ? $details['loops'] : '2');
 
 					if (!empty($details['enable_directdial'])) {
 						// MODIFIED (PL)
@@ -197,8 +198,21 @@ function ivr_get_config($engine) {
 					$addloop=false;
 					if (!empty($dests)) {
 						foreach($dests as $dest) {
-							if ($dest['selection'] == 't') $timeout=true;
-							if ($dest['selection'] == 'i') $invalid=true;
+							if ($dest['selection'] == 't' && empty($details['alt_timeout'])) {
+							 	$timeout=true;
+							} elseif ($dest['selection'] == 'i' && empty($details['alt_invalid'])) {
+							 	$invalid=true;
+							} elseif (($dest['selection'] == 't' && !empty($details['alt_timeout']))) {
+							 	$timeout=true;
+								$ext->add($id, $dest['selection'], '', new ext_setvar('LOOPCOUNT','$[${LOOPCOUNT} + 1]'));	
+								$ext->add($id, $dest['selection'], '', new ext_gotoif('$[${LOOPCOUNT} <= '.$loops.']','s,begin'));
+							} elseif (($dest['selection'] == 'i' && !empty($details['alt_invalid']))) {
+							 	$invalid=true;
+								$ext->add($id, $dest['selection'], '', new ext_setvar('LOOPCOUNT','$[${LOOPCOUNT} + 1]'));	
+								//$ext->add($id, $dest['selection'], '', new ext_playback('invalid'));
+								$ext->add($id, $dest['selection'], '', new ext_execif('$[${LOOPCOUNT} <= '.$loops.']','Playback','invalid'));
+								$ext->add($id, $dest['selection'], '', new ext_gotoif('$[${LOOPCOUNT} <= '.$loops.']','s,begin'));
+							}
 							$ext->add($id, $dest['selection'],'', new ext_dbdel('${BLKVM_OVERRIDE}'));
 							$ext->add($id, $dest['selection'],'', new ext_setvar('__NODEST', ''));
 
@@ -218,17 +232,19 @@ function ivr_get_config($engine) {
 					}
 					// Apply invalid if required
 					if (!$invalid) {
+						//$ext->add($id, 'i', '', new ext_noop('default i dest'));
 						$ext->add($id, 'i', '', new ext_playback('invalid'));
 						$ext->add($id, 'i', '', new ext_goto('loop,1'));
 						$addloop=true;
 					}
 					if (!$timeout) {
+						//$ext->add($id, 't', '', new ext_noop('default t dest'));
 						$ext->add($id, 't', '', new ext_goto('loop,1'));
 						$addloop=true;
 					}
 					if ($addloop) {
 						$ext->add($id, 'loop', '', new ext_setvar('LOOPCOUNT','$[${LOOPCOUNT} + 1]'));	
-						$ext->add($id, 'loop', '', new ext_gotoif('$[${LOOPCOUNT} > 2]','hang,1'));
+						$ext->add($id, 'loop', '', new ext_gotoif('$[${LOOPCOUNT} > '.$loops.']','hang,1'));
 						$ext->add($id, 'loop', '', new ext_goto($id.',s,begin'));
 
 						// these need to be reset or inheritance problems makes them go away in some conditions and infinite inheritance creates other problems
@@ -251,7 +267,7 @@ function ivr_get_ivr_id($name) {
 	$res = $db->getRow("SELECT ivr_id from ivr where displayname='$name'");
 	if (count($res) == 0) {
 		// It's not there. Create it and return the ID
-		sql("INSERT INTO ivr (displayname, enable_directory, enable_directdial, timeout)  values('$name', 'CHECKED', 'CHECKED', 10)");
+		sql("INSERT INTO ivr (displayname, enable_directory, enable_directdial, timeout, alt_timeout, alt_invalid, `loops`)  values('$name', 'CHECKED', 'CHECKED', 10, '', '', 2)");
 		$res = $db->getRow("SELECT ivr_id from ivr where displayname='$name'");
 		needreload();
 	}
@@ -282,14 +298,24 @@ function ivr_do_edit($id, $post) {
 	$annmsg = isset($post['annmsg'])?$post['annmsg']:'';
 	$dircontext = isset($post['dircontext'])?$post['dircontext']:'';
 
-	if (!empty($ena_directory)) 
+	$loops = isset($post['loops'])?$post['loops']:'2';
+	$alt_timeout = isset($post['alt_timeout'])?$post['alt_timeout']:'';
+	$alt_invalid = isset($post['alt_invalid'])?$post['alt_invalid']:'';
+
+	if (!empty($ena_directory)) {
 		$ena_directory='CHECKED';
-
-
-	if (!empty($ena_directdial)) 
+	}
+	if (!empty($ena_directdial)) {
 		$ena_directdial='CHECKED';
+	}
+	if (!empty($alt_timeout)) {
+		$alt_timeout='CHECKED';
+	}
+	if (!empty($alt_invalid)) {
+		$alt_invalid='CHECKED';
+	}
 	
-	sql("UPDATE ivr SET displayname='$displayname', enable_directory='$ena_directory', enable_directdial='$ena_directdial', timeout='$timeout', announcement='$annmsg', dircontext='$dircontext' WHERE ivr_id='$id'");
+	sql("UPDATE ivr SET displayname='$displayname', enable_directory='$ena_directory', enable_directdial='$ena_directdial', timeout='$timeout', announcement='$annmsg', dircontext='$dircontext', alt_timeout='$alt_timeout', alt_invalid='$alt_invalid', `loops`='$loops' WHERE ivr_id='$id'");
 
 	// Delete all the old dests
 	sql("DELETE FROM ivr_dests where ivr_id='$id'");
