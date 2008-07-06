@@ -127,21 +127,28 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		<tr><td colspan=2><hr /></td></tr>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Change Name"); ?><span><?php echo _("This changes the short name, visible on the right, of this IVR");?></span></a></td>
-			<td><input type="text" name="displayname" value="<?php echo $ivr_details['displayname'] ?>"></td>
+			<td><input type="text" name="displayname" value="<?php echo $ivr_details['displayname'] ?>" tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
+<script language="javascript">
+	<!--
+
+var theForm = document.prompt;
+theForm.displayname.focus();
+</script>
+
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Timeout");?><span><?php echo _("The amount of time (in seconds) before the 't' option, if specified, is used");?></span></a></td>
-			<td><input type="text" name="timeout" value="<?php echo $ivr_details['timeout'] ?>"></td>
+			<td><input type="text" name="timeout" value="<?php echo $ivr_details['timeout'] ?>" tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
 		<?php if ( function_exists('voicemail_getVoicemail') ) { ?>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Enable Directory");?><span><?php echo _("Let callers into the IVR dial '#' to access the directory");?></span></a></td>
-			<td><input type="checkbox" name="ena_directory" <?php echo $ivr_details['enable_directory'] ?>></td>
+			<td><input type="checkbox" name="ena_directory" <?php echo $ivr_details['enable_directory'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Directory Context");?><span><?php echo _("When # is selected, this is the voicemail directory context that is used");?></span></a></td>
 			<td>
-				<select name="dircontext">
+				<select name="dircontext" tabindex="<?php echo ++$tabindex;?>">
 					<?php
 					$tresults = voicemail_getVoicemail();
 					$vmcontexts = array_keys($tresults);
@@ -156,20 +163,20 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		<?php } ?>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Enable Direct Dial");?><span><?php echo _("Let callers into the IVR dial an extension directly");?></span></a></td>
-			<td><input type="checkbox" name="ena_directdial" <?php echo $ivr_details['enable_directdial'] ?>></td>
+			<td><input type="checkbox" name="ena_directdial" <?php echo $ivr_details['enable_directdial'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Loop Before t-dest");?><span><?php echo _("If checked, and there is a 't' (timeout) destination defined below, the IVR will loop back to the begining if no input is provided for the designated loop counts prior to going to the timeout (t) destination.");?></span></a></td>
-			<td><input type="checkbox" name="alt_timeout" <?php echo $ivr_details['alt_timeout'] ?>></td>
+			<td><input type="checkbox" name="alt_timeout" <?php echo $ivr_details['alt_timeout'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Loop Before i-dest");?><span><?php echo _("If checked, and there is an 'i' (invalid extension) destination defined below, the IVR will play invalid option and then loop back to the begining for the designated loop counts prior to going to the invalid (i) destination.");?></span></a></td>
-			<td><input type="checkbox" name="alt_invalid" <?php echo $ivr_details['alt_invalid'] ?>></td>
+			<td><input type="checkbox" name="alt_invalid" <?php echo $ivr_details['alt_invalid'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Repeat Loops:")?><span><?php echo _("The number of times we should loop when invalid input or no input has been entered before going to the defined or default generated 'i' or 't' options. If the 'i' or 't' options are defined, the above check boxes must be checked in order to loop.")?></span></a></td>
 			<td>
-				<select name="loops">
+				<select name="loops" tabindex="<?php echo ++$tabindex;?>">
 				<?php 
 					$default = (isset($ivr_details['loops']) ? $ivr_details['loops'] : 2);
 					for ($i=0; $i <= 9; $i++) {
@@ -185,7 +192,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller. To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
 			<td>
-				<select name="annmsg">
+				<select name="annmsg" tabindex="<?php echo ++$tabindex;?>">
 				<?php
 					$tresults = recordings_list();
 					echo '<option value="">'._("None")."</option>";
@@ -220,7 +227,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		<tr><td colspan=2>	
 			<input name="increase" type="submit" value="<?php echo _("Increase Options")?>">
 			&nbsp;
-			<input name="Submit" type="submit" value="<?php echo _("Save")?>">
+			<input name="Submit" type="submit" value="<?php echo _("Save")?>" tabindex="<?php echo ++$tabindex;?>">
 			&nbsp;
 			<?php if ($nbroptions > 1) { ?>
 			<input name="decrease" type="submit" value="<?php echo _("Decrease Options")?>">
@@ -234,13 +241,14 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	$count = 0;
 	if (!empty($dests)) {
 		foreach ($dests as $dest) {
-			drawdestinations($count, $dest['selection'], $dest['dest'], $dest['ivr_ret']);
+			drawdestinations($count, $dest['selection'], $dest['dest'], $dest['ivr_ret'], $tabindex);
 			$count++;
-		}
+    }
 	}
 	while ($count < $nbroptions) {
-		drawdestinations($count, null, null, 0);
+		drawdestinations($count, null, null, 0, $tabindex);
 		$count++;
+		$tabindex++;
 	}
 ?>
 	
@@ -262,9 +270,9 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	
 	<script language="javascript">
 	<!--
-	
-	var theForm = document.prompt;
-	
+
+
+
 	function prompt_onsubmit() {
 		var msgInvalidOption = "<?php echo _("Invalid option"); ?>";
 		
@@ -307,12 +315,12 @@ function ivr_show_edit($id, $nbroptions, $post) {
 echo "</div>\n";
 }
 
-function drawdestinations($count, $sel,  $dest, $ivr_ret) { ?>
+function drawdestinations($count, $sel,  $dest, $ivr_ret, $tabindex) { ?>
 	<tr> <td style="text-align:right;">
 
 	<small><a href="#" class="info"><?php echo _("Return to IVR")?><span><?php echo _("Check this box to have this option return to a parent IVR if it was called from a parent IVR. If not, it will go to the chosen destination.<br><br>The return path will be to any IVR that was in the call path prior to this IVR which could lead to strange results if there was an IVR called in the call path but not immediately before this")?></span></a></small>
 	<input type="checkbox" name="ivr_ret<?php echo $count ?>" value="ivr_ret" <?php echo $ivr_ret?'CHECKED':''; ?>><br><br />
-		<input size="2" type="text" name="option<?php echo $count ?>" value="<?php echo $sel ?>"><br />
+		<input size="2" type="text" name="option<?php echo $count ?>" value="<?php echo $sel ?>" tabindex="<?php echo $tabindex;?>"><br />
 <?php if (strlen($sel)) {  ?>
 		<i style='font-size: x-small'>Leave blank to remove</i>
 <?php }  ?>
