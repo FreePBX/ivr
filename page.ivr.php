@@ -21,6 +21,7 @@ $action = isset($_REQUEST['action'])?$_REQUEST['action']:'';
 $id = isset($_REQUEST['id'])?$_REQUEST['id']:'';
 $dircontext = isset($_SESSION["AMP_user"]->_deptname)?$_SESSION["AMP_user"]->_deptname:'';
 $nbroptions = isset($_REQUEST['nbroptions'])?$_REQUEST['nbroptions']:'3';
+$tabindex = 0;
 
 if (empty($dircontext))
         $dircontext = 'default';
@@ -98,6 +99,7 @@ function ivr_sidebar($id)  {
 
 function ivr_show_edit($id, $nbroptions, $post) {
 	global $db;
+	global $tabindex;
 
 	$ivr_details = ivr_get_details($id);
 	$ivr_dests = ivr_get_dests($id);
@@ -241,14 +243,13 @@ theForm.displayname.focus();
 	$count = 0;
 	if (!empty($dests)) {
 		foreach ($dests as $dest) {
-			drawdestinations($count, $dest['selection'], $dest['dest'], $dest['ivr_ret'], $tabindex);
+			drawdestinations($count, $dest['selection'], $dest['dest'], $dest['ivr_ret']);
 			$count++;
     }
 	}
 	while ($count < $nbroptions) {
-		drawdestinations($count, null, null, 0, $tabindex);
+		drawdestinations($count, null, null, 0);
 		$count++;
-		$tabindex++;
 	}
 ?>
 	
@@ -315,12 +316,14 @@ theForm.displayname.focus();
 echo "</div>\n";
 }
 
-function drawdestinations($count, $sel,  $dest, $ivr_ret, $tabindex) { ?>
+function drawdestinations($count, $sel,  $dest, $ivr_ret) { 
+	global $tabindex
+?>
 	<tr> <td style="text-align:right;">
 
 	<small><a href="#" class="info"><?php echo _("Return to IVR")?><span><?php echo _("Check this box to have this option return to a parent IVR if it was called from a parent IVR. If not, it will go to the chosen destination.<br><br>The return path will be to any IVR that was in the call path prior to this IVR which could lead to strange results if there was an IVR called in the call path but not immediately before this")?></span></a></small>
 	<input type="checkbox" name="ivr_ret<?php echo $count ?>" value="ivr_ret" <?php echo $ivr_ret?'CHECKED':''; ?>><br><br />
-		<input size="2" type="text" name="option<?php echo $count ?>" value="<?php echo $sel ?>" tabindex="<?php echo $tabindex;?>"><br />
+		<input size="2" type="text" name="option<?php echo $count ?>" value="<?php echo $sel ?>" tabindex="<?php echo ++$tabindex;?>"><br />
 <?php if (strlen($sel)) {  ?>
 		<i style='font-size: x-small'>Leave blank to remove</i>
 <?php }  ?>
