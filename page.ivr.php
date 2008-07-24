@@ -189,18 +189,18 @@ theForm.displayname.focus();
 			</td>
 		</tr>
 <?php
-			$annmsg = isset($ivr_details['announcement'])?$ivr_details['announcement']:'';
+			$annmsg_id = isset($ivr_details['announcement_id'])?$ivr_details['announcement_id']:'';
 			if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller. To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
 			<td>
-				<select name="annmsg" tabindex="<?php echo ++$tabindex;?>">
+				<select name="annmsg_id" tabindex="<?php echo ++$tabindex;?>">
 				<?php
 					$tresults = recordings_list();
 					echo '<option value="">'._("None")."</option>";
 					if (isset($tresults[0])) {
 						foreach ($tresults as $tresult) {
-							echo '<option value="'.$tresult[2].'"'.($tresult[2] == $annmsg ? ' SELECTED' : '').'>'.$tresult[1]."</option>\n";
+							echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $annmsg_id ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
 						}
 					}
 				?>
@@ -215,9 +215,9 @@ theForm.displayname.focus();
 			<td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option")?></span></a></td>
 			<td>
 			<?php
-				$default = (isset($annmsg) ? $annmsg : '');
+				$default = (isset($annmsg_id) ? $annmsg_id : '');
 			?>
-				<input type="hidden" name="annmsg" value="<?php echo $default; ?>"><?php echo ($default != '' ? $default : 'None'); ?>
+				<input type="hidden" name="annmsg_id" value="<?php echo $default; ?>"><?php echo ($default != '' ? $default : 'None'); ?>
 			</td>
 		</tr>
 <?php

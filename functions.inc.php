@@ -128,13 +128,31 @@ function ivr_getdestinfo($dest) {
 		if (empty($thisexten)) {
 			return array();
 		} else {
-			//$type = isset($active_modules['announcement']['type'])?$active_modules['announcement']['type']:'setup';
+			//$type = isset($active_modules['ivr']['type'])?$active_modules['ivr']['type']:'setup';
 			return array('description' => 'IVR : '.$thisexten['displayname'],
 			             'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($exten),
 								  );
 		}
 	} else {
 		return false;
+	}
+}
+
+function ivr_recordings_usage($recording_id) {
+	global $active_modules;
+
+	$results = sql("SELECT `ivr_id`, `displayname` FROM `ivr` WHERE `announcement_id` = '$recording_id'","getAll",DB_FETCHMODE_ASSOC);
+	if (empty($results)) {
+		return array();
+	} else {
+		//$type = isset($active_modules['ivr']['type'])?$active_modules['ivr']['type']:'setup';
+		foreach ($results as $result) {
+			$usage_arr[] = array(
+				'url_query' => 'config.php?display=ivr&action=edit&id='.urlencode($result['ivr_id']),
+				'description' => "IVR: ".$result['displayname'],
+			);
+		}
+		return $usage_arr;
 	}
 }
 
@@ -150,7 +168,7 @@ function ivr_get_config($engine) {
 					$id = "ivr-".$item['ivr_id'];
 					$details = ivr_get_details($item['ivr_id']);
 
-					$announcement = (isset($details['announcement']) ? $details['announcement'] : '');
+					$announcement_id = (isset($details['announcement_id']) ? $details['announcement_id'] : '');
 					$loops = (isset($details['loops']) ? $details['loops'] : '2');
 
 					if (!empty($details['enable_directdial'])) {
@@ -182,8 +200,9 @@ function ivr_get_config($engine) {
 					$ext->add($id, 's', '', new ext_wait('1'));
 					$ext->add($id, 's', 'begin', new ext_digittimeout(3));
 					$ext->add($id, 's', '', new ext_responsetimeout($details['timeout']));
-					if ($announcement != '') {
-						$ext->add($id, 's', '', new ext_background($announcement));
+					if ($announcement_id != '') {
+						$announcement_msg = recordings_get_file($announcement_id);
+						$ext->add($id, 's', '', new ext_background($announcement_msg));
 					}
 					$ext->add($id, 's', '', new ext_waitexten());
 					$ext->add($id, 'hang', '', new ext_playback('vm-goodbye'));
@@ -295,7 +314,7 @@ function ivr_do_edit($id, $post) {
 	$timeout = isset($post['timeout'])?$post['timeout']:'';
 	$ena_directory = isset($post['ena_directory'])?$post['ena_directory']:'';
 	$ena_directdial = isset($post['ena_directdial'])?$post['ena_directdial']:'';
-	$annmsg = isset($post['annmsg'])?$post['annmsg']:'';
+	$annmsg_id = isset($post['annmsg_id'])?$post['annmsg_id']:'';
 	$dircontext = isset($post['dircontext'])?$post['dircontext']:'';
 
 	$loops = isset($post['loops'])?$post['loops']:'2';
@@ -315,7 +334,7 @@ function ivr_do_edit($id, $post) {
 		$alt_invalid='CHECKED';
 	}
 	
-	sql("UPDATE ivr SET displayname='$displayname', enable_directory='$ena_directory', enable_directdial='$ena_directdial', timeout='$timeout', announcement='$annmsg', dircontext='$dircontext', alt_timeout='$alt_timeout', alt_invalid='$alt_invalid', `loops`='$loops' WHERE ivr_id='$id'");
+	sql("UPDATE ivr SET displayname='$displayname', enable_directory='$ena_directory', enable_directdial='$ena_directdial', timeout='$timeout', announcement_id='$annmsg_id', dircontext='$dircontext', alt_timeout='$alt_timeout', alt_invalid='$alt_invalid', `loops`='$loops' WHERE ivr_id='$id'");
 
 	// Delete all the old dests
 	sql("DELETE FROM ivr_dests where ivr_id='$id'");
