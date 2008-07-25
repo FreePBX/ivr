@@ -87,9 +87,9 @@ function ivr_sidebar($id)  {
         <li><a id="<?php echo empty($id)?'current':'nul' ?>" href="config.php?display=ivr&amp;action=add"><?php echo _("Add IVR")?></a></li>
 <?php
 
-        $tresults = ivr_list();
-        if (isset($tresults)){
-                foreach ($tresults as $tresult) {
+        $ivr_results = ivr_list();
+        if (isset($ivr_results)){
+                foreach ($ivr_results as $tresult) {
                         echo "<li><a id=\"".($id==$tresult['ivr_id'] ? 'current':'nul')."\" href=\"config.php?display=ivr";
                         echo "&amp;action=edit&amp;id={$tresult['ivr_id']}\">{$tresult['displayname']}</a></li>\n";
                 }
@@ -156,59 +156,9 @@ var theForm = document.prompt;
 theForm.displayname.focus();
 </script>
 
-		<tr>
-			<td><a href="#" class="info"><?php echo _("Timeout");?><span><?php echo _("The amount of time (in seconds) before the 't' option, if specified, is used");?></span></a></td>
-			<td><input type="text" name="timeout" value="<?php echo $ivr_details['timeout'] ?>" tabindex="<?php echo ++$tabindex;?>"></td>
-		</tr>
-		<?php if ( function_exists('voicemail_getVoicemail') ) { ?>
-		<tr>
-			<td><a href="#" class="info"><?php echo _("Enable Directory");?><span><?php echo _("Let callers into the IVR dial '#' to access the directory");?></span></a></td>
-			<td><input type="checkbox" name="ena_directory" <?php echo $ivr_details['enable_directory'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
-		</tr>
-		<tr>
-			<td><a href="#" class="info"><?php echo _("Directory Context");?><span><?php echo _("When # is selected, this is the voicemail directory context that is used");?></span></a></td>
-			<td>
-				<select name="dircontext" tabindex="<?php echo ++$tabindex;?>">
-					<?php
-					$tresults = voicemail_getVoicemail();
-					$vmcontexts = array_keys($tresults);
-					foreach ($vmcontexts as $vmc) {
-						if ($vmc != 'general' ) 
-							echo '<option value="'.$vmc.'"'.($vmc == $ivr_details['dircontext'] ? ' SELECTED' : '').'>'.$vmc."</option>\n";
-						}
-					?>
-				</select>
-			</td>
-		</tr>
-		<?php } ?>
-		<tr>
-			<td><a href="#" class="info"><?php echo _("Enable Direct Dial");?><span><?php echo _("Let callers into the IVR dial an extension directly");?></span></a></td>
-			<td><input type="checkbox" name="ena_directdial" <?php echo $ivr_details['enable_directdial'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
-		</tr>
-		<tr>
-			<td><a href="#" class="info"><?php echo _("Loop Before t-dest");?><span><?php echo _("If checked, and there is a 't' (timeout) destination defined below, the IVR will loop back to the begining if no input is provided for the designated loop counts prior to going to the timeout (t) destination.");?></span></a></td>
-			<td><input type="checkbox" name="alt_timeout" <?php echo $ivr_details['alt_timeout'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
-		</tr>
-		<tr>
-			<td><a href="#" class="info"><?php echo _("Loop Before i-dest");?><span><?php echo _("If checked, and there is an 'i' (invalid extension) destination defined below, the IVR will play invalid option and then loop back to the begining for the designated loop counts prior to going to the invalid (i) destination.");?></span></a></td>
-			<td><input type="checkbox" name="alt_invalid" <?php echo $ivr_details['alt_invalid'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
-		</tr>
-		<tr>
-			<td><a href="#" class="info"><?php echo _("Repeat Loops:")?><span><?php echo _("The number of times we should loop when invalid input or no input has been entered before going to the defined or default generated 'i' or 't' options. If the 'i' or 't' options are defined, the above check boxes must be checked in order to loop.")?></span></a></td>
-			<td>
-				<select name="loops" tabindex="<?php echo ++$tabindex;?>">
-				<?php 
-					$default = (isset($ivr_details['loops']) ? $ivr_details['loops'] : 2);
-					for ($i=0; $i <= 9; $i++) {
-						echo '<option value="'.$i.'" '.($i == $default ? 'SELECTED' : '').'>'.$i.'</option>';
-					}
-				?>		
-				</select>		
-			</td>
-		</tr>
 <?php
-			$annmsg_id = isset($ivr_details['announcement_id'])?$ivr_details['announcement_id']:'';
-			if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
+	$annmsg_id = isset($ivr_details['announcement_id'])?$ivr_details['announcement_id']:'';
+	if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Announcement")?><span><?php echo _("Message to be played to the caller. To add additional recordings please use the \"System Recordings\" MENU to the left")?></span></a></td>
 			<td>
@@ -241,7 +191,100 @@ theForm.displayname.focus();
 <?php
 	}
 ?>
-
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Timeout");?><span><?php echo _("The amount of time (in seconds) before the 't' option, if specified, is used");?></span></a></td>
+			<td><input type="text" name="timeout" value="<?php echo $ivr_details['timeout'] ?>" tabindex="<?php echo ++$tabindex;?>"></td>
+		</tr>
+		<?php if ( function_exists('voicemail_getVoicemail') ) { ?>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Enable Directory");?><span><?php echo _("Let callers into the IVR dial '#' to access the directory");?></span></a></td>
+			<td><input type="checkbox" name="ena_directory" <?php echo $ivr_details['enable_directory'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
+		</tr>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Directory Context");?><span><?php echo _("When # is selected, this is the voicemail directory context that is used");?></span></a></td>
+			<td>
+				<select name="dircontext" tabindex="<?php echo ++$tabindex;?>">
+					<?php
+					$vm_results = voicemail_getVoicemail();
+					$vmcontexts = array_keys($vm_results);
+					foreach ($vmcontexts as $vmc) {
+						if ($vmc != 'general' ) 
+							echo '<option value="'.$vmc.'"'.($vmc == $ivr_details['dircontext'] ? ' SELECTED' : '').'>'.$vmc."</option>\n";
+						}
+					?>
+				</select>
+			</td>
+		</tr>
+		<?php } ?>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Enable Direct Dial");?><span><?php echo _("Let callers into the IVR dial an extension directly");?></span></a></td>
+			<td><input type="checkbox" name="ena_directdial" <?php echo $ivr_details['enable_directdial'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
+		</tr>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Loop Before t-dest");?><span><?php echo _("If checked, and there is a 't' (timeout) destination defined below, the IVR will loop back to the begining if no input is provided for the designated loop counts prior to going to the timeout (t) destination.");?></span></a></td>
+			<td><input type="checkbox" name="alt_timeout" <?php echo $ivr_details['alt_timeout'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
+		</tr>
+<?php
+	$timeout_id = isset($ivr_details['timeout_id'])?$ivr_details['timeout_id']:'';
+	if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Timeout Message")?><span><?php echo _("If a timeout occurs and a message is selected, it will be played in place of the annoucement message when looping back to the top of the IVR. It will not be played if the t destination is the next target.")?></span></a></td>
+			<td>
+				<select name="timeout_id" tabindex="<?php echo ++$tabindex;?>">
+				<?php
+					//$tresults obtained above
+					echo '<option value="">'._("None")."</option>";
+					if (isset($tresults[0])) {
+						foreach ($tresults as $tresult) {
+							echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $timeout_id ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
+						}
+					}
+				?>
+				</select>
+			</td>
+		</tr>
+<?php
+	}
+?>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Loop Before i-dest");?><span><?php echo _("If checked, and there is an 'i' (invalid extension) destination defined below, the IVR will play invalid option and then loop back to the begining for the designated loop counts prior to going to the invalid (i) destination.");?></span></a></td>
+			<td><input type="checkbox" name="alt_invalid" <?php echo $ivr_details['alt_invalid'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
+		</tr>
+<?php
+	$invalid_id = isset($ivr_details['invalid_id'])?$ivr_details['invalid_id']:'';
+	if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Invalid Message")?><span><?php echo _("If an invalid extension is pressed and a message is selected, it will be played in place of the annoucement message when looping back to the top of the IVR. It will not be played if the t destination is the next target. If nothing is selcted, the system will play a default invalid extension message before going back to the main announcement")?></span></a></td>
+			<td>
+				<select name="invalid_id" tabindex="<?php echo ++$tabindex;?>">
+				<?php
+					//$tresults obtained above
+					echo '<option value="">'._("None")."</option>";
+					if (isset($tresults[0])) {
+						foreach ($tresults as $tresult) {
+							echo '<option value="'.$tresult['id'].'"'.($tresult['id'] == $invalid_id ? ' SELECTED' : '').'>'.$tresult['displayname']."</option>\n";
+						}
+					}
+				?>
+				</select>
+			</td>
+		</tr>
+<?php
+	}
+?>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Repeat Loops:")?><span><?php echo _("The number of times we should loop when invalid input or no input has been entered before going to the defined or default generated 'i' or 't' options. If the 'i' or 't' options are defined, the above check boxes must be checked in order to loop.")?></span></a></td>
+			<td>
+				<select name="loops" tabindex="<?php echo ++$tabindex;?>">
+				<?php 
+					$default = (isset($ivr_details['loops']) ? $ivr_details['loops'] : 2);
+					for ($i=0; $i <= 9; $i++) {
+						echo '<option value="'.$i.'" '.($i == $default ? 'SELECTED' : '').'>'.$i.'</option>';
+					}
+				?>		
+				</select>		
+			</td>
+		</tr>
 
 		<tr><td colspan=2><hr /></td></tr>
 		<tr><td colspan=2>	

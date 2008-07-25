@@ -8,6 +8,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, "Press 1 for sales") and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
+		*2.5.19* #2865 Add alternative messages to play if t or i are hit, replacing the first announcmement
 		*2.5.18.1* #2948 don't allow deletion if used by a Queue and show list
 		*2.5.18* #2066 Migrate recordings to recording ids
 		*2.5.17.1* #2845 tabindex

@@ -215,4 +215,41 @@ if(DB::IsError($check)) {
 	out("already migrated");
 }
 
+// Version 2.5.19 add invalid and timeout messages
+//
+outn(_("Checking for timeout_id.."));
+$sql = "SELECT timeout_id FROM ivr";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	//  Add timeout_id field
+	//
+  $sql = "ALTER TABLE ivr ADD timeout_id INTEGER DEFAULT null";
+  $result = $db->query($sql);
+  if(DB::IsError($result)) {
+		out(_("fatal error"));
+		die_freepbx($result->getDebugInfo()); 
+	} else {
+		out(_("added"));
+	}
+} else {
+	out(_("not needed"));
+}
+outn(_("Checking for invalid_id.."));
+$sql = "SELECT invalid_id FROM ivr";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	//  Add invalid_id field
+	//
+  $sql = "ALTER TABLE ivr ADD invalid_id INTEGER DEFAULT null";
+  $result = $db->query($sql);
+  if(DB::IsError($result)) {
+		out(_("fatal error"));
+		die_freepbx($result->getDebugInfo()); 
+	} else {
+		out(_("added"));
+	}
+} else {
+	out(_("not needed"));
+}
+
 ?>
