@@ -114,8 +114,26 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	<input type="hidden" name="display" value="ivr" />
 	<input type="hidden" name="id" value="<?php echo $id ?>" />
 	<input name="Submit" type="submit" style="display:none;" value="save" />
+<?php
+	$usage_list = array();
+	if (function_exists('queues_ivr_usage')) {
+		$usage_list = queues_ivr_usage($id);
+	}
+	if (count($usage_list)) {
+?>
+		<a href="#" class="info"><?php echo _("Queue Breakout Menu Usage List");?><span><?php echo _("This IVR is being used by the following Queues, providing an ability for callers to hear this Queue's annoucement periodically and giving callers an option to break out of the queue into this IVR's menu options. This queue can not be deleted when being used in this mode");?></span></a>
+<?php
+		$count = 0;
+		foreach ($usage_list as $link) {
+			$label = '<span><img width="16" height="16" border="0" title="'.$link['description'].'" alt="" src="images/queue_link.png"/>&nbsp;'.$link['description'].'</span>';
+			echo "<br /><a href=".$link['url_query'].">".$label."</a>";
+		}
+		echo "<br />";
+	} else {
+?>
 	<input name="delete" type="submit" value="<?php echo _("Delete")." "._("Digital Receptionist")." {$ivr_details['displayname']}"; ?>" />
-	<?php
+<?php
+	}
 	if ($id) {
 		$usage_list = framework_display_destination_usage(ivr_getdest($id));
 		if (!empty($usage_list)) {
