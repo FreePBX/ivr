@@ -149,12 +149,6 @@ function ivr_show_edit($id, $nbroptions, $post) {
 			<td><a href="#" class="info"><?php echo _("Change Name"); ?><span><?php echo _("This changes the short name, visible on the right, of this IVR");?></span></a></td>
 			<td><input type="text" name="displayname" value="<?php echo $ivr_details['displayname'] ?>" tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
-<script language="javascript">
-	<!--
-
-var theForm = document.prompt;
-theForm.displayname.focus();
-</script>
 
 <?php
 	$annmsg_id = isset($ivr_details['announcement_id'])?$ivr_details['announcement_id']:'';
@@ -333,7 +327,8 @@ theForm.displayname.focus();
 	<script language="javascript">
 	<!--
 
-
+var theForm = document.prompt;
+theForm.displayname.focus();
 
 	function prompt_onsubmit() {
 		var msgInvalidOption = "<?php echo _("Invalid option"); ?>";
