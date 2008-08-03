@@ -15,23 +15,40 @@ if (! function_exists("outn")) {
 global $db;
 global $amp_conf;
 
-$autoincrement = (($amp_conf["AMPDBENGINE"] == "sqlite") || ($amp_conf["AMPDBENGINE"] == "sqlite3")) ? "AUTOINCREMENT":"AUTO_INCREMENT";
-$sql = "
-CREATE TABLE IF NOT EXISTS ivr 
-( 
-	`ivr_id` INT NOT NULL $autoincrement PRIMARY KEY, 
-	`displayname` VARCHAR(50), 
-	`deptname` VARCHAR(50), 
-	`enable_directory` VARCHAR(8), 
-	`enable_directdial` VARCHAR(8), 
-	`timeout` INT, 
-	`announcement` VARCHAR(255), 
-	`dircontext` VARCHAR ( 50 ) DEFAULT 'default', 
-	`alt_timeout` VARCHAR(8), 
-	`alt_invalid` VARCHAR(8), 
-	`loops` TINYINT(1) NOT NULL DEFAULT 2 
-)
-";
+if($amp_conf["AMPDBENGINE"] == "sqlite3")  {
+	$sql = "
+		CREATE TABLE IF NOT EXISTS ivr ( 
+			ivr_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+			displayname VARCHAR(50), 
+			deptname VARCHAR(50), 
+			enable_directory VARCHAR(8), 
+			enable_directdial VARCHAR(8), 
+			timeout INT, 
+			announcement VARCHAR(255), 
+			dircontext VARCHAR ( 50 ) DEFAULT 'default', 
+			alt_timeout VARCHAR(8), 
+			alt_invalid VARCHAR(8), 
+			`loops` TINYINT(1) NOT NULL DEFAULT 2
+		);
+	";
+}
+else  {
+	$sql = "
+		CREATE TABLE IF NOT EXISTS ivr ( 
+			ivr_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY	, 
+			displayname VARCHAR(50), 
+			deptname VARCHAR(50), 
+			enable_directory VARCHAR(8), 
+			enable_directdial VARCHAR(8), 
+			timeout INT, 
+			announcement VARCHAR(255), 
+			dircontext VARCHAR ( 50 ) DEFAULT 'default', 
+			alt_timeout VARCHAR(8), 
+			alt_invalid VARCHAR(8), 
+			`loops` TINYINT(1) NOT NULL DEFAULT 2
+		);
+	";
+}
 sql($sql);
 
 $sql = "
