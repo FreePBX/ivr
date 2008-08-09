@@ -69,7 +69,7 @@ switch ($action) {
 <h2><?php echo _("Digital Receptionist"); ?></h2>
 <h3><?php 
 echo _("Instructions")."</h3>";
-echo _("You use the Digital Receptionist to make IVR's, Interactive Voice Responce systems.")."<br />\n";
+echo _("You use the Digital Receptionist to make IVR's, Interactive Voice Response systems.")."<br />\n";
 echo _("When creating a menu option, apart from the standard options of 0-9,* and #, you can also use 'i' and 't' destinations.")."\n";
 echo _("'i' is used when the caller pushes an invalid button, and 't' is used when there is no response.")."\n";
 echo _("If those options aren't supplied, the default 't' is to replay the menu three times and then hang up,")."\n";
@@ -121,7 +121,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	}
 	if (count($usage_list)) {
 ?>
-		<a href="#" class="info"><?php echo _("Queue Breakout Menu Usage List");?><span><?php echo _("This IVR is being used by the following Queues, providing an ability for callers to hear this Queue's annoucement periodically and giving callers an option to break out of the queue into this IVR's menu options. This queue can not be deleted when being used in this mode");?></span></a>
+		<a href="#" class="info"><?php echo _("Queue Breakout Menu Usage List");?><span><?php echo _("This IVR is being used by the following Queues, providing an ability for callers to hear this Queue's announcement periodically and giving callers an option to break out of the queue into this IVR's menu options. This queue can not be deleted when being used in this mode");?></span></a>
 <?php
 		$count = 0;
 		foreach ($usage_list as $link) {
@@ -215,14 +215,14 @@ function ivr_show_edit($id, $nbroptions, $post) {
 			<td><input type="checkbox" name="ena_directdial" <?php echo $ivr_details['enable_directdial'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
 		<tr>
-			<td><a href="#" class="info"><?php echo _("Loop Before t-dest");?><span><?php echo _("If checked, and there is a 't' (timeout) destination defined below, the IVR will loop back to the begining if no input is provided for the designated loop counts prior to going to the timeout (t) destination.");?></span></a></td>
+			<td><a href="#" class="info"><?php echo _("Loop Before t-dest");?><span><?php echo _("If checked, and there is a 't' (timeout) destination defined below, the IVR will loop back to the beginning if no input is provided for the designated loop counts prior to going to the timeout (t) destination.");?></span></a></td>
 			<td><input type="checkbox" name="alt_timeout" <?php echo $ivr_details['alt_timeout'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
 <?php
 	$timeout_id = isset($ivr_details['timeout_id'])?$ivr_details['timeout_id']:'';
 	if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
 		<tr>
-			<td><a href="#" class="info"><?php echo _("Timeout Message")?><span><?php echo _("If a timeout occurs and a message is selected, it will be played in place of the annoucement message when looping back to the top of the IVR. It will not be played if the t destination is the next target.")?></span></a></td>
+			<td><a href="#" class="info"><?php echo _("Timeout Message")?><span><?php echo _("If a timeout occurs and a message is selected, it will be played in place of the announcement message when looping back to the top of the IVR. It will not be played if the t destination is the next target.")?></span></a></td>
 			<td>
 				<select name="timeout_id" tabindex="<?php echo ++$tabindex;?>">
 				<?php
@@ -241,14 +241,14 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	}
 ?>
 		<tr>
-			<td><a href="#" class="info"><?php echo _("Loop Before i-dest");?><span><?php echo _("If checked, and there is an 'i' (invalid extension) destination defined below, the IVR will play invalid option and then loop back to the begining for the designated loop counts prior to going to the invalid (i) destination.");?></span></a></td>
+			<td><a href="#" class="info"><?php echo _("Loop Before i-dest");?><span><?php echo _("If checked, and there is an 'i' (invalid extension) destination defined below, the IVR will play invalid option and then loop back to the beginning for the designated loop counts prior to going to the invalid (i) destination.");?></span></a></td>
 			<td><input type="checkbox" name="alt_invalid" <?php echo $ivr_details['alt_invalid'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
 <?php
 	$invalid_id = isset($ivr_details['invalid_id'])?$ivr_details['invalid_id']:'';
 	if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
 		<tr>
-			<td><a href="#" class="info"><?php echo _("Invalid Message")?><span><?php echo _("If an invalid extension is pressed and a message is selected, it will be played in place of the annoucement message when looping back to the top of the IVR. It will not be played if the t destination is the next target. If nothing is selcted, the system will play a default invalid extension message before going back to the main announcement")?></span></a></td>
+			<td><a href="#" class="info"><?php echo _("Invalid Message")?><span><?php echo _("If an invalid extension is pressed and a message is selected, it will be played in place of the announcement message when looping back to the top of the IVR. It will not be played if the t destination is the next target. If nothing is selcted, the system will play a default invalid extension message before going back to the main announcement")?></span></a></td>
 			<td>
 				<select name="invalid_id" tabindex="<?php echo ++$tabindex;?>">
 				<?php
