@@ -195,6 +195,10 @@ function ivr_show_edit($id, $nbroptions, $post) {
 			<td><input type="checkbox" name="ena_directory" <?php echo $ivr_details['enable_directory'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
 		<tr>
+			<td><a href="#" class="info"><?php echo _("VM Return to IVR");?><span><?php echo _("If checked, upon exiting voicemail a caller will be returned to this IVR if they got a users voicemail");?></span></a></td>
+			<td><input type="checkbox" name="retvm" <?php echo $ivr_details['retvm'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
+		</tr>
+		<tr>
 			<td><a href="#" class="info"><?php echo _("Directory Context");?><span><?php echo _("When # is selected, this is the voicemail directory context that is used");?></span></a></td>
 			<td>
 				<select name="dircontext" tabindex="<?php echo ++$tabindex;?>">

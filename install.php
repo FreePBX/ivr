@@ -269,4 +269,22 @@ if(DB::IsError($check)) {
 	out(_("not needed"));
 }
 
+outn(_("Checking for retvm.."));
+$sql = "SELECT retvm FROM ivr";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if(DB::IsError($check)) {
+	//  Add retvm field
+	//
+	$sql = "ALTER TABLE ivr ADD retvm VARCHAR(8);";
+  $result = $db->query($sql);
+  if(DB::IsError($result)) {
+		out(_("fatal error"));
+		die_freepbx($result->getDebugInfo()); 
+	} else {
+		out(_("added"));
+	}
+} else {
+	out(_("not needed"));
+}
+
 ?>

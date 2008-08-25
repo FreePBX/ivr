@@ -172,6 +172,7 @@ function ivr_get_config($engine) {
 					$timeout_id = (isset($details['timeout_id']) ? $details['timeout_id'] : '');
 					$invalid_id = (isset($details['invalid_id']) ? $details['invalid_id'] : '');
 					$loops = (isset($details['loops']) ? $details['loops'] : '2');
+					$retvm = (isset($details['retvm']) ? $details['retvm'] : '');
 
 					if (!empty($details['enable_directdial'])) {
 						// MODIFIED (PL)
@@ -206,6 +207,13 @@ function ivr_get_config($engine) {
 					$ext->add($id, 's', '', new ext_wait('1'));
 					$ext->add($id, 's', 'begin', new ext_digittimeout(3));
 					$ext->add($id, 's', '', new ext_responsetimeout($details['timeout']));
+
+					if ($retvm) {
+						$ext->add($id, 's', '', new ext_setvar('__IVR_RETVM', 'RETURN'));
+					} else {
+						$ext->add($id, 's', '', new ext_setvar('__IVR_RETVM', ''));
+					}
+
 					$ext->add($id, 's', '', new ext_execif('$["${MSG}" != ""]','Background','${MSG}'));
 					$ext->add($id, 's', '', new ext_waitexten());
 					$ext->add($id, 'hang', '', new ext_playback('vm-goodbye'));
@@ -308,7 +316,7 @@ function ivr_get_ivr_id($name) {
 	$res = $db->getRow("SELECT ivr_id from ivr where displayname='$name'");
 	if (count($res) == 0) {
 		// It's not there. Create it and return the ID
-		sql("INSERT INTO ivr (displayname, enable_directory, enable_directdial, timeout, alt_timeout, alt_invalid, `loops`)  values('$name', 'CHECKED', 'CHECKED', 10, '', '', 2)");
+		sql("INSERT INTO ivr (displayname, enable_directory, enable_directdial, timeout, alt_timeout, alt_invalid, `loops`, `retvm`)  values('$name', 'CHECKED', 'CHECKED', 10, '', '', 2, '')");
 		$res = $db->getRow("SELECT ivr_id from ivr where displayname='$name'");
 		needreload();
 	}
@@ -344,6 +352,7 @@ function ivr_do_edit($id, $post) {
 	$loops = isset($post['loops'])?$post['loops']:'2';
 	$alt_timeout = isset($post['alt_timeout'])?$post['alt_timeout']:'';
 	$alt_invalid = isset($post['alt_invalid'])?$post['alt_invalid']:'';
+	$retvm = isset($post['retvm'])?$post['retvm']:'';
 
 	if (!empty($ena_directory)) {
 		$ena_directory='CHECKED';
@@ -356,6 +365,9 @@ function ivr_do_edit($id, $post) {
 	}
 	if (!empty($alt_invalid)) {
 		$alt_invalid='CHECKED';
+	}
+	if (!empty($retvm)) {
+		$retvm='CHECKED';
 	}
 	
 	$sql = "
@@ -371,6 +383,7 @@ function ivr_do_edit($id, $post) {
 		dircontext='$dircontext', 
 		alt_timeout='$alt_timeout', 
 		alt_invalid='$alt_invalid', 
+		retvm='$retvm', 
 		`loops`='$loops' 
 	WHERE ivr_id='$id'
 	";
