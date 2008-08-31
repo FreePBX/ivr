@@ -20,26 +20,7 @@
 		*2.5.16.2* #2687 breakout from Queue to Company Directory blocks voicemail
 		*2.5.16.1* #2591, added depends on 2.4.0
 		*2.5.16* Extension/dest registry, #2303, it translation
-		*2.5.15.1* bump for rc1
-		*2.5.15* bump version to be higher than 2.2 branch
-		*2.5.14.2* merge findmefollow/core extension destinations if any
-		*2.5.14.1* removed depends on 2.2.2 - classes are in all version of 2.3
-		*2.5.14* add waitexten to 2.2
-		*2.5.13.1* make sure t ext getting put in (for some reason it wasn't always, this shoudl fix it)
-		*2.5.13* #1871 't' extension not being created by default fixed
-		*2.5.12* skip the answer/wait(1) if channel is already answered
-		*2.5.11* Allow option for IVR to loop back to itself without corrupting the return-to-ivr to the parent
-		*2.5.10* Fix bug where pressing enter in a field would delete the IVR
-		*2.5.9* some tweaks because of strange inheritance behavior, so need to reset IVR variables upon returns for some looping conditions
-		*2.5.8* insert a return extension so that annoucements and ivrs returning don't trample back over the top
-		*2.5.7* extended schema and added ability to have ivr options to return to calling parent ivrs if appropriate, otherwise specified destination
-		*2.5.6* Added: Set(IVR_CONTEXT=${CONTEXT}) to facilitate simple returns to calling context (e.g. from an announcement or custom app)
-		*2.5.5* Fix bug #1651 and apply patch #1664, allow voicemail as destination if ivr is entered from a queue breakout option
-		*2.5.4* Fix bug #1417
-		*2.5.3* Add he_IL translation
-		*2.5.2* Updated for freepbx 2.2.0rc2
-		*2.5.1* Changed name to IVR (from Digital Receptionist)
-		*2.5* First release for FreePBX 2.2 - Fixed compatibility issue with new UI
+		*2.5.15* CHANGELOG TRUNCATED See SVN Repository
 	</changelog>
 	<depends>
 		<version>2.5.0alpha1</version>
