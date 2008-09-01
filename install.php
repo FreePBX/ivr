@@ -1,5 +1,7 @@
 <?php
 
+require_once dirname(__FILE__)."/functions.inc.php";
+
 if (! function_exists("out")) {
 	function out($text) {
 		echo $text."<br />";
@@ -286,5 +288,10 @@ if(DB::IsError($check)) {
 } else {
 	out(_("not needed"));
 }
+
+// This used to be called from page.ivr.php every time, it should not be needed, it should
+// be called once and be done with.
+//
+ivr_init();
 
 ?>

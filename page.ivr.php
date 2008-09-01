@@ -23,10 +23,9 @@ $dircontext = isset($_SESSION["AMP_user"]->_deptname)?$_SESSION["AMP_user"]->_de
 $nbroptions = isset($_REQUEST['nbroptions'])?$_REQUEST['nbroptions']:'3';
 $tabindex = 0;
 
-if (empty($dircontext))
-        $dircontext = 'default';
-// So. Lets check to make sure everything's happy
-ivr_init();
+if (empty($dircontext)) {
+	$dircontext = 'default';
+}
 
 switch ($action) {
 	case "add":
