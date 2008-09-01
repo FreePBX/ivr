@@ -29,7 +29,12 @@ function ivr_init() {
         // so as long as this has been run _once_, there will always be a result.
 
 		// Read old IVR format, part of xtns..
-		$sql = "SELECT context,descr FROM extensions WHERE extension = 's' AND application LIKE 'DigitTimeout' AND context LIKE '".$dept."aa_%' ORDER BY context,priority";
+		if ($amp_conf["AMPDBENGINE"] == "sqlite3")  {
+			$sql = "SELECT context,descr FROM extensions WHERE extension = 's' AND application LIKE 'DigitTimeout' AND context LIKE '".$dept."aa\_%' ESCAPE '\' ORDER BY context,priority";
+		}
+		else  {
+			$sql = "SELECT context,descr FROM extensions WHERE extension = 's' AND application LIKE 'DigitTimeout' AND context LIKE '".$dept."aa_%' ORDER BY context,priority";
+		}
 		$unique_aas = $db->getAll($sql);
 		if (isset($unique_aas)) {
 			foreach($unique_aas as $aa){
