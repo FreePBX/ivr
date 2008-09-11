@@ -180,7 +180,7 @@ $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
 if(DB::IsError($check)) {
 	//  Add announcement_id field
 	//
-	out("migrating");
+	out(_("migrating"));
 	outn(_("adding announcement_id field.."));
   $sql = "ALTER TABLE ivr ADD announcement_id INTEGER";
   $result = $db->query($sql);
@@ -231,7 +231,7 @@ if(DB::IsError($check)) {
 	}
 
 } else {
-	out("already migrated");
+	out(_("already migrated"));
 }
 
 // Version 2.5.19 add invalid and timeout messages
