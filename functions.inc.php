@@ -202,6 +202,8 @@ function ivr_get_config($engine) {
 					if ($announcement_id) {
 						$announcement_msg = recordings_get_file($announcement_id);
 						$ext->add($id, 's', '', new ext_setvar('MSG', "$announcement_msg"));
+					} else {
+						$ext->add($id, 's', '', new ext_setvar('MSG', ""));
 					}
 					$ext->add($id, 's', '', new ext_setvar('LOOPCOUNT', 0));
 					$ext->add($id, 's', '', new ext_setvar('__DIR-CONTEXT', $details['dircontext']));
