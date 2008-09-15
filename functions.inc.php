@@ -325,7 +325,6 @@ function ivr_get_ivr_id($name) {
 		// It's not there. Create it and return the ID
 		sql("INSERT INTO ivr (displayname, enable_directory, enable_directdial, timeout, alt_timeout, alt_invalid, `loops`, `retvm`)  values('$name', 'CHECKED', 'CHECKED', 10, '', '', 2, '')");
 		$res = $db->getRow("SELECT ivr_id from ivr where displayname='$name'");
-		needreload();
 	}
 	return ($res[0]);
 	
@@ -343,7 +342,6 @@ function ivr_add_command($id, $cmd, $dest, $ivr_ret) {
 		// Update it.
 		sql("UPDATE ivr_dests SET dest='$dest', ivr_ret='$ivr_ret' where ivr_id='$id' and selection='$cmd'");
 	}
-	needreload();
 }
 function ivr_do_edit($id, $post) {
 
@@ -413,7 +411,6 @@ function ivr_do_edit($id, $post) {
 				ivr_add_command($id, $cmd, $dest, $ivr_ret);
 		}
 	}
-	needreload();
 }
 
 

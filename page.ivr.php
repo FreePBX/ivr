@@ -58,6 +58,7 @@ switch ($action) {
 				$nbroptions = 1;
 			//ivr_show_edit($id, $nbroptions, $_POST);
 			$url = 'config.php?type=setup&display=ivr&action=edit&id='.$id.'&nbroptions='.$nbroptions;
+			needreload();
 			redirect($url);
 			break;
 		}
