@@ -252,7 +252,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	$invalid_id = isset($ivr_details['invalid_id'])?$ivr_details['invalid_id']:'';
 	if(function_exists('recordings_list')) { //only include if recordings is enabled ?>
 		<tr>
-			<td><a href="#" class="info"><?php echo _("Invalid Message")?><span><?php echo _("If an invalid extension is pressed and a message is selected, it will be played in place of the announcement message when looping back to the top of the IVR. It will not be played if the t destination is the next target. If nothing is selcted, the system will play a default invalid extension message before going back to the main announcement")?></span></a></td>
+			<td><a href="#" class="info"><?php echo _("Invalid Message")?><span><?php echo _("If an invalid extension is pressed and a message is selected, it will be played in place of the announcement message when looping back to the top of the IVR. It will not be played if the t destination is the next target. If nothing is selected, the system will play a default invalid extension message before going back to the main announcement")?></span></a></td>
 			<td>
 				<select name="invalid_id" tabindex="<?php echo ++$tabindex;?>">
 				<?php

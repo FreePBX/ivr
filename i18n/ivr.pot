@@ -1,0 +1,310 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-09-17 09:51+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: functions.inc.php:20
+msgid ""
+"There is a problem with install.sql, cannot re-create databases. Contact "
+"support\n"
+msgstr ""
+
+#: install.php:177
+msgid "Checking if announcements need migration.."
+msgstr ""
+
+#: install.php:183
+msgid "migrating"
+msgstr ""
+
+#: install.php:184
+msgid "adding announcement_id field.."
+msgstr ""
+
+#: install.php:188 install.php:200 install.php:216 install.php:248
+#: install.php:265 install.php:283
+msgid "fatal error"
+msgstr ""
+
+#: install.php:191 install.php:230
+msgid "ok"
+msgstr ""
+
+#: install.php:196
+msgid "migrate to recording ids.."
+msgstr ""
+
+#: install.php:220
+#, php-format
+msgid "migrated %s entries"
+msgstr ""
+
+#: install.php:224
+msgid "dropping announcement field.."
+msgstr ""
+
+#: install.php:228
+msgid "no announcement field???"
+msgstr ""
+
+#: install.php:234
+msgid "already migrated"
+msgstr ""
+
+#: install.php:239
+msgid "Checking for timeout_id.."
+msgstr ""
+
+#: install.php:251 install.php:268 install.php:286
+msgid "added"
+msgstr ""
+
+#: install.php:254 install.php:271 install.php:289
+msgid "not needed"
+msgstr ""
+
+#: install.php:256
+msgid "Checking for invalid_id.."
+msgstr ""
+
+#: install.php:274
+msgid "Checking for retvm.."
+msgstr ""
+
+#: page.ivr.php:69 page.ivr.php:108 page.ivr.php:134
+msgid "Digital Receptionist"
+msgstr ""
+
+#: page.ivr.php:71
+msgid "Instructions"
+msgstr ""
+
+#: page.ivr.php:72
+msgid ""
+"You use the Digital Receptionist to make IVR's, Interactive Voice Response "
+"systems."
+msgstr ""
+
+#: page.ivr.php:73
+msgid ""
+"When creating a menu option, apart from the standard options of 0-9,* and #, "
+"you can also use 'i' and 't' destinations."
+msgstr ""
+
+#: page.ivr.php:74
+msgid ""
+"'i' is used when the caller pushes an invalid button, and 't' is used when "
+"there is no response."
+msgstr ""
+
+#: page.ivr.php:75
+msgid ""
+"If those options aren't supplied, the default 't' is to replay the menu "
+"three times and then hang up,"
+msgstr ""
+
+#: page.ivr.php:76
+msgid ""
+"and the default 'i' is to say 'Invalid option, please try again' and replay "
+"the menu."
+msgstr ""
+
+#: page.ivr.php:77
+msgid "After three invalid attempts, the line is hung up."
+msgstr ""
+
+#: page.ivr.php:87
+msgid "Add IVR"
+msgstr ""
+
+#: page.ivr.php:109
+msgid "Edit Menu"
+msgstr ""
+
+#: page.ivr.php:124
+msgid "Queue Breakout Menu Usage List"
+msgstr ""
+
+#: page.ivr.php:124
+msgid ""
+"This IVR is being used by the following Queues, providing an ability for "
+"callers to hear this Queue's announcement periodically and giving callers an "
+"option to break out of the queue into this IVR's menu options. This queue "
+"can not be deleted when being used in this mode"
+msgstr ""
+
+#: page.ivr.php:134
+msgid "Delete"
+msgstr ""
+
+#: page.ivr.php:149
+msgid "Change Name"
+msgstr ""
+
+#: page.ivr.php:149
+msgid "This changes the short name, visible on the right, of this IVR"
+msgstr ""
+
+#: page.ivr.php:157 page.ivr.php:177
+msgid "Announcement"
+msgstr ""
+
+#: page.ivr.php:157
+msgid ""
+"Message to be played to the caller. To add additional recordings please use "
+"the \"System Recordings\" MENU to the left"
+msgstr ""
+
+#: page.ivr.php:162 page.ivr.php:234 page.ivr.php:260
+msgid "None"
+msgstr ""
+
+#: page.ivr.php:177
+msgid ""
+"Message to be played to the caller.<br><br>You must install and enable the "
+"\"Systems Recordings\" Module to edit this option"
+msgstr ""
+
+#: page.ivr.php:189
+msgid "Timeout"
+msgstr ""
+
+#: page.ivr.php:189
+msgid ""
+"The amount of time (in seconds) before the 't' option, if specified, is used"
+msgstr ""
+
+#: page.ivr.php:194
+msgid "Enable Directory"
+msgstr ""
+
+#: page.ivr.php:194
+msgid "Let callers into the IVR dial '#' to access the directory"
+msgstr ""
+
+#: page.ivr.php:198
+msgid "VM Return to IVR"
+msgstr ""
+
+#: page.ivr.php:198
+msgid ""
+"If checked, upon exiting voicemail a caller will be returned to this IVR if "
+"they got a users voicemail"
+msgstr ""
+
+#: page.ivr.php:202
+msgid "Directory Context"
+msgstr ""
+
+#: page.ivr.php:202
+msgid ""
+"When # is selected, this is the voicemail directory context that is used"
+msgstr ""
+
+#: page.ivr.php:218
+msgid "Enable Direct Dial"
+msgstr ""
+
+#: page.ivr.php:218
+msgid "Let callers into the IVR dial an extension directly"
+msgstr ""
+
+#: page.ivr.php:222
+msgid "Loop Before t-dest"
+msgstr ""
+
+#: page.ivr.php:222
+msgid ""
+"If checked, and there is a 't' (timeout) destination defined below, the IVR "
+"will loop back to the beginning if no input is provided for the designated "
+"loop counts prior to going to the timeout (t) destination."
+msgstr ""
+
+#: page.ivr.php:229
+msgid "Timeout Message"
+msgstr ""
+
+#: page.ivr.php:229
+msgid ""
+"If a timeout occurs and a message is selected, it will be played in place of "
+"the announcement message when looping back to the top of the IVR. It will "
+"not be played if the t destination is the next target."
+msgstr ""
+
+#: page.ivr.php:248
+msgid "Loop Before i-dest"
+msgstr ""
+
+#: page.ivr.php:248
+msgid ""
+"If checked, and there is an 'i' (invalid extension) destination defined "
+"below, the IVR will play invalid option and then loop back to the beginning "
+"for the designated loop counts prior to going to the invalid (i) destination."
+msgstr ""
+
+#: page.ivr.php:255
+msgid "Invalid Message"
+msgstr ""
+
+#: page.ivr.php:255
+msgid ""
+"If an invalid extension is pressed and a message is selected, it will be "
+"played in place of the announcement message when looping back to the top of "
+"the IVR. It will not be played if the t destination is the next target. If "
+"nothing is selected, the system will play a default invalid extension "
+"message before going back to the main announcement"
+msgstr ""
+
+#: page.ivr.php:274
+msgid "Repeat Loops:"
+msgstr ""
+
+#: page.ivr.php:274
+msgid ""
+"The number of times we should loop when invalid input or no input has been "
+"entered before going to the defined or default generated 'i' or 't' options. "
+"If the 'i' or 't' options are defined, the above check boxes must be checked "
+"in order to loop."
+msgstr ""
+
+#: page.ivr.php:289 page.ivr.php:323
+msgid "Increase Options"
+msgstr ""
+
+#: page.ivr.php:291 page.ivr.php:325
+msgid "Save"
+msgstr ""
+
+#: page.ivr.php:294 page.ivr.php:328
+msgid "Decrease Options"
+msgstr ""
+
+#: page.ivr.php:338
+msgid "Invalid option"
+msgstr ""
+
+#: page.ivr.php:384
+msgid "Return to IVR"
+msgstr ""
+
+#: page.ivr.php:384
+msgid ""
+"Check this box to have this option return to a parent IVR if it was called "
+"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
