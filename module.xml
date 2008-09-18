@@ -1,13 +1,14 @@
 <module>
 	<rawname>ivr</rawname>
 	<name>IVR</name>
-	<version>2.5.20.2</version>
+	<version>2.5.20.3</version>
 	<type>setup</type>
 	<category>Inbound Call Control</category>
 	<description>
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, "Press 1 for sales") and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
+		*2.5.20.3* localization, Swedish
 		*2.5.20.2* #3188 clear MSG var if no message
 		*2.5.20.1* Sqlite3 fixes, move ivr_init() to install script
 		*2.5.20* #3099 allows a return to IVR from voicemail option and from busy phone
@@ -31,6 +32,6 @@
 	<menuitems>
 		<ivr>IVR</ivr>
 	</menuitems>
-	<location>release/2.5/ivr-2.5.20.2.tgz</location>
-	<md5sum>425d9318e41c8355baa03d27efd4be78</md5sum>
+	<location>release/2.5/ivr-2.5.20.3.tgz</location>
+	<md5sum>6d11495e1b1bdadedcc93993f0fe8f24</md5sum>
 </module>
