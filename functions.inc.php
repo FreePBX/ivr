@@ -4,6 +4,7 @@
 
 function ivr_init() {
     global $db;
+    global $amp_conf;
 
     // Check to make sure that install.sql has been run
     $sql = "SELECT deptname from ivr where displayname='__install_done' LIMIT 1";
@@ -29,11 +30,14 @@ function ivr_init() {
         // so as long as this has been run _once_, there will always be a result.
 
 		// Read old IVR format, part of xtns..
+		// In old IVR format, we had different dept as part of the context name, but since this is run once at install time, we need to read
+		// all of them. Hopefully a wildcard will be adequate, changing it to that.
+		//
 		if ($amp_conf["AMPDBENGINE"] == "sqlite3")  {
-			$sql = "SELECT context,descr FROM extensions WHERE extension = 's' AND application LIKE 'DigitTimeout' AND context LIKE '".$dept."aa\_%' ESCAPE '\' ORDER BY context,priority";
+			$sql = "SELECT context,descr FROM extensions WHERE extension = 's' AND application LIKE 'DigitTimeout' AND context LIKE '%aa\_%' ESCAPE '\' ORDER BY context,priority";
 		}
 		else  {
-			$sql = "SELECT context,descr FROM extensions WHERE extension = 's' AND application LIKE 'DigitTimeout' AND context LIKE '".$dept."aa_%' ORDER BY context,priority";
+			$sql = "SELECT context,descr FROM extensions WHERE extension = 's' AND application LIKE 'DigitTimeout' AND context LIKE '%aa_%' ORDER BY context,priority";
 		}
 		$unique_aas = $db->getAll($sql);
 		if (isset($unique_aas)) {
@@ -73,7 +77,7 @@ function ivr_init() {
 			// Are queue's using an ivr failover?
 			// ***FIXME*** if upgrading queues away from legacy cruft.
 			$queues = $db->getAll("select extensions,args from extensions where args LIKE '%aa_%' and context='ext-queues' and priority='6'"); 
-			if (count($res) != 0) {
+			if (is_array($queues)) {
 				foreach ($queues as $q) {
 					$arr=explode(',', $q['args']);
 					sql("UPDATE extensions set args='".$ivr_newname[$arr[0]].",s,1' where context='ext-queues' and priority='6' and extension='".$q['extension']."'");
