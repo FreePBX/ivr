@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ivr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-15 16:19+0200\n"
-"PO-Revision-Date: 2008-09-17 10:30+0100\n"
+"POT-Creation-Date: 2008-10-05 23:22+0200\n"
+"PO-Revision-Date: 2008-10-11 17:29+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,9 +17,20 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
-#: functions.inc.php:20
+#: functions.inc.php:21
 msgid "There is a problem with install.sql, cannot re-create databases. Contact support\n"
 msgstr "Det är ett problem med install.sql, kan inte återskapa databasen. Kontakta supporten\n"
+
+#: functions.inc.php:141
+#: functions.inc.php:161
+#, php-format
+msgid "IVR: %s"
+msgstr "IVR: %s"
+
+#: functions.inc.php:484
+#, php-format
+msgid "IVR: %s / Option: %s"
+msgstr "IVR: %s / Funktion: %s"
 
 #: install.php:177
 msgid "Checking if announcements need migration.."
@@ -92,191 +103,195 @@ msgstr "Kontrollerar invalid_id.."
 msgid "Checking for retvm.."
 msgstr "Kontrollerar retvm.."
 
-#: page.ivr.php:68
-#: page.ivr.php:107
-#: page.ivr.php:133
+#: page.ivr.php:69
+#: page.ivr.php:108
+#: page.ivr.php:134
 msgid "Digital Receptionist"
 msgstr "Digital receptionist"
 
-#: page.ivr.php:70
+#: page.ivr.php:71
 msgid "Instructions"
 msgstr "Instruktioner"
 
-#: page.ivr.php:71
+#: page.ivr.php:72
 msgid "You use the Digital Receptionist to make IVR's, Interactive Voice Response systems."
 msgstr "Du använder den Digitala receptionisten för att skapa så kallade IVR (Interactive Voice Response) menyer"
 
-#: page.ivr.php:72
+#: page.ivr.php:73
 msgid "When creating a menu option, apart from the standard options of 0-9,* and #, you can also use 'i' and 't' destinations."
 msgstr "När du skapar menyval, oberoende av standardvalen 0-9, * och #, kan du även använda 'i' och 't' destinationer."
 
-#: page.ivr.php:73
+#: page.ivr.php:74
 msgid "'i' is used when the caller pushes an invalid button, and 't' is used when there is no response."
 msgstr "'i' används när uppringaren trycker en ogiltig siffra, och 't' används när det inte kommer någon siffra."
 
-#: page.ivr.php:74
+#: page.ivr.php:75
 msgid "If those options aren't supplied, the default 't' is to replay the menu three times and then hang up,"
 msgstr "Om dessa val inte anges så är standarden för 't' att spela upp menyvalet tre gånger för att sedan avsluta samtalet,"
 
-#: page.ivr.php:75
+#: page.ivr.php:76
 msgid "and the default 'i' is to say 'Invalid option, please try again' and replay the menu."
 msgstr "och standardvalet för 'i' är att säga \"Ogiltigt val, försök igen' och repetera menyn."
 
-#: page.ivr.php:76
+#: page.ivr.php:77
 msgid "After three invalid attempts, the line is hung up."
 msgstr "Efter tre ogiltiga försök avslutas samtalet."
 
-#: page.ivr.php:86
+#: page.ivr.php:87
 msgid "Add IVR"
 msgstr "Lägg till IVR"
 
-#: page.ivr.php:108
+#: page.ivr.php:109
 msgid "Edit Menu"
 msgstr "Redigera meny"
 
-#: page.ivr.php:123
+#: page.ivr.php:124
 msgid "Queue Breakout Menu Usage List"
 msgstr "Menylista för att bryta ut ur köer"
 
-#: page.ivr.php:123
+#: page.ivr.php:124
 msgid "This IVR is being used by the following Queues, providing an ability for callers to hear this Queue's announcement periodically and giving callers an option to break out of the queue into this IVR's menu options. This queue can not be deleted when being used in this mode"
 msgstr "Denna IVR används av följande köer, och ger en möjlighet för uppringare att höra meddelandet för kön periodiskt och ge dom ett val att bryta ut ur kön till menyerna för denna IVR. Denna kö kan inte tas bort när detta val används"
 
-#: page.ivr.php:133
+#: page.ivr.php:134
 msgid "Delete"
 msgstr "Ta bort"
 
-#: page.ivr.php:148
+#: page.ivr.php:149
 msgid "Change Name"
 msgstr "Byt namn"
 
-#: page.ivr.php:148
+#: page.ivr.php:149
 msgid "This changes the short name, visible on the right, of this IVR"
 msgstr "Detta ändra det korta namnet, det som visas till höger, för denna IVR"
 
-#: page.ivr.php:156
-#: page.ivr.php:176
+#: page.ivr.php:157
+#: page.ivr.php:177
 msgid "Announcement"
 msgstr "Meddelande"
 
-#: page.ivr.php:156
+#: page.ivr.php:157
 msgid "Message to be played to the caller. To add additional recordings please use the \"System Recordings\" MENU to the left"
 msgstr "Meddelande att spela upp för uppringaren. För att lägga till fler meddelanden väljer du \"Systeminspelningar\" i menyn till vänster"
 
-#: page.ivr.php:161
-#: page.ivr.php:233
-#: page.ivr.php:259
+#: page.ivr.php:162
+#: page.ivr.php:234
+#: page.ivr.php:260
 msgid "None"
-msgstr "Ingen"
+msgstr "Inget"
 
-#: page.ivr.php:176
+#: page.ivr.php:177
 msgid "Message to be played to the caller.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option"
 msgstr "Meddelande att spela upp för uppringaren.<br><br>Du måste installera och aktivera modulen \"Systeminspelningar\" för att kunna redigera detta val"
 
-#: page.ivr.php:188
+#: page.ivr.php:189
 msgid "Timeout"
 msgstr "Väntetid"
 
-#: page.ivr.php:188
+#: page.ivr.php:189
 msgid "The amount of time (in seconds) before the 't' option, if specified, is used"
 msgstr "Tid i sekunder innan 't' valet, om det är angivet, kommer att aktiveras"
 
-#: page.ivr.php:193
+#: page.ivr.php:194
 msgid "Enable Directory"
 msgstr "Aktivera Katalogen"
 
-#: page.ivr.php:193
+#: page.ivr.php:194
 msgid "Let callers into the IVR dial '#' to access the directory"
 msgstr "Låt uppringare som är inne i en IVR att trycka '#' för att komma åt katalogen"
 
-#: page.ivr.php:197
+#: page.ivr.php:198
 msgid "VM Return to IVR"
 msgstr "Röstbrevlådan återgår till iVR"
 
-#: page.ivr.php:197
+#: page.ivr.php:198
 msgid "If checked, upon exiting voicemail a caller will be returned to this IVR if they got a users voicemail"
 msgstr "Om detta är valt, när en uppringare avslutar en röstbrevlåda kommer dom att återvända till denna IVR om dom hamnade i en röstbrevlåda för en anknytning"
 
-#: page.ivr.php:201
+#: page.ivr.php:202
 msgid "Directory Context"
 msgstr "Katalogsammanhang"
 
-#: page.ivr.php:201
+#: page.ivr.php:202
 msgid "When # is selected, this is the voicemail directory context that is used"
 msgstr "När '#' trycks är detta det sammanhang för röstbrevlådor som väljs"
 
-#: page.ivr.php:217
+#: page.ivr.php:218
 msgid "Enable Direct Dial"
 msgstr "Tillåt direktsamtal"
 
-#: page.ivr.php:217
+#: page.ivr.php:218
 msgid "Let callers into the IVR dial an extension directly"
 msgstr "Låter uppringare i en IVR att ringa en anknytning direkt"
 
-#: page.ivr.php:221
+#: page.ivr.php:222
 msgid "Loop Before t-dest"
 msgstr "Återgå före t-dest"
 
-#: page.ivr.php:221
+#: page.ivr.php:222
 msgid "If checked, and there is a 't' (timeout) destination defined below, the IVR will loop back to the beginning if no input is provided for the designated loop counts prior to going to the timeout (t) destination."
 msgstr "Om detta är valt, och det finns en 't' destination definierad nedan, kommer IVR att starta om från början om ett svar inte har kommit inom den tidsrymd som angetts, före den går till 't' destinationen"
 
-#: page.ivr.php:228
+#: page.ivr.php:229
 msgid "Timeout Message"
 msgstr "Meddelande för väntetid"
 
-#: page.ivr.php:228
+#: page.ivr.php:229
 msgid "If a timeout occurs and a message is selected, it will be played in place of the announcement message when looping back to the top of the IVR. It will not be played if the t destination is the next target."
 msgstr "Om en väntetid går ut och ett meddelande är valt, kommer det att spelas upp när IVR återgår till början. Det kommer inte att spelas upp om en 't' destination är nästa mål."
 
-#: page.ivr.php:247
+#: page.ivr.php:248
 msgid "Loop Before i-dest"
 msgstr "Återgå före i-dest"
 
-#: page.ivr.php:247
+#: page.ivr.php:248
 msgid "If checked, and there is an 'i' (invalid extension) destination defined below, the IVR will play invalid option and then loop back to the beginning for the designated loop counts prior to going to the invalid (i) destination."
 msgstr "Om detta är valt, och det finns en 'i' (ogiltig destination) definierad nedan, kommer IVR att spela upp 'Ogiltigt val' för att därefter återgå till början av menyn för den går till 'i' destinationen."
 
-#: page.ivr.php:254
+#: page.ivr.php:255
 msgid "Invalid Message"
 msgstr "Ogiltig meddelande"
 
-#: page.ivr.php:254
+#: page.ivr.php:255
 msgid "If an invalid extension is pressed and a message is selected, it will be played in place of the announcement message when looping back to the top of the IVR. It will not be played if the t destination is the next target. If nothing is selected, the system will play a default invalid extension message before going back to the main announcement"
 msgstr "Om en ogiltig destination väljs och ett meddelande här är valt, kommer detta att spelas upp när IVR återgår till början. Det kommer inte att spelas upp om 't' destinationen är nästa mål. Om inget är valt kommer systemet att spela upp ett standard meddelande före återgång till början av IVR"
 
-#: page.ivr.php:273
+#: page.ivr.php:274
 msgid "Repeat Loops:"
 msgstr "Repetionsslinga"
 
-#: page.ivr.php:273
+#: page.ivr.php:274
 msgid "The number of times we should loop when invalid input or no input has been entered before going to the defined or default generated 'i' or 't' options. If the 'i' or 't' options are defined, the above check boxes must be checked in order to loop."
 msgstr "Antalet gånger vi repeterar vid ett ogiltigt val eller inget svar innan standardvalet för 'i' eller 't' utförs. Om 'i' eller 't' har angetts, måste ovanstående rutor aktiveras för att slingan ska aktiveras"
 
-#: page.ivr.php:288
-#: page.ivr.php:322
+#: page.ivr.php:289
+#: page.ivr.php:323
 msgid "Increase Options"
 msgstr "Utöka val"
 
-#: page.ivr.php:290
-#: page.ivr.php:324
+#: page.ivr.php:291
+#: page.ivr.php:325
 msgid "Save"
 msgstr "Spara"
 
-#: page.ivr.php:293
-#: page.ivr.php:327
+#: page.ivr.php:294
+#: page.ivr.php:328
 msgid "Decrease Options"
 msgstr "Minska val"
 
-#: page.ivr.php:337
+#: page.ivr.php:338
 msgid "Invalid option"
 msgstr "Ogiltigt val"
 
-#: page.ivr.php:383
+#: page.ivr.php:384
 msgid "Return to IVR"
 msgstr "Återgå till IVR"
 
-#: page.ivr.php:383
+#: page.ivr.php:384
 msgid "Check this box to have this option return to a parent IVR if it was called from a parent IVR. If not, it will go to the chosen destination.<br><br>The return path will be to any IVR that was in the call path prior to this IVR which could lead to strange results if there was an IVR called in the call path but not immediately before this"
 msgstr "Aktivera denna för att återgå till den IVR du kom från, annars gå till till den valda destinationen.<br><br>Returen kommer att vara den IVR som utfördes precis innan denna. Detta kan leda till konstiga resultat om en IVR anropades men inte precis innan denna."
+
+#: page.ivr.php:388
+msgid "Leave blank to remove"
+msgstr "Lämna tomt för att ta bort"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 09:51+0200\n"
+"POT-Creation-Date: 2008-10-05 23:22+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,10 +16,20 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.inc.php:20
+#: functions.inc.php:21
 msgid ""
 "There is a problem with install.sql, cannot re-create databases. Contact "
 "support\n"
+msgstr ""
+
+#: functions.inc.php:141 functions.inc.php:161
+#, php-format
+msgid "IVR: %s"
+msgstr ""
+
+#: functions.inc.php:484
+#, php-format
+msgid "IVR: %s / Option: %s"
 msgstr ""
 
 #: install.php:177
@@ -307,4 +317,8 @@ msgid ""
 "return path will be to any IVR that was in the call path prior to this IVR "
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
+msgstr ""
+
+#: page.ivr.php:388
+msgid "Leave blank to remove"
 msgstr ""

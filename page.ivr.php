@@ -385,7 +385,7 @@ function drawdestinations($count, $sel,  $dest, $ivr_ret) {
 	<input type="checkbox" name="ivr_ret<?php echo $count ?>" value="ivr_ret" <?php echo $ivr_ret?'CHECKED':''; ?>><br><br />
 		<input size="2" type="text" name="option<?php echo $count ?>" value="<?php echo $sel ?>" tabindex="<?php echo ++$tabindex;?>"><br />
 <?php if (strlen($sel)) {  ?>
-		<i style='font-size: x-small'>Leave blank to remove</i>
+		<i style='font-size: x-small'><?php echo _("Leave blank to remove");?></i>
 <?php }  ?>
 	</td>
 		<td> <table> <?php echo drawselects($dest,$count); ?> </table> </td>

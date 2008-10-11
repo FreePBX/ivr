@@ -138,7 +138,7 @@ function ivr_getdestinfo($dest) {
 			return array();
 		} else {
 			//$type = isset($active_modules['ivr']['type'])?$active_modules['ivr']['type']:'setup';
-			return array('description' => sprintf(_("IVR : %s"),$thisexten['displayname']),
+			return array('description' => sprintf(_("IVR: %s"),$thisexten['displayname']),
 			             'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($exten),
 								  );
 		}
