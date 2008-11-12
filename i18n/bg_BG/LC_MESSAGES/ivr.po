@@ -1,0 +1,298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FreePBX v2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-05 23:22+0200\n"
+"PO-Revision-Date: 2008-11-05 15:46+0200\n"
+"Last-Translator: \n"
+"Language-Team: Chavdar Iliev <chavdar_75@yahoo.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Bulgarian\n"
+"X-Poedit-Country: BULGARIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: functions.inc.php:21
+msgid "There is a problem with install.sql, cannot re-create databases. Contact support\n"
+msgstr "Има проблем с install.sql, не мога да пресъздам базата данни. Свържете се с поддръжката\n"
+
+#: functions.inc.php:141
+#: functions.inc.php:161
+#, php-format
+msgid "IVR: %s"
+msgstr "IVR: %s"
+
+#: functions.inc.php:484
+#, php-format
+msgid "IVR: %s / Option: %s"
+msgstr "IVR: %s / Опция: %s"
+
+#: install.php:177
+msgid "Checking if announcements need migration.."
+msgstr "Проверка дали съобщенията имат нужда от преместване.."
+
+#: install.php:183
+msgid "migrating"
+msgstr "преместване"
+
+#: install.php:184
+msgid "adding announcement_id field.."
+msgstr "добавяне на поле съобщения.."
+
+#: install.php:188
+#: install.php:200
+#: install.php:216
+#: install.php:248
+#: install.php:265
+#: install.php:283
+msgid "fatal error"
+msgstr "фатална грешка"
+
+#: install.php:191
+#: install.php:230
+msgid "ok"
+msgstr "ok"
+
+#: install.php:196
+msgid "migrate to recording ids.."
+msgstr "преместване към id на записите.."
+
+#: install.php:220
+#, php-format
+msgid "migrated %s entries"
+msgstr "преместени %s въвеждания"
+
+#: install.php:224
+msgid "dropping announcement field.."
+msgstr "премахване на поле съобшения.."
+
+#: install.php:228
+msgid "no announcement field???"
+msgstr "няма поле съобщения???"
+
+#: install.php:234
+msgid "already migrated"
+msgstr "вече са преместени"
+
+#: install.php:239
+msgid "Checking for timeout_id.."
+msgstr "Проверка за timeout_id.."
+
+#: install.php:251
+#: install.php:268
+#: install.php:286
+msgid "added"
+msgstr "добавени"
+
+#: install.php:254
+#: install.php:271
+#: install.php:289
+msgid "not needed"
+msgstr "не е необходимо"
+
+#: install.php:256
+msgid "Checking for invalid_id.."
+msgstr "Проверка за invalid_id.."
+
+#: install.php:274
+msgid "Checking for retvm.."
+msgstr "Проверка за retvm.."
+
+#: page.ivr.php:69
+#: page.ivr.php:108
+#: page.ivr.php:134
+msgid "Digital Receptionist"
+msgstr "Цифров Администратор"
+
+#: page.ivr.php:71
+msgid "Instructions"
+msgstr "Инструкции"
+
+#: page.ivr.php:72
+msgid "You use the Digital Receptionist to make IVR's, Interactive Voice Response systems."
+msgstr "Използвайте Цифров Администратор за да създадете Система за Интерактивен Отговор."
+
+#: page.ivr.php:73
+msgid "When creating a menu option, apart from the standard options of 0-9,* and #, you can also use 'i' and 't' destinations."
+msgstr "Когато създавате менюто, освен стандартните опции 0-9, * и #, можете да използвате  'i' и 't' направления."
+
+#: page.ivr.php:74
+msgid "'i' is used when the caller pushes an invalid button, and 't' is used when there is no response."
+msgstr "'i' се използва когато обаждащият се натисне погрешен бутон, а 't' се използва когато никой не отговори."
+
+#: page.ivr.php:75
+msgid "If those options aren't supplied, the default 't' is to replay the menu three times and then hang up,"
+msgstr "Ако тези опции не са добавени, 't' опцията по-подразбиране ще повтори менюто три пъти и ще затвори линията,"
+
+#: page.ivr.php:76
+msgid "and the default 'i' is to say 'Invalid option, please try again' and replay the menu."
+msgstr "а 'i' опцията по-подразбиране ще възпроизведе 'Invalid option, please try again' и ще повтори менюто."
+
+#: page.ivr.php:77
+msgid "After three invalid attempts, the line is hung up."
+msgstr "След три неуспешни опита линията ще се затвори."
+
+#: page.ivr.php:87
+msgid "Add IVR"
+msgstr "Добави IVR"
+
+#: page.ivr.php:109
+msgid "Edit Menu"
+msgstr "Радактирай Меню"
+
+#: page.ivr.php:124
+msgid "Queue Breakout Menu Usage List"
+msgstr "Списък на Използвани Опашки с Меню Избягай"
+
+#: page.ivr.php:124
+msgid "This IVR is being used by the following Queues, providing an ability for callers to hear this Queue's announcement periodically and giving callers an option to break out of the queue into this IVR's menu options. This queue can not be deleted when being used in this mode"
+msgstr "Този IVR се използва от следните Опашки, предоставяйки на обаждащите се переодично да чуват това съобщение на Опашката и  да им даде опция да избягат от тази опашка с някоя от опциите на този IVR. Тази опашка не може да се изтрива докато се използва в този режим."
+
+#: page.ivr.php:134
+msgid "Delete"
+msgstr "Изтрий"
+
+#: page.ivr.php:149
+msgid "Change Name"
+msgstr "Промени Името"
+
+#: page.ivr.php:149
+msgid "This changes the short name, visible on the right, of this IVR"
+msgstr "Променя краткото име, показвано вдясно, за този IVR"
+
+#: page.ivr.php:157
+#: page.ivr.php:177
+msgid "Announcement"
+msgstr "Съобщение"
+
+#: page.ivr.php:157
+msgid "Message to be played to the caller. To add additional recordings please use the \"System Recordings\" MENU to the left"
+msgstr "Съобщение което ще се възпроизведе на обаждащия се.<br><br> За да добавите допълнителни записи, моля използвайте Меню \"Системни Записи\" отляво"
+
+#: page.ivr.php:162
+#: page.ivr.php:234
+#: page.ivr.php:260
+msgid "None"
+msgstr "Няма"
+
+#: page.ivr.php:177
+msgid "Message to be played to the caller.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option"
+msgstr "Съобщение което ще се възпроизведе на обаждащия се.<br><br>Трябва да сте инсталирали и разрешили Модул \"Системни Записи\" за да редактирате тази опция"
+
+#: page.ivr.php:189
+msgid "Timeout"
+msgstr "Време на Изчакване"
+
+#: page.ivr.php:189
+msgid "The amount of time (in seconds) before the 't' option, if specified, is used"
+msgstr "Времето (в секунди) преди 't' опцията, ако е определена, да се използва"
+
+#: page.ivr.php:194
+msgid "Enable Directory"
+msgstr "Разреши Директория"
+
+#: page.ivr.php:194
+msgid "Let callers into the IVR dial '#' to access the directory"
+msgstr "Позволява на обаждащите се в IVR да набират '#' за достъп до директорията"
+
+#: page.ivr.php:198
+msgid "VM Return to IVR"
+msgstr "ГП Връщане към IVR"
+
+#: page.ivr.php:198
+msgid "If checked, upon exiting voicemail a caller will be returned to this IVR if they got a users voicemail"
+msgstr "Ако е маркирано, при излизане от гласовата поща обаждащият се ще бъде върнат към този IVR"
+
+#: page.ivr.php:202
+msgid "Directory Context"
+msgstr "Контекст на Директория"
+
+#: page.ivr.php:202
+msgid "When # is selected, this is the voicemail directory context that is used"
+msgstr "Когато # е избран, това ше бъде контекста на директорията на гласовата поща която се използва"
+
+#: page.ivr.php:218
+msgid "Enable Direct Dial"
+msgstr "Разреши Директно Избиране"
+
+#: page.ivr.php:218
+msgid "Let callers into the IVR dial an extension directly"
+msgstr "Позволява на обаждащите се в IVR да набират директно вътрешни линии"
+
+#: page.ivr.php:222
+msgid "Loop Before t-dest"
+msgstr "Върни Преди t-направление"
+
+#: page.ivr.php:222
+msgid "If checked, and there is a 't' (timeout) destination defined below, the IVR will loop back to the beginning if no input is provided for the designated loop counts prior to going to the timeout (t) destination."
+msgstr "Ако е маркирано и има 't' (пауза) направление определено по-долу, IVR ще се върне обратно в началото за посочения брой връщания ако не е въведено нищо, преди да отиде към 't' (пауза) направление."
+
+#: page.ivr.php:229
+msgid "Timeout Message"
+msgstr "Съобщение при Пауза"
+
+#: page.ivr.php:229
+msgid "If a timeout occurs and a message is selected, it will be played in place of the announcement message when looping back to the top of the IVR. It will not be played if the t destination is the next target."
+msgstr "Ако е изтекло времето на изчакване и е определено съобщение, то ще се възпроизведе на мястото на приветсвието когато се връща в началото на IVR. Няма да се възпроизведе ако 't' направлението е следващата цел."
+
+#: page.ivr.php:248
+msgid "Loop Before i-dest"
+msgstr "Върни Преди i-направление"
+
+#: page.ivr.php:248
+msgid "If checked, and there is an 'i' (invalid extension) destination defined below, the IVR will play invalid option and then loop back to the beginning for the designated loop counts prior to going to the invalid (i) destination."
+msgstr "Ако е маркирано и има 'i' (грешно набиране) направление определено по-долу, IVR ще възпроизведе грешна опция и ще се върне обратно в началото за посочения брой връщания преди да отиде към 'i' (грешно набиране) направление."
+
+#: page.ivr.php:255
+msgid "Invalid Message"
+msgstr "Съобщение при Грешка"
+
+#: page.ivr.php:255
+msgid "If an invalid extension is pressed and a message is selected, it will be played in place of the announcement message when looping back to the top of the IVR. It will not be played if the t destination is the next target. If nothing is selected, the system will play a default invalid extension message before going back to the main announcement"
+msgstr "Ако е набрана грешна опция и и е определено съобщение, то ще се възпроизведе на мястото на приветсвието когато се връща в началото на IVR. Няма да се възпроизведе ако 't' направлението е следващата цел. Ако нищо не е избрано, системата ще възпроизведе съобщение по-подразбиране за грешно набиране преди да се върне към главното приветствие."
+
+#: page.ivr.php:274
+msgid "Repeat Loops:"
+msgstr "Повтори Връщанията:"
+
+#: page.ivr.php:274
+msgid "The number of times we should loop when invalid input or no input has been entered before going to the defined or default generated 'i' or 't' options. If the 'i' or 't' options are defined, the above check boxes must be checked in order to loop."
+msgstr "Колко пъти трябва да се върне когато е избрана грешна опция или не е въведено нищо преди да се насочи към определените или генерираните по-подразбиране  'i' или 't' опции. Ако 'i' или 't' опциите са определени, по-горното поле трябва да се маркира за да позволи връщане."
+
+#: page.ivr.php:289
+#: page.ivr.php:323
+msgid "Increase Options"
+msgstr "Увеличи Опциите"
+
+#: page.ivr.php:291
+#: page.ivr.php:325
+msgid "Save"
+msgstr "Запис"
+
+#: page.ivr.php:294
+#: page.ivr.php:328
+msgid "Decrease Options"
+msgstr "Намали Опциите"
+
+#: page.ivr.php:338
+msgid "Invalid option"
+msgstr "Неправилна опция"
+
+#: page.ivr.php:384
+msgid "Return to IVR"
+msgstr "Върни се към IVR"
+
+#: page.ivr.php:384
+msgid "Check this box to have this option return to a parent IVR if it was called from a parent IVR. If not, it will go to the chosen destination.<br><br>The return path will be to any IVR that was in the call path prior to this IVR which could lead to strange results if there was an IVR called in the call path but not immediately before this"
+msgstr "Маркирайте за да имате възможноста да се връщате към основния IVR ако е поискана в основния IVR. Иначе, ще отиде към избраното направление.<br><br>Пътят за връщане ще важи за всички IVR които са били на пътя преди този IVR, което може да доведе до странни резултати ако има IVR извикан в пътя на обаждането, но не веднага преди този"
+
+#: page.ivr.php:388
+msgid "Leave blank to remove"
+msgstr "Оставете празно за премахване"
+

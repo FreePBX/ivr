@@ -64,64 +64,65 @@ CREATE TABLE IF NOT EXISTS ivr_dests
 ";
 sql($sql);
 
-// Now, we need to check for upgrades. 
+// Now, we need to check for upgrades.
 // V1.0, old IVR. You shouldn't see this, but check for it anyway, and assume that it's 2.0
 // V2.0, Original Release
 // V2.1, added 'directorycontext' to the schema
 // v2.2, announcement changed to support filenames instead of ID's from recordings table
-// 
+//
 
 $ivr_modcurrentvers = modules_getversion('ivr');
 
-// Add the col
-$sql = "SELECT dircontext FROM ivr";
-$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
-if(DB::IsError($check)) {
-	// add new field
-    $sql = 'ALTER TABLE ivr ADD COLUMN dircontext VARCHAR ( 50 ) DEFAULT "default"';
-    $result = $db->query($sql);
-    if(DB::IsError($result)) {
-            die_freepbx($result->getDebugInfo());
-    }
-}
+if($amp_conf["AMPDBENGINE"] != "sqlite3")  { // As of 2.5 these are all in the sqlite3 schema
+	// Add the col
+	$sql = "SELECT dircontext FROM ivr";
+	$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+	if(DB::IsError($check)) {
+		// add new field
+		$sql = 'ALTER TABLE ivr ADD COLUMN dircontext VARCHAR ( 50 ) DEFAULT "default"';
+		$result = $db->query($sql);
+		if(DB::IsError($result)) {
+			die_freepbx($result->getDebugInfo());
+		}
+	}
 
-if (version_compare($ivr_modcurrentvers, "2.2", "<")) {
-	//echo "<p>Start 2.2 upgrade</p>";
-	$sql = "ALTER TABLE ivr CHANGE COLUMN announcement announcement VARCHAR ( 255 )";
-    $result = $db->query($sql);
-    if(DB::IsError($result)) {
-            die_freepbx($result->getDebugInfo());
-    } else {
-    	// Change existing records
-    	//echo "<p>Updating existing records</p>";
-    	$existing = sql("SELECT DISTINCT announcement FROM ivr WHERE displayname <> '__install_done' AND announcement IS NOT NULL", "getAll");
-    	foreach ($existing as $item) {
-    		$recid = $item[0];
-    		//echo "<p>processing '$recid'</p>";
-    		$sql = "SELECT filename FROM recordings WHERE id = '$recid' AND displayname <> '__invalid'";
-    		$recordings = sql($sql, "getRow");
-    		if (is_array($recordings)) {
-    			$filename = (isset($recordings[0]) ? $recordings[0] : '');
-    			//echo "<p>filename: $filename";
-    			if ($filename != '') {
-    				$sql = "UPDATE ivr SET announcement = '".str_replace("'", "''", $filename)."' WHERE announcement = '$recid'";
-				    $upcheck = $db->query($sql);
-				    if(DB::IsError($upcheck))
-				            die_freepbx($upcheck->getDebugInfo());    				
-    			}
-    		}
-    	}
-    }
+	if (version_compare($ivr_modcurrentvers, "2.2", "<")) {
+		//echo "<p>Start 2.2 upgrade</p>";
+		$sql = "ALTER TABLE ivr CHANGE COLUMN announcement announcement VARCHAR ( 255 )";
+		$result = $db->query($sql);
+		if(DB::IsError($result)) {
+			die_freepbx($result->getDebugInfo());
+		} else {
+			// Change existing records
+			//echo "<p>Updating existing records</p>";
+			$existing = sql("SELECT DISTINCT announcement FROM ivr WHERE displayname <> '__install_done' AND announcement IS NOT NULL", "getAll");
+			foreach ($existing as $item) {
+				$recid = $item[0];
+				//echo "<p>processing '$recid'</p>";
+				$sql = "SELECT filename FROM recordings WHERE id = '$recid' AND displayname <> '__invalid'";
+				$recordings = sql($sql, "getRow");
+				if (is_array($recordings)) {
+					$filename = (isset($recordings[0]) ? $recordings[0] : '');
+					//echo "<p>filename: $filename";
+					if ($filename != '') {
+						$sql = "UPDATE ivr SET announcement = '".str_replace("'", "''", $filename)."' WHERE announcement = '$recid'";
+						$upcheck = $db->query($sql);
+						if(DB::IsError($upcheck))
+						die_freepbx($upcheck->getDebugInfo());
+					}
+				}
+			}
+		}
+	}
 }
-
 // Version 2.5.7 adds auto-return to IVR
 $sql = "SELECT ivr_ret FROM ivr_dests";
 $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
 if(DB::IsError($check)) {
 	// add new field
-    $sql = "ALTER TABLE ivr_dests ADD ivr_ret TINYINT(1) NOT NULL DEFAULT 0;";
-    $result = $db->query($sql);
-    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+	$sql = "ALTER TABLE ivr_dests ADD ivr_ret TINYINT(1) NOT NULL DEFAULT 0;";
+	$result = $db->query($sql);
+	if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
 }
 
 $results = array();
@@ -149,25 +150,25 @@ $sql = "SELECT alt_timeout FROM ivr";
 $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
 if(DB::IsError($check)) {
 	// add new field
-    $sql = "ALTER TABLE ivr ADD alt_timeout VARCHAR(8);";
-    $result = $db->query($sql);
-    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+	$sql = "ALTER TABLE ivr ADD alt_timeout VARCHAR(8);";
+	$result = $db->query($sql);
+	if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
 }
 $sql = "SELECT alt_invalid FROM ivr";
 $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
 if(DB::IsError($check)) {
 	// add new field
-    $sql = "ALTER TABLE ivr ADD alt_invalid VARCHAR(8);";
-    $result = $db->query($sql);
-    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+	$sql = "ALTER TABLE ivr ADD alt_invalid VARCHAR(8);";
+	$result = $db->query($sql);
+	if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
 }
 $sql = "SELECT `loops` FROM ivr";
 $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
 if(DB::IsError($check)) {
 	// add new field
-    $sql = "ALTER TABLE ivr ADD `loops` TINYINT(1) NOT NULL DEFAULT 2;";
-    $result = $db->query($sql);
-    if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
+	$sql = "ALTER TABLE ivr ADD `loops` TINYINT(1) NOT NULL DEFAULT 2;";
+	$result = $db->query($sql);
+	if(DB::IsError($result)) { die_freepbx($result->getDebugInfo()); }
 }
 
 
@@ -182,11 +183,11 @@ if(DB::IsError($check)) {
 	//
 	out(_("migrating"));
 	outn(_("adding announcement_id field.."));
-  $sql = "ALTER TABLE ivr ADD announcement_id INTEGER";
-  $result = $db->query($sql);
-  if(DB::IsError($result)) {
+	$sql = "ALTER TABLE ivr ADD announcement_id INTEGER";
+	$result = $db->query($sql);
+	if(DB::IsError($result)) {
 		out(_("fatal error"));
-		die_freepbx($result->getDebugInfo()); 
+		die_freepbx($result->getDebugInfo());
 	} else {
 		out(_("ok"));
 	}
@@ -194,11 +195,11 @@ if(DB::IsError($check)) {
 	// Get all the valudes and replace them with announcement_id
 	//
 	outn(_("migrate to recording ids.."));
-  $sql = "SELECT `ivr_id`, `announcement` FROM `ivr`";
+	$sql = "SELECT `ivr_id`, `announcement` FROM `ivr`";
 	$results = $db->getAll($sql, DB_FETCHMODE_ASSOC);
 	if(DB::IsError($results)) {
 		out(_("fatal error"));
-		die_freepbx($results->getDebugInfo());	
+		die_freepbx($results->getDebugInfo());
 	}
 	$migrate_arr = array();
 	$count = 0;
@@ -214,7 +215,7 @@ if(DB::IsError($check)) {
 		$result = $db->executeMultiple($compiled,$migrate_arr);
 		if(DB::IsError($result)) {
 			out(_("fatal error"));
-			die_freepbx($result->getDebugInfo());	
+			die_freepbx($result->getDebugInfo());
 		}
 	}
 	out(sprintf(_("migrated %s entries"),$count));
@@ -222,9 +223,9 @@ if(DB::IsError($check)) {
 	// Now remove the old recording field replaced by new id field
 	//
 	outn(_("dropping announcement field.."));
-  $sql = "ALTER TABLE `ivr` DROP `announcement`";
-  $result = $db->query($sql);
-  if(DB::IsError($result)) { 
+	$sql = "ALTER TABLE `ivr` DROP `announcement`";
+	$result = $db->query($sql);
+	if(DB::IsError($result)) {
 		out(_("no announcement field???"));
 	} else {
 		out(_("ok"));
@@ -242,11 +243,11 @@ $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
 if(DB::IsError($check)) {
 	//  Add timeout_id field
 	//
-  $sql = "ALTER TABLE ivr ADD timeout_id INTEGER DEFAULT null";
-  $result = $db->query($sql);
-  if(DB::IsError($result)) {
+	$sql = "ALTER TABLE ivr ADD timeout_id INTEGER DEFAULT null";
+	$result = $db->query($sql);
+	if(DB::IsError($result)) {
 		out(_("fatal error"));
-		die_freepbx($result->getDebugInfo()); 
+		die_freepbx($result->getDebugInfo());
 	} else {
 		out(_("added"));
 	}
@@ -259,11 +260,11 @@ $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
 if(DB::IsError($check)) {
 	//  Add invalid_id field
 	//
-  $sql = "ALTER TABLE ivr ADD invalid_id INTEGER DEFAULT null";
-  $result = $db->query($sql);
-  if(DB::IsError($result)) {
+	$sql = "ALTER TABLE ivr ADD invalid_id INTEGER DEFAULT null";
+	$result = $db->query($sql);
+	if(DB::IsError($result)) {
 		out(_("fatal error"));
-		die_freepbx($result->getDebugInfo()); 
+		die_freepbx($result->getDebugInfo());
 	} else {
 		out(_("added"));
 	}
@@ -278,10 +279,10 @@ if(DB::IsError($check)) {
 	//  Add retvm field
 	//
 	$sql = "ALTER TABLE ivr ADD retvm VARCHAR(8);";
-  $result = $db->query($sql);
-  if(DB::IsError($result)) {
+	$result = $db->query($sql);
+	if(DB::IsError($result)) {
 		out(_("fatal error"));
-		die_freepbx($result->getDebugInfo()); 
+		die_freepbx($result->getDebugInfo());
 	} else {
 		out(_("added"));
 	}
