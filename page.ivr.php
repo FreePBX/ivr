@@ -285,7 +285,8 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		</tr>
 
 		<tr><td colspan=2><hr /></td></tr>
-		<tr><td colspan=2>	
+		<tr><td colspan=2>
+
 			<input name="increase" type="submit" value="<?php echo _("Increase Options")?>">
 			&nbsp;
 			<input name="Submit" type="submit" value="<?php echo _("Save")?>" tabindex="<?php echo ++$tabindex;?>">
@@ -319,6 +320,9 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	} else {
 		echo "<input type='hidden' name='nbroptions' value=$nbroptions />\n";
 	} 
+
+	global $module_hook;
+	echo $module_hook->hookHtml;
 ?>
 	<input name="increase" type="submit" value="<?php echo _("Increase Options")?>">
 	&nbsp;
