@@ -206,7 +206,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 					$vm_results = voicemail_getVoicemail();
 					$vmcontexts = array_keys($vm_results);
 					foreach ($vmcontexts as $vmc) {
-						if ($vmc != 'general' ) 
+						if ($vmc != 'general') && ($vmc != 'zonemessages) 
 							echo '<option value="'.$vmc.'"'.($vmc == $ivr_details['dircontext'] ? ' SELECTED' : '').'>'.$vmc."</option>\n";
 						}
 					?>
