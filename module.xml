@@ -2,6 +2,8 @@
 	<rawname>ivr</rawname>
 	<name>IVR</name>
 	<version>2.6.0.1</version>
+	<publisher>FreePBX</publisher>
+	<license>GPLv2+</license>
 	<type>setup</type>
 	<category>Inbound Call Control</category>
 	<description>
@@ -37,5 +39,5 @@
 		<ivr>IVR</ivr>
 	</menuitems>
 	<location>release/2.6/ivr-2.6.0.1.tgz</location>
-	<md5sum>4b2caf13738b2497ccd7f33b9ba27b33</md5sum>
+	<md5sum>f4ed9b1c95fdade4ce5efc22946e8754</md5sum>
 </module>
