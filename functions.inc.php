@@ -408,7 +408,7 @@ function ivr_do_edit($id, $post) {
 			// get match[1] from the preg_match above
 			$dest = $post[$post[$var].$match[1]];
 			$cmd = $post['option'.$match[1]];
-			$ivr_ret = $post['ivr_ret'.$match[1]];
+			$ivr_ret = isset($post['ivr_ret'.$match[1]]) ? $post['ivr_ret'.$match[1]] : '';
 			// Debugging if it all goes pear shaped.
 			// print "I think pushing $cmd does $dest<br>\n";
 			if (strlen($cmd))
