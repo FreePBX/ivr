@@ -1,231 +1,473 @@
+# This file is part of FreePBX.
+#
+#    FreePBX is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    FreePBX is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
+#
 # Russian freePBX ver. translation
 # Copyright (c) 2006-2008 PostMet Corporation
-# This file is distributed under the same license as the freePBX package.
 # Alexander Kozyrev <ceo@postmet.com>, Sergey Nikolayev <sergey@postmet.com>, 2006-2008.
 #
-# ╕с▀▐█ь╫▐╥╨ть iconv amp.new -f UTF-8 -t ISO-8859-5 -o amp.po
-# fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.3\n"
+"Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-19 21:45+0100\n"
-"PO-Revision-Date: 2008-01-31 16:38+0100\n"
+"POT-Creation-Date: 2008-10-05 23:22+0200\n"
+"PO-Revision-Date: 2009-08-07 12:39+0300\n"
 "Last-Translator: Alexander Kozyrev <ceo@postmet.com>\n"
 "Language-Team: Russian <faq@postmet.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-5\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.inc.php:20
+#: functions.inc.php:21
 msgid ""
-"There is a problem with install.sql, cannot re-create databases. Contact support\n"
+"There is a problem with install.sql, cannot re-create databases. Contact "
+"support\n"
 msgstr ""
-"▓▐╫▌╪┌█╪ ▀р▐╤█╒▄ы с▐ с┌р╪▀т▐▄ install.sql, ▌╒╥▐╫▄▐╓▌▐ ▀╒р╒с▐╫╘╨ть ╤╨╫у ╘╨▌▌ых. "
-"╛╤р╨т╪т╒сь ┌ с█у╓╤╒ ▀▐╘╘╒р╓┌╪\n" 
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ install.sql, я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜. "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜\n"
 
-#: page.ivr.php:68 page.ivr.php:106
+#: functions.inc.php:141 functions.inc.php:161
+#, php-format
+msgid "IVR: %s"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜: %s"
+
+#: functions.inc.php:484
+#, php-format
+msgid "IVR: %s / Option: %s"
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜: %s / я┐╜я┐╜я┐╜я┐╜я┐╜: %"
+"s"
+
+#: install.php:177
+msgid "Checking if announcements need migration.."
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜..."
+
+#: install.php:183
+msgid "migrating"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
+
+#: install.php:184
+msgid "adding announcement_id field.."
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ announcement_id"
+
+#: install.php:188 install.php:200 install.php:216 install.php:248
+#: install.php:265 install.php:283
+msgid "fatal error"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
+
+#: install.php:191 install.php:230
+msgid "ok"
+msgstr "я┐╜я┐╜"
+
+#: install.php:196
+msgid "migrate to recording ids.."
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ id я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜.."
+
+#: install.php:220
+#, php-format
+msgid "migrated %s entries"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ %s я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
+
+#: install.php:224
+msgid "dropping announcement field.."
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜.."
+
+#: install.php:228
+msgid "no announcement field???"
+msgstr ""
+
+#: install.php:234
+msgid "already migrated"
+msgstr "я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
+
+#: install.php:239
+msgid "Checking for timeout_id.."
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ timeout_id.."
+
+#: install.php:251 install.php:268 install.php:286
+msgid "added"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
+
+#: install.php:254 install.php:271 install.php:289
+msgid "not needed"
+msgstr "я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜"
+
+#: install.php:256
+msgid "Checking for invalid_id.."
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ invalid_id.."
+
+#: install.php:274
+msgid "Checking for retvm.."
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ retvm.."
+
+#: page.ivr.php:69 page.ivr.php:108 page.ivr.php:134
 msgid "Digital Receptionist"
-msgstr "░╥т▐с╒┌р╒т╨рь"
-
-#: page.ivr.php:70
-msgid "Instructions"
-msgstr "╕▌стру┌ц╪╪"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
 
 #: page.ivr.php:71
-msgid ""
-"You use the Digital Receptionist to make IVR's, Interactive Voice Responce "
-"systems."
-msgstr ""
-"▓ы ╪с▀▐█ь╫у╒т╒ ▄▐╘у█ь ░╥т▐с╒┌р╒т╨рь ╘█я с▐╫╘╨▌╪я с╪ст╒▄ы ╕▌т╒р╨┌т╪╥▌▐╙▐ ╙▐█▐с▐╥▐╙▐ ▄╒▌ю."
+msgid "Instructions"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
 
 #: page.ivr.php:72
+msgid ""
+"You use the Digital Receptionist to make IVR's, Interactive Voice Response "
+"systems."
+msgstr ""
+"я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜."
+
+#: page.ivr.php:73
 msgid ""
 "When creating a menu option, apart from the standard options of 0-9,* and #, "
 "you can also use 'i' and 't' destinations."
 msgstr ""
-"┐р╪ с▐╫╘╨▌╪╪ ▄╒▌ю ╪с▀▐█ь╫у┘т╒ ст╨▌╘╨рт▌ы╒ с╪▄╥▐█ы 0-9, *, ╪ #. ╡сть ╥▐╫▄▐╓▌▐сть т╨┌╓╒ "
-"╪с▀▐█ь╫▐╥╨ть 'i' (invalid number) ╪ 't'(timeout) ╥ ┌╨ч╒ст╥╒ ▌╨╫▌╨ч╒▌╪я."
+"я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ 0-9, *, я┐╜ #. я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ 'i' (invalid number) "
+"я┐╜ 't' (timeout) я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜."
 
-#: page.ivr.php:73
+#: page.ivr.php:74
 msgid ""
 "'i' is used when the caller pushes an invalid button, and 't' is used when "
 "there is no response."
 msgstr ""
-"'i' ╪с▀▐█ь╫у╒тся, ╒с█╪ ▀▐╫╥▐▌╪╥ш╪┘ ▌╨╓╨█ ▌╒╥╒р▌ую ┌▌▐▀┌у, ╪ 't' ╪с▀▐█ь╫у╒тся "
-"╘█я с▐▐╤щ╒▌╪я ▀р╪ ▌╒▐т╥╒т╒ ▀▐ т╨┘▄╨уту."
+"'i' я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜ 't' я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜."
 
-#: page.ivr.php:74
+#: page.ivr.php:75
 msgid ""
 "If those options aren't supplied, the default 't' is to replay the menu "
 "three times and then hang up,"
 msgstr ""
-"╡с█╪ эт╪ ▐▀ц╪╪ ▌╒ ╫╨╘╒┘ст╥▐╥╨▌ы, т▐ ╘╒ф▐█т▌╨я 't' ╥▐с▀р▐╪╫╥▐╘╪т с▐▐╤щ╒▌╪╒ ▄╒▌ю тр╪ р╨╫╨ ╪ ┌█╨╘ёт тру╤┌у,"
+"я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜я┐╜ 't' "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜,"
 
-#: page.ivr.php:75
+#: page.ivr.php:76
 msgid ""
 "and the default 'i' is to say 'Invalid option, please try again' and replay "
 "the menu."
 msgstr ""
-"╘╒ф▐█т▌╨я 'i' с▐▐╤щ╨╒т '╜╒╥╒р▌╨я ▐▀ц╪я, ▀р▐╤у┘т╒ ╒щё р╨╫' ╪ с▌▐╥╨ ╥▐╫╥р╨щ╨╒т ╥ ▄╒▌ю."
+"я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ 'i' я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ 'я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜' я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜."
 
-#: page.ivr.php:76
+#: page.ivr.php:77
 msgid "After three invalid attempts, the line is hung up."
 msgstr ""
-"┐▐с█╒ трёх ▌╒╥╒р▌ых ▀▐▀ыт▐┌ с▐╒╘╪▌╒▌╪╒ р╨╫ры╥╨╒тся."
+"я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜."
 
-#: page.ivr.php:86
+#: page.ivr.php:87
 msgid "Add IVR"
-msgstr "┤▐╤╨╥╪ть ╕▌т╒р╨┌т╪╥▌▐╒ ▄╒▌ю"
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜"
 
-#: page.ivr.php:107
+#: page.ivr.php:109
 msgid "Edit Menu"
-msgstr "╕╫▄╒▌╪ть ▄╒▌ю"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜"
 
-#: page.ivr.php:129
+#: page.ivr.php:124
+msgid "Queue Breakout Menu Usage List"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ Queue Breakout Menu"
+
+#: page.ivr.php:124
+msgid ""
+"This IVR is being used by the following Queues, providing an ability for "
+"callers to hear this Queue's announcement periodically and giving callers an "
+"option to break out of the queue into this IVR's menu options. This queue "
+"can not be deleted when being used in this mode"
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜ IVR я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ IVR. я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜."
+
+#: page.ivr.php:134
+msgid "Delete"
+msgstr ""
+
+#: page.ivr.php:149
+msgid "Change Name"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜"
+
+#: page.ivr.php:149
 msgid "This changes the short name, visible on the right, of this IVR"
-msgstr "╝▐╓▌▐ ╪╫▄╒▌╪ть ▌╨╫╥╨▌╪╒ у╓╒ с▐╫╘╨▌▌▐╙▐ ╝╒▌ю, ┌▐т▐р▐╒ ▐т▐╤р╨╓╨╒тся с▀р╨╥╨"
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
 
-#: page.ivr.php:154 page.ivr.php:174
+#: page.ivr.php:157 page.ivr.php:177
 msgid "Announcement"
-msgstr "┐р╪╥╒тст╥╪╒"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
 
-#: page.ivr.php:154
+#: page.ivr.php:157
 msgid ""
 "Message to be played to the caller. To add additional recordings please use "
 "the \"System Recordings\" MENU to the left"
 msgstr ""
-"┴▐▐╤щ╒▌╪╒, ┌▐т▐р▐╒ ус█ыш╪т ▀▐╫╥▐▌╪╥ш╪┘. ╟т▐╤ы с▐╫╘╨ть ╫╨▀╪сь ╪с▀▐█ь╫у┘т╒ с╒┌ц╪ю ╖╨▀╪сь с▐▐╤щ╒▌╪┘ "
-"╥ ▄╒▌ю с█╒╥╨."
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜. я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜."
 
-msgid "Timeout"
-msgstr "┬╨┘▄╨ут"
-
-msgid ""
-"The amount of time (in seconds) before the 't' option, if specified, is used"
-msgstr ""
-"▓р╒▄я т╨┘▄╨ут╨ (╥ с╒┌у▌╘╨х), ╒с█╪ ╪с▀▐█ь╫у╒тся ▐▀ц╪я 't'"
-
-msgid "Enable Directory"
-msgstr "└╨╫р╒ш╪ть ╘▐сту▀ ╥ ╘╪р╒┌т▐р╪ю"
-
-#: page.ivr.php:138
-msgid "Let callers into the IVR dial '#' to access the directory"
-msgstr "└╨╫р╒ш╪ь ▀▐╫╥▐▌╪╥ш╪▄ ▌╨╓╨ть '#' ╥ ╝╒▌ю чт▐╤ы ╥▐┘т╪ ╥ ╘╪р╒┌т▐р╪ю"
-
-#: page.ivr.php:142
-msgid "Directory Context"
-msgstr "║▐▌т╒┌ст ╘╪р╒┌т▐р╪╪"
-
-#: page.ivr.php:142
-msgid ""
-"When # is selected, this is the voicemail directory context that is used"
-msgstr "╡с█╪ ▌╨╤р╨▌╨ '#' ╤у╘╒т ╪с▀▐█ь╫▐╥╨ться эт▐т ┌▐▌т╒┌ст ╘█я ╘╪р╒┌т▐р╪╪ ╙▐█▐с▐╥▐┘ ▀▐чты"
-
-#: page.ivr.php:158
-msgid "Enable Direct Dial"
-msgstr "└╨╫р╒ш╪ть ▀ря▄ы╒ ▌╨╤▐ры"
-
-#: page.ivr.php:158
-msgid "Let callers into the IVR dial an extension directly"
-msgstr "└╨╫р╒ш╪ть ▀▐╫╥▐▌╪╥ш╒▄у ╘▐▌╨╤▐р ▌╨▀ря▄ую ▌╨ ╥▌утр╒▌▌╪╒ ▌▐▄╒р╨."
-
-#: page.ivr.php:159
+#: page.ivr.php:162 page.ivr.php:234 page.ivr.php:260
 msgid "None"
-msgstr "╜╒т"
+msgstr "я┐╜я┐╜я┐╜"
 
-#: page.ivr.php:174
+#: page.ivr.php:177
 msgid ""
 "Message to be played to the caller.<br><br>You must install and enable the "
 "\"Systems Recordings\" Module to edit this option"
 msgstr ""
-"┴▐▐╤щ╒▌╪╒, ┌▐т▐р▐╒ ус█ыш╪т ▀▐╫╥▐▌╪╥ш╪┘.<br><br>╜у╓▌▐ ╪▌ст╨██╪р▐╥╨ть ╪ ╨┌т╪╥╪р▐╥╨ть ▄▐╘у█ь ╖╨▀╪сь "
-"с▐▐╤щ╒▌╪┘ чт▐╤ы ╪╫▄╒▌ять чт▐ █╪╤▐ ╥ эт▐┘ ▐▀ц╪╪."
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜.<br><br>я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜."
 
-msgid "Return to IVR"
-msgstr "▓▐╫╥р╨т ╥ ╝╒▌ю"
+#: page.ivr.php:189
+msgid "Timeout"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
 
-msgid "Check this box to have this option return to a parent IVR if it was called from a parent IVR. If not, it will go to the chosen destination.<br><br>The return path will be to any IVR that was in the call path prior to this IVR which could lead to strange results if there was an IVR called in the call path but not immediately before this"
+#: page.ivr.php:189
+msgid ""
+"The amount of time (in seconds) before the 't' option, if specified, is used"
 msgstr ""
-"╛т▄╒тьт╒ ╫╘╒сь, ╒с█╪ ▌у╓▌▐ ╥▐╫╥р╨щ╨ть ╥ р▐╘╪т╒█ьс┌▐╒ ╝╒▌ю, ╒с█╪ ╥ы╫▐╥ сю╘╨ ▀▐сту▀╨╒т ╪╫ ╘ру╙▐╙▐ ╝╒▌ю. "
-"╡с█╪ ▌╒ ▐т▄╒ч╒▌▐, ╥ы╫▐╥ ▀▐сту▀╨╒т ▌╨ ╥ы╤▐р ▌╨╫▌╨ч╒▌╪┘.<br><br>▓▐╫╥р╨т ▄▐╓▌▐ ▀╒р╒▌╨▀р╨╥█ять ╪ ╥ █ю╤ы╒ "
-"╘ру╙╪╒ ╝╒▌ю, ╪╫ ┌▐т▐рых т╨┌╓╒ ▀р▐╪╫╥▐╘╪тся ╥ы╫▐╥ ╥ ╘╒┘ст╥ующ╒╒ ╝╒▌ю, ▌▐ ╥▐╫╥р╨т ╪ ▀╒р╒▌╨▀р╨╥█╒▌╪╒ ▄▐╓╒т "
-"▀р╪╥╒ст╪ ┌ ▌╒▐╓╪╘╨▌▌ы▄ р╒╫у█ьт╨т╨▄."
+"я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ (я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜), "
+"я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ 't'"
 
-msgid "Misc Destinations"
-msgstr "└╨╫█╪ч▌ы╒ ▌╨▀р╨╥█╒▌╪я"
-
-msgid "IVR"
-msgstr "╕▌т╒р╨┌т╪╥▌▐╒ ▄╒▌ю"
-
-msgid "Languages"
-msgstr "╧╫ы┌╪"
-
-msgid "Voicemail"
-msgstr "│▐█▐с▐╥╨я ▀▐чт╨"
-
-msgid "Extensions"
-msgstr "▓▌утр╒▌▌╪┘ ▌▐▄╒р"
-
-msgid "Day Night Mode"
-msgstr "┤▌╒╥▌▐┘/▌▐ч▌▐┘ р╒╓╪▄"
-
-msgid "Terminate Call"
-msgstr "┬╒р▄╪▌╪р▐╥╨ть ╫╥▐▌▐┌"
-
-msgid "Conferences"
-msgstr "║▐▌ф╒р╒▌ц╪╪"
-
-msgid "Phonebook Directory"
-msgstr "┬╒█╒ф▐▌▌╨я ┌▌╪╙╨"
-
-msgid "Queues"
-msgstr "╛ч╒р╒╘╪"
-
-msgid "Ring Groups"
-msgstr "│ру▀▀ы ╥ы╫▐╥╨"
-
-msgid "Speed dial functions"
-msgstr "─у▌┌ц╪╪ ╤ыстр▐╙▐ ▌╨╤▐р╨"
-
-msgid "Time Conditions"
-msgstr "┐р╨╥╪█╨ ▀▐ ╥р╒▄╒▌╪"
-
-msgid "Custom Applications"
-msgstr "┴▀╒ц╪╨█ь▌▐╒ ▀р╪█▐╓╒▌╪╒"
-
-msgid "Extended Routing"
-msgstr "└╨сш╪р╒▌▌╨я ▄╨ршрут╪╫╨ц╪я"
-
-msgid "Custom App<span><br>ADVANCED USERS ONLY<br><br>Uses Goto() to send caller to "
-"a custom context.<br><br>The context name should start with \"custom-\", and be in "
-"the format custom-context,extension,priority. Example "
-"entry:<br><br><b>custom-myapp,s,1</b><br><br>The <b>[custom-myapp]</b> context would "
-"need to be created and included in extensions_custom.conf</span>"
+#: page.ivr.php:194
+msgid "Enable Directory"
 msgstr ""
-"╛с▐╤ы╒ ▀р╪█▐╓╒▌╪я<span><br>┬╛╗╠║╛ ╛┐╦┬╜╦╝ ┐╛╗╠╖╛▓░┬╡╗╧╝<br>╕с▀▐█ь╫у┘т╒ ▐▀╒р╨▌╘ "
-"Goto() ╘█я ▀╒р╒▌╨▀р╨╥█╒▌╪я ╥ custom ┌▐▌т╒┌ст.<br><br>╜╨╫╥╨▌╪╒ ┌▐▌т╒┌ст╨ ╘▐█╓▌▐ "
-"▌╨ч╪▌╨ться с \"custom-\" ╪ ╤ыть ╥ ф▐р▄╨т╒ custom-context,extension,▀р╪▐р╪т╒т. "
-"╜╨▀р╪▄╒р:<br><b>custom-app,s,1</b><br>║▐▌т╒┌ст <b>[custom-app]</b> ╘▐█╓╒▌ ╤ыть с▐╫╘╨▌ "
-"╥ extensions_custom.conf</span"
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
 
-#msgid "Custom App<span><br>ADVANCED USERS ONLY<br><br>Uses Goto() to send caller to a custom context.<br><br>The context name should start with \"custom-\", and be in the format custom-context,extension,priority. Example entry:<br><br><b>custom-myapp,s,1</b><br><br>The <b>[custom-myapp]</b> context would need to be created and included in extensions_custom.conf</span>"
-#msgstr ""
+#: page.ivr.php:194
+msgid "Let callers into the IVR dial '#' to access the directory"
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ '#' я┐╜ я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
 
-msgid "Submit Changes"
-msgstr "┐р╪▄╒▌╪ть ╪╫▄╒▌╒▌╪я"
+#: page.ivr.php:198
+msgid "VM Return to IVR"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜"
 
+#: page.ivr.php:198
+msgid ""
+"If checked, upon exiting voicemail a caller will be returned to this IVR if "
+"they got a users voicemail"
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜"
+
+#: page.ivr.php:202
+msgid "Directory Context"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
+
+#: page.ivr.php:202
+msgid ""
+"When # is selected, this is the voicemail directory context that is used"
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ '#' я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜"
+
+#: page.ivr.php:218
+msgid "Enable Direct Dial"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
+
+#: page.ivr.php:218
+msgid "Let callers into the IVR dial an extension directly"
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜."
+
+#: page.ivr.php:222
+msgid "Loop Before t-dest"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ t-dest"
+
+#: page.ivr.php:222
+msgid ""
+"If checked, and there is a 't' (timeout) destination defined below, the IVR "
+"will loop back to the beginning if no input is provided for the designated "
+"loop counts prior to going to the timeout (t) destination."
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜,я┐╜ я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜ t (timeout), я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜, "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ t (timeout)"
+
+#: page.ivr.php:229
+msgid "Timeout Message"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
+
+#: page.ivr.php:229
+msgid ""
+"If a timeout occurs and a message is selected, it will be played in place of "
+"the announcement message when looping back to the top of the IVR. It will "
+"not be played if the t destination is the next target."
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ IVR. я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ t - "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜."
+
+#: page.ivr.php:248
+msgid "Loop Before i-dest"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ i-dest"
+
+#: page.ivr.php:248
+msgid ""
+"If checked, and there is an 'i' (invalid extension) destination defined "
+"below, the IVR will play invalid option and then loop back to the beginning "
+"for the designated loop counts prior to going to the invalid (i) destination."
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜ я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"'i' (invalid extension), IVR я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ invalid (i) destination."
+
+#: page.ivr.php:255
+msgid "Invalid Message"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
+
+#: page.ivr.php:255
+msgid ""
+"If an invalid extension is pressed and a message is selected, it will be "
+"played in place of the announcement message when looping back to the top of "
+"the IVR. It will not be played if the t destination is the next target. If "
+"nothing is selected, the system will play a default invalid extension "
+"message before going back to the main announcement"
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜,я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ IVR."
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, "
+"я┐╜я┐╜я┐╜я┐╜ t я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜.я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜invalid extension я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜."
+
+#: page.ivr.php:274
+msgid "Repeat Loops:"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜:"
+
+#: page.ivr.php:274
+msgid ""
+"The number of times we should loop when invalid input or no input has been "
+"entered before going to the defined or default generated 'i' or 't' options. "
+"If the 'i' or 't' options are defined, the above check boxes must be checked "
+"in order to loop."
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜-я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜ 'i' я┐╜я┐╜я┐╜ 't'. я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ 'i' я┐╜я┐╜я┐╜ 't, я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜"
+
+#: page.ivr.php:289 page.ivr.php:323
 msgid "Increase Options"
-msgstr "┤▐╤╨╥╪ть ▐▀ц╪ю"
+msgstr ""
 
-msgid "Decrease Options"
-msgstr "├╤р╨ть ▐▀ц╪ю"
-
+#: page.ivr.php:291 page.ivr.php:325
 msgid "Save"
-msgstr "┴▐хр╨▌╪ть"
+msgstr ""
 
-msgid "Change Name"
-msgstr "╕╫▄╒▌╪ть ╪▄я"
+#: page.ivr.php:294 page.ivr.php:328
+msgid "Decrease Options"
+msgstr ""
 
-msgid "Delete"
-msgstr "├╘╨█╪ть"
+#: page.ivr.php:338
+msgid "Invalid option"
+msgstr ""
+
+#: page.ivr.php:384
+msgid "Return to IVR"
+msgstr "я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜"
+
+#: page.ivr.php:384
+msgid ""
+"Check this box to have this option return to a parent IVR if it was called "
+"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜. "
+"я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜.<br><br>я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜, я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜."
+
+#: page.ivr.php:388
+msgid "Leave blank to remove"
+msgstr ""
+"я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜ "
+"я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜"
