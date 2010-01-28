@@ -313,7 +313,6 @@ function ivr_get_config($engine) {
 						$ext->add($id, 'return', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT_${CONTEXT}}'));
 						$ext->add($id, 'return', '', new ext_goto($id.',s,begin'));
 					}
-					$ext->add($id, 'fax', '', new ext_goto('ext-fax,in_fax,1'));
 				}
 			}
 		break;
