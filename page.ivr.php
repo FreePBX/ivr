@@ -113,7 +113,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	<input type="hidden" name="action" value="edited" />
 	<input type="hidden" name="display" value="ivr" />
 	<input type="hidden" name="id" value="<?php echo $id ?>" />
-	<input name="Submit" type="submit" style="display:none;" value="save" />
+	<input name="Submit" type="submit" value="<?php echo _("Save")?>" tabindex="<?php echo ++$tabindex;?>">
 <?php
 	$usage_list = array();
 	if (function_exists('queues_ivr_usage')) {
@@ -371,6 +371,7 @@ theForm.displayname.focus();
 	}
 	
 	//-->
+
 	</script>
         </form>
         </div>
