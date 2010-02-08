@@ -113,7 +113,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	<input type="hidden" name="action" value="edited" />
 	<input type="hidden" name="display" value="ivr" />
 	<input type="hidden" name="id" value="<?php echo $id ?>" />
-	<input name="Submit" type="submit" value="<?php echo _("Save")?>" tabindex="<?php echo ++$tabindex;?>">
+	<input name="Submit" type="submit" value="<?php echo _("Save")?>" tabindex="<?php echo ++$tabindex;?>" disabled>
 <?php
 	$usage_list = array();
 	if (function_exists('queues_ivr_usage')) {
@@ -131,7 +131,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		echo "<br />";
 	} else {
 ?>
-	<input name="delete" type="submit" value="<?php echo _("Delete")." "._("Digital Receptionist")." {$ivr_details['displayname']}"; ?>" />
+	<input name="delete" type="submit" value="<?php echo _("Delete")." "._("Digital Receptionist")." {$ivr_details['displayname']}"; ?>" disabled/>
 <?php
 	}
 	if ($id) {
@@ -288,12 +288,12 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		<tr><td colspan=2><hr /></td></tr>
 		<tr><td colspan=2>
 
-			<input name="increase" type="submit" value="<?php echo _("Increase Options")?>">
+			<input name="increase" type="submit" value="<?php echo _("Increase Options")?>" disabled>
 			&nbsp;
-			<input name="Submit" type="submit" value="<?php echo _("Save")?>" tabindex="<?php echo ++$tabindex;?>">
+			<input name="Submit" type="submit" value="<?php echo _("Save")?>" tabindex="<?php echo ++$tabindex;?>" disabled>
 			&nbsp;
 			<?php if ($nbroptions > 1) { ?>
-			<input name="decrease" type="submit" value="<?php echo _("Decrease Options")?>">
+			<input name="decrease" type="submit" value="<?php echo _("Decrease Options")?>" disabled>
 			<?php } ?>
 		</td>
 	</tr>
@@ -325,17 +325,19 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	global $module_hook;
 	echo $module_hook->hookHtml;
 ?>
-	<input name="increase" type="submit" value="<?php echo _("Increase Options")?>">
+	<input name="increase" type="submit" value="<?php echo _("Increase Options")?>" disabled>
 	&nbsp;
-	<input name="Submit" type="submit" value="<?php echo _("Save")?>">
+	<input name="Submit" type="submit" value="<?php echo _("Save")?>" disabled>
 	&nbsp;
 	<?php if ($nbroptions > 1) { ?>
-	<input name="decrease" type="submit" value="<?php echo _("Decrease Options")?>">
+	<input name="decrease" type="submit" value="<?php echo _("Decrease Options")?>" disabled>
 	<?php } ?>
 	
 	<script language="javascript">
 	<!--
-
+$(document).ready(function() {  
+	$(':submit:disabled').removeAttr('disabled'); 
+}); 
 var theForm = document.prompt;
 theForm.displayname.focus();
 
