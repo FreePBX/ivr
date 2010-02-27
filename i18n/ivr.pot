@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-27 13:45+0100\n"
+"POT-Creation-Date: 2010-02-27 17:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,162 +28,126 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ivr/functions.inc.php:21
 msgid ""
 "There is a problem with install.sql, cannot re-create databases. Contact "
 "support\n"
 msgstr ""
 
-#: ivr/functions.inc.php:141 ivr/functions.inc.php:161
 #, php-format
 msgid "IVR: %s"
 msgstr ""
 
-#: ivr/functions.inc.php:483
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr ""
 
-#: ivr/install.php:178
 msgid "Checking if announcements need migration.."
 msgstr ""
 
-#: ivr/install.php:184
 msgid "migrating"
 msgstr ""
 
-#: ivr/install.php:185
 msgid "adding announcement_id field.."
 msgstr ""
 
-#: ivr/install.php:189 ivr/install.php:201 ivr/install.php:217
-#: ivr/install.php:249 ivr/install.php:266 ivr/install.php:284
 msgid "fatal error"
 msgstr ""
 
-#: ivr/install.php:192 ivr/install.php:231
 msgid "ok"
 msgstr ""
 
-#: ivr/install.php:197
 msgid "migrate to recording ids.."
 msgstr ""
 
-#: ivr/install.php:221
 #, php-format
 msgid "migrated %s entries"
 msgstr ""
 
-#: ivr/install.php:225
 msgid "dropping announcement field.."
 msgstr ""
 
-#: ivr/install.php:229
 msgid "no announcement field???"
 msgstr ""
 
-#: ivr/install.php:235
 msgid "already migrated"
 msgstr ""
 
-#: ivr/install.php:240
 msgid "Checking for timeout_id.."
 msgstr ""
 
-#: ivr/install.php:252 ivr/install.php:269 ivr/install.php:287
 msgid "added"
 msgstr ""
 
-#: ivr/install.php:255 ivr/install.php:272 ivr/install.php:290
 msgid "not needed"
 msgstr ""
 
-#: ivr/install.php:257
 msgid "Checking for invalid_id.."
 msgstr ""
 
-#: ivr/install.php:275
 msgid "Checking for retvm.."
 msgstr ""
 
-#: ivr/ivr.i18n.php:5 ivr/ivr.i18n.php:11
 msgid "IVR"
 msgstr ""
 
-#: ivr/ivr.i18n.php:7
 msgid "Inbound Call Control"
 msgstr ""
 
-#: ivr/ivr.i18n.php:9
 msgid ""
 "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
 "Response) menus. These can be used to send callers to different locations "
 "(eg, "
 msgstr ""
 
-#: ivr/ivr.i18n.php:9
 msgid ") and/or allow direct-dialing of extension numbers."
 msgstr ""
 
-#: ivr/page.ivr.php:69 ivr/page.ivr.php:108 ivr/page.ivr.php:134
 msgid "Digital Receptionist"
 msgstr ""
 
-#: ivr/page.ivr.php:71
 msgid "Instructions"
 msgstr ""
 
-#: ivr/page.ivr.php:72
 msgid ""
 "You use the Digital Receptionist to make IVR's, Interactive Voice Response "
 "systems."
 msgstr ""
 
-#: ivr/page.ivr.php:73
 msgid ""
 "When creating a menu option, apart from the standard options of 0-9,* and #, "
 "you can also use 'i' and 't' destinations."
 msgstr ""
 
-#: ivr/page.ivr.php:74
 msgid ""
 "'i' is used when the caller pushes an invalid button, and 't' is used when "
 "there is no response."
 msgstr ""
 
-#: ivr/page.ivr.php:75
 msgid ""
 "If those options aren't supplied, the default 't' is to replay the menu "
 "three times and then hang up,"
 msgstr ""
 
-#: ivr/page.ivr.php:76
 msgid ""
 "and the default 'i' is to say 'Invalid option, please try again' and replay "
 "the menu."
 msgstr ""
 
-#: ivr/page.ivr.php:77
 msgid "After three invalid attempts, the line is hung up."
 msgstr ""
 
-#: ivr/page.ivr.php:87
 msgid "Add IVR"
 msgstr ""
 
-#: ivr/page.ivr.php:109
 msgid "Edit Menu"
 msgstr ""
 
-#: ivr/page.ivr.php:116 ivr/page.ivr.php:293 ivr/page.ivr.php:330
 msgid "Save"
 msgstr ""
 
-#: ivr/page.ivr.php:124
 msgid "Queue Breakout Menu Usage List"
 msgstr ""
 
-#: ivr/page.ivr.php:124
 msgid ""
 "This IVR is being used by the following Queues, providing an ability for "
 "callers to hear this Queue's announcement periodically and giving callers an "
@@ -191,120 +155,95 @@ msgid ""
 "can not be deleted when being used in this mode"
 msgstr ""
 
-#: ivr/page.ivr.php:134
 msgid "Delete"
 msgstr ""
 
-#: ivr/page.ivr.php:149
 msgid "Change Name"
 msgstr ""
 
-#: ivr/page.ivr.php:149
 msgid "This changes the short name, visible on the right, of this IVR"
 msgstr ""
 
-#: ivr/page.ivr.php:157 ivr/page.ivr.php:177
 msgid "Announcement"
 msgstr ""
 
-#: ivr/page.ivr.php:157
 msgid ""
 "Message to be played to the caller. To add additional recordings please use "
 "the \"System Recordings\" MENU to the left"
 msgstr ""
 
-#: ivr/page.ivr.php:162 ivr/page.ivr.php:235 ivr/page.ivr.php:261
 msgid "None"
 msgstr ""
 
-#: ivr/page.ivr.php:177
 msgid ""
 "Message to be played to the caller.<br><br>You must install and enable the "
 "\"Systems Recordings\" Module to edit this option"
 msgstr ""
 
-#: ivr/page.ivr.php:189
 msgid "Timeout"
 msgstr ""
 
-#: ivr/page.ivr.php:189
 msgid ""
 "The amount of time (in seconds) before the 't' option, if specified, is used"
 msgstr ""
 
-#: ivr/page.ivr.php:194
 msgid "Enable Directory"
 msgstr ""
 
-#: ivr/page.ivr.php:194
 msgid "Let callers into the IVR dial '#' to access the directory"
 msgstr ""
 
-#: ivr/page.ivr.php:198
 msgid "VM Return to IVR"
 msgstr ""
 
-#: ivr/page.ivr.php:198
 msgid ""
 "If checked, upon exiting voicemail a caller will be returned to this IVR if "
 "they got a users voicemail"
 msgstr ""
 
-#: ivr/page.ivr.php:202
 msgid "Directory Context"
 msgstr ""
 
-#: ivr/page.ivr.php:202
 msgid ""
 "When # is selected, this is the voicemail directory context that is used"
 msgstr ""
 
-#: ivr/page.ivr.php:219
 msgid "Enable Direct Dial"
 msgstr ""
 
-#: ivr/page.ivr.php:219
 msgid "Let callers into the IVR dial an extension directly"
 msgstr ""
 
-#: ivr/page.ivr.php:223
 msgid "Loop Before t-dest"
 msgstr ""
 
-#: ivr/page.ivr.php:223
 msgid ""
 "If checked, and there is a 't' (timeout) destination defined below, the IVR "
 "will loop back to the beginning if no input is provided for the designated "
 "loop counts prior to going to the timeout (t) destination."
 msgstr ""
 
-#: ivr/page.ivr.php:230
 msgid "Timeout Message"
 msgstr ""
 
-#: ivr/page.ivr.php:230
 msgid ""
 "If a timeout occurs and a message is selected, it will be played in place of "
 "the announcement message when looping back to the top of the IVR. It will "
 "not be played if the t destination is the next target."
 msgstr ""
 
-#: ivr/page.ivr.php:249
 msgid "Loop Before i-dest"
 msgstr ""
 
-#: ivr/page.ivr.php:249
 msgid ""
 "If checked, and there is an 'i' (invalid extension) destination defined "
 "below, the IVR will play invalid option and then loop back to the beginning "
 "for the designated loop counts prior to going to the invalid (i) destination."
 msgstr ""
 
-#: ivr/page.ivr.php:256
 msgid "Invalid Message"
 msgstr ""
 
-#: ivr/page.ivr.php:256
 msgid ""
 "If an invalid extension is pressed and a message is selected, it will be "
 "played in place of the announcement message when looping back to the top of "
@@ -313,11 +252,9 @@ msgid ""
 "message before going back to the main announcement"
 msgstr ""
 
-#: ivr/page.ivr.php:275
 msgid "Repeat Loops:"
 msgstr ""
 
-#: ivr/page.ivr.php:275
 msgid ""
 "The number of times we should loop when invalid input or no input has been "
 "entered before going to the defined or default generated 'i' or 't' options. "
@@ -325,23 +262,18 @@ msgid ""
 "in order to loop."
 msgstr ""
 
-#: ivr/page.ivr.php:291 ivr/page.ivr.php:328
 msgid "Increase Options"
 msgstr ""
 
-#: ivr/page.ivr.php:296 ivr/page.ivr.php:333
 msgid "Decrease Options"
 msgstr ""
 
-#: ivr/page.ivr.php:345
 msgid "Invalid option"
 msgstr ""
 
-#: ivr/page.ivr.php:392
 msgid "Return to IVR"
 msgstr ""
 
-#: ivr/page.ivr.php:392
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -350,6 +282,5 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 
-#: ivr/page.ivr.php:396
 msgid "Leave blank to remove"
 msgstr ""
