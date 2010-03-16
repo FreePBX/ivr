@@ -347,9 +347,7 @@ $(document).ready(function() {
 });
 
 function delEntry(e){
-	console.log(e)
-	$('[name=option'+e+'],[name=goto'+e+']').val('');
-	$('[name=goto'+e+']').trigger('click');
+	$('[name=option'+e+'],[name=goto'+e+']').val('').parent().parent().fadeOut(500,function(){$(this).remove();});
 }
  
 var theForm = document.prompt;
