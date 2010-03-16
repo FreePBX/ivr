@@ -297,7 +297,14 @@ function ivr_show_edit($id, $nbroptions, $post) {
 			<?php } ?>
 		</td>
 	</tr>
-	<tr><td colspan=2><hr /></td></tr>
+	<tr><td colspan=2><hr /></td></tr></table>
+	<style type="text/css">
+	#ivr-dests tr:nth-child(odd){
+	border: 1px solid #CCC;
+	background-color: #FCE7CE;
+	}
+	</style>
+	<table id="ivr-dests">
 <?php
 	// Draw the destinations
 	$dests = ivr_get_dests($id);
@@ -337,7 +344,14 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	<!--
 $(document).ready(function() {  
 	$(':submit:disabled').removeAttr('disabled'); 
-}); 
+});
+
+function delEntry(e){
+	console.log(e)
+	$('[name=option'+e+'],[name=goto'+e+']').val('');
+	$('[name=goto'+e+']').trigger('click');
+}
+ 
 var theForm = document.prompt;
 theForm.displayname.focus();
 
@@ -385,20 +399,29 @@ echo "</div>\n";
 }
 
 function drawdestinations($count, $sel,  $dest, $ivr_ret) { 
-	global $tabindex
+	global $tabindex, $id;
 ?>
-	<tr> <td style="text-align:right;">
-
-	<small><a href="#" class="info"><?php echo _("Return to IVR")?><span><?php echo _("Check this box to have this option return to a parent IVR if it was called from a parent IVR. If not, it will go to the chosen destination.<br><br>The return path will be to any IVR that was in the call path prior to this IVR which could lead to strange results if there was an IVR called in the call path but not immediately before this")?></span></a></small>
-	<input type="checkbox" name="ivr_ret<?php echo $count ?>" value="ivr_ret" <?php echo $ivr_ret?'CHECKED':''; ?>><br><br />
-		<input size="2" type="text" name="option<?php echo $count ?>" value="<?php echo $sel ?>" tabindex="<?php echo ++$tabindex;?>"><br />
-<?php if (strlen($sel)) {  ?>
-		<i style='font-size: x-small'><?php echo _("Leave blank to remove");?></i>
-<?php }  ?>
+	<tr>
+	<td style="text-align:right;">
+		<input size="2" type="text" name="option<?php echo $count ?>" value="<?php echo $sel ?>" tabindex="<?php echo ++$tabindex;?>">
 	</td>
-		<td> <table> <?php echo drawselects($dest,$count); ?> </table> </td>
+	<td>
+		<?php echo drawselects($dest,$count,false,false); ?>
+	</td>
+	<td>
+		<small><a href="#" class="info"><?php echo _("Return to IVR")?><span><?php echo _("Check this box to have this option return to a parent IVR if it was called from a parent IVR. If not, it will go to the chosen destination.<br><br>The return path will be to any IVR that was in the call path prior to this IVR which could lead to strange results if there was an IVR called in the call path but not immediately before this")?></span></a></small>
+		<input type="checkbox" name="ivr_ret<?php echo $count ?>" value="ivr_ret" <?php echo $ivr_ret?'CHECKED':''; ?>>
+	</td>
+	<?php if(function_exists(ivr_dests_hook_show)){
+		ivr_dests_hook_show($id, $dest);
+	}
+	?>
+	<td>
+		<img src="images/trash.png" style="cursor:pointer" title="<?php echo _('Click here to delete this entry. Dont forget to click "Save" to save changes!');?>" onclick="delEntry(<?php echo $count;?>)">
+	</td>
 	</tr>
-	<tr><td colspan=2><hr /></td></tr>
+	
+
 <?php
 }
 
