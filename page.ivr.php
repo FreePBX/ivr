@@ -401,7 +401,7 @@ function drawdestinations($count, $sel,  $dest, $ivr_ret) {
 ?>
 	<tr>
 	<td style="text-align:right;">
-		<input size="2" type="text" name="option<?php echo $count ?>" value="<?php echo $sel ?>" tabindex="<?php echo ++$tabindex;?>">
+  <input title="<?php echo _("Digits to press for this choice")?>" size="4" type="text" name="option<?php echo $count ?>" value="<?php echo $sel ?>" tabindex="<?php echo ++$tabindex;?>">
 	</td>
 	<td>
 		<?php echo drawselects($dest,$count,false,false); ?>
@@ -415,7 +415,7 @@ function drawdestinations($count, $sel,  $dest, $ivr_ret) {
 	}
 	?>
 	<td>
-		<img src="images/trash.png" style="cursor:pointer" title="<?php echo _('Click here to delete this entry. Dont forget to click "Save" to save changes!');?>" onclick="delEntry(<?php echo $count;?>)">
+		<img src="images/trash.png" style="cursor:pointer" title="<?php echo _('Delete this entry. Dont forget to click &ldquo;Save&rdquo; to save changes!');?>" onclick="delEntry(<?php echo $count;?>)">
 	</td>
 	</tr>
 	
