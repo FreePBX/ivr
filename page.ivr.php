@@ -300,7 +300,6 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	<tr><td colspan=2><hr /></td></tr></table>
 	<style type="text/css">
 	#ivr-dests tr:nth-child(odd){
-	border: 1px solid #CCC;
 	background-color: #FCE7CE;
 	}
 	</style>
