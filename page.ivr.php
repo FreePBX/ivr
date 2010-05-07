@@ -16,7 +16,6 @@
 // OK! You're the boss. --Rob
 // Re-written from the ground up by Rob Thomas <xrobau@gmail.com> 23rd March, 2006.
 
-
 $action = isset($_REQUEST['action'])?$_REQUEST['action']:'';
 $id = isset($_REQUEST['id'])?$_REQUEST['id']:'';
 $dircontext = isset($_SESSION["AMP_user"]->_deptname)?$_SESSION["AMP_user"]->_deptname:'';
@@ -215,10 +214,35 @@ function ivr_show_edit($id, $nbroptions, $post) {
 			</td>
 		</tr>
 		<?php } ?>
+<?php
+	if (!function_exists('directory_list')) {
+?>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Enable Direct Dial");?><span><?php echo _("Let callers into the IVR dial an extension directly");?></span></a></td>
 			<td><input type="checkbox" name="ena_directdial" <?php echo $ivr_details['enable_directdial'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
+<?php
+	} else {
+?>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("Direct Dial Options");?><span><?php echo _("Provides options for callers to direct dial an extension. Direct dialing can be completely disabled, it can be enabled for all extensions on a system, or it can be tied to a Company Directory allowing any member listed in that directory to be dialed directly if their extension is known. If an extension in the chosen directory is overriden, only that overriden number is dialable");?></span></a></td>
+			<td>
+				<select name="ena_directdial" tabindex="<?php echo ++$tabindex;?>">
+					<?php
+					$dlist = directory_list();
+					echo '<option value=""'.($ivr_details['enable_directdial'] == '' ? ' SELECTED' : '').'>'._('Disabled')."</option>\n";
+					echo '<option value="CHECKED"'.(strtoupper($ivr_details['enable_directdial']) == 'CHECKED' ? ' SELECTED' : '').'>'._('All Extensions')."</option>\n";
+					foreach ($dlist as $dir) {
+						echo '<option value="'.$dir['id'].'"'.($ivr_details['enable_directdial'] == $dir['id'] ? ' SELECTED' : '').'>'.$dir['dirname']."</option>\n";
+					}
+					?>
+				</select>
+			</td>
+		</tr>
+
+<?php
+	}
+?>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Loop Before t-dest");?><span><?php echo _("If checked, and there is a 't' (timeout) destination defined below, the IVR will loop back to the beginning if no input is provided for the designated loop counts prior to going to the timeout (t) destination.");?></span></a></td>
 			<td><input type="checkbox" name="alt_timeout" <?php echo $ivr_details['alt_timeout'] ?> tabindex="<?php echo ++$tabindex;?>"></td>

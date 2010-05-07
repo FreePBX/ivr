@@ -166,11 +166,11 @@ function ivr_recordings_usage($recording_id) {
 }
 
 function ivr_get_config($engine) {
-        global $ext;
-        global $conferences_conf;
+	global $ext;
 
 	switch($engine) {
 		case "asterisk":
+			$ddial_contexts = array();
 			$ivrlist = ivr_list();
 			if(is_array($ivrlist)) {
 				foreach($ivrlist as $item) {
@@ -184,12 +184,12 @@ function ivr_get_config($engine) {
 					$retvm = (isset($details['retvm']) ? $details['retvm'] : '');
 
 					if (!empty($details['enable_directdial'])) {
-						// MODIFIED (PL)
-						// always include ext-findmefollow whether or not the module is currenlty
-						// enabled since subsequent activations should work without regenerating the
-						// ivr. (and no harm done if context does not exist.
-						//
-						$ext->addInclude($id,'from-did-direct-ivr');
+						if ($details['enable_directdial'] == 'CHECKED') {
+							$ext->addInclude($id,'from-did-direct-ivr'); //generated in core module
+						} else {
+							$ext->addInclude($id,'from-ivr-directory-'.$details['enable_directdial']);
+							$ddial_contexts[$details['enable_directdial']] = true;
+						}
 					}
 					// I'm not sure I like the ability of people to send voicemail from the IVR.
 					// Make it a config option, possibly?
@@ -314,12 +314,33 @@ function ivr_get_config($engine) {
 						$ext->add($id, 'return', '', new ext_goto($id.',s,begin'));
 					}
 				}
+
+				if (!empty($ddial_contexts)) {
+					global $version;
+					$ast_lt_16 = version_compare($version, '1.6', 'lt');
+
+					foreach(array_keys($ddial_contexts) as $dir_id) {
+						$context = 'from-ivr-directory-'.$dir_id;
+						$entries = directory_get_dir_entries($dir_id);
+						foreach ($entries as $dstring) {
+							$exten = $dstring['dial'] == '' ? $dstring['foreign_id'] : $dstring['dial'];
+							if ($exten == '' || $exten == 'custom') {
+								continue;
+							}
+			    		if ($ast_lt_16) {
+					  		$ext->add($context, $exten,'', new ext_execif('$["${BLKVM_OVERRIDE}" != ""]','dbDel','${BLKVM_OVERRIDE}'));
+          		} else {
+					  		$ext->add($context, $exten,'', new ext_execif('$["${BLKVM_OVERRIDE}" != ""]','Noop','Deleting: ${BLKVM_OVERRIDE}: ${DB_DELETE(${BLKVM_OVERRIDE})}'));
+          		}
+							$ext->add($context, $exten,'', new ext_setvar('__NODEST', ''));
+							$ext->add($context, $exten,'', new ext_goto('1',$exten,'from-internal'));
+						}
+					}
+				}
 			}
 		break;
 	}
 }
-
-
 
 function ivr_get_ivr_id($name) {
 	global $db;
@@ -365,7 +386,7 @@ function ivr_do_edit($id, $post) {
 	if (!empty($ena_directory)) {
 		$ena_directory='CHECKED';
 	}
-	if (!empty($ena_directdial)) {
+	if (!empty($ena_directdial) && !is_numeric($ena_directdial)) {
 		$ena_directdial='CHECKED';
 	}
 	if (!empty($alt_timeout)) {
