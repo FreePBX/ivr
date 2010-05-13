@@ -321,7 +321,7 @@ function ivr_get_config($engine) {
 
 					foreach(array_keys($ddial_contexts) as $dir_id) {
 						$context = 'from-ivr-directory-'.$dir_id;
-						$entries = directory_get_dir_entries($dir_id);
+						$entries = function_exists('directory_get_dir_entries') ? directory_get_dir_entries($dir_id) : array();
 						foreach ($entries as $dstring) {
 							$exten = $dstring['dial'] == '' ? $dstring['foreign_id'] : $dstring['dial'];
 							if ($exten == '' || $exten == 'custom') {
