@@ -188,14 +188,10 @@ function ivr_show_edit($id, $nbroptions, $post) {
 			<td><a href="#" class="info"><?php echo _("Timeout");?><span><?php echo _("The amount of time (in seconds) before the 't' option, if specified, is used");?></span></a></td>
 			<td><input type="text" name="timeout" value="<?php echo $ivr_details['timeout'] ?>" tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
-		<?php if ( function_exists('voicemail_getVoicemail') ) { ?>
+		<?php if ($ivr_details['enable_directory'] && function_exists('voicemail_getVoicemail')) { ?>
 		<tr>
-			<td><a href="#" class="info"><?php echo _("Enable Directory");?><span><?php echo _("Let callers into the IVR dial '#' to access the directory");?></span></a></td>
+			<td><a href="#" class="info"><?php echo _("Enable Directory");?><span><?php echo _("Let callers into the IVR dial '#' to access the directory. WARNING: this feature is deprecated and will be removed from future versions. You should install the Directory module and assign an IVR destination to use Destination functionality.");?></span></a></td>
 			<td><input type="checkbox" name="ena_directory" <?php echo $ivr_details['enable_directory'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
-		</tr>
-		<tr>
-			<td><a href="#" class="info"><?php echo _("VM Return to IVR");?><span><?php echo _("If checked, upon exiting voicemail a caller will be returned to this IVR if they got a users voicemail");?></span></a></td>
-			<td><input type="checkbox" name="retvm" <?php echo $ivr_details['retvm'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
 		<tr>
 			<td><a href="#" class="info"><?php echo _("Directory Context");?><span><?php echo _("When # is selected, this is the voicemail directory context that is used");?></span></a></td>
@@ -214,6 +210,10 @@ function ivr_show_edit($id, $nbroptions, $post) {
 			</td>
 		</tr>
 		<?php } ?>
+		<tr>
+			<td><a href="#" class="info"><?php echo _("VM Return to IVR");?><span><?php echo _("If checked, upon exiting voicemail a caller will be returned to this IVR if they got a users voicemail");?></span></a></td>
+			<td><input type="checkbox" name="retvm" <?php echo $ivr_details['retvm'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
+		</tr>
 <?php
 	if (!function_exists('directory_list')) {
 ?>

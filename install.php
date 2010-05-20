@@ -290,6 +290,15 @@ if(DB::IsError($check)) {
 	out(_("not needed"));
 }
 
+$count = sql('SELECT COUNT(*) FROM `ivr` WHERE `enable_directory` = "CHECKED"','getOne');
+if ($result) {
+  global $db;
+  $notifications =& notifications::create($db); 
+  $extext = sprintf(_("There are %s IVRs that have the legacy Directory dialing enabled. This has been deprecated and will be removed from future releases. You should convert your IVRs to use the Directory module for this functionality and assign an IVR destination to a desired Directory. You can install the Directory module from the Online Module Repository"),$count);
+  $notifications->add_notice('ivr', 'DIRECTORY_DEPRECATED', sprintf(_('Deprecated Directory used by %s IVRs'),$count), $extext, '', true, true);
+	out(_("posting notice about deprecated functionality"));
+}
+
 // This used to be called from page.ivr.php every time, it should not be needed, it should
 // be called once and be done with.
 //
