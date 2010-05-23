@@ -317,7 +317,7 @@ function ivr_get_config($engine) {
 
 				if (!empty($ddial_contexts)) {
 					global $version;
-					$ast_lt_16 = version_compare($version, '1.6', 'lt');
+					$ast_lt_14 = version_compare($version, '1.4', 'lt');
 
 					foreach(array_keys($ddial_contexts) as $dir_id) {
 						$context = 'from-ivr-directory-'.$dir_id;
@@ -327,7 +327,7 @@ function ivr_get_config($engine) {
 							if ($exten == '' || $exten == 'custom') {
 								continue;
 							}
-			    		if ($ast_lt_16) {
+			    		if ($ast_lt_14) {
 					  		$ext->add($context, $exten,'', new ext_execif('$["${BLKVM_OVERRIDE}" != ""]','dbDel','${BLKVM_OVERRIDE}'));
           		} else {
 					  		$ext->add($context, $exten,'', new ext_execif('$["${BLKVM_OVERRIDE}" != ""]','Noop','Deleting: ${BLKVM_OVERRIDE}: ${DB_DELETE(${BLKVM_OVERRIDE})}'));
