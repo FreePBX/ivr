@@ -291,7 +291,7 @@ if(DB::IsError($check)) {
 }
 
 $count = sql('SELECT COUNT(*) FROM `ivr` WHERE `enable_directory` = "CHECKED"','getOne');
-if ($result) {
+if ($count) {
   global $db;
   $notifications =& notifications::create($db); 
   $extext = sprintf(_("There are %s IVRs that have the legacy Directory dialing enabled. This has been deprecated and will be removed from future releases. You should convert your IVRs to use the Directory module for this functionality and assign an IVR destination to a desired Directory. You can install the Directory module from the Online Module Repository"),$count);
