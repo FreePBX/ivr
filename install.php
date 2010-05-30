@@ -87,29 +87,19 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  { // As of 2.5 these are all in the s
 	}
 
 	if (version_compare($ivr_modcurrentvers, "2.2", "<")) {
-		//echo "<p>Start 2.2 upgrade</p>";
-		$sql = "ALTER TABLE ivr CHANGE COLUMN announcement announcement VARCHAR ( 255 )";
-		$result = $db->query($sql);
-		if(DB::IsError($result)) {
-			die_freepbx($result->getDebugInfo());
-		} else {
-			// Change existing records
-			//echo "<p>Updating existing records</p>";
-			$existing = sql("SELECT DISTINCT announcement FROM ivr WHERE displayname <> '__install_done' AND announcement IS NOT NULL", "getAll");
-			foreach ($existing as $item) {
-				$recid = $item[0];
-				//echo "<p>processing '$recid'</p>";
-				$sql = "SELECT filename FROM recordings WHERE id = '$recid' AND displayname <> '__invalid'";
-				$recordings = sql($sql, "getRow");
-				if (is_array($recordings)) {
-					$filename = (isset($recordings[0]) ? $recordings[0] : '');
-					//echo "<p>filename: $filename";
-					if ($filename != '') {
-						$sql = "UPDATE ivr SET announcement = '".str_replace("'", "''", $filename)."' WHERE announcement = '$recid'";
-						$upcheck = $db->query($sql);
-						if(DB::IsError($upcheck))
-						die_freepbx($upcheck->getDebugInfo());
-					}
+		// Change existing records
+		$existing = sql("SELECT DISTINCT announcement FROM ivr WHERE displayname <> '__install_done' AND announcement IS NOT NULL", "getAll");
+		foreach ($existing as $item) {
+			$recid = $item[0];
+			$sql = "SELECT filename FROM recordings WHERE id = '$recid' AND displayname <> '__invalid'";
+			$recordings = sql($sql, "getRow");
+			if (is_array($recordings)) {
+				$filename = (isset($recordings[0]) ? $recordings[0] : '');
+				if ($filename != '') {
+					$sql = "UPDATE ivr SET announcement = '".str_replace("'", "''", $filename)."' WHERE announcement = '$recid'";
+					$upcheck = $db->query($sql);
+					if(DB::IsError($upcheck))
+					die_freepbx($upcheck->getDebugInfo());
 				}
 			}
 		}
