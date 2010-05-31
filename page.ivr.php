@@ -31,8 +31,8 @@ switch ($action) {
 		$id = ivr_get_ivr_id('Unnamed');
 		// Set the defaults
 		$def['timeout'] = 5;
-		$def['ena_directdial'] = 'CHECKED';
-		$def['ena_directory'] = 'CHECKED';
+		$def['ena_directdial'] = '';
+		$def['ena_directory'] = '';
 		ivr_sidebar($id);
 		ivr_show_edit($id, 3,  $def);
 		break;
