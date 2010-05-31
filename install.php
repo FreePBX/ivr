@@ -86,7 +86,7 @@ if($amp_conf["AMPDBENGINE"] != "sqlite3")  { // As of 2.5 these are all in the s
 		}
 	}
 
-	if (version_compare($ivr_modcurrentvers, "2.2", "<")) {
+	if ($ivr_modcurrentvers !== null && version_compare($ivr_modcurrentvers, "2.2", "<")) {
 		// Change existing records
 		$existing = sql("SELECT DISTINCT announcement FROM ivr WHERE displayname <> '__install_done' AND announcement IS NOT NULL", "getAll");
 		foreach ($existing as $item) {
