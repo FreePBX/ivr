@@ -412,11 +412,7 @@ theForm.displayname.focus();
 	</script>
         </form>
         </div>
-
-
 <?php
-
-echo "</div>\n";
 }
 
 function drawdestinations($count, $sel,  $dest, $ivr_ret) { 
