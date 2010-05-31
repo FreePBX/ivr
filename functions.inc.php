@@ -347,7 +347,7 @@ function ivr_get_ivr_id($name) {
 	$res = $db->getRow("SELECT ivr_id from ivr where displayname='$name'");
 	if (count($res) == 0) {
 		// It's not there. Create it and return the ID
-		sql("INSERT INTO ivr (displayname, enable_directory, enable_directdial, timeout, alt_timeout, alt_invalid, `loops`, `retvm`)  values('$name', 'CHECKED', 'CHECKED', 10, '', '', 2, '')");
+		sql("INSERT INTO ivr (displayname, enable_directory, enable_directdial, timeout, alt_timeout, alt_invalid, `loops`, `retvm`)  values('$name', '', '', 10, '', '', 2, '')");
 		$res = $db->getRow("SELECT ivr_id from ivr where displayname='$name'");
 	}
 	return ($res[0]);
@@ -383,9 +383,6 @@ function ivr_do_edit($id, $post) {
 	$alt_invalid = isset($post['alt_invalid'])?$post['alt_invalid']:'';
 	$retvm = isset($post['retvm'])?$post['retvm']:'';
 
-	if (!empty($ena_directory)) {
-		$ena_directory='CHECKED';
-	}
 	if (!empty($ena_directdial) && !is_numeric($ena_directdial)) {
 		$ena_directdial='CHECKED';
 	}
