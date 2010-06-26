@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-27 17:34+0100\n"
+"POT-Creation-Date: 2010-06-22 19:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,6 +87,22 @@ msgstr ""
 msgid "Checking for retvm.."
 msgstr ""
 
+#, php-format
+msgid ""
+"There are %s IVRs that have the legacy Directory dialing enabled. This has "
+"been deprecated and will be removed from future releases. You should convert "
+"your IVRs to use the Directory module for this functionality and assign an "
+"IVR destination to a desired Directory. You can install the Directory module "
+"from the Online Module Repository"
+msgstr ""
+
+#, php-format
+msgid "Deprecated Directory used by %s IVRs"
+msgstr ""
+
+msgid "posting notice about deprecated functionality"
+msgstr ""
+
 msgid "IVR"
 msgstr ""
 
@@ -96,10 +112,7 @@ msgstr ""
 msgid ""
 "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
 "Response) menus. These can be used to send callers to different locations "
-"(eg, "
-msgstr ""
-
-msgid ") and/or allow direct-dialing of extension numbers."
+"(eg, \"Press 1 for sales\") and/or allow direct-dialing of extension numbers."
 msgstr ""
 
 msgid "Digital Receptionist"
@@ -190,7 +203,18 @@ msgstr ""
 msgid "Enable Directory"
 msgstr ""
 
-msgid "Let callers into the IVR dial '#' to access the directory"
+msgid ""
+"Let callers into the IVR dial '#' to access the directory. WARNING: this "
+"feature is deprecated and will be removed from future versions. You should "
+"install the Directory module and assign an IVR destination to use "
+"Directory functionality."
+msgstr ""
+
+msgid "Directory Context"
+msgstr ""
+
+msgid ""
+"When # is selected, this is the voicemail directory context that is used"
 msgstr ""
 
 msgid "VM Return to IVR"
@@ -201,17 +225,27 @@ msgid ""
 "they got a users voicemail"
 msgstr ""
 
-msgid "Directory Context"
-msgstr ""
-
-msgid ""
-"When # is selected, this is the voicemail directory context that is used"
-msgstr ""
-
 msgid "Enable Direct Dial"
 msgstr ""
 
 msgid "Let callers into the IVR dial an extension directly"
+msgstr ""
+
+msgid "Direct Dial Options"
+msgstr ""
+
+msgid ""
+"Provides options for callers to direct dial an extension. Direct dialing can "
+"be completely disabled, it can be enabled for all extensions on a system, or "
+"it can be tied to a Company Directory allowing any member listed in that "
+"directory to be dialed directly if their extension is known. If an extension "
+"in the chosen directory is overridden, only that overridden number is dialable"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "All Extensions"
 msgstr ""
 
 msgid "Loop Before t-dest"
@@ -271,6 +305,9 @@ msgstr ""
 msgid "Invalid option"
 msgstr ""
 
+msgid "Digits to press for this choice"
+msgstr ""
+
 msgid "Return to IVR"
 msgstr ""
 
@@ -282,5 +319,6 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 
-msgid "Leave blank to remove"
+msgid ""
+"Delete this entry. Dont forget to click \"Save\" to save changes!"
 msgstr ""

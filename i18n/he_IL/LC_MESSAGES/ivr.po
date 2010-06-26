@@ -3,90 +3,322 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Shimi <shimi@shimi.net>, 2006.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-17 17:20+0300\n"
+"POT-Creation-Date: 2010-06-22 19:14+0200\n"
 "PO-Revision-Date: 2006-10-17 17:30+0300\n"
 "Last-Translator: Shimi <shimi@shimi.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: page.ivr.php:67 page.ivr.php:105
-msgid "Digital Receptionist"
-msgstr "מענה קולי"
-
-#: page.ivr.php:69
-msgid "Instructions"
-msgstr "הנחיות"
-
-#: page.ivr.php:70
-msgid ""
-"You use the Digital Receptionist to make IVR's, Interactive Voice Responce "
-"systems."
-msgstr "השתמש במערכת המענה הקולי כדי ליצור IVR (מענה קולי אינטראקטיבי - Interactive Voice Response)"
-
-#: page.ivr.php:71
-msgid ""
-"When creating a menu option, apart from the standard options of 0-9,* and #, "
-"you can also use 'i' and 't' destinations."
-msgstr "כשיוצרים אפשרות תפריט, חוץ מהאפשרויות הסטנדרטיות של 0-9, כוכבית וסולמית, תוכל להשתמש גם ביעדים 'i' ו-'t'."
-
-#: page.ivr.php:72
-msgid ""
-"'i' is used when the caller pushes an invalid button, and 't' is used when "
-"there is no response."
-msgstr "ב-'i' משתמשים כשרוצים להפנות מתקשר שלחץ על אפשרות שלא קיימת, וב-'t' משתמשים כאשר לא מתקבלת לחיצה על אף אפשרות מהמשתמש."
-
-#: page.ivr.php:73
-msgid ""
-"If those options aren't supplied, the default 't' is to replay the menu "
-"three times and then hang up,"
-msgstr "אם אפשרויות אלה אינן נבחרות, ברירת המחדל של 't' היא להשמיע שוב את התפריט במשך עד שלוש פעמים, ולאחר מכן לנתק את השיחה, "
-
-#: page.ivr.php:74
-msgid ""
-"and the default 'i' is to say 'Invalid option, please try again' and replay "
-"the menu."
-msgstr "והאפשרות 'i' בברירת המחדל תשמיע את המשפט 'Invalid option, please try again' ותשמיע שוב את התפריט לאחר מכן."
-
-#: page.ivr.php:75
-msgid "After three invalid attempts, the line is hung up."
-msgstr "אחרי שלושה נסיונות כושלים, הקו ינותק."
-
-#: page.ivr.php:85
-msgid "Add IVR"
-msgstr "הוסף IVR"
-
-#: page.ivr.php:106
-msgid "Edit Menu"
-msgstr "ערוך תפריט"
-
-#: page.ivr.php:153 page.ivr.php:173
-msgid "Announcement"
-msgstr "הכרזה"
-
-#: page.ivr.php:153
-msgid ""
-"Message to be played to the caller. To add additional recordings please use "
-"the \"System Recordings\" MENU to the left"
-msgstr "הודעה שתושמע למתקשר. כדי להוסיף הקלטות נוספות, השתמש <em>בתפריט</em> \"הקלטות מערכת\" אשר בצד שמאל"
-
-#: page.ivr.php:158
-msgid "None"
-msgstr "אין"
-
-#: page.ivr.php:173
-msgid ""
-"Message to be played to the caller.<br><br>You must install and enable the "
-"\"Systems Recordings\" Module to edit this option"
-msgstr "הודעה אשר תושמע למתקשר.<br /><br />אתה חייב להתקין ולהפעיל את המודול \"הקלטות מערכת\" על מנת לערוך אפשרות זאת"
-
-#: functions.inc.php:20
 msgid ""
 "There is a problem with install.sql, cannot re-create databases. Contact "
 "support\n"
-msgstr "ישנה בעייה עם install.sql, לא יכול ליצור מחדש את מסדי הנתונים. צור קשר עם תמיכה\n"
+msgstr ""
+"ישנה בעייה עם install.sql, לא יכול ליצור מחדש את מסדי הנתונים. צור קשר עם "
+"תמיכה\n"
+
+#, php-format
+msgid "IVR: %s"
+msgstr ""
+
+#, php-format
+msgid "IVR: %s / Option: %s"
+msgstr ""
+
+msgid "Checking if announcements need migration.."
+msgstr ""
+
+msgid "migrating"
+msgstr ""
+
+msgid "adding announcement_id field.."
+msgstr ""
+
+msgid "fatal error"
+msgstr ""
+
+msgid "ok"
+msgstr ""
+
+msgid "migrate to recording ids.."
+msgstr ""
+
+#, php-format
+msgid "migrated %s entries"
+msgstr ""
+
+msgid "dropping announcement field.."
+msgstr ""
+
+msgid "no announcement field???"
+msgstr ""
+
+msgid "already migrated"
+msgstr ""
+
+msgid "Checking for timeout_id.."
+msgstr ""
+
+msgid "added"
+msgstr ""
+
+msgid "not needed"
+msgstr ""
+
+msgid "Checking for invalid_id.."
+msgstr ""
+
+msgid "Checking for retvm.."
+msgstr ""
+
+#, php-format
+msgid ""
+"There are %s IVRs that have the legacy Directory dialing enabled. This has "
+"been deprecated and will be removed from future releases. You should convert "
+"your IVRs to use the Directory module for this functionality and assign an "
+"IVR destination to a desired Directory. You can install the Directory module "
+"from the Online Module Repository"
+msgstr ""
+
+#, php-format
+msgid "Deprecated Directory used by %s IVRs"
+msgstr ""
+
+msgid "posting notice about deprecated functionality"
+msgstr ""
+
+msgid "IVR"
+msgstr ""
+
+msgid "Inbound Call Control"
+msgstr ""
+
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, \"Press 1 for sales\") and/or allow direct-dialing of extension numbers."
+msgstr ""
+
+msgid "Digital Receptionist"
+msgstr "מענה קולי"
+
+msgid "Instructions"
+msgstr "הנחיות"
+
+msgid ""
+"You use the Digital Receptionist to make IVR's, Interactive Voice Response "
+"systems."
+msgstr ""
+
+msgid ""
+"When creating a menu option, apart from the standard options of 0-9,* and #, "
+"you can also use 'i' and 't' destinations."
+msgstr ""
+"כשיוצרים אפשרות תפריט, חוץ מהאפשרויות הסטנדרטיות של 0-9, כוכבית וסולמית, "
+"תוכל להשתמש גם ביעדים 'i' ו-'t'."
+
+msgid ""
+"'i' is used when the caller pushes an invalid button, and 't' is used when "
+"there is no response."
+msgstr ""
+"ב-'i' משתמשים כשרוצים להפנות מתקשר שלחץ על אפשרות שלא קיימת, וב-'t' משתמשים "
+"כאשר לא מתקבלת לחיצה על אף אפשרות מהמשתמש."
+
+msgid ""
+"If those options aren't supplied, the default 't' is to replay the menu "
+"three times and then hang up,"
+msgstr ""
+"אם אפשרויות אלה אינן נבחרות, ברירת המחדל של 't' היא להשמיע שוב את התפריט "
+"במשך עד שלוש פעמים, ולאחר מכן לנתק את השיחה, "
+
+msgid ""
+"and the default 'i' is to say 'Invalid option, please try again' and replay "
+"the menu."
+msgstr ""
+"והאפשרות 'i' בברירת המחדל תשמיע את המשפט 'Invalid option, please try again' "
+"ותשמיע שוב את התפריט לאחר מכן."
+
+msgid "After three invalid attempts, the line is hung up."
+msgstr "אחרי שלושה נסיונות כושלים, הקו ינותק."
+
+msgid "Add IVR"
+msgstr "הוסף IVR"
+
+msgid "Edit Menu"
+msgstr "ערוך תפריט"
+
+msgid "Save"
+msgstr ""
+
+msgid "Queue Breakout Menu Usage List"
+msgstr ""
+
+msgid ""
+"This IVR is being used by the following Queues, providing an ability for "
+"callers to hear this Queue's announcement periodically and giving callers an "
+"option to break out of the queue into this IVR's menu options. This queue "
+"can not be deleted when being used in this mode"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Change Name"
+msgstr ""
+
+msgid "This changes the short name, visible on the right, of this IVR"
+msgstr ""
+
+msgid "Announcement"
+msgstr "הכרזה"
+
+msgid ""
+"Message to be played to the caller. To add additional recordings please use "
+"the \"System Recordings\" MENU to the left"
+msgstr ""
+"הודעה שתושמע למתקשר. כדי להוסיף הקלטות נוספות, השתמש <em>בתפריט</em> "
+"\"הקלטות מערכת\" אשר בצד שמאל"
+
+msgid "None"
+msgstr "אין"
+
+msgid ""
+"Message to be played to the caller.<br><br>You must install and enable the "
+"\"Systems Recordings\" Module to edit this option"
+msgstr ""
+"הודעה אשר תושמע למתקשר.<br /><br />אתה חייב להתקין ולהפעיל את המודול "
+"\"הקלטות מערכת\" על מנת לערוך אפשרות זאת"
+
+msgid "Timeout"
+msgstr ""
+
+msgid ""
+"The amount of time (in seconds) before the 't' option, if specified, is used"
+msgstr ""
+
+msgid "Enable Directory"
+msgstr ""
+
+msgid ""
+"Let callers into the IVR dial '#' to access the directory. WARNING: this "
+"feature is deprecated and will be removed from future versions. You should "
+"install the Directory module and assign an IVR destination to use Directory "
+"functionality."
+msgstr ""
+
+msgid "Directory Context"
+msgstr ""
+
+msgid ""
+"When # is selected, this is the voicemail directory context that is used"
+msgstr ""
+
+msgid "VM Return to IVR"
+msgstr ""
+
+msgid ""
+"If checked, upon exiting voicemail a caller will be returned to this IVR if "
+"they got a users voicemail"
+msgstr ""
+
+msgid "Enable Direct Dial"
+msgstr ""
+
+msgid "Let callers into the IVR dial an extension directly"
+msgstr ""
+
+msgid "Direct Dial Options"
+msgstr ""
+
+msgid ""
+"Provides options for callers to direct dial an extension. Direct dialing can "
+"be completely disabled, it can be enabled for all extensions on a system, or "
+"it can be tied to a Company Directory allowing any member listed in that "
+"directory to be dialed directly if their extension is known. If an extension "
+"in the chosen directory is overridden, only that overridden number is "
+"dialable"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "All Extensions"
+msgstr ""
+
+msgid "Loop Before t-dest"
+msgstr ""
+
+msgid ""
+"If checked, and there is a 't' (timeout) destination defined below, the IVR "
+"will loop back to the beginning if no input is provided for the designated "
+"loop counts prior to going to the timeout (t) destination."
+msgstr ""
+
+msgid "Timeout Message"
+msgstr ""
+
+msgid ""
+"If a timeout occurs and a message is selected, it will be played in place of "
+"the announcement message when looping back to the top of the IVR. It will "
+"not be played if the t destination is the next target."
+msgstr ""
+
+msgid "Loop Before i-dest"
+msgstr ""
+
+msgid ""
+"If checked, and there is an 'i' (invalid extension) destination defined "
+"below, the IVR will play invalid option and then loop back to the beginning "
+"for the designated loop counts prior to going to the invalid (i) destination."
+msgstr ""
+
+msgid "Invalid Message"
+msgstr ""
+
+msgid ""
+"If an invalid extension is pressed and a message is selected, it will be "
+"played in place of the announcement message when looping back to the top of "
+"the IVR. It will not be played if the t destination is the next target. If "
+"nothing is selected, the system will play a default invalid extension "
+"message before going back to the main announcement"
+msgstr ""
+
+msgid "Repeat Loops:"
+msgstr ""
+
+msgid ""
+"The number of times we should loop when invalid input or no input has been "
+"entered before going to the defined or default generated 'i' or 't' options. "
+"If the 'i' or 't' options are defined, the above check boxes must be checked "
+"in order to loop."
+msgstr ""
+
+msgid "Increase Options"
+msgstr ""
+
+msgid "Decrease Options"
+msgstr ""
+
+msgid "Invalid option"
+msgstr ""
+
+msgid "Digits to press for this choice"
+msgstr ""
+
+msgid "Return to IVR"
+msgstr ""
+
+msgid ""
+"Check this box to have this option return to a parent IVR if it was called "
+"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
+
+msgid "Delete this entry. Dont forget to click \"Save\" to save changes!"
+msgstr ""

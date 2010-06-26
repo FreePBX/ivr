@@ -15,12 +15,11 @@
 #
 # Copyright (C) 2009 Séverine GUTIERREZ, severine@medialsace.fr
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-05 23:22+0200\n"
+"POT-Creation-Date: 2010-06-22 19:14+0200\n"
 "PO-Revision-Date: 2009-04-20 17:56+0100\n"
 "Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
 "Language-Team: Français <LL@li.org>\n"
@@ -28,95 +27,101 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.inc.php:21
 msgid ""
 "There is a problem with install.sql, cannot re-create databases. Contact "
 "support\n"
 msgstr ""
-"Il y a un problème avec install.sql, impossible de recréer les bases de données. "
-"Contactez le support\n"
+"Il y a un problème avec install.sql, impossible de recréer les bases de "
+"données. Contactez le support\n"
 
-#: functions.inc.php:141 functions.inc.php:161
 #, php-format
 msgid "IVR: %s"
 msgstr ""
 
-#: functions.inc.php:484
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr ""
 
-#: install.php:177
 msgid "Checking if announcements need migration.."
 msgstr "Contrôle si les annonces ont besoin d'être migrées..."
 
-#: install.php:183
 msgid "migrating"
 msgstr "en cours de migration"
 
-#: install.php:184
 msgid "adding announcement_id field.."
 msgstr "ajoute le champ announcement_id..."
 
-#: install.php:188 install.php:200 install.php:216 install.php:248
-#: install.php:265 install.php:283
 msgid "fatal error"
 msgstr "erreur fatale"
 
-#: install.php:191 install.php:230
 msgid "ok"
 msgstr ""
 
-#: install.php:196
 msgid "migrate to recording ids.."
 msgstr "migration vers ids..."
 
-#: install.php:220
 #, php-format
 msgid "migrated %s entries"
 msgstr "%s entrées migrées"
 
-#: install.php:224
 msgid "dropping announcement field.."
 msgstr "suppression du champ announcement..."
 
-#: install.php:228
 msgid "no announcement field???"
 msgstr "pas de champ announcement ???"
 
-#: install.php:234
 msgid "already migrated"
 msgstr "déjà migré"
 
-#: install.php:239
 msgid "Checking for timeout_id.."
 msgstr "Contrôle pour timeout_id..."
 
-#: install.php:251 install.php:268 install.php:286
 msgid "added"
 msgstr "ajouté"
 
-#: install.php:254 install.php:271 install.php:289
 msgid "not needed"
 msgstr "pas nécessaire"
 
-#: install.php:256
 msgid "Checking for invalid_id.."
 msgstr "Contrôle pour invalid_id..."
 
-#: install.php:274
 msgid "Checking for retvm.."
 msgstr "Contrôle pour retvm..."
 
-#: page.ivr.php:69 page.ivr.php:108 page.ivr.php:134
+#, php-format
+msgid ""
+"There are %s IVRs that have the legacy Directory dialing enabled. This has "
+"been deprecated and will be removed from future releases. You should convert "
+"your IVRs to use the Directory module for this functionality and assign an "
+"IVR destination to a desired Directory. You can install the Directory module "
+"from the Online Module Repository"
+msgstr ""
+
+#, php-format
+msgid "Deprecated Directory used by %s IVRs"
+msgstr ""
+
+msgid "posting notice about deprecated functionality"
+msgstr ""
+
+msgid "IVR"
+msgstr ""
+
+msgid "Inbound Call Control"
+msgstr ""
+
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, \"Press 1 for sales\") and/or allow direct-dialing of extension numbers."
+msgstr ""
+
 msgid "Digital Receptionist"
 msgstr "Réceptionniste Numérique"
 
-#: page.ivr.php:71
 msgid "Instructions"
 msgstr "Instructions"
 
-#: page.ivr.php:72
 msgid ""
 "You use the Digital Receptionist to make IVR's, Interactive Voice Response "
 "systems."
@@ -124,15 +129,13 @@ msgstr ""
 "Le Réceptionniste Numérique est utilisé pour faire des IVR, systèmes de "
 "Réponse Vocale Interactifs."
 
-#: page.ivr.php:73
 msgid ""
 "When creating a menu option, apart from the standard options of 0-9,* and #, "
 "you can also use 'i' and 't' destinations."
 msgstr ""
-"Lorsque vous créez un menu, à part les options standard 0-9,* et #, "
-"vous pouvez également utiliser les destinations 'i' et 't'."
+"Lorsque vous créez un menu, à part les options standard 0-9,* et #, vous "
+"pouvez également utiliser les destinations 'i' et 't'."
 
-#: page.ivr.php:74
 msgid ""
 "'i' is used when the caller pushes an invalid button, and 't' is used when "
 "there is no response."
@@ -140,15 +143,13 @@ msgstr ""
 "'i' est utilisé lorsqu'un appelant appuye sur une mauvaise touche, et 't' "
 "est utilisé lorsqu'il n'y a pas de réponse."
 
-#: page.ivr.php:75
 msgid ""
 "If those options aren't supplied, the default 't' is to replay the menu "
 "three times and then hang up,"
 msgstr ""
-"Si ces options ne sont pas fournies, par défaut 't' est pour rejouer le "
-"menu 3 fois puis raccroche," 
+"Si ces options ne sont pas fournies, par défaut 't' est pour rejouer le menu "
+"3 fois puis raccroche,"
 
-#: page.ivr.php:76
 msgid ""
 "and the default 'i' is to say 'Invalid option, please try again' and replay "
 "the menu."
@@ -156,168 +157,163 @@ msgstr ""
 "et par défaut 'i' est pour dire 'Option Invalide, veuillez réessayer' et "
 "rejouer le menu."
 
-#: page.ivr.php:77
 msgid "After three invalid attempts, the line is hung up."
 msgstr "Après 3 essais invalides, la ligne est raccrochée."
 
-#: page.ivr.php:87
 msgid "Add IVR"
 msgstr "Ajouter IVR"
 
-#: page.ivr.php:109
 msgid "Edit Menu"
 msgstr "Editer Menu"
 
-#: page.ivr.php:124
+msgid "Save"
+msgstr "Sauvegarder"
+
 msgid "Queue Breakout Menu Usage List"
 msgstr "Liste d'utilisation du Menu éclaté de File d'Attente"
 
-#: page.ivr.php:124
 msgid ""
 "This IVR is being used by the following Queues, providing an ability for "
 "callers to hear this Queue's announcement periodically and giving callers an "
 "option to break out of the queue into this IVR's menu options. This queue "
 "can not be deleted when being used in this mode"
 msgstr ""
-"Cet IVR est utilisé par les Files d'Attente suivantes, donnant la possibilité "
-"aux appelants d'entendre l'annonce de cette File d'Attente périodiquement et "
-"leur donne une option pour sortir de la File d'Attente afin d'accéder à ce "
-"menu d'options IVR. Cette File d'Attente ne peut pas être supprimée lorsqu'elle "
-"est utilisée dans ce mode."
+"Cet IVR est utilisé par les Files d'Attente suivantes, donnant la "
+"possibilité aux appelants d'entendre l'annonce de cette File d'Attente "
+"périodiquement et leur donne une option pour sortir de la File d'Attente "
+"afin d'accéder à ce menu d'options IVR. Cette File d'Attente ne peut pas "
+"être supprimée lorsqu'elle est utilisée dans ce mode."
 
-
-#: page.ivr.php:134
 msgid "Delete"
 msgstr "Supprimer"
 
-#: page.ivr.php:149
 msgid "Change Name"
 msgstr "Changer le Nom"
 
-#: page.ivr.php:149
 msgid "This changes the short name, visible on the right, of this IVR"
 msgstr "Change le nom court de cet IVR, visible sur la droite"
 
-#: page.ivr.php:157 page.ivr.php:177
 msgid "Announcement"
 msgstr "Annonce"
 
-#: page.ivr.php:157
 msgid ""
 "Message to be played to the caller. To add additional recordings please use "
 "the \"System Recordings\" MENU to the left"
 msgstr ""
-"Message qui sera joué à l'appelant. Pour ajouter des enregistrements additionnels "
-"veuillez utiliser le MENU \"Enregistrements Système\" sur la gauche"
+"Message qui sera joué à l'appelant. Pour ajouter des enregistrements "
+"additionnels veuillez utiliser le MENU \"Enregistrements Système\" sur la "
+"gauche"
 
-#: page.ivr.php:162 page.ivr.php:234 page.ivr.php:260
 msgid "None"
 msgstr "Aucun"
 
-#: page.ivr.php:177
 msgid ""
 "Message to be played to the caller.<br><br>You must install and enable the "
 "\"Systems Recordings\" Module to edit this option"
 msgstr ""
 "Message qui sera joué à l'appelant.<br><br>Vous devez installer et activer "
-"le Module \"Enregistrements Système\" pour éditer cette option" 
+"le Module \"Enregistrements Système\" pour éditer cette option"
 
-#: page.ivr.php:189
 msgid "Timeout"
 msgstr ""
 
-#: page.ivr.php:189
 msgid ""
 "The amount of time (in seconds) before the 't' option, if specified, is used"
 msgstr ""
 "Le temps en secondes avant que l'option 't', si spécifiée, ne soit utilisée"
 
-#: page.ivr.php:194
 msgid "Enable Directory"
 msgstr "Activer Répertoire"
 
-#: page.ivr.php:194
-msgid "Let callers into the IVR dial '#' to access the directory"
-msgstr "Permet aux appelants d'appuyer sur '#' pour accéder au répertoire"
-
-#: page.ivr.php:198
-msgid "VM Return to IVR"
-msgstr "MV Retourne à l'IVR"
-
-#: page.ivr.php:198
 msgid ""
-"If checked, upon exiting voicemail a caller will be returned to this IVR if "
-"they got a users voicemail"
+"Let callers into the IVR dial '#' to access the directory. WARNING: this "
+"feature is deprecated and will be removed from future versions. You should "
+"install the Directory module and assign an IVR destination to use Directory "
+"functionality."
 msgstr ""
-"Si coché, en quittant la messagerie vocale, un appelant sera redirigé vers cet IVR "
-"si ils disposent d'une boite vocale utilisateurs"
 
-#: page.ivr.php:202
 msgid "Directory Context"
 msgstr "Contexte du Répertoire"
 
-#: page.ivr.php:202
 msgid ""
 "When # is selected, this is the voicemail directory context that is used"
 msgstr ""
 "Lorsque # est sélectionné, c'est le répertoire de la messagerie vocale qui "
 "est utilisé"
 
-#: page.ivr.php:218
+msgid "VM Return to IVR"
+msgstr "MV Retourne à l'IVR"
+
+msgid ""
+"If checked, upon exiting voicemail a caller will be returned to this IVR if "
+"they got a users voicemail"
+msgstr ""
+"Si coché, en quittant la messagerie vocale, un appelant sera redirigé vers "
+"cet IVR si ils disposent d'une boite vocale utilisateurs"
+
 msgid "Enable Direct Dial"
 msgstr "Activer Numérotation Directe"
 
-#: page.ivr.php:218
 msgid "Let callers into the IVR dial an extension directly"
 msgstr "Permet aux appelants dans l'IVR d'appeler une extension directement"
 
-#: page.ivr.php:222
+msgid "Direct Dial Options"
+msgstr ""
+
+msgid ""
+"Provides options for callers to direct dial an extension. Direct dialing can "
+"be completely disabled, it can be enabled for all extensions on a system, or "
+"it can be tied to a Company Directory allowing any member listed in that "
+"directory to be dialed directly if their extension is known. If an extension "
+"in the chosen directory is overridden, only that overridden number is "
+"dialable"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "All Extensions"
+msgstr ""
+
 msgid "Loop Before t-dest"
 msgstr "Boucler avant t-dest"
 
-#: page.ivr.php:222
 msgid ""
 "If checked, and there is a 't' (timeout) destination defined below, the IVR "
 "will loop back to the beginning if no input is provided for the designated "
 "loop counts prior to going to the timeout (t) destination."
 msgstr ""
 "Si coché, et s'il y a une destination 't' (timeout) définie ci-dessous, "
-"l'IVR bouclera jusqu'au début si aucune entrée n'est donnée pour les "
-"comptes désignés de la boucle avant d'aller au timeout (t) de la destination."
+"l'IVR bouclera jusqu'au début si aucune entrée n'est donnée pour les comptes "
+"désignés de la boucle avant d'aller au timeout (t) de la destination."
 
-#: page.ivr.php:229
 msgid "Timeout Message"
 msgstr "Message de Timeout"
 
-#: page.ivr.php:229
 msgid ""
 "If a timeout occurs and a message is selected, it will be played in place of "
 "the announcement message when looping back to the top of the IVR. It will "
 "not be played if the t destination is the next target."
 msgstr ""
-"Si un timeout survient et un message est sélectionné, il sera joué à la place "
-"du message d'annonce lors de la boucle vers le haut de l'IVR. Il ne sera "
-"pas joué si la destination t est la prochaine cible."
+"Si un timeout survient et un message est sélectionné, il sera joué à la "
+"place du message d'annonce lors de la boucle vers le haut de l'IVR. Il ne "
+"sera pas joué si la destination t est la prochaine cible."
 
-#: page.ivr.php:248
 msgid "Loop Before i-dest"
 msgstr "Boucler Avant i-dest"
 
-#: page.ivr.php:248
 msgid ""
 "If checked, and there is an 'i' (invalid extension) destination defined "
 "below, the IVR will play invalid option and then loop back to the beginning "
 "for the designated loop counts prior to going to the invalid (i) destination."
 msgstr ""
-"Si coché, et s'il y a une destination 'i' (extension invalide) définie "
-"ci-dessous, l'IVR jouera l'option invalide puis bouclera vers le début pour "
-"les comptes désignés de la boucle avant d'aller au timeout (t) de la destination." 
+"Si coché, et s'il y a une destination 'i' (extension invalide) définie ci-"
+"dessous, l'IVR jouera l'option invalide puis bouclera vers le début pour les "
+"comptes désignés de la boucle avant d'aller au timeout (t) de la destination."
 
-#: page.ivr.php:255
 msgid "Invalid Message"
 msgstr "Message Invalide"
 
-#: page.ivr.php:255
 msgid ""
 "If an invalid extension is pressed and a message is selected, it will be "
 "played in place of the announcement message when looping back to the top of "
@@ -326,49 +322,40 @@ msgid ""
 "message before going back to the main announcement"
 msgstr ""
 "Si une extension invalide est pressée et qu'un message est sélectionné, ce "
-"sera joué à la place du message d'annonce lors de la boucle vers le haut de l'IVR. Il ne sera "
-"pas joué si la destination t est la prochaine cible. Si rien n'est sélectionné, "
-"le système jouera un message d'extension invalide par défaut avant de retourner à "
-"l'annonce principale"
+"sera joué à la place du message d'annonce lors de la boucle vers le haut de "
+"l'IVR. Il ne sera pas joué si la destination t est la prochaine cible. Si "
+"rien n'est sélectionné, le système jouera un message d'extension invalide "
+"par défaut avant de retourner à l'annonce principale"
 
-
-#: page.ivr.php:274
 msgid "Repeat Loops:"
 msgstr "Boucles de Répétition :"
 
-#: page.ivr.php:274
 msgid ""
 "The number of times we should loop when invalid input or no input has been "
 "entered before going to the defined or default generated 'i' or 't' options. "
 "If the 'i' or 't' options are defined, the above check boxes must be checked "
 "in order to loop."
 msgstr ""
-"Le nombre de fois que l'on doit boucler lorsqu'une saisie invalide ou pas de saisie "
-"a été entré avant d'aller aux options 't' ou 'i' définies ou par défaut. Si les "
-"options 'i' ou 't' sont définies, les cases ci-dessus doivent être cochées pour "
-"boucler."
+"Le nombre de fois que l'on doit boucler lorsqu'une saisie invalide ou pas de "
+"saisie a été entré avant d'aller aux options 't' ou 'i' définies ou par "
+"défaut. Si les options 'i' ou 't' sont définies, les cases ci-dessus doivent "
+"être cochées pour boucler."
 
-#: page.ivr.php:289 page.ivr.php:323
 msgid "Increase Options"
 msgstr "Incrémenter les Options"
 
-#: page.ivr.php:291 page.ivr.php:325
-msgid "Save"
-msgstr "Sauvegarder"
-
-#: page.ivr.php:294 page.ivr.php:328
 msgid "Decrease Options"
 msgstr "Diminuer les Options"
 
-#: page.ivr.php:338
 msgid "Invalid option"
 msgstr "Option Invalide"
 
-#: page.ivr.php:384
+msgid "Digits to press for this choice"
+msgstr ""
+
 msgid "Return to IVR"
 msgstr "Retourner à l'IVR"
 
-#: page.ivr.php:384
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -377,11 +364,11 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 "Cochez cette case pour que cette option retourne à un IVR parent si elle est "
-"appelée à partir d'un IVR parent. Sinon, on ira à la destination choisie.<br><br>"
-"Le chemin de retour sera pour tous les IVR qui étaient dans le chemin d'appel "
-"avant cet IVR ce qui pourrait entraîner des résultats étranges si un IVR a été "
-"appelé dans le chemin d'appel mais pas immédiatement avant ceci"
+"appelée à partir d'un IVR parent. Sinon, on ira à la destination choisie."
+"<br><br>Le chemin de retour sera pour tous les IVR qui étaient dans le "
+"chemin d'appel avant cet IVR ce qui pourrait entraîner des résultats "
+"étranges si un IVR a été appelé dans le chemin d'appel mais pas "
+"immédiatement avant ceci"
 
-#: page.ivr.php:388
-msgid "Leave blank to remove"
-msgstr "Laissez à blanc pour supprimer"
+msgid "Delete this entry. Dont forget to click \"Save\" to save changes!"
+msgstr ""

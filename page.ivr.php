@@ -190,7 +190,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		</tr>
 		<?php if ($ivr_details['enable_directory'] && function_exists('voicemail_getVoicemail')) { ?>
 		<tr>
-			<td><a href="#" class="info"><?php echo _("Enable Directory");?><span><?php echo _("Let callers into the IVR dial '#' to access the directory. WARNING: this feature is deprecated and will be removed from future versions. You should install the Directory module and assign an IVR destination to use Destination functionality.");?></span></a></td>
+			<td><a href="#" class="info"><?php echo _("Enable Directory");?><span><?php echo _("Let callers into the IVR dial '#' to access the directory. WARNING: this feature is deprecated and will be removed from future versions. You should install the Directory module and assign an IVR destination to use Directory functionality.");?></span></a></td>
 			<td><input type="checkbox" name="ena_directory" <?php echo $ivr_details['enable_directory'] ?> tabindex="<?php echo ++$tabindex;?>"></td>
 		</tr>
 		<tr>
@@ -225,7 +225,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 	} else {
 ?>
 		<tr>
-			<td><a href="#" class="info"><?php echo _("Direct Dial Options");?><span><?php echo _("Provides options for callers to direct dial an extension. Direct dialing can be completely disabled, it can be enabled for all extensions on a system, or it can be tied to a Company Directory allowing any member listed in that directory to be dialed directly if their extension is known. If an extension in the chosen directory is overriden, only that overriden number is dialable");?></span></a></td>
+			<td><a href="#" class="info"><?php echo _("Direct Dial Options");?><span><?php echo _("Provides options for callers to direct dial an extension. Direct dialing can be completely disabled, it can be enabled for all extensions on a system, or it can be tied to a Company Directory allowing any member listed in that directory to be dialed directly if their extension is known. If an extension in the chosen directory is overridden, only that overridden number is dialable");?></span></a></td>
 			<td>
 				<select name="ena_directdial" tabindex="<?php echo ++$tabindex;?>">
 					<?php
@@ -432,7 +432,7 @@ function drawdestinations($count, $sel,  $dest, $ivr_ret) {
 		ivr_dests_hook_show($id, $dest);
 	}
 	?>
-		<img src="images/trash.png" style="cursor:pointer" title="<?php echo _('Delete this entry. Dont forget to click &ldquo;Save&rdquo; to save changes!');?>" onclick="delEntry(<?php echo $count;?>)">
+		<img src="images/trash.png" style="cursor:pointer" title="<?php echo _('Delete this entry. Dont forget to click \"Save\" to save changes!');?>" onclick="delEntry(<?php echo $count;?>)">
 	</td>
 	</tr>
 	
