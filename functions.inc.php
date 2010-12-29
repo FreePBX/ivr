@@ -504,4 +504,11 @@ function ivr_check_destinations($dest=true) {
 	}
 	return $destlist;
 }
+
+function ivr_change_destination($old_dest, $new_dest) {
+	global $db;
+ 	$sql = "UPDATE ivr_dests SET dest = '$new_dest' WHERE dest = '$old_dest'";
+ 	$db->query($sql);
+
+}
 ?>
