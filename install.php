@@ -1,18 +1,5 @@
 <?php
-
 require_once dirname(__FILE__)."/functions.inc.php";
-
-if (! function_exists("out")) {
-	function out($text) {
-		echo $text."<br />";
-	}
-}
-
-if (! function_exists("outn")) {
-	function outn($text) {
-		echo $text;
-	}
-}
 
 global $db;
 global $amp_conf;
