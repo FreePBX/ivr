@@ -197,7 +197,7 @@ function ivr_get_config($engine) {
 					if (!empty($details['enable_directory'])) {
 						$ext->addInclude($id,'app-directory');
 						$dir = featurecodes_getFeatureCode('infoservices', 'directory');
-						$ext->add($id, '#' ,'', new ext_dbdel('${BLKVM_OVERRIDE}'));
+						$ext->add($id, '#' ,'', new ext_macro('blkvm-clr'));
 						$ext->add($id, '#' ,'', new ext_setvar('__NODEST', ''));
 						$ext->add($id, '#', '', new ext_goto("app-directory,$dir,1"));
 					}
@@ -264,7 +264,7 @@ function ivr_get_config($engine) {
 								}
 								$ext->add($id, $dest['selection'], '', new ext_gotoif('$[${LOOPCOUNT} <= '.$loops.']','s,begin'));
 							}
-							$ext->add($id, $dest['selection'],'', new ext_dbdel('${BLKVM_OVERRIDE}'));
+							$ext->add($id, $dest['selection'],'', new ext_macro('blkvm-clr'));
 							$ext->add($id, $dest['selection'],'', new ext_setvar('__NODEST', ''));
 
 							// if the goto goes loops back to this ivr, then don't go to the begining or it will break the return to previous ivr info
@@ -327,11 +327,7 @@ function ivr_get_config($engine) {
 							if ($exten == '' || $exten == 'custom') {
 								continue;
 							}
-			    		if ($ast_lt_14) {
-					  		$ext->add($context, $exten,'', new ext_execif('$["${BLKVM_OVERRIDE}" != ""]','dbDel','${BLKVM_OVERRIDE}'));
-          		} else {
-					  		$ext->add($context, $exten,'', new ext_execif('$["${BLKVM_OVERRIDE}" != ""]','Noop','Deleting: ${BLKVM_OVERRIDE}: ${DB_DELETE(${BLKVM_OVERRIDE})}'));
-          		}
+					  	$ext->add($context, $exten,'', new ext_macro('blkvm-clr'));
 							$ext->add($context, $exten,'', new ext_setvar('__NODEST', ''));
 							$ext->add($context, $exten,'', new ext_goto('1',$exten,'from-internal'));
 						}
