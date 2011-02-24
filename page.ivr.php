@@ -322,12 +322,7 @@ function ivr_show_edit($id, $nbroptions, $post) {
 		</td>
 	</tr>
 	<tr><td colspan=2><hr /></td></tr></table>
-	<style type="text/css">
-	#ivr-dests tr:nth-child(odd){
-	background-color: #FCE7CE;
-	}
-	</style>
-	<table id="ivr-dests">
+	<table class="alt_table">
 <?php
 	// Draw the destinations
 	$dests = ivr_get_dests($id);
