@@ -14,18 +14,18 @@
 #    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
 #
 # FreePBX language template for ivr
-# Copyright (C) 2008, 2009, 2010 Bandwith.com
+# Copyright (C) 2008, 2009, 2010, 2011 Bandwith.com
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: FreePBX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-22 19:14+0200\n"
+"POT-Creation-Date: 2011-03-10 22:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid ""
@@ -112,7 +112,10 @@ msgstr ""
 msgid ""
 "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
 "Response) menus. These can be used to send callers to different locations "
-"(eg, \"Press 1 for sales\") and/or allow direct-dialing of extension numbers."
+"(eg, "
+msgstr ""
+
+msgid ") and/or allow direct-dialing of extension numbers."
 msgstr ""
 
 msgid "Digital Receptionist"
@@ -206,8 +209,8 @@ msgstr ""
 msgid ""
 "Let callers into the IVR dial '#' to access the directory. WARNING: this "
 "feature is deprecated and will be removed from future versions. You should "
-"install the Directory module and assign an IVR destination to use "
-"Directory functionality."
+"install the Directory module and assign an IVR destination to use Directory "
+"functionality."
 msgstr ""
 
 msgid "Directory Context"
@@ -239,7 +242,8 @@ msgid ""
 "be completely disabled, it can be enabled for all extensions on a system, or "
 "it can be tied to a Company Directory allowing any member listed in that "
 "directory to be dialed directly if their extension is known. If an extension "
-"in the chosen directory is overridden, only that overridden number is dialable"
+"in the chosen directory is overridden, only that overridden number is "
+"dialable"
 msgstr ""
 
 msgid "Disabled"
@@ -319,6 +323,5 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 
-msgid ""
-"Delete this entry. Dont forget to click \"Save\" to save changes!"
+msgid "Delete this entry. Dont forget to click \\\"Save\\\" to save changes!"
 msgstr ""
