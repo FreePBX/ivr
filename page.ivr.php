@@ -427,7 +427,7 @@ function drawdestinations($count, $sel,  $dest, $ivr_ret) {
 		echo ivr_dests_hook_show($id, $sel);
 	}
 	?>
-		<img src="images/trash.png" style="cursor:pointer" title="<?php echo _('Delete this entry. Dont forget to click \"Save\" to save changes!');?>" onclick="delEntry(<?php echo $count;?>)">
+		<img src="images/trash.png" style="cursor:pointer" title="<?php echo _('Delete this entry. Dont forget to click Save to save changes!');?>" onclick="delEntry(<?php echo $count;?>)">
 	</td>
 	</tr>
 	
