@@ -8,7 +8,7 @@
 	<type>setup</type>
 	<category>Inbound Call Control</category>
 	<description>
-		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, "Press 1 for sales") and/or allow direct-dialing of extension numbers. 
+		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
 		*2.9.0.3* styling adjustments
