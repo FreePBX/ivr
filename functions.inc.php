@@ -226,7 +226,7 @@ function ivr_get_config($engine) {
 					}
 
 					$ext->add($id, 's', '', new ext_execif('$["${MSG}" != ""]','Background','${MSG}'));
-					$ext->add($id, 's', '', new ext_waitexten());
+					$ext->add($id, 's', '', new ext_waitexten($details['timeout']));
 					$ext->add($id, 'hang', '', new ext_playback('vm-goodbye'));
 					$ext->add($id, 'hang', '', new ext_hangup(''));
 
