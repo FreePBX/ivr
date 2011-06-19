@@ -9,7 +9,6 @@ foreach($headers as $mod => $header) {
 $table->set_heading($h);
 
 $count = 0;
-dbug('$entires', $entires);
 foreach ($entires as $e) {
 	$count++;
 
@@ -17,17 +16,17 @@ foreach ($entires as $e) {
 	$row[] = fpbx_label(
 		form_input(
 			array(
-				'name'	=> 'entires[][name]',
+				'name'	=> 'entires[ext][]',
 				'value'	=> $e['selection']
 				)
 			), 
 		'Digits to press for this choice');
 	
 	//add destination
-	$row[] = drawselects($e['dest'], $count, false, false);
+	$row[] = drawselects($e['dest'], $count, false, false) . form_hidden('entires[goto][]', '');
 	
 	//return to ivr
-	$row[] = fpbx_label(form_checkbox('entires[]i[vr_ret]', 'ivr_ret', $e['ivr_ret']), 
+	$row[] = fpbx_label(form_checkbox('entires[ivr_ret][]', 'ivr_ret', $e['ivr_ret']), 
 			'Check this box to have this option return to a parent IVR if it was called'
 			. ' from a parent IVR. If not, it will go to the chosen destination.<br><br>'
 			. 'The return path will be to any IVR that was in the call path prior to this '

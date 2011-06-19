@@ -424,7 +424,7 @@ function ivr_configpageload() {
 	$dd_help[] = _('completely disabled');
 	$dd_help[] = _('enabled for all extensions on a system');
 	//todo: make next line conditional on directory being present
-	$dd_help[] = _('tied to a Directory allowing all entried in that directory to be dialed directly, as they appear in the directory');
+	$dd_help[] = _('tied to a Directory allowing all entries in that directory to be dialed directly, as they appear in the directory');
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('directdial', $currentcomponent->getoptlist('direct_dial'), 
 		$ivr['directdial'], _('Direct Dial'), _('Provides options for callers to direct dial an extension. Direct dialing can be:') . ul($dd_help), false));
@@ -440,7 +440,7 @@ function ivr_configpageload() {
 		new gui_selectbox('invalid_recording', $currentcomponent->getoptlist('recordings'), 
 		$ivr['invalid_recording'], _('Invalid Recording'), _('Prompt to be played before sending the caller to an alternate destination due to the caller pressing 0 or receiving the maximum amount of invalid/unmatched responses (as determined by Invalid Retries)'), false));
 	$currentcomponent->addguielem($section, 
-		new gui_drawselects('invalid_destination', 0, $ivr['invalid_destination'], _('Invalid Destination'),
+		new gui_drawselects('invalid_destination', 'invalid', $ivr['invalid_destination'], _('Invalid Destination'),
 		 _('Destination to send the call to after Invalid Recording is played.'), false));
 	
 	//timeout/invalid 
@@ -454,7 +454,7 @@ function ivr_configpageload() {
 		new gui_selectbox('timeout_recording', $currentcomponent->getoptlist('recordings'), 
 		$ivr['timeout_recording'], _('Timeout Recording'), _('Prompt to be played before sending the caller to an alternate destination due to the caller pressing 0 or receiving the maximum amount of invalid/unmatched responses (as determined by Invalid Retries)'), false));
 	$currentcomponent->addguielem($section, 
-		new gui_drawselects('timeout_destination', 0, 
+		new gui_drawselects('timeout_destination', 'timeout', 
 		$ivr['timeout_destination'], _('Timeout Destination'), _('Destination to send the call to after Invalid Recording is played.'), false));
 	
 	//return to ivr
@@ -504,7 +504,7 @@ function ivr_configprocess(){
 		switch($action){
 			case 'edit':
 				//get real dest
-				$vars['invalid_destination'] = $_REQUEST[$_REQUEST[$_REQUEST['invalid_destination']].str_replace('goto','',$_REQUEST['invalid_destination'])];
+				$vars['invalid_destination'] = $_REQUEST['invalid_destination'];
 				$vars['id'] = directory_save_dir_details($vars);
 				directory_save_dir_entries($vars['id'],$entries);
 				needreload();
@@ -524,10 +524,10 @@ function ivr_draw_entries_table_header_ivr() {
 	return  array(_('Ext'), _('Destination'), fpbx_label(_('Return'), _('Return to IVR')), _('Delete'));
 }
 
-function ivr_draw_entries_ivr() {
+function ivr_draw_entries_ivr($id) {
 	//TEST FUNCTION, DELETE ASAP
-	return array(form_input(array('name'	=> 'test1','value'	=> 'test1')),
-				form_input(array('name'	=> 'test2','value'	=> 'test2'))
+	return array(form_input(array('name'	=> 'entires[test1][]','value'	=> 'test1')),
+				form_input(array('name'	=> 'entires[test2][]','value'	=> 'test2'))
 				);
 }
 
