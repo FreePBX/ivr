@@ -5,10 +5,11 @@ $li[] = '<a href="config.php?display='. urlencode($display) . '&action=add">' . 
 
 if (isset($ivr_results)){
 	foreach ($ivr_results as $r) {
-		$li[] = '<a id="' . ( $id == $r['ivr_id'] ? 'current' : '') 
+		$r['name'] = $r['name'] ? $r['name'] : 'IVR ID: ' . $r['id'];
+		$li[] = '<a id="' . ( $id == $r['id'] ? 'current' : '') 
 			. '" href="config.php?display=ivr&amp;action=edit&amp;id=' 
-			. $r['ivr_id'] . '">' 
-			. $r['displayname'] .'</a>';
+			. $r['id'] . '">' 
+			. $r['name'] .'</a>';
 	}
 }	
 

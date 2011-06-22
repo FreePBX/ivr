@@ -201,90 +201,14 @@ function ivr_get_ivr_id($name) {
 		sql("INSERT INTO ivr (displayname, enable_directory, enable_directdial, timeout, alt_timeout, alt_invalid, `loops`, `retvm`)  values('$name', '', '', 10, '', '', 2, '')");
 		$res = $db->getRow("SELECT ivr_id from ivr where displayname='$name'");
 	}
-	return ($res[0]);
-	
-}
-
-function ivr_add_command($id, $cmd, $dest, $ivr_ret) {
-	global $db;
-	// Does it already exist?
-	$res = $db->getRow("SELECT * from ivr_dests where ivr_id='$id' and selection='$cmd'");
-	$ivr_ret = $ivr_ret ? 1 : 0;
-	if (count($res) == 0) {
-		// Just add it.
-		sql("INSERT INTO ivr_dests VALUES('$id', '$cmd', '$dest', '$ivr_ret')");
+	if ($db->IsError($res)){
+		die_freepbx($res->getDebugInfo());
 	} else {
-		// Update it.
-		sql("UPDATE ivr_dests SET dest='$dest', ivr_ret='$ivr_ret' where ivr_id='$id' and selection='$cmd'");
-	}
-}
-function ivr_do_edit($id, $post) {
-
-	$displayname = isset($post['displayname'])?$post['displayname']:'';
-	$timeout = isset($post['timeout'])?$post['timeout']:'';
-	$ena_directory = isset($post['ena_directory'])?$post['ena_directory']:'';
-	$ena_directdial = isset($post['ena_directdial'])?$post['ena_directdial']:'';
-	$annmsg_id = isset($post['annmsg_id'])?$post['annmsg_id']:'';
-	$dircontext = isset($post['dircontext'])?$post['dircontext']:'';
-	$timeout_id = isset($post['timeout_id'])?$post['timeout_id']:'';
-	$invalid_id = isset($post['invalid_id'])?$post['invalid_id']:'';
-
-	$loops = isset($post['loops'])?$post['loops']:'2';
-	$alt_timeout = isset($post['alt_timeout'])?$post['alt_timeout']:'';
-	$alt_invalid = isset($post['alt_invalid'])?$post['alt_invalid']:'';
-	$retvm = isset($post['retvm'])?$post['retvm']:'';
-
-	if (!empty($ena_directdial) && !is_numeric($ena_directdial)) {
-		$ena_directdial='CHECKED';
-	}
-	if (!empty($alt_timeout)) {
-		$alt_timeout='CHECKED';
-	}
-	if (!empty($alt_invalid)) {
-		$alt_invalid='CHECKED';
-	}
-	if (!empty($retvm)) {
-		$retvm='CHECKED';
+		return ($res[0]);
 	}
 	
-	$sql = "
-	UPDATE ivr 
-	SET 
-		displayname='$displayname', 
-		enable_directory='$ena_directory', 
-		enable_directdial='$ena_directdial', 
-		timeout='$timeout', 
-		announcement_id='$annmsg_id', 
-		timeout_id='$timeout_id', 
-		invalid_id='$invalid_id', 
-		dircontext='$dircontext', 
-		alt_timeout='$alt_timeout', 
-		alt_invalid='$alt_invalid', 
-		retvm='$retvm', 
-		`loops`='$loops' 
-	WHERE ivr_id='$id'
-	";
-	sql($sql);
-
-	// Delete all the old dests
-	sql("DELETE FROM ivr_dests where ivr_id='$id'");
-	// Now, lets find all the goto's in the post. Destinations return gotoN => foo and get fooN for the dest.
-	// Is that right, or am I missing something?
-	foreach(array_keys($post) as $var) {
-		if (preg_match('/goto(\d+)/', $var, $match)) {
-			// This is a really horrible line of code. take N, and get value of fooN. See above. Note we
-			// get match[1] from the preg_match above
-			$dest = $post[$post[$var].$match[1]];
-			$cmd = $post['option'.$match[1]];
-			$ivr_ret = isset($post['ivr_ret'.$match[1]]) ? $post['ivr_ret'.$match[1]] : '';
-			// Debugging if it all goes pear shaped.
-			// print "I think pushing $cmd does $dest<br>\n";
-			if (strlen($cmd))
-				ivr_add_command($id, $cmd, $dest, $ivr_ret);
-		}
-	}
+	
 }
-
 
 function ivr_list() {
 	global $db;
@@ -297,23 +221,29 @@ function ivr_list() {
 	return $res;
 }
 
-function ivr_get_details($id) {
+function ivr_get_details($id = '') {
 	global $db;
 
-	$sql = "SELECT * FROM ivr where ivr_id='$id'";
+	$sql = "SELECT * FROM ivr_details";
+	if ($id) {
+		$sql .= ' where  id = "' . $id . '"';
+	}
 	$res = $db->getAll($sql, DB_FETCHMODE_ASSOC);
 	if($db->IsError($res)) {
-		return null;
+		die_freepbx($res->getDebugInfo());
 	}
-	return $res[0];
+
+	return $id ? $res[0] : $res;
 }
 
-function ivr_get_dests($id) {
+function ivr_get_entires($id) {
 	global $db;
-	$sql = "SELECT selection, dest, ivr_ret FROM ivr_dests where ivr_id='$id' ORDER BY selection";
-	$res = $db->getAll($sql, DB_FETCHMODE_ASSOC);
-	if($db->IsError($res)) {
-		return null;
+	
+	//+0 to convert string to an integer
+	$sql = "SELECT * FROM ivr_entries WHERE ivr_id = ? ORDER BY selection + 0";
+	$res = $db->getAll($sql, array($id), DB_FETCHMODE_ASSOC);
+	if ($db->IsError($res)) {
+		die_freepbx($res->getDebugInfo());
 	}
 	return $res;
 }
@@ -331,20 +261,21 @@ function ivr_configpageload() {
 	global $currentcomponent, $display;
 	$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 	$id 	= isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
-	if ($id == null) {
-		return true;
-	}
-	if ($action  == 'add' && $id == '') {
+
+	if ($action  == 'add' && $id != '') {
 		 $currentcomponent->addguielem('_top', new gui_pageheading('title', _('Add Directory')), 0);
 
-		$deet = array('name', 'directdial', 'invalid_loops', 'invalid_rety_recording', 
-					'invalid_recording', 'invalid_destination', 'timeout_loops',
+		$deet = array('id', 'name', 'description', 'announcement', 'directdial', 
+					'invalid_loops', 'invalid_rety_recording', 
+					'invalid_recording', 'invalid_destination', 
+					'timeout_loops', 'timeout_time',
 					'timeout_rety_recording', 'timeout_recording', 'timeout_destination',
-					'announcement_id', 'retvm', 'enable_directdial', 'description', 'id');
+					'retvm');
      
 		foreach ($deet as $d) {
 			switch ($d){
-				case 'repeat_loops';
+				case 'invalid_loops':
+				case 'timeout_loops';
 					$ivr[$d] = 2;
 					break;
 				case 'announcement':
@@ -359,20 +290,12 @@ function ivr_configpageload() {
 		}
 	} else {
 		$ivr = ivr_get_details($id);
-		$ivr['id'] = $ivr['ivr_id'];
-		$ivr['name'] = $ivr['displayname'];
-		$ivr['description'] = 'NOT IMPLEMENTED';
-		$ivr['directdial'] = $ivr['invalid_loops'] = $ivr['invalid_rety_recording'] = $ivr['invalid_recording'] = '';
-		$ivr['invalid_destination'] = $ivr['timeout_loops'] = $ivr['timeout_rety_recording'] = $ivr['timeout_recording'] = '';	
-		$ivr['timeout_destination'] = '';
-		dbug('$ivr', $ivr);
 
 		$label = sprintf(_("Edit IVR: %s"), $ivr['name'] ? $ivr['name'] : 'ID '.$ivr['id']);
-
 		$currentcomponent->addguielem('_top', new gui_pageheading('title', $label), 0);
 		
 		//display usage
-		$usage_list			= framework_display_destination_usage(ivr_getdest($ivr['id']));
+		$usage_list			= '';//framework_display_destination_usage();
 		if (!empty($usage_list)) {
 			$usage_list_text	= isset($usage_list['text']) ? $usage_list['text'] : '';
 			$usage_list_tooltip	= isset($usage_list['tooltip']) ? $usage_list['tooltip'] : '';
@@ -381,14 +304,15 @@ function ivr_configpageload() {
 		}
 		
 		//display delete link
-		$label 				= '<span><img width="16" height="16" border="0" title="' 
+		$label = sprintf(_("Delete IVR: %s"), $ivr['name'] ? $ivr['name'] : 'ID '.$ivr['id']);
+		$del 				= '<span><img width="16" height="16" border="0" title="' 
 							. $label . '" alt="" src="images/core_delete.png"/>&nbsp;' . $label . '</span>';
 		$currentcomponent->addguielem('_top', 
-			new gui_link('del', $label, $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING'] . '&action=delete', 
+			new gui_link('del', $del, $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING'] . '&action=delete', 
 				true, false), 0);
 	}
 	
-	//delete link, dont show if we dont have an id (i.e. directory wasnt created yet)
+
 	$gen_section = _('IVR General Options');
 	$currentcomponent->addguielem($gen_section, 
 		new gui_textbox('name', stripslashes($ivr['name']), _('IVR Name'), _('Name of this IVR.')));
@@ -405,22 +329,26 @@ function ivr_configpageload() {
 		$currentcomponent->addoptlistitem('recordings', $r['id'], $r['displayname']);
 	}
     $currentcomponent->setoptlistopts('recordings', 'sort', false);
-	//build repeat_loops select list and defualt it to 3
-	for($i=0; $i <11; $i++){
-		$currentcomponent->addoptlistitem('repeat_loops', $i, $i);
-	}
 	
+	//build repeat_loops select list and defualt it to 3
+	//while not 100% nesesary, declaring this is the only way to prevent sorting on the list
+	$currentcomponent->addoptlist('ivr_repeat_loops', false); 
+	$currentcomponent->addoptlistitem('ivr_repeat_loops', 'disabled', 'Disabled');
+	for($i=0; $i <11; $i++){
+		$currentcomponent->addoptlistitem('ivr_repeat_loops', $i, $i);
+	}
+
 	//generate page
 	$currentcomponent->addguielem($section, 
-		new gui_selectbox('displayname', $currentcomponent->getoptlist('recordings'), 
-			$ivr['announcement_id'], _('Announcement'), _('Greeting to be played on entry to the Ivr.'), false));
+		new gui_selectbox('announcement', $currentcomponent->getoptlist('recordings'), 
+			$ivr['announcement'], _('Announcement'), _('Greeting to be played on entry to the Ivr.'), false));
 
 
 	
 	//direct dial
 	//TODO: hook in from directory	
-	$currentcomponent->addoptlistitem('direct_dial', $ivr['enable_directdial'], _('Disabled'));
-	$currentcomponent->addoptlistitem('direct_dial', $ivr['enable_directdial'], _('Extensions'));
+	$currentcomponent->addoptlistitem('direct_dial', $ivr['directdial'], _('Disabled'));
+	$currentcomponent->addoptlistitem('direct_dial', $ivr['directdial'], _('Extensions'));
 	$dd_help[] = _('completely disabled');
 	$dd_help[] = _('enabled for all extensions on a system');
 	//todo: make next line conditional on directory being present
@@ -431,7 +359,7 @@ function ivr_configpageload() {
 	
 	//invalid 
 	$currentcomponent->addguielem($section, 
-		new gui_selectbox('invalid_loops', $currentcomponent->getoptlist('repeat_loops'), 
+		new gui_selectbox('invalid_loops', $currentcomponent->getoptlist('ivr_repeat_loops'), 
 		$ivr['invalid_loops'], _('Invalid Retries'), _('Number of times to retry when receiving an invalid/unmatched response from the caller'), false));
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('invalid_rety_recording', $currentcomponent->getoptlist('recordings'), 
@@ -445,8 +373,10 @@ function ivr_configpageload() {
 	
 	//timeout/invalid 
 	$currentcomponent->addguielem($section, 
-		new gui_selectbox('timeout_loops', $currentcomponent->getoptlist('repeat_loops'), 
+		new gui_selectbox('timeout_loops', $currentcomponent->getoptlist('ivr_repeat_loops'), 
 		$ivr['timeout_loops'], _('Timeout Retries'), _('Number of times to retry when receiving an invalid/unmatched response from the caller'), false));
+	$currentcomponent->addguielem($section, 
+		new gui_textbox('timeout_time', stripslashes($ivr['timeout_time']), _('Timeout'), _('Amount of time to be concidered a timeout')));
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('timeout_rety_recording', $currentcomponent->getoptlist('recordings'), 
 		$ivr['timeout_rety_recording'], _('Timeout Retry Recording'), _('Prompt to be played when an invalid/unmatched response is received, before prompting the caller to try again'), false));
@@ -465,7 +395,7 @@ function ivr_configpageload() {
 		new gui_checkbox('say_extension', $dir['say_extension'], _('Announce Extension'), 
 		_('When checked, the extension number being transferred to will be announced prior to the transfer'),true));*/
 	$currentcomponent->addguielem($section, new gui_hidden('id', $ivr['id']));
-	$currentcomponent->addguielem($section, new gui_hidden('action', 'edit'));
+	$currentcomponent->addguielem($section, new gui_hidden('action', 'save'));
 
 
 		
@@ -476,47 +406,124 @@ function ivr_configpageload() {
 
 function ivr_configpageinit($pagename) {
 	global $currentcomponent;
+	$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
+	
 	if($pagename == 'ivr'){
 		$currentcomponent->addprocessfunc('ivr_configprocess');
-		$currentcomponent->addguifunc('ivr_configpageload');
+		
+		//dont show page if there is no action set
+		if ($action && $action != 'delete') {			
+			$currentcomponent->addguifunc('ivr_configpageload');
+		}
+		
     return true;
 	}
 }
 
 //prosses received arguments
 function ivr_configprocess(){
-	if($_REQUEST['display'] == 'ivr'){
-		return true;
-		global $db,$amp_conf;
-		//get variables for directory_details
-		$requestvars = array('id','dirname','description','announcement',
-							'callid_prefix','alert_info','repeat_loops',
-							'repeat_recording','invalid_recording',
-							'invalid_destination','retivr','say_extension');
-		foreach($requestvars as $var){
+	if (isset($_REQUEST['display']) && $_REQUEST['display'] == 'ivr'){
+		global $db;
+		//get variables
+
+		$get_var = array('id', 'name', 'description', 'announcement',
+						'directdial', 'invalid_loops', 'invalid_rety_recording',
+						'invalid_destination', 'timeout_enabled', 'invalid_recording',
+						'retvm', 'invalid_enabled', 'timeout_time', 'timeout_recording',
+						'timeout_rety_recording', 'timeout_destination', 'timeout_loops');
+		foreach($get_var as $var){
 			$vars[$var] = isset($_REQUEST[$var]) 	? $_REQUEST[$var]		: '';
 		}
 
 		$action		= isset($_REQUEST['action'])	? $_REQUEST['action']	: '';
 		$entries	= isset($_REQUEST['entries'])	? $_REQUEST['entries']	: '';
-		//$entries=(($entries)?array_values($entries):'');//reset keys
 
-		switch($action){
-			case 'edit':
+		switch ($action) {
+			case 'save':
+			
 				//get real dest
-				$vars['invalid_destination'] = $_REQUEST['invalid_destination'];
-				$vars['id'] = directory_save_dir_details($vars);
-				directory_save_dir_entries($vars['id'],$entries);
+				$_REQUEST['id'] = $vars['id'] = ivr_save_details($vars);
+				ivr_save_entries($vars['id'], $entries);
 				needreload();
-				redirect_standard_continue('id');
+				$_REQUEST['action'] = 'edit';
+				redirect_standard_continue('id', 'action');
 			break;
 			case 'delete':
-				directory_delete($vars['id']);
+				ivr_delete($vars['id']);
 				needreload();
 				redirect_standard_continue();
 			break;
 		}
 	}
+}
+
+function ivr_save_details($vals){
+	global $db, $amp_conf;
+
+	foreach($vals as $key => $value) {
+		$vals[$key] = $db->escapeSimple($value);
+	}
+
+	if ($vals['id']) {
+		$sql = 'REPLACE INTO ivr_details (id, name, description, announcement,
+				directdial, invalid_loops, invalid_rety_recording,
+				invalid_destination, timeout_enabled, invalid_recording,
+				retvm, invalid_enabled, timeout_time, timeout_recording,
+				timeout_rety_recording, timeout_destination, timeout_loops)
+				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+		$foo = $db->query($sql, $vals);
+		if($db->IsError($foo)) {
+			die_freepbx(print_r($vals,true).' '.$foo->getDebugInfo());
+		}
+	} else {
+		unset($vals['id']);
+		$sql = 'INSERT INTO ivr_details (name, description, announcement,
+				directdial, invalid_loops, invalid_rety_recording,
+				invalid_destination, timeout_enabled, invalid_recording,
+				retvm, invalid_enabled, timeout_time, timeout_recording,
+				timeout_rety_recording, timeout_destination, timeout_loops)
+				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+				
+		$foo = $db->query($sql, $vals);
+		if($db->IsError($foo)) {
+			die_freepbx(print_r($vals,true).' '.$foo->getDebugInfo());
+		}
+		$sql = ( ($amp_conf["AMPDBENGINE"]=="sqlite3") ? 'SELECT last_insert_rowid()' : 'SELECT LAST_INSERT_ID()');
+		$vals['id'] = $db->getOne($sql);
+		if ($db->IsError($foo)){
+			die_freepbx($foo->getDebugInfo());
+		}
+	}
+
+	return $vals['id'];
+}
+
+function ivr_save_entries($id, $entries){
+	global $db;
+	$id = $db->escapeSimple($id);
+	sql('DELETE FROM ivr_entries WHERE ivr_id = "' . $id . '"');
+
+	if ($entries) {
+		for ($i = 0; $i < count($entries['ext']); $i++) {
+			//make sure there is an extension set - otherwise SKIP IT
+			if ($entries['ext'][$i]) {
+				$d[] = array(
+							'ivr_id'	=> $id,
+							'ext' 		=> $entries['ext'][$i],
+							'goto'		=> $entries['goto'][$i],
+							'ivr_ret'	=> (isset($entries['ivr_ret'][$i]) ? $entries['ivr_ret'][$i] : '')
+						);
+			}
+
+		}
+		$sql = $db->prepare('INSERT INTO ivr_entries VALUES (?, ?, ?, ?)');
+		$res = $db->executeMultiple($sql, $d);
+		if ($db->IsError($res)){
+			die_freepbx($res->getDebugInfo());
+		}
+	}
+	
+	return true;
 }
 
 
@@ -526,25 +533,29 @@ function ivr_draw_entries_table_header_ivr() {
 
 function ivr_draw_entries_ivr($id) {
 	//TEST FUNCTION, DELETE ASAP
-	return array(form_input(array('name'	=> 'entires[test1][]','value'	=> 'test1')),
-				form_input(array('name'	=> 'entires[test2][]','value'	=> 'test2'))
+	return array(form_input(array('name'	=> 'entries[test1][]','value'	=> 'test1')),
+				form_input(array('name'	=> 'entries[test2][]','value'	=> 'test2'))
 				);
 }
 
 function ivr_draw_entries($id){
 	$headers		= mod_func_iterator('draw_entries_table_header_ivr');
-	$ivr_entires	= ivr_get_dests($id);
-
-	foreach ($ivr_entires as $k => $e) {
-		$entires[$k]= $e;
-		$entires[$k]['hooks'] = mod_func_iterator('draw_entries_ivr', array('id' => $id, 'ext' => $e['selection']));
+	$ivr_entries	= ivr_get_entires($id);
+	dbug('$ivr_entries', $ivr_entries);
+	if ($ivr_entries) {
+		foreach ($ivr_entries as $k => $e) {
+			$entries[$k]= $e;
+			$entries[$k]['hooks'] = mod_func_iterator('draw_entries_ivr', array('id' => $id, 'ext' => $e['selection']));
+		}
 	}
-
+	
+	$entries['blank'] = array('selection' => '', 'dest' => '', 'ivr_ret' => '');
+	$entries['blank']['hooks'] = mod_func_iterator('draw_entries_ivr', array('id' => '', 'ext' => ''));
 	
 	return load_view(dirname(__FILE__) . '/views/entries.php', 
 				array(
 					'headers'	=> $headers, 
-					'entires'	=>  $entires
+					'entries'	=>  $entries
 				)
 			);
 
@@ -555,6 +566,11 @@ function ivr_draw_entries_tr($id, $realid, $name = '',$foreign_name, $audio = ''
 
 }
 
+function ivr_delete($id) {
+	global $db;
+	sql('DELETE FROM ivr_details WHERE id = "' . $db->escapeSimple($id) . '"');
+	sql('DELETE FROM ivr_entries WHERE ivr_id = "' . $db->escapeSimple($id) . '"');
+}
 //----------------------------------------------------------------------------
 // Dynamic Destination Registry and Recordings Registry Functions
 function ivr_check_destinations($dest=true) {
@@ -564,11 +580,11 @@ function ivr_check_destinations($dest=true) {
 	if (is_array($dest) && empty($dest)) {
 		return $destlist;
 	}
-	$sql = "SELECT dest, displayname, selection, a.ivr_id ivr_id FROM ivr a INNER JOIN ivr_dests d ON a.ivr_id = d.ivr_id  ";
+	$sql = "SELECT dest, name, selection, a.id id FROM ivr_details a INNER JOIN ivr_entries d ON a.id = d.ivr_id  ";
 	if ($dest !== true) {
 		$sql .= "WHERE dest in ('".implode("','",$dest)."')";
 	}
-	$sql .= "ORDER BY displayname";
+	$sql .= "ORDER BY name";
 	$results = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
 
 	//$type = isset($active_modules['ivr']['type'])?$active_modules['ivr']['type']:'setup';
