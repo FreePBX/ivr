@@ -295,7 +295,7 @@ if (version_compare($ivr_modcurrentvers, "2.9", "==")) {
 	CHANGE alt_invalid invalid_enabled varchar(50) AFTER retvm,
 	CHANGE loops invalid_loops varchar(10) AFTER directdial, 
 	CHANGE invalid_id invalid_recording varchar(25) AFTER invalid_loops,
-	ADD invalid_rety_recording varchar(25) AFTER invalid_loops,
+	ADD invalid_retry_recording varchar(25) AFTER invalid_loops,
 	ADD invalid_destination varchar(50) AFTER invalid_rety_recording,
 	CHANGE timeout timeout_time int(11),
 	CHANGE timeout_id timeout_recording varchar(25), 
