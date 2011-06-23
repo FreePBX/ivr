@@ -5,19 +5,29 @@ dbug($_REQUEST);
 // The destinations this module provides
 // returns a associative arrays with keys 'destination' and 'description'
 function ivr_destinations() {
+	global $module_page;
+
+	// it makes no sense to point at another ivr (and it can be lead to an infinite loop)
+	if ($module_page == 'ivr' || isset($_REQUEST['display']) && $_REQUEST['display'] == 'ivr') {
+		return false;
+	}
+	
 	//get the list of IVR's
-	$results = ivr_list();
+	$results = ivr_get_details();
 
 	// return an associative array with destination and description
 	if (isset($results)) {
 		foreach($results as $result){
-			$extens[] = array('destination' => 'ivr-'.$result['ivr_id'].',s,1', 'description' => $result['displayname']);
+			$name = $result['name'] ? $result['name'] : 'IVR ' . $result['id'];
+			$extens[] = array('destination' => 'ivr-'.$result['id'].',s,1', 'description' => $name);
 		}
 	}
-	if (isset($extens)) 
+	if (isset($extens)) {
 		return $extens;
-	else
+	} else {
 		return null;
+	}
+
 }
 
 function ivr_get_config($engine) {
@@ -26,169 +36,169 @@ function ivr_get_config($engine) {
 	switch($engine) {
 		case "asterisk":
 			$ddial_contexts = array();
-			$ivrlist = ivr_list();
-			if(is_array($ivrlist)) {
-				foreach($ivrlist as $item) {
-					$id = "ivr-".$item['ivr_id'];
-					$details = ivr_get_details($item['ivr_id']);
+			$ivrlist = ivr_get_details();
+			if(!is_array($ivrlist)) {
+				break;
+			}
+			
+			//draw a list of ivrs included by queues
+			$queues = queues_list(true);
 
-					$announcement_id = (isset($details['announcement_id']) ? $details['announcement_id'] : '');
-					$timeout_id = (isset($details['timeout_id']) ? $details['timeout_id'] : '');
-					$invalid_id = (isset($details['invalid_id']) ? $details['invalid_id'] : '');
-					$loops = (isset($details['loops']) ? $details['loops'] : '2');
-					$retvm = (isset($details['retvm']) ? $details['retvm'] : '');
-
-					if (!empty($details['enable_directdial'])) {
-						if ($details['enable_directdial'] == 'CHECKED') {
-							$ext->addInclude($id,'from-did-direct-ivr'); //generated in core module
-						} else {
-							$ext->addInclude($id,'from-ivr-directory-'.$details['enable_directdial']);
-							$ddial_contexts[$details['enable_directdial']] = true;
-						}
-					}
-					// I'm not sure I like the ability of people to send voicemail from the IVR.
-					// Make it a config option, possibly?
-                                        // $ext->addInclude($item[0],'app-messagecenter');
-					if (!empty($details['enable_directory'])) {
-						$ext->addInclude($id,'app-directory');
-						$dir = featurecodes_getFeatureCode('infoservices', 'directory');
-						$ext->add($id, '#' ,'', new ext_macro('blkvm-clr'));
-						$ext->add($id, '#' ,'', new ext_setvar('__NODEST', ''));
-						$ext->add($id, '#', '', new ext_goto("app-directory,$dir,1"));
-					}
-
-					$ext->add($id, 'h', '', new ext_hangup(''));
-					if ($announcement_id) {
-						$announcement_msg = recordings_get_file($announcement_id);
-						$ext->add($id, 's', '', new ext_setvar('MSG', "$announcement_msg"));
-					} else {
-						$ext->add($id, 's', '', new ext_setvar('MSG', ""));
-					}
-					$ext->add($id, 's', '', new ext_setvar('LOOPCOUNT', 0));
-					$ext->add($id, 's', '', new ext_setvar('__DIR-CONTEXT', $details['dircontext']));
-					$ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT}'));
-					$ext->add($id, 's', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
-					$ext->add($id, 's', '', new ext_gotoif('$["${CDR(disposition)}" = "ANSWERED"]','begin'));
-					$ext->add($id, 's', '', new ext_answer(''));
-					$ext->add($id, 's', '', new ext_wait('1'));
-					$ext->add($id, 's', 'begin', new ext_digittimeout(3));
-					$ext->add($id, 's', '', new ext_responsetimeout($details['timeout']));
-
-					if ($retvm) {
-						$ext->add($id, 's', '', new ext_setvar('__IVR_RETVM', 'RETURN'));
-					} else {
-						$ext->add($id, 's', '', new ext_setvar('__IVR_RETVM', ''));
-					}
-
-					$ext->add($id, 's', '', new ext_execif('$["${MSG}" != ""]','Background','${MSG}'));
-					$ext->add($id, 's', '', new ext_waitexten($details['timeout']));
-					$ext->add($id, 'hang', '', new ext_playback('vm-goodbye'));
-					$ext->add($id, 'hang', '', new ext_hangup(''));
-
-					$default_t=true;
-
-					// Actually add the IVR commands now.
-					$dests = ivr_get_dests($item['ivr_id']);
-					$timeout=false;
-					$invalid=false;
-					$addloop=false;
-					if (!empty($dests)) {
-						foreach($dests as $dest) {
-							if ($dest['selection'] == 't' && empty($details['alt_timeout'])) {
-							 	$timeout=true;
-							} elseif ($dest['selection'] == 'i' && empty($details['alt_invalid'])) {
-							 	$invalid=true;
-							} elseif (($dest['selection'] == 't' && !empty($details['alt_timeout']))) {
-							 	$timeout=true;
-								if ($timeout_id) {
-									$timeout_msg = recordings_get_file($timeout_id);
-									$ext->add($id, $dest['selection'], '', new ext_setvar('MSG',"$timeout_msg"));	
-								}
-								$ext->add($id, $dest['selection'], '', new ext_setvar('LOOPCOUNT','$[${LOOPCOUNT} + 1]'));	
-								$ext->add($id, $dest['selection'], '', new ext_gotoif('$[${LOOPCOUNT} <= '.$loops.']','s,begin'));
-							} elseif (($dest['selection'] == 'i' && !empty($details['alt_invalid']))) {
-							 	$invalid=true;
-								$ext->add($id, $dest['selection'], '', new ext_setvar('LOOPCOUNT','$[${LOOPCOUNT} + 1]'));	
-
-
-								if ($invalid_id) {
-									$invalid_msg = recordings_get_file($invalid_id);
-									$ext->add($id, $dest['selection'], '', new ext_setvar('MSG',"$invalid_msg"));	
-								} else {
-									$ext->add($id, $dest['selection'], '', new ext_execif('$[${LOOPCOUNT} <= '.$loops.']','Playback','invalid'));
-								}
-								$ext->add($id, $dest['selection'], '', new ext_gotoif('$[${LOOPCOUNT} <= '.$loops.']','s,begin'));
-							}
-							$ext->add($id, $dest['selection'],'', new ext_macro('blkvm-clr'));
-							$ext->add($id, $dest['selection'],'', new ext_setvar('__NODEST', ''));
-
-							// if the goto goes loops back to this ivr, then don't go to the begining or it will break the return to previous ivr info
-							//
-							$dest_context = trim(strtok($dest['dest'],",|"));
-							if ($dest_context == $id) {
-								$dest['dest'] = $id.',s,begin';
-							}
-
-							if ($dest['ivr_ret']) {
-								$ext->add($id, $dest['selection'],'', new ext_gotoif('$["x${IVR_CONTEXT_${CONTEXT}}" = "x"]', $dest['dest'].':${IVR_CONTEXT_${CONTEXT}},return,1'));
-							} else {
-								$ext->add($id, $dest['selection'],'', new ext_goto($dest['dest']));
-							}
-						}
-					}
-					// Apply invalid if required
-					if (!$invalid) {
-						if ($invalid_id) {
-							$invalid_msg = recordings_get_file($invalid_id);
-							$ext->add($id, 'i', '', new ext_setvar('MSG',"$invalid_msg"));	
-						} else {
-							$ext->add($id, 'i', '', new ext_playback('invalid'));
-						}
-						$ext->add($id, 'i', '', new ext_goto('loop,1'));
-						$addloop=true;
-					}
-					if (!$timeout) {
-						if ($timeout_id) {
-							$timeout_msg = recordings_get_file($timeout_id);
-							$ext->add($id, 't', '', new ext_setvar('MSG',"$timeout_msg"));	
-						}
-						$ext->add($id, 't', '', new ext_goto('loop,1'));
-						$addloop=true;
-					}
-					if ($addloop) {
-						$ext->add($id, 'loop', '', new ext_setvar('LOOPCOUNT','$[${LOOPCOUNT} + 1]'));	
-						$ext->add($id, 'loop', '', new ext_gotoif('$[${LOOPCOUNT} > '.$loops.']','hang,1'));
-						$ext->add($id, 'loop', '', new ext_goto($id.',s,begin'));
-
-						// these need to be reset or inheritance problems makes them go away in some conditions and infinite inheritance creates other problems
-						// reset the message including blanking it if set by a sub-ivr
-						$announcement_msg = ($announcement_id) ? $announcement_msg : '';
-						$ext->add($id, 'return', '', new ext_setvar('MSG', "$announcement_msg"));
-						$ext->add($id, 'return', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
-						$ext->add($id, 'return', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT_${CONTEXT}}'));
-						$ext->add($id, 'return', '', new ext_goto($id.',s,begin'));
-					}
-				}
-
-				if (!empty($ddial_contexts)) {
-					global $version;
-					$ast_lt_14 = version_compare($version, '1.4', 'lt');
-
-					foreach(array_keys($ddial_contexts) as $dir_id) {
-						$context = 'from-ivr-directory-'.$dir_id;
-						$entries = function_exists('directory_get_dir_entries') ? directory_get_dir_entries($dir_id) : array();
-						foreach ($entries as $dstring) {
-							$exten = $dstring['dial'] == '' ? $dstring['foreign_id'] : $dstring['dial'];
-							if ($exten == '' || $exten == 'custom') {
-								continue;
-							}
-					  	$ext->add($context, $exten,'', new ext_macro('blkvm-clr'));
-							$ext->add($context, $exten,'', new ext_setvar('__NODEST', ''));
-							$ext->add($context, $exten,'', new ext_goto('1',$exten,'from-internal'));
-						}
-					}
+			foreach ($queues as $q) {
+				$thisq = queues_get($q[0]);
+				if ($thisq['context'] && strpos($thisq['context'], 'ivr-') === 0) {
+					$qivr[] = str_replace('ivr-', '', $thisq['context']);
 				}
 			}
+	
+			foreach($ivrlist as $ivr) {
+				$c = 'ivr-' . $ivr['id'];
+				$ivr = ivr_get_details($ivr['id']);
+
+				if ($ivr['directdial'] != '') {
+					if ($details['enable_directdial'] == 'ext-local') {
+						$ext->addInclude($id,'from-did-direct-ivr'); //generated in core module
+					} else {
+						//TODO: include directory context here!
+						//$ext->addInclude($id,'from-ivr-directory-'.$details['enable_directdial']);
+						//$ddial_contexts[$details['enable_directdial']] = true;
+					}
+				}
+
+				//TODO: seperate timeout & invalid loops
+				if ($ivr['timeout_loops'] != 'disabled') {
+					$ext->add($c, 's', '', new ext_setvar('TIMEOUT_LOOPCOUNT', 0));
+				}
+				if ($ivr['invalid_loops'] != 'disabled') {
+					$ext->add($c, 's', '', new ext_setvar('INVALID_LOOPCOUNT', 0));
+				}
+				
+				//TODO: no clue what the next tow lines are for --MB
+				$ext->add($c, 's', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT}'));
+				$ext->add($c, 's', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
+				$ext->add($c, 's', '', new ext_gotoif('$["${CDR(disposition)}" = "ANSWERED"]','start'));
+				$ext->add($c, 's', '', new ext_answer(''));
+				$ext->add($c, 's', '', new ext_wait('1'));
+				$ext->add($c, 's', 'start', new ext_digittimeout(3));
+				//$ext->add($ivr_id, 's', '', new ext_responsetimeout($ivr['timeout_time']));
+
+				if ($ivr['retvm']) {
+					$ext->add($c, 's', '', new ext_setvar('__IVR_RETVM', 'RETURN'));
+				} else {
+					//TODO: do we need to set anything at all?
+					$ext->add($c, 's', '', new ext_setvar('__IVR_RETVM', ''));
+				}
+
+				$ext->add($c, 's', '', new ext_background(recordings_get_file($ivr['announcement'])));
+				$ext->add($c, 's', '', new ext_waitexten($ivr['timeout_time']));
+				
+
+				// Actually add the IVR commands now.
+				$entries = ivr_get_entries($ivr['id']);
+
+				if ($entries) {
+					foreach($entries as $e) {
+						//dont set a t or i if there already defined above
+						if ($e['selection'] == 't' && $ivr['timeout_loops'] != 'disabled') {
+						 	continue;
+						}
+						if ($e['selection'] == 'i' && $ivr['invalid_loops'] != 'disabled') {
+						 	continue;
+						}
+						
+						//only display these two lines if the ivr can be called from a queue
+						if (in_array($ivr['id'], $qivr)) {
+							$ext->add($c, $e['selection'],'', new ext_macro('blkvm-clr'));
+							$ext->add($c, $e['selection'], '', new ext_setvar('__NODEST', ''));
+							
+						}
+
+						if ($e['ivr_ret']) {
+							$ext->add($c, $e['selection'], '', 
+								new ext_gotoif('$["x${IVR_CONTEXT_${CONTEXT}}" = "x"]',
+									$e['dest'] . ':${IVR_CONTEXT_${CONTEXT}},return,1'));
+						} else {
+							$ext->add($c, $e['selection'],'', new ext_goto($e['dest']));
+						}
+					}
+				}
+		
+				// add invalid if required
+				dbug('ivr', $ivr);
+				if ($ivr['invalid_loops'] != 'disabled') {
+					switch ($ivr['invalid_retry_recording']) {
+						case 'default':
+							$ext->add($c, 'i', '', new ext_playback('invalid'));
+							break;
+						case '':
+							break;
+						default:
+							$ext->add($c, 'i', '', 
+								new ext_playback(recordings_get_file($ivr['invalid_retry_recording'])));
+							break;
+					}
+					$ext->add($c, 'i', '', new ext_set('INVALID_LOOPCOUNT', '$[${INVALID_LOOPCOUNT}+1]'));
+					$ext->add($c, 'i', '', 
+						new ext_gotoif('$[${INVALID_LOOPCOUNT} <= ' . $ivr['invalid_loops'] . ']','s,start'));
+
+					
+					switch ($ivr['invalid_recording']) {
+						case 'default':
+							$ext->add($c, 'i', '', new ext_playback('invalid'));
+							break;
+						case '':
+							break;
+						default:
+							$ext->add($c, 'i', '', 
+								new ext_playback(recordings_get_file($ivr['invalid_recording'])));
+							break;
+					}
+					$ext->add($c, 'i', '', new ext_goto($ivr['invalid_destination']));
+				}
+
+				// Apply timeout if required
+				if ($ivr['timeout_loops'] != 'disabled') {
+					switch ($ivr['timeout_retry_recording']) {
+						case 'default':
+							$ext->add($c, 't', '', new ext_playback('invalid'));
+							break;
+						case '':
+							break;
+						default:
+							$ext->add($c, 't', '', 
+								new ext_playback(recordings_get_file($ivr['timeout_retry_recording'])));
+							break;
+					}
+					$ext->add($c, 't', '', new ext_set('TIMEOUT_LOOPCOUNT', '$[${TIMEOUT_LOOPCOUNT}+1]'));
+					$ext->add($c, 't', '', 
+						new ext_gotoif('$[${TIMEOUT_LOOPCOUNT} <= ' . $ivr['timeout_loops'] . ']','s,start'));
+
+					
+					switch ($ivr['timeout_recording']) {
+						case 'default':
+							$ext->add($c, 't', '', new ext_playback('invalid'));
+							break;
+						case '':
+							break;
+						default:
+							$ext->add($c, 't', '', 
+								new ext_playback(recordings_get_file($ivr['timeout_recording'])));
+							break;
+					}
+					$ext->add($c, 't', '', new ext_goto($ivr['timeout_destination']));
+				}
+				if ($ivr['retvm']) {
+					// these need to be reset or inheritance problems makes them go away in some conditions 
+					//and infinite inheritance creates other problems
+					$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
+					$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT_${CONTEXT}}'));
+					$ext->add($c, 'return', '', new ext_goto($ivr['id'] . ',s,start'));
+				}
+			}
+			
+			$ext->add($c, 'h', '', new ext_hangup(''));
+			$ext->add($c, 'hang', '', new ext_playback('vm-goodbye'));
+			$ext->add($c, 'hang', '', new ext_hangup(''));
 		break;
 	}
 }
@@ -236,7 +246,7 @@ function ivr_get_details($id = '') {
 	return $id ? $res[0] : $res;
 }
 
-function ivr_get_entires($id) {
+function ivr_get_entries($id) {
 	global $db;
 	
 	//+0 to convert string to an integer
@@ -324,7 +334,8 @@ function ivr_configpageload() {
 	$section = _('IVR Options (DTMF)');
 	
 	//build recordings select list
-	$currentcomponent->addoptlistitem('recordings', 0, _('Default'));
+	$currentcomponent->addoptlistitem('recordings', '', _('None'));
+	$currentcomponent->addoptlistitem('recordings', 'default', _('Default'));
 	foreach(recordings_list() as $r){
 		$currentcomponent->addoptlistitem('recordings', $r['id'], $r['displayname']);
 	}
@@ -347,8 +358,8 @@ function ivr_configpageload() {
 	
 	//direct dial
 	//TODO: hook in from directory	
-	$currentcomponent->addoptlistitem('direct_dial', $ivr['directdial'], _('Disabled'));
-	$currentcomponent->addoptlistitem('direct_dial', $ivr['directdial'], _('Extensions'));
+	$currentcomponent->addoptlistitem('direct_dial', '', _('Disabled'));
+	$currentcomponent->addoptlistitem('direct_dial', 'ext-local', _('Extensions'));
 	$dd_help[] = _('completely disabled');
 	$dd_help[] = _('enabled for all extensions on a system');
 	//todo: make next line conditional on directory being present
@@ -399,7 +410,7 @@ function ivr_configpageload() {
 
 
 		
-	$section = _('Ivr Entries');
+	$section = _('IVR Entries');
 	//draw the entries part of the table. A bit hacky perhaps, but hey - it works!
 	$currentcomponent->addguielem($section, new guielement('rawhtml', ivr_draw_entries($ivr['id']), ''), 6);
 }
@@ -531,7 +542,7 @@ function ivr_draw_entries_table_header_ivr() {
 	return  array(_('Ext'), _('Destination'), fpbx_label(_('Return'), _('Return to IVR')), _('Delete'));
 }
 
-function ivr_draw_entries_ivr($id) {
+function ivr_draw_entries_ivr_ss($id) {
 	//TEST FUNCTION, DELETE ASAP
 	return array(form_input(array('name'	=> 'entries[test1][]','value'	=> 'test1')),
 				form_input(array('name'	=> 'entries[test2][]','value'	=> 'test2'))
@@ -540,7 +551,7 @@ function ivr_draw_entries_ivr($id) {
 
 function ivr_draw_entries($id){
 	$headers		= mod_func_iterator('draw_entries_table_header_ivr');
-	$ivr_entries	= ivr_get_entires($id);
+	$ivr_entries	= ivr_get_entries($id);
 	dbug('$ivr_entries', $ivr_entries);
 	if ($ivr_entries) {
 		foreach ($ivr_entries as $k => $e) {
@@ -591,10 +602,11 @@ function ivr_check_destinations($dest=true) {
 
 	foreach ($results as $result) {
 		$thisdest = $result['dest'];
-		$thisid   = $result['ivr_id'];
+		$thisid   = $result['id'];
+		$name = $result['name'] ? $result['name'] : 'IVR ' . $thisid;
 		$destlist[] = array(
 			'dest' => $thisdest,
-			'description' => sprintf(_("IVR: %s / Option: %s"),$result['displayname'],$result['selection']),
+			'description' => sprintf(_("IVR: %s / Option: %s"),$name,$result['selection']),
 			'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($thisid),
 		);
 	}
@@ -639,15 +651,15 @@ function ivr_getdestinfo($dest) {
 function ivr_recordings_usage($recording_id) {
 	global $active_modules;
 
-	$results = sql("SELECT `ivr_id`, `displayname` FROM `ivr` WHERE `announcement_id` = '$recording_id' || `timeout_id` = '$recording_id' || `invalid_id` = '$recording_id'","getAll",DB_FETCHMODE_ASSOC);
+	//$results = sql("SELECT `ivr`, `name` FROM `ivr` WHERE `announcement` = '$recording_id' || `timeout_id` = '$recording_id' || `invalid_id` = '$recording_id'","getAll",DB_FETCHMODE_ASSOC);
+	$results = sql("SELECT `id`, `name` FROM `ivr_details` WHERE '$recording_id' IN('announcement', 'invalid_retry_recording', 'invalid_recording', 'timeout_recording', 'timeout_retry_recording')", "getAll",DB_FETCHMODE_ASSOC);
 	if (empty($results)) {
 		return array();
 	} else {
-		//$type = isset($active_modules['ivr']['type'])?$active_modules['ivr']['type']:'setup';
 		foreach ($results as $result) {
 			$usage_arr[] = array(
-				'url_query' => 'config.php?display=ivr&action=edit&id='.urlencode($result['ivr_id']),
-				'description' => sprintf(_("IVR: %s"),$result['displayname']),
+				'url_query' => 'config.php?display=ivr&action=edit&id='.urlencode($result['id']),
+				'description' => sprintf(_("IVR: %s"), ($result['name'] ? $result['name'] : $result['id'])),
 			);
 		}
 		return $usage_arr;
