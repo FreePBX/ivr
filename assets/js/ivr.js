@@ -1,18 +1,40 @@
 $(document).ready(function(){
-	//add "add row" button
+	//on load, hide elememnts that may need to be hidden
+	invalid_elements();
+	timeout_elements();
+
 	var new_entrie = '<tr>' + $('#ivr_entries > tbody:last').find('tr:last').html() + '</tr>';
 	$('#add_entrie').click(function(){
-		id = new Date().getTime();
+		id = new Date().getTime();//must be cached, as we have many replaces to do and the time can shift
 		$('#ivr_entries > tbody:last').find('tr:last').after(new_entrie.replace(/DESTID/g, id));
 		bind_dests_double_selects();
 	});
 	
+	$('input[type=submit]').click(function(){
+		//remove the last blank field so that it isnt subject to validation
+		//callerd from .click() as that is fired before validation
+		last = $('#ivr_entries > tbody:last').find('tr:last');
+		if(last.find('input[name="entries[ext][]"]').val() == ''){
+			last.remove()
+		}
+	})
+	
  	$('[name=frm_ivr]').submit(function(){
-		//set timeout/invalid destination
-		invalid = $('[name=' + $('[name=gotoinvalid]').val() + 'invalid]').val();
-		timeout = $('[name=' + $('[name=gototimeout]').val() + 'timeout]').val();
-		$(this).append('<input type="hidden" name="invalid_destination" value="'+invalid+'">');
-		$(this).append('<input type="hidden" name="timeout_destination" value="' + timeout + '">');
+		//set timeout/invalid destination, removing hidden field if there is no valus being set
+		if ($('#invalid_loops').val() != 'disabled') {
+			invalid = $('[name=' + $('[name=gotoinvalid]').val() + 'invalid]').val();
+			$('#invalid_destination').val(invalid)
+		} else {
+			$('#invalid_destination').remove()
+		}
+		
+		if ($('#timeout_loops').val() != 'disabled') {
+			timeout = $('[name=' + $('[name=gototimeout]').val() + 'timeout]').val();
+			$('#timeout_destination').val(timeout)
+		} else {
+			$('#timeout_destination').remove()
+		}
+
 		
 		//set goto fileds for destinations
 		$('[name^=goto]').each(function(){
@@ -41,6 +63,11 @@ $(document).ready(function(){
 		$(this).closest('tr').fadeOut('normal', function(){$(this).closest('tr').remove();})
 	})
 	
+	//show/hide invalid elements on change
+	$('#invalid_loops').change(invalid_elements)
+	
+	//show/hide timeout elements on change
+	$('#timeout_loops').change(timeout_elements)
 });
 
 function restore_form_elemens() {
@@ -48,4 +75,47 @@ function restore_form_elemens() {
 	$('[name="entries[ivr_ret][]"][value=uncheked]').each(function(){
 		$(this).removeAttr('checked')
 	})
+	invalid_elements();
+	timeout_elements();
+}
+
+//always disable hidden elements so that they dont trigger validation
+function invalid_elements() {
+	var invalid_elements = $('#invalid_retry_recording, #invalid_recording, [name=gotoinvalid]');
+	var invalid_element_tr = invalid_elements.parent().parent();
+	switch ($('#invalid_loops').val()) {
+		case 'disabled':
+			invalid_elements.attr('disabled', 'disabled')
+			invalid_element_tr.hide()
+			break;
+		case '0':
+			invalid_elements.removeAttr('disabled')
+			invalid_element_tr.show();
+			$('#invalid_retry_recording').parent().parent().hide();
+			break;
+		default:
+			invalid_elements.removeAttr('disabled')
+			invalid_element_tr.show()
+			break;
+	}
+}
+
+//always disable hidden elements so that they dont trigger validation
+function timeout_elements() {
+	var timeout_elements = $('#timeout_retry_recording, #timeout_recording, [name=gototimeout]');
+	var timeout_element_tr = timeout_elements.parent().parent();
+	switch ($('#timeout_loops').val()) {
+		case 'disabled':
+			timeout_elements.attr('disabled', 'disabled')
+			timeout_element_tr.hide()
+			break;
+		case '0':
+			timeout_elements.removeAttr('disabled')
+			timeout_element_tr.show();
+			$('#timeout_retry_recording').attr('disabled', 'disabled').parent().parent().hide();
+		default:
+			timeout_elements.removeAttr('disabled')
+			timeout_element_tr.show()
+			break;
+	}
 }

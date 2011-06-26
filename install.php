@@ -301,7 +301,7 @@ if (version_compare($ivr_modcurrentvers, "2.9", "==")) {
 	CHANGE timeout_id timeout_recording varchar(25), 
 	ADD timeout_rety_recording varchar(25),
 	ADD timeout_destination int(11),
-	ADD timeout_loops int(11),
+	ADD timeout_loops varchar(11),
 	DROP deptname, 
 	DROP enable_directory, 
 	DROP dircontext,

@@ -29,7 +29,11 @@ echo load_view(dirname(__FILE__) . '/views/rnav.php', array('ivr_results' => ivr
 if (!$action) {
 ?>
 <h2><?php echo _("IVR"); ?></h2>
-<br/><br/>{add add button here}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/>
+<a href="config.php?type=setup&display=ivr&action=add">
+	<input type="button" value="Add a new IVR" id="new_dir">
+</a>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/>
 
 <?php
