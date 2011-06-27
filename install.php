@@ -310,12 +310,13 @@ if($db->IsError($res)) {
 	DROP enable_directory, 
 	DROP dircontext');
 	sql('DELETE FROM ivr_details WHERE name = "__install_done"');
-
+	//copy loops from invalid to timeout
+	sql('UPDATE ivr_details SET timeout_loops = invalid_loops');
 	$ivr = $db->getAll('SELECT * FROM ivr_details', DB_FETCHMODE_ASSOC);
 	if($db->IsError($ivr)) {
 		die_freepbx($ivr->getDebugInfo());
 	}
-	
+
 	$entires = $db->getAll('SELECT * FROM ivr_entries', DB_FETCHMODE_ASSOC);
 	if($db->IsError($ivr)) {
 		die_freepbx($ivr->getDebugInfo());
@@ -324,66 +325,66 @@ if($db->IsError($res)) {
 		$e[$entrie['ivr_id']][$entrie['selection']] = 
 				array('dest' => $entrie['dest'], 'ivr_ret' => $entrie['ivr_ret']);
 	}
-	
-	//copy loops from invalid to timeout
-	sql('UPDATE ivr_details SET timeout_loops = invalid_loops');
+	dbug('e', $e);
+	dbug('ivr', $ivr);
 	
 	if ($ivr) {
-		foreach ($ivr as $i) {
-			
+		foreach ($ivr as $my => $i) {
+
 			//INVALID
 			//if we have an invalid destination in entires, move it here
 			if (isset($e[$i['id']]['i']) && $e[$i['id']]['i']) {
-				$ivr[$i['id']]['invalid_destination'] = $e[$i['id']]['i'];
-				
+				$ivr[$my]['invalid_destination'] = $e[$i['id']]['i']['dest'];
+
 				//if there are no invalid loops, set to disabled
 				if ($i['invalid_loops'] < 0) {
-					$ivr[$i['id']]['invalid_loops'] = 'disabled';
-					
+					$ivr[$my]['invalid_loops'] = 'disabled';
+
 				//if there are zero disabled loops, we dont need a retry recording
 				} elseif ($i['invalid_loops'] === 0) {
-					$ivr[$i['id']]['invalid_retry_recording'] = '';
-					
+					$ivr[$my]['invalid_retry_recording'] = '';
+
 				//otherwise, set invalid retry to the save as invalid_recording
 				} elseif ($i['invalid_loops'] > 0) {
-					$ivr[$i['id']]['invalid_retry_recording'] = $i['invalid_recording'];
+					$ivr[$my]['invalid_retry_recording'] = $i['invalid_recording'];
 				}
-				
+
 			//if we DONT have an invalid destination, set everything to disbaled
 			} else {
-				$ivr[$i['id']]['invalid_loops'] = 'disabled';
-				$ivr[$i['id']]['invalid_retry_recording'] = '';
-				$ivr[$i['id']]['invalid_recording'] = '';
-				$ivr[$i['id']]['invalid_destination'] = '';
+				$ivr[$my]['invalid_loops'] = 'disabled';
+				$ivr[$my]['invalid_retry_recording'] = '';
+				$ivr[$my]['invalid_recording'] = '';
+				$ivr[$my]['invalid_destination'] = '';
 			}
-			
+
 			//TIMEOUT
 			//if we have an invalid destination in entires, move it here
 			if (isset($e[$i['id']]['t']) && $e[$i['id']]['t']) {
-				$ivr[$i['id']]['timeout_destination'] = $e[$i['id']]['i'];
-				
+				$ivr[$my]['timeout_destination'] = $e[$i['id']]['i']['dest'];
+
 				//if there are no timeout loops, set to disabled
 				if ($i['timeout_loops'] < 0) {
-					$ivr[$i['id']]['timeout_loops'] = 'disabled';
-					
+					$ivr[$my]['timeout_loops'] = 'disabled';
+
 				//if there are zero disabled loops, we dont need a retry recording
 				} elseif ($i['timeout_loops'] === 0) {
-					$ivr[$i['id']]['timeout_retry_recording'] = '';
-					
+					$ivr[$my]['timeout_retry_recording'] = '';
+
 				//otherwise, set timeout retry to the save as invalid_recording
 				} elseif ($i['timeout_loops'] > 0) {
-					$ivr[$i['id']]['timeout_retry_recording'] = $i['timeout_recording'];
+					$ivr[$my]['timeout_retry_recording'] = $i['timeout_recording'];
 				}
-				
+
 			//if we DONT have an timeout destination, set everything to disbaled
 			} else {
-				$ivr[$i['id']]['timeout_loops'] = 'disabled';
-				$ivr[$i['id']]['timeout_retry_recording'] = '';
-				$ivr[$i['id']]['timeout_recording'] = '';
-				$ivr[$i['id']]['timeout_destination'] = '';
+				$ivr[$my]['timeout_loops'] = 'disabled';
+				$ivr[$my]['timeout_retry_recording'] = '';
+				$ivr[$my]['timeout_recording'] = '';
+				$ivr[$my]['timeout_destination'] = '';
 			}
 		}
 	}
+		dbug('ivr for insert', $ivr);
 	$sql = $db->prepare('REPLACE INTO ivr_details (id, name, description, announcement,
 				directdial, invalid_loops, invalid_retry_recording,
 				invalid_destination, timeout_enabled, invalid_recording,
@@ -392,6 +393,7 @@ if($db->IsError($res)) {
 				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
 	$res = $db->executeMultiple($sql, $ivr);
 	if ($db->IsError($res)){
+		print_r($db->last_query);
 		die_freepbx($res->getDebugInfo());
 	}
 	
