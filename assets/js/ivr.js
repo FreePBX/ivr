@@ -11,10 +11,11 @@ $(document).ready(function(){
 	});
 	
 	$('input[type=submit]').click(function(){
-		//remove the last blank field so that it isnt subject to validation
-		//callerd from .click() as that is fired before validation
+		//remove the last blank field so that it isnt subject to validation, assuming it wasnt set
+		//called from .click() as that is fired before validation
 		last = $('#ivr_entries > tbody:last').find('tr:last');
-		if(last.find('input[name="entries[ext][]"]').val() == ''){
+		if(last.find('input[name="entries[ext][]"]').val() == ''
+			&& last.find('.destdropdown').val() == ''){
 			last.remove()
 		}
 	})

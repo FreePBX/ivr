@@ -5,52 +5,53 @@ global $db;
 global $amp_conf;
 
 if($amp_conf["AMPDBENGINE"] == "sqlite3")  {
-	$sql = "
-		CREATE TABLE IF NOT EXISTS ivr ( 
-			ivr_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
-			displayname VARCHAR(50), 
-			deptname VARCHAR(50), 
-			enable_directory VARCHAR(8), 
-			enable_directdial VARCHAR(8), 
-			timeout INT, 
-			announcement VARCHAR(255), 
-			dircontext VARCHAR ( 50 ) DEFAULT 'default', 
-			alt_timeout VARCHAR(8), 
-			alt_invalid VARCHAR(8), 
-			`loops` TINYINT(1) NOT NULL DEFAULT 2
-		);
-	";
+	sql("CREATE TABLE IF NOT EXISTS `ivr_details` (
+		`id` int(11) NOT NULL PRIMARY KEYAUTOINCREMENT,
+		`name` varchar(50) default NULL,
+		`description` varchar(150) default NULL,
+		`announcement` int(11) default NULL,
+		`directdial` varchar(50) default NULL,
+		`invalid_loops` varchar(10) default NULL,
+		`invalid_retry_recording` varchar(25) default NULL,
+		`invalid_destination` varchar(50) default NULL,
+		`timeout_enabled` varchar(50) default NULL,
+		`invalid_recording` varchar(25) default NULL,
+		`retvm` varchar(8) default NULL,
+		`invalid_enabled` varchar(50) default NULL,
+		`timeout_time` int(11) default NULL,
+		`timeout_recording` varchar(25) default NULL,
+		`timeout_retry_recording` varchar(25) default NULL,
+		`timeout_destination` varchar(50) default NULL,
+		`timeout_loops` varchar(10) default NULL)"
+	);
+} else {
+	sql("CREATE TABLE IF NOT EXISTS `ivr_details` (
+		`id` int(11) NOT NULL auto_increment,
+		`name` varchar(50) default NULL,
+		`description` varchar(150) default NULL,
+		`announcement` int(11) default NULL,
+		`directdial` varchar(50) default NULL,
+		`invalid_loops` varchar(10) default NULL,
+		`invalid_retry_recording` varchar(25) default NULL,
+		`invalid_destination` varchar(50) default NULL,
+		`timeout_enabled` varchar(50) default NULL,
+		`invalid_recording` varchar(25) default NULL,
+		`retvm` varchar(8) default NULL,
+		`invalid_enabled` varchar(50) default NULL,
+		`timeout_time` int(11) default NULL,
+		`timeout_recording` varchar(25) default NULL,
+		`timeout_retry_recording` varchar(25) default NULL,
+		`timeout_destination` varchar(50) default NULL,
+		`timeout_loops` varchar(10) default NULL,
+		PRIMARY KEY  (`id`))"
+	);
 }
-else  {
-	$sql = "
-		CREATE TABLE IF NOT EXISTS ivr ( 
-			ivr_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY	, 
-			displayname VARCHAR(50), 
-			deptname VARCHAR(50), 
-			enable_directory VARCHAR(8), 
-			enable_directdial VARCHAR(8), 
-			timeout INT, 
-			announcement VARCHAR(255), 
-			dircontext VARCHAR ( 50 ) DEFAULT 'default', 
-			alt_timeout VARCHAR(8), 
-			alt_invalid VARCHAR(8), 
-			`loops` TINYINT(1) NOT NULL DEFAULT 2
-		);
-	";
-}
-sql($sql);
 
-$sql = "
-CREATE TABLE IF NOT EXISTS ivr_dests 
-( 
-	`ivr_id` INT NOT NULL, 
-	`selection` VARCHAR(10), 
-	`dest` VARCHAR(50), 
-	`ivr_ret` TINYINT(1) NOT NULL DEFAULT 0
-)
-";
-sql($sql);
-
+sql("CREATE TABLE IF NOT EXISTS `ivr_entries` (
+	`ivr_id` int(11) NOT NULL,
+	`selection` varchar(10) default NULL,
+	`dest` varchar(50) default NULL,
+	`ivr_ret` tinyint(1) NOT NULL default '0')");
 
 
 $ivr_modcurrentvers = modules_getversion('ivr');
@@ -293,6 +294,7 @@ if (version_compare($ivr_modcurrentvers, "2.9", "==")) {
 	CHANGE enable_directdial directdial varchar(50) AFTER announcement,
 	CHANGE retvm retvm varchar(8) AFTER directdial,
 	CHANGE alt_invalid invalid_enabled varchar(50) AFTER retvm,
+	CHANGE alt_timeout timeout_enabled varchar(50) AFTER retvm,
 	CHANGE loops invalid_loops varchar(10) AFTER directdial, 
 	CHANGE invalid_id invalid_recording varchar(25) AFTER invalid_loops,
 	ADD invalid_retry_recording varchar(25) AFTER invalid_loops,
@@ -304,9 +306,92 @@ if (version_compare($ivr_modcurrentvers, "2.9", "==")) {
 	ADD timeout_loops varchar(11),
 	DROP deptname, 
 	DROP enable_directory, 
-	DROP dircontext,
-	DROP alt_timeout');
-	//DROP enable_directory, 
+	DROP dircontext');
+	
+
+	$ivr = $db->getAll('SELECT * FROM ivr_details', DB_FETCHMODE_ASSOC);
+	if($db->IsError($ivr)) {
+		die_freepbx($ivr->getDebugInfo());
+	}
+	
+	$entires = $db->getAll('SELECT * FROM ivr_entries', DB_FETCHMODE_ASSOC);
+	if($db->IsError($ivr)) {
+		die_freepbx($ivr->getDebugInfo());
+	}
+	foreach ($entires as $entrie) {
+		$e[$entrie['ivr_id']][$entrie['selection']] = 
+				array('dest' => $entrie['dest'], 'ivr_ret' => $entrie['ivr_ret']);
+	}
+	
+	//copy loops from invalid to timeout
+	sql('UPDATE ivr_details SET timeout_loops = invalid_loops');
+	
+	if ($ivr) {
+		foreach ($ivr as $i) {
+			
+			//INVALID
+			//if we have an invalid destination in entires, move it here
+			if (isset($e[$i['id']]['i']) && $e[$i['id']]['i']) {
+				$ivr[$i['id']]['invalid_destination'] = $e[$i['id']]['i'];
+				
+				//if there are no invalid loops, set to disabled
+				if ($i['invalid_loops'] < 0) {
+					$ivr[$i['id']]['invalid_loops'] = 'disabled';
+					
+				//if there are zero disabled loops, we dont need a retry recording
+				} elseif ($i['invalid_loops'] === 0) {
+					$ivr[$i['id']]['invalid_retry_recording'] = '';
+					
+				//otherwise, set invalid retry to the save as invalid_recording
+				} elseif ($i['invalid_loops'] > 0) {
+					$ivr[$i['id']]['invalid_retry_recording'] = $i['invalid_recording'];
+				}
+				
+			//if we DONT have an invalid destination, set everything to disbaled
+			} else {
+				$ivr[$i['id']]['invalid_loops'] = 'disabled';
+				$ivr[$i['id']]['invalid_retry_recording'] = '';
+				$ivr[$i['id']]['invalid_recording'] = '';
+				$ivr[$i['id']]['invalid_destination'] = '';
+			}
+			
+			//TIMEOUT
+			//if we have an invalid destination in entires, move it here
+			if (isset($e[$i['id']]['t']) && $e[$i['id']]['t']) {
+				$ivr[$i['id']]['timeout_destination'] = $e[$i['id']]['i'];
+				
+				//if there are no timeout loops, set to disabled
+				if ($i['timeout_loops'] < 0) {
+					$ivr[$i['id']]['timeout_loops'] = 'disabled';
+					
+				//if there are zero disabled loops, we dont need a retry recording
+				} elseif ($i['timeout_loops'] === 0) {
+					$ivr[$i['id']]['timeout_retry_recording'] = '';
+					
+				//otherwise, set timeout retry to the save as invalid_recording
+				} elseif ($i['timeout_loops'] > 0) {
+					$ivr[$i['id']]['timeout_retry_recording'] = $i['timeout_recording'];
+				}
+				
+			//if we DONT have an timeout destination, set everything to disbaled
+			} else {
+				$ivr[$i['id']]['timeout_loops'] = 'disabled';
+				$ivr[$i['id']]['timeout_retry_recording'] = '';
+				$ivr[$i['id']]['timeout_recording'] = '';
+				$ivr[$i['id']]['timeout_destination'] = '';
+			}
+		}
+	}
+	$sql = $db->prepare('REPLACE INTO ivr_details (id, name, description, announcement,
+				directdial, invalid_loops, invalid_retry_recording,
+				invalid_destination, timeout_enabled, invalid_recording,
+				retvm, invalid_enabled, timeout_time, timeout_recording,
+				timeout_retry_recording, timeout_destination, timeout_loops)
+				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+	$res = $db->executeMultiple($sql, $ivr);
+	if ($db->IsError($res)){
+		die_freepbx($res->getDebugInfo());
+	}
 }
 
 

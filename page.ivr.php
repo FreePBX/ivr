@@ -1,4 +1,5 @@
 <?php 
+
 /* $Id$ */
 /*
  * Copyright (C) 2004 Coalescent Systems Inc. (info@coalescentsystems.ca)

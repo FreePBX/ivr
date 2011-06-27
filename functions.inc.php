@@ -1,6 +1,6 @@
 <?php
  /* $Id$ */
-dbug($_REQUEST);
+
 // The destinations this module provides
 // returns a associative arrays with keys 'destination' and 'description'
 function ivr_destinations() {
@@ -41,7 +41,7 @@ function ivr_get_config($engine) {
 				break;
 			}
 			
-			//draw a list of ivrs included by queues
+			//draw a list of ivrs included by any queues
 			$queues = queues_list(true);
 			foreach ($queues as $q) {
 				$thisq = queues_get($q[0]);
@@ -49,11 +49,12 @@ function ivr_get_config($engine) {
 					$qivr[] = str_replace('ivr-', '', $thisq['context']);
 				}
 			}
-	
+			
 			foreach($ivrlist as $ivr) {
 				$c = 'ivr-' . $ivr['id'];
 				$ivr = ivr_get_details($ivr['id']);
-
+				$ext->addSectionComment($c, $ivr['name'] ? $ivr['name'] : 'IVR ' . $ivr['id']);
+				
 				if ($ivr['directdial']) {
 					if ($ivr['directdial'] == 'ext-local') {
 						$ext->addInclude($c, 'from-did-direct-ivr'); //generated in core module
@@ -64,7 +65,7 @@ function ivr_get_config($engine) {
 					}
 				}
 
-				//TODO: seperate timeout & invalid loops
+				//set variables for loops when used
 				if ($ivr['timeout_loops'] != 'disabled' && $ivr['timeout_loops'] > 0) {
 					$ext->add($c, 's', '', new ext_setvar('TIMEOUT_LOOPCOUNT', 0));
 				}
@@ -91,7 +92,7 @@ function ivr_get_config($engine) {
 				$ext->add($c, 's', '', new ext_waitexten($ivr['timeout_time']));
 				
 
-				// Actually add the IVR commands now.
+				// Actually add the IVR entires now
 				$entries = ivr_get_entries($ivr['id']);
 
 				if ($entries) {
@@ -104,7 +105,7 @@ function ivr_get_config($engine) {
 						 	continue;
 						}
 						
-						//only display these two lines if the ivr can be called from a queue
+						//only display these two lines if the ivr is included in any queues
 						if (in_array($ivr['id'], $qivr)) {
 							$ext->add($c, $e['selection'],'', new ext_macro('blkvm-clr'));
 							$ext->add($c, $e['selection'], '', new ext_setvar('__NODEST', ''));
@@ -121,7 +122,7 @@ function ivr_get_config($engine) {
 					}
 				}
 		
-				// add invalid if required
+				// add invalid destination if required
 				if ($ivr['invalid_loops'] != 'disabled') {
 					if ($ivr['invalid_loops'] > 0) {
 						$ext->add($c, 'i', '', new ext_set('INVALID_LOOPCOUNT', '$[${INVALID_LOOPCOUNT}+1]'));
@@ -155,7 +156,7 @@ function ivr_get_config($engine) {
 					$ext->add($c, 'i', '', new ext_goto($ivr['invalid_destination']));
 				}
 
-				// Apply timeout if required
+				// Apply timeout destination if required
 				if ($ivr['timeout_loops'] != 'disabled') {
 					if ($ivr['timeout_loops'] > 0) {
 						$ext->add($c, 't', '', new ext_set('TIMEOUT_LOOPCOUNT', '$[${TIMEOUT_LOOPCOUNT}+1]'));
@@ -198,11 +199,12 @@ function ivr_get_config($engine) {
 				}
 			}
 			
+			//h extension
 			$ext->add($c, 'h', '', new ext_hangup(''));
 			$ext->add($c, 'hang', '', new ext_playback('vm-goodbye'));
 			$ext->add($c, 'hang', '', new ext_hangup(''));
 			
-			//generate from-ivr-directory contexts
+			//generate from-ivr-directory contexts for direct dialing a directory entire
 			if (!empty($directdial_contexts)) {
 				foreach($directdial_contexts as $dir_id) {
 					$c = 'from-ivr-directory-' . $dir_id;
@@ -222,6 +224,7 @@ function ivr_get_config($engine) {
 	}
 }
 
+//replaces ivr_list(), retunrs all details of any ivr
 function ivr_get_details($id = '') {
 	global $db;
 
@@ -237,6 +240,7 @@ function ivr_get_details($id = '') {
 	return $id ? $res[0] : $res;
 }
 
+//get all ivr entires
 function ivr_get_entries($id) {
 	global $db;
 	
@@ -249,13 +253,15 @@ function ivr_get_entries($id) {
 	return $res;
 }
 
+
+//draw ivr options page
 function ivr_configpageload() {
 	global $currentcomponent, $display;
 	$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 	$id 	= isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
 
 	if ($action  == 'add') {
-		 $currentcomponent->addguielem('_top', new gui_pageheading('title', _('Add Directory')), 0);
+		$currentcomponent->addguielem('_top', new gui_pageheading('title', _('Add Directory')), 0);
 
 		$deet = array('id', 'name', 'description', 'announcement', 'directdial', 
 					'invalid_loops', 'invalid_retry_recording', 
@@ -264,6 +270,7 @@ function ivr_configpageload() {
 					'timeout_retry_recording', 'timeout_recording', 'timeout_destination',
 					'retvm');
      
+		//keep vairables set on new ivr's
 		foreach ($deet as $d) {
 			switch ($d){
 				case 'invalid_loops':
@@ -294,7 +301,7 @@ function ivr_configpageload() {
 		$currentcomponent->addguielem('_top', new gui_pageheading('title', $label), 0);
 		
 		//display usage
-		$usage_list			= '';//framework_display_destination_usage();
+		$usage_list			= framework_display_destination_usage(ivr_getdest($ivr['id']));
 		if (!empty($usage_list)) {
 			$usage_list_text	= isset($usage_list['text']) ? $usage_list['text'] : '';
 			$usage_list_tooltip	= isset($usage_list['tooltip']) ? $usage_list['tooltip'] : '';
@@ -311,7 +318,7 @@ function ivr_configpageload() {
 				true, false), 0);
 	}
 	
-
+	//general options
 	$gen_section = _('IVR General Options');
 	$currentcomponent->addguielem($gen_section, 
 		new gui_textbox('name', stripslashes($ivr['name']), _('IVR Name'), _('Name of this IVR.')));
@@ -319,7 +326,8 @@ function ivr_configpageload() {
 		new gui_textbox('description', stripslashes($ivr['description']), 
 		_('IVR Description'), _('Description of this directory.')));
 
-
+	
+	//dtmf options
 	$section = _('IVR Options (DTMF)');
 	
 	//build recordings select list
@@ -330,14 +338,14 @@ function ivr_configpageload() {
     $currentcomponent->setoptlistopts('recordings', 'sort', false);
 	
 	//build repeat_loops select list and defualt it to 3
-	//while not 100% nesesary, declaring this is the only way to prevent sorting on the list
+	//while addoptlist is not usually required, declaring this is the only way to prevent sorting on the list
 	$currentcomponent->addoptlist('ivr_repeat_loops', false); 
 	$currentcomponent->addoptlistitem('ivr_repeat_loops', 'disabled', 'Disabled');
 	for($i=0; $i <11; $i++){
 		$currentcomponent->addoptlistitem('ivr_repeat_loops', $i, $i);
 	}
 
-	//generate page
+	//greating to be played on entry to the ivr
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('announcement', $currentcomponent->getoptlist('recordings'), 
 			$ivr['announcement'], _('Announcement'), _('Greeting to be played on entry to the Ivr.'), false));
@@ -345,7 +353,6 @@ function ivr_configpageload() {
 
 	
 	//direct dial
-	//TODO: hook in from directory	
 	$currentcomponent->addoptlistitem('directdial', '', _('Disabled'));
 	$currentcomponent->addoptlistitem('directdial', 'ext-local', _('Extensions'));
 	
@@ -354,7 +361,8 @@ function ivr_configpageload() {
 
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('directdial', $currentcomponent->getoptlist('directdial'), 
-		$ivr['directdial'], _('Direct Dial'), _('Provides options for callers to direct dial an extension. Direct dialing can be:') . ul($currentcomponent->getgeneralarray('directdial_help')), false));
+		$ivr['directdial'], _('Direct Dial'), _('Provides options for callers to direct dial an extension. Direct dialing can be:') 
+		. ul($currentcomponent->getgeneralarray('directdial_help')), false));
 	
 	//add default to the recordings list. We dont want this for the general announcement, so we do it here
 	$currentcomponent->addoptlistitem('recordings', 'default', _('Default'));
@@ -377,7 +385,7 @@ function ivr_configpageload() {
 		new gui_drawselects('invalid_destination', 'invalid', $ivr['invalid_destination'], _('Invalid Destination'),
 		 _('Destination to send the call to after Invalid Recording is played.'), false));
 	
-	//timeout/invalid 
+	//timeout
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('timeout_loops', $currentcomponent->getoptlist('ivr_repeat_loops'), 
 		$ivr['timeout_loops'], _('Timeout Retries'), _('Number of times to retry when receiving an invalid/unmatched response from the caller'), false));
@@ -461,6 +469,7 @@ function ivr_configprocess(){
 	}
 }
 
+//save ivr settings
 function ivr_save_details($vals){
 	global $db, $amp_conf;
 
@@ -502,6 +511,7 @@ function ivr_save_details($vals){
 	return $vals['id'];
 }
 
+//save ivr entires
 function ivr_save_entries($id, $entries){
 	global $db;
 	$id = $db->escapeSimple($id);
@@ -509,8 +519,8 @@ function ivr_save_entries($id, $entries){
 
 	if ($entries) {
 		for ($i = 0; $i < count($entries['ext']); $i++) {
-			//make sure there is an extension set - otherwise SKIP IT
-			if ($entries['ext'][$i]) {
+			//make sure there is an extension & goto set - otherwise SKIP IT
+			if ($entries['ext'][$i] && $entries['goto'][$i]) {
 				$d[] = array(
 							'ivr_id'	=> $id,
 							'ext' 		=> $entries['ext'][$i],
@@ -530,18 +540,12 @@ function ivr_save_entries($id, $entries){
 	return true;
 }
 
-
+//draw uvr entires table header
 function ivr_draw_entries_table_header_ivr() {
 	return  array(_('Ext'), _('Destination'), fpbx_label(_('Return'), _('Return to IVR')), _('Delete'));
 }
 
-function ivr_draw_entries_ivr_ss($id) {
-	//TEST FUNCTION, DELETE ASAP
-	return array(form_input(array('name'	=> 'entries[test1][]','value'	=> 'test1')),
-				form_input(array('name'	=> 'entries[test2][]','value'	=> 'test2'))
-				);
-}
-
+//draw actualy entires 
 function ivr_draw_entries($id){
 	$headers		= mod_func_iterator('draw_entries_table_header_ivr');
 	$ivr_entries	= ivr_get_entries($id);
@@ -565,11 +569,7 @@ function ivr_draw_entries($id){
 
 }
 
-//used to add row's the entry table
-function ivr_draw_entries_tr($id, $realid, $name = '',$foreign_name, $audio = '',$num = '',$e_id = '', $reuse_audio = false){
-
-}
-
+//delete an ivr + entires
 function ivr_delete($id) {
 	global $db;
 	sql('DELETE FROM ivr_details WHERE id = "' . $db->escapeSimple($id) . '"');
