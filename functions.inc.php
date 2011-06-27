@@ -197,12 +197,13 @@ function ivr_get_config($engine) {
 					$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT_${CONTEXT}}'));
 					$ext->add($c, 'return', '', new ext_goto('s,start'));
 				}
+			
+				//h extension
+				$ext->add($c, 'h', '', new ext_hangup(''));
+				$ext->add($c, 'hang', '', new ext_playback('vm-goodbye'));
+				$ext->add($c, 'hang', '', new ext_hangup(''));
 			}
 			
-			//h extension
-			$ext->add($c, 'h', '', new ext_hangup(''));
-			$ext->add($c, 'hang', '', new ext_playback('vm-goodbye'));
-			$ext->add($c, 'hang', '', new ext_hangup(''));
 			
 			//generate from-ivr-directory contexts for direct dialing a directory entire
 			if (!empty($directdial_contexts)) {
