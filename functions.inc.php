@@ -261,7 +261,7 @@ function ivr_configpageload() {
 	$id 	= isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
 
 	if ($action  == 'add') {
-		$currentcomponent->addguielem('_top', new gui_pageheading('title', _('Add Directory')), 0);
+		$currentcomponent->addguielem('_top', new gui_pageheading('title', _('Add IVR')), 0);
 
 		$deet = array('id', 'name', 'description', 'announcement', 'directdial', 
 					'invalid_loops', 'invalid_retry_recording', 
@@ -324,7 +324,7 @@ function ivr_configpageload() {
 		new gui_textbox('name', stripslashes($ivr['name']), _('IVR Name'), _('Name of this IVR.')));
 	$currentcomponent->addguielem($gen_section, 
 		new gui_textbox('description', stripslashes($ivr['description']), 
-		_('IVR Description'), _('Description of this directory.')));
+		_('IVR Description'), _('Description of this ivr.')));
 
 	
 	//dtmf options
