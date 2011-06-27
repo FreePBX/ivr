@@ -56,8 +56,10 @@ sql("CREATE TABLE IF NOT EXISTS `ivr_entries` (
 
 $ivr_modcurrentvers = modules_getversion('ivr');
 
-//pre-2.10 migration. Do we even still need this? -MB
-if (version_compare($ivr_modcurrentvers, "2.9", "<")) {
+$res = $db->getAll('SELECT * from ivr');
+if($db->IsError($res)) {
+	out('Migration 2.10 done!');
+} else {
 	// Now, we need to check for upgrades.
 	// V1.0, old IVR. You shouldn't see this, but check for it anyway, and assume that it's 2.0
 	// V2.0, Original Release
@@ -279,10 +281,7 @@ if (version_compare($ivr_modcurrentvers, "2.9", "<")) {
 	  $notifications->add_notice('ivr', 'DIRECTORY_DEPRECATED', sprintf(_('Deprecated Directory used by %s IVRs'),$count), $extext, '', true, true);
 		out(_("posting notice about deprecated functionality"));
 	}
-	
-}
 
-if (version_compare($ivr_modcurrentvers, "2.9", "==")) {
 	//migrate to 2.10 tables
 	sql('RENAME TABLE ivr TO ivr_details');
 	sql('RENAME TABLE ivr_dests TO ivr_entries');
