@@ -47,18 +47,17 @@ if($amp_conf["AMPDBENGINE"] == "sqlite3")  {
 	);
 }
 
-sql("CREATE TABLE IF NOT EXISTS `ivr_entries` (
-	`ivr_id` int(11) NOT NULL,
-	`selection` varchar(10) default NULL,
-	`dest` varchar(50) default NULL,
-	`ivr_ret` tinyint(1) NOT NULL default '0')");
-
 
 $ivr_modcurrentvers = modules_getversion('ivr');
 
 $res = $db->getAll('SELECT * from ivr');
 if($db->IsError($res)) {
-	out('Migration 2.10 done!');
+	sql("CREATE TABLE IF NOT EXISTS `ivr_entries` (
+		`ivr_id` int(11) NOT NULL,
+		`selection` varchar(10) default NULL,
+		`dest` varchar(50) default NULL,
+		`ivr_ret` tinyint(1) NOT NULL default '0')");
+	out('Migration 2.10 not needed');
 } else {
 	// Now, we need to check for upgrades.
 	// V1.0, old IVR. You shouldn't see this, but check for it anyway, and assume that it's 2.0
@@ -283,9 +282,13 @@ if($db->IsError($res)) {
 	}
 
 	//migrate to 2.10 tables
+	out('Begining migration 2.10...');
+	
+	 //this was installed perviously, but we perfer to use our old table when migrating
+	sql('DROP TABLE ivr_details');
 	sql('RENAME TABLE ivr TO ivr_details');
 	sql('RENAME TABLE ivr_dests TO ivr_entries');
-	sql('ALTER TABLE ivr 
+	sql('ALTER TABLE ivr_details 
 	CHANGE ivr_id id int(11) NOT NULL AUTO_INCREMENT, 
 	CHANGE displayname name varchar(50), 
 	ADD description varchar(150) AFTER name,
@@ -297,7 +300,7 @@ if($db->IsError($res)) {
 	CHANGE loops invalid_loops varchar(10) AFTER directdial, 
 	CHANGE invalid_id invalid_recording varchar(25) AFTER invalid_loops,
 	ADD invalid_retry_recording varchar(25) AFTER invalid_loops,
-	ADD invalid_destination varchar(50) AFTER invalid_rety_recording,
+	ADD invalid_destination varchar(50) AFTER invalid_retry_recording,
 	CHANGE timeout timeout_time int(11),
 	CHANGE timeout_id timeout_recording varchar(25), 
 	ADD timeout_rety_recording varchar(25),
@@ -306,7 +309,7 @@ if($db->IsError($res)) {
 	DROP deptname, 
 	DROP enable_directory, 
 	DROP dircontext');
-	
+	sql('DELETE FROM ivr_details WHERE name = "__install_done"');
 
 	$ivr = $db->getAll('SELECT * FROM ivr_details', DB_FETCHMODE_ASSOC);
 	if($db->IsError($ivr)) {
@@ -391,7 +394,8 @@ if($db->IsError($res)) {
 	if ($db->IsError($res)){
 		die_freepbx($res->getDebugInfo());
 	}
-}
-
+	
+	out('Migration 2.10 done!');
+} 
 
 ?>
