@@ -149,11 +149,11 @@ function ivr_get_config($engine) {
 						case '':
 							break;
 						default:
-							$ext->add($c, 'i', '', 
+							$ext->add($c, 'i', 'final', 
 								new ext_playback(recordings_get_file($ivr['invalid_recording'])));
 							break;
 					}
-					$ext->add($c, 'i', '', new ext_goto($ivr['invalid_destination']));
+					$ext->add($c, 'i', 'final', new ext_goto($ivr['invalid_destination']));
 				}
 
 				// Apply timeout destination if required
@@ -184,11 +184,11 @@ function ivr_get_config($engine) {
 						case '':
 							break;
 						default:
-							$ext->add($c, 't', '', 
+							$ext->add($c, 't', 'final', 
 								new ext_playback(recordings_get_file($ivr['timeout_recording'])));
 							break;
 					}
-					$ext->add($c, 't', '', new ext_goto($ivr['timeout_destination']));
+					$ext->add($c, 't', 'final', new ext_goto($ivr['timeout_destination']));
 				}
 				if ($ivr['retvm']) {
 					// these need to be reset or inheritance problems makes them go away in some conditions 
@@ -369,7 +369,7 @@ function ivr_configpageload() {
 	$currentcomponent->addoptlistitem('recordings', 'default', _('Default'));
 	//$currentcomponent->addguielem($section, new gui_textbox('timeout_time', stripslashes($ivr['timeout_time']), _('Timeout'), _('Amount of time to be concidered a timeout')));
 	$currentcomponent->addguielem($section, new guielement('timeout_time',
-		'<tr><td>' . fpbx_label(_('Timeout'), _('Amount of time to be concidered a timeout')).'</td><td><input type="number" name="timeout_time" value="' 
+		'<tr class="IVROptionsDTMF"><td>' . fpbx_label(_('Timeout'), _('Amount of time to be concidered a timeout')).'</td><td><input type="number" name="timeout_time" value="' 
 					. $ivr['timeout_time'] 
 					.'" min="1" max="10" required></td></tr>'));
 	//invalid 
