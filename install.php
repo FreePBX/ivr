@@ -396,7 +396,9 @@ if($db->IsError($res)) {
 			if ($i['directdial'] == 'CHECKED') {
 				$ivr[$my]['directdial'] = 'ext-local';
 			}
-
+			
+			//remove unneeded array entires
+			unset($i['invalid_enabled'], $i['timeout_enabled'])
 		}
 	}
 		dbug('ivr for insert', $ivr);
