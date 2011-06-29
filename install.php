@@ -398,7 +398,7 @@ if($db->IsError($res)) {
 			}
 			
 			//remove unneeded array entires
-			unset($i['invalid_enabled'], $i['timeout_enabled']);
+			unset($ivr[$my]['invalid_enabled'], $ivr[$my]['timeout_enabled']);
 		}
 	}
 		dbug('ivr for insert', $ivr);
