@@ -416,7 +416,7 @@ if($db->IsError($res)) {
 	
 	//remove all legacy t or i dests
 	sql('DELETE FROM ivr_entries WHERE selection IN("t", "i")');
-	sql('DROP invalid_enabled, DROP timeout_enabled');
+	sql('ALTER TABLE ivr_details DROP invalid_enabled, DROP timeout_enabled');
 	
 	out('Migration 2.10 done!');
 } 
