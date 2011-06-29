@@ -448,7 +448,7 @@ function ivr_configprocess(){
 		$get_var = array('id', 'name', 'description', 'announcement',
 						'directdial', 'invalid_loops', 'invalid_retry_recording',
 						'invalid_destination', 'timeout_enabled', 'invalid_recording',
-						'retvm', 'invalid_enabled', 'timeout_time', 'timeout_recording',
+						'retvm', 'timeout_time', 'timeout_recording',
 						'timeout_retry_recording', 'timeout_destination', 'timeout_loops');
 		foreach($get_var as $var){
 			$vars[$var] = isset($_REQUEST[$var]) 	? $_REQUEST[$var]		: '';
@@ -488,9 +488,9 @@ function ivr_save_details($vals){
 		$sql = 'REPLACE INTO ivr_details (id, name, description, announcement,
 				directdial, invalid_loops, invalid_retry_recording,
 				invalid_destination, timeout_enabled, invalid_recording,
-				retvm, invalid_enabled, timeout_time, timeout_recording,
+				retvm, timeout_time, timeout_recording,
 				timeout_retry_recording, timeout_destination, timeout_loops)
-				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 		$foo = $db->query($sql, $vals);
 		if($db->IsError($foo)) {
 			die_freepbx(print_r($vals,true).' '.$foo->getDebugInfo());
@@ -500,7 +500,7 @@ function ivr_save_details($vals){
 		$sql = 'INSERT INTO ivr_details (name, description, announcement,
 				directdial, invalid_loops, invalid_retry_recording,
 				invalid_destination, timeout_enabled, invalid_recording,
-				retvm, invalid_enabled, timeout_time, timeout_recording,
+				retvm, timeout_time, timeout_recording,
 				timeout_retry_recording, timeout_destination, timeout_loops)
 				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 				

@@ -17,7 +17,6 @@ if($amp_conf["AMPDBENGINE"] == "sqlite3")  {
 		`timeout_enabled` varchar(50) default NULL,
 		`invalid_recording` varchar(25) default NULL,
 		`retvm` varchar(8) default NULL,
-		`invalid_enabled` varchar(50) default NULL,
 		`timeout_time` int(11) default NULL,
 		`timeout_recording` varchar(25) default NULL,
 		`timeout_retry_recording` varchar(25) default NULL,
@@ -37,7 +36,6 @@ if($amp_conf["AMPDBENGINE"] == "sqlite3")  {
 		`timeout_enabled` varchar(50) default NULL,
 		`invalid_recording` varchar(25) default NULL,
 		`retvm` varchar(8) default NULL,
-		`invalid_enabled` varchar(50) default NULL,
 		`timeout_time` int(11) default NULL,
 		`timeout_recording` varchar(25) default NULL,
 		`timeout_retry_recording` varchar(25) default NULL,
@@ -309,6 +307,7 @@ if($db->IsError($res)) {
 	DROP deptname, 
 	DROP enable_directory, 
 	DROP dircontext');
+	
 	sql('DELETE FROM ivr_details WHERE name = "__install_done"');
 	//copy loops from invalid to timeout
 	sql('UPDATE ivr_details SET timeout_loops = invalid_loops');
@@ -333,7 +332,7 @@ if($db->IsError($res)) {
 
 			//INVALID
 			//if we have an invalid destination in entires, move it here
-			if (isset($e[$i['id']]['i']) && $e[$i['id']]['i']) {
+			if ($i['invalid_enabled'] == 'CHECKED' && isset($e[$i['id']]['i']) && $e[$i['id']]['i']) {
 				$ivr[$my]['invalid_destination'] = $e[$i['id']]['i']['dest'];
 
 				//if there are no invalid loops, set to disabled
@@ -364,7 +363,7 @@ if($db->IsError($res)) {
 
 			//TIMEOUT
 			//if we have an invalid destination in entires, move it here
-			if (isset($e[$i['id']]['t']) && $e[$i['id']]['t']) {
+			if ($i['timeout_enabled'] == 'CHECKED' && isset($e[$i['id']]['t']) && $e[$i['id']]['t']) {
 				$ivr[$my]['timeout_destination'] = $e[$i['id']]['t']['dest'];
 
 				//if there are no timeout loops, set to disabled
@@ -392,15 +391,21 @@ if($db->IsError($res)) {
 				$ivr[$my]['timeout_recording'] = '';
 				$ivr[$my]['timeout_destination'] = '';
 			}
+			
+			//direct dial
+			if ($i['directdial'] == 'CHECKED') {
+				$ivr[$my]['directdial'] = 'ext-local';
+			}
+
 		}
 	}
 		dbug('ivr for insert', $ivr);
 	$sql = $db->prepare('REPLACE INTO ivr_details (id, name, description, announcement,
 				directdial, invalid_loops, invalid_retry_recording,
 				invalid_destination, timeout_enabled, invalid_recording,
-				retvm, invalid_enabled, timeout_time, timeout_recording,
+				retvm, timeout_time, timeout_recording,
 				timeout_retry_recording, timeout_destination, timeout_loops)
-				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
 	$res = $db->executeMultiple($sql, $ivr);
 	if ($db->IsError($res)){
 		print_r($db->last_query);
@@ -409,6 +414,7 @@ if($db->IsError($res)) {
 	
 	//remove all legacy t or i dests
 	sql('DELETE FROM ivr_entries WHERE selection IN("t", "i")');
+	sql('DROP invalid_enabled, DROP timeout_enabled');
 	
 	out('Migration 2.10 done!');
 } 
