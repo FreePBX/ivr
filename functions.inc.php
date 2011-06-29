@@ -126,10 +126,10 @@ function ivr_get_config($engine) {
 				if ($ivr['invalid_loops'] != 'disabled') {
 					if ($ivr['invalid_loops'] > 0) {
 						$ext->add($c, 'i', '', new ext_set('INVALID_LOOPCOUNT', '$[${INVALID_LOOPCOUNT}+1]'));
-						$ext->add($c, 'i', '',	new ext_gotoif('$[${INVALID_LOOPCOUNT} = ' . $ivr['invalid_loops'] . ']','final'));
+						$ext->add($c, 'i', '',	new ext_gotoif('$[${INVALID_LOOPCOUNT} > ' . $ivr['invalid_loops'] . ']','final'));
 						switch ($ivr['invalid_retry_recording']) {
 							case 'default':
-								$ext->add($c, 'i', '', new ext_playback('invalid'));
+								$ext->add($c, 'i', '', new ext_playback('no-valid-responce-pls-try-again'));
 								break;
 							case '':
 								break;
@@ -141,30 +141,32 @@ function ivr_get_config($engine) {
 						$ext->add($c, 'i', '', new ext_goto('s,start'));
 					}
 
-					
+					$label = 'final';
 					switch ($ivr['invalid_recording']) {
 						case 'default':
-							$ext->add($c, 'i', 'final', new ext_playback('invalid'));
+							$ext->add($c, 'i', $label, new ext_playback('no-valid-responce-transfering'));
+							$label ='';
 							break;
 						case '':
 							break;
 						default:
-							$ext->add($c, 'i', 'final', 
+							$ext->add($c, 'i', $label, 
 								new ext_playback(recordings_get_file($ivr['invalid_recording'])));
+							$label = '';
 							break;
 					}
-					$ext->add($c, 'i', 'final', new ext_goto($ivr['invalid_destination']));
+					$ext->add($c, 'i', $label, new ext_goto($ivr['invalid_destination']));
 				}
 
 				// Apply timeout destination if required
 				if ($ivr['timeout_loops'] != 'disabled') {
 					if ($ivr['timeout_loops'] > 0) {
 						$ext->add($c, 't', '', new ext_set('TIMEOUT_LOOPCOUNT', '$[${TIMEOUT_LOOPCOUNT}+1]'));
-						$ext->add($c, 't', '', new ext_gotoif('$[${TIMEOUT_LOOPCOUNT} = ' . $ivr['timeout_loops'] . ']','final'));
+						$ext->add($c, 't', '', new ext_gotoif('$[${TIMEOUT_LOOPCOUNT} > ' . $ivr['timeout_loops'] . ']','final'));
 
 						switch ($ivr['timeout_retry_recording']) {
 							case 'default':
-								$ext->add($c, 't', '', new ext_playback('invalid'));
+								$ext->add($c, 't', '', new ext_playback('no-valid-responce-pls-try-again'));
 								break;
 							case '':
 								break;
@@ -177,19 +179,23 @@ function ivr_get_config($engine) {
 						$ext->add($c, 't', '', new ext_goto('s,start'));
 					}
 					
+					$label = 'final';
 					switch ($ivr['timeout_recording']) {
 						case 'default':
-							$ext->add($c, 't', 'final', new ext_playback('invalid'));
+							$ext->add($c, 't', $label, new ext_playback('no-valid-responce-transfering'));
+							$label = '';
 							break;
 						case '':
 							break;
 						default:
-							$ext->add($c, 't', 'final', 
+							$ext->add($c, 't', $label, 
 								new ext_playback(recordings_get_file($ivr['timeout_recording'])));
+							$label = '';
 							break;
 					}
-					$ext->add($c, 't', 'final', new ext_goto($ivr['timeout_destination']));
+					$ext->add($c, 't', $label, new ext_goto($ivr['timeout_destination']));
 				}
+				
 				if ($ivr['retvm']) {
 					// these need to be reset or inheritance problems makes them go away in some conditions 
 					//and infinite inheritance creates other problems
@@ -225,7 +231,7 @@ function ivr_get_config($engine) {
 	}
 }
 
-//replaces ivr_list(), retunrs all details of any ivr
+//replaces ivr_list(), returns all details of any ivr
 function ivr_get_details($id = '') {
 	global $db;
 
