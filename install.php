@@ -339,14 +339,19 @@ if($db->IsError($res)) {
 				//if there are no invalid loops, set to disabled
 				if ($i['invalid_loops'] < 0) {
 					$ivr[$my]['invalid_loops'] = 'disabled';
+					$ivr[$my]['invalid_retry_recording'] = '';
+					$ivr[$my]['invalid_recording'] = '';
+					$ivr[$my]['invalid_destination'] = '';
 
 				//if there are zero disabled loops, we dont need a retry recording
 				} elseif ($i['invalid_loops'] === 0) {
 					$ivr[$my]['invalid_retry_recording'] = '';
+					$ivr[$my]['invalid_recording'] = 'default';
 
 				//otherwise, set invalid retry to the save as invalid_recording
 				} elseif ($i['invalid_loops'] > 0) {
 					$ivr[$my]['invalid_retry_recording'] = $i['invalid_recording'];
+					$ivr[$my]['invalid_recording'] = 'default';
 				}
 
 			//if we DONT have an invalid destination, set everything to disbaled
@@ -360,19 +365,24 @@ if($db->IsError($res)) {
 			//TIMEOUT
 			//if we have an invalid destination in entires, move it here
 			if (isset($e[$i['id']]['t']) && $e[$i['id']]['t']) {
-				$ivr[$my]['timeout_destination'] = $e[$i['id']]['i']['dest'];
+				$ivr[$my]['timeout_destination'] = $e[$i['id']]['t']['dest'];
 
 				//if there are no timeout loops, set to disabled
 				if ($i['timeout_loops'] < 0) {
 					$ivr[$my]['timeout_loops'] = 'disabled';
+					$ivr[$my]['timeout_retry_recording'] = '';
+					$ivr[$my]['timeout_recording'] = '';
+					$ivr[$my]['timeout_destination'] = '';
 
 				//if there are zero disabled loops, we dont need a retry recording
 				} elseif ($i['timeout_loops'] === 0) {
 					$ivr[$my]['timeout_retry_recording'] = '';
-
+					$ivr[$my]['timeout_recording'] = 'default';
+					
 				//otherwise, set timeout retry to the save as invalid_recording
 				} elseif ($i['timeout_loops'] > 0) {
 					$ivr[$my]['timeout_retry_recording'] = $i['timeout_recording'];
+					$ivr[$my]['timeout_recording'] = 'default';
 				}
 
 			//if we DONT have an timeout destination, set everything to disbaled
@@ -396,6 +406,9 @@ if($db->IsError($res)) {
 		print_r($db->last_query);
 		die_freepbx($res->getDebugInfo());
 	}
+	
+	//remove all legacy t or i dests
+	sql('DELETE FROM ivr_entries WHERE selection IN("t", "i")');
 	
 	out('Migration 2.10 done!');
 } 
