@@ -5,11 +5,6 @@
 // returns a associative arrays with keys 'destination' and 'description'
 function ivr_destinations() {
 	global $module_page;
-
-	// it makes no sense to point at another ivr (and it can be lead to an infinite loop)
-	if ($module_page == 'ivr' || isset($_REQUEST['display']) && $_REQUEST['display'] == 'ivr') {
-		return false;
-	}
 	
 	//get the list of IVR's
 	$results = ivr_get_details();
