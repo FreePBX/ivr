@@ -402,10 +402,10 @@ if($db->IsError($res)) {
 		dbug('ivr for insert', $ivr);
 	$sql = $db->prepare('REPLACE INTO ivr_details (id, name, description, announcement,
 				directdial, invalid_loops, invalid_retry_recording,
-				invalid_destination, timeout_enabled, invalid_recording,
+				invalid_destination, invalid_recording,
 				retvm, timeout_time, timeout_recording,
 				timeout_retry_recording, timeout_destination, timeout_loops)
-				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
 	$res = $db->executeMultiple($sql, $ivr);
 	if ($db->IsError($res)){
 		print_r($db->last_query);
