@@ -555,12 +555,15 @@ function ivr_draw_entries($id){
 	if ($ivr_entries) {
 		foreach ($ivr_entries as $k => $e) {
 			$entries[$k]= $e;
-			$entries[$k]['hooks'] = mod_func_iterator('draw_entries_ivr', array('id' => $id, 'ext' => $e['selection']));
+			$array = array('id' => $id, 'ext' => $e['selection']);
+			$entries[$k]['hooks'] = mod_func_iterator('draw_entries_ivr', $array);
 		}
 	}
 	
 	$entries['blank'] = array('selection' => '', 'dest' => '', 'ivr_ret' => '');
-	$entries['blank']['hooks'] = mod_func_iterator('draw_entries_ivr', array('id' => '', 'ext' => ''));
+	//assign to a vatriable first so that it can be passed by reference
+	$array = array('id' => '', 'ext' => '');
+	$entries['blank']['hooks'] = mod_func_iterator('draw_entries_ivr', $array);
 	
 	return load_view(dirname(__FILE__) . '/views/entries.php', 
 				array(
