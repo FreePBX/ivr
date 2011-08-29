@@ -5,8 +5,7 @@
 	<version>2.10.0</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
-	<type>setup</type>
-	<category>Inbound Call Control</category>
+	<category>Apps</category>
 	<description>
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers. 
 	</description>
@@ -18,37 +17,6 @@
 		*2.9.0.2* #4799
 		*2.9.0.1* removed duplicate functions
 		*2.9.0.0* #1798, #4655
-		*2.8.0.5* localization updates
-		*2.8.0.4* #4309, #4310, #4313
-		*2.8.0.3* #4296
-		*2.8.0.2* #4275, #4286
-		*2.8.0.1* #4257 allow direct extension dialing to Directory "contexts"
-		*2.8.0.0* cleanup of IVR based on new drawselects: #1798
-		*2.7.0.2* localizations
-		*2.7.0.1* #4025
-		*2.7.0.0* #3923, #4013
-		*2.6.0.3* #4013
-		*2.6.0.2* #3780
-		*2.6.0.1* #3732
-		*2.6.0.0* #3384, add hook support
-		*2.5.20.5* localization string enclosures
-		*2.5.20.4* #3245, localization fixes
-		*2.5.20.3* localization, Swedish
-		*2.5.20.2* #3188 clear MSG var if no message
-		*2.5.20.1* Sqlite3 fixes, move ivr_init() to install script
-		*2.5.20* #3099 allows a return to IVR from voicemail option and from busy phone
-		*2.5.19.2* #2987, #3005 sqlite3 install script, spelling
-		*2.5.19.1* #2965 not working on IE fixed
-		*2.5.19* #2865 Add alternative messages to play if t or i are hit, replacing the first announcmement
-		*2.5.18.1* #2948 don't allow deletion if used by a Queue and show list
-		*2.5.18* #2066 Migrate recordings to recording ids
-		*2.5.17.1* #2845 tabindex
-		*2.5.17* #2858 Better handing of i and t options, added loop count and ability to loop before going to user defined i, t options
-		*2.5.16.3* #2604, #2843 fix mal-formed html tags, Russian Translation
-		*2.5.16.2* #2687 breakout from Queue to Company Directory blocks voicemail
-		*2.5.16.1* #2591, added depends on 2.4.0
-		*2.5.16* Extension/dest registry, #2303, it translation
-		*2.5.15* CHANGELOG TRUNCATED See SVN Repository
 	</changelog>
 	<depends>
 		<version>2.5.0alpha1</version>
