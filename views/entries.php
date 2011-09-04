@@ -61,7 +61,7 @@ foreach ($entries as $e) {
 
 $ret = '';
 $ret .= $table->generate();
-$ret .= '<img class="IVREntries" src="modules/ivr/assets/images/add.png" style="cursor:pointer" title="' . _('Add Entrie') 
+$ret .= '<img class="IVREntries" src="modules/ivr/assets/images/add.png" style="cursor:pointer" title="' . _('Add Entry') 
 		. '" id="add_entrie">';
 
 

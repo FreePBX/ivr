@@ -6,7 +6,7 @@ global $amp_conf;
 
 if($amp_conf["AMPDBENGINE"] == "sqlite3")  {
 	sql("CREATE TABLE IF NOT EXISTS `ivr_details` (
-		`id` int(11) NOT NULL PRIMARY KEYAUTOINCREMENT,
+		`id` int(11) NOT NULL PRIMARY KEY AUTOINCREMENT,
 		`name` varchar(50) default NULL,
 		`description` varchar(150) default NULL,
 		`announcement` int(11) default NULL,
