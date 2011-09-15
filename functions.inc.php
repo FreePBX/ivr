@@ -370,9 +370,9 @@ function ivr_configpageload() {
 	$currentcomponent->addoptlistitem('recordings', 'default', _('Default'));
 	//$currentcomponent->addguielem($section, new gui_textbox('timeout_time', stripslashes($ivr['timeout_time']), _('Timeout'), _('Amount of time to be concidered a timeout')));
 	$currentcomponent->addguielem($section, new guielement('timeout_time',
-		'<tr class="IVROptionsDTMF"><td>' . fpbx_label(_('Timeout'), _('Amount of time to be concidered a timeout')).'</td><td><input type="number" name="timeout_time" value="' 
+		'<tr class="IVROptionsDTMF"><td>' . fpbx_label(_('Timeout'), _('Amount of time to be considered a timeout')).'</td><td><input type="number" name="timeout_time" value="' 
 					. $ivr['timeout_time'] 
-					.'" min="1" max="10" required></td></tr>'));
+					.'" required></td></tr>'));
 	//invalid 
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('invalid_loops', $currentcomponent->getoptlist('ivr_repeat_loops'), 
