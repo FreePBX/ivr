@@ -526,8 +526,8 @@ function ivr_save_entries($id, $entries){
 			if ($entries['ext'][$i] && $entries['goto'][$i]) {
 				$d[] = array(
 							'ivr_id'	=> $id,
-							'ext' 		=> $entries['ext'][$i],
-							'goto'		=> $entries['goto'][$i],
+							'selection' 	=> $entries['ext'][$i],
+							'dest'		=> $entries['goto'][$i],
 							'ivr_ret'	=> (isset($entries['ivr_ret'][$i]) ? $entries['ivr_ret'][$i] : '')
 						);
 			}
