@@ -421,12 +421,13 @@ function ivr_configpageload() {
 function ivr_configpageinit($pagename) {
 	global $currentcomponent;
 	$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
-	
+	$id = isset($_REQUEST['id']) ? $_REQUEST['id'] : '';
+
 	if($pagename == 'ivr'){
 		$currentcomponent->addprocessfunc('ivr_configprocess');
 		
 		//dont show page if there is no action set
-		if ($action && $action != 'delete') {			
+		if ($action && $action != 'delete' || $id) {			
 			$currentcomponent->addguifunc('ivr_configpageload');
 		}
 		
@@ -459,8 +460,8 @@ function ivr_configprocess(){
 				$_REQUEST['id'] = $vars['id'] = ivr_save_details($vars);
 				ivr_save_entries($vars['id'], $entries);
 				needreload();
-				$_REQUEST['action'] = 'edit';
-				redirect_standard_continue('id', 'action');
+				//$_REQUEST['action'] = 'edit';
+				redirect_standard_continue('id');
 			break;
 			case 'delete':
 				ivr_delete($vars['id']);
