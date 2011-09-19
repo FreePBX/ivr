@@ -27,7 +27,7 @@ foreach ($get_vars as $k => $v) {
 
 echo load_view(dirname(__FILE__) . '/views/rnav.php', array('ivr_results' => ivr_get_details()) + $var);
 
-if (!$action) {
+if (!$action && !$id) {
 ?>
 <h2><?php echo _("IVR"); ?></h2>
 <br/><br/>

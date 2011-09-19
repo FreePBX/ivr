@@ -385,7 +385,7 @@ function ivr_configpageload() {
 		$ivr['invalid_recording'], _('Invalid Recording'), _('Prompt to be played before sending the caller to an alternate destination due to the caller pressing 0 or receiving the maximum amount of invalid/unmatched responses (as determined by Invalid Retries)'), false));
 	$currentcomponent->addguielem($section, 
 		new gui_drawselects('invalid_destination', 'invalid', $ivr['invalid_destination'], _('Invalid Destination'),
-		 _('Destination to send the call to after Invalid Recording is played.'), false));
+		 _('Destination to send the call to after Invalid Recording is played.'), true));
 	
 	//timeout
 	$currentcomponent->addguielem($section, 
@@ -399,7 +399,7 @@ function ivr_configpageload() {
 		$ivr['timeout_recording'], _('Timeout Recording'), _('Prompt to be played before sending the caller to an alternate destination due to the caller pressing 0 or receiving the maximum amount of invalid/unmatched responses (as determined by Invalid Retries)'), false));
 	$currentcomponent->addguielem($section, 
 		new gui_drawselects('timeout_destination', 'timeout', 
-		$ivr['timeout_destination'], _('Timeout Destination'), _('Destination to send the call to after Invalid Recording is played.'), false));
+		$ivr['timeout_destination'], _('Timeout Destination'), _('Destination to send the call to after Invalid Recording is played.'), true));
 	
 	//return to ivr
 	$currentcomponent->addguielem($section, 
