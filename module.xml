@@ -5,7 +5,7 @@
 	<version>2.10.0</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
-	<category>Apps</category>
+	<category>Applications</category>
 	<description>
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers. 
 	</description>
