@@ -38,6 +38,7 @@ function ivr_get_config($engine) {
 			
 			//draw a list of ivrs included by any queues
 			$queues = queues_list(true);
+			$qivr = array();
 			foreach ($queues as $q) {
 				$thisq = queues_get($q[0]);
 				if ($thisq['context'] && strpos($thisq['context'], 'ivr-') === 0) {
@@ -636,7 +637,7 @@ function ivr_getdestinfo($dest) {
 			return array();
 		} else {
 			//$type = isset($active_modules['ivr']['type'])?$active_modules['ivr']['type']:'setup';
-			return array('description' => sprintf(_("IVR: %s"), ($result['name'] ? $result['name'] : $result['id'])),
+			return array('description' => sprintf(_("IVR: %s"), ($thisexten['name'] ? $thisexten['name'] : $thisexten['id'])),
 			             'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($exten),
 								  );
 		}
