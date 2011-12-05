@@ -18,7 +18,7 @@ $(document).ready(function(){
 			&& last.find('.destdropdown').val() == ''){
 			last.remove()
 		}
-	})
+	});
 	
  	$('[name=frm_ivr]').submit(function(){
 		//set timeout/invalid destination, removing hidden field if there is no valus being set
@@ -47,7 +47,7 @@ $(document).ready(function(){
 		
 		//set ret_ivr checkboxes to SOMETHING so that they get sent back
 		$('[name="entries[ivr_ret][]"]').not(':checked').each(function(){
-			$(this).attr('checked','checked').val('uncheked')
+			$(this).attr('checked', 'checked').val('uncheked')
 		})
 		
 		//disable dests so that they dont get posted
