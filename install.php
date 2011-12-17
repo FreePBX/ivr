@@ -1,4 +1,5 @@
 <?php
+if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 require_once dirname(__FILE__)."/functions.inc.php";
 
 global $db;
