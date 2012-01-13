@@ -28,6 +28,6 @@
 	<menuitems>
 		<ivr>IVR</ivr>
 	</menuitems>
-	<location>release/2.10/ivr-2.10.0.2.tgz</location>
-	<md5sum>96240fd2674a30eef87bd62887977019</md5sum>
+	<location>release/2.10/ivr-2.10.0.3.tgz</location>
+	<md5sum>04e067f4ba48e18559a6b649b3e8f04e</md5sum>
 </module>
