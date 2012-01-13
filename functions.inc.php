@@ -525,7 +525,7 @@ function ivr_save_entries($id, $entries){
 	if ($entries) {
 		for ($i = 0; $i < count($entries['ext']); $i++) {
 			//make sure there is an extension & goto set - otherwise SKIP IT
-			if ($entries['ext'][$i] && $entries['goto'][$i]) {
+			if (trim($entries['ext'][$i]) != '' && $entries['goto'][$i]) {
 				$d[] = array(
 							'ivr_id'	=> $id,
 							'selection' 	=> $entries['ext'][$i],
