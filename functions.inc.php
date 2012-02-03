@@ -232,7 +232,7 @@ function ivr_get_config($engine) {
 function ivr_get_details($id = '') {
 	global $db;
 
-	$sql = "SELECT * FROM ivr_details";
+	$sql = "SELECT *, announcement announcement_id FROM ivr_details";
 	if ($id) {
 		$sql .= ' where  id = "' . $id . '"';
 	}
