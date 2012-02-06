@@ -241,7 +241,7 @@ function ivr_get_details($id = '') {
 		die_freepbx($res->getDebugInfo());
 	}
 
-	return $id ? $res[0] : $res;
+	return $id && isset($res[0]) ? $res[0] : $res;
 }
 
 //get all ivr entires
