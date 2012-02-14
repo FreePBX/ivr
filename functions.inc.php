@@ -82,10 +82,14 @@ function ivr_get_config($engine) {
 				$ext->add($c, 's', '', new ext_gotoif('$["${CDR(disposition)}" = "ANSWERED"]','start'));
 				$ext->add($c, 's', '', new ext_answer(''));
 				$ext->add($c, 's', '', new ext_wait('1'));
+
+				$ivr_announcement = recordings_get_file($ivr['announcement']);
+				$ext->add($c, 's', '', new ext_set('IVR_MSG', $ivr_announcement));
+
 				$ext->add($c, 's', 'start', new ext_digittimeout(3));
 				//$ext->add($ivr_id, 's', '', new ext_responsetimeout($ivr['timeout_time']));
 
-				$ext->add($c, 's', '', new ext_background(recordings_get_file($ivr['announcement'])));
+				$ext->add($c, 's', '', new ext_execif('$["${IVR_MSG}" != ""]','Background','${IVR_MSG}'));
 				$ext->add($c, 's', '', new ext_waitexten($ivr['timeout_time']));
 				
 
@@ -126,15 +130,20 @@ function ivr_get_config($engine) {
 						$ext->add($c, 'i', '',	new ext_gotoif('$[${INVALID_LOOPCOUNT} > ' . $ivr['invalid_loops'] . ']','final'));
 						switch ($ivr['invalid_retry_recording']) {
 							case 'default':
-								$ext->add($c, 'i', '', new ext_playback('no-valid-responce-pls-try-again'));
+								$invalid_annoucement = 'no-valid-responce-pls-try-again';
 								break;
 							case '':
+								$invalid_annoucement = '';
 								break;
 							default:
-								$ext->add($c, 'i', '', new ext_playback(recordings_get_file($ivr['invalid_retry_recording'])));
+								$invalid_annoucement = recordings_get_file($ivr['invalid_retry_recording']);
 								break;
 						}
 
+						if ($ivr['invalid_append_announce'] || $invalid_annoucement == '') {
+							$invalid_annoucement .= '&' . $ivr_announcement;
+						}
+						$ext->add($c, 'i', '', new ext_set('IVR_MSG', trim($invalid_annoucement, '&')));
 						$ext->add($c, 'i', '', new ext_goto('s,start'));
 					}
 
@@ -153,6 +162,10 @@ function ivr_get_config($engine) {
 							break;
 					}
 					$ext->add($c, 'i', $label, new ext_goto($ivr['invalid_destination']));
+				} else {
+					// If no invalid destination provided we need to do something
+					$ext->add($c, 'i', '', new ext_playback('sorry-youre-having-problems'));
+					$ext->add($c, 'i', '', new ext_goto('1','hang'));
 				}
 
 				// Apply timeout destination if required
@@ -163,16 +176,20 @@ function ivr_get_config($engine) {
 
 						switch ($ivr['timeout_retry_recording']) {
 							case 'default':
-								$ext->add($c, 't', '', new ext_playback('no-valid-responce-pls-try-again'));
+								$timeout_annoucement = 'no-valid-responce-pls-try-again';
 								break;
 							case '':
+								$timeout_annoucement = '';
 								break;
 							default:
-								$ext->add($c, 't', '', 
-									new ext_playback(recordings_get_file($ivr['timeout_retry_recording'])));
+								$timeout_annoucement = recordings_get_file($ivr['timeout_retry_recording']);
 								break;
 						}
 
+						if ($ivr['timeout_append_announce'] || $timeout_annoucement == '') {
+							$timeout_annoucement .= '&' . $ivr_announcement;
+						}
+						$ext->add($c, 't', '', new ext_set('IVR_MSG', trim($timeout_annoucement, '&')));
 						$ext->add($c, 't', '', new ext_goto('s,start'));
 					}
 					
@@ -191,6 +208,10 @@ function ivr_get_config($engine) {
 							break;
 					}
 					$ext->add($c, 't', $label, new ext_goto($ivr['timeout_destination']));
+				} else {
+					// If no invalid destination provided we need to do something
+					$ext->add($c, 't', '', new ext_playback('sorry-youre-having-problems'));
+					$ext->add($c, 't', '', new ext_goto('1','hang'));
 				}
 				
 				if ($ivr['retvm']) {
@@ -198,6 +219,7 @@ function ivr_get_config($engine) {
 					//and infinite inheritance creates other problems
 					$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
 					$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT_${CONTEXT}}'));
+					$ext->add($c, 'return', '', new ext_set('IVR_MSG', $ivr_announcement));
 					$ext->add($c, 'return', '', new ext_goto('s,start'));
 				}
 			
@@ -382,6 +404,10 @@ function ivr_configpageload() {
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('invalid_retry_recording', $currentcomponent->getoptlist('recordings'), 
 		$ivr['invalid_retry_recording'], _('Invalid Retry Recording'), _('Prompt to be played when an invalid/unmatched response is received, before prompting the caller to try again'), false));
+
+	$currentcomponent->addguielem($section, 
+		new gui_checkbox('invalid_append_announce', $ivr['invalid_append_announce'], _('Append Original Annoucement'), _('After playing the Invalid Retry Recording the system will replay the main IVR Annoucement')));
+
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('invalid_recording', $currentcomponent->getoptlist('recordings'), 
 		$ivr['invalid_recording'], _('Invalid Recording'), _('Prompt to be played before sending the caller to an alternate destination due to the caller pressing 0 or receiving the maximum amount of invalid/unmatched responses (as determined by Invalid Retries)'), false));
@@ -396,6 +422,10 @@ function ivr_configpageload() {
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('timeout_retry_recording', $currentcomponent->getoptlist('recordings'), 
 		$ivr['timeout_retry_recording'], _('Timeout Retry Recording'), _('Prompt to be played when an invalid/unmatched response is received, before prompting the caller to try again'), false));
+
+	$currentcomponent->addguielem($section, 
+		new gui_checkbox('timeout_append_announce', $ivr['timeout_append_announce'], _('Append Original Annoucement'), _('After playing the Timeout Retry Recording the system will replay the main IVR Annoucement')));
+
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('timeout_recording', $currentcomponent->getoptlist('recordings'), 
 		$ivr['timeout_recording'], _('Timeout Recording'), _('Prompt to be played before sending the caller to an alternate destination due to the caller pressing 0 or receiving the maximum amount of invalid/unmatched responses (as determined by Invalid Retries)'), false));
@@ -447,10 +477,13 @@ function ivr_configprocess(){
 						'directdial', 'invalid_loops', 'invalid_retry_recording',
 						'invalid_destination', 'invalid_recording',
 						'retvm', 'timeout_time', 'timeout_recording',
-						'timeout_retry_recording', 'timeout_destination', 'timeout_loops');
+						'timeout_retry_recording', 'timeout_destination', 'timeout_loops',
+						'timeout_append_announce', 'invalid_append_announce');
 		foreach($get_var as $var){
 			$vars[$var] = isset($_REQUEST[$var]) 	? $_REQUEST[$var]		: '';
 		}
+		$vars['timeout_append_announce'] = empty($vars['timeout_append_announce']) ? '0' : '1';
+		$vars['invalid_append_announce'] = empty($vars['invalid_append_announce']) ? '0' : '1';
 
 		$action		= isset($_REQUEST['action'])	? $_REQUEST['action']	: '';
 		$entries	= isset($_REQUEST['entries'])	? $_REQUEST['entries']	: '';
@@ -487,8 +520,9 @@ function ivr_save_details($vals){
 				directdial, invalid_loops, invalid_retry_recording,
 				invalid_destination, invalid_recording,
 				retvm, timeout_time, timeout_recording,
-				timeout_retry_recording, timeout_destination, timeout_loops)
-				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+				timeout_retry_recording, timeout_destination, timeout_loops,
+				timeout_append_announce, invalid_append_announce)
+				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 		$foo = $db->query($sql, $vals);
 		if($db->IsError($foo)) {
 			die_freepbx(print_r($vals,true).' '.$foo->getDebugInfo());
@@ -499,8 +533,9 @@ function ivr_save_details($vals){
 				directdial, invalid_loops, invalid_retry_recording,
 				invalid_destination,  invalid_recording,
 				retvm, timeout_time, timeout_recording,
-				timeout_retry_recording, timeout_destination, timeout_loops)
-				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+				timeout_retry_recording, timeout_destination, timeout_loops,
+				timeout_append_announce, invalid_append_announce)
+				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 				
 		$foo = $db->query($sql, $vals);
 		if($db->IsError($foo)) {

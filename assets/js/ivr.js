@@ -82,7 +82,7 @@ function restore_form_elemens() {
 
 //always disable hidden elements so that they dont trigger validation
 function invalid_elements() {
-	var invalid_elements = $('#invalid_retry_recording, #invalid_recording, [name=gotoinvalid]');
+	var invalid_elements = $('#invalid_retry_recording, #invalid_recording, #invalid_append_announce, [name=gotoinvalid]');
 	var invalid_element_tr = invalid_elements.parent().parent();
 	switch ($('#invalid_loops').val()) {
 		case 'disabled':
@@ -93,6 +93,7 @@ function invalid_elements() {
 			invalid_elements.removeAttr('disabled')
 			invalid_element_tr.show();
 			$('#invalid_retry_recording').parent().parent().hide();
+			$('#invalid_append_announce').parent().parent().hide();
 			break;
 		default:
 			invalid_elements.removeAttr('disabled')
@@ -103,7 +104,7 @@ function invalid_elements() {
 
 //always disable hidden elements so that they dont trigger validation
 function timeout_elements() {
-	var timeout_elements = $('#timeout_retry_recording, #timeout_recording, [name=gototimeout]');
+	var timeout_elements = $('#timeout_retry_recording, #timeout_recording, #timeout_append_announce, [name=gototimeout]');
 	var timeout_element_tr = timeout_elements.parent().parent();
 	switch ($('#timeout_loops').val()) {
 		case 'disabled':
@@ -113,7 +114,8 @@ function timeout_elements() {
 		case '0':
 			timeout_elements.removeAttr('disabled')
 			timeout_element_tr.show();
-			$('#timeout_retry_recording').attr('disabled', 'disabled').parent().parent().hide();
+			$('#timeout_retry_recording').parent().parent().hide();
+			$('#timeout_append_announce').parent().parent().hide();
 		default:
 			timeout_elements.removeAttr('disabled')
 			timeout_element_tr.show()

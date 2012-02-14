@@ -22,7 +22,9 @@ if($amp_conf["AMPDBENGINE"] == "sqlite3")  {
 		`timeout_recording` varchar(25) default NULL,
 		`timeout_retry_recording` varchar(25) default NULL,
 		`timeout_destination` varchar(50) default NULL,
-		`timeout_loops` varchar(10) default NULL)"
+		`timeout_loops` varchar(10) default NULL,
+		`timeout_append_announce` tinyint(1) NOT NULL default '1',
+		`invalid_append_announce` tinyint(1) NOT NULL default '1')"
 	);
 } else {
 	sql("CREATE TABLE IF NOT EXISTS `ivr_details` (
@@ -42,6 +44,8 @@ if($amp_conf["AMPDBENGINE"] == "sqlite3")  {
 		`timeout_retry_recording` varchar(25) default NULL,
 		`timeout_destination` varchar(50) default NULL,
 		`timeout_loops` varchar(10) default NULL,
+		`timeout_append_announce` tinyint(1) NOT NULL default '1',
+		`invalid_append_announce` tinyint(1) NOT NULL default '1',
 		PRIMARY KEY  (`id`))"
 	);
 }
@@ -421,5 +425,43 @@ if($db->IsError($res)) {
 	
 	out('Migration 2.10 done!');
 } 
+
+// Add timeout/invalid_append_announce if not there
+//
+outn(_("Checking for timeout_append_announce.."));
+$sql = "SELECT timeout_append_announce FROM ivr_details";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if($db->IsError($check)) {
+	//  Add timeout_append_announce field
+	//
+	$sql = "ALTER TABLE ivr_details ADD timeout_append_announce tinyint(1) NOT NULL DEFAULT '1'";
+	$result = $db->query($sql);
+	if($db->IsError($result)) {
+		out(_("fatal error"));
+		die_freepbx($result->getDebugInfo());
+	} else {
+		out(_("added"));
+	}
+} else {
+	out(_("not needed"));
+}
+
+outn(_("Checking for invalid_append_announce.."));
+$sql = "SELECT invalid_append_announce FROM ivr_details";
+$check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
+if($db->IsError($check)) {
+	//  Add invalid_append_announce field
+	//
+	$sql = "ALTER TABLE ivr_details ADD invalid_append_announce tinyint(1) NOT NULL DEFAULT '1'";
+	$result = $db->query($sql);
+	if($db->IsError($result)) {
+		out(_("fatal error"));
+		die_freepbx($result->getDebugInfo());
+	} else {
+		out(_("added"));
+	}
+} else {
+	out(_("not needed"));
+}
 
 ?>
