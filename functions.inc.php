@@ -79,12 +79,12 @@ function ivr_get_config($engine) {
 					$ext->add($c, 's', '', new ext_setvar('__IVR_RETVM', ''));
 				}
 				
-				$ext->add($c, 's', '', new ext_gotoif('$["${CDR(disposition)}" = "ANSWERED"]','start'));
+				$ext->add($c, 's', '', new ext_gotoif('$["${CDR(disposition)}" = "ANSWERED"]','skip'));
 				$ext->add($c, 's', '', new ext_answer(''));
 				$ext->add($c, 's', '', new ext_wait('1'));
 
 				$ivr_announcement = recordings_get_file($ivr['announcement']);
-				$ext->add($c, 's', '', new ext_set('IVR_MSG', $ivr_announcement));
+				$ext->add($c, 's', 'skip', new ext_set('IVR_MSG', $ivr_announcement));
 
 				$ext->add($c, 's', 'start', new ext_digittimeout(3));
 				//$ext->add($ivr_id, 's', '', new ext_responsetimeout($ivr['timeout_time']));
