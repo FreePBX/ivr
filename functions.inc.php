@@ -418,7 +418,7 @@ function ivr_configpageload() {
 	//timeout
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('timeout_loops', $currentcomponent->getoptlist('ivr_repeat_loops'), 
-		$ivr['timeout_loops'], _('Timeout Retries'), _('Number of times to retry when receiving an invalid/unmatched response from the caller'), false));
+		$ivr['timeout_loops'], _('Timeout Retries'), _('Number of times to retry when no DTMF is heard and the IVR choice timesout.'), false));
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('timeout_retry_recording', $currentcomponent->getoptlist('recordings'), 
 		$ivr['timeout_retry_recording'], _('Timeout Retry Recording'), _('Prompt to be played when an invalid/unmatched response is received, before prompting the caller to try again'), false));
