@@ -37,13 +37,15 @@ function ivr_get_config($engine) {
 				break;
 			}
 			
-			//draw a list of ivrs included by any queues
-			$queues = queues_list(true);
-			$qivr = array();
-			foreach ($queues as $q) {
-				$thisq = queues_get($q[0]);
-				if ($thisq['context'] && strpos($thisq['context'], 'ivr-') === 0) {
-					$qivr[] = str_replace('ivr-', '', $thisq['context']);
+			if (function_exists('queues_list')) {
+				//draw a list of ivrs included by any queues
+				$queues = queues_list(true);
+				$qivr = array();
+				foreach ($queues as $q) {
+					$thisq = queues_get($q[0]);
+					if ($thisq['context'] && strpos($thisq['context'], 'ivr-') === 0) {
+						$qivr[] = str_replace('ivr-', '', $thisq['context']);
+					}
 				}
 			}
 			
@@ -107,10 +109,9 @@ function ivr_get_config($engine) {
 						}
 						
 						//only display these two lines if the ivr is included in any queues
-						if (in_array($ivr['id'], $qivr)) {
+						if (function_exists('queues_list') && in_array($ivr['id'], $qivr)) {
 							$ext->add($c, $e['selection'],'', new ext_macro('blkvm-clr'));
 							$ext->add($c, $e['selection'], '', new ext_setvar('__NODEST', ''));
-							
 						}
 
 						if ($e['ivr_ret']) {

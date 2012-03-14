@@ -10,6 +10,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
+		*2.10.0.7* #5665
 		*2.10.0.6* #5568
 		*2.10.0.5* #5587, #5588
 		*2.10.0.4* #5576
