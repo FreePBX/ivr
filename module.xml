@@ -10,6 +10,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
+		*2.10.0.7* #5665
 		*2.10.0.6* #5568
 		*2.10.0.5* #5587, #5588
 		*2.10.0.4* #5576
@@ -32,5 +33,5 @@
 		<ivr>IVR</ivr>
 	</menuitems>
 	<location>release/2.10/ivr-2.10.0.6.tgz</location>
-	<md5sum>00b39509c559c03a493c8268846b1d73</md5sum>
+	<md5sum>742348c5cfb3d7b4bc139a302adc59da</md5sum>
 </module>
