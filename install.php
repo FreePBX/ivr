@@ -286,6 +286,12 @@ if($db->IsError($res)) {
 
 	//migrate to 2.10 tables
 	out('Begining migration 2.10...');
+
+	//this is really superflorous, but the field may be lingering from the 2.5 days, so delete it just in case
+	$check = $db->getRow('SELECT announcement FROM ivr', DB_FETCHMODE_ASSOC);
+	if(!$db->IsError($check)) {
+		sql("ALTER TABLE `ivr` DROP `announcement`");
+	}
 	
 	 //this was installed perviously, but we perfer to use our old table when migrating
 	sql('DROP TABLE ivr_details');
@@ -337,7 +343,7 @@ if($db->IsError($res)) {
 
 			//INVALID
 			//if we have an invalid destination in entires, move it here
-			if ($i['invalid_enabled'] == 'CHECKED' && isset($e[$i['id']]['i']) && $e[$i['id']]['i']) {
+			if (isset($e[$i['id']]['i']) && $e[$i['id']]['i']) {
 				$ivr[$my]['invalid_destination'] = $e[$i['id']]['i']['dest'];
 
 				//if there are no invalid loops, set to disabled
@@ -368,7 +374,7 @@ if($db->IsError($res)) {
 
 			//TIMEOUT
 			//if we have an invalid destination in entires, move it here
-			if ($i['timeout_enabled'] == 'CHECKED' && isset($e[$i['id']]['t']) && $e[$i['id']]['t']) {
+			if (isset($e[$i['id']]['t']) && $e[$i['id']]['t']) {
 				$ivr[$my]['timeout_destination'] = $e[$i['id']]['t']['dest'];
 
 				//if there are no timeout loops, set to disabled
