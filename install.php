@@ -294,9 +294,11 @@ if($db->IsError($res)) {
 	}
 	
 	 //this was installed perviously, but we perfer to use our old table when migrating
+	sql('RENAME TABLE ivr_dests TO ivr_entries');
+
+	/*
 	sql('DROP TABLE ivr_details');
 	sql('RENAME TABLE ivr TO ivr_details');
-	sql('RENAME TABLE ivr_dests TO ivr_entries');
 	sql('ALTER TABLE ivr_details 
 	CHANGE ivr_id id int(11) NOT NULL AUTO_INCREMENT, 
 	CHANGE displayname name varchar(50), 
@@ -318,10 +320,48 @@ if($db->IsError($res)) {
 	DROP deptname, 
 	DROP enable_directory, 
 	DROP dircontext');
+	 */
 	
+	$ivr_details = sql('SELECT * from ivr', 'getAll', DB_FETCHMODE_ASSOC);
+	$ins_arr = array();
+	foreach ($ivr_details as $r) {
+		if ($r['name'] == "__install_done") {
+			continue;
+		}
+		$ins_arr[] = array(
+			$r['ivr_id'],            // id
+			$r['displayname'],       // name
+			$r['announcement_id'],   // announcement
+			$r['enable_directdial'], // directdial
+			$r['loops'],             // invalid_loops
+			$r['alt_timeout'],       // timeout_enabled
+			$r['invalid_id'],        // invalid_recording
+			$r['retvm'],             // retvm
+			$r['timeout'],           // timeout_time
+			$r['timeout_id'],        // timeout_recording
+			$r['loops'],             // timeout_loops
+		);
+	}
+	$compiled = $db->prepare('
+		INSERT INTO ivr_details 
+		(id, name, announcement, directdial, invalid_loops, timeout_enabled, invalid_recording, retvm, timeout_time, timeout_recording, timeout_loops)
+		VALUES 
+		(?,?,?,?,?,?,?,?,?,?,?)
+		');
+	$result = $db->executeMultiple($compiled,$ins_arr);
+	if(DB::IsError($result)) {
+		die_freepbx($result->getDebugInfo().'error migrating ivr to ivr_details');	
+	} else {
+		out(_("migrated table ivr to ivr_details"));
+		sql('DROP TABLE ivr');
+	}
+
+	/*
 	sql('DELETE FROM ivr_details WHERE name = "__install_done"');
 	//copy loops from invalid to timeout
 	sql('UPDATE ivr_details SET timeout_loops = invalid_loops');
+	 */
+
 	$ivr = $db->getAll('SELECT * FROM ivr_details', DB_FETCHMODE_ASSOC);
 	if($db->IsError($ivr)) {
 		die_freepbx($ivr->getDebugInfo());
