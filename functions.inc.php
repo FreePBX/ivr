@@ -215,14 +215,12 @@ function ivr_get_config($engine) {
 					$ext->add($c, 't', '', new ext_goto('1','hang'));
 				}
 				
-				if ($ivr['retvm']) {
-					// these need to be reset or inheritance problems makes them go away in some conditions 
-					//and infinite inheritance creates other problems
-					$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
-					$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT_${CONTEXT}}'));
-					$ext->add($c, 'return', '', new ext_set('IVR_MSG', $ivr_announcement));
-					$ext->add($c, 'return', '', new ext_goto('s,start'));
-				}
+				// these need to be reset or inheritance problems makes them go away in some conditions 
+				//and infinite inheritance creates other problems
+				$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
+				$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT_${CONTEXT}}'));
+				$ext->add($c, 'return', '', new ext_set('IVR_MSG', $ivr_announcement));
+				$ext->add($c, 'return', '', new ext_goto('s,start'));
 			
 				//h extension
 				$ext->add($c, 'h', '', new ext_hangup(''));
