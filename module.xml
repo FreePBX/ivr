@@ -34,6 +34,6 @@
 	<menuitems>
 		<ivr>IVR</ivr>
 	</menuitems>
-	<location>release/2.10/ivr-2.10.0.9.tgz</location>
-	<md5sum>e7281b1a0a528f677dcaad45e9ca5fb7</md5sum>
+	<location>release/2.11/ivr-2.10.0.9.tgz</location>
+	<md5sum>6ab31e4431165dc30ba19d9d8b6a5d49</md5sum>
 </module>
