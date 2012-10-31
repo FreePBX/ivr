@@ -495,6 +495,8 @@ function ivr_configprocess(){
 				ivr_save_entries($vars['id'], $entries);
 				needreload();
 				//$_REQUEST['action'] = 'edit';
+				$this_dest = ivr_getdest($vars['id']);
+				fwmsg::set_dest($this_dest[0]);
 				redirect_standard_continue('id');
 			break;
 			case 'delete':

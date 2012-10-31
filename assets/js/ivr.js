@@ -3,10 +3,12 @@ $(document).ready(function(){
 	invalid_elements();
 	timeout_elements();
 
-	var new_entrie = '<tr>' + $('#ivr_entries > tbody:last').find('tr:last').html() + '</tr>';
 	$('#add_entrie').click(function(){
+		// we get this each time in case a popOver has updated the array
+		new_entrie = '<tr>' + $('#gotoDESTID').parents('tr').html() + '</tr>';
 		id = new Date().getTime();//must be cached, as we have many replaces to do and the time can shift
-		$('#ivr_entries > tbody:last').find('tr:last').after(new_entrie.replace(/DESTID/g, id));
+		thisrow = $('#ivr_entries > tbody:last').find('tr:last').after(new_entrie.replace(/DESTID/g, id));
+		$('.destdropdown2', $(thisrow).next()).hide();
 		bind_dests_double_selects();
 	});
 	

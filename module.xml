@@ -34,6 +34,12 @@
 	<menuitems>
 		<ivr>IVR</ivr>
 	</menuitems>
+	<popovers>
+		<ivr>
+			<display>ivr</display>
+			<action>add</action>
+		</ivr>
+ 	</popovers>
 	<location>release/2.11/ivr-2.10.0.9.tgz</location>
 	<md5sum>6ab31e4431165dc30ba19d9d8b6a5d49</md5sum>
 </module>
