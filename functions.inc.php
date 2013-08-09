@@ -405,7 +405,7 @@ function ivr_configpageload() {
 		$ivr['invalid_retry_recording'], _('Invalid Retry Recording'), _('Prompt to be played when an invalid/unmatched response is received, before prompting the caller to try again'), false));
 
 	$currentcomponent->addguielem($section, 
-		new gui_checkbox('invalid_append_announce', $ivr['invalid_append_announce'], _('Append Original Annoucement'), _('After playing the Invalid Retry Recording the system will replay the main IVR Annoucement')));
+		new gui_checkbox('invalid_append_announce', $ivr['invalid_append_announce'], _('Append Original Announcement'), _('After playing the Invalid Retry Recording the system will replay the main IVR Announcement')));
 
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('invalid_recording', $currentcomponent->getoptlist('recordings'), 
@@ -423,7 +423,7 @@ function ivr_configpageload() {
 		$ivr['timeout_retry_recording'], _('Timeout Retry Recording'), _('Prompt to be played when an invalid/unmatched response is received, before prompting the caller to try again'), false));
 
 	$currentcomponent->addguielem($section, 
-		new gui_checkbox('timeout_append_announce', $ivr['timeout_append_announce'], _('Append Original Annoucement'), _('After playing the Timeout Retry Recording the system will replay the main IVR Annoucement')));
+		new gui_checkbox('timeout_append_announce', $ivr['timeout_append_announce'], _('Append Original Announcement'), _('After playing the Timeout Retry Recording the system will replay the main IVR Announcement')));
 
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('timeout_recording', $currentcomponent->getoptlist('recordings'), 
