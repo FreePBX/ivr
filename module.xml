@@ -43,6 +43,6 @@
 			<action>add</action>
 		</ivr>
  	</popovers>
-	<location>release/2.11/ivr-2.11.0.1.tgz</location>
-	<md5sum>19d8b07bb06b135cbbd2246c916dfcde</md5sum>
+	<location>release/2.11/ivr-2.11.0.2.tgz</location>
+	<md5sum>57d8316dc41fcd3153cefd00a5e3bdd5</md5sum>
 </module>
