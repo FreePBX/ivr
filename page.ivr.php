@@ -33,7 +33,7 @@ if (!$action && !$id) {
 <h2><?php echo _("IVR"); ?></h2>
 <br/><br/>
 <a href="config.php?type=setup&display=ivr&action=add">
-	<input type="button" value="Add a new IVR" id="new_dir">
+	<input type="button" value="<?php echo _("Add a new IVR")?>" id="new_dir">
 </a>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/>
