@@ -32,11 +32,11 @@ foreach ($entries as $e) {
 	
 	//return to ivr
 	$row[] = fpbx_label(form_checkbox('entries[ivr_ret][]', '1', ($e['ivr_ret'] == 1)), 
-			'Check this box to have this option return to a parent IVR if it was called '
+			_('Check this box to have this option return to a parent IVR if it was called '
 			. 'from a parent IVR. If not, it will go to the chosen destination.<br><br>'
 			. 'The return path will be to any IVR that was in the call path prior to this '
 			. 'IVR which could lead to strange results if there was an IVR called in the '
-			. 'call path but not immediately before this');
+			. 'call path but not immediately before this'));
 
 	//delete buttom
 	$row[] = '<img src="images/trash.png" style="cursor:pointer" title="' 
