@@ -29,4 +29,4 @@
 	</menuitems>
 	<location>release/2.10/ivr-2.10.0.2.tgz</location>
 	<md5sum>96240fd2674a30eef87bd62887977019</md5sum>
-</module>
+<supported><version>2.10</version></supported></module>
