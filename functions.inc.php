@@ -686,8 +686,8 @@ function ivr_getdestinfo($dest) {
 function ivr_recordings_usage($recording_id) {
 	global $active_modules;
 
-	//$results = sql("SELECT `ivr`, `name` FROM `ivr` WHERE `announcement` = '$recording_id' || `timeout_id` = '$recording_id' || `invalid_id` = '$recording_id'","getAll",DB_FETCHMODE_ASSOC);
-	$results = sql("SELECT `id`, `name` FROM `ivr_details` WHERE '$recording_id' IN('announcement', 'invalid_retry_recording', 'invalid_recording', 'timeout_recording', 'timeout_retry_recording')", "getAll",DB_FETCHMODE_ASSOC);
+	$sql = "SELECT `id`, `name` FROM `ivr_details` WHERE `announcement` = '$recording_id' OR `invalid_retry_recording` = '$recording_id' OR `invalid_recording` = '$recording_id' OR `timeout_recording` = '$recording_id' OR `timeout_retry_recording` = '$recording_id'";
+	$results = sql($sql, "getAll",DB_FETCHMODE_ASSOC);
 	if (empty($results)) {
 		return array();
 	} else {
