@@ -30,6 +30,9 @@
 	<menuitems>
 		<ivr>IVR</ivr>
 	</menuitems>
+	<supported>
+		<version>2.10</version>
+	</supported>
 	<location>release/2.10/ivr-2.10.0.5.tgz</location>
 	<md5sum>56c9eae8a7050b85d748b64aa26a4591</md5sum>
 </module>
