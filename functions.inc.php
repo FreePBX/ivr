@@ -37,13 +37,15 @@ function ivr_get_config($engine) {
 				break;
 			}
 			
-			//draw a list of ivrs included by any queues
-			$queues = queues_list(true);
-			$qivr = array();
-			foreach ($queues as $q) {
-				$thisq = queues_get($q[0]);
-				if ($thisq['context'] && strpos($thisq['context'], 'ivr-') === 0) {
-					$qivr[] = str_replace('ivr-', '', $thisq['context']);
+			if (function_exists('queues_list')) {
+				//draw a list of ivrs included by any queues
+				$queues = queues_list(true);
+				$qivr = array();
+				foreach ($queues as $q) {
+					$thisq = queues_get($q[0]);
+					if ($thisq['context'] && strpos($thisq['context'], 'ivr-') === 0) {
+						$qivr[] = str_replace('ivr-', '', $thisq['context']);
+					}
 				}
 			}
 			
@@ -107,10 +109,9 @@ function ivr_get_config($engine) {
 						}
 						
 						//only display these two lines if the ivr is included in any queues
-						if (in_array($ivr['id'], $qivr)) {
+						if (function_exists('queues_list') && in_array($ivr['id'], $qivr)) {
 							$ext->add($c, $e['selection'],'', new ext_macro('blkvm-clr'));
 							$ext->add($c, $e['selection'], '', new ext_setvar('__NODEST', ''));
-							
 						}
 
 						if ($e['ivr_ret']) {
@@ -214,14 +215,12 @@ function ivr_get_config($engine) {
 					$ext->add($c, 't', '', new ext_goto('1','hang'));
 				}
 				
-				if ($ivr['retvm']) {
-					// these need to be reset or inheritance problems makes them go away in some conditions 
-					//and infinite inheritance creates other problems
-					$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
-					$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT_${CONTEXT}}'));
-					$ext->add($c, 'return', '', new ext_set('IVR_MSG', $ivr_announcement));
-					$ext->add($c, 'return', '', new ext_goto('s,start'));
-				}
+				// these need to be reset or inheritance problems makes them go away in some conditions 
+				//and infinite inheritance creates other problems
+				$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT', '${CONTEXT}'));
+				$ext->add($c, 'return', '', new ext_setvar('_IVR_CONTEXT_${CONTEXT}', '${IVR_CONTEXT_${CONTEXT}}'));
+				$ext->add($c, 'return', '', new ext_set('IVR_MSG', $ivr_announcement));
+				$ext->add($c, 'return', '', new ext_goto('s,start'));
 			
 				//h extension
 				$ext->add($c, 'h', '', new ext_hangup(''));
@@ -418,7 +417,7 @@ function ivr_configpageload() {
 	//timeout
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('timeout_loops', $currentcomponent->getoptlist('ivr_repeat_loops'), 
-		$ivr['timeout_loops'], _('Timeout Retries'), _('Number of times to retry when receiving an invalid/unmatched response from the caller'), false));
+		$ivr['timeout_loops'], _('Timeout Retries'), _('Number of times to retry when no DTMF is heard and the IVR choice timesout.'), false));
 	$currentcomponent->addguielem($section, 
 		new gui_selectbox('timeout_retry_recording', $currentcomponent->getoptlist('recordings'), 
 		$ivr['timeout_retry_recording'], _('Timeout Retry Recording'), _('Prompt to be played when an invalid/unmatched response is received, before prompting the caller to try again'), false));
