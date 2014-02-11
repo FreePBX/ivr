@@ -256,7 +256,12 @@ function ivr_get_details($id = '') {
 	$sql = "SELECT *, announcement announcement_id FROM ivr_details";
 	if ($id) {
 		$sql .= ' where  id = "' . $id . '"';
+	} else {
+		// Corrado Mella, 06/02/2014 - IVR list in alphabetical order	
+		$sql .= ' ORDER BY name';
+		// Corrado Mella
 	}
+
 	$res = $db->getAll($sql, DB_FETCHMODE_ASSOC);
 	if($db->IsError($res)) {
 		die_freepbx($res->getDebugInfo());
