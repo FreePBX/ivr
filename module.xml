@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>2.10.0.9</version>
+	<version>2.10.0.10</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
 	<category>Applications</category>
@@ -10,6 +10,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
+		*2.10.0.10* #7121 IVR list in alphabetical order
 		*2.10.0.9* #5882
 		*2.10.0.8* #5854, reverting r14115 checked in error
 		*2.10.0.7* #5665, corner case migration enhancements
