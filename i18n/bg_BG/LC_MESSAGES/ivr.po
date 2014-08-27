@@ -8,12 +8,15 @@ msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-23 09:52+0000\n"
-"PO-Revision-Date: 2008-11-05 15:46+0200\n"
-"Last-Translator: \n"
-"Language-Team: Chavdar Iliev <chavdar_75@yahoo.com>\n"
+"PO-Revision-Date: 2014-07-22 09:45+0200\n"
+"Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
+"Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/ivr/bg/>\n"
+"Language: bg_BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 1.10-dev\n"
 "X-Poedit-Language: Bulgarian\n"
 "X-Poedit-Country: BULGARIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -23,29 +26,29 @@ msgstr "Добави IVR"
 
 #, php-format
 msgid "Edit IVR: %s"
-msgstr ""
+msgstr "Редактирай IVR: %s"
 
 #, php-format
 msgid "Delete IVR: %s"
-msgstr ""
+msgstr "Изтрий IVR: %s"
 
 msgid "IVR General Options"
-msgstr ""
+msgstr "Основни Опции на IVR"
 
 msgid "IVR Name"
-msgstr ""
+msgstr "Име на IVR"
 
 msgid "Name of this IVR."
-msgstr ""
+msgstr "Име на този IVR."
 
 msgid "IVR Description"
-msgstr ""
+msgstr "IVR Описание"
 
 msgid "Description of this ivr."
-msgstr ""
+msgstr "Описание за този IVR."
 
 msgid "IVR Options (DTMF)"
-msgstr ""
+msgstr "IVR Опции (DTMF)"
 
 msgid "None"
 msgstr "Няма"
@@ -54,13 +57,13 @@ msgid "Announcement"
 msgstr "Съобщение"
 
 msgid "Greeting to be played on entry to the Ivr."
-msgstr ""
+msgstr "Приветствие което да се възпроизвежда при влизане в IVR."
 
 msgid "Disabled"
-msgstr ""
+msgstr "Забранена"
 
 msgid "Extensions"
-msgstr ""
+msgstr "Вътрешни Линии"
 
 msgid "Completely disabled"
 msgstr ""
@@ -69,7 +72,7 @@ msgid "Enabled for all extensions on a system"
 msgstr ""
 
 msgid "Direct Dial"
-msgstr ""
+msgstr "Директно Избиране"
 
 msgid ""
 "Provides options for callers to direct dial an extension. Direct dialing can "
@@ -77,7 +80,7 @@ msgid ""
 msgstr ""
 
 msgid "Default"
-msgstr ""
+msgstr "По-Подразбиране"
 
 msgid "Timeout"
 msgstr "Време на Изчакване"
@@ -111,7 +114,7 @@ msgid ""
 msgstr ""
 
 msgid "Invalid Destination"
-msgstr ""
+msgstr "Неправилно Направление"
 
 msgid "Destination to send the call to after Invalid Recording is played."
 msgstr ""
@@ -129,7 +132,7 @@ msgid "Timeout Destination"
 msgstr ""
 
 msgid "Return to IVR after VM"
-msgstr ""
+msgstr "Върни се към IVR след ГП"
 
 msgid ""
 "If checked, upon exiting voicemail a caller will be returned to this IVR if "
@@ -139,16 +142,16 @@ msgstr ""
 "към този IVR"
 
 msgid "IVR Entries"
-msgstr ""
+msgstr "IVR Въвеждания"
 
 msgid "Ext"
-msgstr ""
+msgstr "Набрано"
 
 msgid "Destination"
-msgstr ""
+msgstr "Направление"
 
 msgid "Return"
-msgstr ""
+msgstr "Обратно"
 
 msgid "Return to IVR"
 msgstr "Върни се към IVR"
@@ -218,25 +221,34 @@ msgid ""
 "IVR destination to a desired Directory. You can install the Directory module "
 "from the Online Module Repository"
 msgstr ""
+"There are %s IVRs that have the legacy Directory dialing enabled. This has "
+"been deprecated and will be removed from future releases. You should convert "
+"your IVRs to use the Directory module for this functionality and assign an "
+"IVR destination to a desired Directory. You can install the Directory module "
+"from the Online Module Repository"
 
 #, php-format
 msgid "Deprecated Directory used by %s IVRs"
-msgstr ""
+msgstr "Стара Директория се използва от %s IVR"
 
 msgid "posting notice about deprecated functionality"
-msgstr ""
+msgstr "предупреждение за премахната функционалност"
 
 msgid "IVR"
-msgstr ""
+msgstr "IVR"
 
 msgid "Applications"
-msgstr ""
+msgstr "Приложения"
 
 msgid ""
 "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
 "Response) menus. These can be used to send callers to different locations "
 "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 msgstr ""
+"Създава менюта за Цифров Администратор (Автоматично Обслужване или Система "
+"за Интерактивен Отговор). Използват се за насочване на обаждащите се към "
+"различни направления (например, Изберете 1 за продажби) и/или позволява "
+"директно избиране на вътрешни номера."
 
 #~ msgid ""
 #~ "There is a problem with install.sql, cannot re-create databases. Contact "
