@@ -525,36 +525,31 @@ function ivr_save_details($vals){
 	}
 
 	if ($vals['id']) {
-		$sql = 'REPLACE INTO ivr_details (id, name, description, announcement,
-				directdial, invalid_loops, invalid_retry_recording,
-				invalid_destination, invalid_recording,
-				retvm, timeout_time, timeout_recording,
-				timeout_retry_recording, timeout_destination, timeout_loops,
-				timeout_append_announce, invalid_append_announce)
-				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
-		$foo = $db->query($sql, $vals);
-		if($db->IsError($foo)) {
-			die_freepbx(print_r($vals,true).' '.$foo->getDebugInfo());
-		}
+		$start = "REPLACE INTO `ivr_details` (";
 	} else {
 		unset($vals['id']);
-		$sql = 'INSERT INTO ivr_details (name, description, announcement,
-				directdial, invalid_loops, invalid_retry_recording,
-				invalid_destination,  invalid_recording,
-				retvm, timeout_time, timeout_recording,
-				timeout_retry_recording, timeout_destination, timeout_loops,
-				timeout_append_announce, invalid_append_announce)
-				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
-				
-		$foo = $db->query($sql, $vals);
-		if($db->IsError($foo)) {
-			die_freepbx(print_r($vals,true).' '.$foo->getDebugInfo());
-		}
+		$start = "INSERT INTO `ivr_details` (";
+	}
+
+	$end = ") VALUES (";
+	foreach ($vals as $k => $v) {
+		$start .= "$k, ";
+		$end .= ":$k, ";
+	}
+
+	$sql = substr($start, 0, -2).substr($end, 0, -2).")";
+	$foo = $db->query($sql, $vals);
+	if($db->IsError($foo)) {
+		die_freepbx(print_r($vals,true).' '.$foo->getDebugInfo());
+	}
+	// Was this a new one?
+	if (!isset($vals['id'])) {
 		$sql = ( ($amp_conf["AMPDBENGINE"]=="sqlite3") ? 'SELECT last_insert_rowid()' : 'SELECT LAST_INSERT_ID()');
-		$vals['id'] = $db->getOne($sql);
-		if ($db->IsError($foo)){
-			die_freepbx($foo->getDebugInfo());
+		$id = $db->getOne($sql);
+		if ($db->IsError($id)){
+			die_freepbx($id->getDebugInfo());
 		}
+		$vals['id'] = $id;
 	}
 
 	return $vals['id'];
