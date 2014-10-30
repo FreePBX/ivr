@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>2.11.0.6</version>
+	<version>13.0.1</version>
 	<publisher>Schmooze Com Inc</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,33 +11,15 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
+		*13.0.1* Fix PDO issues.
 		*2.11.0.6* Add license file
-		*2.11.0.5* #7121 IVR list in alphabetical order
-		*2.11.0.4* #6145 correct query to properly display ivr recording usage
-		*2.11.0.3* #6830, #6898, #6869
-		*2.11.0.2* #6679
-		*2.11.0.1* #6106
-		*2.11.0.0* #6051
-		*2.10.0.9* #5882
-		*2.10.0.8* #5854, reverting r14115 checked in error
-		*2.10.0.7* #5665, corner case migration enhancements
-		*2.10.0.6* #5568
-		*2.10.0.5* #5587, #5588
-		*2.10.0.4* #5576
-		*2.10.0.3* #5515
-		*2.10.0.2* misc bug fixes
-		*2.10.0.1* version bump
 		*2.10.0.0* rewrite!
-		*2.9.0.5* #5094
-		*2.9.0.4* #4994
-		*2.9.0.3* styling adjustments
-		*2.9.0.2* #4799
 		*2.9.0.1* removed duplicate functions
 		*2.9.0.0* #1798, #4655
 	</changelog>
 	<depends>
-		<version>2.5.0alpha1</version>
-		<module>recordings ge 3.3.8</module>
+		<version>13.0.1beta1</version>
+		<module>recordings</module>
 	</depends>
 	<menuitems>
 		<ivr>IVR</ivr>
