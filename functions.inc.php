@@ -254,23 +254,7 @@ function ivr_get_config($engine) {
 
 //replaces ivr_list(), returns all details of any ivr
 function ivr_get_details($id = '') {
-	global $db;
-
-	$sql = "SELECT *, announcement announcement_id FROM ivr_details";
-	if ($id) {
-		$sql .= ' where  id = "' . $id . '"';
-	} else {
-		// Corrado Mella, 06/02/2014 - IVR list in alphabetical order	
-		$sql .= ' ORDER BY name';
-		// Corrado Mella
-	}
-
-	$res = $db->getAll($sql, DB_FETCHMODE_ASSOC);
-	if($db->IsError($res)) {
-		die_freepbx($res->getDebugInfo());
-	}
-
-	return $id && isset($res[0]) ? $res[0] : $res;
+	return FreePBX::Ivr()->getDetails($id);
 }
 
 //get all ivr entires
