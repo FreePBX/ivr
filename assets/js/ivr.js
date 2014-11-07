@@ -51,6 +51,9 @@ $(document).ready(function(){
 		$('[name="entries[ivr_ret][]"]').not(':checked').each(function(){
 			$(this).attr('checked', 'checked').val('uncheked')
 		})
+		$('[name$="_ivr_ret"]').not(':checked').each(function(){
+			$(this).attr('checked', 'checked').val('uncheked')
+		})
 		
 		//disable dests so that they dont get posted
 		$('.destdropdown, .destdropdown2').attr("disabled", "disabled");
@@ -78,13 +81,16 @@ function restore_form_elemens() {
 	$('[name="entries[ivr_ret][]"][value=uncheked]').each(function(){
 		$(this).removeAttr('checked')
 	})
+	$('[name$="_ivr_ret"][value=uncheked]').each(function(){
+		$(this).removeAttr('checked')
+	})
 	invalid_elements();
 	timeout_elements();
 }
 
 //always disable hidden elements so that they dont trigger validation
 function invalid_elements() {
-	var invalid_elements = $('#invalid_retry_recording, #invalid_recording, #invalid_append_announce, [name=gotoinvalid]');
+	var invalid_elements = $('#invalid_retry_recording, #invalid_recording, #invalid_append_announce, #invalid_ivr_ret, [name=gotoinvalid]');
 	var invalid_element_tr = invalid_elements.parent().parent();
 	switch ($('#invalid_loops').val()) {
 		case 'disabled':
@@ -106,7 +112,7 @@ function invalid_elements() {
 
 //always disable hidden elements so that they dont trigger validation
 function timeout_elements() {
-	var timeout_elements = $('#timeout_retry_recording, #timeout_recording, #timeout_append_announce, [name=gototimeout]');
+	var timeout_elements = $('#timeout_retry_recording, #timeout_recording, #timeout_append_announce, #timeout_ivr_ret, [name=gototimeout]');
 	var timeout_element_tr = timeout_elements.parent().parent();
 	switch ($('#timeout_loops').val()) {
 		case 'disabled':
