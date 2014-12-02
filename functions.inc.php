@@ -165,7 +165,13 @@ function ivr_get_config($engine) {
 							$label = '';
 							break;
 					}
-					$ext->add($c, 'i', $label, new ext_goto($ivr['invalid_destination']));
+					if (!empty($ivr['invalid_ivr_ret'])) {
+						$ext->add($c, 'i', $label,
+							new ext_gotoif('$["x${IVR_CONTEXT_${CONTEXT}}" = "x"]',
+								$ivr['invalid_destination'] . ':${IVR_CONTEXT_${CONTEXT}},return,1'));
+					} else {
+						$ext->add($c, 'i', $label, new ext_goto($ivr['invalid_destination']));
+					}
 				} else {
 					// If no invalid destination provided we need to do something
 					$ext->add($c, 'i', '', new ext_playback('sorry-youre-having-problems'));
@@ -211,7 +217,13 @@ function ivr_get_config($engine) {
 							$label = '';
 							break;
 					}
-					$ext->add($c, 't', $label, new ext_goto($ivr['timeout_destination']));
+					if (!empty($ivr['timeout_ivr_ret'])) {
+						$ext->add($c, 't', $label,
+							new ext_gotoif('$["x${IVR_CONTEXT_${CONTEXT}}" = "x"]',
+								$ivr['timeout_destination'] . ':${IVR_CONTEXT_${CONTEXT}},return,1'));
+					} else {
+						$ext->add($c, 't', $label, new ext_goto($ivr['timeout_destination']));
+					}
 				} else {
 					// If no invalid destination provided we need to do something
 					$ext->add($c, 't', '', new ext_playback('sorry-youre-having-problems'));
@@ -282,9 +294,9 @@ function ivr_configpageload() {
 
 		$deet = array('id', 'name', 'description', 'announcement', 'directdial',
 					'invalid_loops', 'invalid_retry_recording',
-					'invalid_recording', 'invalid_destination',
-					'timeout_loops', 'timeout_time',
-					'timeout_retry_recording', 'timeout_recording', 'timeout_destination',
+					'invalid_recording', 'invalid_destination', 'invalid_ivr_ret',
+					'timeout_loops', 'timeout_time', 'timeout_retry_recording',
+					'timeout_recording', 'timeout_destination', 'timeout_ivr_ret',
 					'retvm');
 
 		//keep vairables set on new ivr's
@@ -396,6 +408,14 @@ function ivr_configpageload() {
 		new gui_checkbox('invalid_append_announce', $ivr['invalid_append_announce'], _('Append Announcement on Invalid'), _('After playing the Invalid Retry Recording the system will replay the main IVR Announcement')));
 
 	$currentcomponent->addguielem($section,
+
+		new gui_checkbox('invalid_ivr_ret', $ivr['invalid_ivr_ret'], _('Return on Invalid'), _('Check this box to have this option return to a parent IVR if it was called '
+			. 'from a parent IVR. If not, it will go to the chosen destination.<br><br>'
+			. 'The return path will be to any IVR that was in the call path prior to this '
+			. 'IVR which could lead to strange results if there was an IVR called in the '
+			. 'call path but not immediately before this')));
+
+	$currentcomponent->addguielem($section,
 		new gui_selectbox('invalid_recording', $currentcomponent->getoptlist('recordings'),
 		$ivr['invalid_recording'], _('Invalid Recording'), _('Prompt to be played before sending the caller to an alternate destination due to the caller pressing 0 or receiving the maximum amount of invalid/unmatched responses (as determined by Invalid Retries)'), false));
 	$currentcomponent->addguielem($section,
@@ -412,6 +432,14 @@ function ivr_configpageload() {
 
 	$currentcomponent->addguielem($section,
 		new gui_checkbox('timeout_append_announce', $ivr['timeout_append_announce'], _('Append Announcement on Timeout'), _('After playing the Timeout Retry Recording the system will replay the main IVR Announcement')));
+
+	$currentcomponent->addguielem($section,
+
+		new gui_checkbox('timeout_ivr_ret', $ivr['timeout_ivr_ret'], _('Return on Timeout'), _('Check this box to have this option return to a parent IVR if it was called '
+			. 'from a parent IVR. If not, it will go to the chosen destination.<br><br>'
+			. 'The return path will be to any IVR that was in the call path prior to this '
+			. 'IVR which could lead to strange results if there was an IVR called in the '
+			. 'call path but not immediately before this')));
 
 	$currentcomponent->addguielem($section,
 		new gui_selectbox('timeout_recording', $currentcomponent->getoptlist('recordings'),
@@ -465,12 +493,15 @@ function ivr_configprocess(){
 						'invalid_destination', 'invalid_recording',
 						'retvm', 'timeout_time', 'timeout_recording',
 						'timeout_retry_recording', 'timeout_destination', 'timeout_loops',
-						'timeout_append_announce', 'invalid_append_announce');
+						'timeout_append_announce', 'invalid_append_announce',
+						'timeout_ivr_ret', 'invalid_ivr_ret');
 		foreach($get_var as $var){
 			$vars[$var] = isset($_REQUEST[$var]) 	? $_REQUEST[$var]		: '';
 		}
 		$vars['timeout_append_announce'] = empty($vars['timeout_append_announce']) ? '0' : '1';
 		$vars['invalid_append_announce'] = empty($vars['invalid_append_announce']) ? '0' : '1';
+		$vars['timeout_ivr_ret'] = empty($vars['timeout_ivr_ret']) ? '0' : '1';
+		$vars['invalid_ivr_ret'] = empty($vars['invalid_ivr_ret']) ? '0' : '1';
 
 		$action		= isset($_REQUEST['action'])	? $_REQUEST['action']	: '';
 		$entries	= isset($_REQUEST['entries'])	? $_REQUEST['entries']	: '';
