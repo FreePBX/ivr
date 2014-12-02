@@ -11,7 +11,7 @@ $(document).ready(function(){
 		$('.destdropdown2', $(thisrow).next()).hide();
 		bind_dests_double_selects();
 	});
-	
+
 	$('input[type=submit]').click(function(){
 		//remove the last blank field so that it isnt subject to validation, assuming it wasnt set
 		//called from .click() as that is fired before validation
@@ -21,7 +21,7 @@ $(document).ready(function(){
 			last.remove()
 		}
 	});
-	
+
  	$('[name=frm_ivr]').submit(function(){
 		//set timeout/invalid destination, removing hidden field if there is no valus being set
 		if ($('#invalid_loops').val() != 'disabled') {
@@ -30,7 +30,7 @@ $(document).ready(function(){
 		} else {
 			$('#invalid_destination').remove()
 		}
-		
+
 		if ($('#timeout_loops').val() != 'disabled') {
 			timeout = $('[name=' + $('[name=gototimeout]').val() + 'timeout]').val();
 			$('#timeout_destination').val(timeout)
@@ -38,7 +38,7 @@ $(document).ready(function(){
 			$('#timeout_destination').remove()
 		}
 
-		
+
 		//set goto fileds for destinations
 		$('[name^=goto]').each(function(){
 			num = $(this).attr('name').replace('goto', '');
@@ -46,32 +46,29 @@ $(document).ready(function(){
 			$(this).parent().find('input[name="entries[goto][]"]').val(dest)
 			//console.log(num, dest, $(this).parent().find('input[name="entries[goto][]"]').val())
 		})
-		
+
 		//set ret_ivr checkboxes to SOMETHING so that they get sent back
 		$('[name="entries[ivr_ret][]"]').not(':checked').each(function(){
 			$(this).attr('checked', 'checked').val('uncheked')
 		})
-		$('[name$="_ivr_ret"]').not(':checked').each(function(){
-			$(this).attr('checked', 'checked').val('uncheked')
-		})
-		
+
 		//disable dests so that they dont get posted
 		$('.destdropdown, .destdropdown2').attr("disabled", "disabled");
 	})
-	
+
 	//reenable dests in case there was an error on the page and it didnt get postedj
 	$('[name=frm_ivr]').submit(function(){
 		setTimeout(restore_form_elemens, 100);
 	})
-	
+
 	//delete rows on click
 	$('.delete_entrie').live('click', function(){
 		$(this).closest('tr').fadeOut('normal', function(){$(this).closest('tr').remove();})
 	})
-	
+
 	//show/hide invalid elements on change
 	$('#invalid_loops').change(invalid_elements)
-	
+
 	//show/hide timeout elements on change
 	$('#timeout_loops').change(timeout_elements)
 });
@@ -79,9 +76,6 @@ $(document).ready(function(){
 function restore_form_elemens() {
 	$('.destdropdown, .destdropdown2').removeAttr('disabled')
 	$('[name="entries[ivr_ret][]"][value=uncheked]').each(function(){
-		$(this).removeAttr('checked')
-	})
-	$('[name$="_ivr_ret"][value=uncheked]').each(function(){
 		$(this).removeAttr('checked')
 	})
 	invalid_elements();
