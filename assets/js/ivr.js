@@ -22,7 +22,9 @@ $(document).ready(function(){
 		}
 	});
 
- 	$('[name=frm_ivr]').submit(function(){
+	//fix for popovers because jquery wont bubble up a real "submit()" correctly.
+	//See FREEPBX-8122 for more information
+	$('form[name=frm_ivr]')[0].onsubmit = function() {
 		//set timeout/invalid destination, removing hidden field if there is no valus being set
 		if ($('#invalid_loops').val() != 'disabled') {
 			invalid = $('[name=' + $('[name=gotoinvalid]').val() + 'invalid]').val();
@@ -54,12 +56,9 @@ $(document).ready(function(){
 
 		//disable dests so that they dont get posted
 		$('.destdropdown, .destdropdown2').attr("disabled", "disabled");
-	})
 
-	//reenable dests in case there was an error on the page and it didnt get postedj
-	$('[name=frm_ivr]').submit(function(){
 		setTimeout(restore_form_elemens, 100);
-	})
+	}
 
 	//delete rows on click
 	$('.delete_entrie').live('click', function(){
