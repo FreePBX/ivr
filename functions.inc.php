@@ -274,7 +274,7 @@ function ivr_get_entries($id) {
 	global $db;
 
 	//+0 to convert string to an integer
-	$sql = "SELECT * FROM ivr_entries WHERE ivr_id = ? ORDER BY selection + 0";
+	$sql = "SELECT * FROM ivr_entries WHERE ivr_id = ? ORDER BY selection + 0 DESC";
 	$res = $db->getAll($sql, array($id), DB_FETCHMODE_ASSOC);
 	if ($db->IsError($res)) {
 		die_freepbx($res->getDebugInfo());
