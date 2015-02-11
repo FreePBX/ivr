@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-23 09:52+0000\n"
+"POT-Creation-Date: 2015-02-11 17:59-0500\n"
 "PO-Revision-Date: 2009-01-31 12:34+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -18,196 +18,288 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
+#: /usr/src/freepbx/ivr/views/entries.php:64
+msgid "Add Entry"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:309
+#: /usr/src/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr "添加IVR"
 
-#, php-format
-msgid "Edit IVR: %s"
+#: /usr/src/freepbx/ivr/page.ivr.php:23
+msgid "Add a new IVR"
 msgstr ""
 
+#: /usr/src/freepbx/ivr/functions.inc.php:428
+msgid ""
+"After playing the Invalid Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:453
+msgid ""
+"After playing the Timeout Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:416
+msgid "Amount of time to be considered a timeout"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:396
+msgid "Announcement"
+msgstr "公告"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:428
+msgid "Append Announcement on Invalid"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:453
+msgid "Append Announcement on Timeout"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:431
+#: /usr/src/freepbx/ivr/functions.inc.php:456
+#: /usr/src/freepbx/ivr/views/entries.php:35
+msgid ""
+"Check this box to have this option return to a parent IVR if it was called "
+"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
+"选择此项将会包含一个返回到父IVR的选项，如果呼叫是从父IVR进入的，用户选择了返"
+"回父IVR后，呼叫将返回原处。如果不是从父IVR呼叫到此的，呼叫就会转移到选择的目"
+"的地。<br /><br />返回路径可能会是呼叫路径上任何先于此IVR的IVR。如果呼叫了在"
+"路径上不直接相邻的父IVR，这个设置可能回带来奇怪的结果。"
+
+#: /usr/src/freepbx/ivr/install.php:469
+msgid "Checking for invalid_append_announce.."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:246
+msgid "Checking for invalid_id.."
+msgstr "正在检查invalid_id。。。"
+
+#: /usr/src/freepbx/ivr/install.php:507
+msgid "Checking for invalid_ivr_ret.."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:264
+msgid "Checking for retvm.."
+msgstr "正在检查retvm。。。"
+
+#: /usr/src/freepbx/ivr/install.php:451
+msgid "Checking for timeout_append_announce.."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:229
+msgid "Checking for timeout_id.."
+msgstr "正在检查timeout_id。。。"
+
+#: /usr/src/freepbx/ivr/install.php:489
+msgid "Checking for timeout_ivr_ret.."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:167
+msgid "Checking if announcements need migration.."
+msgstr "正在检查通知通告是否需要迁移。。。"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:404
+msgid "Completely disabled"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:413
+msgid "Default"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:623
+msgid "Delete"
+msgstr "删除"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:358
 #, php-format
 msgid "Delete IVR: %s"
 msgstr ""
 
-msgid "IVR General Options"
+#: /usr/src/freepbx/ivr/views/entries.php:43
+msgid "Delete this entry. Dont forget to click Submit to save changes!"
 msgstr ""
 
-msgid "IVR Name"
+#: /usr/src/freepbx/ivr/install.php:287
+#, php-format
+msgid "Deprecated Directory used by %s IVRs"
 msgstr ""
 
-msgid "Name of this IVR."
-msgstr ""
-
-msgid "IVR Description"
-msgstr ""
-
+#: /usr/src/freepbx/ivr/functions.inc.php:372
 msgid "Description of this ivr."
 msgstr ""
 
-msgid "IVR Options (DTMF)"
+#: /usr/src/freepbx/ivr/functions.inc.php:623
+msgid "Destination"
 msgstr ""
 
-msgid "None"
-msgstr "无"
-
-msgid "Announcement"
-msgstr "公告"
-
-msgid "Greeting to be played on entry to the Ivr."
+#: /usr/src/freepbx/ivr/functions.inc.php:442
+msgid "Destination to send the call to after Invalid Recording is played."
 msgstr ""
 
-msgid "Disabled"
+#: /usr/src/freepbx/ivr/functions.inc.php:467
+msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
-msgid "Extensions"
-msgstr ""
-
-msgid "Completely disabled"
-msgstr ""
-
-msgid "Enabled for all extensions on a system"
-msgstr ""
-
+#: /usr/src/freepbx/ivr/functions.inc.php:409
 msgid "Direct Dial"
 msgstr ""
 
+#: /usr/src/freepbx/ivr/functions.inc.php:401
+msgid "Disabled"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:345
+#, php-format
+msgid "Edit IVR: %s"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:405
+msgid "Enabled for all extensions on a system"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:623
+msgid "Ext"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:402
+msgid "Extensions"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:396
+msgid "Greeting to be played on entry to the Ivr."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/page.ivr.php:20
+msgid "IVR"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:372
+msgid "IVR Description"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:481
+msgid "IVR Entries"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:367
+msgid "IVR General Options"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:369
+msgid "IVR Name"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:376
+msgid "IVR Options (DTMF)"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:714
+#: /usr/src/freepbx/ivr/functions.inc.php:734
+#, php-format
+msgid "IVR: %s"
+msgstr "IVR：%s"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:681
+#, php-format
+msgid "IVR: %s / Option: %s"
+msgstr "IVR：%s / 选项：%s"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:471
 msgid ""
-"Provides options for callers to direct dial an extension. Direct dialing can "
-"be:"
+"If checked, upon exiting voicemail a caller will be returned to this IVR if "
+"they got a users voicemail"
+msgstr "如果钩选了此项，主叫将在收到某用户的语音邮件时返回到此IVR"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:441
+msgid "Invalid Destination"
 msgstr ""
 
-msgid "Default"
+#: /usr/src/freepbx/ivr/functions.inc.php:439
+msgid "Invalid Recording"
 msgstr ""
 
-msgid "Timeout"
-msgstr "超时设置"
-
-msgid "Amount of time to be considered a timeout"
-msgstr ""
-
+#: /usr/src/freepbx/ivr/functions.inc.php:422
 msgid "Invalid Retries"
 msgstr ""
 
+#: /usr/src/freepbx/ivr/functions.inc.php:425
+msgid "Invalid Retry Recording"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:369
+msgid "Name of this IVR."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:379
+msgid "None"
+msgstr "无"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:447
+msgid ""
+"Number of times to retry when no DTMF is heard and the IVR choice times out."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:422
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
 msgstr ""
 
-msgid "Invalid Retry Recording"
-msgstr ""
-
-msgid ""
-"Prompt to be played when an invalid/unmatched response is received, before "
-"prompting the caller to try again"
-msgstr ""
-
-msgid "Invalid Recording"
-msgstr ""
-
+#: /usr/src/freepbx/ivr/functions.inc.php:439
+#: /usr/src/freepbx/ivr/functions.inc.php:464
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
 "unmatched responses (as determined by Invalid Retries)"
 msgstr ""
 
-msgid "Invalid Destination"
-msgstr ""
-
-msgid "Destination to send the call to after Invalid Recording is played."
-msgstr ""
-
-msgid "Timeout Retries"
-msgstr ""
-
-msgid "Timeout Retry Recording"
-msgstr ""
-
-msgid "Timeout Recording"
-msgstr ""
-
-msgid "Timeout Destination"
-msgstr ""
-
-msgid "Return to IVR after VM"
-msgstr ""
-
+#: /usr/src/freepbx/ivr/functions.inc.php:450
 msgid ""
-"If checked, upon exiting voicemail a caller will be returned to this IVR if "
-"they got a users voicemail"
-msgstr "如果钩选了此项，主叫将在收到某用户的语音邮件时返回到此IVR"
-
-msgid "IVR Entries"
+"Prompt to be played when a timeout occurs, before prompting the caller to "
+"try again"
 msgstr ""
 
-msgid "Ext"
+#: /usr/src/freepbx/ivr/functions.inc.php:425
+msgid ""
+"Prompt to be played when an invalid/unmatched response is received, before "
+"prompting the caller to try again"
 msgstr ""
 
-msgid "Destination"
+#: /usr/src/freepbx/ivr/functions.inc.php:409
+msgid ""
+"Provides options for callers to direct dial an extension. Direct dialing can "
+"be:"
 msgstr ""
 
+#: /usr/src/freepbx/ivr/functions.inc.php:623
 msgid "Return"
 msgstr ""
 
+#: /usr/src/freepbx/ivr/functions.inc.php:431
+msgid "Return on Invalid"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:456
+msgid "Return on Timeout"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:623
 msgid "Return to IVR"
 msgstr "返回到IVR"
 
-msgid "Delete"
-msgstr "删除"
+#: /usr/src/freepbx/ivr/functions.inc.php:471
+msgid "Return to IVR after VM"
+msgstr ""
 
-#, php-format
-msgid "IVR: %s / Option: %s"
-msgstr "IVR：%s / 选项：%s"
-
-#, php-format
-msgid "IVR: %s"
-msgstr "IVR：%s"
-
-msgid "Checking if announcements need migration.."
-msgstr "正在检查通知通告是否需要迁移。。。"
-
-msgid "migrating"
-msgstr "正在迁移"
-
-msgid "adding announcement_id field.."
-msgstr "正在添加announcement_id字段。。"
-
-msgid "fatal error"
-msgstr "致命错误"
-
-msgid "ok"
-msgstr "完成"
-
-msgid "migrate to recording ids.."
-msgstr "迁移到录音id。。。"
-
-#, php-format
-msgid "migrated %s entries"
-msgstr "迁移了%s个项目"
-
-msgid "dropping announcement field.."
-msgstr "正在删除announcement字段。。。"
-
-msgid "no announcement field???"
-msgstr "没有announcement字段？"
-
-msgid "already migrated"
-msgstr "已经迁移过了"
-
-msgid "Checking for timeout_id.."
-msgstr "正在检查timeout_id。。。"
-
-msgid "added"
-msgstr "已增加"
-
-msgid "not needed"
-msgstr "不需要"
-
-msgid "Checking for invalid_id.."
-msgstr "正在检查invalid_id。。。"
-
-msgid "Checking for retvm.."
-msgstr "正在检查retvm。。。"
-
+#: /usr/src/freepbx/ivr/install.php:286
 #, php-format
 msgid ""
 "There are %s IVRs that have the legacy Directory dialing enabled. This has "
@@ -217,23 +309,87 @@ msgid ""
 "from the Online Module Repository"
 msgstr ""
 
+#: /usr/src/freepbx/ivr/functions.inc.php:416
+msgid "Timeout"
+msgstr "超时设置"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:467
+msgid "Timeout Destination"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:464
+msgid "Timeout Recording"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:447
+msgid "Timeout Retries"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:450
+msgid "Timeout Retry Recording"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:241 /usr/src/freepbx/ivr/install.php:258
+#: /usr/src/freepbx/ivr/install.php:276 /usr/src/freepbx/ivr/install.php:463
+#: /usr/src/freepbx/ivr/install.php:481 /usr/src/freepbx/ivr/install.php:501
+#: /usr/src/freepbx/ivr/install.php:519
+msgid "added"
+msgstr "已增加"
+
+#: /usr/src/freepbx/ivr/install.php:174
+msgid "adding announcement_id field.."
+msgstr "正在添加announcement_id字段。。"
+
+#: /usr/src/freepbx/ivr/install.php:224
+msgid "already migrated"
+msgstr "已经迁移过了"
+
+#: /usr/src/freepbx/ivr/views/entries.php:20
+msgid "digits pressed"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:214
+msgid "dropping announcement field.."
+msgstr "正在删除announcement字段。。。"
+
+#: /usr/src/freepbx/ivr/install.php:178 /usr/src/freepbx/ivr/install.php:190
+#: /usr/src/freepbx/ivr/install.php:206 /usr/src/freepbx/ivr/install.php:238
+#: /usr/src/freepbx/ivr/install.php:255 /usr/src/freepbx/ivr/install.php:273
+#: /usr/src/freepbx/ivr/install.php:460 /usr/src/freepbx/ivr/install.php:478
+#: /usr/src/freepbx/ivr/install.php:498 /usr/src/freepbx/ivr/install.php:516
+msgid "fatal error"
+msgstr "致命错误"
+
+#: /usr/src/freepbx/ivr/install.php:186
+msgid "migrate to recording ids.."
+msgstr "迁移到录音id。。。"
+
+#: /usr/src/freepbx/ivr/install.php:210
 #, php-format
-msgid "Deprecated Directory used by %s IVRs"
-msgstr ""
+msgid "migrated %s entries"
+msgstr "迁移了%s个项目"
 
+#: /usr/src/freepbx/ivr/install.php:173
+msgid "migrating"
+msgstr "正在迁移"
+
+#: /usr/src/freepbx/ivr/install.php:218
+msgid "no announcement field???"
+msgstr "没有announcement字段？"
+
+#: /usr/src/freepbx/ivr/install.php:244 /usr/src/freepbx/ivr/install.php:261
+#: /usr/src/freepbx/ivr/install.php:279 /usr/src/freepbx/ivr/install.php:466
+#: /usr/src/freepbx/ivr/install.php:484 /usr/src/freepbx/ivr/install.php:504
+#: /usr/src/freepbx/ivr/install.php:522
+msgid "not needed"
+msgstr "不需要"
+
+#: /usr/src/freepbx/ivr/install.php:181 /usr/src/freepbx/ivr/install.php:220
+msgid "ok"
+msgstr "完成"
+
+#: /usr/src/freepbx/ivr/install.php:288
 msgid "posting notice about deprecated functionality"
-msgstr ""
-
-msgid "IVR"
-msgstr ""
-
-msgid "Applications"
-msgstr ""
-
-msgid ""
-"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These can be used to send callers to different locations "
-"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 msgstr ""
 
 #~ msgid ""
@@ -408,15 +564,3 @@ msgstr ""
 
 #~ msgid "Invalid option"
 #~ msgstr "无效选项"
-
-#~ msgid ""
-#~ "Check this box to have this option return to a parent IVR if it was "
-#~ "called from a parent IVR. If not, it will go to the chosen destination."
-#~ "<br><br>The return path will be to any IVR that was in the call path "
-#~ "prior to this IVR which could lead to strange results if there was an IVR "
-#~ "called in the call path but not immediately before this"
-#~ msgstr ""
-#~ "选择此项将会包含一个返回到父IVR的选项，如果呼叫是从父IVR进入的，用户选择了"
-#~ "返回父IVR后，呼叫将返回原处。如果不是从父IVR呼叫到此的，呼叫就会转移到选择"
-#~ "的目的地。<br /><br />返回路径可能会是呼叫路径上任何先于此IVR的IVR。如果呼"
-#~ "叫了在路径上不直接相邻的父IVR，这个设置可能回带来奇怪的结果。"

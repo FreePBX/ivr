@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ivr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-23 09:52+0000\n"
+"POT-Creation-Date: 2015-02-11 17:59-0500\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -30,119 +30,201 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
+#: /usr/src/freepbx/ivr/views/entries.php:64
+msgid "Add Entry"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:309
+#: /usr/src/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr "Lägg till IVR"
 
-#, php-format
-msgid "Edit IVR: %s"
+#: /usr/src/freepbx/ivr/page.ivr.php:23
+msgid "Add a new IVR"
 msgstr ""
 
+#: /usr/src/freepbx/ivr/functions.inc.php:428
+msgid ""
+"After playing the Invalid Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:453
+msgid ""
+"After playing the Timeout Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:416
+msgid "Amount of time to be considered a timeout"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:396
+msgid "Announcement"
+msgstr "Meddelande"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:428
+msgid "Append Announcement on Invalid"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:453
+msgid "Append Announcement on Timeout"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:431
+#: /usr/src/freepbx/ivr/functions.inc.php:456
+#: /usr/src/freepbx/ivr/views/entries.php:35
+msgid ""
+"Check this box to have this option return to a parent IVR if it was called "
+"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
+"Aktivera denna för att återgå till den IVR du kom från, annars gå till till "
+"den valda destinationen.<br><br>Returen kommer att vara den IVR som utfördes "
+"precis innan denna. Detta kan leda till konstiga resultat om en IVR "
+"anropades men inte precis innan denna."
+
+#: /usr/src/freepbx/ivr/install.php:469
+msgid "Checking for invalid_append_announce.."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:246
+msgid "Checking for invalid_id.."
+msgstr "Kontrollerar invalid_id.."
+
+#: /usr/src/freepbx/ivr/install.php:507
+msgid "Checking for invalid_ivr_ret.."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:264
+msgid "Checking for retvm.."
+msgstr "Kontrollerar retvm.."
+
+#: /usr/src/freepbx/ivr/install.php:451
+msgid "Checking for timeout_append_announce.."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:229
+msgid "Checking for timeout_id.."
+msgstr "Kontrollerar timeout_id.."
+
+#: /usr/src/freepbx/ivr/install.php:489
+msgid "Checking for timeout_ivr_ret.."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:167
+msgid "Checking if announcements need migration.."
+msgstr "Kontrollerar om announcements behöver migreras.."
+
+#: /usr/src/freepbx/ivr/functions.inc.php:404
+msgid "Completely disabled"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:413
+msgid "Default"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:623
+msgid "Delete"
+msgstr "Ta bort"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:358
 #, php-format
 msgid "Delete IVR: %s"
 msgstr ""
 
-msgid "IVR General Options"
+#: /usr/src/freepbx/ivr/views/entries.php:43
+msgid "Delete this entry. Dont forget to click Submit to save changes!"
 msgstr ""
 
-msgid "IVR Name"
-msgstr ""
+#: /usr/src/freepbx/ivr/install.php:287
+#, php-format
+msgid "Deprecated Directory used by %s IVRs"
+msgstr "Äldre katalogmodul används av %s IVR"
 
-msgid "Name of this IVR."
-msgstr ""
-
-msgid "IVR Description"
-msgstr ""
-
+#: /usr/src/freepbx/ivr/functions.inc.php:372
 msgid "Description of this ivr."
 msgstr ""
 
-msgid "IVR Options (DTMF)"
+#: /usr/src/freepbx/ivr/functions.inc.php:623
+msgid "Destination"
 msgstr ""
 
-msgid "None"
-msgstr "Inget"
-
-msgid "Announcement"
-msgstr "Meddelande"
-
-msgid "Greeting to be played on entry to the Ivr."
-msgstr ""
-
-msgid "Disabled"
-msgstr "Avaktiverad"
-
-msgid "Extensions"
-msgstr ""
-
-msgid "Completely disabled"
-msgstr ""
-
-msgid "Enabled for all extensions on a system"
-msgstr ""
-
-msgid "Direct Dial"
-msgstr ""
-
-msgid ""
-"Provides options for callers to direct dial an extension. Direct dialing can "
-"be:"
-msgstr ""
-
-msgid "Default"
-msgstr ""
-
-msgid "Timeout"
-msgstr "Väntetid"
-
-msgid "Amount of time to be considered a timeout"
-msgstr ""
-
-msgid "Invalid Retries"
-msgstr ""
-
-msgid ""
-"Number of times to retry when receiving an invalid/unmatched response from "
-"the caller"
-msgstr ""
-
-msgid "Invalid Retry Recording"
-msgstr ""
-
-msgid ""
-"Prompt to be played when an invalid/unmatched response is received, before "
-"prompting the caller to try again"
-msgstr ""
-
-msgid "Invalid Recording"
-msgstr ""
-
-msgid ""
-"Prompt to be played before sending the caller to an alternate destination "
-"due to the caller pressing 0 or receiving the maximum amount of invalid/"
-"unmatched responses (as determined by Invalid Retries)"
-msgstr ""
-
-msgid "Invalid Destination"
-msgstr ""
-
+#: /usr/src/freepbx/ivr/functions.inc.php:442
 msgid "Destination to send the call to after Invalid Recording is played."
 msgstr ""
 
-msgid "Timeout Retries"
+#: /usr/src/freepbx/ivr/functions.inc.php:467
+msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
-msgid "Timeout Retry Recording"
+#: /usr/src/freepbx/ivr/functions.inc.php:409
+msgid "Direct Dial"
 msgstr ""
 
-msgid "Timeout Recording"
+#: /usr/src/freepbx/ivr/functions.inc.php:401
+msgid "Disabled"
+msgstr "Avaktiverad"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:345
+#, php-format
+msgid "Edit IVR: %s"
 msgstr ""
 
-msgid "Timeout Destination"
+#: /usr/src/freepbx/ivr/functions.inc.php:405
+msgid "Enabled for all extensions on a system"
 msgstr ""
 
-msgid "Return to IVR after VM"
+#: /usr/src/freepbx/ivr/functions.inc.php:623
+msgid "Ext"
 msgstr ""
 
+#: /usr/src/freepbx/ivr/functions.inc.php:402
+msgid "Extensions"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:396
+msgid "Greeting to be played on entry to the Ivr."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/page.ivr.php:20
+msgid "IVR"
+msgstr "IVR"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:372
+msgid "IVR Description"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:481
+msgid "IVR Entries"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:367
+msgid "IVR General Options"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:369
+msgid "IVR Name"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:376
+msgid "IVR Options (DTMF)"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:714
+#: /usr/src/freepbx/ivr/functions.inc.php:734
+#, php-format
+msgid "IVR: %s"
+msgstr "IVR: %s"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:681
+#, php-format
+msgid "IVR: %s / Option: %s"
+msgstr "IVR: %s / Funktion: %s"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:471
 msgid ""
 "If checked, upon exiting voicemail a caller will be returned to this IVR if "
 "they got a users voicemail"
@@ -150,78 +232,88 @@ msgstr ""
 "Om detta är valt, när en uppringare avslutar en röstbrevlåda kommer dom att "
 "återvända till denna IVR om dom hamnade i en röstbrevlåda för en anknytning"
 
-msgid "IVR Entries"
+#: /usr/src/freepbx/ivr/functions.inc.php:441
+msgid "Invalid Destination"
 msgstr ""
 
-msgid "Ext"
+#: /usr/src/freepbx/ivr/functions.inc.php:439
+msgid "Invalid Recording"
 msgstr ""
 
-msgid "Destination"
+#: /usr/src/freepbx/ivr/functions.inc.php:422
+msgid "Invalid Retries"
 msgstr ""
 
+#: /usr/src/freepbx/ivr/functions.inc.php:425
+msgid "Invalid Retry Recording"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:369
+msgid "Name of this IVR."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:379
+msgid "None"
+msgstr "Inget"
+
+#: /usr/src/freepbx/ivr/functions.inc.php:447
+msgid ""
+"Number of times to retry when no DTMF is heard and the IVR choice times out."
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:422
+msgid ""
+"Number of times to retry when receiving an invalid/unmatched response from "
+"the caller"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:439
+#: /usr/src/freepbx/ivr/functions.inc.php:464
+msgid ""
+"Prompt to be played before sending the caller to an alternate destination "
+"due to the caller pressing 0 or receiving the maximum amount of invalid/"
+"unmatched responses (as determined by Invalid Retries)"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:450
+msgid ""
+"Prompt to be played when a timeout occurs, before prompting the caller to "
+"try again"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:425
+msgid ""
+"Prompt to be played when an invalid/unmatched response is received, before "
+"prompting the caller to try again"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:409
+msgid ""
+"Provides options for callers to direct dial an extension. Direct dialing can "
+"be:"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:623
 msgid "Return"
 msgstr ""
 
+#: /usr/src/freepbx/ivr/functions.inc.php:431
+msgid "Return on Invalid"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:456
+msgid "Return on Timeout"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:623
 msgid "Return to IVR"
 msgstr "Återgå till IVR"
 
-msgid "Delete"
-msgstr "Ta bort"
+#: /usr/src/freepbx/ivr/functions.inc.php:471
+msgid "Return to IVR after VM"
+msgstr ""
 
-#, php-format
-msgid "IVR: %s / Option: %s"
-msgstr "IVR: %s / Funktion: %s"
-
-#, php-format
-msgid "IVR: %s"
-msgstr "IVR: %s"
-
-msgid "Checking if announcements need migration.."
-msgstr "Kontrollerar om announcements behöver migreras.."
-
-msgid "migrating"
-msgstr "migrerar"
-
-msgid "adding announcement_id field.."
-msgstr "lägger till fältet announcements_id.."
-
-msgid "fatal error"
-msgstr "allvarligt fel"
-
-msgid "ok"
-msgstr "ok"
-
-msgid "migrate to recording ids.."
-msgstr "migrerar till recording ids.."
-
-#, php-format
-msgid "migrated %s entries"
-msgstr "migrerade %s poster"
-
-msgid "dropping announcement field.."
-msgstr "kastar fältet announcements.."
-
-msgid "no announcement field???"
-msgstr "inget fält som heter announcements???"
-
-msgid "already migrated"
-msgstr "redan migrerad"
-
-msgid "Checking for timeout_id.."
-msgstr "Kontrollerar timeout_id.."
-
-msgid "added"
-msgstr "adderad"
-
-msgid "not needed"
-msgstr "behövs inte"
-
-msgid "Checking for invalid_id.."
-msgstr "Kontrollerar invalid_id.."
-
-msgid "Checking for retvm.."
-msgstr "Kontrollerar retvm.."
-
+#: /usr/src/freepbx/ivr/install.php:286
 #, php-format
 msgid ""
 "There are %s IVRs that have the legacy Directory dialing enabled. This has "
@@ -235,27 +327,97 @@ msgstr ""
 "(a) IVR-er att använda den nya katalogmodulen. Du kan installera den nya "
 "katalogmodulen från Moduladministrations-menyn"
 
-#, php-format
-msgid "Deprecated Directory used by %s IVRs"
-msgstr "Äldre katalogmodul används av %s IVR"
+#: /usr/src/freepbx/ivr/functions.inc.php:416
+msgid "Timeout"
+msgstr "Väntetid"
 
+#: /usr/src/freepbx/ivr/functions.inc.php:467
+msgid "Timeout Destination"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:464
+msgid "Timeout Recording"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:447
+msgid "Timeout Retries"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/functions.inc.php:450
+msgid "Timeout Retry Recording"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:241 /usr/src/freepbx/ivr/install.php:258
+#: /usr/src/freepbx/ivr/install.php:276 /usr/src/freepbx/ivr/install.php:463
+#: /usr/src/freepbx/ivr/install.php:481 /usr/src/freepbx/ivr/install.php:501
+#: /usr/src/freepbx/ivr/install.php:519
+msgid "added"
+msgstr "adderad"
+
+#: /usr/src/freepbx/ivr/install.php:174
+msgid "adding announcement_id field.."
+msgstr "lägger till fältet announcements_id.."
+
+#: /usr/src/freepbx/ivr/install.php:224
+msgid "already migrated"
+msgstr "redan migrerad"
+
+#: /usr/src/freepbx/ivr/views/entries.php:20
+msgid "digits pressed"
+msgstr ""
+
+#: /usr/src/freepbx/ivr/install.php:214
+msgid "dropping announcement field.."
+msgstr "kastar fältet announcements.."
+
+#: /usr/src/freepbx/ivr/install.php:178 /usr/src/freepbx/ivr/install.php:190
+#: /usr/src/freepbx/ivr/install.php:206 /usr/src/freepbx/ivr/install.php:238
+#: /usr/src/freepbx/ivr/install.php:255 /usr/src/freepbx/ivr/install.php:273
+#: /usr/src/freepbx/ivr/install.php:460 /usr/src/freepbx/ivr/install.php:478
+#: /usr/src/freepbx/ivr/install.php:498 /usr/src/freepbx/ivr/install.php:516
+msgid "fatal error"
+msgstr "allvarligt fel"
+
+#: /usr/src/freepbx/ivr/install.php:186
+msgid "migrate to recording ids.."
+msgstr "migrerar till recording ids.."
+
+#: /usr/src/freepbx/ivr/install.php:210
+#, php-format
+msgid "migrated %s entries"
+msgstr "migrerade %s poster"
+
+#: /usr/src/freepbx/ivr/install.php:173
+msgid "migrating"
+msgstr "migrerar"
+
+#: /usr/src/freepbx/ivr/install.php:218
+msgid "no announcement field???"
+msgstr "inget fält som heter announcements???"
+
+#: /usr/src/freepbx/ivr/install.php:244 /usr/src/freepbx/ivr/install.php:261
+#: /usr/src/freepbx/ivr/install.php:279 /usr/src/freepbx/ivr/install.php:466
+#: /usr/src/freepbx/ivr/install.php:484 /usr/src/freepbx/ivr/install.php:504
+#: /usr/src/freepbx/ivr/install.php:522
+msgid "not needed"
+msgstr "behövs inte"
+
+#: /usr/src/freepbx/ivr/install.php:181 /usr/src/freepbx/ivr/install.php:220
+msgid "ok"
+msgstr "ok"
+
+#: /usr/src/freepbx/ivr/install.php:288
 msgid "posting notice about deprecated functionality"
 msgstr "postar notering om gammal modul"
 
-msgid "IVR"
-msgstr "IVR"
-
-msgid "Applications"
-msgstr ""
-
-msgid ""
-"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These can be used to send callers to different locations "
-"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-msgstr ""
-"Denna modul skapar en digital receptionist. Detta kan användas för att sätta "
-"upp en röststyrd meny, t.ex. Tryck ett för försäljning och/eller "
-"direktnummer till anknytningar"
+#~ msgid ""
+#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+#~ "Response) menus. These can be used to send callers to different locations "
+#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+#~ msgstr ""
+#~ "Denna modul skapar en digital receptionist. Detta kan användas för att "
+#~ "sätta upp en röststyrd meny, t.ex. Tryck ett för försäljning och/eller "
+#~ "direktnummer till anknytningar"
 
 #~ msgid ""
 #~ "There is a problem with install.sql, cannot re-create databases. Contact "
@@ -484,18 +646,6 @@ msgstr ""
 
 #~ msgid "Digits to press for this choice"
 #~ msgstr "Siffra att trycka för att välja denna meny"
-
-#~ msgid ""
-#~ "Check this box to have this option return to a parent IVR if it was "
-#~ "called from a parent IVR. If not, it will go to the chosen destination."
-#~ "<br><br>The return path will be to any IVR that was in the call path "
-#~ "prior to this IVR which could lead to strange results if there was an IVR "
-#~ "called in the call path but not immediately before this"
-#~ msgstr ""
-#~ "Aktivera denna för att återgå till den IVR du kom från, annars gå till "
-#~ "till den valda destinationen.<br><br>Returen kommer att vara den IVR som "
-#~ "utfördes precis innan denna. Detta kan leda till konstiga resultat om en "
-#~ "IVR anropades men inte precis innan denna."
 
 #~ msgid "Delete this entry. Dont forget to click Save to save changes!"
 #~ msgstr ""
