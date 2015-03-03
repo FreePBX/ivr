@@ -1,5 +1,5 @@
+<a href="config.php?display=ivr" class = "list-group-item <?php echo ($_REQUEST['id'] == ''?'hidden':'')?>"><i class="fa fa-list"></i>&nbsp;<?php echo _("List IVRs")?></a>
 <a href="config.php?display=ivr&action=add" class = "list-group-item"><i class="fa fa-plus"></i>&nbsp;<?php echo _("Add IVR")?></a>
-<a href="config.php?display=ivr" class = "list-group-item"><i class="fa fa-list"></i>&nbsp;<?php echo _("List IVRs")?></a>
 <?php if($_REQUEST['action'] != ''){
 ?>
 <table id="ivrnavgrid" data-url="?display=ivr&action=getJSON&jdata=grid&quietmode=1" data-cache="false" data-height="299" data-toggle="table" class="table table-striped">
