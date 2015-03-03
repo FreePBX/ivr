@@ -53,6 +53,7 @@ if(action == 'add'){
 		</div>
 		';
 	}
+	$delURL = '?display=ivr&action=edit&id='.$id;
 }
 $recordingList = recordings_list();
 $annopts = '<option>'._('None').'</option>';
@@ -91,7 +92,7 @@ foreach($recordingList as $r){
 			<div class="col-sm-9">
 				<div class="fpbx-container">
 					<div class="display full-border">
-						<form class='fpbx-submit' name="frm_ivr" id="frm_ivr" method="POST" action="" data-fpbx-delete="">
+						<form class='fpbx-submit' name="frm_ivr" id="frm_ivr" method="POST" action="" data-fpbx-delete="<?php echo $delURL?>">
 						<input type="hidden" name="id" value="<?php echo $ivr['id']?>">
 						<input type="hidden" name="action" value="save">
 						<div class="section-title" data-for="ivrgeneral">
