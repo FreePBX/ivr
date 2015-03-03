@@ -13,19 +13,44 @@ foreach ($get_vars as $k => $v) {
 	$$k = $var[$k];//todo: legacy support, needs to GO!
 }
 
-echo load_view(dirname(__FILE__) . '/views/rnav.php', array('ivr_results' => ivr_get_details()) + $var);
-
 if (!$action && !$id) {
 ?>
-<h2><?php echo _("IVR"); ?></h2>
-<br/><br/>
-<a href="config.php?type=setup&display=ivr&action=add">
-	<input type="button" value="<?php echo _("Add a new IVR")?>" id="new_dir">
-</a>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/>
+<div class="container-fluid">
+	<h1><?php echo _('IVR')?></h1>
+	<div class = "display full-border">
+		<div class="row">
+			<div class="col-sm-9">
+				<div class="fpbx-container">
+					<div class="display full-border">
+						<table id="ivrgrid" data-url="?display=ivr&action=getJSON&jdata=grid&quietmode=1" data-cache="false" data-height="299" data-toggle="table" class="table table-striped">
+    						<thead>
+ 								<tr>
+        							<th data-field="name"><?php echo _("IVR Name")?></th>
+        							<th data-field="link" data-formatter="actionFormatter"><?php echo _("Actions")?></th>
+    							</tr>
+    						</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 hidden-xs bootnav">
+				<div class="list-group">
+					<?php echo load_view(__DIR__.'/views/rnav.php')?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	
+
 
 <?php
+}else{
+	$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
+	$id 	= isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
+
+	echo load_view(__DIR__.'/views/form.php', array('request' => $_REQUEST));	
 }
 
 

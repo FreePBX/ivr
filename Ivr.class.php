@@ -5,7 +5,31 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 	public function uninstall() {}
 	public function backup() {}
 	public function restore($backup) {}
-	public function doConfigPageInit($page) {}
+	public function doConfigPageInit($page) {
+		if($_REQUEST['action'] == 'getJSON'){
+			header('Content-Type: application/json');
+			switch ($_REQUEST['jdata']) {
+				case 'grid':
+					$ivrs = ivr_get_details();
+					$ret = array();
+					foreach ($ivrs as $r) {
+						$r['name'] = $r['name'] ? $r['name'] : 'IVR ID: ' . $r['id'];
+						$ret[] = array(
+								'name' => $r['name'],
+								'id' => $r['id'],
+								'link' => array($r['id'],$r['name'])
+							);
+					}
+					echo json_encode($ret);
+					exit();
+				break;
+				default:
+					echo json_encode(array("error"=>_("Bad Request")));
+					exit();
+				break;
+			}
+		}
+	}
 	public function search($query, &$results) {
 		$ivrs = $this->getDetails();
 		foreach ($ivrs as $ivr) {
@@ -32,6 +56,33 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 		} else {
 			return $res;
 		}
-
+	}
+	public function getActionBar($request) {
+		$buttons = array();
+		switch($request['display']) {
+			case 'ivr':
+				$buttons = array(
+					'delete' => array(
+						'name' => 'delete',
+						'id' => 'delete',
+						'value' => _('Delete')
+					),
+					'reset' => array(
+						'name' => 'reset',
+						'id' => 'reset',
+						'value' => _('Reset')
+					),
+					'submit' => array(
+						'name' => 'submit',
+						'id' => 'submit',
+						'value' => _('Submit')
+					)
+				);
+				if (empty($request['id'])) {
+					unset($buttons['delete']);
+				}
+			break;
+		}
+		return $buttons;
 	}
 }

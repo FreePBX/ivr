@@ -31,17 +31,19 @@ foreach ($entries as $e) {
 	
 	
 	//return to ivr
-	$row[] = fpbx_label(form_checkbox('entries[ivr_ret][]', '1', ($e['ivr_ret'] == 1)), 
-			_('Check this box to have this option return to a parent IVR if it was called '
-			. 'from a parent IVR. If not, it will go to the chosen destination.<br><br>'
-			. 'The return path will be to any IVR that was in the call path prior to this '
-			. 'IVR which could lead to strange results if there was an IVR called in the '
-			. 'call path but not immediately before this'));
+	$row[] = '
+		<span class="radioset">
+		<input type="radio" name="entries[ivr_ret][DESTID'.$count.']" id="entries'.$count.'DESTIDyes" value="1" '.($e['ivr_ret']?"CHECKED":"").'>
+		<label for="entries'.$count.'DESTIDyes">'. _("Yes").'</label>
+		<input type="radio" name="entries[ivr_ret][DESTID'.$count.']" id="entries'.$count.'DESTIDno" value="" '.($e['ivr_ret']?"":"CHECKED") .'>
+		<label for="entries'.$count.'DESTIDno">'._("No").'</label>
+		</span>
+	';
 
 	//delete buttom
-	$row[] = '<img src="images/trash.png" style="cursor:pointer" title="' 
+	$row[] = '<a href="#" alt="' 
 	. _('Delete this entry. Dont forget to click Submit to save changes!') 
-	. '" class="delete_entrie">';
+	. '" class="delete_entrie"><i class="fa fa-trash"></i></a>';
 		
 	//add module hooks	
 	if (isset($e['hooks']) && $e['hooks']) {
@@ -61,8 +63,7 @@ foreach ($entries as $e) {
 
 $ret = '';
 $ret .= $table->generate();
-$ret .= '<img class="IVREntries" src="modules/ivr/assets/images/add.png" style="cursor:pointer" title="' . _('Add Entry') 
-		. '" id="add_entrie">';
+$ret .= '<a class="IVREntries" href="#" id="add_entrie"><i class="fa fa-plus"></i></a>';
 
 
 echo $ret;

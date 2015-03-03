@@ -3,7 +3,8 @@ $(document).ready(function(){
 	invalid_elements();
 	timeout_elements();
 
-	$('#add_entrie').click(function(){
+	$('#add_entrie').click(function(e){
+		e.preventDefault();
 		// we get this each time in case a popOver has updated the array
 		new_entrie = '<tr>' + $('#gotoDESTID').parents('tr').html() + '</tr>';
 		id = new Date().getTime();//must be cached, as we have many replaces to do and the time can shift
@@ -21,62 +22,64 @@ $(document).ready(function(){
 			last.remove()
 		}
 	});
+	if($('form[name=frm_ivr]').length > 0){
+		//fix for popovers because jquery wont bubble up a real "submit()" correctly.
+		//See FREEPBX-8122 for more information
+		$('form[name=frm_ivr]')[0].onsubmit = function() {
+			//set timeout/invalid destination, removing hidden field if there is no valus being set
+			if ($('#invalid_loops').val() != 'disabled') {
+				invalid = $('[name=' + $('[name=gotoinvalid]').val() + 'invalid]').val();
+				$('#invalid_destination').val(invalid);
+			} else {
+				$('#invalid_destination').remove();
+			}
 
-	//fix for popovers because jquery wont bubble up a real "submit()" correctly.
-	//See FREEPBX-8122 for more information
-	$('form[name=frm_ivr]')[0].onsubmit = function() {
-		//set timeout/invalid destination, removing hidden field if there is no valus being set
-		if ($('#invalid_loops').val() != 'disabled') {
-			invalid = $('[name=' + $('[name=gotoinvalid]').val() + 'invalid]').val();
-			$('#invalid_destination').val(invalid)
-		} else {
-			$('#invalid_destination').remove()
+			if ($('#timeout_loops').val() != 'disabled') {
+				timeout = $('[name=' + $('[name=gototimeout]').val() + 'timeout]').val();
+				$('#timeout_destination').val(timeout);
+			} else {
+				$('#timeout_destination').remove();
+			}
+
+
+			//set goto fileds for destinations
+			$('[name^=goto]').each(function(){
+				num = $(this).attr('name').replace('goto', '');
+				dest = $('[name=' + $(this).val() + num + ']').val();
+				$(this).parent().find('input[name="entries[goto][]"]').val(dest);
+				//console.log(num, dest, $(this).parent().find('input[name="entries[goto][]"]').val())
+			});
+
+			//set ret_ivr checkboxes to SOMETHING so that they get sent back
+			$('[name="entries[ivr_ret][]"]').not(':checked').each(function(){
+				$(this).attr('checked', 'checked').val('uncheked');
+			});
+
+			//disable dests so that they dont get posted
+			$('.destdropdown, .destdropdown2').attr("disabled", "disabled");
+
+			setTimeout(restore_form_elemens, 100);
 		}
-
-		if ($('#timeout_loops').val() != 'disabled') {
-			timeout = $('[name=' + $('[name=gototimeout]').val() + 'timeout]').val();
-			$('#timeout_destination').val(timeout)
-		} else {
-			$('#timeout_destination').remove()
-		}
-
-
-		//set goto fileds for destinations
-		$('[name^=goto]').each(function(){
-			num = $(this).attr('name').replace('goto', '');
-			dest = $('[name=' + $(this).val() + num + ']').val();
-			$(this).parent().find('input[name="entries[goto][]"]').val(dest)
-			//console.log(num, dest, $(this).parent().find('input[name="entries[goto][]"]').val())
-		})
-
-		//set ret_ivr checkboxes to SOMETHING so that they get sent back
-		$('[name="entries[ivr_ret][]"]').not(':checked').each(function(){
-			$(this).attr('checked', 'checked').val('uncheked')
-		})
-
-		//disable dests so that they dont get posted
-		$('.destdropdown, .destdropdown2').attr("disabled", "disabled");
-
-		setTimeout(restore_form_elemens, 100);
 	}
 
 	//delete rows on click
-	$('.delete_entrie').live('click', function(){
-		$(this).closest('tr').fadeOut('normal', function(){$(this).closest('tr').remove();})
-	})
+	$('.delete_entrie').live('click', function(e){
+		e.preventDefault();
+		$(this).closest('tr').fadeOut('normal', function(){$(this).closest('tr').remove();});
+	});
 
 	//show/hide invalid elements on change
-	$('#invalid_loops').change(invalid_elements)
+	$('#invalid_loops').change(invalid_elements);
 
 	//show/hide timeout elements on change
-	$('#timeout_loops').change(timeout_elements)
+	$('#timeout_loops').change(timeout_elements);
 });
 
 function restore_form_elemens() {
-	$('.destdropdown, .destdropdown2').removeAttr('disabled')
+	$('.destdropdown, .destdropdown2').removeAttr('disabled');
 	$('[name="entries[ivr_ret][]"][value=uncheked]').each(function(){
-		$(this).removeAttr('checked')
-	})
+		$(this).removeAttr('checked');
+	});
 	invalid_elements();
 	timeout_elements();
 }
@@ -87,18 +90,18 @@ function invalid_elements() {
 	var invalid_element_tr = invalid_elements.parent().parent();
 	switch ($('#invalid_loops').val()) {
 		case 'disabled':
-			invalid_elements.attr('disabled', 'disabled')
-			invalid_element_tr.hide()
+			invalid_elements.attr('disabled', 'disabled');
+			invalid_element_tr.hide();
 			break;
 		case '0':
-			invalid_elements.removeAttr('disabled')
+			invalid_elements.removeAttr('disabled');
 			invalid_element_tr.show();
 			$('#invalid_retry_recording').parent().parent().hide();
 			$('#invalid_append_announce').parent().parent().hide();
 			break;
 		default:
-			invalid_elements.removeAttr('disabled')
-			invalid_element_tr.show()
+			invalid_elements.removeAttr('disabled');
+			invalid_element_tr.show();
 			break;
 	}
 }
@@ -109,17 +112,28 @@ function timeout_elements() {
 	var timeout_element_tr = timeout_elements.parent().parent();
 	switch ($('#timeout_loops').val()) {
 		case 'disabled':
-			timeout_elements.attr('disabled', 'disabled')
-			timeout_element_tr.hide()
+			timeout_elements.attr('disabled', 'disabled');
+			timeout_element_tr.hide();
 			break;
 		case '0':
-			timeout_elements.removeAttr('disabled')
+			timeout_elements.removeAttr('disabled');
 			timeout_element_tr.show();
 			$('#timeout_retry_recording').parent().parent().hide();
 			$('#timeout_append_announce').parent().parent().hide();
+			break;
 		default:
-			timeout_elements.removeAttr('disabled')
-			timeout_element_tr.show()
+			timeout_elements.removeAttr('disabled');
+			timeout_element_tr.show();
 			break;
 	}
+}
+
+function actionFormatter(value){
+	var html = '<a href="?display=ivr&action=edit&id='+value[0]+'"><i class="fa fa-pencil"></i></a>&nbsp;';
+	html += '<a href="?display=ivr&action=delete&id='+value[0]+'" class="delAction"><i class="fa fa-trash"></i></a>&nbsp;';
+	return html;
+}
+function bnavFormatter(value){
+	var html = '<a href="?display=ivr&action=edit&id='+value[0]+'"><i class="fa fa-pencil"></i>&nbsp;'+_("Edit:")+'&nbsp;'+value[1]+'</a>';
+	return html;
 }
