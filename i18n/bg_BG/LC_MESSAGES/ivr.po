@@ -7,239 +7,115 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-23 09:52+0000\n"
+"POT-Creation-Date: 2015-02-20 19:37-0500\n"
 "PO-Revision-Date: 2014-07-22 09:45+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/ivr/bg/>\n"
-"Language: bg_BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: bg_BG\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 1.10-dev\n"
 "X-Poedit-Language: Bulgarian\n"
 "X-Poedit-Country: BULGARIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
+#: views/entries.php:64
+msgid "Add Entry"
+msgstr ""
+
+#: functions.inc.php:309 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Добави IVR"
 
-#, php-format
-msgid "Edit IVR: %s"
-msgstr "Редактирай IVR: %s"
-
-#, php-format
-msgid "Delete IVR: %s"
-msgstr "Изтрий IVR: %s"
-
-msgid "IVR General Options"
-msgstr "Основни Опции на IVR"
-
-msgid "IVR Name"
-msgstr "Име на IVR"
-
-msgid "Name of this IVR."
-msgstr "Име на този IVR."
-
-msgid "IVR Description"
-msgstr "IVR Описание"
-
-msgid "Description of this ivr."
-msgstr "Описание за този IVR."
-
-msgid "IVR Options (DTMF)"
-msgstr "IVR Опции (DTMF)"
-
-msgid "None"
-msgstr "Няма"
-
-msgid "Announcement"
-msgstr "Съобщение"
-
-msgid "Greeting to be played on entry to the Ivr."
-msgstr "Приветствие което да се възпроизвежда при влизане в IVR."
-
-msgid "Disabled"
-msgstr "Забранена"
-
-msgid "Extensions"
-msgstr "Вътрешни Линии"
-
-msgid "Completely disabled"
+#: page.ivr.php:23
+msgid "Add a new IVR"
 msgstr ""
 
-msgid "Enabled for all extensions on a system"
-msgstr ""
-
-msgid "Direct Dial"
-msgstr "Директно Избиране"
-
+#: functions.inc.php:428
 msgid ""
-"Provides options for callers to direct dial an extension. Direct dialing can "
-"be:"
+"After playing the Invalid Retry Recording the system will replay the main "
+"IVR Announcement"
 msgstr ""
 
-msgid "Default"
-msgstr "По-Подразбиране"
+#: functions.inc.php:453
+msgid ""
+"After playing the Timeout Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
 
-msgid "Timeout"
-msgstr "Време на Изчакване"
-
+#: functions.inc.php:416
 msgid "Amount of time to be considered a timeout"
 msgstr ""
 
-msgid "Invalid Retries"
+#: functions.inc.php:396
+msgid "Announcement"
+msgstr "Съобщение"
+
+#: functions.inc.php:428
+msgid "Append Announcement on Invalid"
 msgstr ""
 
-msgid ""
-"Number of times to retry when receiving an invalid/unmatched response from "
-"the caller"
+#: functions.inc.php:453
+msgid "Append Announcement on Timeout"
 msgstr ""
 
-msgid "Invalid Retry Recording"
-msgstr ""
-
-msgid ""
-"Prompt to be played when an invalid/unmatched response is received, before "
-"prompting the caller to try again"
-msgstr ""
-
-msgid "Invalid Recording"
-msgstr ""
-
-msgid ""
-"Prompt to be played before sending the caller to an alternate destination "
-"due to the caller pressing 0 or receiving the maximum amount of invalid/"
-"unmatched responses (as determined by Invalid Retries)"
-msgstr ""
-
-msgid "Invalid Destination"
-msgstr "Неправилно Направление"
-
-msgid "Destination to send the call to after Invalid Recording is played."
-msgstr ""
-
-msgid "Timeout Retries"
-msgstr ""
-
-msgid "Timeout Retry Recording"
-msgstr ""
-
-msgid "Timeout Recording"
-msgstr ""
-
-msgid "Timeout Destination"
-msgstr ""
-
-msgid "Return to IVR after VM"
-msgstr "Върни се към IVR след ГП"
-
-msgid ""
-"If checked, upon exiting voicemail a caller will be returned to this IVR if "
-"they got a users voicemail"
-msgstr ""
-"Ако е маркирано, при излизане от гласовата поща обаждащият се ще бъде върнат "
-"към този IVR"
-
-msgid "IVR Entries"
-msgstr "IVR Въвеждания"
-
-msgid "Ext"
-msgstr "Набрано"
-
-msgid "Destination"
-msgstr "Направление"
-
-msgid "Return"
-msgstr "Обратно"
-
-msgid "Return to IVR"
-msgstr "Върни се към IVR"
-
-msgid "Delete"
-msgstr "Изтрий"
-
-#, php-format
-msgid "IVR: %s / Option: %s"
-msgstr "IVR: %s / Опция: %s"
-
-#, php-format
-msgid "IVR: %s"
-msgstr "IVR: %s"
-
-msgid "Checking if announcements need migration.."
-msgstr "Проверка дали съобщенията имат нужда от преместване.."
-
-msgid "migrating"
-msgstr "преместване"
-
-msgid "adding announcement_id field.."
-msgstr "добавяне на поле съобщения.."
-
-msgid "fatal error"
-msgstr "фатална грешка"
-
-msgid "ok"
-msgstr "ok"
-
-msgid "migrate to recording ids.."
-msgstr "преместване към id на записите.."
-
-#, php-format
-msgid "migrated %s entries"
-msgstr "преместени %s въвеждания"
-
-msgid "dropping announcement field.."
-msgstr "премахване на поле съобшения.."
-
-msgid "no announcement field???"
-msgstr "няма поле съобщения???"
-
-msgid "already migrated"
-msgstr "вече са преместени"
-
-msgid "Checking for timeout_id.."
-msgstr "Проверка за timeout_id.."
-
-msgid "added"
-msgstr "добавени"
-
-msgid "not needed"
-msgstr "не е необходимо"
-
-msgid "Checking for invalid_id.."
-msgstr "Проверка за invalid_id.."
-
-msgid "Checking for retvm.."
-msgstr "Проверка за retvm.."
-
-#, php-format
-msgid ""
-"There are %s IVRs that have the legacy Directory dialing enabled. This has "
-"been deprecated and will be removed from future releases. You should convert "
-"your IVRs to use the Directory module for this functionality and assign an "
-"IVR destination to a desired Directory. You can install the Directory module "
-"from the Online Module Repository"
-msgstr ""
-"There are %s IVRs that have the legacy Directory dialing enabled. This has "
-"been deprecated and will be removed from future releases. You should convert "
-"your IVRs to use the Directory module for this functionality and assign an "
-"IVR destination to a desired Directory. You can install the Directory module "
-"from the Online Module Repository"
-
-#, php-format
-msgid "Deprecated Directory used by %s IVRs"
-msgstr "Стара Директория се използва от %s IVR"
-
-msgid "posting notice about deprecated functionality"
-msgstr "предупреждение за премахната функционалност"
-
-msgid "IVR"
-msgstr "IVR"
-
+#: ivr.i18n.php:4
 msgid "Applications"
 msgstr "Приложения"
 
+#: functions.inc.php:431 functions.inc.php:456 views/entries.php:35
+msgid ""
+"Check this box to have this option return to a parent IVR if it was called "
+"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
+"Маркирайте за да имате възможноста да се връщате към основния IVR ако е "
+"поискана в основния IVR. Иначе, ще отиде към избраното направление."
+"<br><br>Пътят за връщане ще важи за всички IVR които са били на пътя преди "
+"този IVR, което може да доведе до странни резултати ако има IVR извикан в "
+"пътя на обаждането, но не веднага преди този"
+
+#: install.php:469
+msgid "Checking for invalid_append_announce.."
+msgstr ""
+
+#: install.php:246
+msgid "Checking for invalid_id.."
+msgstr "Проверка за invalid_id.."
+
+#: install.php:507
+msgid "Checking for invalid_ivr_ret.."
+msgstr ""
+
+#: install.php:264
+msgid "Checking for retvm.."
+msgstr "Проверка за retvm.."
+
+#: install.php:451
+msgid "Checking for timeout_append_announce.."
+msgstr ""
+
+#: install.php:229
+msgid "Checking for timeout_id.."
+msgstr "Проверка за timeout_id.."
+
+#: install.php:489
+msgid "Checking for timeout_ivr_ret.."
+msgstr ""
+
+#: install.php:167
+msgid "Checking if announcements need migration.."
+msgstr "Проверка дали съобщенията имат нужда от преместване.."
+
+#: functions.inc.php:404
+msgid "Completely disabled"
+msgstr ""
+
+#: ivr.i18n.php:5
 msgid ""
 "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
 "Response) menus. These can be used to send callers to different locations "
@@ -249,6 +125,291 @@ msgstr ""
 "за Интерактивен Отговор). Използват се за насочване на обаждащите се към "
 "различни направления (например, Изберете 1 за продажби) и/или позволява "
 "директно избиране на вътрешни номера."
+
+#: functions.inc.php:413
+msgid "Default"
+msgstr "По-Подразбиране"
+
+#: functions.inc.php:623
+msgid "Delete"
+msgstr "Изтрий"
+
+#: functions.inc.php:358
+#, php-format
+msgid "Delete IVR: %s"
+msgstr "Изтрий IVR: %s"
+
+#: views/entries.php:43
+msgid "Delete this entry. Dont forget to click Submit to save changes!"
+msgstr ""
+
+#: install.php:287
+#, php-format
+msgid "Deprecated Directory used by %s IVRs"
+msgstr "Стара Директория се използва от %s IVR"
+
+#: functions.inc.php:372
+msgid "Description of this ivr."
+msgstr "Описание за този IVR."
+
+#: functions.inc.php:623
+msgid "Destination"
+msgstr "Направление"
+
+#: functions.inc.php:442
+msgid "Destination to send the call to after Invalid Recording is played."
+msgstr ""
+
+#: functions.inc.php:467
+msgid "Destination to send the call to after Timeout Recording is played."
+msgstr ""
+
+#: functions.inc.php:409
+msgid "Direct Dial"
+msgstr "Директно Избиране"
+
+#: functions.inc.php:401
+msgid "Disabled"
+msgstr "Забранена"
+
+#: functions.inc.php:345
+#, php-format
+msgid "Edit IVR: %s"
+msgstr "Редактирай IVR: %s"
+
+#: functions.inc.php:405
+msgid "Enabled for all extensions on a system"
+msgstr ""
+
+#: functions.inc.php:623
+msgid "Ext"
+msgstr "Набрано"
+
+#: functions.inc.php:402
+msgid "Extensions"
+msgstr "Вътрешни Линии"
+
+#: functions.inc.php:396
+msgid "Greeting to be played on entry to the Ivr."
+msgstr "Приветствие което да се възпроизвежда при влизане в IVR."
+
+#: ivr.i18n.php:3 /usr/src/freepbx/ivr/ivr.i18n.php:6 page.ivr.php:20
+msgid "IVR"
+msgstr "IVR"
+
+#: functions.inc.php:372
+msgid "IVR Description"
+msgstr "IVR Описание"
+
+#: functions.inc.php:481
+msgid "IVR Entries"
+msgstr "IVR Въвеждания"
+
+#: functions.inc.php:367
+msgid "IVR General Options"
+msgstr "Основни Опции на IVR"
+
+#: functions.inc.php:369
+msgid "IVR Name"
+msgstr "Име на IVR"
+
+#: functions.inc.php:376
+msgid "IVR Options (DTMF)"
+msgstr "IVR Опции (DTMF)"
+
+#: functions.inc.php:714 functions.inc.php:734
+#, php-format
+msgid "IVR: %s"
+msgstr "IVR: %s"
+
+#: functions.inc.php:681
+#, php-format
+msgid "IVR: %s / Option: %s"
+msgstr "IVR: %s / Опция: %s"
+
+#: functions.inc.php:471
+msgid ""
+"If checked, upon exiting voicemail a caller will be returned to this IVR if "
+"they got a users voicemail"
+msgstr ""
+"Ако е маркирано, при излизане от гласовата поща обаждащият се ще бъде върнат "
+"към този IVR"
+
+#: functions.inc.php:441
+msgid "Invalid Destination"
+msgstr "Неправилно Направление"
+
+#: functions.inc.php:439
+msgid "Invalid Recording"
+msgstr ""
+
+#: functions.inc.php:422
+msgid "Invalid Retries"
+msgstr ""
+
+#: functions.inc.php:425
+msgid "Invalid Retry Recording"
+msgstr ""
+
+#: functions.inc.php:369
+msgid "Name of this IVR."
+msgstr "Име на този IVR."
+
+#: functions.inc.php:379
+msgid "None"
+msgstr "Няма"
+
+#: functions.inc.php:447
+msgid ""
+"Number of times to retry when no DTMF is heard and the IVR choice times out."
+msgstr ""
+
+#: functions.inc.php:422
+msgid ""
+"Number of times to retry when receiving an invalid/unmatched response from "
+"the caller"
+msgstr ""
+
+#: functions.inc.php:439 functions.inc.php:464
+msgid ""
+"Prompt to be played before sending the caller to an alternate destination "
+"due to the caller pressing 0 or receiving the maximum amount of invalid/"
+"unmatched responses (as determined by Invalid Retries)"
+msgstr ""
+
+#: functions.inc.php:450
+msgid ""
+"Prompt to be played when a timeout occurs, before prompting the caller to "
+"try again"
+msgstr ""
+
+#: functions.inc.php:425
+msgid ""
+"Prompt to be played when an invalid/unmatched response is received, before "
+"prompting the caller to try again"
+msgstr ""
+
+#: functions.inc.php:409
+msgid ""
+"Provides options for callers to direct dial an extension. Direct dialing can "
+"be:"
+msgstr ""
+
+#: functions.inc.php:623
+msgid "Return"
+msgstr "Обратно"
+
+#: functions.inc.php:431
+msgid "Return on Invalid"
+msgstr ""
+
+#: functions.inc.php:456
+msgid "Return on Timeout"
+msgstr ""
+
+#: functions.inc.php:623
+msgid "Return to IVR"
+msgstr "Върни се към IVR"
+
+#: functions.inc.php:471
+msgid "Return to IVR after VM"
+msgstr "Върни се към IVR след ГП"
+
+#: install.php:286
+#, php-format
+msgid ""
+"There are %s IVRs that have the legacy Directory dialing enabled. This has "
+"been deprecated and will be removed from future releases. You should convert "
+"your IVRs to use the Directory module for this functionality and assign an "
+"IVR destination to a desired Directory. You can install the Directory module "
+"from the Online Module Repository"
+msgstr ""
+"There are %s IVRs that have the legacy Directory dialing enabled. This has "
+"been deprecated and will be removed from future releases. You should convert "
+"your IVRs to use the Directory module for this functionality and assign an "
+"IVR destination to a desired Directory. You can install the Directory module "
+"from the Online Module Repository"
+
+#: functions.inc.php:416
+msgid "Timeout"
+msgstr "Време на Изчакване"
+
+#: functions.inc.php:467
+msgid "Timeout Destination"
+msgstr ""
+
+#: functions.inc.php:464
+msgid "Timeout Recording"
+msgstr ""
+
+#: functions.inc.php:447
+msgid "Timeout Retries"
+msgstr ""
+
+#: functions.inc.php:450
+msgid "Timeout Retry Recording"
+msgstr ""
+
+#: install.php:241 /usr/src/freepbx/ivr/install.php:258 install.php:276
+#: /usr/src/freepbx/ivr/install.php:463 install.php:481
+#: /usr/src/freepbx/ivr/install.php:501 install.php:519
+msgid "added"
+msgstr "добавени"
+
+#: install.php:174
+msgid "adding announcement_id field.."
+msgstr "добавяне на поле съобщения.."
+
+#: install.php:224
+msgid "already migrated"
+msgstr "вече са преместени"
+
+#: views/entries.php:20
+msgid "digits pressed"
+msgstr ""
+
+#: install.php:214
+msgid "dropping announcement field.."
+msgstr "премахване на поле съобшения.."
+
+#: install.php:178 /usr/src/freepbx/ivr/install.php:190 install.php:206
+#: /usr/src/freepbx/ivr/install.php:238 install.php:255
+#: /usr/src/freepbx/ivr/install.php:273 install.php:460
+#: /usr/src/freepbx/ivr/install.php:478 install.php:498
+#: /usr/src/freepbx/ivr/install.php:516
+msgid "fatal error"
+msgstr "фатална грешка"
+
+#: install.php:186
+msgid "migrate to recording ids.."
+msgstr "преместване към id на записите.."
+
+#: install.php:210
+#, php-format
+msgid "migrated %s entries"
+msgstr "преместени %s въвеждания"
+
+#: install.php:173
+msgid "migrating"
+msgstr "преместване"
+
+#: install.php:218
+msgid "no announcement field???"
+msgstr "няма поле съобщения???"
+
+#: install.php:244 /usr/src/freepbx/ivr/install.php:261 install.php:279
+#: /usr/src/freepbx/ivr/install.php:466 install.php:484
+#: /usr/src/freepbx/ivr/install.php:504 install.php:522
+msgid "not needed"
+msgstr "не е необходимо"
+
+#: install.php:181 /usr/src/freepbx/ivr/install.php:220
+msgid "ok"
+msgstr "ok"
+
+#: install.php:288
+msgid "posting notice about deprecated functionality"
+msgstr "предупреждение за премахната функционалност"
 
 #~ msgid ""
 #~ "There is a problem with install.sql, cannot re-create databases. Contact "
@@ -446,16 +607,3 @@ msgstr ""
 
 #~ msgid "Invalid option"
 #~ msgstr "Неправилна опция"
-
-#~ msgid ""
-#~ "Check this box to have this option return to a parent IVR if it was "
-#~ "called from a parent IVR. If not, it will go to the chosen destination."
-#~ "<br><br>The return path will be to any IVR that was in the call path "
-#~ "prior to this IVR which could lead to strange results if there was an IVR "
-#~ "called in the call path but not immediately before this"
-#~ msgstr ""
-#~ "Маркирайте за да имате възможноста да се връщате към основния IVR ако е "
-#~ "поискана в основния IVR. Иначе, ще отиде към избраното направление."
-#~ "<br><br>Пътят за връщане ще важи за всички IVR които са били на пътя "
-#~ "преди този IVR, което може да доведе до странни резултати ако има IVR "
-#~ "извикан в пътя на обаждането, но не веднага преди този"

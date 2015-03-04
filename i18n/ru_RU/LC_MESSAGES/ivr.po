@@ -22,162 +22,229 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-30 00:04+0400\n"
+"POT-Creation-Date: 2015-02-20 19:37-0500\n"
 "PO-Revision-Date: 2014-02-28 04:51+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Russian <http://example.com/projects/freepbx-211/ivr/ru/>\n"
-"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 1.9-dev\n"
 
+#: views/entries.php:64
+msgid "Add Entry"
+msgstr ""
+
+#: functions.inc.php:309 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Добавить Интерактивное меню"
 
-#, php-format
-msgid "Edit IVR: %s"
-msgstr "Редактировать Интерактивное меню: %s"
+#: page.ivr.php:23
+msgid "Add a new IVR"
+msgstr ""
 
+#: functions.inc.php:428
+msgid ""
+"After playing the Invalid Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+
+#: functions.inc.php:453
+msgid ""
+"After playing the Timeout Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+
+#: functions.inc.php:416
+msgid "Amount of time to be considered a timeout"
+msgstr "Количество времени распозноваемое как таймаут"
+
+#: functions.inc.php:396
+msgid "Announcement"
+msgstr "Приветствие"
+
+#: functions.inc.php:428
+msgid "Append Announcement on Invalid"
+msgstr ""
+
+#: functions.inc.php:453
+msgid "Append Announcement on Timeout"
+msgstr ""
+
+#: ivr.i18n.php:4
+msgid "Applications"
+msgstr "Приложения"
+
+#: functions.inc.php:431 functions.inc.php:456 views/entries.php:35
+msgid ""
+"Check this box to have this option return to a parent IVR if it was called "
+"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
+"Отметьте здесь, если нужно возвращать в родительское Меню, если вызов сюда "
+"поступает из другого Меню. Если не отмечено, вызов поступает на выбор "
+"назначений.<br><br>Возврат можно перенаправлять и в любые другие Меню, из "
+"которых также производится вызов в действующее Меню, но возврат и "
+"перенаправление может привести к неожиданным результатам."
+
+#: install.php:469
+#, fuzzy
+msgid "Checking for invalid_append_announce.."
+msgstr "Проверка invalid_id.."
+
+#: install.php:246
+msgid "Checking for invalid_id.."
+msgstr "Проверка invalid_id.."
+
+#: install.php:507
+msgid "Checking for invalid_ivr_ret.."
+msgstr ""
+
+#: install.php:264
+msgid "Checking for retvm.."
+msgstr "Проверка retvm.."
+
+#: install.php:451
+#, fuzzy
+msgid "Checking for timeout_append_announce.."
+msgstr "Проверка timeout_id.."
+
+#: install.php:229
+msgid "Checking for timeout_id.."
+msgstr "Проверка timeout_id.."
+
+#: install.php:489
+msgid "Checking for timeout_ivr_ret.."
+msgstr ""
+
+#: install.php:167
+msgid "Checking if announcements need migration.."
+msgstr "Проверка, нуждаются ли объявления в перемещении..."
+
+#: functions.inc.php:404
+msgid "Completely disabled"
+msgstr "Полностью отключено"
+
+#: ivr.i18n.php:5
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+msgstr ""
+"Создает Цифровой Автоответчик (или Авто-Секретаря, или Интерактивное "
+"Голосовое меню). Эта функция может быть использована для перенаправления "
+"звонящих в разные назначения (например. Нажмите 1 для отдела продаж) и/или "
+"разрешить прямой донабор внутренних номеров "
+
+#: functions.inc.php:413
+msgid "Default"
+msgstr "По умолчанию"
+
+#: functions.inc.php:623
+msgid "Delete"
+msgstr "Удалить"
+
+#: functions.inc.php:358
 #, php-format
 msgid "Delete IVR: %s"
 msgstr "Удалить Интерактивное меню: %s"
 
-msgid "IVR General Options"
-msgstr "Основыне настройки Интерактивного меню"
+#: views/entries.php:43
+msgid "Delete this entry. Dont forget to click Submit to save changes!"
+msgstr ""
 
-msgid "IVR Name"
-msgstr "Название Интерактивного меню"
+#: install.php:287
+#, php-format
+msgid "Deprecated Directory used by %s IVRs"
+msgstr "Устаревшие Каталоги используемые %s Интерактивным меню"
 
-msgid "Name of this IVR."
-msgstr "Название этого Интерактивного меню"
-
-msgid "IVR Description"
-msgstr "Описание Интерактивного меню"
-
+#: functions.inc.php:372
 msgid "Description of this ivr."
 msgstr "Описание этого Интерактивного меню"
 
-msgid "IVR Options (DTMF)"
-msgstr "Настройки Интерактивного меню (DTFM)"
+#: functions.inc.php:623
+msgid "Destination"
+msgstr "Назначение"
 
-msgid "None"
-msgstr "Нет"
+#: functions.inc.php:442
+msgid "Destination to send the call to after Invalid Recording is played."
+msgstr ""
+"Назначение куда перенаправить звонящего после воспроизведения записи при "
+"Неудачном вводе. "
 
-msgid "Announcement"
-msgstr "Приветствие"
+#: functions.inc.php:467
+msgid "Destination to send the call to after Timeout Recording is played."
+msgstr ""
 
-msgid "Greeting to be played on entry to the Ivr."
-msgstr "Приветствие воспроизводимое при входе в Интерактивное меню"
-
-msgid "Disabled"
-msgstr "Отключено"
-
-msgid "Extensions"
-msgstr "Внутренние номера"
-
-msgid "Completely disabled"
-msgstr "Полностью отключено"
-
-msgid "Enabled for all extensions on a system"
-msgstr "Активированно для всех внутренних номеров в системе"
-
+#: functions.inc.php:409
 msgid "Direct Dial"
 msgstr "Прямой набор"
 
-msgid ""
-"Provides options for callers to direct dial an extension. Direct dialing can "
-"be:"
-msgstr ""
-"Активирует опцию прямого набора внутреннего номера для звонящих. Прямой набор может быть: "
+#: functions.inc.php:401
+msgid "Disabled"
+msgstr "Отключено"
 
-msgid "Default"
-msgstr "По умолчанию"
+#: functions.inc.php:345
+#, php-format
+msgid "Edit IVR: %s"
+msgstr "Редактировать Интерактивное меню: %s"
 
-msgid "Timeout"
-msgstr "Таймаут"
+#: functions.inc.php:405
+msgid "Enabled for all extensions on a system"
+msgstr "Активированно для всех внутренних номеров в системе"
 
-msgid "Amount of time to be considered a timeout"
-msgstr "Количество времени распозноваемое как таймаут"
+#: functions.inc.php:623
+msgid "Ext"
+msgstr "Номер"
 
-msgid "Invalid Retries"
-msgstr "Неудачные попытки"
+#: functions.inc.php:402
+msgid "Extensions"
+msgstr "Внутренние номера"
 
-msgid ""
-"Number of times to retry when receiving an invalid/unmatched response from "
-"the caller"
-msgstr ""
-"Количество неудачных/несовпадающих попыток ввода от звонящего"
+#: functions.inc.php:396
+msgid "Greeting to be played on entry to the Ivr."
+msgstr "Приветствие воспроизводимое при входе в Интерактивное меню"
 
-msgid "Invalid Retry Recording"
-msgstr "Воспроизведение при неуданой попытке "
+#: ivr.i18n.php:3 /usr/src/freepbx/ivr/ivr.i18n.php:6 page.ivr.php:20
+msgid "IVR"
+msgstr "Интерактивное меню (IVR)"
 
-msgid ""
-"Prompt to be played when an invalid/unmatched response is received, before "
-"prompting the caller to try again"
-msgstr ""
-"Сообщение воспроизводимое когда произошла неудачная/несовпадающая попытка ввода, "
-"вопроизводится перед очередной попыткой повторить ввод. "
+#: functions.inc.php:372
+msgid "IVR Description"
+msgstr "Описание Интерактивного меню"
 
-msgid "Append Original Annoucement"
-msgstr "Добавить исходное сообщение"
+#: functions.inc.php:481
+msgid "IVR Entries"
+msgstr "Пункты Интерактивного меню"
 
-msgid ""
-"After playing the Invalid Retry Recording the system will replay the main "
-"IVR Annoucement"
-msgstr ""
-"После воспроизведения сообщения при неудачной попытке, система повторит "
-"исходное сообщение Интерактивного меню"
+#: functions.inc.php:367
+msgid "IVR General Options"
+msgstr "Основыне настройки Интерактивного меню"
 
-msgid "Invalid Recording"
-msgstr "Сообщение при неудачном вводе"
+#: functions.inc.php:369
+msgid "IVR Name"
+msgstr "Название Интерактивного меню"
 
-msgid ""
-"Prompt to be played before sending the caller to an alternate destination "
-"due to the caller pressing 0 or receiving the maximum amount of invalid/"
-"unmatched responses (as determined by Invalid Retries)"
-msgstr ""
-"Сообщение воспроизводимое перед отправкой звонящего на альетрнативное назначение "
-"при нажатии звонящим 0 или при достижении максимального количества неудачных "
-"попыток ввода. "
+#: functions.inc.php:376
+msgid "IVR Options (DTMF)"
+msgstr "Настройки Интерактивного меню (DTFM)"
 
-msgid "Invalid Destination"
-msgstr "Неверное назначение"
+#: functions.inc.php:714 functions.inc.php:734
+#, php-format
+msgid "IVR: %s"
+msgstr "Интерактивное меню: %s"
 
-msgid "Destination to send the call to after Invalid Recording is played."
-msgstr "Назначение куда перенаправить звонящего после воспроизведения "
-"записи при Неудачном вводе. "
+#: functions.inc.php:681
+#, php-format
+msgid "IVR: %s / Option: %s"
+msgstr "Интерактивное меню: %s / Опция: %s"
 
-msgid "Timeout Retries"
-msgstr "Таймаут попыток"
-
-msgid ""
-"Number of times to retry when no DTMF is heard and the IVR choice timesout."
-msgstr ""
-"Число попыток для ввода, когда небыло DTFM сигналов и время выбора "
-"пункта Интерактивного меню истекло"
-
-msgid "Timeout Retry Recording"
-msgstr "Сообщение при таймауте повторений"
-
-msgid ""
-"After playing the Timeout Retry Recording the system will replay the main "
-"IVR Annoucement"
-msgstr ""
-"После воспроизведения сообщения при таймауте повторении, система повторит "
-"воспроизведение исходного сообщения Интерактивного меню"
-
-msgid "Timeout Recording"
-msgstr "Сообщение при таймауте"
-
-msgid "Timeout Destination"
-msgstr "Назначение при таймауте"
-
-msgid "Return to IVR after VM"
-msgstr "Возвращение в Интерактивно меню посе Голосовой Почты"
-
+#: functions.inc.php:471
 msgid ""
 "If checked, upon exiting voicemail a caller will be returned to this IVR if "
 "they got a users voicemail"
@@ -185,78 +252,94 @@ msgstr ""
 "Если отмечено, то прежде чем выйти в Голосовую Почту звонок будет возвращен "
 "в это Меню"
 
-msgid "IVR Entries"
-msgstr "Пункты Интерактивного меню"
+#: functions.inc.php:441
+msgid "Invalid Destination"
+msgstr "Неверное назначение"
 
-msgid "Ext"
-msgstr "Номер"
+#: functions.inc.php:439
+msgid "Invalid Recording"
+msgstr "Сообщение при неудачном вводе"
 
-msgid "Destination"
-msgstr "Назначение"
+#: functions.inc.php:422
+msgid "Invalid Retries"
+msgstr "Неудачные попытки"
 
+#: functions.inc.php:425
+msgid "Invalid Retry Recording"
+msgstr "Воспроизведение при неуданой попытке "
+
+#: functions.inc.php:369
+msgid "Name of this IVR."
+msgstr "Название этого Интерактивного меню"
+
+#: functions.inc.php:379
+msgid "None"
+msgstr "Нет"
+
+#: functions.inc.php:447
+msgid ""
+"Number of times to retry when no DTMF is heard and the IVR choice times out."
+msgstr ""
+
+#: functions.inc.php:422
+msgid ""
+"Number of times to retry when receiving an invalid/unmatched response from "
+"the caller"
+msgstr "Количество неудачных/несовпадающих попыток ввода от звонящего"
+
+#: functions.inc.php:439 functions.inc.php:464
+msgid ""
+"Prompt to be played before sending the caller to an alternate destination "
+"due to the caller pressing 0 or receiving the maximum amount of invalid/"
+"unmatched responses (as determined by Invalid Retries)"
+msgstr ""
+"Сообщение воспроизводимое перед отправкой звонящего на альетрнативное "
+"назначение при нажатии звонящим 0 или при достижении максимального "
+"количества неудачных попыток ввода. "
+
+#: functions.inc.php:450
+msgid ""
+"Prompt to be played when a timeout occurs, before prompting the caller to "
+"try again"
+msgstr ""
+
+#: functions.inc.php:425
+msgid ""
+"Prompt to be played when an invalid/unmatched response is received, before "
+"prompting the caller to try again"
+msgstr ""
+"Сообщение воспроизводимое когда произошла неудачная/несовпадающая попытка "
+"ввода, вопроизводится перед очередной попыткой повторить ввод. "
+
+#: functions.inc.php:409
+msgid ""
+"Provides options for callers to direct dial an extension. Direct dialing can "
+"be:"
+msgstr ""
+"Активирует опцию прямого набора внутреннего номера для звонящих. Прямой "
+"набор может быть: "
+
+#: functions.inc.php:623
 msgid "Return"
 msgstr "Возврат"
 
+#: functions.inc.php:431
+msgid "Return on Invalid"
+msgstr ""
+
+#: functions.inc.php:456
+msgid "Return on Timeout"
+msgstr ""
+
+#: functions.inc.php:623
 msgid "Return to IVR"
 msgstr "Возврат в Меню"
 
-msgid "Delete"
-msgstr "Удалить"
+#: functions.inc.php:471
+msgid "Return to IVR after VM"
+msgstr "Возвращение в Интерактивно меню посе Голосовой Почты"
 
-#, php-format
-msgid "IVR: %s / Option: %s"
-msgstr "Интерактивное меню: %s / Опция: %s"
-
-#, php-format
-msgid "IVR: %s"
-msgstr "Интерактивное меню: %s"
-
-msgid "Checking if announcements need migration.."
-msgstr "Проверка, нуждаются ли объявления в перемещении..."
-
-msgid "migrating"
-msgstr "перемещение"
-
-msgid "adding announcement_id field.."
-msgstr "добавление поля announcement_id"
-
-msgid "fatal error"
-msgstr "неустранимая ошибка"
-
-msgid "ok"
-msgstr "ok"
-
-msgid "migrate to recording ids.."
-msgstr "переход к id записей.."
-
-#, php-format
-msgid "migrated %s entries"
-msgstr "перемещено %s записей"
-
-msgid "dropping announcement field.."
-msgstr "сброс поля объявления.."
-
-msgid "no announcement field???"
-msgstr "нет поля объявления???"
-
-msgid "already migrated"
-msgstr "уже перенесено"
-
-msgid "Checking for timeout_id.."
-msgstr "Проверка timeout_id.."
-
-msgid "added"
-msgstr "добавлено"
-
-msgid "not needed"
-msgstr "не нужно"
-
-msgid "Checking for invalid_id.."
-msgstr "Проверка invalid_id.."
-
-msgid "Checking for retvm.."
-msgstr "Проверка retvm.."
-
+#: install.php:286
 #, php-format
 msgid ""
 "There are %s IVRs that have the legacy Directory dialing enabled. This has "
@@ -265,41 +348,116 @@ msgid ""
 "IVR destination to a desired Directory. You can install the Directory module "
 "from the Online Module Repository"
 msgstr ""
-"В Интерактивном меню %s активирован набор Каталога. Эта функция устарела "
-"и будет удалена из будущих релизов. Вам следует конвертировать ваше "
+"В Интерактивном меню %s активирован набор Каталога. Эта функция устарела и "
+"будет удалена из будущих релизов. Вам следует конвертировать ваше "
 "Интерактивное меню, что бы использовать модуль Каталога для этой "
-"функциональности и присвоить назначение Интерактивного меню на выбранный каталог. "
-"Вы можете устанвоить модуль Каталога из Онлайн Репозитория Модулей "
+"функциональности и присвоить назначение Интерактивного меню на выбранный "
+"каталог. Вы можете устанвоить модуль Каталога из Онлайн Репозитория Модулей "
 
+#: functions.inc.php:416
+msgid "Timeout"
+msgstr "Таймаут"
+
+#: functions.inc.php:467
+msgid "Timeout Destination"
+msgstr "Назначение при таймауте"
+
+#: functions.inc.php:464
+msgid "Timeout Recording"
+msgstr "Сообщение при таймауте"
+
+#: functions.inc.php:447
+msgid "Timeout Retries"
+msgstr "Таймаут попыток"
+
+#: functions.inc.php:450
+msgid "Timeout Retry Recording"
+msgstr "Сообщение при таймауте повторений"
+
+#: install.php:241 /usr/src/freepbx/ivr/install.php:258 install.php:276
+#: /usr/src/freepbx/ivr/install.php:463 install.php:481
+#: /usr/src/freepbx/ivr/install.php:501 install.php:519
+msgid "added"
+msgstr "добавлено"
+
+#: install.php:174
+msgid "adding announcement_id field.."
+msgstr "добавление поля announcement_id"
+
+#: install.php:224
+msgid "already migrated"
+msgstr "уже перенесено"
+
+#: views/entries.php:20
+msgid "digits pressed"
+msgstr ""
+
+#: install.php:214
+msgid "dropping announcement field.."
+msgstr "сброс поля объявления.."
+
+#: install.php:178 /usr/src/freepbx/ivr/install.php:190 install.php:206
+#: /usr/src/freepbx/ivr/install.php:238 install.php:255
+#: /usr/src/freepbx/ivr/install.php:273 install.php:460
+#: /usr/src/freepbx/ivr/install.php:478 install.php:498
+#: /usr/src/freepbx/ivr/install.php:516
+msgid "fatal error"
+msgstr "неустранимая ошибка"
+
+#: install.php:186
+msgid "migrate to recording ids.."
+msgstr "переход к id записей.."
+
+#: install.php:210
 #, php-format
-msgid "Deprecated Directory used by %s IVRs"
-msgstr "Устаревшие Каталоги используемые %s Интерактивным меню"
+msgid "migrated %s entries"
+msgstr "перемещено %s записей"
 
+#: install.php:173
+msgid "migrating"
+msgstr "перемещение"
+
+#: install.php:218
+msgid "no announcement field???"
+msgstr "нет поля объявления???"
+
+#: install.php:244 /usr/src/freepbx/ivr/install.php:261 install.php:279
+#: /usr/src/freepbx/ivr/install.php:466 install.php:484
+#: /usr/src/freepbx/ivr/install.php:504 install.php:522
+msgid "not needed"
+msgstr "не нужно"
+
+#: install.php:181 /usr/src/freepbx/ivr/install.php:220
+msgid "ok"
+msgstr "ok"
+
+#: install.php:288
 msgid "posting notice about deprecated functionality"
 msgstr "Выводит оповещение о устаревшей функциональности"
 
-#, fuzzy
-msgid "Checking for timeout_append_announce.."
-msgstr "Проверка timeout_id.."
+#~ msgid "Append Original Annoucement"
+#~ msgstr "Добавить исходное сообщение"
 
-#, fuzzy
-msgid "Checking for invalid_append_announce.."
-msgstr "Проверка invalid_id.."
+#~ msgid ""
+#~ "After playing the Invalid Retry Recording the system will replay the main "
+#~ "IVR Annoucement"
+#~ msgstr ""
+#~ "После воспроизведения сообщения при неудачной попытке, система повторит "
+#~ "исходное сообщение Интерактивного меню"
 
-msgid "IVR"
-msgstr "Интерактивное меню (IVR)"
+#~ msgid ""
+#~ "Number of times to retry when no DTMF is heard and the IVR choice "
+#~ "timesout."
+#~ msgstr ""
+#~ "Число попыток для ввода, когда небыло DTFM сигналов и время выбора пункта "
+#~ "Интерактивного меню истекло"
 
-msgid "Applications"
-msgstr "Приложения"
-
-msgid ""
-"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These can be used to send callers to different locations "
-"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-msgstr ""
-"Создает Цифровой Автоответчик (или Авто-Секретаря, или Интерактивное Голосовое меню). "
-"Эта функция может быть использована для перенаправления звонящих в разные назначения "
-"(например. Нажмите 1 для отдела продаж) и/или разрешить прямой донабор внутренних номеров "
+#~ msgid ""
+#~ "After playing the Timeout Retry Recording the system will replay the main "
+#~ "IVR Annoucement"
+#~ msgstr ""
+#~ "После воспроизведения сообщения при таймауте повторении, система повторит "
+#~ "воспроизведение исходного сообщения Интерактивного меню"
 
 #~ msgid ""
 #~ "There is a problem with install.sql, cannot re-create databases. Contact "
@@ -483,16 +641,3 @@ msgstr ""
 #~ "отсутствия ввода прежде чем перейти на определенные или созданные по-"
 #~ "умолчанию опции 'i' или 't'. Если определены опции 'i' или 't, для "
 #~ "повтора сценария отметьте блоки ниже"
-
-#~ msgid ""
-#~ "Check this box to have this option return to a parent IVR if it was "
-#~ "called from a parent IVR. If not, it will go to the chosen destination."
-#~ "<br><br>The return path will be to any IVR that was in the call path "
-#~ "prior to this IVR which could lead to strange results if there was an IVR "
-#~ "called in the call path but not immediately before this"
-#~ msgstr ""
-#~ "Отметьте здесь, если нужно возвращать в родительское Меню, если вызов "
-#~ "сюда поступает из другого Меню. Если не отмечено, вызов поступает на "
-#~ "выбор назначений.<br><br>Возврат можно перенаправлять и в любые другие "
-#~ "Меню, из которых также производится вызов в действующее Меню, но возврат "
-#~ "и перенаправление может привести к неожиданным результатам."

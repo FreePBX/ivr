@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ivr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-23 09:52+0000\n"
+"POT-Creation-Date: 2015-02-20 19:37-0500\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -30,119 +30,211 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
+#: views/entries.php:64
+msgid "Add Entry"
+msgstr ""
+
+#: functions.inc.php:309 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Lägg till IVR"
 
-#, php-format
-msgid "Edit IVR: %s"
+#: page.ivr.php:23
+msgid "Add a new IVR"
 msgstr ""
 
+#: functions.inc.php:428
+msgid ""
+"After playing the Invalid Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+
+#: functions.inc.php:453
+msgid ""
+"After playing the Timeout Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+
+#: functions.inc.php:416
+msgid "Amount of time to be considered a timeout"
+msgstr ""
+
+#: functions.inc.php:396
+msgid "Announcement"
+msgstr "Meddelande"
+
+#: functions.inc.php:428
+msgid "Append Announcement on Invalid"
+msgstr ""
+
+#: functions.inc.php:453
+msgid "Append Announcement on Timeout"
+msgstr ""
+
+#: ivr.i18n.php:4
+msgid "Applications"
+msgstr ""
+
+#: functions.inc.php:431 functions.inc.php:456 views/entries.php:35
+msgid ""
+"Check this box to have this option return to a parent IVR if it was called "
+"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
+"Aktivera denna för att återgå till den IVR du kom från, annars gå till till "
+"den valda destinationen.<br><br>Returen kommer att vara den IVR som utfördes "
+"precis innan denna. Detta kan leda till konstiga resultat om en IVR "
+"anropades men inte precis innan denna."
+
+#: install.php:469
+msgid "Checking for invalid_append_announce.."
+msgstr ""
+
+#: install.php:246
+msgid "Checking for invalid_id.."
+msgstr "Kontrollerar invalid_id.."
+
+#: install.php:507
+msgid "Checking for invalid_ivr_ret.."
+msgstr ""
+
+#: install.php:264
+msgid "Checking for retvm.."
+msgstr "Kontrollerar retvm.."
+
+#: install.php:451
+msgid "Checking for timeout_append_announce.."
+msgstr ""
+
+#: install.php:229
+msgid "Checking for timeout_id.."
+msgstr "Kontrollerar timeout_id.."
+
+#: install.php:489
+msgid "Checking for timeout_ivr_ret.."
+msgstr ""
+
+#: install.php:167
+msgid "Checking if announcements need migration.."
+msgstr "Kontrollerar om announcements behöver migreras.."
+
+#: functions.inc.php:404
+msgid "Completely disabled"
+msgstr ""
+
+#: ivr.i18n.php:5
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+msgstr ""
+"Denna modul skapar en digital receptionist. Detta kan användas för att sätta "
+"upp en röststyrd meny, t.ex. Tryck ett för försäljning och/eller "
+"direktnummer till anknytningar"
+
+#: functions.inc.php:413
+msgid "Default"
+msgstr ""
+
+#: functions.inc.php:623
+msgid "Delete"
+msgstr "Ta bort"
+
+#: functions.inc.php:358
 #, php-format
 msgid "Delete IVR: %s"
 msgstr ""
 
-msgid "IVR General Options"
+#: views/entries.php:43
+msgid "Delete this entry. Dont forget to click Submit to save changes!"
 msgstr ""
 
-msgid "IVR Name"
-msgstr ""
+#: install.php:287
+#, php-format
+msgid "Deprecated Directory used by %s IVRs"
+msgstr "Äldre katalogmodul används av %s IVR"
 
-msgid "Name of this IVR."
-msgstr ""
-
-msgid "IVR Description"
-msgstr ""
-
+#: functions.inc.php:372
 msgid "Description of this ivr."
 msgstr ""
 
-msgid "IVR Options (DTMF)"
+#: functions.inc.php:623
+msgid "Destination"
 msgstr ""
 
-msgid "None"
-msgstr "Inget"
-
-msgid "Announcement"
-msgstr "Meddelande"
-
-msgid "Greeting to be played on entry to the Ivr."
-msgstr ""
-
-msgid "Disabled"
-msgstr "Avaktiverad"
-
-msgid "Extensions"
-msgstr ""
-
-msgid "Completely disabled"
-msgstr ""
-
-msgid "Enabled for all extensions on a system"
-msgstr ""
-
-msgid "Direct Dial"
-msgstr ""
-
-msgid ""
-"Provides options for callers to direct dial an extension. Direct dialing can "
-"be:"
-msgstr ""
-
-msgid "Default"
-msgstr ""
-
-msgid "Timeout"
-msgstr "Väntetid"
-
-msgid "Amount of time to be considered a timeout"
-msgstr ""
-
-msgid "Invalid Retries"
-msgstr ""
-
-msgid ""
-"Number of times to retry when receiving an invalid/unmatched response from "
-"the caller"
-msgstr ""
-
-msgid "Invalid Retry Recording"
-msgstr ""
-
-msgid ""
-"Prompt to be played when an invalid/unmatched response is received, before "
-"prompting the caller to try again"
-msgstr ""
-
-msgid "Invalid Recording"
-msgstr ""
-
-msgid ""
-"Prompt to be played before sending the caller to an alternate destination "
-"due to the caller pressing 0 or receiving the maximum amount of invalid/"
-"unmatched responses (as determined by Invalid Retries)"
-msgstr ""
-
-msgid "Invalid Destination"
-msgstr ""
-
+#: functions.inc.php:442
 msgid "Destination to send the call to after Invalid Recording is played."
 msgstr ""
 
-msgid "Timeout Retries"
+#: functions.inc.php:467
+msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
-msgid "Timeout Retry Recording"
+#: functions.inc.php:409
+msgid "Direct Dial"
 msgstr ""
 
-msgid "Timeout Recording"
+#: functions.inc.php:401
+msgid "Disabled"
+msgstr "Avaktiverad"
+
+#: functions.inc.php:345
+#, php-format
+msgid "Edit IVR: %s"
 msgstr ""
 
-msgid "Timeout Destination"
+#: functions.inc.php:405
+msgid "Enabled for all extensions on a system"
 msgstr ""
 
-msgid "Return to IVR after VM"
+#: functions.inc.php:623
+msgid "Ext"
 msgstr ""
 
+#: functions.inc.php:402
+msgid "Extensions"
+msgstr ""
+
+#: functions.inc.php:396
+msgid "Greeting to be played on entry to the Ivr."
+msgstr ""
+
+#: ivr.i18n.php:3 /usr/src/freepbx/ivr/ivr.i18n.php:6 page.ivr.php:20
+msgid "IVR"
+msgstr "IVR"
+
+#: functions.inc.php:372
+msgid "IVR Description"
+msgstr ""
+
+#: functions.inc.php:481
+msgid "IVR Entries"
+msgstr ""
+
+#: functions.inc.php:367
+msgid "IVR General Options"
+msgstr ""
+
+#: functions.inc.php:369
+msgid "IVR Name"
+msgstr ""
+
+#: functions.inc.php:376
+msgid "IVR Options (DTMF)"
+msgstr ""
+
+#: functions.inc.php:714 functions.inc.php:734
+#, php-format
+msgid "IVR: %s"
+msgstr "IVR: %s"
+
+#: functions.inc.php:681
+#, php-format
+msgid "IVR: %s / Option: %s"
+msgstr "IVR: %s / Funktion: %s"
+
+#: functions.inc.php:471
 msgid ""
 "If checked, upon exiting voicemail a caller will be returned to this IVR if "
 "they got a users voicemail"
@@ -150,78 +242,87 @@ msgstr ""
 "Om detta är valt, när en uppringare avslutar en röstbrevlåda kommer dom att "
 "återvända till denna IVR om dom hamnade i en röstbrevlåda för en anknytning"
 
-msgid "IVR Entries"
+#: functions.inc.php:441
+msgid "Invalid Destination"
 msgstr ""
 
-msgid "Ext"
+#: functions.inc.php:439
+msgid "Invalid Recording"
 msgstr ""
 
-msgid "Destination"
+#: functions.inc.php:422
+msgid "Invalid Retries"
 msgstr ""
 
+#: functions.inc.php:425
+msgid "Invalid Retry Recording"
+msgstr ""
+
+#: functions.inc.php:369
+msgid "Name of this IVR."
+msgstr ""
+
+#: functions.inc.php:379
+msgid "None"
+msgstr "Inget"
+
+#: functions.inc.php:447
+msgid ""
+"Number of times to retry when no DTMF is heard and the IVR choice times out."
+msgstr ""
+
+#: functions.inc.php:422
+msgid ""
+"Number of times to retry when receiving an invalid/unmatched response from "
+"the caller"
+msgstr ""
+
+#: functions.inc.php:439 functions.inc.php:464
+msgid ""
+"Prompt to be played before sending the caller to an alternate destination "
+"due to the caller pressing 0 or receiving the maximum amount of invalid/"
+"unmatched responses (as determined by Invalid Retries)"
+msgstr ""
+
+#: functions.inc.php:450
+msgid ""
+"Prompt to be played when a timeout occurs, before prompting the caller to "
+"try again"
+msgstr ""
+
+#: functions.inc.php:425
+msgid ""
+"Prompt to be played when an invalid/unmatched response is received, before "
+"prompting the caller to try again"
+msgstr ""
+
+#: functions.inc.php:409
+msgid ""
+"Provides options for callers to direct dial an extension. Direct dialing can "
+"be:"
+msgstr ""
+
+#: functions.inc.php:623
 msgid "Return"
 msgstr ""
 
+#: functions.inc.php:431
+msgid "Return on Invalid"
+msgstr ""
+
+#: functions.inc.php:456
+msgid "Return on Timeout"
+msgstr ""
+
+#: functions.inc.php:623
 msgid "Return to IVR"
 msgstr "Återgå till IVR"
 
-msgid "Delete"
-msgstr "Ta bort"
+#: functions.inc.php:471
+msgid "Return to IVR after VM"
+msgstr ""
 
-#, php-format
-msgid "IVR: %s / Option: %s"
-msgstr "IVR: %s / Funktion: %s"
-
-#, php-format
-msgid "IVR: %s"
-msgstr "IVR: %s"
-
-msgid "Checking if announcements need migration.."
-msgstr "Kontrollerar om announcements behöver migreras.."
-
-msgid "migrating"
-msgstr "migrerar"
-
-msgid "adding announcement_id field.."
-msgstr "lägger till fältet announcements_id.."
-
-msgid "fatal error"
-msgstr "allvarligt fel"
-
-msgid "ok"
-msgstr "ok"
-
-msgid "migrate to recording ids.."
-msgstr "migrerar till recording ids.."
-
-#, php-format
-msgid "migrated %s entries"
-msgstr "migrerade %s poster"
-
-msgid "dropping announcement field.."
-msgstr "kastar fältet announcements.."
-
-msgid "no announcement field???"
-msgstr "inget fält som heter announcements???"
-
-msgid "already migrated"
-msgstr "redan migrerad"
-
-msgid "Checking for timeout_id.."
-msgstr "Kontrollerar timeout_id.."
-
-msgid "added"
-msgstr "adderad"
-
-msgid "not needed"
-msgstr "behövs inte"
-
-msgid "Checking for invalid_id.."
-msgstr "Kontrollerar invalid_id.."
-
-msgid "Checking for retvm.."
-msgstr "Kontrollerar retvm.."
-
+#: install.php:286
 #, php-format
 msgid ""
 "There are %s IVRs that have the legacy Directory dialing enabled. This has "
@@ -235,27 +336,86 @@ msgstr ""
 "(a) IVR-er att använda den nya katalogmodulen. Du kan installera den nya "
 "katalogmodulen från Moduladministrations-menyn"
 
-#, php-format
-msgid "Deprecated Directory used by %s IVRs"
-msgstr "Äldre katalogmodul används av %s IVR"
+#: functions.inc.php:416
+msgid "Timeout"
+msgstr "Väntetid"
 
+#: functions.inc.php:467
+msgid "Timeout Destination"
+msgstr ""
+
+#: functions.inc.php:464
+msgid "Timeout Recording"
+msgstr ""
+
+#: functions.inc.php:447
+msgid "Timeout Retries"
+msgstr ""
+
+#: functions.inc.php:450
+msgid "Timeout Retry Recording"
+msgstr ""
+
+#: install.php:241 /usr/src/freepbx/ivr/install.php:258 install.php:276
+#: /usr/src/freepbx/ivr/install.php:463 install.php:481
+#: /usr/src/freepbx/ivr/install.php:501 install.php:519
+msgid "added"
+msgstr "adderad"
+
+#: install.php:174
+msgid "adding announcement_id field.."
+msgstr "lägger till fältet announcements_id.."
+
+#: install.php:224
+msgid "already migrated"
+msgstr "redan migrerad"
+
+#: views/entries.php:20
+msgid "digits pressed"
+msgstr ""
+
+#: install.php:214
+msgid "dropping announcement field.."
+msgstr "kastar fältet announcements.."
+
+#: install.php:178 /usr/src/freepbx/ivr/install.php:190 install.php:206
+#: /usr/src/freepbx/ivr/install.php:238 install.php:255
+#: /usr/src/freepbx/ivr/install.php:273 install.php:460
+#: /usr/src/freepbx/ivr/install.php:478 install.php:498
+#: /usr/src/freepbx/ivr/install.php:516
+msgid "fatal error"
+msgstr "allvarligt fel"
+
+#: install.php:186
+msgid "migrate to recording ids.."
+msgstr "migrerar till recording ids.."
+
+#: install.php:210
+#, php-format
+msgid "migrated %s entries"
+msgstr "migrerade %s poster"
+
+#: install.php:173
+msgid "migrating"
+msgstr "migrerar"
+
+#: install.php:218
+msgid "no announcement field???"
+msgstr "inget fält som heter announcements???"
+
+#: install.php:244 /usr/src/freepbx/ivr/install.php:261 install.php:279
+#: /usr/src/freepbx/ivr/install.php:466 install.php:484
+#: /usr/src/freepbx/ivr/install.php:504 install.php:522
+msgid "not needed"
+msgstr "behövs inte"
+
+#: install.php:181 /usr/src/freepbx/ivr/install.php:220
+msgid "ok"
+msgstr "ok"
+
+#: install.php:288
 msgid "posting notice about deprecated functionality"
 msgstr "postar notering om gammal modul"
-
-msgid "IVR"
-msgstr "IVR"
-
-msgid "Applications"
-msgstr ""
-
-msgid ""
-"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These can be used to send callers to different locations "
-"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-msgstr ""
-"Denna modul skapar en digital receptionist. Detta kan användas för att sätta "
-"upp en röststyrd meny, t.ex. Tryck ett för försäljning och/eller "
-"direktnummer till anknytningar"
 
 #~ msgid ""
 #~ "There is a problem with install.sql, cannot re-create databases. Contact "
@@ -484,18 +644,6 @@ msgstr ""
 
 #~ msgid "Digits to press for this choice"
 #~ msgstr "Siffra att trycka för att välja denna meny"
-
-#~ msgid ""
-#~ "Check this box to have this option return to a parent IVR if it was "
-#~ "called from a parent IVR. If not, it will go to the chosen destination."
-#~ "<br><br>The return path will be to any IVR that was in the call path "
-#~ "prior to this IVR which could lead to strange results if there was an IVR "
-#~ "called in the call path but not immediately before this"
-#~ msgstr ""
-#~ "Aktivera denna för att återgå till den IVR du kom från, annars gå till "
-#~ "till den valda destinationen.<br><br>Returen kommer att vara den IVR som "
-#~ "utfördes precis innan denna. Detta kan leda till konstiga resultat om en "
-#~ "IVR anropades men inte precis innan denna."
 
 #~ msgid "Delete this entry. Dont forget to click Save to save changes!"
 #~ msgstr ""
