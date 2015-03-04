@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:37-0500\n"
+"POT-Creation-Date: 2015-03-03 19:29-0500\n"
 "PO-Revision-Date: 2009-01-31 12:34+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -58,7 +58,7 @@ msgstr "在无效中附加播报"
 msgid "Append Announcement on Timeout"
 msgstr "超时中附加一个主系统公告"
 
-#: ivr.i18n.php:4
+#: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
 msgid "Applications"
 msgstr "应用"
 
@@ -111,7 +111,7 @@ msgstr "正在检查通知通告是否需要迁移。。。"
 msgid "Completely disabled"
 msgstr "完全关闭"
 
-#: ivr.i18n.php:5
+#: ivr.i18n.php:8
 msgid ""
 "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
 "Response) menus. These can be used to send callers to different locations "
@@ -185,7 +185,7 @@ msgstr "分机"
 msgid "Greeting to be played on entry to the Ivr."
 msgstr "进入此IVR需要播放的欢迎词"
 
-#: ivr.i18n.php:3 /usr/src/freepbx/ivr/ivr.i18n.php:6 page.ivr.php:20
+#: ivr.i18n.php:4 /usr/src/freepbx/ivr/ivr.i18n.php:10 page.ivr.php:20
 msgid "IVR"
 msgstr "语音IVR"
 
@@ -265,7 +265,8 @@ msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
 "unmatched responses (as determined by Invalid Retries)"
-msgstr "播放提示音，发送呼叫方到可选目的地，因为当呼叫方摁0 或者超出重试最大设置。"
+msgstr ""
+"播放提示音，发送呼叫方到可选目的地，因为当呼叫方摁0 或者超出重试最大设置。"
 
 #: functions.inc.php:450
 msgid ""
