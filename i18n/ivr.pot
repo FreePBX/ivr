@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:37-0500\n"
+"POT-Creation-Date: 2015-03-03 19:29-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgstr ""
 msgid "Append Announcement on Timeout"
 msgstr ""
 
-#: ivr.i18n.php:4
+#: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
 msgid "Applications"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Completely disabled"
 msgstr ""
 
-#: ivr.i18n.php:5
+#: ivr.i18n.php:8
 msgid ""
 "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
 "Response) menus. These can be used to send callers to different locations "
@@ -183,7 +183,7 @@ msgstr ""
 msgid "Greeting to be played on entry to the Ivr."
 msgstr ""
 
-#: ivr.i18n.php:3 /usr/src/freepbx/ivr/ivr.i18n.php:6
+#: ivr.i18n.php:4 /usr/src/freepbx/ivr/ivr.i18n.php:10
 #: page.ivr.php:20
 msgid "IVR"
 msgstr ""
