@@ -9,7 +9,7 @@ $(document).ready(function(){
 		new_entrie = '<tr>' + $('#gotoDESTID').parents('tr').html() + '</tr>';
 		id = new Date().getTime();//must be cached, as we have many replaces to do and the time can shift
 		thisrow = $('#ivr_entries > tbody:last').find('tr:last').after(new_entrie.replace(/DESTID/g, id));
-		$('.destdropdown2', $(thisrow).next()).hide();
+		$('.destdropdown2', $(thisrow).next()).addClass('hidden');
 		bind_dests_double_selects();
 	});
 
