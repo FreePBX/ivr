@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo ivr module spanish translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-03 19:29-0500\n"
-"PO-Revision-Date: 2015-03-25 09:58+0200\n"
+"PO-Revision-Date: 2015-03-25 09:59+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish "
 "<http://weblate.freepbx.org/projects/freepbx/ivr/es_ES/>\n"
@@ -222,7 +222,7 @@ msgstr "Opciones IVR (DTMF)"
 #: functions.inc.php:714 functions.inc.php:734
 #, php-format
 msgid "IVR: %s"
-msgstr "IVR: %s"
+msgstr "IVR : %s"
 
 #: functions.inc.php:681
 #, php-format
@@ -410,7 +410,7 @@ msgstr "migrando"
 
 #: install.php:218
 msgid "no announcement field???"
-msgstr "No hay campo de anuncio."
+msgstr "No hay campo de anuncio???"
 
 #: install.php:244 /usr/src/freepbx/ivr/install.php:261 install.php:279
 #: /usr/src/freepbx/ivr/install.php:466 install.php:484
