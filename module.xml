@@ -28,6 +28,7 @@
 		<ivr>
 			<display>ivr</display>
 			<action>add</action>
+			<view>form</view>
 		</ivr>
  	</popovers>
  	<supported>

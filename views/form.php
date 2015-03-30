@@ -583,7 +583,7 @@ foreach($recordingList as $r){
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3 hidden-xs bootnav">
+			<div class="col-sm-3 hidden-xs bootnav <?php echo $fw_popover?'hidden':''?>">
 				<div class="list-group">
 					<?php echo load_view(__DIR__.'/rnav.php')?>
 				</div>
