@@ -311,7 +311,6 @@ function ivr_configprocess(){
 	if (isset($_REQUEST['display']) && $_REQUEST['display'] == 'ivr'){
 		global $db;
 		//get variables
-
 		$get_var = array('id', 'name', 'description', 'announcement',
 						'directdial', 'invalid_loops', 'invalid_retry_recording',
 						'invalid_destination', 'invalid_recording',

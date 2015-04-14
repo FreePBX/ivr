@@ -2,7 +2,7 @@
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 
 /* $Id$ */
-
+dbug('page',$_POST);
 $get_vars = array(
 				'action' 		=> '',
 				'id'			=> '',

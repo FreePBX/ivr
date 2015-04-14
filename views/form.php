@@ -94,7 +94,10 @@ foreach($recordingList as $r){
 					<div class="display full-border">
 						<form class='fpbx-submit' name="frm_ivr" id="frm_ivr" method="POST" action="" data-fpbx-delete="<?php echo $delURL?>">
 						<input type="hidden" name="id" value="<?php echo $ivr['id']?>">
+						<input type="hidden" name="invalid_destination" id="invalid_destination" value="">
+						<input type="hidden" name="timeout_destination" id="timeout_destination" value="">
 						<input type="hidden" name="action" value="save">
+
 						<div class="section-title" data-for="ivrgeneral">
 							<h3><i class="fa fa-minus"></i> <?php echo _('IVR General Options')?></h3>
 						</div>
