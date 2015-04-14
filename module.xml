@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>13.0.1alpha1</version>
+	<version>13.0.1alpha2</version>
 	<publisher>Schmooze Com Inc</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
+		*13.0.1alpha2* Bugfix #9072,#8993, astman connection error catching
 		*13.0.1alpha1* Visual Changes
 		*2.11.0.6* Add license file
 		*2.10.0.0* rewrite!
