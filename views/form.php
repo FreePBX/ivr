@@ -239,11 +239,11 @@ foreach($recordingList as $r){
 										<div class="row">
 											<div class="form-group">
 												<div class="col-md-3">
-													<label class="control-label" for="ivr_repeat_loops"><?php echo _("Invalid Retries") ?></label>
-													<i class="fa fa-question-circle fpbx-help-icon" data-for="ivr_repeat_loops"></i>
+													<label class="control-label" for="invalid_loops"><?php echo _("Invalid Retries") ?></label>
+													<i class="fa fa-question-circle fpbx-help-icon" data-for="invalid_loops"></i>
 												</div>
 												<div class="col-md-9">
-													<input type="number" max="10" class="form-control" id="ivr_repeat_loops" name="ivr_repeat_loops" value="<?php echo $ivr['invalid_loops']?>">
+													<input type="number" max="10" class="form-control" id="invalid_loops" name="invalid_loops" value="<?php echo $ivr['invalid_loops']?>">
 												</div>
 											</div>
 										</div>
@@ -251,7 +251,7 @@ foreach($recordingList as $r){
 								</div>
 								<div class="row">
 									<div class="col-md-12">
-										<span id="ivr_repeat_loops-help" class="help-block fpbx-help-block"><?php echo _("Number of times to retry when receiving an invalid/unmatched response from the caller")?></span>
+										<span id="invalid_loops-help" class="help-block fpbx-help-block"><?php echo _("Number of times to retry when receiving an invalid/unmatched response from the caller")?></span>
 									</div>
 								</div>
 							</div>
