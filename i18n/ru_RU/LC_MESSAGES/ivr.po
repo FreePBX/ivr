@@ -23,40 +23,45 @@ msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-03 19:29-0500\n"
-"PO-Revision-Date: 2014-02-28 04:51+0200\n"
-"Last-Translator: Andrew <andrew.nagy@the159.com>\n"
-"Language-Team: Russian <http://example.com/projects/freepbx-211/ivr/ru/>\n"
+"PO-Revision-Date: 2015-05-01 13:36+0200\n"
+"Last-Translator: Yuriy <alliancesko@gmail.com>\n"
+"Language-Team: Russian "
+"<http://weblate.freepbx.org/projects/freepbx/ivr/ru_RU/>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 1.9-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: views/entries.php:64
 msgid "Add Entry"
-msgstr ""
+msgstr "Добавить вход"
 
 #: functions.inc.php:309 views/rnav.php:3
 msgid "Add IVR"
-msgstr "Добавить Интерактивное меню"
+msgstr "Добавить IVR"
 
 #: page.ivr.php:23
 msgid "Add a new IVR"
-msgstr ""
+msgstr "Добавить новое IVR"
 
 #: functions.inc.php:428
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
+"После проигрывания записи Неверный Повтор система воспроизведет основное "
+"приветствие IVR"
 
 #: functions.inc.php:453
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
+"После проигрывания записи Тайм-аут Повтора система воспроизведет основное "
+"приветствие IVR"
 
 #: functions.inc.php:416
 msgid "Amount of time to be considered a timeout"
@@ -68,11 +73,11 @@ msgstr "Приветствие"
 
 #: functions.inc.php:428
 msgid "Append Announcement on Invalid"
-msgstr ""
+msgstr "Добавьте приветствие о неверном"
 
 #: functions.inc.php:453
 msgid "Append Announcement on Timeout"
-msgstr ""
+msgstr "Добавьте приветствие о Тайм-ауте"
 
 #: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
 msgid "Applications"
@@ -90,12 +95,11 @@ msgstr ""
 "поступает из другого Меню. Если не отмечено, вызов поступает на выбор "
 "назначений.<br><br>Возврат можно перенаправлять и в любые другие Меню, из "
 "которых также производится вызов в действующее Меню, но возврат и "
-"перенаправление может привести к неожиданным результатам."
+"перенаправление может привести к неожиданным результатам"
 
 #: install.php:469
-#, fuzzy
 msgid "Checking for invalid_append_announce.."
-msgstr "Проверка invalid_id.."
+msgstr "Проверка на invalid_append_announce.."
 
 #: install.php:246
 msgid "Checking for invalid_id.."
@@ -103,16 +107,15 @@ msgstr "Проверка invalid_id.."
 
 #: install.php:507
 msgid "Checking for invalid_ivr_ret.."
-msgstr ""
+msgstr "Проверка на invalid_ivr_ret.."
 
 #: install.php:264
 msgid "Checking for retvm.."
 msgstr "Проверка retvm.."
 
 #: install.php:451
-#, fuzzy
 msgid "Checking for timeout_append_announce.."
-msgstr "Проверка timeout_id.."
+msgstr "Проверка на timeout_append_announce.."
 
 #: install.php:229
 msgid "Checking for timeout_id.."
@@ -120,7 +123,7 @@ msgstr "Проверка timeout_id.."
 
 #: install.php:489
 msgid "Checking for timeout_ivr_ret.."
-msgstr ""
+msgstr "Проверка на  timeout_ivr_ret.."
 
 #: install.php:167
 msgid "Checking if announcements need migration.."
@@ -139,7 +142,7 @@ msgstr ""
 "Создает Цифровой Автоответчик (или Авто-Секретаря, или Интерактивное "
 "Голосовое меню). Эта функция может быть использована для перенаправления "
 "звонящих в разные назначения (например. Нажмите 1 для отдела продаж) и/или "
-"разрешить прямой донабор внутренних номеров "
+"разрешить прямой донабор внутренних номеров."
 
 #: functions.inc.php:413
 msgid "Default"
@@ -157,6 +160,7 @@ msgstr "Удалить Интерактивное меню: %s"
 #: views/entries.php:43
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
 msgstr ""
+"Удалить этот вход. Не забудьте нажать ПРИМЕНИТЬ, чтобы сохранить изменения!"
 
 #: install.php:287
 #, php-format
@@ -165,7 +169,7 @@ msgstr "Устаревшие Каталоги используемые %s Инт
 
 #: functions.inc.php:372
 msgid "Description of this ivr."
-msgstr "Описание этого Интерактивного меню"
+msgstr "Описание этого Интерактивного меню."
 
 #: functions.inc.php:623
 msgid "Destination"
@@ -179,7 +183,7 @@ msgstr ""
 
 #: functions.inc.php:467
 msgid "Destination to send the call to after Timeout Recording is played."
-msgstr ""
+msgstr "Назначения направления звонка после воспроизведения записи о Тайм-ауте."
 
 #: functions.inc.php:409
 msgid "Direct Dial"
@@ -208,7 +212,7 @@ msgstr "Внутренние номера"
 
 #: functions.inc.php:396
 msgid "Greeting to be played on entry to the Ivr."
-msgstr "Приветствие воспроизводимое при входе в Интерактивное меню"
+msgstr "Приветствие воспроизводимое при входе в Интерактивное меню."
 
 #: ivr.i18n.php:4 /usr/src/freepbx/ivr/ivr.i18n.php:10 page.ivr.php:20
 msgid "IVR"
@@ -270,7 +274,7 @@ msgstr "Воспроизведение при неуданой попытке "
 
 #: functions.inc.php:369
 msgid "Name of this IVR."
-msgstr "Название этого Интерактивного меню"
+msgstr "Название этого Интерактивного меню."
 
 #: functions.inc.php:379
 msgid "None"
@@ -280,6 +284,8 @@ msgstr "Нет"
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr ""
+"Количество попыток повтора при отсутствии попыток набора DTMF и тайм-аута "
+"выбора пунктов IVR."
 
 #: functions.inc.php:422
 msgid ""
@@ -302,6 +308,8 @@ msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
 msgstr ""
+"Подсказка, звучащая по тайм-ауту, перед просьбой звонящему попробовать еще "
+"раз"
 
 #: functions.inc.php:425
 msgid ""
@@ -317,7 +325,7 @@ msgid ""
 "be:"
 msgstr ""
 "Активирует опцию прямого набора внутреннего номера для звонящих. Прямой "
-"набор может быть: "
+"набор может быть:"
 
 #: functions.inc.php:623
 msgid "Return"
@@ -325,11 +333,11 @@ msgstr "Возврат"
 
 #: functions.inc.php:431
 msgid "Return on Invalid"
-msgstr ""
+msgstr "Возврат на неверный"
 
 #: functions.inc.php:456
 msgid "Return on Timeout"
-msgstr ""
+msgstr "Возврат на Тайм-аут"
 
 #: functions.inc.php:623
 msgid "Return to IVR"
@@ -352,7 +360,7 @@ msgstr ""
 "будет удалена из будущих релизов. Вам следует конвертировать ваше "
 "Интерактивное меню, что бы использовать модуль Каталога для этой "
 "функциональности и присвоить назначение Интерактивного меню на выбранный "
-"каталог. Вы можете устанвоить модуль Каталога из Онлайн Репозитория Модулей "
+"каталог. Вы можете установить модуль Каталога из Онлайн Репозитория Модулей"
 
 #: functions.inc.php:416
 msgid "Timeout"
@@ -382,7 +390,7 @@ msgstr "добавлено"
 
 #: install.php:174
 msgid "adding announcement_id field.."
-msgstr "добавление поля announcement_id"
+msgstr "добавление поля announcement_id.."
 
 #: install.php:224
 msgid "already migrated"
@@ -390,7 +398,7 @@ msgstr "уже перенесено"
 
 #: views/entries.php:20
 msgid "digits pressed"
-msgstr ""
+msgstr "нажатии цифры"
 
 #: install.php:214
 msgid "dropping announcement field.."
