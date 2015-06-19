@@ -77,6 +77,7 @@ foreach($recordingList as $r){
 	$timeoutretryopts .= '<option value="'.$r['id'].'" '.$checked.'>'.$r['displayname'].'</option>';
 }
 $timeoutopts = '<option value="default">'._('Default').'</option>';
+$timeoutopts .= '<option value="">'._('None').'</option>';
 foreach($recordingList as $r){
 	$checked = ($r['id'] == $ivr['timeout_recording']?' SELECTED':'');
 	$timeoutopts .= '<option value="'.$r['id'].'" '.$checked.'>'.$r['displayname'].'</option>';
