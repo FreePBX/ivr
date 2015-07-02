@@ -1,8 +1,7 @@
-<?php 
+<?php
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 
 /* $Id$ */
-dbug('page',$_POST);
 $get_vars = array(
 				'action' 		=> '',
 				'id'			=> '',
@@ -48,7 +47,7 @@ if(!$astman){
 		</div>
 	</div>
 
-		
+
 
 
 	<?php
@@ -56,6 +55,6 @@ if(!$astman){
 		$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 		$id 	= isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
 
-		echo load_view(__DIR__.'/views/form.php', array('request' => $_REQUEST));	
+		echo load_view(__DIR__.'/views/form.php', array('request' => $_REQUEST));
 	}
 }

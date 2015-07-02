@@ -2,7 +2,7 @@
 //	License for all code of this FreePBX module can be found in the license file inside the module directory
 //	Copyright 2015 Sangoma Technologies.
 //
-extract($request);
+extract($request, EXTR_SKIP);
 if(action == 'add'){
 	$heading = _("Add IVR");
 	$deet = array('id', 'name', 'description', 'announcement', 'directdial',
@@ -83,7 +83,11 @@ foreach($recordingList as $r){
 	$timeoutopts .= '<option value="'.$r['id'].'" '.$checked.'>'.$r['displayname'].'</option>';
 }
 
-
+$hooks = \FreePBX::Ivr()->pageHook($_REQUEST);
+$hookhtml = '';
+foreach ($hooks as $key => $value) {
+	$hookhtml .= $value;
+}
 ?>
 <div class="container-fluid">
 	<h1><?php echo $heading?></h1>
@@ -195,7 +199,7 @@ foreach($recordingList as $r){
 												<div class="col-md-9 radioset">
 													<input type="radio" name="directdial" id="directdialyes" value="ext-local" <?php echo ($ivr['directdial'] == "ext-local"?"CHECKED":"") ?>>
 													<label for="directdialyes"><?php echo _("Yes");?></label>
-													<input type="radio" name="directdial" id="directdialno" value="" <?php echo ($ivr['directdial'] == "ext-local"?"":"CHECKED") ?>>
+													<input type="radio" name="directdial" id="directdialno" value="" <?php echo ($ivr['directdial'] == ""?"CHECKED":"") ?>>
 													<label for="directdialno"><?php echo _("No");?></label>
 												</div>
 											</div>
@@ -584,6 +588,7 @@ foreach($recordingList as $r){
 							<?php echo ivr_draw_entries($ivr['id'])?>
 						</div>
 						</form>
+						<?php echo $hookhtml?>
 					</div>
 				</div>
 			</div>

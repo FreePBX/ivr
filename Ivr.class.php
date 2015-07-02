@@ -34,8 +34,8 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 		$ivrs = $this->getDetails();
 		foreach ($ivrs as $ivr) {
 			$results[] = array(
-				"text" => _("IVR").": ".$ivr['name'], 
-				"type" => "get", 
+				"text" => _("IVR").": ".$ivr['name'],
+				"type" => "get",
 				"dest" => "?display=ivr&action=edit&id=".$ivr['id']
 			);
 		}
@@ -45,7 +45,7 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 		$sql = 'SELECT * FROM ivr_details';
 		if ($id) {
 			$sql .= ' where  id = :id ';
-		} 
+		}
 		$sql .= ' ORDER BY name';
 
 		$sth = $this->Database->prepare($sql);
@@ -84,5 +84,8 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 			break;
 		}
 		return $buttons;
+	}
+	public function pageHook($request){
+		return \FreePBX::Hooks()->processHooks($request);
 	}
 }
