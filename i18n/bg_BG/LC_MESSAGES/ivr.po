@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-03 19:29-0500\n"
-"PO-Revision-Date: 2015-03-11 21:46+0200\n"
+"PO-Revision-Date: 2015-07-08 01:49+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian "
 "<http://weblate.freepbx.org/projects/freepbx/ivr/bg_BG/>\n"
@@ -32,7 +32,7 @@ msgstr "Добави IVR"
 
 #: page.ivr.php:23
 msgid "Add a new IVR"
-msgstr ""
+msgstr "Добави нов IVR"
 
 #: functions.inc.php:428
 msgid ""
