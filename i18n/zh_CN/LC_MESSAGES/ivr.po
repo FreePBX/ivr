@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-19 12:20-0400\n"
+"POT-Creation-Date: 2015-07-09 12:35-0400\n"
 "PO-Revision-Date: 2009-01-31 12:34+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: page.ivr.php:19
+#: page.ivr.php:18
 msgid ""
 "A connection to Asterisk Manager could not be made. This module requires "
 "Asterisk to be running and have proper credentials"
 msgstr ""
 
-#: page.ivr.php:35
+#: page.ivr.php:34
 msgid "Actions"
 msgstr ""
 
@@ -32,31 +32,31 @@ msgstr ""
 msgid "Add IVR"
 msgstr "添加IVR"
 
-#: views/form.php:308
+#: views/form.php:312
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
 
-#: views/form.php:466
+#: views/form.php:470
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
 
-#: views/form.php:231
+#: views/form.php:235
 msgid "Amount of time to be concidered a timeout"
 msgstr ""
 
-#: views/form.php:166
+#: views/form.php:170
 msgid "Announcement"
 msgstr "公告"
 
-#: views/form.php:451
+#: views/form.php:455
 msgid "Append Announcement on Timeout"
 msgstr "超时中附加一个主系统公告"
 
-#: views/form.php:293
+#: views/form.php:297
 msgid "Append Announcement to Invalid"
 msgstr ""
 
@@ -64,7 +64,7 @@ msgstr ""
 msgid "Bad Request"
 msgstr ""
 
-#: views/form.php:493
+#: views/form.php:497
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Checking if announcements need migration.."
 msgstr "正在检查通知通告是否需要迁移。。。"
 
-#: views/form.php:335
+#: views/form.php:339
 msgid ""
 "Choose yes to have this option return to a parent IVR if it was called from "
 "a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -118,7 +118,7 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 
-#: page.ivr.php:17
+#: page.ivr.php:16
 msgid "Connection Error"
 msgstr ""
 
@@ -139,7 +139,7 @@ msgstr ""
 msgid "Deprecated Directory used by %s IVRs"
 msgstr ""
 
-#: views/form.php:149
+#: views/form.php:153
 msgid "Description of this IVR"
 msgstr ""
 
@@ -147,11 +147,11 @@ msgstr ""
 msgid "Destination"
 msgstr "目的地"
 
-#: views/form.php:389
+#: views/form.php:393
 msgid "Destination to send the call to after Invalid Recording is played"
 msgstr ""
 
-#: views/form.php:547
+#: views/form.php:551
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Edit:"
 msgstr ""
 
-#: views/form.php:192
+#: views/form.php:196
 msgid "Enable Direct Dial"
 msgstr "启用直接拨号"
 
@@ -171,27 +171,27 @@ msgstr "启用直接拨号"
 msgid "Ext"
 msgstr "分机"
 
-#: views/form.php:180
+#: views/form.php:184
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
-#: Ivr.class.php:37 /usr/src/freepbx/ivr/page.ivr.php:25
+#: Ivr.class.php:37 /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "语音IVR"
 
-#: views/form.php:156
+#: views/form.php:160
 msgid "IVR DTMF Options"
 msgstr ""
 
-#: views/form.php:137
+#: views/form.php:141
 msgid "IVR Description"
 msgstr "IVR 描述"
 
-#: views/form.php:581
+#: views/form.php:585
 msgid "IVR Entries"
 msgstr "IVR入口"
 
-#: views/form.php:103
+#: views/form.php:107
 msgid "IVR General Options"
 msgstr "IVR 基本选项"
 
@@ -199,7 +199,7 @@ msgstr "IVR 基本选项"
 msgid "IVR List"
 msgstr ""
 
-#: page.ivr.php:34 views/form.php:113
+#: page.ivr.php:33 views/form.php:117
 msgid "IVR Name"
 msgstr "IVR 名称"
 
@@ -213,25 +213,25 @@ msgstr "IVR：%s"
 msgid "IVR: %s / Option: %s"
 msgstr "IVR：%s / 选项：%s"
 
-#: views/form.php:574
+#: views/form.php:578
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
 msgstr ""
 
-#: views/form.php:377
+#: views/form.php:381
 msgid "Invalid Destination"
 msgstr "无效目的地"
 
-#: views/form.php:351
+#: views/form.php:355
 msgid "Invalid Recording"
 msgstr "无效录音"
 
-#: views/form.php:243
+#: views/form.php:247
 msgid "Invalid Retries"
 msgstr "无效重试"
 
-#: views/form.php:267
+#: views/form.php:271
 msgid "Invalid Retry Recording"
 msgstr "无效重试录音"
 
@@ -239,16 +239,16 @@ msgstr "无效重试录音"
 msgid "List IVRs"
 msgstr ""
 
-#: views/form.php:125
+#: views/form.php:129
 msgid "Name of this IVR"
 msgstr ""
 
-#: views/entries.php:39 views/form.php:199 views/form.php:300
-#: views/form.php:327 views/form.php:458 views/form.php:485 views/form.php:566
+#: views/entries.php:39 views/form.php:203 views/form.php:304
+#: views/form.php:331 views/form.php:462 views/form.php:489 views/form.php:570
 msgid "No"
 msgstr ""
 
-#: page.ivr.php:16
+#: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
 msgstr ""
 
@@ -256,18 +256,18 @@ msgstr ""
 msgid "None"
 msgstr "无"
 
-#: views/form.php:413
+#: views/form.php:417
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr ""
 
-#: views/form.php:255
+#: views/form.php:259
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
 msgstr "重试次数（当呼叫方收到无效或不能匹配的响应）"
 
-#: views/form.php:365 views/form.php:523
+#: views/form.php:369 views/form.php:527
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
@@ -275,19 +275,19 @@ msgid ""
 msgstr ""
 "播放提示音，发送呼叫方到可选目的地，因为当呼叫方摁0 或者超出重试最大设置。"
 
-#: views/form.php:439
+#: views/form.php:443
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
 msgstr ""
 
-#: views/form.php:281
+#: views/form.php:285
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
 msgstr "当收到无效响应时，在提示呼叫方重新呼叫钱，播放的提示"
 
-#: views/form.php:207
+#: views/form.php:211
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
@@ -299,11 +299,11 @@ msgstr ""
 msgid "Return"
 msgstr "返回"
 
-#: views/form.php:320
+#: views/form.php:324
 msgid "Return on Invalid"
 msgstr "无效中的返回处理"
 
-#: views/form.php:478
+#: views/form.php:482
 msgid "Return on Timeout"
 msgstr "超时返回处理"
 
@@ -311,7 +311,7 @@ msgstr "超时返回处理"
 msgid "Return to IVR"
 msgstr "返回到IVR"
 
-#: views/form.php:559
+#: views/form.php:563
 msgid "Return to IVR after VM"
 msgstr "VM后返回IVR"
 
@@ -329,28 +329,28 @@ msgid ""
 "from the Online Module Repository"
 msgstr ""
 
-#: views/form.php:219
+#: views/form.php:223
 msgid "Timeout"
 msgstr "超时设置"
 
-#: views/form.php:535
+#: views/form.php:539
 msgid "Timeout Destination"
 msgstr "目的地超时"
 
-#: views/form.php:509
+#: views/form.php:513
 msgid "Timeout Recording"
 msgstr "录音超时"
 
-#: views/form.php:401
+#: views/form.php:405
 msgid "Timeout Retries"
 msgstr "重试超时"
 
-#: views/form.php:425
+#: views/form.php:429
 msgid "Timeout Retry Recording"
 msgstr "重试录音超时"
 
-#: views/entries.php:37 views/form.php:197 views/form.php:298
-#: views/form.php:325 views/form.php:456 views/form.php:483 views/form.php:564
+#: views/entries.php:37 views/form.php:201 views/form.php:302
+#: views/form.php:329 views/form.php:460 views/form.php:487 views/form.php:568
 msgid "Yes"
 msgstr ""
 
