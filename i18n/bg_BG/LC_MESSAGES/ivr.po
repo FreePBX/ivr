@@ -22,9 +22,7 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: page.ivr.php:19
-msgid ""
-"A connection to Asterisk Manager could not be made. This module requires "
-"Asterisk to be running and have proper credentials"
+msgid "A connection to Asterisk Manager could not be made. This module requires Asterisk to be running and have proper credentials"
 msgstr ""
 
 #: page.ivr.php:35
@@ -36,15 +34,11 @@ msgid "Add IVR"
 msgstr "Добави IVR"
 
 #: views/form.php:308
-msgid ""
-"After playing the Invalid Retry Recording the system will replay the main "
-"IVR Announcement"
+msgid "After playing the Invalid Retry Recording the system will replay the main IVR Announcement"
 msgstr ""
 
 #: views/form.php:466
-msgid ""
-"After playing the Timeout Retry Recording the system will replay the main "
-"IVR Announcement"
+msgid "After playing the Timeout Retry Recording the system will replay the main IVR Announcement"
 msgstr ""
 
 #: views/form.php:231
@@ -68,18 +62,8 @@ msgid "Bad Request"
 msgstr ""
 
 #: views/form.php:493
-msgid ""
-"Check this box to have this option return to a parent IVR if it was called "
-"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
-"return path will be to any IVR that was in the call path prior to this IVR "
-"which could lead to strange results if there was an IVR called in the call "
-"path but not immediately before this"
-msgstr ""
-"Маркирайте за да имате възможноста да се връщате към основния IVR ако е "
-"поискана в основния IVR. Иначе, ще отиде към избраното направление."
-"<br><br>Пътят за връщане ще важи за всички IVR които са били на пътя преди "
-"този IVR, което може да доведе до странни резултати ако има IVR извикан в "
-"пътя на обаждането, но не веднага преди този"
+msgid "Check this box to have this option return to a parent IVR if it was called from a parent IVR. If not, it will go to the chosen destination.<br><br>The return path will be to any IVR that was in the call path prior to this IVR which could lead to strange results if there was an IVR called in the call path but not immediately before this"
+msgstr "Маркирайте за да имате възможноста да се връщате към основния IVR ако е поискана в основния IVR. Иначе, ще отиде към избраното направление.<br><br>Пътят за връщане ще важи за всички IVR които са били на пътя преди този IVR, което може да доведе до странни резултати ако има IVR извикан в пътя на обаждането, но не веднага преди този"
 
 #: install.php:469
 msgid "Checking for invalid_append_announce.."
@@ -114,12 +98,7 @@ msgid "Checking if announcements need migration.."
 msgstr "Проверка дали съобщенията имат нужда от преместване.."
 
 #: views/form.php:335
-msgid ""
-"Choose yes to have this option return to a parent IVR if it was called from "
-"a parent IVR. If not, it will go to the chosen destination.<br><br>The "
-"return path will be to any IVR that was in the call path prior to this IVR "
-"which could lead to strange results if there was an IVR called in the call "
-"path but not immediately before this"
+msgid "Choose yes to have this option return to a parent IVR if it was called from a parent IVR. If not, it will go to the chosen destination.<br><br>The return path will be to any IVR that was in the call path prior to this IVR which could lead to strange results if there was an IVR called in the call path but not immediately before this"
 msgstr ""
 
 #: page.ivr.php:17
@@ -207,7 +186,7 @@ msgstr ""
 msgid "IVR Name"
 msgstr "Име на IVR"
 
-#: functions.inc.php:514 functions.inc.php:534
+#: functions.inc.php:714 functions.inc.php:734
 #, fuzzy, php-format
 msgid "IVR: %s"
 msgstr "IVR : %s"
@@ -218,9 +197,7 @@ msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / Опция: %s"
 
 #: views/form.php:574
-msgid ""
-"If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
-"got a users voicemail"
+msgid "If Yes, upon exiting voicemail a caller will be returned to this IVR if they got a users voicemail"
 msgstr ""
 
 #: views/form.php:377
@@ -261,33 +238,23 @@ msgid "None"
 msgstr "Няма"
 
 #: views/form.php:413
-msgid ""
-"Number of times to retry when no DTMF is heard and the IVR choice times out."
+msgid "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr ""
 
 #: views/form.php:255
-msgid ""
-"Number of times to retry when receiving an invalid/unmatched response from "
-"the caller"
+msgid "Number of times to retry when receiving an invalid/unmatched response from the caller"
 msgstr ""
 
 #: views/form.php:365 views/form.php:523
-msgid ""
-"Prompt to be played before sending the caller to an alternate destination "
-"due to the caller pressing 0 or receiving the maximum amount of invalid/"
-"unmatched responses (as determined by Invalid Retries)"
+msgid "Prompt to be played before sending the caller to an alternate destination due to the caller pressing 0 or receiving the maximum amount of invalid/unmatched responses (as determined by Invalid Retries)"
 msgstr ""
 
 #: views/form.php:439
-msgid ""
-"Prompt to be played when a timeout occurs, before prompting the caller to "
-"try again"
+msgid "Prompt to be played when a timeout occurs, before prompting the caller to try again"
 msgstr ""
 
 #: views/form.php:281
-msgid ""
-"Prompt to be played when an invalid/unmatched response is received, before "
-"prompting the caller to try again"
+msgid "Prompt to be played when an invalid/unmatched response is received, before prompting the caller to try again"
 msgstr ""
 
 #: views/form.php:207
@@ -324,12 +291,7 @@ msgstr ""
 
 #: install.php:286
 #, php-format
-msgid ""
-"There are %s IVRs that have the legacy Directory dialing enabled. This has "
-"been deprecated and will be removed from future releases. You should convert "
-"your IVRs to use the Directory module for this functionality and assign an "
-"IVR destination to a desired Directory. You can install the Directory module "
-"from the Online Module Repository"
+msgid "There are %s IVRs that have the legacy Directory dialing enabled. This has been deprecated and will be removed from future releases. You should convert your IVRs to use the Directory module for this functionality and assign an IVR destination to a desired Directory. You can install the Directory module from the Online Module Repository"
 msgstr ""
 
 #: views/form.php:219
@@ -418,31 +380,52 @@ msgstr "ok"
 msgid "posting notice about deprecated functionality"
 msgstr "предупреждение за премахната функционалност"
 
-#~ msgid "Applications"
-#~ msgstr "Приложения"
+#: views/entries.php:64
+msgid "Add Entry"
+msgstr ""
 
-#~ msgid ""
-#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-#~ "Response) menus. These can be used to send callers to different locations "
-#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-#~ msgstr ""
-#~ "Създава менюта за Цифров Администратор (Автоматично Обслужване или "
-#~ "Система за Интерактивен Отговор). Използват се за насочване на обаждащите "
-#~ "се към различни направления (например, Изберете 1 за продажби) и/или "
-#~ "позволява директно избиране на вътрешни номера."
+#: page.ivr.php:23
+msgid "Add a new IVR"
+msgstr "Добави нов IVR"
 
-#~ msgid ""
-#~ "'i' is used when the caller pushes an invalid button, and 't' is used "
-#~ "when there is no response."
-#~ msgstr ""
-#~ "'i' се използва когато обаждащият се натисне погрешен бутон, а 't' се "
-#~ "използва когато никой не отговори."
+#: functions.inc.php:416
+msgid "Amount of time to be considered a timeout"
+msgstr ""
+
+#: functions.inc.php:428
+msgid "Append Announcement on Invalid"
+msgstr ""
+
+#: functions.inc.php:404
+msgid "Completely disabled"
+msgstr ""
+
+#: functions.inc.php:442
+msgid "Destination to send the call to after Invalid Recording is played."
+msgstr ""
+
+#: functions.inc.php:405
+msgid "Enabled for all extensions on a system"
+msgstr ""
+
+#: functions.inc.php:409
+msgid "Provides options for callers to direct dial an extension. Direct dialing can be:"
+msgstr ""
+
+#~ msgid "'i' is used when the caller pushes an invalid button, and 't' is used when there is no response."
+#~ msgstr "'i' се използва когато обаждащият се натисне погрешен бутон, а 't' се използва когато никой не отговори."
 
 #~ msgid "After three invalid attempts, the line is hung up."
 #~ msgstr "След три неуспешни опита линията ще се затвори."
 
+#~ msgid "Applications"
+#~ msgstr "Приложения"
+
 #~ msgid "Change Name"
 #~ msgstr "Промени Името"
+
+#~ msgid "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+#~ msgstr "Създава менюта за Цифров Администратор (Автоматично Обслужване или Система за Интерактивен Отговор). Използват се за насочване на обаждащите се към различни направления (например, Изберете 1 за продажби) и/или позволява директно избиране на вътрешни номера."
 
 #~ msgid "Decrease Options"
 #~ msgstr "Намали Опциите"
@@ -483,61 +466,23 @@ msgstr "предупреждение за премахната функцион�
 #~ msgid "IVR Options (DTMF)"
 #~ msgstr "IVR Опции (DTMF)"
 
-#~ msgid ""
-#~ "If a timeout occurs and a message is selected, it will be played in place "
-#~ "of the announcement message when looping back to the top of the IVR. It "
-#~ "will not be played if the t destination is the next target."
-#~ msgstr ""
-#~ "Ако е изтекло времето на изчакване и е определено съобщение, то ще се "
-#~ "възпроизведе на мястото на приветсвието когато се връща в началото на "
-#~ "IVR. Няма да се възпроизведе ако 't' направлението е следващата цел."
+#~ msgid "If a timeout occurs and a message is selected, it will be played in place of the announcement message when looping back to the top of the IVR. It will not be played if the t destination is the next target."
+#~ msgstr "Ако е изтекло времето на изчакване и е определено съобщение, то ще се възпроизведе на мястото на приветсвието когато се връща в началото на IVR. Няма да се възпроизведе ако 't' направлението е следващата цел."
 
-#~ msgid ""
-#~ "If an invalid extension is pressed and a message is selected, it will be "
-#~ "played in place of the announcement message when looping back to the top "
-#~ "of the IVR. It will not be played if the t destination is the next "
-#~ "target. If nothing is selected, the system will play a default invalid "
-#~ "extension message before going back to the main announcement"
-#~ msgstr ""
-#~ "Ако е набрана грешна опция и и е определено съобщение, то ще се "
-#~ "възпроизведе на мястото на приветсвието когато се връща в началото на "
-#~ "IVR. Няма да се възпроизведе ако 't' направлението е следващата цел. Ако "
-#~ "нищо не е избрано, системата ще възпроизведе съобщение по-подразбиране за "
-#~ "грешно набиране преди да се върне към главното приветствие."
+#~ msgid "If an invalid extension is pressed and a message is selected, it will be played in place of the announcement message when looping back to the top of the IVR. It will not be played if the t destination is the next target. If nothing is selected, the system will play a default invalid extension message before going back to the main announcement"
+#~ msgstr "Ако е набрана грешна опция и и е определено съобщение, то ще се възпроизведе на мястото на приветсвието когато се връща в началото на IVR. Няма да се възпроизведе ако 't' направлението е следващата цел. Ако нищо не е избрано, системата ще възпроизведе съобщение по-подразбиране за грешно набиране преди да се върне към главното приветствие."
 
-#~ msgid ""
-#~ "If checked, and there is a 't' (timeout) destination defined below, the "
-#~ "IVR will loop back to the beginning if no input is provided for the "
-#~ "designated loop counts prior to going to the timeout (t) destination."
-#~ msgstr ""
-#~ "Ако е маркирано и има 't' (пауза) направление определено по-долу, IVR ще "
-#~ "се върне обратно в началото за посочения брой връщания ако не е въведено "
-#~ "нищо, преди да отиде към 't' (пауза) направление."
+#~ msgid "If checked, and there is a 't' (timeout) destination defined below, the IVR will loop back to the beginning if no input is provided for the designated loop counts prior to going to the timeout (t) destination."
+#~ msgstr "Ако е маркирано и има 't' (пауза) направление определено по-долу, IVR ще се върне обратно в началото за посочения брой връщания ако не е въведено нищо, преди да отиде към 't' (пауза) направление."
 
-#~ msgid ""
-#~ "If checked, and there is an 'i' (invalid extension) destination defined "
-#~ "below, the IVR will play invalid option and then loop back to the "
-#~ "beginning for the designated loop counts prior to going to the invalid "
-#~ "(i) destination."
-#~ msgstr ""
-#~ "Ако е маркирано и има 'i' (грешно набиране) направление определено по-"
-#~ "долу, IVR ще възпроизведе грешна опция и ще се върне обратно в началото "
-#~ "за посочения брой връщания преди да отиде към 'i' (грешно набиране) "
-#~ "направление."
+#~ msgid "If checked, and there is an 'i' (invalid extension) destination defined below, the IVR will play invalid option and then loop back to the beginning for the designated loop counts prior to going to the invalid (i) destination."
+#~ msgstr "Ако е маркирано и има 'i' (грешно набиране) направление определено по-долу, IVR ще възпроизведе грешна опция и ще се върне обратно в началото за посочения брой връщания преди да отиде към 'i' (грешно набиране) направление."
 
-#~ msgid ""
-#~ "If checked, upon exiting voicemail a caller will be returned to this IVR "
-#~ "if they got a users voicemail"
-#~ msgstr ""
-#~ "Ако е маркирано, при излизане от гласовата поща обаждащият се ще бъде "
-#~ "върнат към този IVR"
+#~ msgid "If checked, upon exiting voicemail a caller will be returned to this IVR if they got a users voicemail"
+#~ msgstr "Ако е маркирано, при излизане от гласовата поща обаждащият се ще бъде върнат към този IVR"
 
-#~ msgid ""
-#~ "If those options aren't supplied, the default 't' is to replay the menu "
-#~ "three times and then hang up,"
-#~ msgstr ""
-#~ "Ако тези опции не са добавени, 't' опцията по-подразбиране ще повтори "
-#~ "менюто три пъти и ще затвори линията,"
+#~ msgid "If those options aren't supplied, the default 't' is to replay the menu three times and then hang up,"
+#~ msgstr "Ако тези опции не са добавени, 't' опцията по-подразбиране ще повтори менюто три пъти и ще затвори линията,"
 
 #~ msgid "Increase Options"
 #~ msgstr "Увеличи Опциите"
@@ -560,21 +505,11 @@ msgstr "предупреждение за премахната функцион�
 #~ msgid "Loop Before t-dest"
 #~ msgstr "Върни Преди t-направление"
 
-#~ msgid ""
-#~ "Message to be played to the caller. To add additional recordings please "
-#~ "use the \"System Recordings\" MENU to the left"
-#~ msgstr ""
-#~ "Съобщение което ще се възпроизведе на обаждащия се.<br><br> За да "
-#~ "добавите допълнителни записи, моля използвайте Меню \"Системни Записи\" "
-#~ "отляво"
+#~ msgid "Message to be played to the caller. To add additional recordings please use the \"System Recordings\" MENU to the left"
+#~ msgstr "Съобщение което ще се възпроизведе на обаждащия се.<br><br> За да добавите допълнителни записи, моля използвайте Меню \"Системни Записи\" отляво"
 
-#~ msgid ""
-#~ "Message to be played to the caller.<br><br>You must install and enable "
-#~ "the \"Systems Recordings\" Module to edit this option"
-#~ msgstr ""
-#~ "Съобщение което ще се възпроизведе на обаждащия се.<br><br>Трябва да сте "
-#~ "инсталирали и разрешили Модул \"Системни Записи\" за да редактирате тази "
-#~ "опция"
+#~ msgid "Message to be played to the caller.<br><br>You must install and enable the \"Systems Recordings\" Module to edit this option"
+#~ msgstr "Съобщение което ще се възпроизведе на обаждащия се.<br><br>Трябва да сте инсталирали и разрешили Модул \"Системни Записи\" за да редактирате тази опция"
 
 #~ msgid "Name of this IVR."
 #~ msgstr "Име на този IVR."
@@ -588,40 +523,17 @@ msgstr "предупреждение за премахната функцион�
 #~ msgid "Save"
 #~ msgstr "Запис"
 
-#~ msgid ""
-#~ "The amount of time (in seconds) before the 't' option, if specified, is "
-#~ "used"
-#~ msgstr ""
-#~ "Времето (в секунди) преди 't' опцията, ако е определена, да се използва"
+#~ msgid "The amount of time (in seconds) before the 't' option, if specified, is used"
+#~ msgstr "Времето (в секунди) преди 't' опцията, ако е определена, да се използва"
 
-#~ msgid ""
-#~ "The number of times we should loop when invalid input or no input has "
-#~ "been entered before going to the defined or default generated 'i' or 't' "
-#~ "options. If the 'i' or 't' options are defined, the above check boxes "
-#~ "must be checked in order to loop."
-#~ msgstr ""
-#~ "Колко пъти трябва да се върне когато е избрана грешна опция или не е "
-#~ "въведено нищо преди да се насочи към определените или генерираните по-"
-#~ "подразбиране  'i' или 't' опции. Ако 'i' или 't' опциите са определени, "
-#~ "по-горното поле трябва да се маркира за да позволи връщане."
+#~ msgid "The number of times we should loop when invalid input or no input has been entered before going to the defined or default generated 'i' or 't' options. If the 'i' or 't' options are defined, the above check boxes must be checked in order to loop."
+#~ msgstr "Колко пъти трябва да се върне когато е избрана грешна опция или не е въведено нищо преди да се насочи към определените или генерираните по-подразбиране  'i' или 't' опции. Ако 'i' или 't' опциите са определени, по-горното поле трябва да се маркира за да позволи връщане."
 
-#~ msgid ""
-#~ "There is a problem with install.sql, cannot re-create databases. Contact "
-#~ "support\n"
-#~ msgstr ""
-#~ "Има проблем с install.sql, не мога да пресъздам базата данни. Свържете се "
-#~ "с поддръжката\n"
+#~ msgid "There is a problem with install.sql, cannot re-create databases. Contact support\n"
+#~ msgstr "Има проблем с install.sql, не мога да пресъздам базата данни. Свържете се с поддръжката\n"
 
-#~ msgid ""
-#~ "This IVR is being used by the following Queues, providing an ability for "
-#~ "callers to hear this Queue's announcement periodically and giving callers "
-#~ "an option to break out of the queue into this IVR's menu options. This "
-#~ "queue can not be deleted when being used in this mode"
-#~ msgstr ""
-#~ "Този IVR се използва от следните Опашки, предоставяйки на обаждащите се "
-#~ "переодично да чуват това съобщение на Опашката и  да им даде опция да "
-#~ "избягат от тази опашка с някоя от опциите на този IVR. Тази опашка не "
-#~ "може да се изтрива докато се използва в този режим."
+#~ msgid "This IVR is being used by the following Queues, providing an ability for callers to hear this Queue's announcement periodically and giving callers an option to break out of the queue into this IVR's menu options. This queue can not be deleted when being used in this mode"
+#~ msgstr "Този IVR се използва от следните Опашки, предоставяйки на обаждащите се переодично да чуват това съобщение на Опашката и  да им даде опция да избягат от тази опашка с някоя от опциите на този IVR. Тази опашка не може да се изтрива докато се използва в този режим."
 
 #~ msgid "This changes the short name, visible on the right, of this IVR"
 #~ msgstr "Променя краткото име, показвано вдясно, за този IVR"
@@ -632,29 +544,14 @@ msgstr "предупреждение за премахната функцион�
 #~ msgid "VM Return to IVR"
 #~ msgstr "ГП Връщане към IVR"
 
-#~ msgid ""
-#~ "When # is selected, this is the voicemail directory context that is used"
-#~ msgstr ""
-#~ "Когато # е избран, това ше бъде контекста на директорията на гласовата "
-#~ "поща която се използва"
+#~ msgid "When # is selected, this is the voicemail directory context that is used"
+#~ msgstr "Когато # е избран, това ше бъде контекста на директорията на гласовата поща която се използва"
 
-#~ msgid ""
-#~ "When creating a menu option, apart from the standard options of 0-9,* and "
-#~ "#, you can also use 'i' and 't' destinations."
-#~ msgstr ""
-#~ "Когато създавате менюто, освен стандартните опции 0-9, * и #, можете да "
-#~ "използвате  'i' и 't' направления."
+#~ msgid "When creating a menu option, apart from the standard options of 0-9,* and #, you can also use 'i' and 't' destinations."
+#~ msgstr "Когато създавате менюто, освен стандартните опции 0-9, * и #, можете да използвате  'i' и 't' направления."
 
-#~ msgid ""
-#~ "You use the Digital Receptionist to make IVR's, Interactive Voice "
-#~ "Response systems."
-#~ msgstr ""
-#~ "Използвайте Цифров Администратор за да създадете Система за Интерактивен "
-#~ "Отговор."
+#~ msgid "You use the Digital Receptionist to make IVR's, Interactive Voice Response systems."
+#~ msgstr "Използвайте Цифров Администратор за да създадете Система за Интерактивен Отговор."
 
-#~ msgid ""
-#~ "and the default 'i' is to say 'Invalid option, please try again' and "
-#~ "replay the menu."
-#~ msgstr ""
-#~ "а 'i' опцията по-подразбиране ще възпроизведе 'Invalid option, please try "
-#~ "again' и ще повтори менюто."
+#~ msgid "and the default 'i' is to say 'Invalid option, please try again' and replay the menu."
+#~ msgstr "а 'i' опцията по-подразбиране ще възпроизведе 'Invalid option, please try again' и ще повтори менюто."
