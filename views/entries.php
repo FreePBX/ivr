@@ -1,6 +1,6 @@
 <?php
 $table = new CI_Table;
-$table->set_template(array('table_open' => '<table class="alt_table IVREntries" id="ivr_entries">'));
+$table->set_template(array('table_open' => '<table class="table table-striped alt_table IVREntries" id="ivr_entries">'));
 //build header
 $h = array();
 foreach($headers as $mod => $header) {
@@ -21,15 +21,15 @@ foreach ($entries as $e) {
 					'required'		=> ''
 				)
 			);
-	
+
 	//add destination. The last one gets a different count so that we can manipualte it on the page
 	if ($count == count($entries)) {
 		$row[] = drawselects($e['dest'], 'DESTID', false, false) . form_hidden('entries[goto][]', '');
 	} else {
 		$row[] = drawselects($e['dest'], $count, false, false) . form_hidden('entries[goto][]', '');
 	}
-	
-	
+
+
 	//return to ivr
 	$row[] = '
 		<span class="radioset">
@@ -41,23 +41,23 @@ foreach ($entries as $e) {
 	';
 
 	//delete buttom
-	$row[] = '<a href="#" alt="' 
-	. _('Delete this entry. Dont forget to click Submit to save changes!') 
+	$row[] = '<a href="#" alt="'
+	. _('Delete this entry. Dont forget to click Submit to save changes!')
 	. '" class="delete_entrie"><i class="fa fa-trash"></i></a>';
-		
-	//add module hooks	
+
+	//add module hooks
 	if (isset($e['hooks']) && $e['hooks']) {
 		foreach ($e['hooks'] as $module => $hooks) {
 			foreach ($hooks as $h) {
 				$row[] = $h;
 			}
 		}
-		
-	}
-	
 
-	$table->add_row(array_values($row));	
-	
+	}
+
+
+	$table->add_row(array_values($row));
+
 	unset($row);
 }
 

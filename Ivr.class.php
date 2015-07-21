@@ -6,29 +6,7 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 	public function backup() {}
 	public function restore($backup) {}
 	public function doConfigPageInit($page) {
-		if($_REQUEST['action'] == 'getJSON'){
-			header('Content-Type: application/json');
-			switch ($_REQUEST['jdata']) {
-				case 'grid':
-					$ivrs = ivr_get_details();
-					$ret = array();
-					foreach ($ivrs as $r) {
-						$r['name'] = $r['name'] ? $r['name'] : 'IVR ID: ' . $r['id'];
-						$ret[] = array(
-								'name' => $r['name'],
-								'id' => $r['id'],
-								'link' => array($r['id'],$r['name'])
-							);
-					}
-					echo json_encode($ret);
-					exit();
-				break;
-				default:
-					echo json_encode(array("error"=>_("Bad Request")));
-					exit();
-				break;
-			}
-		}
+
 	}
 	public function search($query, &$results) {
 		$ivrs = $this->getDetails();
@@ -54,6 +32,7 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 		if ($id && isset($res[0])) {
 			return $res[0];
 		} else {
+			$res = is_array($res)?$res:array();
 			return $res;
 		}
 	}
@@ -81,11 +60,49 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 				if (empty($request['id'])) {
 					unset($buttons['delete']);
 				}
+				isset($request['action'])?'':$buttons = NULL;
 			break;
 		}
 		return $buttons;
 	}
 	public function pageHook($request){
 		return \FreePBX::Hooks()->processHooks($request);
+	}
+	public function ajaxRequest($req, &$setting) {
+	switch ($req) {
+		case 'getJSON':
+			return true;
+		break;
+		default:
+			return false;
+		break;
+	}
+}
+public function ajaxHandler(){
+	switch ($_REQUEST['command']) {
+		case 'getJSON':
+			switch ($_REQUEST['jdata']) {
+				case 'grid':
+					$ivrs = $this->getDetails();
+					$ret = array();
+					foreach ($ivrs as $r) {
+						$r['name'] = $r['name'] ? $r['name'] : 'IVR ID: ' . $r['id'];
+						$ret[] = array(
+								'name' => $r['name'],
+								'id' => $r['id'],
+								'link' => array($r['id'],$r['name'])
+							);
+					}
+					return $ret;
+					break;
+					default:
+						return false;
+					break;
+				}
+			break;
+			default:
+				return false;
+			break;
+		}
 	}
 }
