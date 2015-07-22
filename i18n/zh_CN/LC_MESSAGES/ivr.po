@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-09 12:35-0400\n"
+"POT-Creation-Date: 2015-07-22 15:07-0400\n"
 "PO-Revision-Date: 2009-01-31 12:34+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -24,11 +24,11 @@ msgid ""
 "Asterisk to be running and have proper credentials"
 msgstr ""
 
-#: page.ivr.php:34
+#: page.ivr.php:47
 msgid "Actions"
 msgstr ""
 
-#: views/form.php:7 /usr/src/freepbx/ivr/views/rnav.php:2
+#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:2
 msgid "Add IVR"
 msgstr "添加IVR"
 
@@ -58,10 +58,6 @@ msgstr "超时中附加一个主系统公告"
 
 #: views/form.php:297
 msgid "Append Announcement to Invalid"
-msgstr ""
-
-#: Ivr.class.php:27
-msgid "Bad Request"
 msgstr ""
 
 #: views/form.php:497
@@ -126,7 +122,7 @@ msgstr ""
 msgid "Default"
 msgstr "默认"
 
-#: Ivr.class.php:68 functions.inc.php:423
+#: Ivr.class.php:47 functions.inc.php:423
 msgid "Delete"
 msgstr "删除"
 
@@ -175,7 +171,7 @@ msgstr "分机"
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
-#: Ivr.class.php:37 /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:15 /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "语音IVR"
 
@@ -199,7 +195,7 @@ msgstr "IVR 基本选项"
 msgid "IVR List"
 msgstr ""
 
-#: page.ivr.php:33 views/form.php:117
+#: page.ivr.php:46 views/form.php:117
 msgid "IVR Name"
 msgstr "IVR 名称"
 
@@ -291,7 +287,7 @@ msgstr "当收到无效响应时，在提示呼叫方重新呼叫钱，播放的
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: Ivr.class.php:73
+#: Ivr.class.php:52
 msgid "Reset"
 msgstr ""
 
@@ -315,7 +311,7 @@ msgstr "返回到IVR"
 msgid "Return to IVR after VM"
 msgstr "VM后返回IVR"
 
-#: Ivr.class.php:78
+#: Ivr.class.php:57
 msgid "Submit"
 msgstr ""
 

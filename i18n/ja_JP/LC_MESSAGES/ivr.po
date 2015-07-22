@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-09 12:35-0400\n"
+"POT-Creation-Date: 2015-07-22 15:07-0400\n"
 "PO-Revision-Date: 2014-04-17 10:21+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ivr/ja/>\n"
@@ -54,11 +54,11 @@ msgid ""
 "Asterisk to be running and have proper credentials"
 msgstr ""
 
-#: page.ivr.php:34
+#: page.ivr.php:47
 msgid "Actions"
 msgstr ""
 
-#: views/form.php:7 /usr/src/freepbx/ivr/views/rnav.php:2
+#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:2
 msgid "Add IVR"
 msgstr "IVRを追加"
 
@@ -91,10 +91,6 @@ msgstr ""
 
 #: views/form.php:297
 msgid "Append Announcement to Invalid"
-msgstr ""
-
-#: Ivr.class.php:27
-msgid "Bad Request"
 msgstr ""
 
 #: views/form.php:497
@@ -159,7 +155,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ivr.class.php:68 functions.inc.php:423
+#: Ivr.class.php:47 functions.inc.php:423
 msgid "Delete"
 msgstr "削除"
 
@@ -208,7 +204,7 @@ msgstr "番号"
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
-#: Ivr.class.php:37 /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:15 /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "IVR"
 
@@ -232,7 +228,7 @@ msgstr "IVR 一般設定"
 msgid "IVR List"
 msgstr ""
 
-#: page.ivr.php:33 views/form.php:117
+#: page.ivr.php:46 views/form.php:117
 msgid "IVR Name"
 msgstr "IVRの名前"
 
@@ -326,7 +322,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: Ivr.class.php:73
+#: Ivr.class.php:52
 msgid "Reset"
 msgstr ""
 
@@ -350,7 +346,7 @@ msgstr "IVRに戻る"
 msgid "Return to IVR after VM"
 msgstr "VMの後にIVRに戻る"
 
-#: Ivr.class.php:78
+#: Ivr.class.php:57
 msgid "Submit"
 msgstr ""
 

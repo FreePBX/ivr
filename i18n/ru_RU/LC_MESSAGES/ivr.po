@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-09 12:35-0400\n"
+"POT-Creation-Date: 2015-07-22 15:07-0400\n"
 "PO-Revision-Date: 2015-05-01 13:36+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -41,11 +41,11 @@ msgid ""
 "Asterisk to be running and have proper credentials"
 msgstr ""
 
-#: page.ivr.php:34
+#: page.ivr.php:47
 msgid "Actions"
 msgstr ""
 
-#: views/form.php:7 /usr/src/freepbx/ivr/views/rnav.php:2
+#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:2
 msgid "Add IVR"
 msgstr "Добавить IVR"
 
@@ -79,10 +79,6 @@ msgstr "Добавьте приветствие о Тайм-ауте"
 
 #: views/form.php:297
 msgid "Append Announcement to Invalid"
-msgstr ""
-
-#: Ivr.class.php:27
-msgid "Bad Request"
 msgstr ""
 
 #: views/form.php:497
@@ -148,7 +144,7 @@ msgstr ""
 msgid "Default"
 msgstr "По умолчанию"
 
-#: Ivr.class.php:68 functions.inc.php:423
+#: Ivr.class.php:47 functions.inc.php:423
 msgid "Delete"
 msgstr "Удалить"
 
@@ -199,7 +195,7 @@ msgstr "Номер"
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
-#: Ivr.class.php:37 /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:15 /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "Интерактивное меню (IVR)"
 
@@ -223,7 +219,7 @@ msgstr "Основыне настройки Интерактивного мен�
 msgid "IVR List"
 msgstr ""
 
-#: page.ivr.php:33 views/form.php:117
+#: page.ivr.php:46 views/form.php:117
 msgid "IVR Name"
 msgstr "Название Интерактивного меню"
 
@@ -323,7 +319,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: Ivr.class.php:73
+#: Ivr.class.php:52
 msgid "Reset"
 msgstr ""
 
@@ -347,7 +343,7 @@ msgstr "Возврат в Меню"
 msgid "Return to IVR after VM"
 msgstr "Возвращение в Интерактивно меню посе Голосовой Почты"
 
-#: Ivr.class.php:78
+#: Ivr.class.php:57
 msgid "Submit"
 msgstr ""
 
