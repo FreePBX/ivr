@@ -30,9 +30,15 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 		$sth->execute(array(":id" => $id));
 		$res = $sth->fetchAll();
 		if ($id && isset($res[0])) {
+			$res[0]['name'] = htmlentities(stripslashes($res[0]['name']));
+			$res[0]['description'] = htmlentities(stripslashes($res[0]['description']));
 			return $res[0];
 		} else {
 			$res = is_array($res)?$res:array();
+			foreach ($res as $key => $value) {
+				$res[$key]['name'] = htmlentities(stripslashes($res[$key]['name']));
+				$res[$key]['description'] = htmlentities(stripslashes($res[$key]['description']));
+			}
 			return $res;
 		}
 	}

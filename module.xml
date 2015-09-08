@@ -11,7 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers. 
 	</description>
 	<changelog>
-		*13.0.5* FREEPBX-10169, fix action buttons after submit
+		*13.0.5* FREEPBX-10169, fix action buttons after submit. FREEPBX-10168 Fix use of quotes in name or description
 		*13.0.4* FREEPBX-9774, standardize tables visual updates
 		*13.0.3* FREEPBX-9609 Option to Limit IVR Direct Dialing to a Directory
 		*13.0.2* Version bump Beta

@@ -88,6 +88,7 @@ $hookhtml = '';
 foreach ($hooks as $key => $value) {
 	$hookhtml .= $value;
 }
+
 ?>
 <div class="container-fluid">
 	<h1><?php echo $heading?></h1>
@@ -118,7 +119,7 @@ foreach ($hooks as $key => $value) {
 													<i class="fa fa-question-circle fpbx-help-icon" data-for="name"></i>
 												</div>
 												<div class="col-md-9">
-													<input type="text" class="form-control" id="name" name="name" value="<?php echo stripslashes($ivr['name'])?>">
+													<input type="text" class="form-control" id="name" name="name" value="<?php echo $ivr['name']?>">
 												</div>
 											</div>
 										</div>
@@ -142,7 +143,7 @@ foreach ($hooks as $key => $value) {
 													<i class="fa fa-question-circle fpbx-help-icon" data-for="description"></i>
 												</div>
 												<div class="col-md-9">
-													<input type="text" class="form-control" id="description" name="description" value="<?php echo stripslashes($ivr['description'])?>">
+													<input type="text" class="form-control" id="description" name="description" value="<?php echo $ivr['description'] ?>">
 												</div>
 											</div>
 										</div>
