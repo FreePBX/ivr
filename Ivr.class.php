@@ -60,7 +60,9 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 				if (empty($request['id'])) {
 					unset($buttons['delete']);
 				}
-				isset($request['action'])?'':$buttons = NULL;
+				if(empty($request['id']) && empty($request['action'])){
+					$buttons = NULL;
+				}
 			break;
 		}
 		return $buttons;
