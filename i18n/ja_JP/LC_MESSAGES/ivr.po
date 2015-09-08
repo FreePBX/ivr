@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-22 15:07-0400\n"
+"POT-Creation-Date: 2015-09-08 12:01-0700\n"
 "PO-Revision-Date: 2014-04-17 10:21+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ivr/ja/>\n"
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Add IVR"
 msgstr "IVRを追加"
 
-#: views/form.php:312
+#: views/form.php:313
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
@@ -70,30 +70,30 @@ msgstr ""
 "発信者から無効な応答を受信した場合は、エラーリトライの音声を再生してからメイ"
 "ンIVRのアナウンスがもう一度再生されます"
 
-#: views/form.php:470
+#: views/form.php:471
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
 "再タイムアウト音声を再生した後、メインIVRのアナウンスが再度再生されます"
 
-#: views/form.php:235
+#: views/form.php:236
 msgid "Amount of time to be concidered a timeout"
 msgstr ""
 
-#: views/form.php:170
+#: views/form.php:171
 msgid "Announcement"
 msgstr "アナウンス"
 
-#: views/form.php:455
+#: views/form.php:456
 msgid "Append Announcement on Timeout"
 msgstr ""
 
-#: views/form.php:297
+#: views/form.php:298
 msgid "Append Announcement to Invalid"
 msgstr ""
 
-#: views/form.php:497
+#: views/form.php:498
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Checking if announcements need migration.."
 msgstr "アナウンスに移行が必要かチェック中.."
 
-#: views/form.php:339
+#: views/form.php:340
 msgid ""
 "Choose yes to have this option return to a parent IVR if it was called from "
 "a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ivr.class.php:47 functions.inc.php:423
+#: Ivr.class.php:53 functions.inc.php:423
 msgid "Delete"
 msgstr "削除"
 
@@ -168,7 +168,7 @@ msgstr "このエントリーを削除する。変更適用を忘れずに！"
 msgid "Deprecated Directory used by %s IVRs"
 msgstr "%s のIVRから使用されている廃止されたディレクトリ"
 
-#: views/form.php:153
+#: views/form.php:154
 msgid "Description of this IVR"
 msgstr ""
 
@@ -176,11 +176,11 @@ msgstr ""
 msgid "Destination"
 msgstr "宛先"
 
-#: views/form.php:393
+#: views/form.php:394
 msgid "Destination to send the call to after Invalid Recording is played"
 msgstr ""
 
-#: views/form.php:551
+#: views/form.php:552
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
@@ -192,7 +192,7 @@ msgstr ""
 msgid "Edit:"
 msgstr ""
 
-#: views/form.php:196
+#: views/form.php:197
 msgid "Enable Direct Dial"
 msgstr ""
 
@@ -200,7 +200,7 @@ msgstr ""
 msgid "Ext"
 msgstr "番号"
 
-#: views/form.php:184
+#: views/form.php:185
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
@@ -208,19 +208,19 @@ msgstr ""
 msgid "IVR"
 msgstr "IVR"
 
-#: views/form.php:160
+#: views/form.php:161
 msgid "IVR DTMF Options"
 msgstr ""
 
-#: views/form.php:141
+#: views/form.php:142
 msgid "IVR Description"
 msgstr "IVRの説明"
 
-#: views/form.php:585
+#: views/form.php:586
 msgid "IVR Entries"
 msgstr "IVRエントリー"
 
-#: views/form.php:107
+#: views/form.php:108
 msgid "IVR General Options"
 msgstr "IVR 一般設定"
 
@@ -228,7 +228,7 @@ msgstr "IVR 一般設定"
 msgid "IVR List"
 msgstr ""
 
-#: page.ivr.php:46 views/form.php:117
+#: page.ivr.php:46 views/form.php:118
 msgid "IVR Name"
 msgstr "IVRの名前"
 
@@ -242,25 +242,25 @@ msgstr "IVR: %s"
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / オプション: %s"
 
-#: views/form.php:578
+#: views/form.php:579
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
 msgstr ""
 
-#: views/form.php:381
+#: views/form.php:382
 msgid "Invalid Destination"
 msgstr "不正転送先"
 
-#: views/form.php:355
+#: views/form.php:356
 msgid "Invalid Recording"
 msgstr "不正操作の音声"
 
-#: views/form.php:247
+#: views/form.php:248
 msgid "Invalid Retries"
 msgstr "不正リトライ数"
 
-#: views/form.php:271
+#: views/form.php:272
 msgid "Invalid Retry Recording"
 msgstr "不正リトライ音声"
 
@@ -268,12 +268,12 @@ msgstr "不正リトライ音声"
 msgid "List IVRs"
 msgstr ""
 
-#: views/form.php:129
+#: views/form.php:130
 msgid "Name of this IVR"
 msgstr ""
 
-#: views/entries.php:39 views/form.php:203 views/form.php:304
-#: views/form.php:331 views/form.php:462 views/form.php:489 views/form.php:570
+#: views/entries.php:39 views/form.php:204 views/form.php:305
+#: views/form.php:332 views/form.php:463 views/form.php:490 views/form.php:571
 msgid "No"
 msgstr ""
 
@@ -285,18 +285,18 @@ msgstr ""
 msgid "None"
 msgstr "なし"
 
-#: views/form.php:417
+#: views/form.php:418
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr ""
 
-#: views/form.php:259
+#: views/form.php:260
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
 msgstr "発信者から不正・一致しないレスポンスを受信するときにリトライする回数。"
 
-#: views/form.php:369 views/form.php:527
+#: views/form.php:370 views/form.php:528
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
@@ -305,24 +305,24 @@ msgstr ""
 "発信者を別の転送先に転送する前に再生する音声。発信者が 0 を押した場合や最大不"
 "正・一致しない応答(不正リトライ設定の値)数を受信したときに再生します。"
 
-#: views/form.php:443
+#: views/form.php:444
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
 msgstr ""
 
-#: views/form.php:285
+#: views/form.php:286
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
 msgstr ""
 "不正・一致しない応答を受信した場合に、ユーザーに再試行を促す前に再生する音声"
 
-#: views/form.php:211
+#: views/form.php:212
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: Ivr.class.php:52
+#: Ivr.class.php:58
 msgid "Reset"
 msgstr ""
 
@@ -330,11 +330,11 @@ msgstr ""
 msgid "Return"
 msgstr "戻る"
 
-#: views/form.php:324
+#: views/form.php:325
 msgid "Return on Invalid"
 msgstr ""
 
-#: views/form.php:482
+#: views/form.php:483
 msgid "Return on Timeout"
 msgstr ""
 
@@ -342,11 +342,11 @@ msgstr ""
 msgid "Return to IVR"
 msgstr "IVRに戻る"
 
-#: views/form.php:563
+#: views/form.php:564
 msgid "Return to IVR after VM"
 msgstr "VMの後にIVRに戻る"
 
-#: Ivr.class.php:57
+#: Ivr.class.php:63
 msgid "Submit"
 msgstr ""
 
@@ -365,28 +365,28 @@ msgstr ""
 "は、あなたのIVRをコンバートするべきです。オンラインモジュールレポジトリから"
 "ディレクトリモジュールのインストールが可能です"
 
-#: views/form.php:223
+#: views/form.php:224
 msgid "Timeout"
 msgstr "タイムアウト"
 
-#: views/form.php:539
+#: views/form.php:540
 msgid "Timeout Destination"
 msgstr "タイムアウト時の宛先"
 
-#: views/form.php:513
+#: views/form.php:514
 msgid "Timeout Recording"
 msgstr "タイムアウト音声"
 
-#: views/form.php:405
+#: views/form.php:406
 msgid "Timeout Retries"
 msgstr "タイムアウトリトライ"
 
-#: views/form.php:429
+#: views/form.php:430
 msgid "Timeout Retry Recording"
 msgstr "再タイムアウト音声"
 
-#: views/entries.php:37 views/form.php:201 views/form.php:302
-#: views/form.php:329 views/form.php:460 views/form.php:487 views/form.php:568
+#: views/entries.php:37 views/form.php:202 views/form.php:303
+#: views/form.php:330 views/form.php:461 views/form.php:488 views/form.php:569
 msgid "Yes"
 msgstr ""
 

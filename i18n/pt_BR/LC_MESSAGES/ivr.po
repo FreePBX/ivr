@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-22 15:07-0400\n"
+"POT-Creation-Date: 2015-09-08 12:01-0700\n"
 "PO-Revision-Date: 2015-05-02 11:38+0200\n"
 "Last-Translator: Renato <fiuza@tecnologia.inf.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -36,7 +36,7 @@ msgstr ""
 msgid "Add IVR"
 msgstr "Adicionar URA"
 
-#: views/form.php:312
+#: views/form.php:313
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
@@ -44,7 +44,7 @@ msgstr ""
 "Após tocar a Gravação Tentativa Inválida o sistema tocará o Anuncio "
 "principal da URA"
 
-#: views/form.php:470
+#: views/form.php:471
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
@@ -52,23 +52,23 @@ msgstr ""
 "Após tocar a Gravação de Tempo Esgotado da Tentativa o sistema tocará o "
 "Anuncio principal da URA"
 
-#: views/form.php:235
+#: views/form.php:236
 msgid "Amount of time to be concidered a timeout"
 msgstr ""
 
-#: views/form.php:170
+#: views/form.php:171
 msgid "Announcement"
 msgstr "Anuncio"
 
-#: views/form.php:455
+#: views/form.php:456
 msgid "Append Announcement on Timeout"
 msgstr "Juntar Anuncio em Tempo Esgotado"
 
-#: views/form.php:297
+#: views/form.php:298
 msgid "Append Announcement to Invalid"
 msgstr ""
 
-#: views/form.php:497
+#: views/form.php:498
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -115,7 +115,7 @@ msgstr "Verificando por timeout_ivr_ret.."
 msgid "Checking if announcements need migration.."
 msgstr "Verificando se os anúncios precisam ser migrados..."
 
-#: views/form.php:339
+#: views/form.php:340
 msgid ""
 "Choose yes to have this option return to a parent IVR if it was called from "
 "a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -132,7 +132,7 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ivr.class.php:47 functions.inc.php:423
+#: Ivr.class.php:53 functions.inc.php:423
 msgid "Delete"
 msgstr "Apagar"
 
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Deprecated Directory used by %s IVRs"
 msgstr "Diretório Descontinuado usado por URAs %s"
 
-#: views/form.php:153
+#: views/form.php:154
 msgid "Description of this IVR"
 msgstr ""
 
@@ -154,11 +154,11 @@ msgstr ""
 msgid "Destination"
 msgstr "Destino"
 
-#: views/form.php:393
+#: views/form.php:394
 msgid "Destination to send the call to after Invalid Recording is played"
 msgstr ""
 
-#: views/form.php:551
+#: views/form.php:552
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Destino para enviar a chamada após Gravação de Tempo Esgotado ser tocada."
@@ -171,7 +171,7 @@ msgstr ""
 msgid "Edit:"
 msgstr ""
 
-#: views/form.php:196
+#: views/form.php:197
 msgid "Enable Direct Dial"
 msgstr "Habilitar discagem direta"
 
@@ -179,7 +179,7 @@ msgstr "Habilitar discagem direta"
 msgid "Ext"
 msgstr "Ramal"
 
-#: views/form.php:184
+#: views/form.php:185
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
@@ -187,19 +187,19 @@ msgstr ""
 msgid "IVR"
 msgstr "URA"
 
-#: views/form.php:160
+#: views/form.php:161
 msgid "IVR DTMF Options"
 msgstr ""
 
-#: views/form.php:141
+#: views/form.php:142
 msgid "IVR Description"
 msgstr "Descrição"
 
-#: views/form.php:585
+#: views/form.php:586
 msgid "IVR Entries"
 msgstr "Entradas URA"
 
-#: views/form.php:107
+#: views/form.php:108
 msgid "IVR General Options"
 msgstr "Opções Gerais"
 
@@ -207,7 +207,7 @@ msgstr "Opções Gerais"
 msgid "IVR List"
 msgstr ""
 
-#: page.ivr.php:46 views/form.php:117
+#: page.ivr.php:46 views/form.php:118
 msgid "IVR Name"
 msgstr "Nome"
 
@@ -221,25 +221,25 @@ msgstr "URA: %s"
 msgid "IVR: %s / Option: %s"
 msgstr "URA: %s / Opção: %s"
 
-#: views/form.php:578
+#: views/form.php:579
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
 msgstr ""
 
-#: views/form.php:381
+#: views/form.php:382
 msgid "Invalid Destination"
 msgstr "Destino Invalido"
 
-#: views/form.php:355
+#: views/form.php:356
 msgid "Invalid Recording"
 msgstr "Gravação Inválida"
 
-#: views/form.php:247
+#: views/form.php:248
 msgid "Invalid Retries"
 msgstr "Tentativas Invalidas"
 
-#: views/form.php:271
+#: views/form.php:272
 msgid "Invalid Retry Recording"
 msgstr "Gravação Tentativa Inválida"
 
@@ -247,12 +247,12 @@ msgstr "Gravação Tentativa Inválida"
 msgid "List IVRs"
 msgstr ""
 
-#: views/form.php:129
+#: views/form.php:130
 msgid "Name of this IVR"
 msgstr ""
 
-#: views/entries.php:39 views/form.php:203 views/form.php:304
-#: views/form.php:331 views/form.php:462 views/form.php:489 views/form.php:570
+#: views/entries.php:39 views/form.php:204 views/form.php:305
+#: views/form.php:332 views/form.php:463 views/form.php:490 views/form.php:571
 msgid "No"
 msgstr ""
 
@@ -264,14 +264,14 @@ msgstr ""
 msgid "None"
 msgstr "Nenhum"
 
-#: views/form.php:417
+#: views/form.php:418
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr ""
 "Número de vezes a tentar quando nenhum DTMF é ouvido e a opção da URA "
 "esgotar o tempo."
 
-#: views/form.php:259
+#: views/form.php:260
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
@@ -279,7 +279,7 @@ msgstr ""
 "Número de vezes a tentar quando receber uma resposta inválida/não "
 "coincidente do chamador"
 
-#: views/form.php:369 views/form.php:527
+#: views/form.php:370 views/form.php:528
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
@@ -289,7 +289,7 @@ msgstr ""
 "devido ao chamador pressionar 0 ou receber a máxima quantidade de respostas "
 "inválidas/não coincidentes (como determinado pelas Tentativas Inválidas)"
 
-#: views/form.php:443
+#: views/form.php:444
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
@@ -297,7 +297,7 @@ msgstr ""
 "Mensagem a ser tocada quando um tempo esgotado ocorrer, antes de pedir ao "
 "chamador para tentar novamente"
 
-#: views/form.php:285
+#: views/form.php:286
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
@@ -305,11 +305,11 @@ msgstr ""
 "Mensagem a ser tocada quando uma resposta inválida/não coincidente é "
 "recebida, antes de pedir ao chamador para tentar novamente"
 
-#: views/form.php:211
+#: views/form.php:212
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: Ivr.class.php:52
+#: Ivr.class.php:58
 msgid "Reset"
 msgstr ""
 
@@ -317,11 +317,11 @@ msgstr ""
 msgid "Return"
 msgstr "Retornar"
 
-#: views/form.php:324
+#: views/form.php:325
 msgid "Return on Invalid"
 msgstr "Retorno Quando Inválido"
 
-#: views/form.php:482
+#: views/form.php:483
 msgid "Return on Timeout"
 msgstr "Retorno Quando Tempo Esgotado"
 
@@ -329,11 +329,11 @@ msgstr "Retorno Quando Tempo Esgotado"
 msgid "Return to IVR"
 msgstr "Retornar para a URA"
 
-#: views/form.php:563
+#: views/form.php:564
 msgid "Return to IVR after VM"
 msgstr "Retorna para URA após Caixa Postal"
 
-#: Ivr.class.php:57
+#: Ivr.class.php:63
 msgid "Submit"
 msgstr ""
 
@@ -352,28 +352,28 @@ msgstr ""
 "destino de URA para um diretório desejado. Você pode instalar o módulo "
 "Diretório do Repositório de Módulo Online"
 
-#: views/form.php:223
+#: views/form.php:224
 msgid "Timeout"
 msgstr "Tempo Final (Timeout)"
 
-#: views/form.php:539
+#: views/form.php:540
 msgid "Timeout Destination"
 msgstr "Tempo Esgotado Destino"
 
-#: views/form.php:513
+#: views/form.php:514
 msgid "Timeout Recording"
 msgstr "Tempo Esgotado Gravação"
 
-#: views/form.php:405
+#: views/form.php:406
 msgid "Timeout Retries"
 msgstr "Tempo Esgotado Tentativas"
 
-#: views/form.php:429
+#: views/form.php:430
 msgid "Timeout Retry Recording"
 msgstr "Tempo Esgotado Gravação de Tentativa"
 
-#: views/entries.php:37 views/form.php:201 views/form.php:302
-#: views/form.php:329 views/form.php:460 views/form.php:487 views/form.php:568
+#: views/entries.php:37 views/form.php:202 views/form.php:303
+#: views/form.php:330 views/form.php:461 views/form.php:488 views/form.php:569
 msgid "Yes"
 msgstr ""
 
