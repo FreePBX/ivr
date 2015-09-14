@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 12:01-0700\n"
+"POT-Creation-Date: 2015-09-14 11:45-0700\n"
 "PO-Revision-Date: 2008-11-05 17:52+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
@@ -122,7 +122,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ivr.class.php:53 functions.inc.php:423
+#: Ivr.class.php:54 functions.inc.php:423
 msgid "Delete"
 msgstr "Elimina"
 
@@ -286,7 +286,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: Ivr.class.php:58
+#: Ivr.class.php:59
 msgid "Reset"
 msgstr ""
 
@@ -310,7 +310,7 @@ msgstr "Ritorna all'IVR"
 msgid "Return to IVR after VM"
 msgstr ""
 
-#: Ivr.class.php:63
+#: Ivr.class.php:64
 msgid "Submit"
 msgstr ""
 

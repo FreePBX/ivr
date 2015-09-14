@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 12:01-0700\n"
+"POT-Creation-Date: 2015-09-14 11:45-0700\n"
 "PO-Revision-Date: 2014-04-17 10:21+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ivr/ja/>\n"
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ivr.class.php:53 functions.inc.php:423
+#: Ivr.class.php:54 functions.inc.php:423
 msgid "Delete"
 msgstr "削除"
 
@@ -322,7 +322,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: Ivr.class.php:58
+#: Ivr.class.php:59
 msgid "Reset"
 msgstr ""
 
@@ -346,7 +346,7 @@ msgstr "IVRに戻る"
 msgid "Return to IVR after VM"
 msgstr "VMの後にIVRに戻る"
 
-#: Ivr.class.php:63
+#: Ivr.class.php:64
 msgid "Submit"
 msgstr ""
 

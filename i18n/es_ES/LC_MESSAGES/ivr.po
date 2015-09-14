@@ -98,7 +98,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ivr.class.php:53 functions.inc.php:423
+#: Ivr.class.php:54 functions.inc.php:423
 msgid "Delete"
 msgstr ""
 
@@ -262,7 +262,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: Ivr.class.php:58
+#: Ivr.class.php:59
 msgid "Reset"
 msgstr ""
 
@@ -286,7 +286,7 @@ msgstr ""
 msgid "Return to IVR after VM"
 msgstr ""
 
-#: Ivr.class.php:63
+#: Ivr.class.php:64
 msgid "Submit"
 msgstr ""
 

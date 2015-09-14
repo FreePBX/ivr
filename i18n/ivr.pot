@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 12:01-0700\n"
+"POT-Creation-Date: 2015-09-14 11:45-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,7 +121,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ivr.class.php:53
+#: Ivr.class.php:54
 #: functions.inc.php:423
 msgid "Delete"
 msgstr ""
@@ -295,7 +295,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: Ivr.class.php:58
+#: Ivr.class.php:59
 msgid "Reset"
 msgstr ""
 
@@ -319,7 +319,7 @@ msgstr ""
 msgid "Return to IVR after VM"
 msgstr ""
 
-#: Ivr.class.php:63
+#: Ivr.class.php:64
 msgid "Submit"
 msgstr ""
 

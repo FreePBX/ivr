@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 12:01-0700\n"
+"POT-Creation-Date: 2015-09-14 11:45-0700\n"
 "PO-Revision-Date: 2015-05-01 13:36+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -144,7 +144,7 @@ msgstr ""
 msgid "Default"
 msgstr "По умолчанию"
 
-#: Ivr.class.php:53 functions.inc.php:423
+#: Ivr.class.php:54 functions.inc.php:423
 msgid "Delete"
 msgstr "Удалить"
 
@@ -319,7 +319,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: Ivr.class.php:58
+#: Ivr.class.php:59
 msgid "Reset"
 msgstr ""
 
@@ -343,7 +343,7 @@ msgstr "Возврат в Меню"
 msgid "Return to IVR after VM"
 msgstr "Возвращение в Интерактивно меню посе Голосовой Почты"
 
-#: Ivr.class.php:63
+#: Ivr.class.php:64
 msgid "Submit"
 msgstr ""
 
