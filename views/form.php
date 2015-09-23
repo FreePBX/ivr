@@ -62,22 +62,25 @@ foreach($recordingList as $r){
 	$annopts .= '<option value="'.$r['id'].'" '.$checked.'>'.$r['displayname'].'</option>';
 }
 $invalidretryopts = '<option value="default">'._('Default').'</option>';
+$invalidretryopts .= '<option value="" '.($ivr['invalid_retry_recording'] == ''?'SELECTED':'').'>'._('None').'</option>';
 foreach($recordingList as $r){
 	$checked = ($r['id'] == $ivr['invalid_retry_recording']?' SELECTED':'');
 	$invalidretryopts .= '<option value="'.$r['id'].'" '.$checked.'>'.$r['displayname'].'</option>';
 }
 $invalidopts = '<option value="default">'._('Default').'</option>';
+$invalidopts .= '<option value="" '.($ivr['invalid_recording'] == ''?'SELECTED':'').'>'._('None').'</option>';
 foreach($recordingList as $r){
 	$checked = ($r['id'] == $ivr['invalid_recording']?' SELECTED':'');
 	$invalidopts .= '<option value="'.$r['id'].'" '.$checked.'>'.$r['displayname'].'</option>';
 }
 $timeoutretryopts = '<option value="default">'._('Default').'</option>';
+$timeoutretryopts .= '<option value="" '.($ivr['timeout_retry_recording'] == ''?'SELECTED':'').'>'._('None').'</option>';
 foreach($recordingList as $r){
 	$checked = ($r['id'] == $ivr['timeout_retry_recording']?' SELECTED':'');
 	$timeoutretryopts .= '<option value="'.$r['id'].'" '.$checked.'>'.$r['displayname'].'</option>';
 }
 $timeoutopts = '<option value="default">'._('Default').'</option>';
-$timeoutopts .= '<option value="">'._('None').'</option>';
+$timeoutopts .= '<option value="" '.($ivr['timeout_recording'] == ''?'SELECTED':'').'>'._('None').'</option>';
 foreach($recordingList as $r){
 	$checked = ($r['id'] == $ivr['timeout_recording']?' SELECTED':'');
 	$timeoutopts .= '<option value="'.$r['id'].'" '.$checked.'>'.$r['displayname'].'</option>';
