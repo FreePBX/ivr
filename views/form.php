@@ -236,7 +236,7 @@ foreach ($hooks as $key => $value) {
 								</div>
 								<div class="row">
 									<div class="col-md-12">
-										<span id="timeout_time-help" class="help-block fpbx-help-block"><?php echo _("Amount of time to be concidered a timeout")?></span>
+										<span id="timeout_time-help" class="help-block fpbx-help-block"><?php echo _("Amount of time to be considered a timeout.").'<br/><strong>'._("A value of 0 disables the timeout").'</strong>'?></span>
 									</div>
 								</div>
 							</div>
