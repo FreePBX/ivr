@@ -2,15 +2,16 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>13.0.7</version>
+	<version>13.0.8</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<category>Applications</category>
 	<description>
-		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers. 
+		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
+		*13.0.8* FREEPBX-5470 Increase col from 50 to 200 for other destinations
 		*13.0.7* FREEPBX-10312 Allow announcements to be set as none
 		*13.0.6* FREEPBX-10209 htmlentities need to use UTF-8
 		*13.0.5* FREEPBX-10169, fix action buttons after submit. FREEPBX-10168 Fix use of quotes in name or description

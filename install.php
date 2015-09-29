@@ -62,7 +62,7 @@ if($db->IsError($res)) {
 	sql("CREATE TABLE IF NOT EXISTS `ivr_entries` (
 		`ivr_id` int(11) NOT NULL,
 		`selection` varchar(10) default NULL,
-		`dest` varchar(50) default NULL,
+		`dest` varchar(200) default NULL,
 		`ivr_ret` tinyint(1) NOT NULL default '0')");
 	out('Migration 2.10 not needed');
 } else {
@@ -282,7 +282,7 @@ if($db->IsError($res)) {
 	$count = sql('SELECT COUNT(*) FROM `ivr` WHERE `enable_directory` = "CHECKED"','getOne');
 	if ($count) {
 	  global $db;
-	  $notifications =& notifications::create($db); 
+	  $notifications =& notifications::create($db);
 	  $extext = sprintf(_("There are %s IVRs that have the legacy Directory dialing enabled. This has been deprecated and will be removed from future releases. You should convert your IVRs to use the Directory module for this functionality and assign an IVR destination to a desired Directory. You can install the Directory module from the Online Module Repository"),$count);
 	  $notifications->add_notice('ivr', 'DIRECTORY_DEPRECATED', sprintf(_('Deprecated Directory used by %s IVRs'),$count), $extext, '', true, true);
 		out(_("posting notice about deprecated functionality"));
@@ -296,26 +296,26 @@ if($db->IsError($res)) {
 	if(!$db->IsError($check)) {
 		sql("ALTER TABLE `ivr` DROP `announcement`");
 	}
-	
+
 	 //this was installed perviously, but we perfer to use our old table when migrating
 	sql('DROP TABLE ivr_details');
 	sql('RENAME TABLE ivr TO ivr_details');
 	sql('RENAME TABLE ivr_dests TO ivr_entries');
-	sql('ALTER TABLE ivr_details 
-	CHANGE ivr_id id int(11) NOT NULL AUTO_INCREMENT, 
-	CHANGE displayname name varchar(50), 
+	sql('ALTER TABLE ivr_details
+	CHANGE ivr_id id int(11) NOT NULL AUTO_INCREMENT,
+	CHANGE displayname name varchar(50),
 	ADD description varchar(150) AFTER name,
 	CHANGE announcement_id announcement varchar(25) AFTER description,
 	CHANGE enable_directdial directdial varchar(50) AFTER announcement,
 	CHANGE retvm retvm varchar(8) AFTER directdial,
 	CHANGE alt_invalid invalid_enabled varchar(50) AFTER retvm,
 	CHANGE alt_timeout timeout_enabled varchar(50) AFTER retvm,
-	CHANGE loops invalid_loops varchar(10) AFTER directdial, 
+	CHANGE loops invalid_loops varchar(10) AFTER directdial,
 	CHANGE invalid_id invalid_recording varchar(25) AFTER invalid_loops,
 	ADD invalid_retry_recording varchar(25) AFTER invalid_loops,
 	ADD invalid_destination varchar(50) AFTER invalid_retry_recording,
 	CHANGE timeout timeout_time int(11),
-	CHANGE timeout_id timeout_recording varchar(25), 
+	CHANGE timeout_id timeout_recording varchar(25),
 	ADD timeout_retry_recording varchar(25),
 	ADD timeout_destination varchar(50),
 	ADD timeout_loops varchar(11),
@@ -323,10 +323,10 @@ if($db->IsError($res)) {
 	ADD invalid_append_announce tinyint(1) NOT NULL default \'1\',
 	ADD timeout_ivr_ret tinyint(1) NOT NULL default \'0\',
 	ADD invalid_ivr_ret tinyint(1) NOT NULL default \'0\',
-	DROP deptname, 
-	DROP enable_directory, 
+	DROP deptname,
+	DROP enable_directory,
 	DROP dircontext');
-	
+
 	sql('DELETE FROM ivr_details WHERE name = "__install_done"');
 	//copy loops from invalid to timeout
 	sql('UPDATE ivr_details SET timeout_loops = invalid_loops');
@@ -340,12 +340,12 @@ if($db->IsError($res)) {
 		die_freepbx($ivr->getDebugInfo());
 	}
 	foreach ($entires as $entrie) {
-		$e[$entrie['ivr_id']][$entrie['selection']] = 
+		$e[$entrie['ivr_id']][$entrie['selection']] =
 				array('dest' => $entrie['dest'], 'ivr_ret' => $entrie['ivr_ret']);
 	}
 	dbug('e', $e);
 	dbug('ivr', $ivr);
-	
+
 	if ($ivr) {
 		foreach ($ivr as $my => $i) {
 
@@ -401,7 +401,7 @@ if($db->IsError($res)) {
 				} elseif ($i['timeout_loops'] === 0) {
 					$ivr[$my]['timeout_retry_recording'] = '';
 					$ivr[$my]['timeout_recording'] = 'default';
-					
+
 				//otherwise, set timeout retry to the save as invalid_recording
 				} elseif ($i['timeout_loops'] > 0) {
 					$ivr[$my]['timeout_retry_recording'] = $i['timeout_recording'];
@@ -416,12 +416,12 @@ if($db->IsError($res)) {
 				$ivr[$my]['timeout_destination'] = '';
 				$ivr[$my]['timeout_ivr_ret'] = '0';
 			}
-			
+
 			//direct dial
 			if ($i['directdial'] == 'CHECKED') {
 				$ivr[$my]['directdial'] = 'ext-local';
 			}
-			
+
 			//remove unneeded array entires
 			unset($ivr[$my]['invalid_enabled'], $ivr[$my]['timeout_enabled']);
 		}
@@ -438,13 +438,13 @@ if($db->IsError($res)) {
 		print_r($db->last_query);
 		die_freepbx($res->getDebugInfo());
 	}
-	
+
 	//remove all legacy t or i dests
 	sql('DELETE FROM ivr_entries WHERE selection IN("t", "i")');
 	sql('ALTER TABLE ivr_details DROP invalid_enabled, DROP timeout_enabled');
-	
+
 	out('Migration 2.10 done!');
-} 
+}
 
 // Add timeout/invalid_append_announce if not there
 //
@@ -522,4 +522,11 @@ if($db->IsError($check)) {
 	out(_("not needed"));
 }
 
-?>
+$info = $db->getRow('SHOW COLUMNS FROM ivr_entries WHERE FIELD = "dest"', DB_FETCHMODE_ASSOC);
+if($info['type'] !== "varchar(200)") {
+	$sql = "ALTER TABLE `ivr_entries` CHANGE COLUMN `dest` `dest` varchar(200) default NULL";
+	$result = $db->query($sql);
+	if (DB::IsError($result)) {
+		die_freepbx($result->getDebugInfo());
+	}
+}
