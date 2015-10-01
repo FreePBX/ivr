@@ -4,6 +4,10 @@ msgid ""
 "Asterisk to be running and have proper credentials"
 msgstr ""
 
+#: views/form.php:239
+msgid "A value of 0 disables the timeout"
+msgstr ""
+
 #: page.ivr.php:47
 msgid "Actions"
 msgstr ""
@@ -25,7 +29,7 @@ msgid ""
 msgstr ""
 
 #: views/form.php:239
-msgid "Amount of time to be concidered a timeout"
+msgid "Amount of time to be considered a timeout."
 msgstr ""
 
 #: views/form.php:174

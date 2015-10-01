@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-23 15:03-0700\n"
+"POT-Creation-Date: 2015-10-01 15:06-0700\n"
 "PO-Revision-Date: 2014-07-22 09:45+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/ivr/bg/>\n"
@@ -25,6 +25,10 @@ msgstr ""
 msgid ""
 "A connection to Asterisk Manager could not be made. This module requires "
 "Asterisk to be running and have proper credentials"
+msgstr ""
+
+#: views/form.php:239
+msgid "A value of 0 disables the timeout"
 msgstr ""
 
 #: page.ivr.php:47
@@ -48,7 +52,7 @@ msgid ""
 msgstr ""
 
 #: views/form.php:239
-msgid "Amount of time to be concidered a timeout"
+msgid "Amount of time to be considered a timeout."
 msgstr ""
 
 #: views/form.php:174

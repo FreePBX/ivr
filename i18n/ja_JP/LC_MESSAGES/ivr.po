@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-23 15:03-0700\n"
+"POT-Creation-Date: 2015-10-01 15:06-0700\n"
 "PO-Revision-Date: 2014-04-17 10:21+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ivr/ja/>\n"
@@ -52,6 +52,10 @@ msgstr ""
 msgid ""
 "A connection to Asterisk Manager could not be made. This module requires "
 "Asterisk to be running and have proper credentials"
+msgstr ""
+
+#: views/form.php:239
+msgid "A value of 0 disables the timeout"
 msgstr ""
 
 #: page.ivr.php:47
@@ -78,7 +82,7 @@ msgstr ""
 "再タイムアウト音声を再生した後、メインIVRのアナウンスが再度再生されます"
 
 #: views/form.php:239
-msgid "Amount of time to be concidered a timeout"
+msgid "Amount of time to be considered a timeout."
 msgstr ""
 
 #: views/form.php:174
