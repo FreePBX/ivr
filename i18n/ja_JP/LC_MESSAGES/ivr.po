@@ -38,7 +38,7 @@ msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-01 15:06-0700\n"
-"PO-Revision-Date: 2015-10-28 11:59+0200\n"
+"PO-Revision-Date: 2015-10-28 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese "
 "<http://weblate.freepbx.org/projects/freepbx/ivr/ja_JP/>\n"
@@ -256,7 +256,7 @@ msgstr "IVR: %s / オプション: %s"
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
-msgstr ""
+msgstr "「はい」に設定すると、このIVRを出てから、ユーザのボイスメールにつながった場合には、ボイスメール終了後にこのIVRに戻ります。"
 
 #: views/form.php:385
 msgid "Invalid Destination"
@@ -289,7 +289,7 @@ msgstr "いいえ"
 
 #: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
-msgstr ""
+msgstr "Astman接続がないためIVRはロードしない"
 
 #: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 #: views/form.php:83
@@ -299,7 +299,7 @@ msgstr "なし"
 #: views/form.php:421
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
-msgstr ""
+msgstr "DTMFを検知できず、IVRでタイムアウトとなった場合のリトライ数。"
 
 #: views/form.php:263
 msgid ""
@@ -320,7 +320,7 @@ msgstr ""
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
-msgstr ""
+msgstr "タイムアウトとなったときに再生する音声。この音声は、入力し直すように促す前に再生するアナウンスです。例: 「入力が確認できません」"
 
 #: views/form.php:289
 msgid ""
@@ -331,11 +331,11 @@ msgstr ""
 
 #: views/form.php:215
 msgid "Provides options for callers to direct dial an extension."
-msgstr ""
+msgstr "IVRから内線番号をそのままダイヤルすることで呼び出すことを許可します。"
 
 #: Ivr.class.php:59
 msgid "Reset"
-msgstr ""
+msgstr "リセット"
 
 #: functions.inc.php:423
 msgid "Return"
@@ -343,11 +343,11 @@ msgstr "戻る"
 
 #: views/form.php:328
 msgid "Return on Invalid"
-msgstr ""
+msgstr "無効な選択肢 戻る"
 
 #: views/form.php:486
 msgid "Return on Timeout"
-msgstr ""
+msgstr "タイムアウト 戻る"
 
 #: functions.inc.php:423
 msgid "Return to IVR"
@@ -359,7 +359,7 @@ msgstr "VMの後にIVRに戻る"
 
 #: Ivr.class.php:64
 msgid "Submit"
-msgstr ""
+msgstr "送信"
 
 #: install.php:286
 #, php-format
@@ -399,7 +399,7 @@ msgstr "再タイムアウト音声"
 #: views/entries.php:37 views/form.php:205 views/form.php:306
 #: views/form.php:333 views/form.php:464 views/form.php:491 views/form.php:572
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: install.php:241 /usr/src/freepbx/ivr/install.php:258 install.php:276
 #: /usr/src/freepbx/ivr/install.php:463 install.php:481
