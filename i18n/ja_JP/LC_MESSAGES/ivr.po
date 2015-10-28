@@ -38,7 +38,7 @@ msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-01 15:06-0700\n"
-"PO-Revision-Date: 2015-10-28 12:48+0200\n"
+"PO-Revision-Date: 2015-10-28 12:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese "
 "<http://weblate.freepbx.org/projects/freepbx/ivr/ja_JP/>\n"
@@ -73,9 +73,7 @@ msgstr "IVRを追加"
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
-msgstr ""
-"発信者から無効な応答を受信した場合は、エラーリトライの音声を再生してからメイ"
-"ンIVRのアナウンスがもう一度再生されます"
+msgstr "発信者から無効な入力を検知した場合は、リトライの音声を再生してからIVRのメインアナウンスをもう一度再生します。"
 
 #: views/form.php:474
 msgid ""
@@ -97,7 +95,7 @@ msgstr "タイムアウト後のメインアナウンス"
 
 #: views/form.php:301
 msgid "Append Announcement to Invalid"
-msgstr "無効選択の音声"
+msgstr "無効な入力: メインアナウナス"
 
 #: views/form.php:501
 msgid ""
@@ -187,7 +185,7 @@ msgstr "宛先"
 
 #: views/form.php:397
 msgid "Destination to send the call to after Invalid Recording is played"
-msgstr "選択エラーの"
+msgstr "「無効な入力」の音声を再生してから転送する宛先。"
 
 #: views/form.php:555
 msgid "Destination to send the call to after Timeout Recording is played."
@@ -259,19 +257,19 @@ msgstr "「はい」に設定すると、このIVRを出てから、ユーザの
 
 #: views/form.php:385
 msgid "Invalid Destination"
-msgstr "不正転送先"
+msgstr "無効な入力: 宛先"
 
 #: views/form.php:359
 msgid "Invalid Recording"
-msgstr "不正操作の音声"
+msgstr "無効な入力: 音声"
 
 #: views/form.php:251
 msgid "Invalid Retries"
-msgstr "不正リトライ数"
+msgstr "無効な入力: リトライ数"
 
 #: views/form.php:275
 msgid "Invalid Retry Recording"
-msgstr "不正リトライ音声"
+msgstr "無効な入力: 音声"
 
 #: views/rnav.php:1
 msgid "List IVRs"
@@ -304,7 +302,7 @@ msgstr "DTMFを検知できず、IVRでタイムアウトとなった場合の�
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
-msgstr "発信者から不正・一致しないレスポンスを受信するときにリトライする回数。"
+msgstr "発信者から無効な入力を検知したときにリトライする回数。"
 
 #: views/form.php:373 views/form.php:531
 msgid ""
@@ -312,8 +310,7 @@ msgid ""
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
 "unmatched responses (as determined by Invalid Retries)"
 msgstr ""
-"発信者を別の転送先に転送する前に再生する音声。発信者が 0 を押した場合や最大不"
-"正・一致しない応答(不正リトライ設定の値)数を受信したときに再生します。"
+"発信者を別の宛先に転送する前に再生する音声。発信者が 0 を押した場合や、最大の失敗数 (無効な入力リトライ設定の値) に達したときに再生します。"
 
 #: views/form.php:447
 msgid ""
@@ -325,8 +322,7 @@ msgstr "タイムアウトとなったときに再生する音声。この音声
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
-msgstr ""
-"不正・一致しない応答を受信した場合に、ユーザーに再試行を促す前に再生する音声"
+msgstr "無効な入力を検知した場合に、ユーザーに再試行を促す前に再生する音声。"
 
 #: views/form.php:215
 msgid "Provides options for callers to direct dial an extension."
@@ -342,7 +338,7 @@ msgstr "戻る"
 
 #: views/form.php:328
 msgid "Return on Invalid"
-msgstr "無効な選択肢: 前IVRに戻る"
+msgstr "無効な入力: 前IVRに戻る"
 
 #: views/form.php:486
 msgid "Return on Timeout"
