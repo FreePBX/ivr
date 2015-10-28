@@ -114,4 +114,9 @@ public function ajaxHandler(){
 			break;
 		}
 	}
+	public function getRightNav($request) {
+		if(isset($request['action']) && $request['action'] == 'edit' || $request['action'] == 'add'){
+    	return load_view(__DIR__."/views/rnav.php",array('request' => $request));
+		}
+	}
 }

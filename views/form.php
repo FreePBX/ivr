@@ -98,7 +98,7 @@ foreach ($hooks as $key => $value) {
 	<?php echo $infohtml?>
 	<div class = "display full-border">
 		<div class="row">
-			<div class="col-sm-9">
+			<div class="col-sm-12">
 				<div class="fpbx-container">
 					<div class="display full-border">
 						<form class='fpbx-submit' name="frm_ivr" id="frm_ivr" method="POST" action="" data-fpbx-delete="<?php echo $delURL?>">
@@ -594,11 +594,6 @@ foreach ($hooks as $key => $value) {
 						</form>
 						<?php echo $hookhtml?>
 					</div>
-				</div>
-			</div>
-			<div class="col-sm-3 bootnav <?php echo $fw_popover?'hidden':''?>">
-				<div class="list-group">
-					<?php echo load_view(__DIR__.'/rnav.php')?>
 				</div>
 			</div>
 		</div>
