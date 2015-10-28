@@ -38,29 +38,32 @@ msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-01 15:06-0700\n"
-"PO-Revision-Date: 2014-04-17 10:21+0200\n"
+"PO-Revision-Date: 2015-10-28 11:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
-"Language-Team: Japanese <http://git.freepbx.org/projects/freepbx/ivr/ja/>\n"
+"Language-Team: Japanese "
+"<http://weblate.freepbx.org/projects/freepbx/ivr/ja_JP/>\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja_JP\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 1.9-dev\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: page.ivr.php:18
 msgid ""
 "A connection to Asterisk Manager could not be made. This module requires "
 "Asterisk to be running and have proper credentials"
 msgstr ""
+"Asterisk "
+"Managerへの接続に失敗しました。このモジュールを使うには、Asteriskが稼働しており、認証設定が正しい値になっている必要があります。"
 
 #: views/form.php:239
 msgid "A value of 0 disables the timeout"
-msgstr ""
+msgstr "0を設定するとタイムアウトは無効になります。"
 
 #: page.ivr.php:47
 msgid "Actions"
-msgstr ""
+msgstr "アクション"
 
 #: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:2
 msgid "Add IVR"
@@ -83,7 +86,7 @@ msgstr ""
 
 #: views/form.php:239
 msgid "Amount of time to be considered a timeout."
-msgstr ""
+msgstr "タイムアウトと見なす時間。"
 
 #: views/form.php:174
 msgid "Announcement"
@@ -91,11 +94,11 @@ msgstr "アナウンス"
 
 #: views/form.php:459
 msgid "Append Announcement on Timeout"
-msgstr ""
+msgstr "タイムアウトの音声"
 
 #: views/form.php:301
 msgid "Append Announcement to Invalid"
-msgstr ""
+msgstr "無効選択の音声"
 
 #: views/form.php:501
 msgid ""
@@ -120,7 +123,7 @@ msgstr "invalid_idをチェック中.."
 
 #: install.php:507
 msgid "Checking for invalid_ivr_ret.."
-msgstr ""
+msgstr "invalid_ivr_ret を確認中..."
 
 #: install.php:264
 msgid "Checking for retvm.."
@@ -136,7 +139,7 @@ msgstr "timeout_idをチェック中.."
 
 #: install.php:489
 msgid "Checking for timeout_ivr_ret.."
-msgstr ""
+msgstr "timeout_ivr_ret を確認中..."
 
 #: install.php:167
 msgid "Checking if announcements need migration.."
@@ -150,10 +153,13 @@ msgid ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 msgstr ""
+"親のIVRから転送された場合に、このオプションを有効にするとそのIVRに戻ります。設定しない場合は通常どおり、指定した宛先に転送します。<br><br>注"
+"意: 戻るIVRは、このIVRまでのコールフローにおいての最後のIVRになりますので、前のステップがIVR以外の宛先だった場合には予想外の流れになる可能性"
+"があります。"
 
 #: page.ivr.php:16
 msgid "Connection Error"
-msgstr ""
+msgstr "接続エラー"
 
 #: views/form.php:64 views/form.php:70 views/form.php:76 views/form.php:82
 msgid "Default"
@@ -174,7 +180,7 @@ msgstr "%s のIVRから使用されている廃止されたディレクトリ"
 
 #: views/form.php:157
 msgid "Description of this IVR"
-msgstr ""
+msgstr "このIVRの説明。"
 
 #: functions.inc.php:423
 msgid "Destination"
@@ -182,23 +188,23 @@ msgstr "宛先"
 
 #: views/form.php:397
 msgid "Destination to send the call to after Invalid Recording is played"
-msgstr ""
+msgstr "選択エラーの"
 
 #: views/form.php:555
 msgid "Destination to send the call to after Timeout Recording is played."
-msgstr ""
+msgstr "タイムアウト音声を再生後に、転送する宛先。"
 
 #: views/form.php:41
 msgid "Edit IVR: "
-msgstr ""
+msgstr "IVRを編集: "
 
 #: assets/js/ivr.js:137
 msgid "Edit:"
-msgstr ""
+msgstr "編集:"
 
 #: views/form.php:200
 msgid "Enable Direct Dial"
-msgstr ""
+msgstr "ダイレクトダイヤルを許可"
 
 #: functions.inc.php:423
 msgid "Ext"
@@ -206,7 +212,7 @@ msgstr "番号"
 
 #: views/form.php:188
 msgid "Greeting to be played on entry to the IVR."
-msgstr ""
+msgstr "IVRに入ったときに再生する音声。"
 
 #: Ivr.class.php:15 /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
@@ -214,7 +220,7 @@ msgstr "IVR"
 
 #: views/form.php:164
 msgid "IVR DTMF Options"
-msgstr ""
+msgstr "IVR DTMFオプション"
 
 #: views/form.php:145
 msgid "IVR Description"
@@ -230,7 +236,7 @@ msgstr "IVR 一般設定"
 
 #: views/rnav.php:8
 msgid "IVR List"
-msgstr ""
+msgstr "IVRリスト"
 
 #: page.ivr.php:46 views/form.php:121
 msgid "IVR Name"
@@ -270,16 +276,16 @@ msgstr "不正リトライ音声"
 
 #: views/rnav.php:1
 msgid "List IVRs"
-msgstr ""
+msgstr "IVRを一覧表示"
 
 #: views/form.php:133
 msgid "Name of this IVR"
-msgstr ""
+msgstr "このIVRの名前"
 
 #: views/entries.php:39 views/form.php:207 views/form.php:308
 #: views/form.php:335 views/form.php:466 views/form.php:493 views/form.php:574
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 #: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
