@@ -38,7 +38,7 @@ msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-01 15:06-0700\n"
-"PO-Revision-Date: 2015-10-28 12:41+0200\n"
+"PO-Revision-Date: 2015-10-28 12:48+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese "
 "<http://weblate.freepbx.org/projects/freepbx/ivr/ja_JP/>\n"
@@ -81,8 +81,7 @@ msgstr ""
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
-msgstr ""
-"再タイムアウト音声を再生した後、メインIVRのアナウンスが再度再生されます"
+msgstr "リトライ音声を再生した後、IVRのメインアナウンスをもう一度再生します。"
 
 #: views/form.php:239
 msgid "Amount of time to be considered a timeout."
@@ -94,7 +93,7 @@ msgstr "アナウンス"
 
 #: views/form.php:459
 msgid "Append Announcement on Timeout"
-msgstr "タイムアウトの音声"
+msgstr "タイムアウト後のメインアナウンス"
 
 #: views/form.php:301
 msgid "Append Announcement to Invalid"
@@ -192,7 +191,7 @@ msgstr "選択エラーの"
 
 #: views/form.php:555
 msgid "Destination to send the call to after Timeout Recording is played."
-msgstr "タイムアウト音声を再生後に、転送する宛先。"
+msgstr "タイムアウト音声を再生してから転送する宛先。"
 
 #: views/form.php:41
 msgid "Edit IVR: "
@@ -343,11 +342,11 @@ msgstr "戻る"
 
 #: views/form.php:328
 msgid "Return on Invalid"
-msgstr "無効な選択肢 戻る"
+msgstr "無効な選択肢: 前IVRに戻る"
 
 #: views/form.php:486
 msgid "Return on Timeout"
-msgstr "タイムアウト 戻る"
+msgstr "タイムアウト: 前IVRに戻る"
 
 #: functions.inc.php:423
 msgid "Return to IVR"
@@ -382,7 +381,7 @@ msgstr "タイムアウト"
 
 #: views/form.php:543
 msgid "Timeout Destination"
-msgstr "タイムアウト時の宛先"
+msgstr "タイムアウトの宛先"
 
 #: views/form.php:517
 msgid "Timeout Recording"
@@ -390,11 +389,11 @@ msgstr "タイムアウト音声"
 
 #: views/form.php:409
 msgid "Timeout Retries"
-msgstr "タイムアウトリトライ"
+msgstr "タイムアウトリトライ数"
 
 #: views/form.php:433
 msgid "Timeout Retry Recording"
-msgstr "再タイムアウト音声"
+msgstr "タイムアウトリトライ音声"
 
 #: views/entries.php:37 views/form.php:205 views/form.php:306
 #: views/form.php:333 views/form.php:464 views/form.php:491 views/form.php:572
