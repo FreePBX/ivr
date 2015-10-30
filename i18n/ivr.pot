@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-01 15:06-0700\n"
+"POT-Creation-Date: 2015-10-29 18:30-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgid "Actions"
 msgstr ""
 
 #: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7
-#: views/rnav.php:2
+#: views/rnav.php:3
 msgid "Add IVR"
 msgstr ""
 
@@ -237,7 +237,7 @@ msgstr ""
 msgid "Invalid Retry Recording"
 msgstr ""
 
-#: views/rnav.php:1
+#: views/rnav.php:2
 msgid "List IVRs"
 msgstr ""
 

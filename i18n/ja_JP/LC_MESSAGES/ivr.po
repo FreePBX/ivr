@@ -37,15 +37,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-01 15:06-0700\n"
+"POT-Creation-Date: 2015-10-29 18:30-0700\n"
 "PO-Revision-Date: 2015-10-28 12:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
-"Language-Team: Japanese "
-"<http://weblate.freepbx.org/projects/freepbx/ivr/ja_JP/>\n"
-"Language: ja_JP\n"
+"Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
+"ja_JP/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
@@ -54,8 +54,8 @@ msgid ""
 "A connection to Asterisk Manager could not be made. This module requires "
 "Asterisk to be running and have proper credentials"
 msgstr ""
-"Asterisk "
-"Managerへの接続に失敗しました。このモジュールを使うには、Asteriskが稼働しており、認証設定が正しい値になっている必要があります。"
+"Asterisk Managerへの接続に失敗しました。このモジュールを使うには、Asteriskが"
+"稼働しており、認証設定が正しい値になっている必要があります。"
 
 #: views/form.php:239
 msgid "A value of 0 disables the timeout"
@@ -65,7 +65,7 @@ msgstr "0を設定するとタイムアウトは無効になります。"
 msgid "Actions"
 msgstr "アクション"
 
-#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:2
+#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:3
 msgid "Add IVR"
 msgstr "IVRを追加"
 
@@ -73,7 +73,9 @@ msgstr "IVRを追加"
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
-msgstr "発信者から無効な入力を検知した場合は、リトライの音声を再生してからIVRのメインアナウンスをもう一度再生します。"
+msgstr ""
+"発信者から無効な入力を検知した場合は、リトライの音声を再生してからIVRのメイン"
+"アナウンスをもう一度再生します。"
 
 #: views/form.php:474
 msgid ""
@@ -150,9 +152,10 @@ msgid ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 msgstr ""
-"親のIVRから転送された場合に、このオプションを有効にするとそのIVRに戻ります。設定しない場合は通常どおり、指定した宛先に転送します。<br><br>注"
-"意: 戻るIVRは、このIVRまでのコールフローにおいての最後のIVRになりますので、前のステップがIVR以外の宛先だった場合には予想外の流れになる可能性"
-"があります。"
+"親のIVRから転送された場合に、このオプションを有効にするとそのIVRに戻ります。"
+"設定しない場合は通常どおり、指定した宛先に転送します。<br><br>注意: 戻るIVR"
+"は、このIVRまでのコールフローにおいての最後のIVRになりますので、前のステップ"
+"がIVR以外の宛先だった場合には予想外の流れになる可能性があります。"
 
 #: page.ivr.php:16
 msgid "Connection Error"
@@ -253,7 +256,9 @@ msgstr "IVR: %s / オプション: %s"
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
-msgstr "「はい」に設定すると、このIVRを出てから、ユーザのボイスメールにつながった場合には、ボイスメール終了後にこのIVRに戻ります。"
+msgstr ""
+"「はい」に設定すると、このIVRを出てから、ユーザのボイスメールにつながった場合"
+"には、ボイスメール終了後にこのIVRに戻ります。"
 
 #: views/form.php:385
 msgid "Invalid Destination"
@@ -271,7 +276,7 @@ msgstr "無効な入力: リトライ数"
 msgid "Invalid Retry Recording"
 msgstr "無効な入力: 音声"
 
-#: views/rnav.php:1
+#: views/rnav.php:2
 msgid "List IVRs"
 msgstr "IVRを一覧表示"
 
@@ -310,13 +315,16 @@ msgid ""
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
 "unmatched responses (as determined by Invalid Retries)"
 msgstr ""
-"発信者を別の宛先に転送する前に再生する音声。発信者が 0 を押した場合や、最大の失敗数 (無効な入力リトライ設定の値) に達したときに再生します。"
+"発信者を別の宛先に転送する前に再生する音声。発信者が 0 を押した場合や、最大の"
+"失敗数 (無効な入力リトライ設定の値) に達したときに再生します。"
 
 #: views/form.php:447
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
-msgstr "タイムアウトとなったときに再生する音声。この音声は、入力し直すように促す前に再生するアナウンスです。例: 「入力が確認できません」"
+msgstr ""
+"タイムアウトとなったときに再生する音声。この音声は、入力し直すように促す前に"
+"再生するアナウンスです。例: 「入力が確認できません」"
 
 #: views/form.php:289
 msgid ""

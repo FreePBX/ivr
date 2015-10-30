@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-01 15:06-0700\n"
+"POT-Creation-Date: 2015-10-29 18:30-0700\n"
 "PO-Revision-Date: 2015-05-02 11:38+0200\n"
 "Last-Translator: Renato <fiuza@tecnologia.inf.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -36,7 +36,7 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:2
+#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Adicionar URA"
 
@@ -247,7 +247,7 @@ msgstr "Tentativas Invalidas"
 msgid "Invalid Retry Recording"
 msgstr "Gravação Tentativa Inválida"
 
-#: views/rnav.php:1
+#: views/rnav.php:2
 msgid "List IVRs"
 msgstr ""
 

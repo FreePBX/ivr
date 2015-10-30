@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-01 15:06-0700\n"
+"POT-Creation-Date: 2015-10-29 18:30-0700\n"
 "PO-Revision-Date: 2009-01-31 12:34+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -32,7 +32,7 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:2
+#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:3
 msgid "Add IVR"
 msgstr "添加IVR"
 
@@ -235,7 +235,7 @@ msgstr "无效重试"
 msgid "Invalid Retry Recording"
 msgstr "无效重试录音"
 
-#: views/rnav.php:1
+#: views/rnav.php:2
 msgid "List IVRs"
 msgstr ""
 

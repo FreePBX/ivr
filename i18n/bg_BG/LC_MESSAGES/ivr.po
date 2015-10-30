@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-01 15:06-0700\n"
+"POT-Creation-Date: 2015-10-29 18:30-0700\n"
 "PO-Revision-Date: 2014-07-22 09:45+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/ivr/bg/>\n"
@@ -35,7 +35,7 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:2
+#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Добави IVR"
 
@@ -239,7 +239,7 @@ msgstr ""
 msgid "Invalid Retry Recording"
 msgstr ""
 
-#: views/rnav.php:1
+#: views/rnav.php:2
 msgid "List IVRs"
 msgstr ""
 
