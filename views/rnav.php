@@ -2,7 +2,13 @@
 <a href="config.php?display=ivr" class = "btn btn-default"><i class="fa fa-list"></i>&nbsp;<?php echo _("List IVRs")?></a>
 <a href="config.php?display=ivr&action=add" class = "btn btn-default"><i class="fa fa-plus"></i>&nbsp;<?php echo _("Add IVR")?></a>
 </div>
-<table id="ivrnavgrid" data-search="true" data-toolbar="#toolbar-ivrbnav" data-url="ajax.php?module=ivr&command=getJSON&jdata=grid" data-cache="false" data-pagination="true" data-toggle="table" class="table">
+<table id="ivrnavgrid"
+ 		data-search="true"
+		data-toolbar="#toolbar-ivrbnav"
+		data-url="ajax.php?module=ivr&command=getJSON&jdata=grid"
+		data-cache="false"
+		data-toggle="table" 
+		class="table">
 	<thead>
 			<tr>
 			<th data-field="name" data-sortable="true"><?php echo _("IVR List")?></th>
