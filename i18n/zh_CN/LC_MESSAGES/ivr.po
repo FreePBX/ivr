@@ -8,12 +8,16 @@ msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-29 18:30-0700\n"
-"PO-Revision-Date: 2009-01-31 12:34+0800\n"
-"Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
-"Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
+"PO-Revision-Date: 2015-11-12 12:35+0200\n"
+"Last-Translator: james <zhulizhong@gmail.com>\n"
+"Language-Team: Simplified Chinese "
+"<http://weblate.freepbx.org/projects/freepbx/ivr/zh_CN/>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.2-dev\n"
 "X-Poedit-Language: Chinese\n"
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -22,15 +26,15 @@ msgstr ""
 msgid ""
 "A connection to Asterisk Manager could not be made. This module requires "
 "Asterisk to be running and have proper credentials"
-msgstr ""
+msgstr "不能创建连接。这个模块要求Asterisk获得正常的运行权限"
 
 #: views/form.php:239
 msgid "A value of 0 disables the timeout"
-msgstr ""
+msgstr "如果值是0，则关闭超时"
 
 #: page.ivr.php:47
 msgid "Actions"
-msgstr ""
+msgstr "操作"
 
 #: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:3
 msgid "Add IVR"
@@ -40,17 +44,17 @@ msgstr "添加IVR"
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
-msgstr ""
+msgstr "播放无效入口重试录音以后，系统将重放主IVR语音"
 
 #: views/form.php:474
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
-msgstr ""
+msgstr "播放超时语音提示后，系统将重新播放主语音IVR"
 
 #: views/form.php:239
 msgid "Amount of time to be considered a timeout."
-msgstr ""
+msgstr "超时设置。"
 
 #: views/form.php:174
 msgid "Announcement"
@@ -62,7 +66,7 @@ msgstr "超时中附加一个主系统公告"
 
 #: views/form.php:301
 msgid "Append Announcement to Invalid"
-msgstr ""
+msgstr "在无效输入后附加语音提示"
 
 #: views/form.php:501
 msgid ""
@@ -79,7 +83,7 @@ msgstr ""
 
 #: install.php:469
 msgid "Checking for invalid_append_announce.."
-msgstr ""
+msgstr "检查 invalid_append_announce.."
 
 #: install.php:246
 msgid "Checking for invalid_id.."
@@ -87,7 +91,7 @@ msgstr "正在检查invalid_id。。。"
 
 #: install.php:507
 msgid "Checking for invalid_ivr_ret.."
-msgstr ""
+msgstr "检查 invalid_ivr_ret.."
 
 #: install.php:264
 msgid "Checking for retvm.."
@@ -95,7 +99,7 @@ msgstr "正在检查retvm。。。"
 
 #: install.php:451
 msgid "Checking for timeout_append_announce.."
-msgstr ""
+msgstr "检查 timeout_append_announce.."
 
 #: install.php:229
 msgid "Checking for timeout_id.."
@@ -103,7 +107,7 @@ msgstr "正在检查timeout_id。。。"
 
 #: install.php:489
 msgid "Checking for timeout_ivr_ret.."
-msgstr ""
+msgstr "检查 timeout_ivr_ret.."
 
 #: install.php:167
 msgid "Checking if announcements need migration.."
@@ -120,7 +124,7 @@ msgstr ""
 
 #: page.ivr.php:16
 msgid "Connection Error"
-msgstr ""
+msgstr "连接错误"
 
 #: views/form.php:64 views/form.php:70 views/form.php:76 views/form.php:82
 msgid "Default"
@@ -132,7 +136,7 @@ msgstr "删除"
 
 #: views/entries.php:45
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
-msgstr ""
+msgstr "删除这个入口。 不要忘记点击提交！"
 
 #: install.php:287
 #, php-format
@@ -141,7 +145,7 @@ msgstr ""
 
 #: views/form.php:157
 msgid "Description of this IVR"
-msgstr ""
+msgstr "IVR描述"
 
 #: functions.inc.php:423
 msgid "Destination"
@@ -149,19 +153,19 @@ msgstr "目的地"
 
 #: views/form.php:397
 msgid "Destination to send the call to after Invalid Recording is played"
-msgstr ""
+msgstr "播放无效录音提示后转发的目的地"
 
 #: views/form.php:555
 msgid "Destination to send the call to after Timeout Recording is played."
-msgstr ""
+msgstr "播放超时提示后转发的目的地。"
 
 #: views/form.php:41
 msgid "Edit IVR: "
-msgstr ""
+msgstr "编辑IVR: "
 
 #: assets/js/ivr.js:137
 msgid "Edit:"
-msgstr ""
+msgstr "编辑:"
 
 #: views/form.php:200
 msgid "Enable Direct Dial"
@@ -173,7 +177,7 @@ msgstr "分机"
 
 #: views/form.php:188
 msgid "Greeting to be played on entry to the IVR."
-msgstr ""
+msgstr "播放IVR。"
 
 #: Ivr.class.php:15 /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
@@ -181,7 +185,7 @@ msgstr "语音IVR"
 
 #: views/form.php:164
 msgid "IVR DTMF Options"
-msgstr ""
+msgstr "IVR语音提示选项"
 
 #: views/form.php:145
 msgid "IVR Description"
@@ -197,7 +201,7 @@ msgstr "IVR 基本选项"
 
 #: views/rnav.php:8
 msgid "IVR List"
-msgstr ""
+msgstr "IVR列表"
 
 #: page.ivr.php:46 views/form.php:121
 msgid "IVR Name"
@@ -237,11 +241,11 @@ msgstr "无效重试录音"
 
 #: views/rnav.php:2
 msgid "List IVRs"
-msgstr ""
+msgstr "显示IVR列表"
 
 #: views/form.php:133
 msgid "Name of this IVR"
-msgstr ""
+msgstr "IVR名称"
 
 #: views/entries.php:39 views/form.php:207 views/form.php:308
 #: views/form.php:335 views/form.php:466 views/form.php:493 views/form.php:574
