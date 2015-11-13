@@ -53,7 +53,7 @@ if(action == 'add'){
 		</div>
 		';
 	}
-	$delURL = '?display=ivr&action=edit&id='.$id;
+	$delURL = '?display=ivr&action=delete&id='.$id;
 }
 $recordingList = recordings_list();
 $annopts = '<option>'._('None').'</option>';
