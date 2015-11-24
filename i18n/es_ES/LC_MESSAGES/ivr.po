@@ -44,6 +44,10 @@ msgstr ""
 msgid "Append Announcement to Invalid"
 msgstr ""
 
+#: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
+msgid "Applications"
+msgstr ""
+
 #: views/form.php:501
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
@@ -96,6 +100,13 @@ msgstr ""
 
 #: page.ivr.php:16
 msgid "Connection Error"
+msgstr ""
+
+#: ivr.i18n.php:8
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 msgstr ""
 
 #: views/form.php:64 views/form.php:70 views/form.php:76 views/form.php:82
@@ -151,7 +162,8 @@ msgstr ""
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
-#: Ivr.class.php:15 /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:15 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr ""
 
@@ -171,7 +183,7 @@ msgstr ""
 msgid "IVR General Options"
 msgstr ""
 
-#: views/rnav.php:8
+#: views/rnav.php:14
 msgid "IVR List"
 msgstr ""
 

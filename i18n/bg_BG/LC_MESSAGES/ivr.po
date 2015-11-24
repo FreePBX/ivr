@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-29 18:30-0700\n"
+"POT-Creation-Date: 2015-11-24 13:24-0800\n"
 "PO-Revision-Date: 2014-07-22 09:45+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/ivr/bg/>\n"
@@ -66,6 +66,10 @@ msgstr ""
 #: views/form.php:301
 msgid "Append Announcement to Invalid"
 msgstr ""
+
+#: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
+msgid "Applications"
+msgstr "Приложения"
 
 #: views/form.php:501
 msgid ""
@@ -126,6 +130,17 @@ msgstr ""
 msgid "Connection Error"
 msgstr ""
 
+#: ivr.i18n.php:8
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+msgstr ""
+"Създава менюта за Цифров Администратор (Автоматично Обслужване или Система "
+"за Интерактивен Отговор). Използват се за насочване на обаждащите се към "
+"различни направления (например, Изберете 1 за продажби) и/или позволява "
+"директно избиране на вътрешни номера."
+
 #: views/form.php:64 views/form.php:70 views/form.php:76 views/form.php:82
 msgid "Default"
 msgstr "По-Подразбиране"
@@ -179,7 +194,8 @@ msgstr "Набрано"
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
-#: Ivr.class.php:15 /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:15 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "IVR"
 
@@ -199,7 +215,7 @@ msgstr "IVR Въвеждания"
 msgid "IVR General Options"
 msgstr "Основни Опции на IVR"
 
-#: views/rnav.php:8
+#: views/rnav.php:14
 msgid "IVR List"
 msgstr ""
 
@@ -432,21 +448,8 @@ msgstr "предупреждение за премахната функцион�
 #~ msgid "After three invalid attempts, the line is hung up."
 #~ msgstr "След три неуспешни опита линията ще се затвори."
 
-#~ msgid "Applications"
-#~ msgstr "Приложения"
-
 #~ msgid "Change Name"
 #~ msgstr "Промени Името"
-
-#~ msgid ""
-#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-#~ "Response) menus. These can be used to send callers to different locations "
-#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-#~ msgstr ""
-#~ "Създава менюта за Цифров Администратор (Автоматично Обслужване или "
-#~ "Система за Интерактивен Отговор). Използват се за насочване на обаждащите "
-#~ "се към различни направления (например, Изберете 1 за продажби) и/или "
-#~ "позволява директно избиране на вътрешни номера."
 
 #~ msgid "Decrease Options"
 #~ msgstr "Намали Опциите"
