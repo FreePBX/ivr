@@ -331,20 +331,22 @@ function ivr_configprocess(){
 
 		switch ($action) {
 			case 'save':
-
 				//get real dest
 				$_REQUEST['id'] = $vars['id'] = ivr_save_details($vars);
+        $_REQUEST['action'] = 'edit';
 				ivr_save_entries($vars['id'], $entries);
 				needreload();
 				//$_REQUEST['action'] = 'edit';
 				$this_dest = ivr_getdest($vars['id']);
 				fwmsg::set_dest($this_dest[0]);
-				redirect_standard_continue('id');
+				//redirect_standard_continue('id');
 			break;
 			case 'delete':
 				ivr_delete($vars['id']);
+        isset($_REQUEST['id'])?$_REQUEST['id'] = null:'';
+        isset($_REQUEST['action'])?$_REQUEST['action'] = null:'';
 				needreload();
-				redirect_standard_continue();
+				//redirect_standard_continue();
 			break;
 		}
 	}
