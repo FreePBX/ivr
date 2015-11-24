@@ -84,7 +84,7 @@ function ivr_get_config($engine) {
 					$ext->add($c, 's', '', new ext_setvar('__IVR_RETVM', ''));
 				}
 
-				$ext->add($c, 's', '', new ext_gotoif('$["${CDR(disposition)}" = "ANSWERED"]','skip'));
+				$ext->add($c, 's', '', new ext_gotoif('$["${CHANNEL(state)}" = "Up"]','skip'));
 				$ext->add($c, 's', '', new ext_answer(''));
 				$ext->add($c, 's', '', new ext_wait('1'));
 
