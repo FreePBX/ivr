@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 13:24-0800\n"
+"POT-Creation-Date: 2015-11-24 13:29-0800\n"
 "PO-Revision-Date: 2015-05-01 13:36+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Default"
 msgstr "По умолчанию"
 
-#: Ivr.class.php:54 functions.inc.php:423
+#: Ivr.class.php:54 functions.inc.php:425
 msgid "Delete"
 msgstr "Удалить"
 
@@ -181,7 +181,7 @@ msgstr "Устаревшие Каталоги используемые %s Инт
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Destination"
 msgstr "Назначение"
 
@@ -206,7 +206,7 @@ msgstr ""
 msgid "Enable Direct Dial"
 msgstr "Разрешить прямые наборы"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Ext"
 msgstr "Номер"
 
@@ -243,12 +243,12 @@ msgstr ""
 msgid "IVR Name"
 msgstr "Название Интерактивного меню"
 
-#: functions.inc.php:514 functions.inc.php:534
+#: functions.inc.php:516 functions.inc.php:536
 #, php-format
 msgid "IVR: %s"
 msgstr "Интерактивное меню: %s"
 
-#: functions.inc.php:481
+#: functions.inc.php:483
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "Интерактивное меню: %s / Опция: %s"
@@ -344,7 +344,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return"
 msgstr "Возврат"
 
@@ -356,7 +356,7 @@ msgstr "Возврат на неверный"
 msgid "Return on Timeout"
 msgstr "Возврат на Тайм-аут"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return to IVR"
 msgstr "Возврат в Меню"
 

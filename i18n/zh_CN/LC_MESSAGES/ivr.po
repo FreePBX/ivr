@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 13:24-0800\n"
+"POT-Creation-Date: 2015-11-24 13:29-0800\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -141,7 +141,7 @@ msgstr ""
 msgid "Default"
 msgstr "默认"
 
-#: Ivr.class.php:54 functions.inc.php:423
+#: Ivr.class.php:54 functions.inc.php:425
 msgid "Delete"
 msgstr "删除"
 
@@ -158,7 +158,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "IVR描述"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Destination"
 msgstr "目的地"
 
@@ -182,7 +182,7 @@ msgstr "编辑:"
 msgid "Enable Direct Dial"
 msgstr "启用直接拨号"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Ext"
 msgstr "分机"
 
@@ -219,12 +219,12 @@ msgstr "IVR列表"
 msgid "IVR Name"
 msgstr "IVR 名称"
 
-#: functions.inc.php:514 functions.inc.php:534
+#: functions.inc.php:516 functions.inc.php:536
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR：%s"
 
-#: functions.inc.php:481
+#: functions.inc.php:483
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR：%s / 选项：%s"
@@ -312,7 +312,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return"
 msgstr "返回"
 
@@ -324,7 +324,7 @@ msgstr "无效中的返回处理"
 msgid "Return on Timeout"
 msgstr "超时返回处理"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return to IVR"
 msgstr "返回到IVR"
 

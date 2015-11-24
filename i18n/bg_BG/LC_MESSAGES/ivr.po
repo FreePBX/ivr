@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 13:24-0800\n"
+"POT-Creation-Date: 2015-11-24 13:29-0800\n"
 "PO-Revision-Date: 2014-07-22 09:45+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/ivr/bg/>\n"
@@ -145,7 +145,7 @@ msgstr ""
 msgid "Default"
 msgstr "По-Подразбиране"
 
-#: Ivr.class.php:54 functions.inc.php:423
+#: Ivr.class.php:54 functions.inc.php:425
 msgid "Delete"
 msgstr "Изтрий"
 
@@ -162,7 +162,7 @@ msgstr "Стара Директория се използва от %s IVR"
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Destination"
 msgstr "Направление"
 
@@ -186,7 +186,7 @@ msgstr ""
 msgid "Enable Direct Dial"
 msgstr "Разреши Директно Избиране"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Ext"
 msgstr "Набрано"
 
@@ -223,12 +223,12 @@ msgstr ""
 msgid "IVR Name"
 msgstr "Име на IVR"
 
-#: functions.inc.php:514 functions.inc.php:534
+#: functions.inc.php:516 functions.inc.php:536
 #, fuzzy, php-format
 msgid "IVR: %s"
 msgstr "IVR : %s"
 
-#: functions.inc.php:481
+#: functions.inc.php:483
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / Опция: %s"
@@ -315,7 +315,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return"
 msgstr "Обратно"
 
@@ -327,7 +327,7 @@ msgstr ""
 msgid "Return on Timeout"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return to IVR"
 msgstr "Върни се към IVR"
 

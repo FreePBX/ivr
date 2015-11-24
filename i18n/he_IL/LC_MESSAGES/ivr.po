@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 13:24-0800\n"
+"POT-Creation-Date: 2015-11-24 13:29-0800\n"
 "PO-Revision-Date: 2006-10-17 17:30+0300\n"
 "Last-Translator: Shimi <shimi@shimi.net>\n"
 "MIME-Version: 1.0\n"
@@ -129,7 +129,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ivr.class.php:54 functions.inc.php:423
+#: Ivr.class.php:54 functions.inc.php:425
 msgid "Delete"
 msgstr ""
 
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Destination"
 msgstr ""
 
@@ -170,7 +170,7 @@ msgstr ""
 msgid "Enable Direct Dial"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Ext"
 msgstr ""
 
@@ -207,12 +207,12 @@ msgstr ""
 msgid "IVR Name"
 msgstr ""
 
-#: functions.inc.php:514 functions.inc.php:534
+#: functions.inc.php:516 functions.inc.php:536
 #, php-format
 msgid "IVR: %s"
 msgstr ""
 
-#: functions.inc.php:481
+#: functions.inc.php:483
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr ""
@@ -299,7 +299,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return"
 msgstr ""
 
@@ -311,7 +311,7 @@ msgstr ""
 msgid "Return on Timeout"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return to IVR"
 msgstr ""
 

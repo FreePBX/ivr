@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 13:24-0800\n"
+"POT-Creation-Date: 2015-11-24 13:29-0800\n"
 "PO-Revision-Date: 2015-10-28 12:59+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -179,7 +179,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ivr.class.php:54 functions.inc.php:423
+#: Ivr.class.php:54 functions.inc.php:425
 msgid "Delete"
 msgstr "削除"
 
@@ -196,7 +196,7 @@ msgstr "%s のIVRから使用されている廃止されたディレクトリ"
 msgid "Description of this IVR"
 msgstr "このIVRの説明。"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Destination"
 msgstr "宛先"
 
@@ -220,7 +220,7 @@ msgstr "編集:"
 msgid "Enable Direct Dial"
 msgstr "ダイレクトダイヤルを許可"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Ext"
 msgstr "番号"
 
@@ -257,12 +257,12 @@ msgstr "IVRリスト"
 msgid "IVR Name"
 msgstr "IVRの名前"
 
-#: functions.inc.php:514 functions.inc.php:534
+#: functions.inc.php:516 functions.inc.php:536
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:481
+#: functions.inc.php:483
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / オプション: %s"
@@ -355,7 +355,7 @@ msgstr "IVRから内線番号をそのままダイヤルすることで呼び出
 msgid "Reset"
 msgstr "リセット"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return"
 msgstr "戻る"
 
@@ -367,7 +367,7 @@ msgstr "無効な入力: 前IVRに戻る"
 msgid "Return on Timeout"
 msgstr "タイムアウト: 前IVRに戻る"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return to IVR"
 msgstr "IVRに戻る"
 

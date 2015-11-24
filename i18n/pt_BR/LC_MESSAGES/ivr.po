@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 13:24-0800\n"
+"POT-Creation-Date: 2015-11-24 13:29-0800\n"
 "PO-Revision-Date: 2015-05-02 11:38+0200\n"
 "Last-Translator: Renato <fiuza@tecnologia.inf.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -151,7 +151,7 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ivr.class.php:54 functions.inc.php:423
+#: Ivr.class.php:54 functions.inc.php:425
 msgid "Delete"
 msgstr "Apagar"
 
@@ -169,7 +169,7 @@ msgstr "Diretório Descontinuado usado por URAs %s"
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Destination"
 msgstr "Destino"
 
@@ -194,7 +194,7 @@ msgstr ""
 msgid "Enable Direct Dial"
 msgstr "Habilitar discagem direta"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Ext"
 msgstr "Ramal"
 
@@ -231,12 +231,12 @@ msgstr ""
 msgid "IVR Name"
 msgstr "Nome"
 
-#: functions.inc.php:514 functions.inc.php:534
+#: functions.inc.php:516 functions.inc.php:536
 #, php-format
 msgid "IVR: %s"
 msgstr "URA: %s"
 
-#: functions.inc.php:481
+#: functions.inc.php:483
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "URA: %s / Opção: %s"
@@ -334,7 +334,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return"
 msgstr "Retornar"
 
@@ -346,7 +346,7 @@ msgstr "Retorno Quando Inválido"
 msgid "Return on Timeout"
 msgstr "Retorno Quando Tempo Esgotado"
 
-#: functions.inc.php:423
+#: functions.inc.php:425
 msgid "Return to IVR"
 msgstr "Retornar para a URA"
 
