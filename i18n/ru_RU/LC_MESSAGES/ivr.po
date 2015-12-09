@@ -23,16 +23,16 @@ msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-24 13:29-0800\n"
-"PO-Revision-Date: 2015-05-01 13:36+0200\n"
-"Last-Translator: Yuriy <alliancesko@gmail.com>\n"
-"Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
-"ru_RU/>\n"
+"PO-Revision-Date: 2015-12-08 23:16+0200\n"
+"Last-Translator: Andrew <andrew.nagy@the159.com>\n"
+"Language-Team: Russian "
+"<http://weblate.freepbx.org/projects/freepbx/ivr/ru_RU/>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
 #: page.ivr.php:18
@@ -41,7 +41,7 @@ msgid ""
 "Asterisk to be running and have proper credentials"
 msgstr ""
 "Невозможно подключиться к Asterisk-менеджеру. Этот модуль требует "
-"запущенного процесса Asterisk  и должен иметь необходимые полномочия."
+"запущенного процесса Asterisk  и должен иметь необходимые полномочия"
 
 #: views/form.php:239
 msgid "A value of 0 disables the timeout"
@@ -73,7 +73,7 @@ msgstr ""
 
 #: views/form.php:239
 msgid "Amount of time to be considered a timeout."
-msgstr "Интервал времени , используемый как таймаут"
+msgstr "Интервал времени , используемый как таймаут."
 
 #: views/form.php:174
 msgid "Announcement"
@@ -85,7 +85,7 @@ msgstr "Добавьте приветствие о Тайм-ауте"
 
 #: views/form.php:301
 msgid "Append Announcement to Invalid"
-msgstr "Добавить приветствие при неверном наборе."
+msgstr "Добавить приветствие при неверном наборе"
 
 #: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
 msgid "Applications"
@@ -200,7 +200,7 @@ msgstr "Назначения направления звонка после во
 
 #: views/form.php:41
 msgid "Edit IVR: "
-msgstr "Редактировать голосовое меню:"
+msgstr "Редактировать голосовое меню: "
 
 #: assets/js/ivr.js:137
 msgid "Edit:"
@@ -216,7 +216,7 @@ msgstr "Номер"
 
 #: views/form.php:188
 msgid "Greeting to be played on entry to the IVR."
-msgstr "Приветствие , проигрываемое при входе в голосовое меню"
+msgstr "Приветствие , проигрываемое при входе в голосовое меню."
 
 #: Ivr.class.php:15 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
 #: /usr/src/freepbx/ivr/page.ivr.php:24
@@ -263,7 +263,7 @@ msgid ""
 "got a users voicemail"
 msgstr ""
 "Если Да, то после выхода из голосовой почты вызывающий абонент вернётся в "
-"голосовое меню "
+"голосовое меню"
 
 #: views/form.php:385
 msgid "Invalid Destination"
@@ -324,7 +324,7 @@ msgid ""
 msgstr ""
 "Сообщение воспроизводимое перед отправкой звонящего на альтернативное "
 "назначение при нажатии звонящим 0 или при достижении максимального "
-"количества неудачных попыток ввода. "
+"количества неудачных попыток ввода"
 
 #: views/form.php:447
 msgid ""
