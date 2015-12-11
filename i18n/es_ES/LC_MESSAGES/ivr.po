@@ -1,3 +1,17 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-08 23:45+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"X-Generator: Translate Toolkit 1.11.0\n"
+
 #: page.ivr.php:18
 msgid ""
 "A connection to Asterisk Manager could not be made. This module requires "
@@ -14,19 +28,23 @@ msgstr ""
 
 #: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:3
 msgid "Add IVR"
-msgstr ""
+msgstr "Añadir IVR"
 
 #: views/form.php:316
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
+"Después de reproducir el \"reintento de grabación no es válido\", el sistema "
+"repetirá el anuncio principal del  IVR"
 
 #: views/form.php:474
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
+"Después de reproducir la grabación \"Tiempo de espera de reintento agotado\""
+", el sistema se repetirá el anuncio principal del IVR"
 
 #: views/form.php:239
 msgid "Amount of time to be considered a timeout."
@@ -34,11 +52,11 @@ msgstr ""
 
 #: views/form.php:174
 msgid "Announcement"
-msgstr ""
+msgstr "Anuncio"
 
 #: views/form.php:459
 msgid "Append Announcement on Timeout"
-msgstr ""
+msgstr "Anexar Anuncio activado agotado"
 
 #: views/form.php:301
 msgid "Append Announcement to Invalid"
@@ -46,7 +64,7 @@ msgstr ""
 
 #: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
 msgid "Applications"
-msgstr ""
+msgstr "Aplicaciones"
 
 #: views/form.php:501
 msgid ""
@@ -56,38 +74,43 @@ msgid ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 msgstr ""
+"Marque esta casilla para que esta opción retorne a un IVR padre si se llama "
+"desde un IVR padre. Si no, va a ir al destino elegido.<br><br> El camino de "
+"regreso será a cualquier IVR que estaba en el trayecto de la llamada antes "
+"de este IVR, que podría conducir a resultados extraños si había un IVR "
+"llamado en el camino, pero no inmediatamente antes de este"
 
 #: install.php:469
 msgid "Checking for invalid_append_announce.."
-msgstr ""
+msgstr "Chequeando por invalid_append_announce.."
 
 #: install.php:246
 msgid "Checking for invalid_id.."
-msgstr ""
+msgstr "Comprobando campo invalid_id..."
 
 #: install.php:507
 msgid "Checking for invalid_ivr_ret.."
-msgstr ""
+msgstr "Chequeando por invalid_ivr_ret.."
 
 #: install.php:264
 msgid "Checking for retvm.."
-msgstr ""
+msgstr "Comprobando campo retvm..."
 
 #: install.php:451
 msgid "Checking for timeout_append_announce.."
-msgstr ""
+msgstr "Chequeando por timeout_append_announce.."
 
 #: install.php:229
 msgid "Checking for timeout_id.."
-msgstr ""
+msgstr "Comprobando campo timeout_id..."
 
 #: install.php:489
 msgid "Checking for timeout_ivr_ret.."
-msgstr ""
+msgstr "Chequeando por timeout_ivr_ret.."
 
 #: install.php:167
 msgid "Checking if announcements need migration.."
-msgstr ""
+msgstr "Comprobando si los anuncios necesitan ser migrados..."
 
 #: views/form.php:343
 msgid ""
@@ -108,23 +131,28 @@ msgid ""
 "Response) menus. These can be used to send callers to different locations "
 "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 msgstr ""
+"Crea menús recepcionista digital (también conocido como operadora "
+"automática, también conocido como Respuesta de Voz Interactiva). Estos "
+"pueden ser utilizados para enviar las llamadas a diferentes lugares (por "
+"ejemplo, Pulse 1 para las ventas) y / o permitir marcación directa de "
+"números de extensión."
 
 #: views/form.php:64 views/form.php:70 views/form.php:76 views/form.php:82
 msgid "Default"
-msgstr ""
+msgstr "Defecto"
 
 #: Ivr.class.php:54 functions.inc.php:425
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: views/entries.php:45
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
-msgstr ""
+msgstr "Borrar esta entrada. No olvide oprimir Enviar para salvar los cambios!"
 
 #: install.php:287
 #, php-format
 msgid "Deprecated Directory used by %s IVRs"
-msgstr ""
+msgstr "Directorio Obsoleto utilizado por IVR %s"
 
 #: views/form.php:157
 msgid "Description of this IVR"
@@ -132,7 +160,7 @@ msgstr ""
 
 #: functions.inc.php:425
 msgid "Destination"
-msgstr ""
+msgstr "Destino"
 
 #: views/form.php:397
 msgid "Destination to send the call to after Invalid Recording is played"
@@ -140,7 +168,7 @@ msgstr ""
 
 #: views/form.php:555
 msgid "Destination to send the call to after Timeout Recording is played."
-msgstr ""
+msgstr "Destino a enviar la llamada después de reproducir grabación de Agotado."
 
 #: views/form.php:41
 msgid "Edit IVR: "
@@ -156,7 +184,7 @@ msgstr ""
 
 #: functions.inc.php:425
 msgid "Ext"
-msgstr ""
+msgstr "Extn"
 
 #: views/form.php:188
 msgid "Greeting to be played on entry to the IVR."
@@ -165,7 +193,7 @@ msgstr ""
 #: Ivr.class.php:15 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
 #: /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
-msgstr ""
+msgstr "IVR"
 
 #: views/form.php:164
 msgid "IVR DTMF Options"
@@ -173,15 +201,15 @@ msgstr ""
 
 #: views/form.php:145
 msgid "IVR Description"
-msgstr ""
+msgstr "Descripción de IVR"
 
 #: views/form.php:589
 msgid "IVR Entries"
-msgstr ""
+msgstr "Entradas IVR"
 
 #: views/form.php:111
 msgid "IVR General Options"
-msgstr ""
+msgstr "Opciones Generales de IVR"
 
 #: views/rnav.php:14
 msgid "IVR List"
@@ -189,17 +217,17 @@ msgstr ""
 
 #: page.ivr.php:46 views/form.php:121
 msgid "IVR Name"
-msgstr ""
+msgstr "Nombre de IVR"
 
 #: functions.inc.php:516 functions.inc.php:536
 #, php-format
 msgid "IVR: %s"
-msgstr ""
+msgstr "IVR : %s"
 
 #: functions.inc.php:483
 #, php-format
 msgid "IVR: %s / Option: %s"
-msgstr ""
+msgstr "IVR: %s / Opción: %s"
 
 #: views/form.php:582
 msgid ""
@@ -209,19 +237,19 @@ msgstr ""
 
 #: views/form.php:385
 msgid "Invalid Destination"
-msgstr ""
+msgstr "Destino invalido"
 
 #: views/form.php:359
 msgid "Invalid Recording"
-msgstr ""
+msgstr "Grabación Invalida"
 
 #: views/form.php:251
 msgid "Invalid Retries"
-msgstr ""
+msgstr "Reintentos Invalidos"
 
 #: views/form.php:275
 msgid "Invalid Retry Recording"
-msgstr ""
+msgstr "Reintento de grabación Invalido"
 
 #: views/rnav.php:2
 msgid "List IVRs"
@@ -243,18 +271,22 @@ msgstr ""
 #: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 #: views/form.php:83
 msgid "None"
-msgstr ""
+msgstr "Ninguno"
 
 #: views/form.php:421
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr ""
+"Numero de reintento cuando no se recibe DTMF en el IVR y la selección agota "
+"la espera."
 
 #: views/form.php:263
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
 msgstr ""
+"Numero de veces a reintentar cuando se recibe una selección invalida de "
+"parte del llamante"
 
 #: views/form.php:373 views/form.php:531
 msgid ""
@@ -262,18 +294,25 @@ msgid ""
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
 "unmatched responses (as determined by Invalid Retries)"
 msgstr ""
+"Mensaje que se reproducir antes de enviar la persona que llama a un destino "
+"alternativo debido ha  pulsando 0 o se recibió el máximo de respuestas no "
+"válidas (según lo determine reintentos inválidos)"
 
 #: views/form.php:447
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
 msgstr ""
+"Mensaje a reproducir cuando se agota un tiempo de espera, antes de pedir la "
+"persona que llama el volver a intentarlo"
 
 #: views/form.php:289
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
 msgstr ""
+"mensaje a reproducir cuando se recibe una respuesta no válida, antes de "
+"pedir al que llama volver a intentarlo"
 
 #: views/form.php:215
 msgid "Provides options for callers to direct dial an extension."
@@ -285,23 +324,23 @@ msgstr ""
 
 #: functions.inc.php:425
 msgid "Return"
-msgstr ""
+msgstr "Retorno"
 
 #: views/form.php:328
 msgid "Return on Invalid"
-msgstr ""
+msgstr "Retorno cuando Invalido"
 
 #: views/form.php:486
 msgid "Return on Timeout"
-msgstr ""
+msgstr "Retorno en agotado"
 
 #: functions.inc.php:425
 msgid "Return to IVR"
-msgstr ""
+msgstr "Volver al IVR"
 
 #: views/form.php:567
 msgid "Return to IVR after VM"
-msgstr ""
+msgstr "Retornar al IVR después de VM"
 
 #: Ivr.class.php:64
 msgid "Submit"
@@ -316,26 +355,31 @@ msgid ""
 "IVR destination to a desired Directory. You can install the Directory module "
 "from the Online Module Repository"
 msgstr ""
+"Hay %s IVR que tienen la marcación Directorio legado habilitado. Esto ha "
+"quedado obsoleto y será eliminado de versiones futuras. Usted debe convertir "
+"sus IVR para utilizar el módulo de directorio para esta funcionalidad y "
+"asignar un destino IVR aldirectorio deseado. Puede instalar el módulo de "
+"Directorio del Repositorio de Módulos Online"
 
 #: views/form.php:227
 msgid "Timeout"
-msgstr ""
+msgstr "Tiempo de espera"
 
 #: views/form.php:543
 msgid "Timeout Destination"
-msgstr ""
+msgstr "Destino Agotado"
 
 #: views/form.php:517
 msgid "Timeout Recording"
-msgstr ""
+msgstr "Grabación Agotada"
 
 #: views/form.php:409
 msgid "Timeout Retries"
-msgstr ""
+msgstr "Reintentos Agotados"
 
 #: views/form.php:433
 msgid "Timeout Retry Recording"
-msgstr ""
+msgstr "Reintento Grabación Agotado"
 
 #: views/entries.php:37 views/form.php:205 views/form.php:306
 #: views/form.php:333 views/form.php:464 views/form.php:491 views/form.php:572
@@ -346,23 +390,23 @@ msgstr ""
 #: /usr/src/freepbx/ivr/install.php:463 install.php:481
 #: /usr/src/freepbx/ivr/install.php:501 install.php:519
 msgid "added"
-msgstr ""
+msgstr "Añadido"
 
 #: install.php:174
 msgid "adding announcement_id field.."
-msgstr ""
+msgstr "Añadiendo campo announcement_id..."
 
 #: install.php:224
 msgid "already migrated"
-msgstr ""
+msgstr "Ya migrado."
 
 #: views/entries.php:20
 msgid "digits pressed"
-msgstr ""
+msgstr "Dígitos entrados"
 
 #: install.php:214
 msgid "dropping announcement field.."
-msgstr ""
+msgstr "Eliminando campo de anuncio..."
 
 #: install.php:178 /usr/src/freepbx/ivr/install.php:190 install.php:206
 #: /usr/src/freepbx/ivr/install.php:238 install.php:255
@@ -370,35 +414,35 @@ msgstr ""
 #: /usr/src/freepbx/ivr/install.php:478 install.php:498
 #: /usr/src/freepbx/ivr/install.php:516
 msgid "fatal error"
-msgstr ""
+msgstr "error fatal"
 
 #: install.php:186
 msgid "migrate to recording ids.."
-msgstr ""
+msgstr "Migrar a identificadores de grabación..."
 
 #: install.php:210
 #, php-format
 msgid "migrated %s entries"
-msgstr ""
+msgstr "Migrados %s elementos"
 
 #: install.php:173
 msgid "migrating"
-msgstr ""
+msgstr "migrando"
 
 #: install.php:218
 msgid "no announcement field???"
-msgstr ""
+msgstr "No hay campo de anuncio???"
 
 #: install.php:244 /usr/src/freepbx/ivr/install.php:261 install.php:279
 #: /usr/src/freepbx/ivr/install.php:466 install.php:484
 #: /usr/src/freepbx/ivr/install.php:504 install.php:522
 msgid "not needed"
-msgstr ""
+msgstr "No es necesario"
 
 #: install.php:181 /usr/src/freepbx/ivr/install.php:220
 msgid "ok"
-msgstr ""
+msgstr "ok"
 
 #: install.php:288
 msgid "posting notice about deprecated functionality"
-msgstr ""
+msgstr "Publicando anuncio acerca de funcionalidad obsoleta"
