@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-24 13:29-0800\n"
+"POT-Creation-Date: 2015-12-11 11:42-0800\n"
 "PO-Revision-Date: 2009-04-20 17:56+0100\n"
 "Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
 "Language-Team: Français <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgid ""
 "Asterisk to be running and have proper credentials"
 msgstr ""
 
-#: views/form.php:239
+#: views/form.php:240
 msgid "A value of 0 disables the timeout"
 msgstr ""
 
@@ -41,35 +41,35 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:3
+#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:8 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Ajouter IVR"
 
-#: views/form.php:316
+#: views/form.php:317
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
 
-#: views/form.php:474
+#: views/form.php:475
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
 
-#: views/form.php:239
+#: views/form.php:240
 msgid "Amount of time to be considered a timeout."
 msgstr ""
 
-#: views/form.php:174
+#: views/form.php:175
 msgid "Announcement"
 msgstr "Annonce"
 
-#: views/form.php:459
+#: views/form.php:460
 msgid "Append Announcement on Timeout"
 msgstr ""
 
-#: views/form.php:301
+#: views/form.php:302
 msgid "Append Announcement to Invalid"
 msgstr ""
 
@@ -77,7 +77,7 @@ msgstr ""
 msgid "Applications"
 msgstr ""
 
-#: views/form.php:501
+#: views/form.php:502
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -124,7 +124,7 @@ msgstr ""
 msgid "Checking if announcements need migration.."
 msgstr "Contrôle si les annonces ont besoin d'être migrées..."
 
-#: views/form.php:343
+#: views/form.php:344
 msgid ""
 "Choose yes to have this option return to a parent IVR if it was called from "
 "a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -144,7 +144,7 @@ msgid ""
 "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 msgstr ""
 
-#: views/form.php:64 views/form.php:70 views/form.php:76 views/form.php:82
+#: views/form.php:65 views/form.php:71 views/form.php:77 views/form.php:83
 msgid "Default"
 msgstr ""
 
@@ -161,7 +161,7 @@ msgstr ""
 msgid "Deprecated Directory used by %s IVRs"
 msgstr ""
 
-#: views/form.php:157
+#: views/form.php:158
 msgid "Description of this IVR"
 msgstr ""
 
@@ -169,15 +169,15 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
-#: views/form.php:397
+#: views/form.php:398
 msgid "Destination to send the call to after Invalid Recording is played"
 msgstr ""
 
-#: views/form.php:555
+#: views/form.php:556
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
-#: views/form.php:41
+#: views/form.php:42
 msgid "Edit IVR: "
 msgstr ""
 
@@ -185,7 +185,7 @@ msgstr ""
 msgid "Edit:"
 msgstr ""
 
-#: views/form.php:200
+#: views/form.php:201
 msgid "Enable Direct Dial"
 msgstr "Activer Numérotation Directe"
 
@@ -193,7 +193,7 @@ msgstr "Activer Numérotation Directe"
 msgid "Ext"
 msgstr ""
 
-#: views/form.php:188
+#: views/form.php:189
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
@@ -202,19 +202,19 @@ msgstr ""
 msgid "IVR"
 msgstr ""
 
-#: views/form.php:164
+#: views/form.php:165
 msgid "IVR DTMF Options"
 msgstr ""
 
-#: views/form.php:145
+#: views/form.php:146
 msgid "IVR Description"
 msgstr ""
 
-#: views/form.php:589
+#: views/form.php:590
 msgid "IVR Entries"
 msgstr ""
 
-#: views/form.php:111
+#: views/form.php:112
 msgid "IVR General Options"
 msgstr ""
 
@@ -222,7 +222,7 @@ msgstr ""
 msgid "IVR List"
 msgstr ""
 
-#: page.ivr.php:46 views/form.php:121
+#: page.ivr.php:46 views/form.php:122
 msgid "IVR Name"
 msgstr ""
 
@@ -236,25 +236,25 @@ msgstr ""
 msgid "IVR: %s / Option: %s"
 msgstr ""
 
-#: views/form.php:582
+#: views/form.php:583
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
 msgstr ""
 
-#: views/form.php:385
+#: views/form.php:386
 msgid "Invalid Destination"
 msgstr ""
 
-#: views/form.php:359
+#: views/form.php:360
 msgid "Invalid Recording"
 msgstr ""
 
-#: views/form.php:251
+#: views/form.php:252
 msgid "Invalid Retries"
 msgstr ""
 
-#: views/form.php:275
+#: views/form.php:276
 msgid "Invalid Retry Recording"
 msgstr ""
 
@@ -262,12 +262,12 @@ msgstr ""
 msgid "List IVRs"
 msgstr ""
 
-#: views/form.php:133
+#: views/form.php:134
 msgid "Name of this IVR"
 msgstr ""
 
-#: views/entries.php:39 views/form.php:207 views/form.php:308
-#: views/form.php:335 views/form.php:466 views/form.php:493 views/form.php:574
+#: views/entries.php:39 views/form.php:208 views/form.php:309
+#: views/form.php:336 views/form.php:467 views/form.php:494 views/form.php:575
 msgid "No"
 msgstr ""
 
@@ -275,42 +275,42 @@ msgstr ""
 msgid "No Astman, Not loading IVR"
 msgstr ""
 
-#: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
-#: views/form.php:83
+#: views/form.php:60 views/form.php:66 views/form.php:72 views/form.php:78
+#: views/form.php:84
 msgid "None"
 msgstr "Aucun"
 
-#: views/form.php:421
+#: views/form.php:422
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr ""
 
-#: views/form.php:263
+#: views/form.php:264
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
 msgstr ""
 
-#: views/form.php:373 views/form.php:531
+#: views/form.php:374 views/form.php:532
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
 "unmatched responses (as determined by Invalid Retries)"
 msgstr ""
 
-#: views/form.php:447
+#: views/form.php:448
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
 msgstr ""
 
-#: views/form.php:289
+#: views/form.php:290
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
 msgstr ""
 
-#: views/form.php:215
+#: views/form.php:216
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
@@ -322,11 +322,11 @@ msgstr ""
 msgid "Return"
 msgstr ""
 
-#: views/form.php:328
+#: views/form.php:329
 msgid "Return on Invalid"
 msgstr ""
 
-#: views/form.php:486
+#: views/form.php:487
 msgid "Return on Timeout"
 msgstr ""
 
@@ -334,7 +334,7 @@ msgstr ""
 msgid "Return to IVR"
 msgstr "Retourner à l'IVR"
 
-#: views/form.php:567
+#: views/form.php:568
 msgid "Return to IVR after VM"
 msgstr ""
 
@@ -352,28 +352,28 @@ msgid ""
 "from the Online Module Repository"
 msgstr ""
 
-#: views/form.php:227
+#: views/form.php:228
 msgid "Timeout"
 msgstr ""
 
-#: views/form.php:543
+#: views/form.php:544
 msgid "Timeout Destination"
 msgstr ""
 
-#: views/form.php:517
+#: views/form.php:518
 msgid "Timeout Recording"
 msgstr ""
 
-#: views/form.php:409
+#: views/form.php:410
 msgid "Timeout Retries"
 msgstr ""
 
-#: views/form.php:433
+#: views/form.php:434
 msgid "Timeout Retry Recording"
 msgstr ""
 
-#: views/entries.php:37 views/form.php:205 views/form.php:306
-#: views/form.php:333 views/form.php:464 views/form.php:491 views/form.php:572
+#: views/entries.php:37 views/form.php:206 views/form.php:307
+#: views/form.php:334 views/form.php:465 views/form.php:492 views/form.php:573
 msgid "Yes"
 msgstr ""
 
