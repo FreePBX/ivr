@@ -3,7 +3,8 @@
 //	Copyright 2015 Sangoma Technologies.
 //
 extract($request, EXTR_SKIP);
-if(action == 'add'){
+if($action == 'add'){
+	$ivr = array();
 	$heading = _("Add IVR");
 	$deet = array('id', 'name', 'description', 'announcement', 'directdial',
 				'invalid_loops', 'invalid_retry_recording',
