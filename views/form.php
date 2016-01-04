@@ -330,9 +330,9 @@ foreach ($hooks as $key => $value) {
 													<i class="fa fa-question-circle fpbx-help-icon" data-for="invalid_ivr_ret"></i>
 												</div>
 												<div class="col-md-9 radioset">
-													<input type="radio" name="invalid_ivr_ret" id="invalid_ivr_retyes" value="on" <?php echo ($ivr['invalid_append_announce']?"CHECKED":"") ?>>
+													<input type="radio" name="invalid_ivr_ret" id="invalid_ivr_retyes" value="on" <?php echo ($ivr['invalid_ivr_ret']?"CHECKED":"") ?>>
 													<label for="invalid_ivr_retyes"><?php echo _("Yes");?></label>
-													<input type="radio" name="invalid_ivr_ret" id="invalid_ivr_retno" value="" <?php echo ($ivr['invalid_append_announce']?"":"CHECKED") ?>>
+													<input type="radio" name="invalid_ivr_ret" id="invalid_ivr_retno" value="" <?php echo ($ivr['invalid_ivr_ret']?"":"CHECKED") ?>>
 													<label for="invalid_ivr_retno"><?php echo _("No");?></label>
 												</div>
 											</div>
