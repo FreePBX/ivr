@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-11 11:42-0800\n"
-"PO-Revision-Date: 2016-02-14 10:00+0200\n"
+"PO-Revision-Date: 2016-02-14 10:21+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/ivr/fa/>"
 "\n"
@@ -398,11 +398,11 @@ msgstr "فیلد لغو اطلاعیه.."
 #: /usr/src/freepbx/ivr/install.php:478 install.php:498
 #: /usr/src/freepbx/ivr/install.php:516
 msgid "fatal error"
-msgstr ""
+msgstr "خطا"
 
 #: install.php:186
 msgid "migrate to recording ids.."
-msgstr ""
+msgstr "مهاجرت به شناسه های ظبط شده.."
 
 #: install.php:210
 #, php-format
@@ -411,22 +411,22 @@ msgstr ""
 
 #: install.php:173
 msgid "migrating"
-msgstr ""
+msgstr "مهاجرت"
 
 #: install.php:218
 msgid "no announcement field???"
-msgstr ""
+msgstr "بدون فیلد اطلاعیه؟؟؟"
 
 #: install.php:244 /usr/src/freepbx/ivr/install.php:261 install.php:279
 #: /usr/src/freepbx/ivr/install.php:466 install.php:484
 #: /usr/src/freepbx/ivr/install.php:504 install.php:522
 msgid "not needed"
-msgstr ""
+msgstr "نیاز نیست"
 
 #: install.php:181 /usr/src/freepbx/ivr/install.php:220
 msgid "ok"
-msgstr ""
+msgstr "تایید"
 
 #: install.php:288
 msgid "posting notice about deprecated functionality"
-msgstr ""
+msgstr "ارسال هشدار برای توابع تکراری"
