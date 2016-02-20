@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-11 11:42-0800\n"
+"POT-Creation-Date: 2016-02-19 16:30-0800\n"
 "PO-Revision-Date: 2016-02-14 10:21+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
-"Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/ivr/fa/>"
-"\n"
-"Language: fa\n"
+"Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/ivr/fa/"
+">\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fa\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
@@ -29,7 +29,7 @@ msgstr ""
 "عدم برقراری ارتباط با استریسک. این ماژول نیاز دارز استریسک اجرا شده و شرایط "
 "لازم را داشته باشد"
 
-#: views/form.php:240
+#: views/advanced_form.php:135
 msgid "A value of 0 disables the timeout"
 msgstr "مقدار ۰ تایم اوت را غیرفعال میکند"
 
@@ -37,35 +37,39 @@ msgstr "مقدار ۰ تایم اوت را غیرفعال میکند"
 msgid "Actions"
 msgstr "عملیات"
 
+#: views/entries.php:66
+msgid "Add Another Entry"
+msgstr ""
+
 #: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:8 views/rnav.php:3
 msgid "Add IVR"
 msgstr "افزودن منو صوتی"
 
-#: views/form.php:317
+#: views/advanced_form.php:212
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr "پس از پخش ضبط سعی مجدد نامعتبر سیستم منو صوتی اصلی را مجدد پخش میکند"
 
-#: views/form.php:475
+#: views/advanced_form.php:370
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
 
-#: views/form.php:240
+#: views/advanced_form.php:135
 msgid "Amount of time to be considered a timeout."
 msgstr "مقدار زمانی درنظر گرفته شده برای وقفه."
 
-#: views/form.php:175
+#: views/advanced_form.php:70 views/simple_form.php:33
 msgid "Announcement"
 msgstr "اطلاعیه"
 
-#: views/form.php:460
+#: views/advanced_form.php:355
 msgid "Append Announcement on Timeout"
 msgstr "اعمال اطلاعیه برای وقفه"
 
-#: views/form.php:302
+#: views/advanced_form.php:197
 msgid "Append Announcement to Invalid"
 msgstr "اعمال اطلاعیه برای غیرمعتبر"
 
@@ -73,7 +77,7 @@ msgstr "اعمال اطلاعیه برای غیرمعتبر"
 msgid "Applications"
 msgstr "برنامه ها"
 
-#: views/form.php:502
+#: views/advanced_form.php:397
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -114,7 +118,11 @@ msgstr ""
 msgid "Checking if announcements need migration.."
 msgstr ""
 
-#: views/form.php:344
+#: functions.inc.php:425
+msgid "Choose a destination to route the call to"
+msgstr ""
+
+#: views/advanced_form.php:239
 msgid ""
 "Choose yes to have this option return to a parent IVR if it was called from "
 "a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -151,7 +159,7 @@ msgstr "حذف این ورودی.برای ذخیره تغییرات ارسال �
 msgid "Deprecated Directory used by %s IVRs"
 msgstr ""
 
-#: views/form.php:158
+#: views/advanced_form.php:53
 msgid "Description of this IVR"
 msgstr "شرح این منوی صوتی"
 
@@ -159,31 +167,35 @@ msgstr "شرح این منوی صوتی"
 msgid "Destination"
 msgstr "مقصد"
 
-#: views/form.php:398
+#: views/advanced_form.php:293
 msgid "Destination to send the call to after Invalid Recording is played"
 msgstr "داخلی که تماس بعد از اجرا منوی صوتی نامعتبر به آن ارسال میشود"
 
-#: views/form.php:556
+#: views/advanced_form.php:451
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "داخلی که تماس بعد از اجرای منوی صوتی وقفه به آن ارسال میشود."
+
+#: functions.inc.php:425
+msgid "Digits"
+msgstr ""
+
+#: functions.inc.php:425
+msgid "Digits the caller needs to dial to access said destination"
+msgstr ""
 
 #: views/form.php:42
 msgid "Edit IVR: "
 msgstr "ویرایش منوی صوتی ： "
 
-#: assets/js/ivr.js:137
+#: assets/js/ivr.js:144
 msgid "Edit:"
 msgstr "ویرایش ："
 
-#: views/form.php:201
+#: views/advanced_form.php:96
 msgid "Enable Direct Dial"
 msgstr "فعال سازی شماره گیری مستقیم"
 
-#: functions.inc.php:425
-msgid "Ext"
-msgstr "داخلی"
-
-#: views/form.php:189
+#: views/advanced_form.php:84 views/simple_form.php:47
 msgid "Greeting to be played on entry to the IVR."
 msgstr "پیام خوش آمد در هنگام ورود به منوی صوتی."
 
@@ -192,19 +204,19 @@ msgstr "پیام خوش آمد در هنگام ورود به منوی صوتی."
 msgid "IVR"
 msgstr "منوی صوتی"
 
-#: views/form.php:165
+#: views/advanced_form.php:60
 msgid "IVR DTMF Options"
 msgstr "گزینه های DTMF منوی صوتی"
 
-#: views/form.php:146
+#: views/advanced_form.php:41
 msgid "IVR Description"
 msgstr "شرح منوی صوتی"
 
-#: views/form.php:590
+#: views/advanced_form.php:485
 msgid "IVR Entries"
 msgstr "ورودی های منوی صوتی"
 
-#: views/form.php:112
+#: views/advanced_form.php:7
 msgid "IVR General Options"
 msgstr "گزینه های عمومی منوی صوتی"
 
@@ -212,39 +224,39 @@ msgstr "گزینه های عمومی منوی صوتی"
 msgid "IVR List"
 msgstr "فهرست منوی صوتی"
 
-#: page.ivr.php:46 views/form.php:122
+#: page.ivr.php:46 views/advanced_form.php:17 views/simple_form.php:8
 msgid "IVR Name"
 msgstr "نام منوی صوتی"
 
-#: functions.inc.php:516 functions.inc.php:536
+#: functions.inc.php:517 functions.inc.php:537
 #, php-format
 msgid "IVR: %s"
 msgstr "منوی صوتی ： %s"
 
-#: functions.inc.php:483
+#: functions.inc.php:484
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr ""
 
-#: views/form.php:583
+#: views/advanced_form.php:478
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
 msgstr ""
 
-#: views/form.php:386
+#: views/advanced_form.php:281
 msgid "Invalid Destination"
 msgstr "مقصد نامعتبر"
 
-#: views/form.php:360
+#: views/advanced_form.php:255
 msgid "Invalid Recording"
 msgstr "پیام ظبط شده نامعتبر"
 
-#: views/form.php:252
+#: views/advanced_form.php:147
 msgid "Invalid Retries"
 msgstr "تلاش مجدد نامعتبر"
 
-#: views/form.php:276
+#: views/advanced_form.php:171
 msgid "Invalid Retry Recording"
 msgstr "تلاش مجدد پیام ظبط شده نامعتبر"
 
@@ -252,12 +264,14 @@ msgstr "تلاش مجدد پیام ظبط شده نامعتبر"
 msgid "List IVRs"
 msgstr "فهرست منوهای صوتی"
 
-#: views/form.php:134
+#: views/advanced_form.php:29 views/simple_form.php:20
 msgid "Name of this IVR"
 msgstr "نام این منوی صوتی"
 
-#: views/entries.php:39 views/form.php:208 views/form.php:309
-#: views/form.php:336 views/form.php:467 views/form.php:494 views/form.php:575
+#: views/advanced_form.php:103 views/advanced_form.php:204
+#: views/advanced_form.php:231 views/advanced_form.php:362
+#: views/advanced_form.php:389 views/advanced_form.php:470
+#: views/entries.php:39
 msgid "No"
 msgstr "خیر"
 
@@ -270,32 +284,32 @@ msgstr ""
 msgid "None"
 msgstr "هیچ"
 
-#: views/form.php:422
+#: views/advanced_form.php:317
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr "تعداد دفعات تکرار زمان شناسایی نشدن DTMF و وقفه در انتخاب منوی صوتی."
 
-#: views/form.php:264
+#: views/advanced_form.php:159
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
 msgstr "تعداد دفعات تکرار برای شماره نامعتبر  دریافتی از تماس گیرنده"
 
-#: views/form.php:374 views/form.php:532
+#: views/advanced_form.php:269 views/advanced_form.php:427
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
 "unmatched responses (as determined by Invalid Retries)"
 msgstr ""
 
-#: views/form.php:448
+#: views/advanced_form.php:343
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
 msgstr ""
 "درخواست برای پخش در هنگام ایجاد وقفه, قبل از درخواست تلاش مجدد از تماس گیرنده"
 
-#: views/form.php:290
+#: views/advanced_form.php:185
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
@@ -303,7 +317,7 @@ msgstr ""
 "درخواست پخش مجدد در هنگام دریافت ورودی نامعتبر, قبل از درخواست تلاش مجدد از "
 "تماس گیرنده"
 
-#: views/form.php:216
+#: views/advanced_form.php:111
 msgid "Provides options for callers to direct dial an extension."
 msgstr "ایجاد گزینه برای تماس مستقیم به یک داخلی."
 
@@ -315,21 +329,21 @@ msgstr "بازنشانی"
 msgid "Return"
 msgstr "بازگشت"
 
-#: views/form.php:329
+#: views/advanced_form.php:224
 msgid "Return on Invalid"
 msgstr "بازگشت برای ورود نامعتبر"
 
-#: views/form.php:487
+#: views/advanced_form.php:382
 msgid "Return on Timeout"
 msgstr "بازگشت برای وقفه"
 
-#: functions.inc.php:425
-msgid "Return to IVR"
-msgstr "بازگشت به منوی صوتی"
-
-#: views/form.php:568
+#: views/advanced_form.php:463
 msgid "Return to IVR after VM"
 msgstr "بازگشت به منوی صوتی پس از صندوق صوتی"
+
+#: functions.inc.php:425
+msgid "Return to this IVR when finished"
+msgstr ""
 
 #: Ivr.class.php:64
 msgid "Submit"
@@ -345,28 +359,38 @@ msgid ""
 "from the Online Module Repository"
 msgstr ""
 
-#: views/form.php:228
+#: views/advanced_form.php:123
 msgid "Timeout"
 msgstr "وقفه"
 
-#: views/form.php:544
+#: views/advanced_form.php:439
 msgid "Timeout Destination"
 msgstr "وقفه در مقصد"
 
-#: views/form.php:518
+#: views/advanced_form.php:413
 msgid "Timeout Recording"
 msgstr "وقفه در ضبط"
 
-#: views/form.php:410
+#: views/advanced_form.php:305
 msgid "Timeout Retries"
 msgstr "وقفه در تلاش مجدد"
 
-#: views/form.php:434
+#: views/advanced_form.php:329
 msgid "Timeout Retry Recording"
 msgstr "وقفه در ظبط مجدد"
 
-#: views/entries.php:37 views/form.php:206 views/form.php:307
-#: views/form.php:334 views/form.php:465 views/form.php:492 views/form.php:573
+#: assets/js/ivr.js:72
+msgid "Unable to delete the first entry. Please edit instead"
+msgstr ""
+
+#: assets/js/ivr.js:68
+msgid "Unable to delete the last entry"
+msgstr ""
+
+#: views/advanced_form.php:101 views/advanced_form.php:202
+#: views/advanced_form.php:229 views/advanced_form.php:360
+#: views/advanced_form.php:387 views/advanced_form.php:468
+#: views/entries.php:37
 msgid "Yes"
 msgstr "بله"
 
@@ -430,3 +454,9 @@ msgstr "تایید"
 #: install.php:288
 msgid "posting notice about deprecated functionality"
 msgstr "ارسال هشدار برای توابع تکراری"
+
+#~ msgid "Ext"
+#~ msgstr "داخلی"
+
+#~ msgid "Return to IVR"
+#~ msgstr "بازگشت به منوی صوتی"
