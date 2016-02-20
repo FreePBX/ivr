@@ -20,12 +20,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-11 11:42-0800\n"
-"PO-Revision-Date: 2009-04-20 17:56+0100\n"
-"Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
-"Language-Team: Français <LL@li.org>\n"
+"PO-Revision-Date: 2016-02-04 23:22+0200\n"
+"Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
+"Language-Team: French "
+"<http://weblate.freepbx.org/projects/freepbx/ivr/fr_FR/>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: page.ivr.php:18
 msgid ""
@@ -39,7 +43,7 @@ msgstr ""
 
 #: page.ivr.php:47
 msgid "Actions"
-msgstr ""
+msgstr "Actions"
 
 #: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:8 views/rnav.php:3
 msgid "Add IVR"
@@ -63,7 +67,7 @@ msgstr ""
 
 #: views/form.php:175
 msgid "Announcement"
-msgstr "Annonce"
+msgstr ""
 
 #: views/form.php:460
 msgid "Append Announcement on Timeout"
@@ -146,7 +150,7 @@ msgstr ""
 
 #: views/form.php:65 views/form.php:71 views/form.php:77 views/form.php:83
 msgid "Default"
-msgstr ""
+msgstr "Par défaut"
 
 #: Ivr.class.php:54 functions.inc.php:425
 msgid "Delete"
@@ -155,6 +159,8 @@ msgstr "Supprimer"
 #: views/entries.php:45
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
 msgstr ""
+"Supprimer cette entrée. N'oubliez pas de cliquer Soumette pour sauvegarder "
+"les changements !"
 
 #: install.php:287
 #, php-format
@@ -163,11 +169,11 @@ msgstr ""
 
 #: views/form.php:158
 msgid "Description of this IVR"
-msgstr ""
+msgstr "Description de ce IVR"
 
 #: functions.inc.php:425
 msgid "Destination"
-msgstr ""
+msgstr "Destination"
 
 #: views/form.php:398
 msgid "Destination to send the call to after Invalid Recording is played"
@@ -179,11 +185,11 @@ msgstr ""
 
 #: views/form.php:42
 msgid "Edit IVR: "
-msgstr ""
+msgstr "Éditer le IVR : "
 
 #: assets/js/ivr.js:137
 msgid "Edit:"
-msgstr ""
+msgstr "Éditer :"
 
 #: views/form.php:201
 msgid "Enable Direct Dial"
@@ -200,7 +206,7 @@ msgstr ""
 #: Ivr.class.php:15 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
 #: /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
-msgstr ""
+msgstr "IVR"
 
 #: views/form.php:165
 msgid "IVR DTMF Options"
@@ -220,21 +226,21 @@ msgstr ""
 
 #: views/rnav.php:14
 msgid "IVR List"
-msgstr ""
+msgstr "Liste des IVRs"
 
 #: page.ivr.php:46 views/form.php:122
 msgid "IVR Name"
-msgstr ""
+msgstr "Nom du IVR"
 
 #: functions.inc.php:516 functions.inc.php:536
 #, php-format
 msgid "IVR: %s"
-msgstr ""
+msgstr "IVR : %s"
 
 #: functions.inc.php:483
 #, php-format
 msgid "IVR: %s / Option: %s"
-msgstr ""
+msgstr "IVR : %s / Option : %s"
 
 #: views/form.php:583
 msgid ""
@@ -260,16 +266,16 @@ msgstr ""
 
 #: views/rnav.php:2
 msgid "List IVRs"
-msgstr ""
+msgstr "Liste des IVRs"
 
 #: views/form.php:134
 msgid "Name of this IVR"
-msgstr ""
+msgstr "Nom de ce IVR"
 
 #: views/entries.php:39 views/form.php:208 views/form.php:309
 #: views/form.php:336 views/form.php:467 views/form.php:494 views/form.php:575
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
@@ -316,11 +322,11 @@ msgstr ""
 
 #: Ivr.class.php:59
 msgid "Reset"
-msgstr ""
+msgstr "Réinitialiser"
 
 #: functions.inc.php:425
 msgid "Return"
-msgstr ""
+msgstr "Retour"
 
 #: views/form.php:329
 msgid "Return on Invalid"
@@ -340,7 +346,7 @@ msgstr ""
 
 #: Ivr.class.php:64
 msgid "Submit"
-msgstr ""
+msgstr "Soumettre"
 
 #: install.php:286
 #, php-format
@@ -375,7 +381,7 @@ msgstr ""
 #: views/entries.php:37 views/form.php:206 views/form.php:307
 #: views/form.php:334 views/form.php:465 views/form.php:492 views/form.php:573
 msgid "Yes"
-msgstr ""
+msgstr "Oui"
 
 #: install.php:241 /usr/src/freepbx/ivr/install.php:258 install.php:276
 #: /usr/src/freepbx/ivr/install.php:463 install.php:481
@@ -432,7 +438,7 @@ msgstr "pas nécessaire"
 
 #: install.php:181 /usr/src/freepbx/ivr/install.php:220
 msgid "ok"
-msgstr ""
+msgstr "ok"
 
 #: install.php:288
 msgid "posting notice about deprecated functionality"
