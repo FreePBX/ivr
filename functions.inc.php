@@ -422,11 +422,11 @@ function ivr_save_entries($id, $entries){
 
 //draw uvr entires table header
 function ivr_draw_entries_table_header_ivr() {
-	return  array(_('Ext'), _('Destination'), fpbx_label(_('Return'), _('Return to IVR')), _('Delete'));
+	return  array(fpbx_label(_('Digits'),_("Digits the caller needs to dial to access said destination")), fpbx_label(_('Destination'),_("Choose a destination to route the call to")), fpbx_label(_('Return'), _('Return to this IVR when finished')), _('Delete'));
 }
 
 //draw actualy entires
-function ivr_draw_entries($id){
+function ivr_draw_entries($id,$restrict_mods=false){
 	$headers		= mod_func_iterator('draw_entries_table_header_ivr');
 	$ivr_entries	= ivr_get_entries($id);
 
@@ -446,7 +446,8 @@ function ivr_draw_entries($id){
 	return load_view(dirname(__FILE__) . '/views/entries.php',
 				array(
 					'headers'	=> $headers,
-					'entries'	=>  $entries
+					'entries'	=>  $entries,
+					'restrict_mods' => $restrict_mods
 				)
 			);
 

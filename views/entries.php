@@ -24,9 +24,9 @@ foreach ($entries as $e) {
 
 	//add destination. The last one gets a different count so that we can manipualte it on the page
 	if ($count == count($entries)) {
-		$row[] = drawselects($e['dest'], 'DESTID', false, false) . form_hidden('entries[goto][]', '');
+		$row[] = drawselects($e['dest'], 'DESTID', $restrict_mods, false) . form_hidden('entries[goto][]', '');
 	} else {
-		$row[] = drawselects($e['dest'], $count, false, false) . form_hidden('entries[goto][]', '');
+		$row[] = drawselects($e['dest'], $count, $restrict_mods, false) . form_hidden('entries[goto][]', '');
 	}
 
 
@@ -63,7 +63,7 @@ foreach ($entries as $e) {
 
 $ret = '';
 $ret .= $table->generate();
-$ret .= '<a class="IVREntries" href="#" id="add_entrie"><i class="fa fa-plus"></i></a>';
+$ret .= '<a class="IVREntries" href="#" id="add_entrie"><i class="fa fa-plus"></i>'._('Add Another Entry').'</a>';
 
 
 echo $ret;

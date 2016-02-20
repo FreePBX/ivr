@@ -17,9 +17,8 @@ $(document).ready(function(){
 		//remove the last blank field so that it isnt subject to validation, assuming it wasnt set
 		//called from .click() as that is fired before validation
 		last = $('#ivr_entries > tbody:last').find('tr:last');
-		if(last.find('input[name="entries[ext][]"]').val() == ''
-			&& last.find('.destdropdown').val() == ''){
-			last.remove()
+		if(last.find('input[name="entries[ext][]"]').val() === '' && last.find('.destdropdown').val() === ''){
+			last.remove();
 		}
 	});
 	if($('form[name=frm_ivr]').length > 0){
@@ -44,7 +43,7 @@ $(document).ready(function(){
 
 			//set goto fileds for destinations
 			$('[name^=goto]').each(function(){
-				num = $(this).attr('name').replace('goto', '');
+				num = $(this).prop('name').replace('goto', '');
 				dest = $('[name=' + $(this).val() + num + ']').val();
 				$(this).parent().find('input[name="entries[goto][]"]').val(dest);
 				//console.log(num, dest, $(this).parent().find('input[name="entries[goto][]"]').val())
@@ -52,19 +51,27 @@ $(document).ready(function(){
 
 			//set ret_ivr checkboxes to SOMETHING so that they get sent back
 			$('[name="entries[ivr_ret][]"]').not(':checked').each(function(){
-				$(this).attr('checked', 'checked').val('uncheked');
+				$(this).prop('checked', true).val('uncheked');
 			});
 
 			//disable dests so that they dont get posted
-			$('.destdropdown, .destdropdown2').attr("disabled", "disabled");
+			$('.destdropdown, .destdropdown2').prop("disabled", true);
 
 			setTimeout(restore_form_elemens, 100);
-		}
+		};
 	}
 
 	//delete rows on click
-	$('.delete_entrie').live('click', function(e){
+	$(document).on('click','.delete_entrie', function(e){
 		e.preventDefault();
+		if($("#ivr_entries tr").length == 2) {
+			alert(_("Unable to delete the last entry"));
+			return;
+		}
+		if($(this).closest('tr').index() === 0) {
+			alert(_("Unable to delete the first entry. Please edit instead"));
+			return;
+		}
 		$(this).closest('tr').fadeOut('normal', function(){$(this).closest('tr').remove();});
 	});
 
@@ -76,7 +83,7 @@ $(document).ready(function(){
 });
 
 function restore_form_elemens() {
-	$('.destdropdown, .destdropdown2').removeAttr('disabled');
+	$('.destdropdown, .destdropdown2').prop('disabled',false);
 	$('[name="entries[ivr_ret][]"][value=uncheked]').each(function(){
 		$(this).removeAttr('checked');
 	});
@@ -90,17 +97,17 @@ function invalid_elements() {
 	var invalid_element_tr = invalid_elements.parent().parent();
 	switch ($('#invalid_loops').val()) {
 		case 'disabled':
-			invalid_elements.attr('disabled', 'disabled');
+			invalid_elements.prop('disabled', true);
 			invalid_element_tr.hide();
 			break;
 		case '0':
-			invalid_elements.removeAttr('disabled');
+			invalid_elements.prop('disabled',false);
 			invalid_element_tr.show();
 			$('#invalid_retry_recording').parent().parent().hide();
 			$('#invalid_append_announce').parent().parent().hide();
 			break;
 		default:
-			invalid_elements.removeAttr('disabled');
+			invalid_elements.prop('disabled',false);
 			invalid_element_tr.show();
 			break;
 	}
@@ -112,17 +119,17 @@ function timeout_elements() {
 	var timeout_element_tr = timeout_elements.parent().parent();
 	switch ($('#timeout_loops').val()) {
 		case 'disabled':
-			timeout_elements.attr('disabled', 'disabled');
+			timeout_elements.prop('disabled', true);
 			timeout_element_tr.hide();
 			break;
 		case '0':
-			timeout_elements.removeAttr('disabled');
+			timeout_elements.prop('disabled',false);
 			timeout_element_tr.show();
 			$('#timeout_retry_recording').parent().parent().hide();
 			$('#timeout_append_announce').parent().parent().hide();
 			break;
 		default:
-			timeout_elements.removeAttr('disabled');
+			timeout_elements.prop('disabled',false);
 			timeout_element_tr.show();
 			break;
 	}

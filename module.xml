@@ -34,7 +34,7 @@
 		*2.9.0.0* #1798, #4655
 	</changelog>
 	<depends>
-		<version>13.0.6</version>
+		<version>13.0.70</version>
 		<module>recordings</module>
 	</depends>
 	<menuitems>
