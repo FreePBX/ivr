@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 16:30-0800\n"
+"POT-Creation-Date: 2016-02-22 11:55-0800\n"
 "PO-Revision-Date: 2015-05-02 11:38+0200\n"
 "Last-Translator: Renato <fiuza@tecnologia.inf.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -21,6 +21,10 @@ msgstr ""
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: BRAZIL\n"
 "X-Poedit-SourceCharset: utf-8\n"
+
+#: Ivr.class.php:158
+msgid "A PHP extension stopped the file upload"
+msgstr ""
 
 #: page.ivr.php:18
 msgid ""
@@ -80,6 +84,18 @@ msgstr ""
 msgid "Applications"
 msgstr "Aplicações"
 
+#: assets/js/ivr.js:28
+msgid "Are you sure you don't want a recording for this announcement?"
+msgstr ""
+
+#: views/simple_form.php:39
+msgid "Browse"
+msgstr ""
+
+#: Ivr.class.php:162
+msgid "Can Not Find Uploaded Files"
+msgstr ""
+
 #: views/advanced_form.php:397
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
@@ -127,7 +143,7 @@ msgstr "Verificando por timeout_ivr_ret.."
 msgid "Checking if announcements need migration.."
 msgstr "Verificando se os anúncios precisam ser migrados..."
 
-#: functions.inc.php:425
+#: functions.inc.php:444
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -159,9 +175,13 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ivr.class.php:54 functions.inc.php:425
+#: Ivr.class.php:69 functions.inc.php:444
 msgid "Delete"
 msgstr "Apagar"
+
+#: assets/js/ivr.js:302
+msgid "Delete Recording"
+msgstr ""
 
 #: views/entries.php:45
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
@@ -177,7 +197,7 @@ msgstr "Diretório Descontinuado usado por URAs %s"
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:425
+#: functions.inc.php:444
 msgid "Destination"
 msgstr "Destino"
 
@@ -190,19 +210,23 @@ msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Destino para enviar a chamada após Gravação de Tempo Esgotado ser tocada."
 
-#: functions.inc.php:425
+#: functions.inc.php:444
 msgid "Digits"
 msgstr ""
 
-#: functions.inc.php:425
+#: functions.inc.php:444
 msgid "Digits the caller needs to dial to access said destination"
+msgstr ""
+
+#: views/simple_form.php:46
+msgid "Drop Annoucement Recording Here"
 msgstr ""
 
 #: views/form.php:42
 msgid "Edit IVR: "
 msgstr ""
 
-#: assets/js/ivr.js:144
+#: assets/js/ivr.js:155
 msgid "Edit:"
 msgstr ""
 
@@ -210,11 +234,19 @@ msgstr ""
 msgid "Enable Direct Dial"
 msgstr "Habilitar discagem direta"
 
-#: views/advanced_form.php:84 views/simple_form.php:47
+#: Ivr.class.php:155
+msgid "Failed to write file to disk"
+msgstr ""
+
+#: views/advanced_form.php:84 views/simple_form.php:97
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
-#: Ivr.class.php:15 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: views/simple_form.php:76 assets/js/ivr.js:337 assets/js/ivr.js:345
+msgid "Hit the red record button to start recording from your browser"
+msgstr ""
+
+#: Ivr.class.php:30 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
 #: /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "URA"
@@ -243,15 +275,19 @@ msgstr ""
 msgid "IVR Name"
 msgstr "Nome"
 
-#: functions.inc.php:517 functions.inc.php:537
+#: functions.inc.php:536 functions.inc.php:556
 #, php-format
 msgid "IVR: %s"
 msgstr "URA: %s"
 
-#: functions.inc.php:484
+#: functions.inc.php:503
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "URA: %s / Opção: %s"
+
+#: assets/js/ivr.js:22
+msgid "IVRs require a valid name"
+msgstr ""
 
 #: views/advanced_form.php:478
 msgid ""
@@ -279,6 +315,10 @@ msgstr "Gravação Tentativa Inválida"
 msgid "List IVRs"
 msgstr ""
 
+#: Ivr.class.php:152
+msgid "Missing a temporary folder"
+msgstr ""
+
 #: views/advanced_form.php:29 views/simple_form.php:20
 msgid "Name of this IVR"
 msgstr ""
@@ -292,6 +332,10 @@ msgstr ""
 
 #: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
+msgstr ""
+
+#: Ivr.class.php:149
+msgid "No file was uploaded"
 msgstr ""
 
 #: views/form.php:60 views/form.php:66 views/form.php:72 views/form.php:78
@@ -344,11 +388,20 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: Ivr.class.php:59
+#: functions.inc.php:333
+#, php-format
+msgid "Recording created for IVR named '%s'"
+msgstr ""
+
+#: assets/js/ivr.js:377
+msgid "Recording..."
+msgstr ""
+
+#: Ivr.class.php:74
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:425
+#: functions.inc.php:444
 msgid "Return"
 msgstr "Retornar"
 
@@ -364,12 +417,30 @@ msgstr "Retorno Quando Tempo Esgotado"
 msgid "Return to IVR after VM"
 msgstr "Retorna para URA após Caixa Postal"
 
-#: functions.inc.php:425
+#: functions.inc.php:444
 msgid "Return to this IVR when finished"
 msgstr ""
 
-#: Ivr.class.php:64
+#: assets/js/ivr.js:302
+msgid "Save Recording"
+msgstr ""
+
+#: Ivr.class.php:79
 msgid "Submit"
+msgstr ""
+
+#: Ivr.class.php:143
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr ""
+
+#: Ivr.class.php:140
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr ""
+
+#: Ivr.class.php:146
+msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
 #: install.php:286
@@ -407,12 +478,42 @@ msgstr "Tempo Esgotado Tentativas"
 msgid "Timeout Retry Recording"
 msgstr "Tempo Esgotado Gravação de Tentativa"
 
-#: assets/js/ivr.js:72
+#: views/simple_form.php:80
+#, php-format
+msgid ""
+"To play the media you will need to either update your browser to a recent "
+"version or update your %s"
+msgstr ""
+
+#: assets/js/ivr.js:83
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr ""
 
-#: assets/js/ivr.js:68
+#: assets/js/ivr.js:79
 msgid "Unable to delete the last entry"
+msgstr ""
+
+#: Ivr.class.php:116
+msgid "Unknown Error"
+msgstr ""
+
+#: Ivr.class.php:135
+msgid "Unsupported file format"
+msgstr ""
+
+#: assets/js/ivr.js:182
+msgid "Unsupported file type"
+msgstr ""
+
+#: views/simple_form.php:79
+msgid "Update Required"
+msgstr ""
+
+#: views/simple_form.php:97
+#, php-format
+msgid ""
+"Upload files from your local system. Supported upload formats are: %s. This "
+"includes archives (that include multiple files) and multiple files"
 msgstr ""
 
 #: views/advanced_form.php:101 views/advanced_form.php:202
@@ -420,6 +521,10 @@ msgstr ""
 #: views/advanced_form.php:387 views/advanced_form.php:468
 #: views/entries.php:37
 msgid "Yes"
+msgstr ""
+
+#: assets/js/ivr.js:381
+msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 
 #: install.php:241 /usr/src/freepbx/ivr/install.php:258 install.php:276
