@@ -6,3 +6,43 @@
 #add_entrie {
 	font-size: 200%
 }
+#dropzone {
+	height: 100px;
+	border: 3px dotted #CCC;
+	background-color: #F5F5F5;
+	border-radius: 10px;
+	margin-top: 5px;
+	.message {
+		margin-top: 31px;
+		height: 100%;
+		text-align: center;
+		font-weight: bold;
+		font-size: 150%;
+	}
+}
+#upload-progress {
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+#dropzone.activate {
+	border-color: black;
+	.message {
+		opacity: .5;
+	}
+}
+
+#record {
+	color: red;
+}
+
+.jp-controls.recording {
+	#record {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 2s;
+		-webkit-animation-iteration-count: infinite;
+		width: 22px; /* weird browser issues */
+	}
+	.fa.jp-play:before {
+		content: "\f04d";
+	}
+}

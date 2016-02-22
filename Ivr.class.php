@@ -1,6 +1,21 @@
 <?php
 namespace FreePBX\modules;
 class Ivr extends \FreePBX_Helpers implements \BMO {
+	private $temp = null;
+	private $db = null;
+	public function __construct($freepbx = null) {
+		if ($freepbx == null) {
+			throw new Exception("Not given a FreePBX Object");
+		}
+
+		$this->FreePBX = $freepbx;
+		$this->db = $freepbx->Database;
+		$this->temp = $this->FreePBX->Config->get("ASTSPOOLDIR") . "/tmp";
+		if(!file_exists($this->temp)) {
+			mkdir($this->temp,0777,true);
+		}
+	}
+
 	public function install() {}
 	public function uninstall() {}
 	public function backup() {}
@@ -80,6 +95,8 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 	public function ajaxRequest($req, &$setting) {
 	switch ($req) {
 		case 'getJSON':
+		case "savebrowserrecording":
+		case 'upload':
 			return true;
 		break;
 		default:
@@ -89,6 +106,61 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 }
 public function ajaxHandler(){
 	switch ($_REQUEST['command']) {
+		case "savebrowserrecording":
+			if ($_FILES["file"]["error"] == UPLOAD_ERR_OK) {
+				$time = time().rand(1,1000);
+				$filename = basename($_REQUEST['filename'])."-".$time.".wav";
+				move_uploaded_file($_FILES["file"]["tmp_name"], $this->temp."/".$filename);
+				return array("status" => true, "filename" => $_REQUEST['filename'], "localfilename" => $filename);
+			}	else {
+				return array("status" => false, "message" => _("Unknown Error"));
+			}
+		break;
+		case "upload":
+			foreach ($_FILES["files"]["error"] as $key => $error) {
+				switch($error) {
+					case UPLOAD_ERR_OK:
+						$extension = pathinfo($_FILES["files"]["name"][$key], PATHINFO_EXTENSION);
+						$extension = strtolower($extension);
+						$supported = $this->FreePBX->Media->getSupportedFormats();
+						if(in_array($extension,$supported['in'])) {
+							$tmp_name = $_FILES["files"]["tmp_name"][$key];
+							$dname = \Media\Media::cleanFileName($_FILES["files"]["name"][$key]);
+							$dname = pathinfo($dname,PATHINFO_FILENAME);
+							$id = time().rand(1,1000);
+							$name = $dname . '-' . $id . '.' . $extension;
+							move_uploaded_file($tmp_name, $this->temp."/".$name);
+							return array("status" => true, "filename" => pathinfo($dname,PATHINFO_FILENAME), "localfilename" => $name, "id" => $id);
+						} else {
+							return array("status" => false, "message" => _("Unsupported file format"));
+							break;
+						}
+					break;
+					case UPLOAD_ERR_INI_SIZE:
+						return array("status" => false, "message" => _("The uploaded file exceeds the upload_max_filesize directive in php.ini"));
+					break;
+					case UPLOAD_ERR_FORM_SIZE:
+						return array("status" => false, "message" => _("The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form"));
+					break;
+					case UPLOAD_ERR_PARTIAL:
+						return array("status" => false, "message" => _("The uploaded file was only partially uploaded"));
+					break;
+					case UPLOAD_ERR_NO_FILE:
+						return array("status" => false, "message" => _("No file was uploaded"));
+					break;
+					case UPLOAD_ERR_NO_TMP_DIR:
+						return array("status" => false, "message" => _("Missing a temporary folder"));
+					break;
+					case UPLOAD_ERR_CANT_WRITE:
+						return array("status" => false, "message" => _("Failed to write file to disk"));
+					break;
+					case UPLOAD_ERR_EXTENSION:
+						return array("status" => false, "message" => _("A PHP extension stopped the file upload"));
+					break;
+				}
+			}
+			return array("status" => false, "message" => _("Can Not Find Uploaded Files"));
+		break;
 		case 'getJSON':
 			switch ($_REQUEST['jdata']) {
 				case 'grid':

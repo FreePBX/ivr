@@ -321,6 +321,25 @@ function ivr_configprocess(){
 		foreach($get_var as $var){
 			$vars[$var] = isset($_REQUEST[$var]) 	? $_REQUEST[$var]		: '';
 		}
+		if(!isset($_REQUEST['announcement'])) {
+			if(isset($_REQUEST['announcementrecording'])) {
+				$filepath = FreePBX::Config()->get("ASTSPOOLDIR") . "/tmp/".$_REQUEST['announcementrecording'];
+				$soundspath = FreePBX::Config()->get("ASTVARLIBDIR")."/sounds";
+				$codec = "wav";
+				if(file_exists($filepath)) {
+					FreePBX::Media()->load($filepath);
+					$filename = "ivr-".$vars['name']."-recording-".time();
+					FreePBX::Media()->convert($soundspath."/en/custom/".$filename.".".$codec);
+					$id = FreePBX::Recordings()->addRecording("ivr-".$vars['name']."-recording-".time(),sprintf(_("Recording created for IVR named '%s'"),$vars['name']),"custom/".$filename);
+					$vars['announcement'] = $id;
+				} else {
+					$vars['announcement'] = '';
+				}
+			} else {
+				$vars['announcement'] = '';
+			}
+		}
+
 		$vars['timeout_append_announce'] = empty($vars['timeout_append_announce']) ? '0' : '1';
 		$vars['invalid_append_announce'] = empty($vars['invalid_append_announce']) ? '0' : '1';
 		$vars['timeout_ivr_ret'] = empty($vars['timeout_ivr_ret']) ? '0' : '1';

@@ -1,3 +1,4 @@
+var announcementRecording = null, recording = false, soundBlob = null;
 $(document).ready(function(){
 	//on load, hide elememnts that may need to be hidden
 	invalid_elements();
@@ -13,18 +14,28 @@ $(document).ready(function(){
 		bind_dests_double_selects();
 	});
 
-	$('input[type=submit]').click(function(){
-		//remove the last blank field so that it isnt subject to validation, assuming it wasnt set
-		//called from .click() as that is fired before validation
-		last = $('#ivr_entries > tbody:last').find('tr:last');
-		if(last.find('input[name="entries[ext][]"]').val() === '' && last.find('.destdropdown').val() === ''){
-			last.remove();
-		}
-	});
 	if($('form[name=frm_ivr]').length > 0){
 		//fix for popovers because jquery wont bubble up a real "submit()" correctly.
-		//See FREEPBX-8122 for more information
+		//See http://issues.freepbx.org/browse/FREEPBX-8122 for more information
 		$('form[name=frm_ivr]')[0].onsubmit = function() {
+			if($("#name").val() === "") {
+				return warnInvalid($("#name"),_("IVRs require a valid name"));
+			}
+			if($("#fileupload-container").length) {
+				if(announcementRecording !== null) {
+					$('#frm_ivr').append('<input type="hidden" name="announcementrecording" value="'+announcementRecording+'" />');
+				} else {
+					if(!confirm(_("Are you sure you don't want a recording for this announcement?"))) {
+						return false;
+					}
+				}
+			}
+			//remove the last blank field so that it isnt subject to validation, assuming it wasnt set
+			//called from .click() as that is fired before validation
+			last = $('#ivr_entries > tbody:last').find('tr:last');
+			if(last.find('input[name="entries[ext][]"]').val() === '' && last.find('.destdropdown').val() === ''){
+				last.remove();
+			}
 			//set timeout/invalid destination, removing hidden field if there is no valus being set
 			if ($('#invalid_loops').val() != 'disabled') {
 				invalid = $('[name=' + $('[name=gotoinvalid]').val() + 'invalid]').val();
@@ -144,3 +155,231 @@ function bnavFormatter(value){
 	var html = '<a href="?display=ivr&action=edit&id='+value[0]+'"><i class="fa fa-pencil"></i>&nbsp;'+_("Edit:")+'&nbsp;'+value[1]+'</a>';
 	return html;
 }
+
+/**
+ * Drag/Drop/Upload Files
+ */
+$('#dropzone').on('drop dragover', function (e) {
+	e.preventDefault();
+});
+$('#dropzone').on('dragleave drop', function (e) {
+	$(this).removeClass("activate");
+});
+$('#dropzone').on('dragover', function (e) {
+	$(this).addClass("activate");
+});
+$('#fileupload').fileupload({
+	dataType: 'json',
+	dropZone: $("#dropzone"),
+	add: function (e, data) {
+		//TODO: Need to check all supported formats
+		var sup = "\.("+supportedRegExp+")$",
+				patt = new RegExp(sup),
+				submit = true;
+		$.each(data.files, function(k, v) {
+			if(!patt.test(v.name.toLowerCase())) {
+				submit = false;
+				alert(_("Unsupported file type"));
+				return false;
+			}
+		});
+		if(submit) {
+			data.submit();
+		}
+	},
+	drop: function () {
+		$("#upload-progress .progress-bar").css("width", "0%");
+	},
+	dragover: function (e, data) {
+	},
+	change: function (e, data) {
+	},
+	done: function (e, data) {
+		if(data.result.status) {
+			announcementRecording = data.result.localfilename;
+		} else {
+			alert(data.result.message);
+		}
+	},
+	progressall: function (e, data) {
+		var progress = parseInt(data.loaded / data.total * 100, 10);
+		$("#upload-progress .progress-bar").css("width", progress+"%");
+	},
+	fail: function (e, data) {
+	},
+	always: function (e, data) {
+	}
+});
+
+//check if this browser supports WebRTC
+//TODO: This eventually needs to check to make sure we are in HTTPS mode
+if (Modernizr.getusermedia && window.location.protocol == "https:") {
+	//show in browser recording if it does
+	$("#browser-recorder-container").removeClass("hidden");
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function(event) {
+
+		},
+		timeupdate: function(event) {
+			$("#jp_container_1").find(".jp-ball").css("left",event.jPlayer.status.currentPercentAbsolute + "%");
+		},
+		ended: function(event) {
+			$("#jp_container_1").find(".jp-ball").css("left","0%");
+		},
+		swfPath: "http://jplayer.org/latest/dist/jplayer",
+		supplied: "wav",
+		wmode: "window",
+		useStateClassSkin: true,
+		autoBlur: false,
+		keyEnabled: true,
+		remainingDuration: true,
+		toggleDuration: true
+	});
+	var acontainer = null;
+	$('.jp-play-bar').mousedown(function (e) {
+		acontainer = $(this).parents(".jp-audio-freepbx");
+		updatebar(e.pageX);
+	});
+	$(document).mouseup(function (e) {
+		if (acontainer) {
+			updatebar(e.pageX);
+			acontainer = null;
+		}
+	});
+	$(document).mousemove(function (e) {
+		if (acontainer) {
+			updatebar(e.pageX);
+		}
+	});
+
+	//update Progress Bar control
+	function updatebar(x) {
+		var player = $("#" + acontainer.data("player")),
+				progress = acontainer.find('.jp-progress'),
+				maxduration = player.data("jPlayer").status.duration,
+				position = x - progress.offset().left,
+				percentage = 100 * position / progress.width();
+
+		//Check within range
+		if (percentage > 100) {
+			percentage = 100;
+		}
+		if (percentage < 0) {
+			percentage = 0;
+		}
+
+		player.jPlayer("playHead", percentage);
+
+		//Update progress bar and video currenttime
+		acontainer.find('.jp-ball').css('left', percentage+'%');
+		acontainer.find('.jp-play-bar').css('width', percentage + '%');
+		player.jPlayer.currentTime = maxduration * percentage / 100;
+	};
+} else {
+	//hide in browser recording if it does not
+	$("#browser-recorder-container").remove();
+}
+
+
+/**
+ * Record from within WebRTC supported browser
+ */
+$("#record").click(function() {
+	var counter = $("#jp_container_1 .jp-duration"),
+			title = $("#jp_container_1 .jp-title"),
+			player = $("#jquery_jplayer_1"),
+			controls = $(this).parents(".jp-controls"),
+			recorderContainer = $("#browser-recorder"),
+			saveContainer = $("#browser-recorder-save"),
+			input = $("#save-recorder-input");
+
+	controls.toggleClass("recording");
+	player.jPlayer( "clearMedia" );
+
+	//previously recording
+	if (recording) {
+		clearInterval(recordTimer);
+		title.html('<button id="saverecording" class="btn btn-primary" type="button">'+_("Save Recording")+'</button><button id="deleterecording" class="btn btn-primary" type="button">'+_("Delete Recording")+'</button>');
+		//save recording button
+		$("#saverecording").one("click", function() {
+			//clear media for upload
+			player.jPlayer( "clearMedia" );
+			var data = new FormData(),
+					name = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 15);
+			data.append("file", soundBlob);
+			$.ajax({
+				type: "POST",
+				url: "ajax.php?module=ivr&command=savebrowserrecording&filename=" + encodeURIComponent(name),
+				xhr: function() {
+					$("#browser-recorder-progress").removeClass("hidden").addClass("in");
+					var xhr = new window.XMLHttpRequest();
+					//Upload progress
+					xhr.upload.addEventListener("progress", function(evt) {
+						if (evt.lengthComputable) {
+							var percentComplete = evt.loaded / evt.total,
+							progress = Math.round(percentComplete * 100);
+							$("#browser-recorder-progress .progress-bar").css("width", progress + "%");
+							if(progress == 100) {
+								$("#browser-recorder-progress").addClass("hidden").removeClass("in");
+								$("#browser-recorder-progress .progress-bar").css("width", "0%");
+							}
+						}
+					}, false);
+					return xhr;
+				},
+				data: data,
+				processData: false,
+				contentType: false,
+				success: function(data) {
+					if(data.status) {
+						announcementRecording = data.localfilename;
+					}
+					title.html(_("Hit the red record button to start recording from your browser"));
+				},
+				error: function() {
+				}
+			});
+		});
+		$("#deleterecording").one("click", function() {
+			$("#jquery_jplayer_1").jPlayer( "clearMedia" );
+			title.html(_("Hit the red record button to start recording from your browser"));
+		});
+		recorder.stop();
+		recorder.exportWAV(function(blob) {
+			soundBlob = blob;
+			var url = (window.URL || window.webkitURL).createObjectURL(blob);
+			player.jPlayer( "setMedia", {
+				wav: url
+			});
+		});
+		recording = false;
+	} else {
+		//map webkit prefix
+		window.AudioContext = window.AudioContext || window.webkitAudioContext;
+		var context = new AudioContext(),
+		gUM = Modernizr.prefixed("getUserMedia", navigator);
+
+		//start the recording!
+		gUM({ audio: true }, function(stream) {
+			var mediaStreamSource = context.createMediaStreamSource(stream);
+			//worker is already loaded but it doesnt seem to cause any issues. eh.
+			recorder = new Recorder(mediaStreamSource,{ workerPath: "assets/recordings/js/recorderWorker.js" });
+			recorder.record();
+			startTime = new Date();
+			//create a normal minutes:seconds timer from micro/milli-seconds
+			recordTimer = setInterval(function () {
+				var mil = (new Date() - startTime),
+						temp = (mil / 1000),
+						min = ("0" + Math.floor((temp %= 3600) / 60)).slice(-2),
+						sec = ("0" + Math.round(temp % 60)).slice(-2);
+				counter.text(min + ":" + sec);
+			}, 1000);
+			title.text(_("Recording..."));
+			recording = true;
+		}, function(e) {
+			controls.toggleClass("recording");
+			alert(_("Your Browser Blocked The Recording, Please check your settings"));
+			recording = false;
+		});
+	}
+});

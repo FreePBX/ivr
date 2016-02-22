@@ -113,6 +113,7 @@ if(isset($fw_popover) && $fw_popover) {
 						<form class='fpbx-submit' name="frm_ivr" id="frm_ivr" method="POST" action="" data-fpbx-delete="<?php echo $delURL?>">
 							<?php
 								if($display_mode == "basic") {
+									$supported = FreePBX::Media()->getSupportedFormats();
 									include(__DIR__."/simple_form.php");
 								} else {
 									include(__DIR__."/advanced_form.php");
