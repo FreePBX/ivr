@@ -6,7 +6,7 @@ extract($request, EXTR_SKIP);
 if($action == 'add'){
 	$ivr = array();
 	$heading = _("Add IVR");
-	$deet = array('id', 'name', 'description', 'announcement', 'directdial',
+	$deet = array('id', 'name', 'description', 'alertinfo', 'announcement', 'directdial',
 				'invalid_loops', 'invalid_retry_recording',
 				'invalid_recording', 'invalid_destination', 'invalid_ivr_ret',
 				'timeout_loops', 'timeout_time', 'timeout_retry_recording',
@@ -160,6 +160,30 @@ foreach ($hooks as $key => $value) {
 								</div>
 							</div>
 							<!--END IVR Description-->
+							<!--Alert Info-->
+							<div class="element-container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="row">
+											<div class="form-group">
+												<div class="col-md-3">
+													<label class="control-label" for="alertinfo"><?php echo _("Alert Info") ?></label>
+													<i class="fa fa-question-circle fpbx-help-icon" data-for="alertinfo"></i>
+												</div>
+												<div class="col-md-9">
+													<?php echo FreePBX::View()->alertInfoDrawSelect("alertinfo",(($ivr['alertinfo'])?$ivr['alertinfo']:''));?>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<span id="alertinfo-help" class="help-block fpbx-help-block"><?php echo _("ALERT_INFO can be used for distinctive ring with SIP devices.")?></span>
+									</div>
+								</div>
+							</div>
+							<!--END Alert Info-->
 						</div>
 						<div class="section-title" data-for="ivrdtmf">
 							<h3><i class="fa fa-minus"></i> <?php echo _('IVR DTMF Options')?></h3>

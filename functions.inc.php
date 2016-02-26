@@ -83,7 +83,9 @@ function ivr_get_config($engine) {
 					//TODO: do we need to set anything at all?
 					$ext->add($c, 's', '', new ext_setvar('__IVR_RETVM', ''));
 				}
-
+        if ($ivr['alertinfo'] != '') {
+          $ext->add($c, 's', '', new ext_setvar('__ALERT_INFO', str_replace(';', '\;', $ivr['alertinfo'])));
+        }
 				$ext->add($c, 's', '', new ext_gotoif('$["${CHANNEL(state)}" = "Up"]','skip'));
 				$ext->add($c, 's', '', new ext_answer(''));
 				$ext->add($c, 's', '', new ext_wait('1'));
@@ -311,7 +313,7 @@ function ivr_configprocess(){
 	if (isset($_REQUEST['display']) && $_REQUEST['display'] == 'ivr'){
 		global $db;
 		//get variables
-		$get_var = array('id', 'name', 'description', 'announcement',
+		$get_var = array('id', 'name', 'alertinfo', 'description', 'announcement',
 						'directdial', 'invalid_loops', 'invalid_retry_recording',
 						'invalid_destination', 'invalid_recording',
 						'retvm', 'timeout_time', 'timeout_recording',

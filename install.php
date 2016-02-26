@@ -1,7 +1,7 @@
 <?php
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 require_once dirname(__FILE__)."/functions.inc.php";
-
+$dbh = \FreePBX::Database();
 global $db;
 global $amp_conf;
 
@@ -10,6 +10,7 @@ if($amp_conf["AMPDBENGINE"] == "sqlite3")  {
 		`id` int(11) NOT NULL PRIMARY KEY AUTOINCREMENT,
 		`name` varchar(50) default NULL,
 		`description` varchar(150) default NULL,
+		`alertinfo` varchar(150) default NULL,
 		`announcement` int(11) default NULL,
 		`directdial` varchar(50) default NULL,
 		`invalid_loops` varchar(10) default NULL,
@@ -529,4 +530,22 @@ if($info['type'] !== "varchar(200)") {
 	if (DB::IsError($result)) {
 		die_freepbx($result->getDebugInfo());
 	}
+}
+//`alertinfo` varchar(150) default NULL,
+
+\outn(_("Adding Alertinfo:  "));
+$sql = "ALTER TABLE ivr_details ADD `alertinfo` varchar(150) default NULL;";
+$stmt = $dbh->prepare($sql);
+try {
+    $stmt->execute();
+    \out(_("ok"));
+} catch (\PDOException $e) {
+    //We are ok with 42S21 because we are trying to add a column and it says that column is present.
+    if($e->getCode() == '42S21'){
+        \out(_("Column present"));
+    }else{
+        //All other exceptions are bad.
+        \out($e->getMessage());
+        throw $e;
+    }
 }
