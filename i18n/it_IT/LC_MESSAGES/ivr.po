@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-29 18:45-0800\n"
+"POT-Creation-Date: 2016-03-01 15:56-0800\n"
 "PO-Revision-Date: 2008-11-05 17:52+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
@@ -181,7 +181,7 @@ msgstr ""
 msgid "Delete"
 msgstr "Elimina"
 
-#: assets/js/ivr.js:302
+#: assets/js/ivr.js:301
 msgid "Delete Recording"
 msgstr ""
 
@@ -242,7 +242,7 @@ msgstr ""
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
-#: views/simple_form.php:76 assets/js/ivr.js:337 assets/js/ivr.js:345
+#: views/simple_form.php:76 assets/js/ivr.js:336 assets/js/ivr.js:344
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
@@ -382,7 +382,7 @@ msgstr ""
 msgid "Recording created for IVR named '%s'"
 msgstr ""
 
-#: assets/js/ivr.js:377
+#: assets/js/ivr.js:375
 msgid "Recording..."
 msgstr ""
 
@@ -410,7 +410,7 @@ msgstr ""
 msgid "Return to this IVR when finished"
 msgstr ""
 
-#: assets/js/ivr.js:302
+#: assets/js/ivr.js:301
 msgid "Save Recording"
 msgstr ""
 
@@ -507,7 +507,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: assets/js/ivr.js:381
+#: assets/js/ivr.js:379
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 

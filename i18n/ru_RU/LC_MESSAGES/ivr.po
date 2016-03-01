@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-29 18:45-0800\n"
+"POT-Creation-Date: 2016-03-01 15:56-0800\n"
 "PO-Revision-Date: 2015-12-08 23:16+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -212,7 +212,7 @@ msgstr "По умолчанию"
 msgid "Delete"
 msgstr "Удалить"
 
-#: assets/js/ivr.js:302
+#: assets/js/ivr.js:301
 msgid "Delete Recording"
 msgstr ""
 
@@ -276,7 +276,7 @@ msgstr ""
 msgid "Greeting to be played on entry to the IVR."
 msgstr "Приветствие , проигрываемое при входе в голосовое меню."
 
-#: views/simple_form.php:76 assets/js/ivr.js:337 assets/js/ivr.js:345
+#: views/simple_form.php:76 assets/js/ivr.js:336 assets/js/ivr.js:344
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
@@ -429,7 +429,7 @@ msgstr ""
 msgid "Recording created for IVR named '%s'"
 msgstr ""
 
-#: assets/js/ivr.js:377
+#: assets/js/ivr.js:375
 msgid "Recording..."
 msgstr ""
 
@@ -457,7 +457,7 @@ msgstr "Возвращение в Интерактивное меню после
 msgid "Return to this IVR when finished"
 msgstr ""
 
-#: assets/js/ivr.js:302
+#: assets/js/ivr.js:301
 msgid "Save Recording"
 msgstr ""
 
@@ -559,7 +559,7 @@ msgstr ""
 msgid "Yes"
 msgstr "Да"
 
-#: assets/js/ivr.js:381
+#: assets/js/ivr.js:379
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 
