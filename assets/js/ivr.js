@@ -212,7 +212,6 @@ $('#fileupload').fileupload({
 });
 
 //check if this browser supports WebRTC
-//TODO: This eventually needs to check to make sure we are in HTTPS mode
 if (Modernizr.getusermedia && window.location.protocol == "https:") {
 	//show in browser recording if it does
 	$("#browser-recorder-container").removeClass("hidden");
@@ -362,8 +361,7 @@ $("#record").click(function() {
 		//start the recording!
 		gUM({ audio: true }, function(stream) {
 			var mediaStreamSource = context.createMediaStreamSource(stream);
-			//worker is already loaded but it doesnt seem to cause any issues. eh.
-			recorder = new Recorder(mediaStreamSource,{ workerPath: "assets/recordings/js/recorderWorker.js" });
+			recorder = new Recorder(mediaStreamSource,{ workerPath: "assets/js/recorderWorker.js" });
 			recorder.record();
 			startTime = new Date();
 			//create a normal minutes:seconds timer from micro/milli-seconds
