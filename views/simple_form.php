@@ -106,6 +106,7 @@
 <input type="hidden" name="action" value="save">
 <input type="hidden" class="form-control" id="directdial" name="directdial" value="ext-local">
 <input type="hidden" class="form-control" id="timeout_time" name="timeout_time" value="5">
+<input type="hidden" class="form-control" id="alertinfo" name="alertinfo" value="">
 <input type="hidden" class="form-control" id="invalid_loops" name="invalid_loops" value="3">
 <input type="hidden" class="form-control" id="invalid_retry_recording" name="invalid_retry_recording" value="default">
 <input type="hidden" class="form-control" id="invalid_append_announce" name="invalid_append_announce" value="">
