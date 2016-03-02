@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-01 15:56-0800\n"
+"POT-Creation-Date: 2016-03-02 15:34-0800\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -40,15 +40,15 @@ msgstr "如果值是0，则关闭超时"
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 
-#: page.ivr.php:47
+#: page.ivr.php:46
 msgid "Actions"
 msgstr "操作"
 
-#: views/entries.php:66
+#: views/entries.php:65
 msgid "Add Another Entry"
 msgstr ""
 
-#: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:8 views/rnav.php:3
+#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:9 views/rnav.php:3
 msgid "Add IVR"
 msgstr "添加IVR"
 
@@ -96,7 +96,7 @@ msgstr "应用"
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
 
-#: views/simple_form.php:39
+#: views/simple_form.php:73
 msgid "Browse"
 msgstr ""
 
@@ -149,7 +149,7 @@ msgstr "检查 timeout_ivr_ret.."
 msgid "Checking if announcements need migration.."
 msgstr "正在检查通知通告是否需要迁移。。。"
 
-#: functions.inc.php:446
+#: functions.inc.php:438
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -177,19 +177,19 @@ msgid ""
 "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 msgstr ""
 
-#: views/form.php:65 views/form.php:71 views/form.php:77 views/form.php:83
+#: views/form.php:66 views/form.php:72 views/form.php:78 views/form.php:84
 msgid "Default"
 msgstr "默认"
 
-#: Ivr.class.php:69 functions.inc.php:446
+#: Ivr.class.php:69 functions.inc.php:438
 msgid "Delete"
 msgstr "删除"
 
-#: assets/js/ivr.js:301
+#: assets/js/ivr.js:427
 msgid "Delete Recording"
 msgstr ""
 
-#: views/entries.php:45
+#: views/entries.php:44
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
 msgstr "删除这个入口。 不要忘记点击提交！"
 
@@ -202,7 +202,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "IVR描述"
 
-#: functions.inc.php:446
+#: functions.inc.php:438
 msgid "Destination"
 msgstr "目的地"
 
@@ -214,23 +214,23 @@ msgstr "播放无效录音提示后转发的目的地"
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "播放超时提示后转发的目的地。"
 
-#: functions.inc.php:446
+#: functions.inc.php:438
 msgid "Digits"
 msgstr ""
 
-#: functions.inc.php:446
+#: functions.inc.php:438
 msgid "Digits the caller needs to dial to access said destination"
 msgstr ""
 
-#: views/simple_form.php:46
+#: views/simple_form.php:80
 msgid "Drop Annoucement Recording Here"
 msgstr ""
 
-#: views/form.php:42
+#: views/form.php:43
 msgid "Edit IVR: "
 msgstr "编辑IVR: "
 
-#: assets/js/ivr.js:155
+#: assets/js/ivr.js:169
 msgid "Edit:"
 msgstr "编辑:"
 
@@ -242,11 +242,11 @@ msgstr "启用直接拨号"
 msgid "Failed to write file to disk"
 msgstr ""
 
-#: views/advanced_form.php:84 views/simple_form.php:97
+#: views/advanced_form.php:84 views/simple_form.php:131
 msgid "Greeting to be played on entry to the IVR."
 msgstr "播放IVR。"
 
-#: views/simple_form.php:76 assets/js/ivr.js:336 assets/js/ivr.js:344
+#: views/simple_form.php:110 assets/js/ivr.js:462 assets/js/ivr.js:474
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
@@ -275,16 +275,16 @@ msgstr "IVR 基本选项"
 msgid "IVR List"
 msgstr "IVR列表"
 
-#: page.ivr.php:46 views/advanced_form.php:17 views/simple_form.php:8
+#: page.ivr.php:45 views/advanced_form.php:17 views/simple_form.php:8
 msgid "IVR Name"
 msgstr "IVR 名称"
 
-#: functions.inc.php:538 functions.inc.php:558
+#: functions.inc.php:530 functions.inc.php:550
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR：%s"
 
-#: functions.inc.php:505
+#: functions.inc.php:497
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR：%s / 选项：%s"
@@ -330,7 +330,7 @@ msgstr "IVR名称"
 #: views/advanced_form.php:103 views/advanced_form.php:228
 #: views/advanced_form.php:255 views/advanced_form.php:386
 #: views/advanced_form.php:413 views/advanced_form.php:494
-#: views/entries.php:39
+#: views/entries.php:38
 msgid "No"
 msgstr ""
 
@@ -338,12 +338,16 @@ msgstr ""
 msgid "No Astman, Not loading IVR"
 msgstr ""
 
+#: assets/js/ivr.js:271
+msgid "No file to load!"
+msgstr ""
+
 #: Ivr.class.php:149
 msgid "No file was uploaded"
 msgstr ""
 
-#: views/form.php:60 views/form.php:66 views/form.php:72 views/form.php:78
-#: views/form.php:84
+#: views/form.php:61 views/form.php:67 views/form.php:73 views/form.php:79
+#: views/form.php:85
 msgid "None"
 msgstr "无"
 
@@ -357,6 +361,10 @@ msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
 msgstr "重试次数（当呼叫方收到无效或不能匹配的响应）"
+
+#: views/simple_form.php:62
+msgid "Play Previous Recording"
+msgstr ""
 
 #: views/advanced_form.php:293 views/advanced_form.php:451
 msgid ""
@@ -382,12 +390,12 @@ msgstr "当收到无效响应时，在提示呼叫方重新呼叫钱，播放的
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: functions.inc.php:335
+#: functions.inc.php:345
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
 
-#: assets/js/ivr.js:375
+#: assets/js/ivr.js:505
 msgid "Recording..."
 msgstr ""
 
@@ -395,7 +403,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:446
+#: functions.inc.php:438
 msgid "Return"
 msgstr "返回"
 
@@ -411,11 +419,11 @@ msgstr "超时返回处理"
 msgid "Return to IVR after VM"
 msgstr "VM后返回IVR"
 
-#: functions.inc.php:446
+#: functions.inc.php:438
 msgid "Return to this IVR when finished"
 msgstr ""
 
-#: assets/js/ivr.js:301
+#: assets/js/ivr.js:427
 msgid "Save Recording"
 msgstr ""
 
@@ -467,18 +475,18 @@ msgstr "重试超时"
 msgid "Timeout Retry Recording"
 msgstr "重试录音超时"
 
-#: views/simple_form.php:80
+#: views/simple_form.php:66 views/simple_form.php:114
 #, php-format
 msgid ""
 "To play the media you will need to either update your browser to a recent "
 "version or update your %s"
 msgstr ""
 
-#: assets/js/ivr.js:83
+#: assets/js/ivr.js:97
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr ""
 
-#: assets/js/ivr.js:79
+#: assets/js/ivr.js:93
 msgid "Unable to delete the last entry"
 msgstr ""
 
@@ -490,15 +498,15 @@ msgstr ""
 msgid "Unsupported file format"
 msgstr ""
 
-#: assets/js/ivr.js:182
+#: assets/js/ivr.js:196
 msgid "Unsupported file type"
 msgstr ""
 
-#: views/simple_form.php:79
+#: views/simple_form.php:65 views/simple_form.php:113
 msgid "Update Required"
 msgstr ""
 
-#: views/simple_form.php:97
+#: views/simple_form.php:131
 #, php-format
 msgid ""
 "Upload files from your local system. Supported upload formats are: %s. This "
@@ -508,11 +516,11 @@ msgstr ""
 #: views/advanced_form.php:101 views/advanced_form.php:226
 #: views/advanced_form.php:253 views/advanced_form.php:384
 #: views/advanced_form.php:411 views/advanced_form.php:492
-#: views/entries.php:37
+#: views/entries.php:36
 msgid "Yes"
 msgstr ""
 
-#: assets/js/ivr.js:379
+#: assets/js/ivr.js:509
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 
