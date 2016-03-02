@@ -3,6 +3,7 @@
 //	Copyright 2015 Sangoma Technologies.
 //
 extract($request, EXTR_SKIP);
+$infohtml = '';
 if($action == 'add'){
 	$ivr = array();
 	$heading = _("Add IVR");
@@ -94,11 +95,9 @@ foreach ($hooks as $key => $value) {
 }
 
 $display_mode = "advanced";
-if(isset($fw_popover) && $fw_popover) {
-	$mode = \FreePBX::Config()->get("FPBXOPMODE");
-	if(!empty($mode)) {
-		$display_mode = $mode;
-	}
+$mode = \FreePBX::Config()->get("FPBXOPMODE");
+if(!empty($mode)) {
+	$display_mode = $mode;
 }
 
 ?>
@@ -110,9 +109,30 @@ if(isset($fw_popover) && $fw_popover) {
 			<div class="col-sm-12">
 				<div class="fpbx-container">
 					<div class="display full-border">
-						<form class='fpbx-submit' name="frm_ivr" id="frm_ivr" method="POST" action="" data-fpbx-delete="<?php echo $delURL?>">
+						<form class='fpbx-submit' name="frm_ivr" id="frm_ivr" method="POST" action="config.php?display=ivr" data-fpbx-delete="<?php echo $delURL?>">
 							<?php
 								if($display_mode == "basic") {
+									if($action == 'add') {
+										$ivr['invalid_destination'] = 'app-blackhole,hangup,1';
+										$ivr['timeout_destination'] = 'app-blackhole,hangup,1';
+										$ivr['directdial'] = 'ext-local';
+										$ivr['timeout_time'] = '5';
+										$ivr['alertinfo'] = '';
+										$ivr['invalid_loops'] = '3';
+										$ivr['invalid_retry_recording'] = 'default';
+										$ivr['invalid_append_announce'] = '';
+										$ivr['invalid_ivr_ret'] = '';
+										$ivr['invalid_recording'] = '';
+										$ivr['timeout_loops'] = '3';
+										$ivr['timeout_retry_recording'] = 'default';
+										$ivr['timeout_append_announce'] = '';
+										$ivr['timeout_ivr_ret'] = '';
+										$ivr['timeout_recording'] = 'default';
+										$ivr['retvm'] = '';
+										$ivr['announcement'] = '';
+									} else {
+
+									}
 									$supported = FreePBX::Media()->getSupportedFormats();
 									include(__DIR__."/simple_form.php");
 								} else {

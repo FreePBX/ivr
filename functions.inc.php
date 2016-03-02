@@ -323,24 +323,6 @@ function ivr_configprocess(){
 		foreach($get_var as $var){
 			$vars[$var] = isset($_REQUEST[$var]) 	? $_REQUEST[$var]		: '';
 		}
-		if(!isset($_REQUEST['announcement'])) {
-			if(isset($_REQUEST['announcementrecording'])) {
-				$filepath = FreePBX::Config()->get("ASTSPOOLDIR") . "/tmp/".$_REQUEST['announcementrecording'];
-				$soundspath = FreePBX::Config()->get("ASTVARLIBDIR")."/sounds";
-				$codec = "wav";
-				if(file_exists($filepath)) {
-					FreePBX::Media()->load($filepath);
-					$filename = "ivr-".$vars['name']."-recording-".time();
-					FreePBX::Media()->convert($soundspath."/en/custom/".$filename.".".$codec);
-					$id = FreePBX::Recordings()->addRecording("ivr-".$vars['name']."-recording-".time(),sprintf(_("Recording created for IVR named '%s'"),$vars['name']),"custom/".$filename);
-					$vars['announcement'] = $id;
-				} else {
-					$vars['announcement'] = '';
-				}
-			} else {
-				$vars['announcement'] = '';
-			}
-		}
 
 		$vars['timeout_append_announce'] = empty($vars['timeout_append_announce']) ? '0' : '1';
 		$vars['invalid_append_announce'] = empty($vars['invalid_append_announce']) ? '0' : '1';
@@ -352,22 +334,32 @@ function ivr_configprocess(){
 
 		switch ($action) {
 			case 'save':
+				if(isset($_REQUEST['announcementrecording'])) {
+					$filepath = FreePBX::Config()->get("ASTSPOOLDIR") . "/tmp/".$_REQUEST['announcementrecording'];
+					$soundspath = FreePBX::Config()->get("ASTVARLIBDIR")."/sounds";
+					$codec = "wav";
+					if(file_exists($filepath)) {
+						FreePBX::Media()->load($filepath);
+						$filename = "ivr-".$vars['name']."-recording-".time();
+						FreePBX::Media()->convert($soundspath."/en/custom/".$filename.".".$codec);
+						$id = FreePBX::Recordings()->addRecording("ivr-".$vars['name']."-recording-".time(),sprintf(_("Recording created for IVR named '%s'"),$vars['name']),"custom/".$filename);
+						$vars['announcement'] = $id;
+					} else {
+						$vars['announcement'] = '';
+					}
+				}
 				//get real dest
-				$_REQUEST['id'] = $vars['id'] = ivr_save_details($vars);
-        $_REQUEST['action'] = 'edit';
+				$vars['id'] = ivr_save_details($vars);
 				ivr_save_entries($vars['id'], $entries);
 				needreload();
-				//$_REQUEST['action'] = 'edit';
 				$this_dest = ivr_getdest($vars['id']);
 				fwmsg::set_dest($this_dest[0]);
-				//redirect_standard_continue('id');
 			break;
 			case 'delete':
 				ivr_delete($vars['id']);
         isset($_REQUEST['id'])?$_REQUEST['id'] = null:'';
         isset($_REQUEST['action'])?$_REQUEST['action'] = null:'';
 				needreload();
-				//redirect_standard_continue();
 			break;
 		}
 	}

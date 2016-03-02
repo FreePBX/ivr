@@ -1,4 +1,4 @@
-var announcementRecording = null, recording = false, soundBlob = null;
+var announcementRecording = null, recording = false, recordings = {}, soundBlob = null;
 $(document).ready(function(){
 	//on load, hide elememnts that may need to be hidden
 	invalid_elements();
@@ -24,7 +24,7 @@ $(document).ready(function(){
 			if($("#fileupload-container").length) {
 				if(announcementRecording !== null) {
 					$('#frm_ivr').append('<input type="hidden" name="announcementrecording" value="'+announcementRecording+'" />');
-				} else {
+				} else if(announcementRecording === null && (isNaN(parseInt($("#announcement").val())) || parseInt($("#announcement").val()) == 0)) {
 					if(!confirm(_("Are you sure you don't want a recording for this announcement?"))) {
 						return false;
 					}
@@ -36,6 +36,20 @@ $(document).ready(function(){
 			if(last.find('input[name="entries[ext][]"]').val() === '' && last.find('.destdropdown').val() === ''){
 				last.remove();
 			}
+
+			var stop = false;
+			$('#ivr_entries tr > td:first-child input').each(function() {
+				var digit = $(this).val().trim();
+				if(digit === '' || isNaN(parseInt(digit))) {
+					alert(_("Please enter a valid value for Digits Pressed"));
+					stop = true;
+					return false;
+				}
+			});
+			if(stop) {
+				return false;
+			}
+
 			//set timeout/invalid destination, removing hidden field if there is no valus being set
 			if ($('#invalid_loops').val() != 'disabled') {
 				invalid = $('[name=' + $('[name=gotoinvalid]').val() + 'invalid]').val();
@@ -53,7 +67,7 @@ $(document).ready(function(){
 
 
 			//set goto fileds for destinations
-			$('[name^=goto]').each(function(){
+			$('select[name^=goto][type!=hidden]').each(function(){
 				num = $(this).prop('name').replace('goto', '');
 				dest = $('[name=' + $(this).val() + num + ']').val();
 				$(this).parent().find('input[name="entries[goto][]"]').val(dest);
@@ -197,6 +211,8 @@ $('#fileupload').fileupload({
 	done: function (e, data) {
 		if(data.result.status) {
 			announcementRecording = data.result.localfilename;
+			$("#jquery_jplayer_announcement").jPlayer( "clearMedia" );
+			recordings[key] = announcementRecording;
 		} else {
 			alert(data.result.message);
 		}
@@ -209,6 +225,115 @@ $('#fileupload').fileupload({
 	},
 	always: function (e, data) {
 	}
+});
+
+$(".browser-player-container").each(function() {
+	var player = $(this).find(".jp-jplayer"),
+			container = player.data("container"),
+			recID = parseInt(player.data("recording-id")),
+			key = player.data("key");
+	if(!isNaN(recID) && recID > 0) {
+		$(this).removeClass("hidden");
+	}
+	player.jPlayer({
+		ready: function(event) {
+			$("#"+container + " .jp-play").click(function() {
+				if(!player.data("jPlayer").status.srcSet) {
+					$("#"+container).addClass("jp-state-loading");
+					//it is a temp file OR a system file
+					if(typeof recordings[key] !== "undefined" || !isNaN(recID)) {
+						var type = (typeof recordings[key] !== "undefined") ? "temp" : "system",
+								id = (typeof recordings[key] !== "undefined") ? recordings[key] : player.data("recording-id");
+						//get our html5 file, hope we have one
+							$.ajax({
+								type: 'POST',
+								url: "ajax.php",
+								data: {module: "recordings", command: "gethtml5byid", id: id, type: type},
+								dataType: 'json',
+								timeout: 30000
+							}).done(function( data ) {
+								if(data.status) {
+									player.on($.jPlayer.event.error, function(event) {
+										console.warn(event);
+									});
+									player.one($.jPlayer.event.canplay, function(event) {
+										player.jPlayer("play");
+									});
+									player.jPlayer( "setMedia", data.files);
+								} else {
+									alert(data.message);
+								}
+							}).always(function() {
+								$("#"+container).removeClass("jp-state-loading");
+
+							});
+					} else {
+						alert(_("No file to load!"));
+					}
+				} else {
+						//source is already set
+				}
+			});
+		},
+		//moves our ball
+			timeupdate: function(event) {
+				$("#jp_container_"+key).find(".jp-ball").css("left",event.jPlayer.status.currentPercentAbsolute + "%");
+			},
+			//puts our ball back at the start
+			ended: function(event) {
+				$("#jp_container_"+key).find(".jp-ball").css("left","0%");
+			},
+			cssSelectorAncestor: "#jp_container_"+key,
+			swfPath: "http://jplayer.org/latest/dist/jplayer",
+			supplied: supportedHTML5,
+			wmode: "window",
+			useStateClassSkin: true,
+			autoBlur: false,
+			keyEnabled: true,
+			remainingDuration: true,
+			toggleDuration: true
+	});
+
+	var acontainer = null;
+		$('#jp_container_'+key+' .jp-play-bar').mousedown(function (e) {
+			acontainer = $(this).parents(".jp-audio-freepbx");
+			updatebar(e.pageX);
+		});
+		$(document).mouseup(function (e) {
+			if (acontainer) {
+				updatebar(e.pageX);
+				acontainer = null;
+			}
+		});
+		$(document).mousemove(function (e) {
+			if (acontainer) {
+				updatebar(e.pageX);
+			}
+		});
+
+		//update Progress Bar control
+		var updatebar = function (x) {
+			var player = $("#" + acontainer.data("player")),
+					progress = acontainer.find('.jp-progress'),
+					maxduration = player.data("jPlayer").status.duration,
+					position = x - progress.offset().left,
+					percentage = 100 * position / progress.width();
+
+			//Check within range
+			if (percentage > 100) {
+				percentage = 100;
+			}
+			if (percentage < 0) {
+				percentage = 0;
+			}
+
+			player.jPlayer("playHead", percentage);
+
+			//Update progress bar and video currenttime
+			acontainer.find('.jp-ball').css('left', percentage+'%');
+			acontainer.find('.jp-play-bar').css('width', percentage + '%');
+			player.jPlayer.currentTime = maxduration * percentage / 100;
+		};
 });
 
 //check if this browser supports WebRTC
@@ -287,6 +412,7 @@ $("#record").click(function() {
 	var counter = $("#jp_container_1 .jp-duration"),
 			title = $("#jp_container_1 .jp-title"),
 			player = $("#jquery_jplayer_1"),
+			key = player.data("key"),
 			controls = $(this).parents(".jp-controls"),
 			recorderContainer = $("#browser-recorder"),
 			saveContainer = $("#browser-recorder-save"),
@@ -334,6 +460,10 @@ $("#record").click(function() {
 						announcementRecording = data.localfilename;
 					}
 					title.html(_("Hit the red record button to start recording from your browser"));
+					var url = (window.URL || window.webkitURL).createObjectURL(soundBlob);
+					$("#jquery_jplayer_"+key).jPlayer( "setMedia", {
+						wav: url
+					});
 				},
 				error: function() {
 				}

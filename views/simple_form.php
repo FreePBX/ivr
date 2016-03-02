@@ -34,6 +34,40 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="announcement"></i>
 					</div>
 					<div class="col-md-9">
+						<div class="browser-player-container hidden">
+							<div id="jquery_jplayer_announcement" data-container="jp_container_announcement" class="jp-jplayer" data-key="announcement" data-recording-id="<?php echo $ivr['announcement']?>" data-recording-type="system"></div>
+							<div id="jp_container_announcement" data-player="jquery_jplayer_announcement" class="jp-audio-freepbx" role="application" aria-label="media player">
+								<div class="jp-type-single">
+									<div class="jp-gui jp-interface">
+										<div class="jp-controls">
+											<i class="fa fa-play jp-play"></i>
+										</div>
+										<div class="jp-progress">
+											<div class="jp-seek-bar progress">
+												<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+												<div class="progress-bar progress-bar-striped active" style="width: 100%;"></div>
+												<div class="jp-play-bar progress-bar"></div>
+												<div class="jp-play-bar">
+													<div class="jp-ball"></div>
+												</div>
+												<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+											</div>
+										</div>
+										<div class="jp-volume-controls">
+											<i class="fa fa-volume-up jp-mute"></i>
+											<i class="fa fa-volume-off jp-unmute"></i>
+										</div>
+									</div>
+									<div class="jp-details">
+										<div class="jp-title" aria-label="title"><?php echo _("Play Previous Recording")?></div>
+									</div>
+									<div class="jp-no-solution">
+										<span><?php echo _("Update Required")?></span>
+										<?php echo sprintf(_("To play the media you will need to either update your browser to a recent version or update your %s"),'<a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>')?>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div id="fileupload-container">
 							<span class="btn btn-default btn-file">
 								<?php echo _("Browse")?>
@@ -48,7 +82,7 @@
 						</div>
 						<div id="browser-recorder-container" class="hidden">
 							<div id="browser-recorder">
-								<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+								<div id="jquery_jplayer_1" class="jp-jplayer" data-key="announcement"></div>
 								<div id="jp_container_1" data-player="jquery_jplayer_1" class="jp-audio-freepbx" role="application" aria-label="media player">
 									<div class="jp-type-single">
 										<div class="jp-gui jp-interface">
@@ -101,25 +135,29 @@
 <!--END Announcement-->
 <?php echo ivr_draw_entries($ivr['id'], array("core" => array("extensions","voicemail")))?>
 <input type="hidden" name="id" value="<?php echo $ivr['id']?>">
-<input type="hidden" name="invalid_destination" id="invalid_destination" value="">
-<input type="hidden" name="timeout_destination" id="timeout_destination" value="">
 <input type="hidden" name="action" value="save">
-<input type="hidden" class="form-control" id="directdial" name="directdial" value="ext-local">
-<input type="hidden" class="form-control" id="timeout_time" name="timeout_time" value="5">
-<input type="hidden" class="form-control" id="alertinfo" name="alertinfo" value="">
-<input type="hidden" class="form-control" id="invalid_loops" name="invalid_loops" value="3">
-<input type="hidden" class="form-control" id="invalid_retry_recording" name="invalid_retry_recording" value="default">
-<input type="hidden" class="form-control" id="invalid_append_announce" name="invalid_append_announce" value="">
-<input type="hidden" class="form-control" id="invalid_ivr_ret" name="invalid_ivr_ret" value="">
-<input type="hidden" class="form-control" id="invalid_recording" name="invalid_recording" value="default">
+
+<input type="hidden" name="invalid_destination" id="invalid_destination" value="<?php echo $ivr['invalid_destination']?>">
 <input type="hidden" class="form-control" id="gotoinvalid" name="gotoinvalid" value="Terminate_Call">
-<input type="hidden" class="form-control" id="Terminate_Callinvalid" name="Terminate_Callinvalid" value="app-blackhole,hangup,1">
-<input type="hidden" class="form-control" id="timeout_loops" name="timeout_loops" value="3">
-<input type="hidden" class="form-control" id="timeout_retry_recording" name="timeout_retry_recording" value="default">
-<input type="hidden" class="form-control" id="timeout_append_announce" name="timeout_append_announce" value="">
-<input type="hidden" class="form-control" id="timeout_ivr_ret" name="timeout_ivr_ret" value="">
-<input type="hidden" class="form-control" id="timeout_recording" name="timeout_recording" value="default">
+<input type="hidden" class="form-control" id="Terminate_Callinvalid" name="Terminate_Callinvalid" value="<?php echo $ivr['invalid_destination']?>">
+
+<input type="hidden" name="timeout_destination" id="timeout_destination" value="<?php echo $ivr['timeout_destination']?>">
 <input type="hidden" class="form-control" id="gototimeout" name="gototimeout" value="Terminate_Call">
-<input type="hidden" class="form-control" id="Terminate_Calltimeout" name="Terminate_Calltimeout" value="app-blackhole,hangup,1">
-<input type="hidden" class="form-control" id="retvm" name="retvm" value="">
-<script>var supportedRegExp = "<?php echo implode("|",array_keys($supported['in']))?>";</script>
+<input type="hidden" class="form-control" id="Terminate_Calltimeout" name="Terminate_Calltimeout" value="<?php echo $ivr['timeout_destination']?>">
+
+<input type="hidden" class="form-control" id="announcement" name="announcement" value="<?php echo $ivr['announcement']?>">
+<input type="hidden" class="form-control" id="directdial" name="directdial" value="<?php echo $ivr['directdial']?>">
+<input type="hidden" class="form-control" id="timeout_time" name="timeout_time" value="<?php echo $ivr['timeout_time']?>">
+<input type="hidden" class="form-control" id="alertinfo" name="alertinfo" value="<?php echo $ivr['alertinfo']?>">
+<input type="hidden" class="form-control" id="invalid_loops" name="invalid_loops" value="<?php echo $ivr['invalid_loops']?>">
+<input type="hidden" class="form-control" id="invalid_retry_recording" name="invalid_retry_recording" value="<?php echo $ivr['invalid_retry_recording']?>">
+<input type="hidden" class="form-control" id="invalid_append_announce" name="invalid_append_announce" value="<?php echo $ivr['invalid_append_announce']?>">
+<input type="hidden" class="form-control" id="invalid_ivr_ret" name="invalid_ivr_ret" value="<?php echo $ivr['invalid_ivr_ret']?>">
+<input type="hidden" class="form-control" id="invalid_recording" name="invalid_recording" value="<?php echo $ivr['invalid_recording']?>">
+<input type="hidden" class="form-control" id="timeout_loops" name="timeout_loops" value="<?php echo $ivr['timeout_loops']?>">
+<input type="hidden" class="form-control" id="timeout_retry_recording" name="timeout_retry_recording" value="<?php echo $ivr['timeout_retry_recording']?>">
+<input type="hidden" class="form-control" id="timeout_append_announce" name="timeout_append_announce" value="<?php echo $ivr['timeout_append_announce']?>">
+<input type="hidden" class="form-control" id="timeout_ivr_ret" name="timeout_ivr_ret" value="<?php echo $ivr['timeout_ivr_ret']?>">
+<input type="hidden" class="form-control" id="timeout_recording" name="timeout_recording" value="<?php echo $ivr['timeout_recording']?>">
+<input type="hidden" class="form-control" id="retvm" name="retvm" value="<?php echo $ivr['retvm']?>">
+<script>var supportedRegExp = "<?php echo implode("|",array_keys($supported['in']))?>";var supportedHTML5 = "<?php echo implode(",",FreePBX::Media()->getSupportedHTML5Formats())?>"</script>

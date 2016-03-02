@@ -17,8 +17,7 @@ foreach ($entries as $e) {
 				array(
 					'name'			=> 'entries[ext][]',
 					'value'			=> $e['selection'],
-					'placeholder'	=> _('digits pressed'),
-					'required'		=> ''
+					'placeholder'	=> _('digits pressed')
 				)
 			);
 

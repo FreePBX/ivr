@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>13.0.19</version>
+	<version>13.0.20</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
+		*13.0.20* Hook more into system recordings
 		*13.0.19* Depend on framework for recordWorker
 		*13.0.18* FREEPBX-11188 Add alertinfo
 		*13.0.17* Require higher version of recordings module
@@ -33,14 +34,10 @@
 		*13.0.1alpha3* Add Spanish prompts
 		*13.0.1alpha2* Bugfix #9072,#8993, astman connection error catching
 		*13.0.1alpha1* Visual Changes
-		*2.11.0.6* Add license file
-		*2.10.0.0* rewrite!
-		*2.9.0.1* removed duplicate functions
-		*2.9.0.0* #1798, #4655
 	</changelog>
 	<depends>
 		<version>13.0.72</version>
-		<module>recordings ge 13.0.21</module>
+		<module>recordings ge 13.0.23</module>
 	</depends>
 	<menuitems>
 		<ivr>IVR</ivr>
