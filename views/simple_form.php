@@ -145,19 +145,19 @@
 <input type="hidden" class="form-control" id="gototimeout" name="gototimeout" value="Terminate_Call">
 <input type="hidden" class="form-control" id="Terminate_Calltimeout" name="Terminate_Calltimeout" value="<?php echo $ivr['timeout_destination']?>">
 
-<input type="hidden" class="form-control" id="announcement" name="announcement" value="<?php echo $ivr['announcement']?>">
+<input type="hidden" class="form-control" id="announcement" name="announcement" value="<?php echo !empty($ivr['announcement']) ? $ivr['announcement'] : ""?>">
 <input type="hidden" class="form-control" id="directdial" name="directdial" value="<?php echo $ivr['directdial']?>">
 <input type="hidden" class="form-control" id="timeout_time" name="timeout_time" value="<?php echo $ivr['timeout_time']?>">
 <input type="hidden" class="form-control" id="alertinfo" name="alertinfo" value="<?php echo $ivr['alertinfo']?>">
 <input type="hidden" class="form-control" id="invalid_loops" name="invalid_loops" value="<?php echo $ivr['invalid_loops']?>">
-<input type="hidden" class="form-control" id="invalid_retry_recording" name="invalid_retry_recording" value="<?php echo $ivr['invalid_retry_recording']?>">
+<input type="hidden" class="form-control" id="invalid_retry_recording" name="invalid_retry_recording" value="<?php echo !empty($ivr['invalid_retry_recording']) ? $ivr['invalid_retry_recording'] : ""?>">
 <input type="hidden" class="form-control" id="invalid_append_announce" name="invalid_append_announce" value="<?php echo $ivr['invalid_append_announce']?>">
 <input type="hidden" class="form-control" id="invalid_ivr_ret" name="invalid_ivr_ret" value="<?php echo $ivr['invalid_ivr_ret']?>">
 <input type="hidden" class="form-control" id="invalid_recording" name="invalid_recording" value="<?php echo $ivr['invalid_recording']?>">
 <input type="hidden" class="form-control" id="timeout_loops" name="timeout_loops" value="<?php echo $ivr['timeout_loops']?>">
-<input type="hidden" class="form-control" id="timeout_retry_recording" name="timeout_retry_recording" value="<?php echo $ivr['timeout_retry_recording']?>">
+<input type="hidden" class="form-control" id="timeout_retry_recording" name="timeout_retry_recording" value="<?php echo !empty($ivr['timeout_retry_recording']) ? $ivr['timeout_retry_recording'] : ""?>">
 <input type="hidden" class="form-control" id="timeout_append_announce" name="timeout_append_announce" value="<?php echo $ivr['timeout_append_announce']?>">
 <input type="hidden" class="form-control" id="timeout_ivr_ret" name="timeout_ivr_ret" value="<?php echo $ivr['timeout_ivr_ret']?>">
-<input type="hidden" class="form-control" id="timeout_recording" name="timeout_recording" value="<?php echo $ivr['timeout_recording']?>">
+<input type="hidden" class="form-control" id="timeout_recording" name="timeout_recording" value="<?php echo !empty($ivr['timeout_recording']) ? $ivr['timeout_recording'] : ""?>">
 <input type="hidden" class="form-control" id="retvm" name="retvm" value="<?php echo $ivr['retvm']?>">
 <script>var supportedRegExp = "<?php echo implode("|",array_keys($supported['in']))?>";var supportedHTML5 = "<?php echo implode(",",FreePBX::Media()->getSupportedHTML5Formats())?>"</script>
