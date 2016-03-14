@@ -40,7 +40,7 @@ $(document).ready(function(){
 			var stop = false;
 			$('#ivr_entries tr > td:first-child input').each(function() {
 				var digit = $(this).val().trim();
-				if(digit === '' || isNaN(parseInt(digit))) {
+				if(digit === '' || /[0-9,\*\#]+$/.test(digit) === false) {
 					alert(_("Please enter a valid value for Digits Pressed"));
 					stop = true;
 					return false;
