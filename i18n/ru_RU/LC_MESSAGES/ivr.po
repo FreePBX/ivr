@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-02 15:34-0800\n"
+"POT-Creation-Date: 2016-03-15 12:25-0700\n"
 "PO-Revision-Date: 2015-12-08 23:16+0200\n"
 "Last-Translator: Andrew <andrew.nagy@the159.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -400,6 +400,10 @@ msgstr "Количество неудачных/несовпадающих по�
 msgid "Play Previous Recording"
 msgstr ""
 
+#: assets/js/ivr.js:44
+msgid "Please enter a valid value for Digits Pressed"
+msgstr ""
+
 #: views/advanced_form.php:293 views/advanced_form.php:451
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
@@ -465,8 +469,18 @@ msgstr "Возвращение в Интерактивное меню после
 msgid "Return to this IVR when finished"
 msgstr ""
 
+#: views/simple_form.php:143
+msgid "Ring Tone"
+msgstr ""
+
 #: assets/js/ivr.js:427
 msgid "Save Recording"
+msgstr ""
+
+#: views/simple_form.php:155
+msgid ""
+"Select a Ring Tone from the list of options above. This will determine how "
+"your phone sounds when it is rung from this group."
 msgstr ""
 
 #: Ivr.class.php:79

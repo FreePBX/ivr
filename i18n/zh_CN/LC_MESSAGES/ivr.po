@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-02 15:34-0800\n"
+"POT-Creation-Date: 2016-03-15 12:25-0700\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -366,6 +366,10 @@ msgstr "重试次数（当呼叫方收到无效或不能匹配的响应）"
 msgid "Play Previous Recording"
 msgstr ""
 
+#: assets/js/ivr.js:44
+msgid "Please enter a valid value for Digits Pressed"
+msgstr ""
+
 #: views/advanced_form.php:293 views/advanced_form.php:451
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
@@ -423,8 +427,18 @@ msgstr "VM后返回IVR"
 msgid "Return to this IVR when finished"
 msgstr ""
 
+#: views/simple_form.php:143
+msgid "Ring Tone"
+msgstr ""
+
 #: assets/js/ivr.js:427
 msgid "Save Recording"
+msgstr ""
+
+#: views/simple_form.php:155
+msgid ""
+"Select a Ring Tone from the list of options above. This will determine how "
+"your phone sounds when it is rung from this group."
 msgstr ""
 
 #: Ivr.class.php:79

@@ -133,6 +133,30 @@
 	</div>
 </div>
 <!--END Announcement-->
+<!--Alert Info-->
+<div class="element-container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="form-group">
+					<div class="col-md-3">
+						<label class="control-label" for="alertinfo"><?php echo _("Ring Tone") ?></label>
+						<i class="fa fa-question-circle fpbx-help-icon" data-for="alertinfo"></i>
+					</div>
+					<div class="col-md-9">
+						<?php echo FreePBX::View()->alertInfoDrawSelect("alertinfo",(($ivr['alertinfo'])?$ivr['alertinfo']:''));?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<span id="alertinfo-help" class="help-block fpbx-help-block"><?php echo _("Select a Ring Tone from the list of options above. This will determine how your phone sounds when it is rung from this group.")?></span>
+		</div>
+	</div>
+</div>
+<!--END Alert Info-->
 <?php echo ivr_draw_entries($ivr['id'], array("core" => array("extensions","voicemail")))?>
 <input type="hidden" name="id" value="<?php echo $ivr['id']?>">
 <input type="hidden" name="action" value="save">

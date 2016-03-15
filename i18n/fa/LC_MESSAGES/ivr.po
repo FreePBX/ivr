@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-02 15:34-0800\n"
+"POT-Creation-Date: 2016-03-15 12:25-0700\n"
 "PO-Revision-Date: 2016-03-15 23:06+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
-"Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/ivr/fa/>"
-"\n"
-"Language: fa\n"
+"Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/ivr/fa/"
+">\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fa\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -363,6 +363,10 @@ msgstr "تعداد دفعات تکرار برای شماره نامعتبر  د�
 msgid "Play Previous Recording"
 msgstr "اجرای ضبط قبلی"
 
+#: assets/js/ivr.js:44
+msgid "Please enter a valid value for Digits Pressed"
+msgstr ""
+
 #: views/advanced_form.php:293 views/advanced_form.php:451
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
@@ -422,9 +426,19 @@ msgstr "بازگشت به منوی صوتی پس از صندوق صوتی"
 msgid "Return to this IVR when finished"
 msgstr "بازگشت به منوی صوتی پس از اتمام"
 
+#: views/simple_form.php:143
+msgid "Ring Tone"
+msgstr ""
+
 #: assets/js/ivr.js:427
 msgid "Save Recording"
 msgstr "ذخیره ضبط شده"
+
+#: views/simple_form.php:155
+msgid ""
+"Select a Ring Tone from the list of options above. This will determine how "
+"your phone sounds when it is rung from this group."
+msgstr ""
 
 #: Ivr.class.php:79
 msgid "Submit"
