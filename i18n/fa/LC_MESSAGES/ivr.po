@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-02 15:34-0800\n"
-"PO-Revision-Date: 2016-03-15 15:31+0300\n"
+"PO-Revision-Date: 2016-03-15 23:06+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/ivr/fa/>"
 "\n"
@@ -19,11 +19,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"X-Generator: Weblate 2.4\n"
 
 #: Ivr.class.php:158
 msgid "A PHP extension stopped the file upload"
-msgstr ""
+msgstr "یک PHP extension in بارگذاری فایل را متوقف کرد"
 
 #: page.ivr.php:18
 msgid ""
@@ -95,7 +95,7 @@ msgstr "برنامه ها"
 
 #: assets/js/ivr.js:28
 msgid "Are you sure you don't want a recording for this announcement?"
-msgstr ""
+msgstr "آیا مطمئن هستید نمیخواهید این اعلان را ضبط کنید؟"
 
 #: views/simple_form.php:73
 msgid "Browse"
@@ -136,7 +136,7 @@ msgstr ""
 
 #: install.php:230
 msgid "Checking for timeout_id.."
-msgstr ""
+msgstr "بررسی شناسه وقفه.."
 
 #: install.php:490
 msgid "Checking for timeout_ivr_ret.."
@@ -144,7 +144,7 @@ msgstr ""
 
 #: install.php:168
 msgid "Checking if announcements need migration.."
-msgstr ""
+msgstr "بررسی کن آیا اعلان ها نیاز به انتقال دارند.."
 
 #: functions.inc.php:438
 msgid "Choose a destination to route the call to"
@@ -213,7 +213,7 @@ msgstr "داخلی که تماس بعد از اجرای منوی صوتی وقف
 
 #: functions.inc.php:438
 msgid "Digits"
-msgstr ""
+msgstr "اعداد"
 
 #: functions.inc.php:438
 msgid "Digits the caller needs to dial to access said destination"
@@ -237,7 +237,7 @@ msgstr "فعال سازی شماره گیری مستقیم"
 
 #: Ivr.class.php:155
 msgid "Failed to write file to disk"
-msgstr ""
+msgstr "خطا در نوشتن فایل روی دیسک"
 
 #: views/advanced_form.php:84 views/simple_form.php:131
 msgid "Greeting to be played on entry to the IVR."
