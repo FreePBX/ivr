@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-15 12:25-0700\n"
+"POT-Creation-Date: 2016-03-22 15:10-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,7 +43,8 @@ msgstr ""
 msgid "Add Another Entry"
 msgstr ""
 
-#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:9
+#: page.ivr.php:30
+#: views/form.php:9
 #: views/rnav.php:3
 msgid "Add IVR"
 msgstr ""
@@ -85,7 +86,8 @@ msgstr ""
 msgid "Append Announcement to Invalid"
 msgstr ""
 
-#: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
+#: ivr.i18n.php:6
+#: ivr.i18n.php:12
 msgid "Applications"
 msgstr ""
 
@@ -250,8 +252,10 @@ msgstr ""
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:30 /usr/src/freepbx/ivr/ivr.i18n.php:4
-#: ivr.i18n.php:10 /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:30
+#: ivr.i18n.php:4
+#: ivr.i18n.php:10
+#: page.ivr.php:24
 msgid "IVR"
 msgstr ""
 
@@ -553,9 +557,12 @@ msgstr ""
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 
-#: install.php:242 /usr/src/freepbx/ivr/install.php:259
-#: install.php:277 /usr/src/freepbx/ivr/install.php:464
-#: install.php:482 /usr/src/freepbx/ivr/install.php:502
+#: install.php:242
+#: install.php:259
+#: install.php:277
+#: install.php:464
+#: install.php:482
+#: install.php:502
 #: install.php:520
 msgid "added"
 msgstr ""
@@ -576,11 +583,16 @@ msgstr ""
 msgid "dropping announcement field.."
 msgstr ""
 
-#: install.php:179 /usr/src/freepbx/ivr/install.php:191
-#: install.php:207 /usr/src/freepbx/ivr/install.php:239
-#: install.php:256 /usr/src/freepbx/ivr/install.php:274
-#: install.php:461 /usr/src/freepbx/ivr/install.php:479
-#: install.php:499 /usr/src/freepbx/ivr/install.php:517
+#: install.php:179
+#: install.php:191
+#: install.php:207
+#: install.php:239
+#: install.php:256
+#: install.php:274
+#: install.php:461
+#: install.php:479
+#: install.php:499
+#: install.php:517
 msgid "fatal error"
 msgstr ""
 
@@ -601,14 +613,18 @@ msgstr ""
 msgid "no announcement field???"
 msgstr ""
 
-#: install.php:245 /usr/src/freepbx/ivr/install.php:262
-#: install.php:280 /usr/src/freepbx/ivr/install.php:467
-#: install.php:485 /usr/src/freepbx/ivr/install.php:505
+#: install.php:245
+#: install.php:262
+#: install.php:280
+#: install.php:467
+#: install.php:485
+#: install.php:505
 #: install.php:523
 msgid "not needed"
 msgstr ""
 
-#: install.php:182 /usr/src/freepbx/ivr/install.php:221
+#: install.php:182
+#: install.php:221
 #: install.php:541
 msgid "ok"
 msgstr ""
