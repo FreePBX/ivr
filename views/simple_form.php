@@ -157,7 +157,18 @@
 	</div>
 </div>
 <!--END Alert Info-->
-<?php echo ivr_draw_entries($ivr['id'], array("core" => array("extensions","voicemail")))?>
+<?php
+$restrict_mods = array(
+	"ivr",
+	"ringgroups",
+	"directory",
+	"core" => array(
+		"extensions",
+		"voicemail"
+	)
+);
+echo ivr_draw_entries($ivr['id'], $restrict_mods);
+?>
 <input type="hidden" name="id" value="<?php echo $ivr['id']?>">
 <input type="hidden" name="action" value="save">
 
