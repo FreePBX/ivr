@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-22 15:10-0500\n"
-"PO-Revision-Date: 2016-04-02 20:40+0200\n"
+"PO-Revision-Date: 2016-04-06 21:45+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/ivr/fa/>"
 "\n"
@@ -39,7 +39,7 @@ msgstr "مقدار ۰ تایم اوت را غیرفعال میکند"
 
 #: views/advanced_form.php:159
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
-msgstr ""
+msgstr "ALERT_INFO can  be used for distinctive ring with SIP devices."
 
 #: page.ivr.php:46
 msgid "Actions"
@@ -67,7 +67,7 @@ msgstr "پس از پخش ضبط سعی مجدد نامعتبر سیستم منو
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
-msgstr ""
+msgstr "بعد از پخش زمان وقفه سیستم ضبط پیام اصلی منوی صوتی را دوباره پخش میکند"
 
 #: views/advanced_form.php:147
 msgid "Alert Info"
@@ -113,6 +113,11 @@ msgid ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 msgstr ""
+"Check this box to  have this option return to a parent IVR if it was called "
+"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
 
 #: install.php:470
 msgid "Checking for invalid_append_announce.."
@@ -124,15 +129,15 @@ msgstr "بررسی شناسه نامعتبر.."
 
 #: install.php:508
 msgid "Checking for invalid_ivr_ret.."
-msgstr ""
+msgstr "بررسی برای invalid_ivr_ret.."
 
 #: install.php:265
 msgid "Checking for retvm.."
-msgstr ""
+msgstr "بررسی برای retvm.."
 
 #: install.php:452
 msgid "Checking for timeout_append_announce.."
-msgstr ""
+msgstr "بررسی برای timeout_append_announce.."
 
 #: install.php:230
 msgid "Checking for timeout_id.."
@@ -140,7 +145,7 @@ msgstr "بررسی شناسه وقفه.."
 
 #: install.php:490
 msgid "Checking for timeout_ivr_ret.."
-msgstr ""
+msgstr "بررسی برای timeout_ivr_ret.."
 
 #: install.php:168
 msgid "Checking if announcements need migration.."
@@ -148,7 +153,7 @@ msgstr "بررسی کن آیا اعلان ها نیاز به انتقال دار
 
 #: functions.inc.php:438
 msgid "Choose a destination to route the call to"
-msgstr ""
+msgstr "برای مسیردهی تماس ها یک مقصد انتخاب کنید"
 
 #: views/advanced_form.php:263
 msgid ""
@@ -158,6 +163,11 @@ msgid ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 msgstr ""
+"Choose yes to have  this option return to a parent IVR if it was called from "
+"a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
 
 #: install.php:545
 msgid "Column present"
@@ -173,6 +183,9 @@ msgid ""
 "Response) menus. These can be used to send callers to different locations "
 "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 msgstr ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These  can be used to send callers to different locations ("
+"eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 
 #: views/form.php:66 views/form.php:72 views/form.php:78 views/form.php:84
 msgid "Default"
@@ -193,7 +206,7 @@ msgstr "حذف این ورودی.برای ذخیره تغییرات ارسال �
 #: install.php:288
 #, php-format
 msgid "Deprecated Directory used by %s IVRs"
-msgstr ""
+msgstr "دایرکتوری نادرستی برای استفاده %s منوهای صوتی انتخاب شده است"
 
 #: views/advanced_form.php:53
 msgid "Description of this IVR"
@@ -218,10 +231,11 @@ msgstr "اعداد"
 #: functions.inc.php:438
 msgid "Digits the caller needs to dial to access said destination"
 msgstr ""
+"شماره هایی که تماس گیرنده آن ها را برای دسترسی به گفتن مقصد شماره گیری میکند"
 
 #: views/simple_form.php:80
 msgid "Drop Annoucement Recording Here"
-msgstr ""
+msgstr "لغو اعلان ضبط تماس"
 
 #: views/form.php:43
 msgid "Edit IVR: "
@@ -245,7 +259,7 @@ msgstr "پیام خوش آمد در هنگام ورود به منوی صوتی."
 
 #: views/simple_form.php:110 assets/js/ivr.js:462 assets/js/ivr.js:474
 msgid "Hit the red record button to start recording from your browser"
-msgstr ""
+msgstr "بروی کلید قرمز برای ضبط پیام کلیک کنید"
 
 #: Ivr.class.php:30 ivr.i18n.php:4 ivr.i18n.php:10 page.ivr.php:24
 msgid "IVR"
@@ -283,17 +297,19 @@ msgstr "منوی صوتی ： %s"
 #: functions.inc.php:497
 #, php-format
 msgid "IVR: %s / Option: %s"
-msgstr ""
+msgstr "IVR: %s / Option : %s"
 
 #: assets/js/ivr.js:22
 msgid "IVRs require a valid name"
-msgstr ""
+msgstr "منوهای صوتی یک نام معتبر نیاز دارند"
 
 #: views/advanced_form.php:502
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
 msgstr ""
+"اگر بله، در صورت وجود صندوق ایمیل صوتی تماس گیرنده به منوی صوتی بازگردانده "
+"میشود که کاربران ایمیل صوتی دریافت کنند"
 
 #: views/advanced_form.php:305
 msgid "Invalid Destination"
@@ -317,7 +333,7 @@ msgstr "فهرست منوهای صوتی"
 
 #: Ivr.class.php:152
 msgid "Missing a temporary folder"
-msgstr ""
+msgstr "از دست دادن فولدر ذخیره موقت"
 
 #: views/advanced_form.php:29 views/simple_form.php:20
 msgid "Name of this IVR"
@@ -332,11 +348,11 @@ msgstr "خیر"
 
 #: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
-msgstr ""
+msgstr "بدون مدیریت استریسک، منوی صوتی بارگذاری نمیشود"
 
 #: assets/js/ivr.js:271
 msgid "No file to load!"
-msgstr ""
+msgstr "فایلی بارگذاری نشد!"
 
 #: Ivr.class.php:149
 msgid "No file was uploaded"
@@ -364,7 +380,7 @@ msgstr "اجرای ضبط قبلی"
 
 #: assets/js/ivr.js:44
 msgid "Please enter a valid value for Digits Pressed"
-msgstr ""
+msgstr "لطفا مقدار عددی معتبر برای فشردن وارد کنید"
 
 #: views/advanced_form.php:293 views/advanced_form.php:451
 msgid ""
@@ -372,6 +388,9 @@ msgid ""
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
 "unmatched responses (as determined by Invalid Retries)"
 msgstr ""
+"Prompt to be played before  sending the caller to an alternate destination "
+"due to the caller pressing 0 or receiving the maximum amount of invalid/"
+"unmatched responses (as determined by Invalid Retries)"
 
 #: views/advanced_form.php:367
 msgid ""
@@ -395,7 +414,7 @@ msgstr "ایجاد گزینه برای تماس مستقیم به یک داخل�
 #: functions.inc.php:345
 #, php-format
 msgid "Recording created for IVR named '%s'"
-msgstr ""
+msgstr "پیام ضبط شده تهیه شد برای منوی صوتی به نام '%s'"
 
 #: assets/js/ivr.js:505
 msgid "Recording..."
@@ -427,7 +446,7 @@ msgstr "بازگشت به منوی صوتی پس از اتمام"
 
 #: views/simple_form.php:143
 msgid "Ring Tone"
-msgstr ""
+msgstr "صدای زنگ"
 
 #: assets/js/ivr.js:427
 msgid "Save Recording"
@@ -438,6 +457,8 @@ msgid ""
 "Select a Ring Tone from the list of options above. This will determine how "
 "your phone sounds when it is rung from this group."
 msgstr ""
+"انتخاب صدای زنگ از لیست بالا. مشخص میکند تلفن شما با چه صدایی از این گروه "
+"زنگ میخورد."
 
 #: Ivr.class.php:79
 msgid "Submit"
@@ -447,15 +468,15 @@ msgstr "ارسال"
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr ""
+msgstr "فایل بارگذاری شده بیش از حد تعیین شده در فرم HTML میباشد"
 
 #: Ivr.class.php:140
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr ""
+msgstr "فایل بارگذاری شده بیش از حد تعیین شده در فایل php.ini میباشد"
 
 #: Ivr.class.php:146
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
+msgstr "فقط بخشی از فایل شما بارگذاری شد"
 
 #: install.php:287
 #, php-format
@@ -466,6 +487,11 @@ msgid ""
 "IVR destination to a desired Directory. You can install the Directory module "
 "from the Online Module Repository"
 msgstr ""
+"There  are %s IVRs that have the legacy Directory dialing enabled. This has "
+"been deprecated and will be removed from future releases. You should convert "
+"your IVRs to use the Directory module for this functionality and assign an "
+"IVR destination to a desired Directory. You can install the Directory module "
+"from the Online Module Repository"
 
 #: views/advanced_form.php:123
 msgid "Timeout"
@@ -492,11 +518,11 @@ msgstr "وقفه در ظبط مجدد"
 msgid ""
 "To play the media you will need to either update your browser to a recent "
 "version or update your %s"
-msgstr ""
+msgstr "برای اجرای این فایل باید مرورگر خود را به روز کنید به نسخه %s"
 
 #: assets/js/ivr.js:97
 msgid "Unable to delete the first entry. Please edit instead"
-msgstr ""
+msgstr "عدم حذف ورودی اول. لطفا ورودی را ویرایش کنید"
 
 #: assets/js/ivr.js:93
 msgid "Unable to delete the last entry"
@@ -524,6 +550,8 @@ msgid ""
 "Upload files from your local system. Supported upload formats are: %s. This "
 "includes archives (that include multiple files) and multiple files"
 msgstr ""
+"بارگذاری فایل از سیستم شما. فرمت های پشتیبانی شده عبارتند از: %s. که شامل "
+"فایل های فشرده شده (فایلهای چندگانه فشرده) نیز میباشد"
 
 #: views/advanced_form.php:101 views/advanced_form.php:226
 #: views/advanced_form.php:253 views/advanced_form.php:384
@@ -534,7 +562,7 @@ msgstr "بله"
 
 #: assets/js/ivr.js:509
 msgid "Your Browser Blocked The Recording, Please check your settings"
-msgstr ""
+msgstr "مرورگر شما ضبط پیام را محدود کرده، لطفا تنظیمات را بررسی کنید"
 
 #: install.php:242 install.php:259 install.php:277 install.php:464
 #: install.php:482 install.php:502 install.php:520
@@ -570,7 +598,7 @@ msgstr "مهاجرت به شناسه های ظبط شده.."
 #: install.php:211
 #, php-format
 msgid "migrated %s entries"
-msgstr ""
+msgstr "انتقال ورودی های %s"
 
 #: install.php:174
 msgid "migrating"
