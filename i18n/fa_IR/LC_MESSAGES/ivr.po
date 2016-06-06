@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 15:10-0500\n"
+"POT-Creation-Date: 2016-06-06 16:04-0700\n"
 "PO-Revision-Date: 2016-04-26 06:49+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
-"Language-Team: Persian (Iran) "
-"<http://weblate.freepbx.org/projects/freepbx/ivr/fa_IR/>\n"
-"Language: fa_IR\n"
+"Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
+"ivr/fa_IR/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fa_IR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -49,11 +49,11 @@ msgstr "عملیات"
 msgid "Add Another Entry"
 msgstr "افزودن ورودی دیگر"
 
-#: page.ivr.php:30 views/form.php:9 views/rnav.php:3
+#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:9 views/rnav.php:3
 msgid "Add IVR"
 msgstr "افزودن منو صوتی"
 
-#: install.php:536
+#: install.php:510
 msgid "Adding Alertinfo:  "
 msgstr "افزودن اطلاعات هشدار:  "
 
@@ -89,7 +89,7 @@ msgstr "اعمال اطلاعیه برای وقفه"
 msgid "Append Announcement to Invalid"
 msgstr "اعمال اطلاعیه برای غیرمعتبر"
 
-#: ivr.i18n.php:6 ivr.i18n.php:12
+#: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
 msgid "Applications"
 msgstr "برنامه ها"
 
@@ -119,35 +119,35 @@ msgstr ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 
-#: install.php:470
+#: install.php:444
 msgid "Checking for invalid_append_announce.."
 msgstr "بررسی برای اعلام اطلاعیه های نامعتبر.."
 
-#: install.php:247
+#: install.php:221
 msgid "Checking for invalid_id.."
 msgstr "بررسی شناسه نامعتبر.."
 
-#: install.php:508
+#: install.php:482
 msgid "Checking for invalid_ivr_ret.."
 msgstr "بررسی برای invalid_ivr_ret.."
 
-#: install.php:265
+#: install.php:239
 msgid "Checking for retvm.."
 msgstr "بررسی برای retvm.."
 
-#: install.php:452
+#: install.php:426
 msgid "Checking for timeout_append_announce.."
 msgstr "بررسی برای timeout_append_announce.."
 
-#: install.php:230
+#: install.php:204
 msgid "Checking for timeout_id.."
 msgstr "بررسی شناسه وقفه.."
 
-#: install.php:490
+#: install.php:464
 msgid "Checking for timeout_ivr_ret.."
 msgstr "بررسی برای timeout_ivr_ret.."
 
-#: install.php:168
+#: install.php:142
 msgid "Checking if announcements need migration.."
 msgstr "بررسی کن آیا اعلان ها نیاز به انتقال دارند.."
 
@@ -169,7 +169,7 @@ msgstr ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 
-#: install.php:545
+#: install.php:519
 msgid "Column present"
 msgstr "ستون فعلی"
 
@@ -184,8 +184,8 @@ msgid ""
 "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 msgstr ""
 "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These  can be used to send callers to different locations ("
-"eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+"Response) menus. These  can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 
 #: views/form.php:66 views/form.php:72 views/form.php:78 views/form.php:84
 msgid "Default"
@@ -203,7 +203,7 @@ msgstr "حذف ضبط شده"
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
 msgstr "حذف این ورودی.برای ذخیره تغییرات ارسال را کلیک کنید!"
 
-#: install.php:288
+#: install.php:262
 #, php-format
 msgid "Deprecated Directory used by %s IVRs"
 msgstr "دایرکتوری نادرستی برای استفاده %s منوهای صوتی انتخاب شده است"
@@ -261,7 +261,8 @@ msgstr "پیام خوش آمد در هنگام ورود به منوی صوتی."
 msgid "Hit the red record button to start recording from your browser"
 msgstr "بروی کلید قرمز برای ضبط پیام کلیک کنید"
 
-#: Ivr.class.php:30 ivr.i18n.php:4 ivr.i18n.php:10 page.ivr.php:24
+#: Ivr.class.php:30 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "منوی صوتی"
 
@@ -378,10 +379,6 @@ msgstr "تعداد دفعات تکرار برای شماره نامعتبر  د�
 msgid "Play Previous Recording"
 msgstr "اجرای ضبط قبلی"
 
-#: assets/js/ivr.js:44
-msgid "Please enter a valid value for Digits Pressed"
-msgstr "لطفا مقدار عددی معتبر برای فشردن وارد کنید"
-
 #: views/advanced_form.php:293 views/advanced_form.php:451
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
@@ -478,7 +475,7 @@ msgstr "فایل بارگذاری شده بیش از حد تعیین شده در
 msgid "The uploaded file was only partially uploaded"
 msgstr "فقط بخشی از فایل شما بارگذاری شد"
 
-#: install.php:287
+#: install.php:261
 #, php-format
 msgid ""
 "There are %s IVRs that have the legacy Directory dialing enabled. This has "
@@ -564,16 +561,17 @@ msgstr "بله"
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr "مرورگر شما ضبط پیام را محدود کرده، لطفا تنظیمات را بررسی کنید"
 
-#: install.php:242 install.php:259 install.php:277 install.php:464
-#: install.php:482 install.php:502 install.php:520
+#: install.php:216 /usr/src/freepbx/ivr/install.php:233 install.php:251
+#: /usr/src/freepbx/ivr/install.php:438 install.php:456
+#: /usr/src/freepbx/ivr/install.php:476 install.php:494
 msgid "added"
 msgstr "افزوده شده"
 
-#: install.php:175
+#: install.php:149
 msgid "adding announcement_id field.."
 msgstr "افزودن فیلد شناسه اطلاعیه.."
 
-#: install.php:225
+#: install.php:199
 msgid "already migrated"
 msgstr "مهاجرت کرده"
 
@@ -581,45 +579,51 @@ msgstr "مهاجرت کرده"
 msgid "digits pressed"
 msgstr "شماره گرفته شده"
 
-#: install.php:215
+#: install.php:189
 msgid "dropping announcement field.."
 msgstr "فیلد لغو اطلاعیه.."
 
-#: install.php:179 install.php:191 install.php:207 install.php:239
-#: install.php:256 install.php:274 install.php:461 install.php:479
-#: install.php:499 install.php:517
+#: install.php:153 /usr/src/freepbx/ivr/install.php:165 install.php:181
+#: /usr/src/freepbx/ivr/install.php:213 install.php:230
+#: /usr/src/freepbx/ivr/install.php:248 install.php:435
+#: /usr/src/freepbx/ivr/install.php:453 install.php:473
+#: /usr/src/freepbx/ivr/install.php:491
 msgid "fatal error"
 msgstr "خطا"
 
-#: install.php:187
+#: install.php:161
 msgid "migrate to recording ids.."
 msgstr "مهاجرت به شناسه های ظبط شده.."
 
-#: install.php:211
+#: install.php:185
 #, php-format
 msgid "migrated %s entries"
 msgstr "انتقال ورودی های %s"
 
-#: install.php:174
+#: install.php:148
 msgid "migrating"
 msgstr "مهاجرت"
 
-#: install.php:219
+#: install.php:193
 msgid "no announcement field???"
 msgstr "بدون فیلد اطلاعیه؟؟؟"
 
-#: install.php:245 install.php:262 install.php:280 install.php:467
-#: install.php:485 install.php:505 install.php:523
+#: install.php:219 /usr/src/freepbx/ivr/install.php:236 install.php:254
+#: /usr/src/freepbx/ivr/install.php:441 install.php:459
+#: /usr/src/freepbx/ivr/install.php:479 install.php:497
 msgid "not needed"
 msgstr "نیاز نیست"
 
-#: install.php:182 install.php:221 install.php:541
+#: install.php:156 /usr/src/freepbx/ivr/install.php:195 install.php:515
 msgid "ok"
 msgstr "تایید"
 
-#: install.php:289
+#: install.php:263
 msgid "posting notice about deprecated functionality"
 msgstr "ارسال هشدار برای توابع تکراری"
+
+#~ msgid "Please enter a valid value for Digits Pressed"
+#~ msgstr "لطفا مقدار عددی معتبر برای فشردن وارد کنید"
 
 #~ msgid "Ext"
 #~ msgstr "داخلی"

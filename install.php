@@ -5,56 +5,30 @@ $dbh = \FreePBX::Database();
 global $db;
 global $amp_conf;
 
-if($amp_conf["AMPDBENGINE"] == "sqlite3")  {
-	sql("CREATE TABLE IF NOT EXISTS `ivr_details` (
-		`id` int(11) NOT NULL PRIMARY KEY AUTOINCREMENT,
-		`name` varchar(50) default NULL,
-		`description` varchar(150) default NULL,
-		`alertinfo` varchar(150) default NULL,
-		`announcement` int(11) default NULL,
-		`directdial` varchar(50) default NULL,
-		`invalid_loops` varchar(10) default NULL,
-		`invalid_retry_recording` varchar(25) default NULL,
-		`invalid_destination` varchar(50) default NULL,
-		`timeout_enabled` varchar(50) default NULL,
-		`invalid_recording` varchar(25) default NULL,
-		`retvm` varchar(8) default NULL,
-		`timeout_time` int(11) default NULL,
-		`timeout_recording` varchar(25) default NULL,
-		`timeout_retry_recording` varchar(25) default NULL,
-		`timeout_destination` varchar(50) default NULL,
-		`timeout_loops` varchar(10) default NULL,
-		`timeout_append_announce` tinyint(1) NOT NULL default '1',
-		`invalid_append_announce` tinyint(1) NOT NULL default '1',
-		`timeout_ivr_ret` tinyint(1) NOT NULL default '0',
-		`invalid_ivr_ret` tinyint(1) NOT NULL default '0')"
-	);
-} else {
-	sql("CREATE TABLE IF NOT EXISTS `ivr_details` (
-		`id` int(11) NOT NULL auto_increment,
-		`name` varchar(50) default NULL,
-		`description` varchar(150) default NULL,
-		`announcement` int(11) default NULL,
-		`directdial` varchar(50) default NULL,
-		`invalid_loops` varchar(10) default NULL,
-		`invalid_retry_recording` varchar(25) default NULL,
-		`invalid_destination` varchar(50) default NULL,
-		`timeout_enabled` varchar(50) default NULL,
-		`invalid_recording` varchar(25) default NULL,
-		`retvm` varchar(8) default NULL,
-		`timeout_time` int(11) default NULL,
-		`timeout_recording` varchar(25) default NULL,
-		`timeout_retry_recording` varchar(25) default NULL,
-		`timeout_destination` varchar(50) default NULL,
-		`timeout_loops` varchar(10) default NULL,
-		`timeout_append_announce` tinyint(1) NOT NULL default '1',
-		`invalid_append_announce` tinyint(1) NOT NULL default '1',
-		`timeout_ivr_ret` tinyint(1) NOT NULL default '0',
-		`invalid_ivr_ret` tinyint(1) NOT NULL default '0',
-		PRIMARY KEY  (`id`))"
-	);
-}
-
+sql("CREATE TABLE IF NOT EXISTS `ivr_details` (
+	`id` int(11) NOT NULL auto_increment,
+	`name` varchar(50) default NULL,
+	`description` varchar(150) default NULL,
+	`alertinfo` varchar(150) default NULL,
+	`announcement` int(11) default NULL,
+	`directdial` varchar(50) default NULL,
+	`invalid_loops` varchar(10) default NULL,
+	`invalid_retry_recording` varchar(25) default NULL,
+	`invalid_destination` varchar(50) default NULL,
+	`timeout_enabled` varchar(50) default NULL,
+	`invalid_recording` varchar(25) default NULL,
+	`retvm` varchar(8) default NULL,
+	`timeout_time` int(11) default NULL,
+	`timeout_recording` varchar(25) default NULL,
+	`timeout_retry_recording` varchar(25) default NULL,
+	`timeout_destination` varchar(50) default NULL,
+	`timeout_loops` varchar(10) default NULL,
+	`timeout_append_announce` tinyint(1) NOT NULL default '1',
+	`invalid_append_announce` tinyint(1) NOT NULL default '1',
+	`timeout_ivr_ret` tinyint(1) NOT NULL default '0',
+	`invalid_ivr_ret` tinyint(1) NOT NULL default '0',
+	PRIMARY KEY  (`id`))"
+);
 
 $ivr_modcurrentvers = modules_getversion('ivr');
 
