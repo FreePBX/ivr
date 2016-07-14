@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>13.0.24</version>
+	<version>13.0.25</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
+		*13.0.25* Add sound languages: it,fr,en_GB
 		*13.0.24* FREEPBX-12374 Regression, allow dialpatterns in ivr entries
 		*13.0.23* Allow additional destinations in simple mode
 		*13.0.22* FREEPBX-11776 Change IVR validation to allow * and #
