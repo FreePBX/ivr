@@ -126,11 +126,12 @@ public function ajaxHandler(){
 						if(in_array($extension,$supported['in'])) {
 							$tmp_name = $_FILES["files"]["tmp_name"][$key];
 							$dname = \Media\Media::cleanFileName($_FILES["files"]["name"][$key]);
+							$dname = basename($dname);
 							$dname = pathinfo($dname,PATHINFO_FILENAME);
 							$id = time().rand(1,1000);
 							$name = $dname . '-' . $id . '.' . $extension;
 							move_uploaded_file($tmp_name, $this->temp."/".$name);
-							return array("status" => true, "filename" => pathinfo($dname,PATHINFO_FILENAME), "localfilename" => $name, "id" => $id);
+							return array("status" => true, "filename" => $dname, "localfilename" => $name, "id" => $id);
 						} else {
 							return array("status" => false, "message" => _("Unsupported file format"));
 							break;
