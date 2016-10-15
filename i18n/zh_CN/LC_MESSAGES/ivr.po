@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-06 16:04-0700\n"
+"POT-Creation-Date: 2016-10-14 20:41-0700\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: Ivr.class.php:158
+#: Ivr.class.php:159
 msgid "A PHP extension stopped the file upload"
 msgstr ""
 
@@ -52,17 +52,13 @@ msgstr ""
 msgid "Add IVR"
 msgstr "添加IVR"
 
-#: install.php:510
-msgid "Adding Alertinfo:  "
-msgstr ""
-
-#: views/advanced_form.php:236
+#: views/advanced_form.php:263
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr "播放无效入口重试录音以后，系统将重放主IVR语音"
 
-#: views/advanced_form.php:394
+#: views/advanced_form.php:421
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
@@ -80,11 +76,11 @@ msgstr "超时设置。"
 msgid "Announcement"
 msgstr "公告"
 
-#: views/advanced_form.php:379
+#: views/advanced_form.php:406
 msgid "Append Announcement on Timeout"
 msgstr "超时中附加一个主系统公告"
 
-#: views/advanced_form.php:221
+#: views/advanced_form.php:248
 msgid "Append Announcement to Invalid"
 msgstr "在无效输入后附加语音提示"
 
@@ -100,11 +96,11 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:162
+#: Ivr.class.php:163
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
-#: views/advanced_form.php:421
+#: views/advanced_form.php:448
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -117,53 +113,17 @@ msgstr ""
 "的地。<br /><br />返回路径可能会是呼叫路径上任何先于此IVR的IVR。如果呼叫了在"
 "路径上不直接相邻的父IVR，这个设置可能回带来奇怪的结果。"
 
-#: install.php:444
-msgid "Checking for invalid_append_announce.."
-msgstr "检查 invalid_append_announce.."
-
-#: install.php:221
-msgid "Checking for invalid_id.."
-msgstr "正在检查invalid_id。。。"
-
-#: install.php:482
-msgid "Checking for invalid_ivr_ret.."
-msgstr "检查 invalid_ivr_ret.."
-
-#: install.php:239
-msgid "Checking for retvm.."
-msgstr "正在检查retvm。。。"
-
-#: install.php:426
-msgid "Checking for timeout_append_announce.."
-msgstr "检查 timeout_append_announce.."
-
-#: install.php:204
-msgid "Checking for timeout_id.."
-msgstr "正在检查timeout_id。。。"
-
-#: install.php:464
-msgid "Checking for timeout_ivr_ret.."
-msgstr "检查 timeout_ivr_ret.."
-
-#: install.php:142
-msgid "Checking if announcements need migration.."
-msgstr "正在检查通知通告是否需要迁移。。。"
-
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Choose a destination to route the call to"
 msgstr ""
 
-#: views/advanced_form.php:263
+#: views/advanced_form.php:290
 msgid ""
 "Choose yes to have this option return to a parent IVR if it was called from "
 "a parent IVR. If not, it will go to the chosen destination.<br><br>The "
 "return path will be to any IVR that was in the call path prior to this IVR "
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
-msgstr ""
-
-#: install.php:519
-msgid "Column present"
 msgstr ""
 
 #: page.ivr.php:16
@@ -181,7 +141,7 @@ msgstr ""
 msgid "Default"
 msgstr "默认"
 
-#: Ivr.class.php:69 functions.inc.php:438
+#: Ivr.class.php:69 functions.inc.php:441
 msgid "Delete"
 msgstr "删除"
 
@@ -193,32 +153,27 @@ msgstr ""
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
 msgstr "删除这个入口。 不要忘记点击提交！"
 
-#: install.php:262
-#, php-format
-msgid "Deprecated Directory used by %s IVRs"
-msgstr ""
-
 #: views/advanced_form.php:53
 msgid "Description of this IVR"
 msgstr "IVR描述"
 
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Destination"
 msgstr "目的地"
 
-#: views/advanced_form.php:317
+#: views/advanced_form.php:344
 msgid "Destination to send the call to after Invalid Recording is played"
 msgstr "播放无效录音提示后转发的目的地"
 
-#: views/advanced_form.php:475
+#: views/advanced_form.php:502
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "播放超时提示后转发的目的地。"
 
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Digits"
 msgstr ""
 
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Digits the caller needs to dial to access said destination"
 msgstr ""
 
@@ -238,7 +193,7 @@ msgstr "编辑:"
 msgid "Enable Direct Dial"
 msgstr "启用直接拨号"
 
-#: Ivr.class.php:155
+#: Ivr.class.php:156
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -263,7 +218,7 @@ msgstr "IVR语音提示选项"
 msgid "IVR Description"
 msgstr "IVR 描述"
 
-#: views/advanced_form.php:509
+#: views/advanced_form.php:536
 msgid "IVR Entries"
 msgstr "IVR入口"
 
@@ -279,12 +234,12 @@ msgstr "IVR列表"
 msgid "IVR Name"
 msgstr "IVR 名称"
 
-#: functions.inc.php:530 functions.inc.php:550
+#: functions.inc.php:533 functions.inc.php:553
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR：%s"
 
-#: functions.inc.php:497
+#: functions.inc.php:500
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR：%s / 选项：%s"
@@ -293,25 +248,25 @@ msgstr "IVR：%s / 选项：%s"
 msgid "IVRs require a valid name"
 msgstr ""
 
-#: views/advanced_form.php:502
+#: views/advanced_form.php:529
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
 msgstr ""
 
-#: views/advanced_form.php:305
+#: views/advanced_form.php:332
 msgid "Invalid Destination"
 msgstr "无效目的地"
 
-#: views/advanced_form.php:279
+#: views/advanced_form.php:306
 msgid "Invalid Recording"
 msgstr "无效录音"
 
-#: views/advanced_form.php:171
+#: views/advanced_form.php:198
 msgid "Invalid Retries"
 msgstr "无效重试"
 
-#: views/advanced_form.php:195
+#: views/advanced_form.php:222
 msgid "Invalid Retry Recording"
 msgstr "无效重试录音"
 
@@ -319,7 +274,7 @@ msgstr "无效重试录音"
 msgid "List IVRs"
 msgstr "显示IVR列表"
 
-#: Ivr.class.php:152
+#: Ivr.class.php:153
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -327,9 +282,9 @@ msgstr ""
 msgid "Name of this IVR"
 msgstr "IVR名称"
 
-#: views/advanced_form.php:103 views/advanced_form.php:228
-#: views/advanced_form.php:255 views/advanced_form.php:386
-#: views/advanced_form.php:413 views/advanced_form.php:494
+#: views/advanced_form.php:103 views/advanced_form.php:255
+#: views/advanced_form.php:282 views/advanced_form.php:413
+#: views/advanced_form.php:440 views/advanced_form.php:521
 #: views/entries.php:38
 msgid "No"
 msgstr ""
@@ -342,31 +297,39 @@ msgstr ""
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:149
+#: Ivr.class.php:150
 msgid "No file was uploaded"
 msgstr ""
 
-#: views/form.php:61 views/form.php:67 views/form.php:73 views/form.php:79
-#: views/form.php:85
+#: views/advanced_form.php:175 views/form.php:61 views/form.php:67
+#: views/form.php:73 views/form.php:79 views/form.php:85
+#: views/simple_form.php:171
 msgid "None"
 msgstr "无"
 
-#: views/advanced_form.php:341
+#: views/advanced_form.php:368
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr ""
 
-#: views/advanced_form.php:183
+#: views/advanced_form.php:210
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
 msgstr "重试次数（当呼叫方收到无效或不能匹配的响应）"
 
+#: views/advanced_form.php:187 views/simple_form.php:183
+#, php-format
+msgid ""
+"Override the ringer volume. Note: This is only valid for %s phones at this "
+"time"
+msgstr ""
+
 #: views/simple_form.php:62
 msgid "Play Previous Recording"
 msgstr ""
 
-#: views/advanced_form.php:293 views/advanced_form.php:451
+#: views/advanced_form.php:320 views/advanced_form.php:478
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
@@ -374,13 +337,13 @@ msgid ""
 msgstr ""
 "播放提示音，发送呼叫方到可选目的地，因为当呼叫方摁0 或者超出重试最大设置。"
 
-#: views/advanced_form.php:367
+#: views/advanced_form.php:394
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
 msgstr ""
 
-#: views/advanced_form.php:209
+#: views/advanced_form.php:236
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
@@ -390,7 +353,7 @@ msgstr "当收到无效响应时，在提示呼叫方重新呼叫钱，播放的
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: functions.inc.php:345
+#: functions.inc.php:348
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
@@ -403,28 +366,32 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Return"
 msgstr "返回"
 
-#: views/advanced_form.php:248
+#: views/advanced_form.php:275
 msgid "Return on Invalid"
 msgstr "无效中的返回处理"
 
-#: views/advanced_form.php:406
+#: views/advanced_form.php:433
 msgid "Return on Timeout"
 msgstr "超时返回处理"
 
-#: views/advanced_form.php:487
+#: views/advanced_form.php:514
 msgid "Return to IVR after VM"
 msgstr "VM后返回IVR"
 
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Return to this IVR when finished"
 msgstr ""
 
 #: views/simple_form.php:143
 msgid "Ring Tone"
+msgstr ""
+
+#: views/advanced_form.php:170 views/simple_form.php:166
+msgid "Ringer Volume Override"
 msgstr ""
 
 #: assets/js/ivr.js:427
@@ -441,47 +408,37 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: Ivr.class.php:143
+#: Ivr.class.php:144
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:140
+#: Ivr.class.php:141
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:146
+#: Ivr.class.php:147
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
-
-#: install.php:261
-#, php-format
-msgid ""
-"There are %s IVRs that have the legacy Directory dialing enabled. This has "
-"been deprecated and will be removed from future releases. You should convert "
-"your IVRs to use the Directory module for this functionality and assign an "
-"IVR destination to a desired Directory. You can install the Directory module "
-"from the Online Module Repository"
 msgstr ""
 
 #: views/advanced_form.php:123
 msgid "Timeout"
 msgstr "超时设置"
 
-#: views/advanced_form.php:463
+#: views/advanced_form.php:490
 msgid "Timeout Destination"
 msgstr "目的地超时"
 
-#: views/advanced_form.php:437
+#: views/advanced_form.php:464
 msgid "Timeout Recording"
 msgstr "录音超时"
 
-#: views/advanced_form.php:329
+#: views/advanced_form.php:356
 msgid "Timeout Retries"
 msgstr "重试超时"
 
-#: views/advanced_form.php:353
+#: views/advanced_form.php:380
 msgid "Timeout Retry Recording"
 msgstr "重试录音超时"
 
@@ -504,7 +461,7 @@ msgstr ""
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:135
+#: Ivr.class.php:136
 msgid "Unsupported file format"
 msgstr ""
 
@@ -523,9 +480,9 @@ msgid ""
 "includes archives (that include multiple files) and multiple files"
 msgstr ""
 
-#: views/advanced_form.php:101 views/advanced_form.php:226
-#: views/advanced_form.php:253 views/advanced_form.php:384
-#: views/advanced_form.php:411 views/advanced_form.php:492
+#: views/advanced_form.php:101 views/advanced_form.php:253
+#: views/advanced_form.php:280 views/advanced_form.php:411
+#: views/advanced_form.php:438 views/advanced_form.php:519
 #: views/entries.php:36
 msgid "Yes"
 msgstr ""
@@ -534,66 +491,66 @@ msgstr ""
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 
-#: install.php:216 /usr/src/freepbx/ivr/install.php:233 install.php:251
-#: /usr/src/freepbx/ivr/install.php:438 install.php:456
-#: /usr/src/freepbx/ivr/install.php:476 install.php:494
-msgid "added"
-msgstr "已增加"
-
-#: install.php:149
-msgid "adding announcement_id field.."
-msgstr "正在添加announcement_id字段。。"
-
-#: install.php:199
-msgid "already migrated"
-msgstr "已经迁移过了"
-
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr ""
 
-#: install.php:189
-msgid "dropping announcement field.."
-msgstr "正在删除announcement字段。。。"
+#~ msgid "Checking for invalid_append_announce.."
+#~ msgstr "检查 invalid_append_announce.."
 
-#: install.php:153 /usr/src/freepbx/ivr/install.php:165 install.php:181
-#: /usr/src/freepbx/ivr/install.php:213 install.php:230
-#: /usr/src/freepbx/ivr/install.php:248 install.php:435
-#: /usr/src/freepbx/ivr/install.php:453 install.php:473
-#: /usr/src/freepbx/ivr/install.php:491
-msgid "fatal error"
-msgstr "致命错误"
+#~ msgid "Checking for invalid_id.."
+#~ msgstr "正在检查invalid_id。。。"
 
-#: install.php:161
-msgid "migrate to recording ids.."
-msgstr "迁移到录音id。。。"
+#~ msgid "Checking for invalid_ivr_ret.."
+#~ msgstr "检查 invalid_ivr_ret.."
 
-#: install.php:185
-#, php-format
-msgid "migrated %s entries"
-msgstr "迁移了%s个项目"
+#~ msgid "Checking for retvm.."
+#~ msgstr "正在检查retvm。。。"
 
-#: install.php:148
-msgid "migrating"
-msgstr "正在迁移"
+#~ msgid "Checking for timeout_append_announce.."
+#~ msgstr "检查 timeout_append_announce.."
 
-#: install.php:193
-msgid "no announcement field???"
-msgstr "没有announcement字段？"
+#~ msgid "Checking for timeout_id.."
+#~ msgstr "正在检查timeout_id。。。"
 
-#: install.php:219 /usr/src/freepbx/ivr/install.php:236 install.php:254
-#: /usr/src/freepbx/ivr/install.php:441 install.php:459
-#: /usr/src/freepbx/ivr/install.php:479 install.php:497
-msgid "not needed"
-msgstr "不需要"
+#~ msgid "Checking for timeout_ivr_ret.."
+#~ msgstr "检查 timeout_ivr_ret.."
 
-#: install.php:156 /usr/src/freepbx/ivr/install.php:195 install.php:515
-msgid "ok"
-msgstr "完成"
+#~ msgid "Checking if announcements need migration.."
+#~ msgstr "正在检查通知通告是否需要迁移。。。"
 
-#: install.php:263
-msgid "posting notice about deprecated functionality"
-msgstr ""
+#~ msgid "added"
+#~ msgstr "已增加"
+
+#~ msgid "adding announcement_id field.."
+#~ msgstr "正在添加announcement_id字段。。"
+
+#~ msgid "already migrated"
+#~ msgstr "已经迁移过了"
+
+#~ msgid "dropping announcement field.."
+#~ msgstr "正在删除announcement字段。。。"
+
+#~ msgid "fatal error"
+#~ msgstr "致命错误"
+
+#~ msgid "migrate to recording ids.."
+#~ msgstr "迁移到录音id。。。"
+
+#~ msgid "migrated %s entries"
+#~ msgstr "迁移了%s个项目"
+
+#~ msgid "migrating"
+#~ msgstr "正在迁移"
+
+#~ msgid "no announcement field???"
+#~ msgstr "没有announcement字段？"
+
+#~ msgid "not needed"
+#~ msgstr "不需要"
+
+#~ msgid "ok"
+#~ msgstr "完成"
 
 #~ msgid "Ext"
 #~ msgstr "分机"

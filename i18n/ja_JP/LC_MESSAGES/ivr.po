@@ -37,21 +37,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-06 16:04-0700\n"
+"POT-Creation-Date: 2016-10-14 20:41-0700\n"
 "PO-Revision-Date: 2016-08-03 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
-"Language-Team: Japanese "
-"<http://weblate.freepbx.org/projects/freepbx/ivr/ja_JP/>\n"
-"Language: ja_JP\n"
+"Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
+"ja_JP/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:158
+#: Ivr.class.php:159
 msgid "A PHP extension stopped the file upload"
-msgstr "ファイルのアップロードは、PHPのエクステンションによって中断されました。"
+msgstr ""
+"ファイルのアップロードは、PHPのエクステンションによって中断されました。"
 
 #: page.ivr.php:18
 msgid ""
@@ -81,11 +82,7 @@ msgstr "新規エントリー"
 msgid "Add IVR"
 msgstr "IVRを追加"
 
-#: install.php:510
-msgid "Adding Alertinfo:  "
-msgstr ""
-
-#: views/advanced_form.php:236
+#: views/advanced_form.php:263
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
@@ -93,7 +90,7 @@ msgstr ""
 "発信者から無効な入力を検知した場合は、リトライの音声を再生してからIVRのメイン"
 "アナウンスをもう一度再生します。"
 
-#: views/advanced_form.php:394
+#: views/advanced_form.php:421
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
@@ -111,11 +108,11 @@ msgstr "タイムアウトと見なす時間。"
 msgid "Announcement"
 msgstr "アナウンス"
 
-#: views/advanced_form.php:379
+#: views/advanced_form.php:406
 msgid "Append Announcement on Timeout"
 msgstr "タイムアウト後のメインアナウンス"
 
-#: views/advanced_form.php:221
+#: views/advanced_form.php:248
 msgid "Append Announcement to Invalid"
 msgstr "無効な入力: メインアナウナス"
 
@@ -131,11 +128,11 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:162
+#: Ivr.class.php:163
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
-#: views/advanced_form.php:421
+#: views/advanced_form.php:448
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -148,43 +145,11 @@ msgstr ""
 "よって、親IVRがこのIVRの直前でない場合は、予期しない結果を引き起こしてしまう"
 "可能性があります。注意:親IVRとは、このIVRに転送される前にあったIVRの事"
 
-#: install.php:444
-msgid "Checking for invalid_append_announce.."
-msgstr "invalid_append_announceをチェック中.."
-
-#: install.php:221
-msgid "Checking for invalid_id.."
-msgstr "invalid_idをチェック中.."
-
-#: install.php:482
-msgid "Checking for invalid_ivr_ret.."
-msgstr "invalid_ivr_ret を確認中..."
-
-#: install.php:239
-msgid "Checking for retvm.."
-msgstr "retvmをチェック中.."
-
-#: install.php:426
-msgid "Checking for timeout_append_announce.."
-msgstr "timeout_append_announceをチェック中.."
-
-#: install.php:204
-msgid "Checking for timeout_id.."
-msgstr "timeout_idをチェック中.."
-
-#: install.php:464
-msgid "Checking for timeout_ivr_ret.."
-msgstr "timeout_ivr_ret を確認中..."
-
-#: install.php:142
-msgid "Checking if announcements need migration.."
-msgstr "アナウンスに移行が必要かチェック中.."
-
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Choose a destination to route the call to"
 msgstr ""
 
-#: views/advanced_form.php:263
+#: views/advanced_form.php:290
 msgid ""
 "Choose yes to have this option return to a parent IVR if it was called from "
 "a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -196,10 +161,6 @@ msgstr ""
 "設定しない場合は通常どおり、指定した宛先に転送します。<br><br>注意: 戻るIVR"
 "は、このIVRまでのコールフローにおいての最後のIVRになりますので、前のステップ"
 "がIVR以外の宛先だった場合には予想外の流れになる可能性があります。"
-
-#: install.php:519
-msgid "Column present"
-msgstr ""
 
 #: page.ivr.php:16
 msgid "Connection Error"
@@ -219,7 +180,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ivr.class.php:69 functions.inc.php:438
+#: Ivr.class.php:69 functions.inc.php:441
 msgid "Delete"
 msgstr "削除"
 
@@ -231,32 +192,27 @@ msgstr ""
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
 msgstr "このエントリーを削除する。変更適用を忘れずに！"
 
-#: install.php:262
-#, php-format
-msgid "Deprecated Directory used by %s IVRs"
-msgstr "%s のIVRから使用されている廃止されたディレクトリ"
-
 #: views/advanced_form.php:53
 msgid "Description of this IVR"
 msgstr "このIVRの説明。"
 
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Destination"
 msgstr "宛先"
 
-#: views/advanced_form.php:317
+#: views/advanced_form.php:344
 msgid "Destination to send the call to after Invalid Recording is played"
 msgstr "「無効な入力」の音声を再生してから転送する宛先。"
 
-#: views/advanced_form.php:475
+#: views/advanced_form.php:502
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "タイムアウト音声を再生してから転送する宛先。"
 
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Digits"
 msgstr ""
 
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Digits the caller needs to dial to access said destination"
 msgstr ""
 
@@ -276,7 +232,7 @@ msgstr "編集:"
 msgid "Enable Direct Dial"
 msgstr "ダイレクトダイヤルを許可"
 
-#: Ivr.class.php:155
+#: Ivr.class.php:156
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -301,7 +257,7 @@ msgstr "IVR DTMFオプション"
 msgid "IVR Description"
 msgstr "IVRの説明"
 
-#: views/advanced_form.php:509
+#: views/advanced_form.php:536
 msgid "IVR Entries"
 msgstr "IVRエントリー"
 
@@ -317,12 +273,12 @@ msgstr "IVRリスト"
 msgid "IVR Name"
 msgstr "IVRの名前"
 
-#: functions.inc.php:530 functions.inc.php:550
+#: functions.inc.php:533 functions.inc.php:553
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:497
+#: functions.inc.php:500
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / オプション: %s"
@@ -331,7 +287,7 @@ msgstr "IVR: %s / オプション: %s"
 msgid "IVRs require a valid name"
 msgstr ""
 
-#: views/advanced_form.php:502
+#: views/advanced_form.php:529
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
@@ -339,19 +295,19 @@ msgstr ""
 "「はい」に設定すると、このIVRを出てから、ユーザのボイスメールにつながった場合"
 "には、ボイスメール終了後にこのIVRに戻ります。"
 
-#: views/advanced_form.php:305
+#: views/advanced_form.php:332
 msgid "Invalid Destination"
 msgstr "無効な入力: 宛先"
 
-#: views/advanced_form.php:279
+#: views/advanced_form.php:306
 msgid "Invalid Recording"
 msgstr "無効な入力: 音声"
 
-#: views/advanced_form.php:171
+#: views/advanced_form.php:198
 msgid "Invalid Retries"
 msgstr "無効な入力: リトライ数"
 
-#: views/advanced_form.php:195
+#: views/advanced_form.php:222
 msgid "Invalid Retry Recording"
 msgstr "無効な入力: 音声"
 
@@ -359,7 +315,7 @@ msgstr "無効な入力: 音声"
 msgid "List IVRs"
 msgstr "IVRを一覧表示"
 
-#: Ivr.class.php:152
+#: Ivr.class.php:153
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -367,9 +323,9 @@ msgstr ""
 msgid "Name of this IVR"
 msgstr "このIVRの名前"
 
-#: views/advanced_form.php:103 views/advanced_form.php:228
-#: views/advanced_form.php:255 views/advanced_form.php:386
-#: views/advanced_form.php:413 views/advanced_form.php:494
+#: views/advanced_form.php:103 views/advanced_form.php:255
+#: views/advanced_form.php:282 views/advanced_form.php:413
+#: views/advanced_form.php:440 views/advanced_form.php:521
 #: views/entries.php:38
 msgid "No"
 msgstr "いいえ"
@@ -382,31 +338,39 @@ msgstr "Astman接続がないためIVRはロードしない"
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:149
+#: Ivr.class.php:150
 msgid "No file was uploaded"
 msgstr ""
 
-#: views/form.php:61 views/form.php:67 views/form.php:73 views/form.php:79
-#: views/form.php:85
+#: views/advanced_form.php:175 views/form.php:61 views/form.php:67
+#: views/form.php:73 views/form.php:79 views/form.php:85
+#: views/simple_form.php:171
 msgid "None"
 msgstr "なし"
 
-#: views/advanced_form.php:341
+#: views/advanced_form.php:368
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr "DTMFを検知できず、IVRでタイムアウトとなった場合のリトライ数。"
 
-#: views/advanced_form.php:183
+#: views/advanced_form.php:210
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
 msgstr "発信者から無効な入力を検知したときにリトライする回数。"
 
+#: views/advanced_form.php:187 views/simple_form.php:183
+#, php-format
+msgid ""
+"Override the ringer volume. Note: This is only valid for %s phones at this "
+"time"
+msgstr ""
+
 #: views/simple_form.php:62
 msgid "Play Previous Recording"
 msgstr ""
 
-#: views/advanced_form.php:293 views/advanced_form.php:451
+#: views/advanced_form.php:320 views/advanced_form.php:478
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
@@ -415,7 +379,7 @@ msgstr ""
 "発信者を別の宛先に転送する前に再生する音声。発信者が 0 を押した場合や、最大の"
 "失敗数 (無効な入力リトライ設定の値) に達したときに再生します。"
 
-#: views/advanced_form.php:367
+#: views/advanced_form.php:394
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
@@ -423,7 +387,7 @@ msgstr ""
 "タイムアウトとなったときに再生する音声。この音声は、入力し直すように促す前に"
 "再生するアナウンスです。例: 「入力が確認できません」"
 
-#: views/advanced_form.php:209
+#: views/advanced_form.php:236
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
@@ -433,7 +397,7 @@ msgstr "無効な入力を検知した場合に、ユーザーに再試行を促
 msgid "Provides options for callers to direct dial an extension."
 msgstr "IVRから内線番号をそのままダイヤルすることで呼び出すことを許可します。"
 
-#: functions.inc.php:345
+#: functions.inc.php:348
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
@@ -446,28 +410,32 @@ msgstr ""
 msgid "Reset"
 msgstr "リセット"
 
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Return"
 msgstr "戻る"
 
-#: views/advanced_form.php:248
+#: views/advanced_form.php:275
 msgid "Return on Invalid"
 msgstr "無効な入力: 前IVRに戻る"
 
-#: views/advanced_form.php:406
+#: views/advanced_form.php:433
 msgid "Return on Timeout"
 msgstr "タイムアウト: 前IVRに戻る"
 
-#: views/advanced_form.php:487
+#: views/advanced_form.php:514
 msgid "Return to IVR after VM"
 msgstr "VMの後にIVRに戻る"
 
-#: functions.inc.php:438
+#: functions.inc.php:441
 msgid "Return to this IVR when finished"
 msgstr ""
 
 #: views/simple_form.php:143
 msgid "Ring Tone"
+msgstr ""
+
+#: views/advanced_form.php:170 views/simple_form.php:166
+msgid "Ringer Volume Override"
 msgstr ""
 
 #: assets/js/ivr.js:427
@@ -484,52 +452,37 @@ msgstr ""
 msgid "Submit"
 msgstr "送信"
 
-#: Ivr.class.php:143
+#: Ivr.class.php:144
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:140
+#: Ivr.class.php:141
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:146
+#: Ivr.class.php:147
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
-
-#: install.php:261
-#, php-format
-msgid ""
-"There are %s IVRs that have the legacy Directory dialing enabled. This has "
-"been deprecated and will be removed from future releases. You should convert "
-"your IVRs to use the Directory module for this functionality and assign an "
-"IVR destination to a desired Directory. You can install the Directory module "
-"from the Online Module Repository"
-msgstr ""
-"レガシーディレクトリダイヤリングが有効になっているIVRが %s あります。この機能"
-"は廃止されていて、将来のリリースでは削除されるでしょう。この機能を使用してIVR"
-"の宛先を希望ディレクトリへ割り当てるためにディレクトリモジュールを使用するに"
-"は、あなたのIVRをコンバートするべきです。オンラインモジュールレポジトリから"
-"ディレクトリモジュールのインストールが可能です"
 
 #: views/advanced_form.php:123
 msgid "Timeout"
 msgstr "タイムアウト"
 
-#: views/advanced_form.php:463
+#: views/advanced_form.php:490
 msgid "Timeout Destination"
 msgstr "タイムアウトの宛先"
 
-#: views/advanced_form.php:437
+#: views/advanced_form.php:464
 msgid "Timeout Recording"
 msgstr "タイムアウト音声"
 
-#: views/advanced_form.php:329
+#: views/advanced_form.php:356
 msgid "Timeout Retries"
 msgstr "タイムアウトリトライ数"
 
-#: views/advanced_form.php:353
+#: views/advanced_form.php:380
 msgid "Timeout Retry Recording"
 msgstr "タイムアウトリトライ音声"
 
@@ -552,7 +505,7 @@ msgstr ""
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:135
+#: Ivr.class.php:136
 msgid "Unsupported file format"
 msgstr ""
 
@@ -571,9 +524,9 @@ msgid ""
 "includes archives (that include multiple files) and multiple files"
 msgstr ""
 
-#: views/advanced_form.php:101 views/advanced_form.php:226
-#: views/advanced_form.php:253 views/advanced_form.php:384
-#: views/advanced_form.php:411 views/advanced_form.php:492
+#: views/advanced_form.php:101 views/advanced_form.php:253
+#: views/advanced_form.php:280 views/advanced_form.php:411
+#: views/advanced_form.php:438 views/advanced_form.php:519
 #: views/entries.php:36
 msgid "Yes"
 msgstr "はい"
@@ -582,66 +535,85 @@ msgstr "はい"
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 
-#: install.php:216 /usr/src/freepbx/ivr/install.php:233 install.php:251
-#: /usr/src/freepbx/ivr/install.php:438 install.php:456
-#: /usr/src/freepbx/ivr/install.php:476 install.php:494
-msgid "added"
-msgstr "追加しました"
-
-#: install.php:149
-msgid "adding announcement_id field.."
-msgstr "announcement_id フィールドを追加.."
-
-#: install.php:199
-msgid "already migrated"
-msgstr "移行済み"
-
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr "発信者が入力した数字"
 
-#: install.php:189
-msgid "dropping announcement field.."
-msgstr "アナウンスフィールドをドロップ.."
+#~ msgid "Checking for invalid_append_announce.."
+#~ msgstr "invalid_append_announceをチェック中.."
 
-#: install.php:153 /usr/src/freepbx/ivr/install.php:165 install.php:181
-#: /usr/src/freepbx/ivr/install.php:213 install.php:230
-#: /usr/src/freepbx/ivr/install.php:248 install.php:435
-#: /usr/src/freepbx/ivr/install.php:453 install.php:473
-#: /usr/src/freepbx/ivr/install.php:491
-msgid "fatal error"
-msgstr "致命的なエラー"
+#~ msgid "Checking for invalid_id.."
+#~ msgstr "invalid_idをチェック中.."
 
-#: install.php:161
-msgid "migrate to recording ids.."
-msgstr "録音IDに移行中.."
+#~ msgid "Checking for invalid_ivr_ret.."
+#~ msgstr "invalid_ivr_ret を確認中..."
 
-#: install.php:185
-#, php-format
-msgid "migrated %s entries"
-msgstr "%sエントリーを移行する"
+#~ msgid "Checking for retvm.."
+#~ msgstr "retvmをチェック中.."
 
-#: install.php:148
-msgid "migrating"
-msgstr "移行中"
+#~ msgid "Checking for timeout_append_announce.."
+#~ msgstr "timeout_append_announceをチェック中.."
 
-#: install.php:193
-msgid "no announcement field???"
-msgstr "アナウンスフィールドがありません???"
+#~ msgid "Checking for timeout_id.."
+#~ msgstr "timeout_idをチェック中.."
 
-#: install.php:219 /usr/src/freepbx/ivr/install.php:236 install.php:254
-#: /usr/src/freepbx/ivr/install.php:441 install.php:459
-#: /usr/src/freepbx/ivr/install.php:479 install.php:497
-msgid "not needed"
-msgstr "必要なし"
+#~ msgid "Checking for timeout_ivr_ret.."
+#~ msgstr "timeout_ivr_ret を確認中..."
 
-#: install.php:156 /usr/src/freepbx/ivr/install.php:195 install.php:515
-msgid "ok"
-msgstr "ok"
+#~ msgid "Checking if announcements need migration.."
+#~ msgstr "アナウンスに移行が必要かチェック中.."
 
-#: install.php:263
-msgid "posting notice about deprecated functionality"
-msgstr "廃止された機能についての通知を投稿する"
+#~ msgid "Deprecated Directory used by %s IVRs"
+#~ msgstr "%s のIVRから使用されている廃止されたディレクトリ"
+
+#~ msgid ""
+#~ "There are %s IVRs that have the legacy Directory dialing enabled. This "
+#~ "has been deprecated and will be removed from future releases. You should "
+#~ "convert your IVRs to use the Directory module for this functionality and "
+#~ "assign an IVR destination to a desired Directory. You can install the "
+#~ "Directory module from the Online Module Repository"
+#~ msgstr ""
+#~ "レガシーディレクトリダイヤリングが有効になっているIVRが %s あります。この"
+#~ "機能は廃止されていて、将来のリリースでは削除されるでしょう。この機能を使用"
+#~ "してIVRの宛先を希望ディレクトリへ割り当てるためにディレクトリモジュールを"
+#~ "使用するには、あなたのIVRをコンバートするべきです。オンラインモジュールレ"
+#~ "ポジトリからディレクトリモジュールのインストールが可能です"
+
+#~ msgid "added"
+#~ msgstr "追加しました"
+
+#~ msgid "adding announcement_id field.."
+#~ msgstr "announcement_id フィールドを追加.."
+
+#~ msgid "already migrated"
+#~ msgstr "移行済み"
+
+#~ msgid "dropping announcement field.."
+#~ msgstr "アナウンスフィールドをドロップ.."
+
+#~ msgid "fatal error"
+#~ msgstr "致命的なエラー"
+
+#~ msgid "migrate to recording ids.."
+#~ msgstr "録音IDに移行中.."
+
+#~ msgid "migrated %s entries"
+#~ msgstr "%sエントリーを移行する"
+
+#~ msgid "migrating"
+#~ msgstr "移行中"
+
+#~ msgid "no announcement field???"
+#~ msgstr "アナウンスフィールドがありません???"
+
+#~ msgid "not needed"
+#~ msgstr "必要なし"
+
+#~ msgid "ok"
+#~ msgstr "ok"
+
+#~ msgid "posting notice about deprecated functionality"
+#~ msgstr "廃止された機能についての通知を投稿する"
 
 #~ msgid "Ext"
 #~ msgstr "番号"
