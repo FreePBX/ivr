@@ -86,6 +86,9 @@ function ivr_get_config($engine) {
         if ($ivr['alertinfo'] != '') {
           $ext->add($c, 's', '', new ext_setvar('__ALERT_INFO', str_replace(';', '\;', $ivr['alertinfo'])));
         }
+				if (!empty($ivr['rvolume'])) {
+					$ext->add($c, 's', '', new ext_setvar("__RVOL", $ivr['rvolume']));
+				}
 				$ext->add($c, 's', '', new ext_gotoif('$["${CHANNEL(state)}" = "Up"]','skip'));
 				$ext->add($c, 's', '', new ext_answer(''));
 				$ext->add($c, 's', '', new ext_wait('1'));
@@ -319,7 +322,7 @@ function ivr_configprocess(){
 						'retvm', 'timeout_time', 'timeout_recording',
 						'timeout_retry_recording', 'timeout_destination', 'timeout_loops',
 						'timeout_append_announce', 'invalid_append_announce',
-						'timeout_ivr_ret', 'invalid_ivr_ret');
+						'timeout_ivr_ret', 'invalid_ivr_ret','rvolume');
 		foreach($get_var as $var){
 			$vars[$var] = isset($_REQUEST[$var]) 	? $_REQUEST[$var]		: '';
 		}

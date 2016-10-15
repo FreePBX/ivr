@@ -12,7 +12,7 @@ if($action == 'add'){
 				'invalid_recording', 'invalid_destination', 'invalid_ivr_ret',
 				'timeout_loops', 'timeout_time', 'timeout_retry_recording',
 				'timeout_recording', 'timeout_destination', 'timeout_ivr_ret',
-				'retvm');
+				'retvm','rvolume');
 
 	//keep vairables set on new ivr's
 	foreach ($deet as $d) {
@@ -130,6 +130,7 @@ if(!empty($mode)) {
 										$ivr['timeout_recording'] = 'default';
 										$ivr['retvm'] = '';
 										$ivr['announcement'] = '';
+										$ivr['rvolume'] = '';
 									} else {
 
 									}
