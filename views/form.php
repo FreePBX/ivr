@@ -4,6 +4,7 @@
 //
 extract($request, EXTR_SKIP);
 $infohtml = '';
+$delURL = '';
 if($action == 'add'){
 	$ivr = array();
 	$heading = _("Add IVR");
