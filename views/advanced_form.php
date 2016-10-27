@@ -148,7 +148,7 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="alertinfo"></i>
 						</div>
 						<div class="col-md-9">
-							<?php echo FreePBX::View()->alertInfoDrawSelect("alertinfo",(($ivr['alertinfo'])?$ivr['alertinfo']:''));?>
+							<?php echo FreePBX::View()->alertInfoDrawSelect("alertinfo",(!empty($ivr['alertinfo'])?$ivr['alertinfo']:''));?>
 						</div>
 					</div>
 				</div>
@@ -249,9 +249,9 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="invalid_append_announce"></i>
 						</div>
 						<div class="col-md-9 radioset">
-							<input type="radio" name="invalid_append_announce" id="invalid_append_announceyes" value="on" <?php echo ($ivr['invalid_append_announce']?"CHECKED":"") ?>>
+							<input type="radio" name="invalid_append_announce" id="invalid_append_announceyes" value="on" <?php echo (!empty($ivr['invalid_append_announce'])?"CHECKED":"") ?>>
 							<label for="invalid_append_announceyes"><?php echo _("Yes");?></label>
-							<input type="radio" name="invalid_append_announce" id="invalid_append_announceno" value="" <?php echo ($ivr['invalid_append_announce']?"":"CHECKED") ?>>
+							<input type="radio" name="invalid_append_announce" id="invalid_append_announceno" value="" <?php echo (!empty($ivr['invalid_append_announce'])?"":"CHECKED") ?>>
 							<label for="invalid_append_announceno"><?php echo _("No");?></label>
 						</div>
 					</div>
@@ -276,9 +276,9 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="invalid_ivr_ret"></i>
 						</div>
 						<div class="col-md-9 radioset">
-							<input type="radio" name="invalid_ivr_ret" id="invalid_ivr_retyes" value="on" <?php echo ($ivr['invalid_ivr_ret']?"CHECKED":"") ?>>
+							<input type="radio" name="invalid_ivr_ret" id="invalid_ivr_retyes" value="on" <?php echo (!empty($ivr['invalid_ivr_ret'])?"CHECKED":"") ?>>
 							<label for="invalid_ivr_retyes"><?php echo _("Yes");?></label>
-							<input type="radio" name="invalid_ivr_ret" id="invalid_ivr_retno" value="" <?php echo ($ivr['invalid_ivr_ret']?"":"CHECKED") ?>>
+							<input type="radio" name="invalid_ivr_ret" id="invalid_ivr_retno" value="" <?php echo (!empty($ivr['invalid_ivr_ret'])?"":"CHECKED") ?>>
 							<label for="invalid_ivr_retno"><?php echo _("No");?></label>
 						</div>
 					</div>
@@ -407,9 +407,9 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="timeout_append_announce"></i>
 						</div>
 						<div class="col-md-9 radioset">
-							<input type="radio" name="timeout_append_announce" id="timeout_append_announceyes" value="on" <?php echo ($ivr['timeout_append_announce']?"CHECKED":"") ?>>
+							<input type="radio" name="timeout_append_announce" id="timeout_append_announceyes" value="on" <?php echo (!empty($ivr['timeout_append_announce'])?"CHECKED":"") ?>>
 							<label for="timeout_append_announceyes"><?php echo _("Yes");?></label>
-							<input type="radio" name="timeout_append_announce" id="timeout_append_announceno" value="" <?php echo ($ivr['timeout_append_announce']?"":"CHECKED") ?>>
+							<input type="radio" name="timeout_append_announce" id="timeout_append_announceno" value="" <?php echo (!empty($ivr['timeout_append_announce'])?"":"CHECKED") ?>>
 							<label for="timeout_append_announceno"><?php echo _("No");?></label>
 						</div>
 					</div>
@@ -434,9 +434,9 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="timeout_ivr_ret"></i>
 						</div>
 						<div class="col-md-9 radioset">
-							<input type="radio" name="timeout_ivr_ret" id="timeout_ivr_retyes" value="on" <?php echo ($ivr['timeout_ivr_ret']?"CHECKED":"") ?>>
+							<input type="radio" name="timeout_ivr_ret" id="timeout_ivr_retyes" value="on" <?php echo (!empty($ivr['timeout_ivr_ret'])?"CHECKED":"") ?>>
 							<label for="timeout_ivr_retyes"><?php echo _("Yes");?></label>
-							<input type="radio" name="timeout_ivr_ret" id="timeout_ivr_retno" value="" <?php echo ($ivr['timeout_ivr_ret']?"":"CHECKED") ?>>
+							<input type="radio" name="timeout_ivr_ret" id="timeout_ivr_retno" value="" <?php echo (!empty($ivr['timeout_ivr_ret'])?"":"CHECKED") ?>>
 							<label for="timeout_ivr_retno"><?php echo _("No");?></label>
 						</div>
 					</div>
@@ -515,9 +515,9 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="retvm"></i>
 						</div>
 						<div class="col-md-9 radioset">
-							<input type="radio" name="retvm" id="retvmyes" value="on" <?php echo ($ivr['retvm']?"CHECKED":"") ?>>
+							<input type="radio" name="retvm" id="retvmyes" value="on" <?php echo (!empty($ivr['retvm'])?"CHECKED":"") ?>>
 							<label for="retvmyes"><?php echo _("Yes");?></label>
-							<input type="radio" name="retvm" id="retvmno" value="" <?php echo ($ivr['retvm']?"":"CHECKED") ?>>
+							<input type="radio" name="retvm" id="retvmno" value="" <?php echo (!empty($ivr['retvm'])?"":"CHECKED") ?>>
 							<label for="retvmno"><?php echo _("No");?></label>
 						</div>
 					</div>
