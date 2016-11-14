@@ -421,7 +421,7 @@ function ivr_save_entries($id, $entries){
 							'ivr_id'	=> $id,
 							'selection' 	=> $entries['ext'][$i],
 							'dest'		=> $entries['goto'][$i],
-							'ivr_ret'	=> (isset($entries['ivr_ret'][$i]) ? $entries['ivr_ret'][$i] : '')
+							'ivr_ret'	=> (isset($entries['ivr_ret'][$i]) ? $entries['ivr_ret'][$i] : '0')
 						);
 			}
 
@@ -454,7 +454,7 @@ function ivr_draw_entries($id,$restrict_mods=false){
 		}
 	}
 
-	$entries['blank'] = array('selection' => '', 'dest' => '', 'ivr_ret' => '');
+	$entries['blank'] = array('selection' => '', 'dest' => '', 'ivr_ret' => '0');
 	//assign to a vatriable first so that it can be passed by reference
 	$array = array('id' => '', 'ext' => '');
 	$entries['blank']['hooks'] = mod_func_iterator('draw_entries_ivr', $array);
