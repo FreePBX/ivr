@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-14 20:41-0700\n"
+"POT-Creation-Date: 2016-11-14 14:00+1000\n"
 "PO-Revision-Date: 2016-08-03 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -78,7 +78,7 @@ msgstr "アクション"
 msgid "Add Another Entry"
 msgstr "新規エントリー"
 
-#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:9 views/rnav.php:3
+#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr "IVRを追加"
 
@@ -176,7 +176,7 @@ msgstr ""
 "す。これらは発信者を異なる場所に移動させるのに使用します。例:(1番を押した場合"
 "は営業) さらに/もしくは、内線番号を直接ダイヤルできるようにします。"
 
-#: views/form.php:66 views/form.php:72 views/form.php:78 views/form.php:84
+#: views/form.php:67 views/form.php:73 views/form.php:79 views/form.php:85
 msgid "Default"
 msgstr "デフォルト"
 
@@ -220,7 +220,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr ""
 
-#: views/form.php:43
+#: views/form.php:44
 msgid "Edit IVR: "
 msgstr "IVRを編集: "
 
@@ -342,8 +342,8 @@ msgstr ""
 msgid "No file was uploaded"
 msgstr ""
 
-#: views/advanced_form.php:175 views/form.php:61 views/form.php:67
-#: views/form.php:73 views/form.php:79 views/form.php:85
+#: views/advanced_form.php:175 views/form.php:62 views/form.php:68
+#: views/form.php:74 views/form.php:80 views/form.php:86
 #: views/simple_form.php:171
 msgid "None"
 msgstr "なし"

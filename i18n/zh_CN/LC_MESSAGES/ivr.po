@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-14 20:41-0700\n"
+"POT-Creation-Date: 2016-11-14 14:00+1000\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -48,7 +48,7 @@ msgstr "操作"
 msgid "Add Another Entry"
 msgstr ""
 
-#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:9 views/rnav.php:3
+#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr "添加IVR"
 
@@ -137,7 +137,7 @@ msgid ""
 "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 msgstr ""
 
-#: views/form.php:66 views/form.php:72 views/form.php:78 views/form.php:84
+#: views/form.php:67 views/form.php:73 views/form.php:79 views/form.php:85
 msgid "Default"
 msgstr "默认"
 
@@ -181,7 +181,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr ""
 
-#: views/form.php:43
+#: views/form.php:44
 msgid "Edit IVR: "
 msgstr "编辑IVR: "
 
@@ -301,8 +301,8 @@ msgstr ""
 msgid "No file was uploaded"
 msgstr ""
 
-#: views/advanced_form.php:175 views/form.php:61 views/form.php:67
-#: views/form.php:73 views/form.php:79 views/form.php:85
+#: views/advanced_form.php:175 views/form.php:62 views/form.php:68
+#: views/form.php:74 views/form.php:80 views/form.php:86
 #: views/simple_form.php:171
 msgid "None"
 msgstr "无"
