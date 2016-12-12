@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-14 14:00+1000\n"
-"PO-Revision-Date: 2016-12-12 00:59+0200\n"
+"PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) "
 "<http://weblate.freepbx.org/projects/freepbx/ivr/pt_BR/>\n"
@@ -316,15 +316,15 @@ msgstr "Não"
 
 #: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
-msgstr ""
+msgstr "Sem Astman, Não carrega a URA"
 
 #: assets/js/ivr.js:271
 msgid "No file to load!"
-msgstr ""
+msgstr "Nenhum arquivo para carregar!"
 
 #: Ivr.class.php:150
 msgid "No file was uploaded"
-msgstr ""
+msgstr "Nenhum arquivo foi carregado"
 
 #: views/advanced_form.php:175 views/form.php:62 views/form.php:68
 #: views/form.php:74 views/form.php:80 views/form.php:86
@@ -353,10 +353,12 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
+"Substituir o volume do toque. Observação: isso só é válido para telefones %s "
+"neste momento"
 
 #: views/simple_form.php:62
 msgid "Play Previous Recording"
-msgstr ""
+msgstr "Reproduzir Gravação Anterior"
 
 #: views/advanced_form.php:320 views/advanced_form.php:478
 msgid ""
@@ -387,19 +389,20 @@ msgstr ""
 #: views/advanced_form.php:111
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
+"Fornece opções para usuários chamadores para discagem direta de um ramal."
 
 #: functions.inc.php:348
 #, php-format
 msgid "Recording created for IVR named '%s'"
-msgstr ""
+msgstr "Gravação criada para URA chamada '%s'"
 
 #: assets/js/ivr.js:505
 msgid "Recording..."
-msgstr ""
+msgstr "Gravando..."
 
 #: Ivr.class.php:74
 msgid "Reset"
-msgstr ""
+msgstr "Reiniciar"
 
 #: functions.inc.php:441
 msgid "Return"
@@ -419,43 +422,47 @@ msgstr "Retorna para URA após Caixa Postal"
 
 #: functions.inc.php:441
 msgid "Return to this IVR when finished"
-msgstr ""
+msgstr "Retornar a esta URA quando terminar"
 
 #: views/simple_form.php:143
 msgid "Ring Tone"
-msgstr ""
+msgstr "Opção de Toque"
 
 #: views/advanced_form.php:170 views/simple_form.php:166
 msgid "Ringer Volume Override"
-msgstr ""
+msgstr "Substituição do volume do toque"
 
 #: assets/js/ivr.js:427
 msgid "Save Recording"
-msgstr ""
+msgstr "Salvar Gravação"
 
 #: views/simple_form.php:155
 msgid ""
 "Select a Ring Tone from the list of options above. This will determine how "
 "your phone sounds when it is rung from this group."
 msgstr ""
+"Selecione uma opção de toque na lista de opções acima. Isto irá determinar "
+"como o seu telefone soa quando for executado a partir deste grupo."
 
 #: Ivr.class.php:79
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: Ivr.class.php:144
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
+"O arquivo enviado excede a diretiva MAX_FILE_SIZE que foi especificada no "
+"formulário HTML"
 
 #: Ivr.class.php:141
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr ""
+msgstr "O arquivo carregado excede a diretiva upload_max_filesize no php.ini"
 
 #: Ivr.class.php:147
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
+msgstr "O arquivo enviado foi carregado parcialmente"
 
 #: views/advanced_form.php:123
 msgid "Timeout"
@@ -483,30 +490,32 @@ msgid ""
 "To play the media you will need to either update your browser to a recent "
 "version or update your %s"
 msgstr ""
+"Para reproduzir a mídia, você precisará atualizar seu navegador para uma "
+"versão recente ou atualizar seu %s"
 
 #: assets/js/ivr.js:97
 msgid "Unable to delete the first entry. Please edit instead"
-msgstr ""
+msgstr "Não é possível excluir o primeiro elemento. Edite em vez de excluir"
 
 #: assets/js/ivr.js:93
 msgid "Unable to delete the last entry"
-msgstr ""
+msgstr "Não é possível excluir o último elemento"
 
 #: Ivr.class.php:116
 msgid "Unknown Error"
-msgstr ""
+msgstr "Erro Desconhecido"
 
 #: Ivr.class.php:136
 msgid "Unsupported file format"
-msgstr ""
+msgstr "Formato de arquivo não suportado"
 
 #: assets/js/ivr.js:196
 msgid "Unsupported file type"
-msgstr ""
+msgstr "Tipo de arquivo não suportado"
 
 #: views/simple_form.php:65 views/simple_form.php:113
 msgid "Update Required"
-msgstr ""
+msgstr "Necessária Atualização"
 
 #: views/simple_form.php:131
 #, php-format
@@ -514,17 +523,20 @@ msgid ""
 "Upload files from your local system. Supported upload formats are: %s. This "
 "includes archives (that include multiple files) and multiple files"
 msgstr ""
+"Carregue arquivos do seu sistema local. Os formatos de upload suportados são:"
+" %s. Isso inclui arquivos compactados (que incluem vários arquivos) e "
+"múltiplos arquivos"
 
 #: views/advanced_form.php:101 views/advanced_form.php:253
 #: views/advanced_form.php:280 views/advanced_form.php:411
 #: views/advanced_form.php:438 views/advanced_form.php:519
 #: views/entries.php:36
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: assets/js/ivr.js:509
 msgid "Your Browser Blocked The Recording, Please check your settings"
-msgstr ""
+msgstr "Seu Navegador Bloqueou a Gravação, verifique suas configurações"
 
 #: views/entries.php:20
 msgid "digits pressed"
