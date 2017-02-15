@@ -81,7 +81,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<span id="announcement-help" class="help-block fpbx-help-block"><?php echo _("Greeting to be played on entry to the IVR.")?></span>
+				<span id="announcement-help" class="help-block fpbx-help-block"><?php echo _("Select a 'System Recording' here that will be played on entry to the IVR.")?></span>
 			</div>
 		</div>
 	</div>
