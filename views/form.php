@@ -46,7 +46,7 @@ if($action == 'add'){
 	$usage_list	= framework_display_destination_usage(ivr_getdest($ivr['id']));
 	if(!empty($usage_list)){
 		$infohtml = '
-		<div class="panel panel-default">
+		<div class="panel panel-default fpbx-usageinfo">
 			<div class="panel-heading">
 				'.$usage_list['text'].'
 			</div>
