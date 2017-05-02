@@ -43,19 +43,7 @@ if($action == 'add'){
 	$ivr = ivr_get_details($id);
 	$heading = _('Edit IVR: ');
 	$heading .= ($ivr['name'] ? $ivr['name'] : 'ID '.$ivr['id']);
-	$usage_list	= framework_display_destination_usage(ivr_getdest($ivr['id']));
-	if(!empty($usage_list)){
-		$infohtml = '
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				'.$usage_list['text'].'
-			</div>
-			<div class="panel-body">
-    			'.$usage_list['tooltip'].'
-			</div>
-		</div>
-		';
-	}
+	$infohtml	= FreePBX::View()->destinationUsage(ivr_getdest($ivr['id']));
 	$delURL = '?display=ivr&action=delete&id='.$id;
 }
 $recordingList = recordings_list();
