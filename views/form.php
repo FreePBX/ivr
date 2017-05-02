@@ -43,7 +43,7 @@ if($action == 'add'){
 	$ivr = ivr_get_details($id);
 	$heading = _('Edit IVR: ');
 	$heading .= ($ivr['name'] ? $ivr['name'] : 'ID '.$ivr['id']);
-	$infohtml	= FreePBX::View()->destinationUsage(ivr_getdest($ivr['id']));
+	$infohtml = FreePBX::View()->destinationUsage(ivr_getdest($ivr['id']));
 	$delURL = '?display=ivr&action=delete&id='.$id;
 }
 $recordingList = recordings_list();

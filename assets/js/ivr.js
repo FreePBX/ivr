@@ -161,12 +161,12 @@ function timeout_elements() {
 }
 
 function actionFormatter(value){
-	var html = '<a href="?display=ivr&action=edit&id='+value[0]+'"><i class="fa fa-pencil"></i></a>&nbsp;';
+	var html = '<a href="?display=ivr&action=edit&id='+value[0]+'"><i class="fa fa-edit"></i></a>&nbsp;';
 	html += '<a href="?display=ivr&action=delete&id='+value[0]+'" class="delAction"><i class="fa fa-trash"></i></a>&nbsp;';
 	return html;
 }
 function bnavFormatter(value){
-	var html = '<a href="?display=ivr&action=edit&id='+value[0]+'"><i class="fa fa-pencil"></i>&nbsp;'+_("Edit:")+'&nbsp;'+value[1]+'</a>';
+	var html = '<a href="?display=ivr&action=edit&id='+value[0]+'"><i class="fa fa-edit"></i>&nbsp;'+_("Edit:")+'&nbsp;'+value[1]+'</a>';
 	return html;
 }
 
