@@ -3,28 +3,32 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-08 23:45+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-12-09 21:14+0200\n"
+"Last-Translator: Ernesto <ecasas@sangoma.com>\n"
+"Language-Team: Spanish "
+"<http://weblate.freepbx.org/projects/freepbx/ivr/es_ES/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
-"X-Generator: Translate Toolkit 1.11.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: page.ivr.php:18
 msgid ""
 "A connection to Asterisk Manager could not be made. This module requires "
 "Asterisk to be running and have proper credentials"
 msgstr ""
+"No se pudo establecer una conexión con Asterisk Manager. Este módulo "
+"requiere que Asterisk funcione y tenga credenciales adecuadas"
 
 #: views/form.php:239
 msgid "A value of 0 disables the timeout"
-msgstr ""
+msgstr "Un valor de 0 inhabilita el tiempo de espera"
 
 #: page.ivr.php:47
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
 
 #: page.ivr.php:31 /usr/src/freepbx/ivr/views/form.php:7 views/rnav.php:3
 msgid "Add IVR"
@@ -48,7 +52,7 @@ msgstr ""
 
 #: views/form.php:239
 msgid "Amount of time to be considered a timeout."
-msgstr ""
+msgstr "Tiempo a ser considerado como tiempo de espera."
 
 #: views/form.php:174
 msgid "Announcement"
@@ -60,7 +64,7 @@ msgstr "Anexar Anuncio activado agotado"
 
 #: views/form.php:301
 msgid "Append Announcement to Invalid"
-msgstr ""
+msgstr "Agregar anuncio a inválido"
 
 #: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
 msgid "Applications"
@@ -120,10 +124,15 @@ msgid ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 msgstr ""
+"Elija Sí para que esta opción regrese a un IVR principal si se llamó desde "
+"un IVR principal. Si no, irá al destino elegido. <br><br> La ruta de retorno "
+"será a cualquier IVR que estuviera en el camino de llamada antes de este IVR "
+"que podría conducir a resultados extraños si hubo un IVR llamado en la "
+"llamada Pero no inmediatamente antes de este"
 
 #: page.ivr.php:16
 msgid "Connection Error"
-msgstr ""
+msgstr "Error de conexión"
 
 #: ivr.i18n.php:8
 msgid ""
@@ -156,7 +165,7 @@ msgstr "Directorio Obsoleto utilizado por IVR %s"
 
 #: views/form.php:157
 msgid "Description of this IVR"
-msgstr ""
+msgstr "Descripción de este IVR"
 
 #: functions.inc.php:425
 msgid "Destination"
@@ -164,7 +173,7 @@ msgstr "Destino"
 
 #: views/form.php:397
 msgid "Destination to send the call to after Invalid Recording is played"
-msgstr ""
+msgstr "Destino donde enviar la llamada luego de reproducir Grabación Invalida"
 
 #: views/form.php:555
 msgid "Destination to send the call to after Timeout Recording is played."
@@ -172,15 +181,15 @@ msgstr "Destino a enviar la llamada después de reproducir grabación de Agotado
 
 #: views/form.php:41
 msgid "Edit IVR: "
-msgstr ""
+msgstr "Editar IVR: "
 
 #: assets/js/ivr.js:137
 msgid "Edit:"
-msgstr ""
+msgstr "Editar:"
 
 #: views/form.php:200
 msgid "Enable Direct Dial"
-msgstr ""
+msgstr "Habilitar Marcación directa"
 
 #: functions.inc.php:425
 msgid "Ext"
@@ -188,7 +197,7 @@ msgstr "Extn"
 
 #: views/form.php:188
 msgid "Greeting to be played on entry to the IVR."
-msgstr ""
+msgstr "Saludo a ser reproducido a la entrada al IVR."
 
 #: Ivr.class.php:15 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
 #: /usr/src/freepbx/ivr/page.ivr.php:24
@@ -197,7 +206,7 @@ msgstr "IVR"
 
 #: views/form.php:164
 msgid "IVR DTMF Options"
-msgstr ""
+msgstr "Opciones IVR DTMF"
 
 #: views/form.php:145
 msgid "IVR Description"
@@ -213,7 +222,7 @@ msgstr "Opciones Generales de IVR"
 
 #: views/rnav.php:14
 msgid "IVR List"
-msgstr ""
+msgstr "Lista IVR"
 
 #: page.ivr.php:46 views/form.php:121
 msgid "IVR Name"
@@ -234,6 +243,8 @@ msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
 msgstr ""
+"Si la respuesta es Sí, al salir del correo de voz, la persona que llama será "
+"devuelta a este IVR si se obtuvo un buzón de correo de voz"
 
 #: views/form.php:385
 msgid "Invalid Destination"
@@ -253,20 +264,20 @@ msgstr "Reintento de grabación Invalido"
 
 #: views/rnav.php:2
 msgid "List IVRs"
-msgstr ""
+msgstr "Lista de IVRs"
 
 #: views/form.php:133
 msgid "Name of this IVR"
-msgstr ""
+msgstr "Nombre de este IVR"
 
 #: views/entries.php:39 views/form.php:207 views/form.php:308
 #: views/form.php:335 views/form.php:466 views/form.php:493 views/form.php:574
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
-msgstr ""
+msgstr "No Astman, No carga IVR"
 
 #: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 #: views/form.php:83
@@ -317,10 +328,12 @@ msgstr ""
 #: views/form.php:215
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
+"Proporciona opciones para las personas que llaman para marcar directamente "
+"una extensión."
 
 #: Ivr.class.php:59
 msgid "Reset"
-msgstr ""
+msgstr "Reiniciar"
 
 #: functions.inc.php:425
 msgid "Return"
@@ -344,7 +357,7 @@ msgstr "Retornar al IVR después de VM"
 
 #: Ivr.class.php:64
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: install.php:286
 #, php-format
@@ -384,7 +397,7 @@ msgstr "Reintento Grabación Agotado"
 #: views/entries.php:37 views/form.php:205 views/form.php:306
 #: views/form.php:333 views/form.php:464 views/form.php:491 views/form.php:572
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 #: install.php:241 /usr/src/freepbx/ivr/install.php:258 install.php:276
 #: /usr/src/freepbx/ivr/install.php:463 install.php:481

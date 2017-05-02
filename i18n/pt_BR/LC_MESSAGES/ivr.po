@@ -8,45 +8,48 @@ msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-14 14:00+1000\n"
-"PO-Revision-Date: 2015-05-02 11:38+0200\n"
-"Last-Translator: Renato <fiuza@tecnologia.inf.br>\n"
-"Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
-"freepbx/ivr/pt_BR/>\n"
+"PO-Revision-Date: 2016-12-12 01:21+0200\n"
+"Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
+"Language-Team: Portuguese (Brazil) "
+"<http://weblate.freepbx.org/projects/freepbx/ivr/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"X-Generator: Weblate 2.4\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: BRAZIL\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: Ivr.class.php:159
 msgid "A PHP extension stopped the file upload"
-msgstr ""
+msgstr "Uma extensão PHP parou o carregamento do arquivo"
 
 #: page.ivr.php:18
 msgid ""
 "A connection to Asterisk Manager could not be made. This module requires "
 "Asterisk to be running and have proper credentials"
 msgstr ""
+"Não foi possível estabelecer uma ligação com o Gerenciador do Asterisk . "
+"Este módulo requer que o Asterisk esteja em execução e tenha credenciais "
+"adequadas"
 
 #: views/advanced_form.php:135
 msgid "A value of 0 disables the timeout"
-msgstr ""
+msgstr "O valor 0 desabilita o tempo limite"
 
 #: views/advanced_form.php:159
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
-msgstr ""
+msgstr "ALERT_INFO pode ser usado para toque diferenciado em dispositivos SIP."
 
 #: page.ivr.php:46
 msgid "Actions"
-msgstr ""
+msgstr "Ações"
 
 #: views/entries.php:65
 msgid "Add Another Entry"
-msgstr ""
+msgstr "Adicionar Outro Elemento"
 
 #: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
@@ -70,11 +73,11 @@ msgstr ""
 
 #: views/advanced_form.php:147
 msgid "Alert Info"
-msgstr ""
+msgstr "Informação de Alerta"
 
 #: views/advanced_form.php:135
 msgid "Amount of time to be considered a timeout."
-msgstr ""
+msgstr "Período de tempo a ser considerado tempo limite."
 
 #: views/advanced_form.php:70 views/simple_form.php:33
 msgid "Announcement"
@@ -86,7 +89,7 @@ msgstr "Juntar Anuncio em Tempo Esgotado"
 
 #: views/advanced_form.php:248
 msgid "Append Announcement to Invalid"
-msgstr ""
+msgstr "Anexar Anúncio a Inválido"
 
 #: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
 msgid "Applications"
@@ -94,15 +97,15 @@ msgstr "Aplicações"
 
 #: assets/js/ivr.js:28
 msgid "Are you sure you don't want a recording for this announcement?"
-msgstr ""
+msgstr "Tem certeza de que não quer uma gravação para este anúncio?"
 
 #: views/simple_form.php:73
 msgid "Browse"
-msgstr ""
+msgstr "Visualizar"
 
 #: Ivr.class.php:163
 msgid "Can Not Find Uploaded Files"
-msgstr ""
+msgstr "Não é Possível Localizar os Arquivos Carregados"
 
 #: views/advanced_form.php:448
 msgid ""
@@ -121,7 +124,7 @@ msgstr ""
 
 #: functions.inc.php:441
 msgid "Choose a destination to route the call to"
-msgstr ""
+msgstr "Escolha um destino para encaminhar a chamada"
 
 #: views/advanced_form.php:290
 msgid ""
@@ -131,10 +134,16 @@ msgid ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 msgstr ""
+"Escolha sim para que essa opção retorne a uma URA principal se ela foi "
+"chamada de uma URA principal. Se não, ele irá para o destino "
+"escolhido.<br><br>O caminho de retorno será para qualquer URA que estava no "
+"caminho da chamada antes desta URA, a qual poderia levar a resultados "
+"estranhos se houvesse uma URA chamando no caminho da chamada, mas não "
+"imediatamente antes desta"
 
 #: page.ivr.php:16
 msgid "Connection Error"
-msgstr ""
+msgstr "Erro de Conexão"
 
 #: ivr.i18n.php:8
 msgid ""
@@ -157,7 +166,7 @@ msgstr "Apagar"
 
 #: assets/js/ivr.js:427
 msgid "Delete Recording"
-msgstr ""
+msgstr "Apagar Gravação"
 
 #: views/entries.php:44
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
@@ -166,7 +175,7 @@ msgstr ""
 
 #: views/advanced_form.php:53
 msgid "Description of this IVR"
-msgstr ""
+msgstr "Descrição desta URA"
 
 #: functions.inc.php:441
 msgid "Destination"
@@ -174,7 +183,7 @@ msgstr "Destino"
 
 #: views/advanced_form.php:344
 msgid "Destination to send the call to after Invalid Recording is played"
-msgstr ""
+msgstr "Destino para enviar a chamada depois reproduzir a Gravação Inválida"
 
 #: views/advanced_form.php:502
 msgid "Destination to send the call to after Timeout Recording is played."
@@ -183,23 +192,24 @@ msgstr ""
 
 #: functions.inc.php:441
 msgid "Digits"
-msgstr ""
+msgstr "Dígitos"
 
 #: functions.inc.php:441
 msgid "Digits the caller needs to dial to access said destination"
 msgstr ""
+"Dígitos que o usuário chamador precisa discar para acessar o referido destino"
 
 #: views/simple_form.php:80
 msgid "Drop Annoucement Recording Here"
-msgstr ""
+msgstr "Solte a Gravação do Anúncio Aqui"
 
 #: views/form.php:44
 msgid "Edit IVR: "
-msgstr ""
+msgstr "Editar URA: "
 
 #: assets/js/ivr.js:169
 msgid "Edit:"
-msgstr ""
+msgstr "Editar:"
 
 #: views/advanced_form.php:96
 msgid "Enable Direct Dial"
@@ -207,15 +217,16 @@ msgstr "Habilitar discagem direta"
 
 #: Ivr.class.php:156
 msgid "Failed to write file to disk"
-msgstr ""
+msgstr "Falha ao gravar o arquivo no disco"
 
 #: views/advanced_form.php:84 views/simple_form.php:131
 msgid "Greeting to be played on entry to the IVR."
-msgstr ""
+msgstr "Saudação a ser reproduzida na entrada para a URA."
 
 #: views/simple_form.php:110 assets/js/ivr.js:462 assets/js/ivr.js:474
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
+"Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
 
 #: Ivr.class.php:30 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
 #: /usr/src/freepbx/ivr/page.ivr.php:24
@@ -224,7 +235,7 @@ msgstr "URA"
 
 #: views/advanced_form.php:60
 msgid "IVR DTMF Options"
-msgstr ""
+msgstr "Opções URA DTMF"
 
 #: views/advanced_form.php:41
 msgid "IVR Description"
@@ -240,7 +251,7 @@ msgstr "Opções Gerais"
 
 #: views/rnav.php:14
 msgid "IVR List"
-msgstr ""
+msgstr "Lista URA"
 
 #: page.ivr.php:45 views/advanced_form.php:17 views/simple_form.php:8
 msgid "IVR Name"
@@ -258,13 +269,15 @@ msgstr "URA: %s / Opção: %s"
 
 #: assets/js/ivr.js:22
 msgid "IVRs require a valid name"
-msgstr ""
+msgstr "URAs requerem um nome válido"
 
 #: views/advanced_form.php:529
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
 msgstr ""
+"Se Sim, ao sair do correio de voz, o usuário chamador será devolvido a esta "
+"URA se tiver uma caixa de correio de voz"
 
 #: views/advanced_form.php:332
 msgid "Invalid Destination"
@@ -284,34 +297,34 @@ msgstr "Gravação Tentativa Inválida"
 
 #: views/rnav.php:2
 msgid "List IVRs"
-msgstr ""
+msgstr "Listar URAs"
 
 #: Ivr.class.php:153
 msgid "Missing a temporary folder"
-msgstr ""
+msgstr "Faltando uma pasta temporária"
 
 #: views/advanced_form.php:29 views/simple_form.php:20
 msgid "Name of this IVR"
-msgstr ""
+msgstr "Nome desta URA"
 
 #: views/advanced_form.php:103 views/advanced_form.php:255
 #: views/advanced_form.php:282 views/advanced_form.php:413
 #: views/advanced_form.php:440 views/advanced_form.php:521
 #: views/entries.php:38
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
-msgstr ""
+msgstr "Sem Astman, Não carrega a URA"
 
 #: assets/js/ivr.js:271
 msgid "No file to load!"
-msgstr ""
+msgstr "Nenhum arquivo para carregar!"
 
 #: Ivr.class.php:150
 msgid "No file was uploaded"
-msgstr ""
+msgstr "Nenhum arquivo foi carregado"
 
 #: views/advanced_form.php:175 views/form.php:62 views/form.php:68
 #: views/form.php:74 views/form.php:80 views/form.php:86
@@ -340,10 +353,12 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
+"Substituir o volume do toque. Observação: isso só é válido para telefones %s "
+"neste momento"
 
 #: views/simple_form.php:62
 msgid "Play Previous Recording"
-msgstr ""
+msgstr "Reproduzir Gravação Anterior"
 
 #: views/advanced_form.php:320 views/advanced_form.php:478
 msgid ""
@@ -374,19 +389,20 @@ msgstr ""
 #: views/advanced_form.php:111
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
+"Fornece opções para usuários chamadores para discagem direta de um ramal."
 
 #: functions.inc.php:348
 #, php-format
 msgid "Recording created for IVR named '%s'"
-msgstr ""
+msgstr "Gravação criada para URA chamada '%s'"
 
 #: assets/js/ivr.js:505
 msgid "Recording..."
-msgstr ""
+msgstr "Gravando..."
 
 #: Ivr.class.php:74
 msgid "Reset"
-msgstr ""
+msgstr "Reiniciar"
 
 #: functions.inc.php:441
 msgid "Return"
@@ -406,43 +422,47 @@ msgstr "Retorna para URA após Caixa Postal"
 
 #: functions.inc.php:441
 msgid "Return to this IVR when finished"
-msgstr ""
+msgstr "Retornar a esta URA quando terminar"
 
 #: views/simple_form.php:143
 msgid "Ring Tone"
-msgstr ""
+msgstr "Opção de Toque"
 
 #: views/advanced_form.php:170 views/simple_form.php:166
 msgid "Ringer Volume Override"
-msgstr ""
+msgstr "Substituição do volume do toque"
 
 #: assets/js/ivr.js:427
 msgid "Save Recording"
-msgstr ""
+msgstr "Salvar Gravação"
 
 #: views/simple_form.php:155
 msgid ""
 "Select a Ring Tone from the list of options above. This will determine how "
 "your phone sounds when it is rung from this group."
 msgstr ""
+"Selecione uma opção de toque na lista de opções acima. Isto irá determinar "
+"como o seu telefone soa quando for executado a partir deste grupo."
 
 #: Ivr.class.php:79
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: Ivr.class.php:144
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
+"O arquivo enviado excede a diretiva MAX_FILE_SIZE que foi especificada no "
+"formulário HTML"
 
 #: Ivr.class.php:141
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr ""
+msgstr "O arquivo carregado excede a diretiva upload_max_filesize no php.ini"
 
 #: Ivr.class.php:147
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
+msgstr "O arquivo enviado foi carregado parcialmente"
 
 #: views/advanced_form.php:123
 msgid "Timeout"
@@ -470,30 +490,32 @@ msgid ""
 "To play the media you will need to either update your browser to a recent "
 "version or update your %s"
 msgstr ""
+"Para reproduzir a mídia, você precisará atualizar seu navegador para uma "
+"versão recente ou atualizar seu %s"
 
 #: assets/js/ivr.js:97
 msgid "Unable to delete the first entry. Please edit instead"
-msgstr ""
+msgstr "Não é possível excluir o primeiro elemento. Edite em vez de excluir"
 
 #: assets/js/ivr.js:93
 msgid "Unable to delete the last entry"
-msgstr ""
+msgstr "Não é possível excluir o último elemento"
 
 #: Ivr.class.php:116
 msgid "Unknown Error"
-msgstr ""
+msgstr "Erro Desconhecido"
 
 #: Ivr.class.php:136
 msgid "Unsupported file format"
-msgstr ""
+msgstr "Formato de arquivo não suportado"
 
 #: assets/js/ivr.js:196
 msgid "Unsupported file type"
-msgstr ""
+msgstr "Tipo de arquivo não suportado"
 
 #: views/simple_form.php:65 views/simple_form.php:113
 msgid "Update Required"
-msgstr ""
+msgstr "Necessária Atualização"
 
 #: views/simple_form.php:131
 #, php-format
@@ -501,17 +523,20 @@ msgid ""
 "Upload files from your local system. Supported upload formats are: %s. This "
 "includes archives (that include multiple files) and multiple files"
 msgstr ""
+"Carregue arquivos do seu sistema local. Os formatos de upload suportados são:"
+" %s. Isso inclui arquivos compactados (que incluem vários arquivos) e "
+"múltiplos arquivos"
 
 #: views/advanced_form.php:101 views/advanced_form.php:253
 #: views/advanced_form.php:280 views/advanced_form.php:411
 #: views/advanced_form.php:438 views/advanced_form.php:519
 #: views/entries.php:36
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: assets/js/ivr.js:509
 msgid "Your Browser Blocked The Recording, Please check your settings"
-msgstr ""
+msgstr "Seu Navegador Bloqueou a Gravação, verifique suas configurações"
 
 #: views/entries.php:20
 msgid "digits pressed"
