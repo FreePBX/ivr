@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-14 14:00+1000\n"
+"POT-Creation-Date: 2017-05-02 11:08-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
-"Language-Team: Portuguese (Brazil) "
-"<http://weblate.freepbx.org/projects/freepbx/ivr/pt_BR/>\n"
-"Language: pt_BR\n"
+"Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
+"freepbx/ivr/pt_BR/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 "X-Poedit-Language: Portuguese\n"
@@ -91,7 +91,7 @@ msgstr "Juntar Anuncio em Tempo Esgotado"
 msgid "Append Announcement to Invalid"
 msgstr "Anexar Anúncio a Inválido"
 
-#: ivr.i18n.php:6 /usr/src/freepbx/ivr/ivr.i18n.php:12
+#: ivr.i18n.php:6
 msgid "Applications"
 msgstr "Aplicações"
 
@@ -135,11 +135,11 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 "Escolha sim para que essa opção retorne a uma URA principal se ela foi "
-"chamada de uma URA principal. Se não, ele irá para o destino "
-"escolhido.<br><br>O caminho de retorno será para qualquer URA que estava no "
-"caminho da chamada antes desta URA, a qual poderia levar a resultados "
-"estranhos se houvesse uma URA chamando no caminho da chamada, mas não "
-"imediatamente antes desta"
+"chamada de uma URA principal. Se não, ele irá para o destino escolhido."
+"<br><br>O caminho de retorno será para qualquer URA que estava no caminho da "
+"chamada antes desta URA, a qual poderia levar a resultados estranhos se "
+"houvesse uma URA chamando no caminho da chamada, mas não imediatamente antes "
+"desta"
 
 #: page.ivr.php:16
 msgid "Connection Error"
@@ -156,7 +156,7 @@ msgstr ""
 "(por exemplo, para suporte pressione 1) e / ou autoriza discar direto para "
 "um ramal do sistema."
 
-#: views/form.php:67 views/form.php:73 views/form.php:79 views/form.php:85
+#: views/form.php:55 views/form.php:61 views/form.php:67 views/form.php:73
 msgid "Default"
 msgstr "Padrão"
 
@@ -219,7 +219,7 @@ msgstr "Habilitar discagem direta"
 msgid "Failed to write file to disk"
 msgstr "Falha ao gravar o arquivo no disco"
 
-#: views/advanced_form.php:84 views/simple_form.php:131
+#: views/simple_form.php:131
 msgid "Greeting to be played on entry to the IVR."
 msgstr "Saudação a ser reproduzida na entrada para a URA."
 
@@ -326,8 +326,8 @@ msgstr "Nenhum arquivo para carregar!"
 msgid "No file was uploaded"
 msgstr "Nenhum arquivo foi carregado"
 
-#: views/advanced_form.php:175 views/form.php:62 views/form.php:68
-#: views/form.php:74 views/form.php:80 views/form.php:86
+#: views/advanced_form.php:175 views/form.php:50 views/form.php:56
+#: views/form.php:62 views/form.php:68 views/form.php:74
 #: views/simple_form.php:171
 msgid "None"
 msgstr "Nenhum"
@@ -436,6 +436,11 @@ msgstr "Substituição do volume do toque"
 msgid "Save Recording"
 msgstr "Salvar Gravação"
 
+#: views/advanced_form.php:84
+msgid ""
+"Select a 'System Recording' here that will be played on entry to the IVR."
+msgstr ""
+
 #: views/simple_form.php:155
 msgid ""
 "Select a Ring Tone from the list of options above. This will determine how "
@@ -523,8 +528,8 @@ msgid ""
 "Upload files from your local system. Supported upload formats are: %s. This "
 "includes archives (that include multiple files) and multiple files"
 msgstr ""
-"Carregue arquivos do seu sistema local. Os formatos de upload suportados são:"
-" %s. Isso inclui arquivos compactados (que incluem vários arquivos) e "
+"Carregue arquivos do seu sistema local. Os formatos de upload suportados "
+"são: %s. Isso inclui arquivos compactados (que incluem vários arquivos) e "
 "múltiplos arquivos"
 
 #: views/advanced_form.php:101 views/advanced_form.php:253
