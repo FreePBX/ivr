@@ -438,7 +438,7 @@ function ivr_save_entries($id, $entries){
 
 //draw uvr entires table header
 function ivr_draw_entries_table_header_ivr() {
-	return  array(fpbx_label(_('Digits'),_("Digits the caller needs to dial to access said destination")), fpbx_label(_('Destination'),_("Choose a destination to route the call to")), fpbx_label(_('Return'), _('Return to this IVR when finished')), _('Delete'));
+	return  array(fpbx_label(_('Digits'),_("Digits the caller needs to dial to access said destination. Digits are limited to 10 digits.")), fpbx_label(_('Destination'),_("Choose a destination to route the call to")), fpbx_label(_('Return'), _('Return to this IVR when finished')), _('Delete'));
 }
 
 //draw actualy entires

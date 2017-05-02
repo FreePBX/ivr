@@ -44,6 +44,10 @@ $(document).ready(function(){
 					alert(_("Please enter a valid value for Digits Pressed"));
 					stop = true;
 					return false;
+				}else if(digit.length > 10){
+					alert(_("Digits are limited to 10 digits."));
+					stop = true;
+					return false;
 				}
 			});
 			if(stop) {
