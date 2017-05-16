@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-02 11:08-0400\n"
+"POT-Creation-Date: 2017-05-16 12:28-0400\n"
 "PO-Revision-Date: 2014-07-22 09:45+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/ivr/bg/>\n"
@@ -149,7 +149,7 @@ msgstr "По-Подразбиране"
 msgid "Delete"
 msgstr "Изтрий"
 
-#: assets/js/ivr.js:427
+#: assets/js/ivr.js:431
 msgid "Delete Recording"
 msgstr ""
 
@@ -178,7 +178,9 @@ msgid "Digits"
 msgstr ""
 
 #: functions.inc.php:441
-msgid "Digits the caller needs to dial to access said destination"
+msgid ""
+"Digits the caller needs to dial to access said destination. Digits are "
+"limited to 10 digits."
 msgstr ""
 
 #: views/simple_form.php:80
@@ -189,7 +191,7 @@ msgstr ""
 msgid "Edit IVR: "
 msgstr ""
 
-#: assets/js/ivr.js:169
+#: assets/js/ivr.js:173
 msgid "Edit:"
 msgstr ""
 
@@ -205,7 +207,7 @@ msgstr ""
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
-#: views/simple_form.php:110 assets/js/ivr.js:462 assets/js/ivr.js:474
+#: views/simple_form.php:110 assets/js/ivr.js:466 assets/js/ivr.js:478
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
@@ -297,7 +299,7 @@ msgstr ""
 msgid "No Astman, Not loading IVR"
 msgstr ""
 
-#: assets/js/ivr.js:271
+#: assets/js/ivr.js:275
 msgid "No file to load!"
 msgstr ""
 
@@ -361,7 +363,7 @@ msgstr ""
 msgid "Recording created for IVR named '%s'"
 msgstr ""
 
-#: assets/js/ivr.js:505
+#: assets/js/ivr.js:509
 msgid "Recording..."
 msgstr ""
 
@@ -397,7 +399,7 @@ msgstr ""
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: assets/js/ivr.js:427
+#: assets/js/ivr.js:431
 msgid "Save Recording"
 msgstr ""
 
@@ -457,11 +459,11 @@ msgid ""
 "version or update your %s"
 msgstr ""
 
-#: assets/js/ivr.js:97
+#: assets/js/ivr.js:101
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr ""
 
-#: assets/js/ivr.js:93
+#: assets/js/ivr.js:97
 msgid "Unable to delete the last entry"
 msgstr ""
 
@@ -473,7 +475,7 @@ msgstr ""
 msgid "Unsupported file format"
 msgstr ""
 
-#: assets/js/ivr.js:196
+#: assets/js/ivr.js:200
 msgid "Unsupported file type"
 msgstr ""
 
@@ -495,7 +497,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: assets/js/ivr.js:509
+#: assets/js/ivr.js:513
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 

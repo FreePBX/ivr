@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-02 11:08-0400\n"
+"POT-Creation-Date: 2017-05-16 12:28-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -164,7 +164,7 @@ msgstr "Padrão"
 msgid "Delete"
 msgstr "Apagar"
 
-#: assets/js/ivr.js:427
+#: assets/js/ivr.js:431
 msgid "Delete Recording"
 msgstr "Apagar Gravação"
 
@@ -195,9 +195,10 @@ msgid "Digits"
 msgstr "Dígitos"
 
 #: functions.inc.php:441
-msgid "Digits the caller needs to dial to access said destination"
+msgid ""
+"Digits the caller needs to dial to access said destination. Digits are "
+"limited to 10 digits."
 msgstr ""
-"Dígitos que o usuário chamador precisa discar para acessar o referido destino"
 
 #: views/simple_form.php:80
 msgid "Drop Annoucement Recording Here"
@@ -207,7 +208,7 @@ msgstr "Solte a Gravação do Anúncio Aqui"
 msgid "Edit IVR: "
 msgstr "Editar URA: "
 
-#: assets/js/ivr.js:169
+#: assets/js/ivr.js:173
 msgid "Edit:"
 msgstr "Editar:"
 
@@ -223,7 +224,7 @@ msgstr "Falha ao gravar o arquivo no disco"
 msgid "Greeting to be played on entry to the IVR."
 msgstr "Saudação a ser reproduzida na entrada para a URA."
 
-#: views/simple_form.php:110 assets/js/ivr.js:462 assets/js/ivr.js:474
+#: views/simple_form.php:110 assets/js/ivr.js:466 assets/js/ivr.js:478
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 "Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
@@ -318,7 +319,7 @@ msgstr "Não"
 msgid "No Astman, Not loading IVR"
 msgstr "Sem Astman, Não carrega a URA"
 
-#: assets/js/ivr.js:271
+#: assets/js/ivr.js:275
 msgid "No file to load!"
 msgstr "Nenhum arquivo para carregar!"
 
@@ -396,7 +397,7 @@ msgstr ""
 msgid "Recording created for IVR named '%s'"
 msgstr "Gravação criada para URA chamada '%s'"
 
-#: assets/js/ivr.js:505
+#: assets/js/ivr.js:509
 msgid "Recording..."
 msgstr "Gravando..."
 
@@ -432,7 +433,7 @@ msgstr "Opção de Toque"
 msgid "Ringer Volume Override"
 msgstr "Substituição do volume do toque"
 
-#: assets/js/ivr.js:427
+#: assets/js/ivr.js:431
 msgid "Save Recording"
 msgstr "Salvar Gravação"
 
@@ -498,11 +499,11 @@ msgstr ""
 "Para reproduzir a mídia, você precisará atualizar seu navegador para uma "
 "versão recente ou atualizar seu %s"
 
-#: assets/js/ivr.js:97
+#: assets/js/ivr.js:101
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr "Não é possível excluir o primeiro elemento. Edite em vez de excluir"
 
-#: assets/js/ivr.js:93
+#: assets/js/ivr.js:97
 msgid "Unable to delete the last entry"
 msgstr "Não é possível excluir o último elemento"
 
@@ -514,7 +515,7 @@ msgstr "Erro Desconhecido"
 msgid "Unsupported file format"
 msgstr "Formato de arquivo não suportado"
 
-#: assets/js/ivr.js:196
+#: assets/js/ivr.js:200
 msgid "Unsupported file type"
 msgstr "Tipo de arquivo não suportado"
 
@@ -539,13 +540,18 @@ msgstr ""
 msgid "Yes"
 msgstr "Sim"
 
-#: assets/js/ivr.js:509
+#: assets/js/ivr.js:513
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr "Seu Navegador Bloqueou a Gravação, verifique suas configurações"
 
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr "dígitos pressionados"
+
+#~ msgid "Digits the caller needs to dial to access said destination"
+#~ msgstr ""
+#~ "Dígitos que o usuário chamador precisa discar para acessar o referido "
+#~ "destino"
 
 #~ msgid "Checking for invalid_append_announce.."
 #~ msgstr "Verificando por invalid_append_announce.."
