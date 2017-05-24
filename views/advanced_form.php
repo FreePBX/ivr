@@ -124,7 +124,7 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="timeout_time"></i>
 						</div>
 						<div class="col-md-9">
-							<input type="number" class="form-control" id="timeout_time" name="timeout_time" value="<?php echo stripslashes($ivr['timeout_time'])?>">
+							<input type="number" min="0" class="form-control" id="timeout_time" name="timeout_time" value="<?php echo stripslashes($ivr['timeout_time'])?>">
 						</div>
 					</div>
 				</div>
@@ -199,7 +199,7 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="invalid_loops"></i>
 						</div>
 						<div class="col-md-9">
-							<input type="number" max="10" class="form-control" id="invalid_loops" name="invalid_loops" value="<?php echo $ivr['invalid_loops']?>">
+							<input type="number" min="0" max="10" class="form-control" id="invalid_loops" name="invalid_loops" value="<?php echo $ivr['invalid_loops']?>">
 						</div>
 					</div>
 				</div>
@@ -357,7 +357,7 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="timeout_loops"></i>
 						</div>
 						<div class="col-md-9">
-							<input type="number" max="10" class="form-control" id="timeout_loops" name="timeout_loops" value="<?php echo $ivr['timeout_loops']?>">
+							<input type="number" min="0" max="10" class="form-control" id="timeout_loops" name="timeout_loops" value="<?php echo $ivr['timeout_loops']?>">
 						</div>
 					</div>
 				</div>
