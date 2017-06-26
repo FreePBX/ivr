@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>13.0.27.4</version>
+	<version>13.0.27.5</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
+		*13.0.27.5* FREEPBX-15086
 		*13.0.27.4* FREEPBX-15104
 		*13.0.27.3* FREEPBX-14866 Able to set negative values for Timeout, Invalid Retries and Timeout Retries under IVR module
 		*13.0.27.2* FREEPBX-14610 IVR Entries Digits Pressed field length

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 12:28-0400\n"
+"POT-Creation-Date: 2017-06-26 14:02-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,7 +106,7 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -138,7 +138,7 @@ msgid "Default"
 msgstr ""
 
 #: Ivr.class.php:69
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid "Delete"
 msgstr ""
 
@@ -154,7 +154,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid "Destination"
 msgstr ""
 
@@ -166,11 +166,11 @@ msgstr ""
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid "Digits"
 msgstr ""
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -237,13 +237,13 @@ msgstr ""
 msgid "IVR Name"
 msgstr ""
 
-#: functions.inc.php:533
-#: functions.inc.php:553
+#: functions.inc.php:530
+#: functions.inc.php:552
 #, php-format
 msgid "IVR: %s"
 msgstr ""
 
-#: functions.inc.php:500
+#: functions.inc.php:496
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr ""
@@ -379,7 +379,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid "Return"
 msgstr ""
 
@@ -395,7 +395,7 @@ msgstr ""
 msgid "Return to IVR after VM"
 msgstr ""
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid "Return to this IVR when finished"
 msgstr ""
 

@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 12:28-0400\n"
+"POT-Creation-Date: 2017-06-26 14:02-0400\n"
 "PO-Revision-Date: 2016-08-03 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -145,7 +145,7 @@ msgstr ""
 "よって、親IVRがこのIVRの直前でない場合は、予期しない結果を引き起こしてしまう"
 "可能性があります。注意:親IVRとは、このIVRに転送される前にあったIVRの事"
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -180,7 +180,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ivr.class.php:69 functions.inc.php:441
+#: Ivr.class.php:69 functions.inc.php:436
 msgid "Delete"
 msgstr "削除"
 
@@ -196,7 +196,7 @@ msgstr "このエントリーを削除する。変更適用を忘れずに！"
 msgid "Description of this IVR"
 msgstr "このIVRの説明。"
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid "Destination"
 msgstr "宛先"
 
@@ -208,11 +208,11 @@ msgstr "「無効な入力」の音声を再生してから転送する宛先。
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "タイムアウト音声を再生してから転送する宛先。"
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid "Digits"
 msgstr ""
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -275,12 +275,12 @@ msgstr "IVRリスト"
 msgid "IVR Name"
 msgstr "IVRの名前"
 
-#: functions.inc.php:533 functions.inc.php:553
+#: functions.inc.php:530 functions.inc.php:552
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:500
+#: functions.inc.php:496
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / オプション: %s"
@@ -412,7 +412,7 @@ msgstr ""
 msgid "Reset"
 msgstr "リセット"
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid "Return"
 msgstr "戻る"
 
@@ -428,7 +428,7 @@ msgstr "タイムアウト: 前IVRに戻る"
 msgid "Return to IVR after VM"
 msgstr "VMの後にIVRに戻る"
 
-#: functions.inc.php:441
+#: functions.inc.php:436
 msgid "Return to this IVR when finished"
 msgstr ""
 
