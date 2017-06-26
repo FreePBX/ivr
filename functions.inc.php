@@ -83,9 +83,9 @@ function ivr_get_config($engine) {
 					//TODO: do we need to set anything at all?
 					$ext->add($c, 's', '', new ext_setvar('__IVR_RETVM', ''));
 				}
-        if ($ivr['alertinfo'] != '') {
-          $ext->add($c, 's', '', new ext_setvar('__ALERT_INFO', str_replace(';', '\;', $ivr['alertinfo'])));
-        }
+				if ($ivr['alertinfo'] != '') {
+					$ext->add($c, 's', '', new ext_setvar('__ALERT_INFO', str_replace(';', '\;', $ivr['alertinfo'])));
+				}
 				if (!empty($ivr['rvolume'])) {
 					$ext->add($c, 's', '', new ext_setvar("__RVOL", $ivr['rvolume']));
 				}
@@ -372,10 +372,6 @@ function ivr_configprocess(){
 function ivr_save_details($vals){
 	global $db, $amp_conf;
 
-	foreach($vals as $key => $value) {
-		$vals[$key] = $db->escapeSimple($value);
-	}
-
 	if ($vals['id']) {
 		$start = "REPLACE INTO `ivr_details` (";
 	} else {
@@ -410,8 +406,7 @@ function ivr_save_details($vals){
 //save ivr entires
 function ivr_save_entries($id, $entries){
 	global $db;
-	$id = $db->escapeSimple($id);
-	sql('DELETE FROM ivr_entries WHERE ivr_id = "' . $id . '"');
+	$db->query('DELETE FROM ivr_entries WHERE ivr_id = ?', $id);
 	if ($entries) {
 		$entries['ivr_ret'] = array_values($entries['ivr_ret']);
 		for ($i = 0; $i < count($entries['ext']); $i++) {
@@ -472,24 +467,25 @@ function ivr_draw_entries($id,$restrict_mods=false){
 //delete an ivr + entires
 function ivr_delete($id) {
 	global $db;
-	sql('DELETE FROM ivr_details WHERE id = "' . $db->escapeSimple($id) . '"');
-	sql('DELETE FROM ivr_entries WHERE ivr_id = "' . $db->escapeSimple($id) . '"');
+	$db->query('DELETE FROM ivr_details WHERE id = ?', $id);
+	$db->query('DELETE FROM ivr_entries WHERE ivr_id = ?', $id);
 }
 //----------------------------------------------------------------------------
 // Dynamic Destination Registry and Recordings Registry Functions
 function ivr_check_destinations($dest=true) {
 	global $active_modules;
+	global $db;
 
 	$destlist = array();
 	if (is_array($dest) && empty($dest)) {
 		return $destlist;
 	}
 	$sql = "SELECT dest, name, selection, a.id id FROM ivr_details a INNER JOIN ivr_entries d ON a.id = d.ivr_id  ";
-	if ($dest !== true) {
-		$sql .= "WHERE dest in ('".implode("','",$dest)."')";
+	if ($dest !== true && is_array($dest)) {
+		$sql .= "WHERE dest in (".implode(",",array_fill(0, count($dest), "?")).")";
 	}
 	$sql .= "ORDER BY name";
-	$results = sql($sql,"getAll",DB_FETCHMODE_ASSOC);
+	$results = $db->getAll($sql, $dest, DB_FETCHMODE_ASSOC);
 
 	foreach ($results as $result) {
 		$thisdest = $result['dest'];
@@ -508,8 +504,9 @@ function ivr_check_destinations($dest=true) {
 
 function ivr_change_destination($old_dest, $new_dest) {
 	global $db;
- 	$sql = "UPDATE ivr_entires SET dest = '$new_dest' WHERE dest = '$old_dest'";
- 	$db->query($sql);
+ 	$sql = "UPDATE ivr_entires SET dest = ? WHERE dest = ?";
+	$params = array($new_dest, $old_dest);
+ 	$db->query($sql, $params);
 
 }
 
@@ -541,9 +538,11 @@ function ivr_getdestinfo($dest) {
 
 function ivr_recordings_usage($recording_id) {
 	global $active_modules;
+	global $db;
 
-	$sql = "SELECT `id`, `name` FROM `ivr_details` WHERE `announcement` = '$recording_id' OR `invalid_retry_recording` = '$recording_id' OR `invalid_recording` = '$recording_id' OR `timeout_recording` = '$recording_id' OR `timeout_retry_recording` = '$recording_id'";
-	$results = sql($sql, "getAll",DB_FETCHMODE_ASSOC);
+	$sql = "SELECT `id`, `name` FROM `ivr_details` WHERE `announcement` = :recording_id OR `invalid_retry_recording` = :recording_id OR `invalid_recording` = :recording_id OR `timeout_recording` = :recording_id OR `timeout_retry_recording` = :recording_id";
+	$params = array(":recording_id"=>$recording_id);
+	$results = $db->getAll($sql, $params, DB_FETCHMODE_ASSOC);
 	if (empty($results)) {
 		return array();
 	} else {
