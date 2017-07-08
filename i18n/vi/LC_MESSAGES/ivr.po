@@ -10,13 +10,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-26 14:02-0400\n"
-"PO-Revision-Date: 2017-06-26 14:02-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-07-07 21:48+0200\n"
+"Last-Translator: PETER <ftek@ymail.com>\n"
+"Language-Team: Vietnamese "
+"<http://weblate.freepbx.org/projects/freepbx/ivr/vi/>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: Ivr.class.php:159
 msgid "A PHP extension stopped the file upload"
@@ -42,17 +45,19 @@ msgstr ""
 
 #: views/entries.php:65
 msgid "Add Another Entry"
-msgstr ""
+msgstr "Thêm mục nhập khác"
 
 #: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
-msgstr ""
+msgstr "Thêm IVR"
 
 #: views/advanced_form.php:263
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
+"Sau khi phát ghi âm mục nhập không hợp lệ hệ thống sẽ phát lại thông báo IVR "
+"chính"
 
 #: views/advanced_form.php:421
 msgid ""
@@ -62,15 +67,15 @@ msgstr ""
 
 #: views/advanced_form.php:147
 msgid "Alert Info"
-msgstr ""
+msgstr "Thông tin cảnh báo"
 
 #: views/advanced_form.php:135
 msgid "Amount of time to be considered a timeout."
-msgstr ""
+msgstr "Lượng thời gian được xem là thời gian chờ."
 
 #: views/advanced_form.php:70 views/simple_form.php:33
 msgid "Announcement"
-msgstr ""
+msgstr "Thông báo"
 
 #: views/advanced_form.php:406
 msgid "Append Announcement on Timeout"
@@ -82,19 +87,19 @@ msgstr ""
 
 #: ivr.i18n.php:6
 msgid "Applications"
-msgstr ""
+msgstr "Các ứng dụng"
 
 #: assets/js/ivr.js:28
 msgid "Are you sure you don't want a recording for this announcement?"
-msgstr ""
+msgstr "Bạn có chắc không muốn ghi âm đối với thông báo này?"
 
 #: views/simple_form.php:73
 msgid "Browse"
-msgstr ""
+msgstr "Trình duyệt"
 
 #: Ivr.class.php:163
 msgid "Can Not Find Uploaded Files"
-msgstr ""
+msgstr "Không tìm thấy các tệp đã tải lên"
 
 #: views/advanced_form.php:448
 msgid ""
@@ -120,7 +125,7 @@ msgstr ""
 
 #: page.ivr.php:16
 msgid "Connection Error"
-msgstr ""
+msgstr "Lỗi kết nối"
 
 #: ivr.i18n.php:8
 msgid ""
@@ -131,7 +136,7 @@ msgstr ""
 
 #: views/form.php:55 views/form.php:61 views/form.php:67 views/form.php:73
 msgid "Default"
-msgstr ""
+msgstr "Mặc định"
 
 #: Ivr.class.php:69 functions.inc.php:436
 msgid "Delete"
