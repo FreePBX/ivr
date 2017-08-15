@@ -53,7 +53,7 @@
 		<module>recordings ge 13.0.23</module>
 	</depends>
 	<menuitems>
-		<ivr>IVR</ivr>
+		<ivr needsenginedb="yes">IVR</ivr>
 	</menuitems>
 	<popovers>
 		<ivr>
