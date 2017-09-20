@@ -216,7 +216,9 @@ $('#fileupload').fileupload({
 		if(data.result.status) {
 			announcementRecording = data.result.localfilename;
 			$("#jquery_jplayer_announcement").jPlayer( "clearMedia" );
+			var key = $(".browser-player-container .jp-jplayer").data("key");
 			recordings[key] = announcementRecording;
+			$(".browser-player-container").removeClass("hidden");
 		} else {
 			alert(data.result.message);
 		}
