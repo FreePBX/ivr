@@ -1,0 +1,548 @@
+# This file is part of FreePBX.
+#
+# For licensing information, please see the file named LICENSE located in the module directory
+#
+# FreePBX language template for ivr
+# Copyright (C) 2008-2017 Sangoma Technologies, Inc.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-26 14:02-0400\n"
+"PO-Revision-Date: 2017-07-20 13:20+0200\n"
+"Last-Translator: PETER <ftek@ymail.com>\n"
+"Language-Team: Vietnamese "
+"<http://weblate.freepbx.org/projects/freepbx/ivr/vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.4\n"
+
+#: Ivr.class.php:159
+msgid "A PHP extension stopped the file upload"
+msgstr "Máy nhánh PHP đã ngừng tải tệp lên"
+
+#: page.ivr.php:18
+msgid ""
+"A connection to Asterisk Manager could not be made. This module requires "
+"Asterisk to be running and have proper credentials"
+msgstr ""
+"Không thể tạo một kết nối đến Bộ quản lý Asterisk ( Asterisk Manager). Mô "
+"đun này yêu cầu Asterisk phải đang chạy và có những chứng thực phù hợp"
+
+#: views/advanced_form.php:135
+msgid "A value of 0 disables the timeout"
+msgstr "Gía trị bằng 0 sẽ vô hiệu thời gian chờ"
+
+#: views/advanced_form.php:159
+msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
+msgstr ""
+"ALERT_INFO  có thể được sử dụng để phân biệt chuông với các thiết bị SIP."
+
+#: page.ivr.php:46
+msgid "Actions"
+msgstr "Các thao tác"
+
+#: views/entries.php:65
+msgid "Add Another Entry"
+msgstr "Thêm mục nhập khác"
+
+#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
+msgid "Add IVR"
+msgstr "Thêm IVR"
+
+#: views/advanced_form.php:263
+msgid ""
+"After playing the Invalid Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+"Sau khi phát bản ghi phép thử lại không hợp lệ hệ thống sẽ phát lại thông "
+"báo IVR chính"
+
+#: views/advanced_form.php:421
+msgid ""
+"After playing the Timeout Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+"Sau khi phát bản ghi thời gian chờ để thử lại (Timeout Retry Recording), hệ "
+"thống sẽ phát lại thông báo IVR chính"
+
+#: views/advanced_form.php:147
+msgid "Alert Info"
+msgstr "Thông tin cảnh báo"
+
+#: views/advanced_form.php:135
+msgid "Amount of time to be considered a timeout."
+msgstr "Lượng thời gian được xem là thời gian chờ."
+
+#: views/advanced_form.php:70 views/simple_form.php:33
+msgid "Announcement"
+msgstr "Thông báo"
+
+#: views/advanced_form.php:406
+msgid "Append Announcement on Timeout"
+msgstr "Kèm thông báo trên Timeout"
+
+#: views/advanced_form.php:248
+msgid "Append Announcement to Invalid"
+msgstr "Kèm thông báo vào Invalid"
+
+#: ivr.i18n.php:6
+msgid "Applications"
+msgstr "Các ứng dụng"
+
+#: assets/js/ivr.js:28
+msgid "Are you sure you don't want a recording for this announcement?"
+msgstr "Bạn có chắc không muốn một bản ghi cho thông báo này?"
+
+#: views/simple_form.php:73
+msgid "Browse"
+msgstr "Trình duyệt"
+
+#: Ivr.class.php:163
+msgid "Can Not Find Uploaded Files"
+msgstr "Không tìm thấy các tệp đã tải lên"
+
+#: views/advanced_form.php:448
+msgid ""
+"Check this box to have this option return to a parent IVR if it was called "
+"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
+"Đánh dấu check vào hộp này để tùy chọn này trả về IVR mẹ nếu nó được gọi từ "
+"một IVR mẹ. Nếu không, nó sẽ đi đến đích đã chọn.<br><br> đường dẫn trả lại "
+"sẽ là bất kỳ IVR nào mà nó nằm trong đường dẫn cuộc gọi trước khi IVR này "
+"đem đến một kết quả lạ nếu có một IVR đã gọi trong đường dẫn cuộc gọi nhưng "
+"không phải trước nó"
+
+#: functions.inc.php:436
+msgid "Choose a destination to route the call to"
+msgstr "Chọn một điểm đích để định tuyến cuộc gọi tới"
+
+#: views/advanced_form.php:290
+msgid ""
+"Choose yes to have this option return to a parent IVR if it was called from "
+"a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
+"Chọn Yes để tùy chọn này quay lại một IVR mẹ nếu nó được gọi từ một IVR mẹ. "
+"Nếu không, nó sẽ đi tới điểm đích đã chọn.<br><br> đường dẫn trở lại sẽ tới "
+"bất kỳ IVR nào trong đường dẫn cuộc gọi trước khi IVR này đem tới một kết "
+"quả khác nếu có một IVR được gọi trong đường dẫn cuộc gọi nhưng không phải "
+"ngay lập tức trước đó"
+
+#: page.ivr.php:16
+msgid "Connection Error"
+msgstr "Lỗi kết nối"
+
+#: ivr.i18n.php:8
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+msgstr ""
+"Tạo các Menu tiếp tân Kỹ thuật số (còn gọi là Auto-Attendant, aka "
+"Interactive Voice Response). Chúng có thể được sử dụng để gửi người gọi đến "
+"các vị trí khác nhau (ví dụ, Bấm 1 để đến bộ phận Sale) và / hoặc cho phép "
+"các số máy nhánh quay số trực tiếp."
+
+#: views/form.php:55 views/form.php:61 views/form.php:67 views/form.php:73
+msgid "Default"
+msgstr "Mặc định"
+
+#: Ivr.class.php:69 functions.inc.php:436
+msgid "Delete"
+msgstr "Xóa"
+
+#: assets/js/ivr.js:431
+msgid "Delete Recording"
+msgstr "Xóa bản ghi"
+
+#: views/entries.php:44
+msgid "Delete this entry. Dont forget to click Submit to save changes!"
+msgstr ""
+"Xóa mục nhập này. Không được quyền kích chọn Gửi đi ( Submit) để lưu các "
+"thay đổi!"
+
+#: views/advanced_form.php:53
+msgid "Description of this IVR"
+msgstr "Mô tả của IVR này"
+
+#: functions.inc.php:436
+msgid "Destination"
+msgstr "Điểm đích"
+
+#: views/advanced_form.php:344
+msgid "Destination to send the call to after Invalid Recording is played"
+msgstr "Điểm đích để gửi cuộc gọi sau khi phát các khi bản ghi không hợp lệ"
+
+#: views/advanced_form.php:502
+msgid "Destination to send the call to after Timeout Recording is played."
+msgstr ""
+"Điểm đích để gửi cuộc gọi đến sau khi phát bản ghi thời gian chờ (Timeout "
+"Recording)."
+
+#: functions.inc.php:436
+msgid "Digits"
+msgstr "Các chữ số"
+
+#: functions.inc.php:436
+msgid ""
+"Digits the caller needs to dial to access said destination. Digits are "
+"limited to 10 digits."
+msgstr ""
+"Chữ số mà người gọi cần để quay số và truy nhập các điểm đích được nhắc đến. "
+"Giới hạn là 10 chữ số."
+
+#: views/simple_form.php:80
+msgid "Drop Annoucement Recording Here"
+msgstr "Thả bản ghi thông báo (Annoucement Recording)  ở đây"
+
+#: views/form.php:44
+msgid "Edit IVR: "
+msgstr "Chỉnh sửa IVR: "
+
+#: assets/js/ivr.js:173
+msgid "Edit:"
+msgstr "Chỉnh sửa:"
+
+#: views/advanced_form.php:96
+msgid "Enable Direct Dial"
+msgstr "Kích hoạt Direct Dial (quay số trực tiếp)"
+
+#: Ivr.class.php:156
+msgid "Failed to write file to disk"
+msgstr "Ghi tệp vào đĩa không thành công"
+
+#: views/simple_form.php:131
+msgid "Greeting to be played on entry to the IVR."
+msgstr "Lời chào sẽ được phá trên mục nhập tới IVR."
+
+#: views/simple_form.php:110 assets/js/ivr.js:466 assets/js/ivr.js:478
+msgid "Hit the red record button to start recording from your browser"
+msgstr "Nhấn nút ghi màu đỏ để bắt đầu ghi từ trình duyệt của bạn"
+
+#: Ivr.class.php:30 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/page.ivr.php:24
+msgid "IVR"
+msgstr "IVR (Interactive Voice Response) hệ thống tương tác tự động"
+
+#: views/advanced_form.php:60
+msgid "IVR DTMF Options"
+msgstr "Tùy chọn DTMF của IVR"
+
+#: views/advanced_form.php:41
+msgid "IVR Description"
+msgstr "Mô tả IVR"
+
+#: views/advanced_form.php:536
+msgid "IVR Entries"
+msgstr "Các mục nhập IVR"
+
+#: views/advanced_form.php:7
+msgid "IVR General Options"
+msgstr "Tùy chọn chung ( General) của IVR"
+
+#: views/rnav.php:14
+msgid "IVR List"
+msgstr "Danh sách IVR"
+
+#: page.ivr.php:45 views/advanced_form.php:17 views/simple_form.php:8
+msgid "IVR Name"
+msgstr "Tên IVR"
+
+#: functions.inc.php:530 functions.inc.php:552
+#, php-format
+msgid "IVR: %s"
+msgstr "IVR:%s"
+
+#: functions.inc.php:496
+#, php-format
+msgid "IVR: %s / Option: %s"
+msgstr "IVR: %s/ Tùy chọn: %s"
+
+#: assets/js/ivr.js:22
+msgid "IVRs require a valid name"
+msgstr "Các IVR yêu cầu một tên hợp lệ"
+
+#: views/advanced_form.php:529
+msgid ""
+"If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
+"got a users voicemail"
+msgstr ""
+"Nếu Yes, khi thoát khỏi hộp thư thoại một người gọi sẽ được trở lại IVR này "
+"nếu chúng có một thư thoại người dùng"
+
+#: views/advanced_form.php:332
+msgid "Invalid Destination"
+msgstr "Điểm đích không hợp lệ"
+
+#: views/advanced_form.php:306
+msgid "Invalid Recording"
+msgstr "Bản ghi không hợp lệ"
+
+#: views/advanced_form.php:198
+msgid "Invalid Retries"
+msgstr "Phép thử lại không hợp lệ"
+
+#: views/advanced_form.php:222
+msgid "Invalid Retry Recording"
+msgstr "Bản ghi phép thử lại không hợp lệ"
+
+#: views/rnav.php:2
+msgid "List IVRs"
+msgstr "Danh sách các IVR"
+
+#: Ivr.class.php:153
+msgid "Missing a temporary folder"
+msgstr "Thiếu một thư mục tạm"
+
+#: views/advanced_form.php:29 views/simple_form.php:20
+msgid "Name of this IVR"
+msgstr "Tên của IVR này"
+
+#: views/advanced_form.php:103 views/advanced_form.php:255
+#: views/advanced_form.php:282 views/advanced_form.php:413
+#: views/advanced_form.php:440 views/advanced_form.php:521
+#: views/entries.php:38
+msgid "No"
+msgstr "Không"
+
+#: page.ivr.php:15
+msgid "No Astman, Not loading IVR"
+msgstr "Không có Astman, không tải IVR"
+
+#: assets/js/ivr.js:275
+msgid "No file to load!"
+msgstr "Không có tệp nào để tải!"
+
+#: Ivr.class.php:150
+msgid "No file was uploaded"
+msgstr "Đã không có tệp nào được tải lên"
+
+#: views/advanced_form.php:175 views/form.php:50 views/form.php:56
+#: views/form.php:62 views/form.php:68 views/form.php:74
+#: views/simple_form.php:171
+msgid "None"
+msgstr "Không có"
+
+#: views/advanced_form.php:368
+msgid ""
+"Number of times to retry when no DTMF is heard and the IVR choice times out."
+msgstr ""
+"Số lần cho phép thử lại khi không có nào DTMF nhận nghe và IVR được chọn hết "
+"giờ."
+
+#: views/advanced_form.php:210
+msgid ""
+"Number of times to retry when receiving an invalid/unmatched response from "
+"the caller"
+msgstr ""
+"Lượng thời gian để thử lại khi nhận trả lời không hợp lệ/ không khớp từ "
+"người gọi"
+
+#: views/advanced_form.php:187 views/simple_form.php:183
+#, php-format
+msgid ""
+"Override the ringer volume. Note: This is only valid for %s phones at this "
+"time"
+msgstr ""
+"Ghi đè lên âm lượng chuông. Lưu ý: Điều này chỉ hợp lệ đối với các điện "
+"thoại %s tại thời điểm này"
+
+#: views/simple_form.php:62
+msgid "Play Previous Recording"
+msgstr "Phát bản ghi trước đó"
+
+#: views/advanced_form.php:320 views/advanced_form.php:478
+msgid ""
+"Prompt to be played before sending the caller to an alternate destination "
+"due to the caller pressing 0 or receiving the maximum amount of invalid/"
+"unmatched responses (as determined by Invalid Retries)"
+msgstr ""
+"Phát nhắc nhở trước khi gửi người gọi tới một điểm đích lựa chọn do người "
+"gọi nhấn 0 hoắc nhận được một lượng tối đa các phản hồi không hợp lệ/ không "
+"khớp ( như được quy định bởi các pháp thử lại không hợp lệ ( Invalid "
+"Retries))"
+
+#: views/advanced_form.php:394
+msgid ""
+"Prompt to be played when a timeout occurs, before prompting the caller to "
+"try again"
+msgstr ""
+"Phát lại nhắc nhở khi xảy ra thời gian chờ (timeout), trước khi nhắc nhở "
+"người dùng thử lại lần nữa"
+
+#: views/advanced_form.php:236
+msgid ""
+"Prompt to be played when an invalid/unmatched response is received, before "
+"prompting the caller to try again"
+msgstr ""
+"Phát lại nhắc nhở khi nhận được một trả lời không hợp lệ/ không khớp, trước "
+"khi nhắc nhở người gọi thử lại một lần nữa"
+
+#: views/advanced_form.php:111
+msgid "Provides options for callers to direct dial an extension."
+msgstr ""
+"Cung cấp các tùy chọn cho người gọi có thể quay số một máy nhánh trực tiếp."
+
+#: functions.inc.php:348
+#, php-format
+msgid "Recording created for IVR named '%s'"
+msgstr "Bản ghi được tạo cho IVR có tên '%s'"
+
+#: assets/js/ivr.js:509
+msgid "Recording..."
+msgstr "Đang ghi ..."
+
+#: Ivr.class.php:74
+msgid "Reset"
+msgstr "Cài đặt lại"
+
+#: functions.inc.php:436
+msgid "Return"
+msgstr "Trả lại"
+
+#: views/advanced_form.php:275
+msgid "Return on Invalid"
+msgstr "Trả lại trên Invalid"
+
+#: views/advanced_form.php:433
+msgid "Return on Timeout"
+msgstr "Trả lại trên Timeout"
+
+#: views/advanced_form.php:514
+msgid "Return to IVR after VM"
+msgstr "Trả lại tới IVR sau VM"
+
+#: functions.inc.php:436
+msgid "Return to this IVR when finished"
+msgstr "Trả lại tới IVR này khi hoàn thành"
+
+#: views/simple_form.php:143
+msgid "Ring Tone"
+msgstr "Nhạc chuông"
+
+#: views/advanced_form.php:170 views/simple_form.php:166
+msgid "Ringer Volume Override"
+msgstr "Ghi đè âm lượng chuông"
+
+#: assets/js/ivr.js:431
+msgid "Save Recording"
+msgstr "Lưu bản ghi"
+
+#: views/advanced_form.php:84
+msgid ""
+"Select a 'System Recording' here that will be played on entry to the IVR."
+msgstr "Chọn 'System Recording' ở đây để nó được phát trên mục nhập tới IVR."
+
+#: views/simple_form.php:155
+msgid ""
+"Select a Ring Tone from the list of options above. This will determine how "
+"your phone sounds when it is rung from this group."
+msgstr ""
+"Chọn một Nhạc chuông từ danh sách các tùy chọn ở trên. Điều này sẽ xác định "
+"điện thoại sẽ có âm thanh như thế nào khi nó đổ chuông từ nhóm này."
+
+#: Ivr.class.php:79
+msgid "Submit"
+msgstr "Gửi đi"
+
+#: Ivr.class.php:144
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr "Tệp đã tải lên vượt quá kích cỡ tối đa được quy định trong mẫu HTML"
+
+#: Ivr.class.php:141
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "Tệp đã tải lên vượt qua kích cỡ tối đa quy định trong php.ini"
+
+#: Ivr.class.php:147
+msgid "The uploaded file was only partially uploaded"
+msgstr "Tệp đã tải lên chỉ được tải lên từng phần"
+
+#: views/advanced_form.php:123
+msgid "Timeout"
+msgstr "Thời gian chờ"
+
+#: views/advanced_form.php:490
+msgid "Timeout Destination"
+msgstr "Điểm đích thời gian chờ"
+
+#: views/advanced_form.php:464
+msgid "Timeout Recording"
+msgstr "Bản ghi thời gian chờ"
+
+#: views/advanced_form.php:356
+msgid "Timeout Retries"
+msgstr "Thời gian chờ cho phép thử lại"
+
+#: views/advanced_form.php:380
+msgid "Timeout Retry Recording"
+msgstr "Bản ghi thời gian chờ của Phép thử lại"
+
+#: views/simple_form.php:66 views/simple_form.php:114
+#, php-format
+msgid ""
+"To play the media you will need to either update your browser to a recent "
+"version or update your %s"
+msgstr ""
+"Để phát media bạn cần phải cập nhật phiên bản gần nhất cho trình duyệt của "
+"mình  hoặc cập nhật %s"
+
+#: assets/js/ivr.js:101
+msgid "Unable to delete the first entry. Please edit instead"
+msgstr "Không thể xóa mục nhập đầu tiên. Vui lòng chỉnh sửa thay thế"
+
+#: assets/js/ivr.js:97
+msgid "Unable to delete the last entry"
+msgstr "Không thể xóa mục nhập mới nhất"
+
+#: Ivr.class.php:116
+msgid "Unknown Error"
+msgstr "Lỗ không xác định"
+
+#: Ivr.class.php:136
+msgid "Unsupported file format"
+msgstr "Định dạng tệp không được hỗ trợ"
+
+#: assets/js/ivr.js:200
+msgid "Unsupported file type"
+msgstr "Kiểu tệp không được hỗ trợ"
+
+#: views/simple_form.php:65 views/simple_form.php:113
+msgid "Update Required"
+msgstr "Yêu cầu phải cập nhật"
+
+#: views/simple_form.php:131
+#, php-format
+msgid ""
+"Upload files from your local system. Supported upload formats are: %s. This "
+"includes archives (that include multiple files) and multiple files"
+msgstr ""
+"Tải lên các tệp từ hệ thống tại chỗ của bạn. Các định dạng tải lên được hỗ "
+"trợ là: %s. Điều này bao gồm các tệp nén ( gồm các tệp) và nhiều tệp"
+
+#: views/advanced_form.php:101 views/advanced_form.php:253
+#: views/advanced_form.php:280 views/advanced_form.php:411
+#: views/advanced_form.php:438 views/advanced_form.php:519
+#: views/entries.php:36
+msgid "Yes"
+msgstr "Có"
+
+#: assets/js/ivr.js:513
+msgid "Your Browser Blocked The Recording, Please check your settings"
+msgstr ""
+"Trình duyệt của bạn đã chặn Recording, vui lòng kiểm tra cài đặt của bạn"
+
+#: views/entries.php:20
+msgid "digits pressed"
+msgstr "Các chữ số đã nhấn"
