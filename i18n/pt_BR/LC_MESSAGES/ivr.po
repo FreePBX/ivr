@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-26 14:02-0400\n"
+"POT-Creation-Date: 2017-09-20 15:13-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -164,7 +164,7 @@ msgstr "Padrão"
 msgid "Delete"
 msgstr "Apagar"
 
-#: assets/js/ivr.js:431
+#: assets/js/ivr.js:433
 msgid "Delete Recording"
 msgstr "Apagar Gravação"
 
@@ -224,7 +224,7 @@ msgstr "Falha ao gravar o arquivo no disco"
 msgid "Greeting to be played on entry to the IVR."
 msgstr "Saudação a ser reproduzida na entrada para a URA."
 
-#: views/simple_form.php:110 assets/js/ivr.js:466 assets/js/ivr.js:478
+#: views/simple_form.php:110 assets/js/ivr.js:468 assets/js/ivr.js:480
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 "Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
@@ -319,7 +319,7 @@ msgstr "Não"
 msgid "No Astman, Not loading IVR"
 msgstr "Sem Astman, Não carrega a URA"
 
-#: assets/js/ivr.js:275
+#: assets/js/ivr.js:277
 msgid "No file to load!"
 msgstr "Nenhum arquivo para carregar!"
 
@@ -397,7 +397,7 @@ msgstr ""
 msgid "Recording created for IVR named '%s'"
 msgstr "Gravação criada para URA chamada '%s'"
 
-#: assets/js/ivr.js:509
+#: assets/js/ivr.js:511
 msgid "Recording..."
 msgstr "Gravando..."
 
@@ -433,7 +433,7 @@ msgstr "Opção de Toque"
 msgid "Ringer Volume Override"
 msgstr "Substituição do volume do toque"
 
-#: assets/js/ivr.js:431
+#: assets/js/ivr.js:433
 msgid "Save Recording"
 msgstr "Salvar Gravação"
 
@@ -540,7 +540,7 @@ msgstr ""
 msgid "Yes"
 msgstr "Sim"
 
-#: assets/js/ivr.js:513
+#: assets/js/ivr.js:515
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr "Seu Navegador Bloqueou a Gravação, verifique suas configurações"
 

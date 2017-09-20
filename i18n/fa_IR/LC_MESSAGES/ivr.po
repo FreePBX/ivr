@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-26 14:02-0400\n"
+"POT-Creation-Date: 2017-09-20 15:13-0400\n"
 "PO-Revision-Date: 2016-04-26 06:49+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -155,7 +155,7 @@ msgstr "پیشفرض"
 msgid "Delete"
 msgstr "حذف"
 
-#: assets/js/ivr.js:431
+#: assets/js/ivr.js:433
 msgid "Delete Recording"
 msgstr "حذف ضبط شده"
 
@@ -213,7 +213,7 @@ msgstr "خطا در نوشتن فایل روی دیسک"
 msgid "Greeting to be played on entry to the IVR."
 msgstr "پیام خوش آمد در هنگام ورود به منوی صوتی."
 
-#: views/simple_form.php:110 assets/js/ivr.js:466 assets/js/ivr.js:478
+#: views/simple_form.php:110 assets/js/ivr.js:468 assets/js/ivr.js:480
 msgid "Hit the red record button to start recording from your browser"
 msgstr "بروی کلید قرمز برای ضبط پیام کلیک کنید"
 
@@ -307,7 +307,7 @@ msgstr "خیر"
 msgid "No Astman, Not loading IVR"
 msgstr "بدون مدیریت استریسک، منوی صوتی بارگذاری نمیشود"
 
-#: assets/js/ivr.js:275
+#: assets/js/ivr.js:277
 msgid "No file to load!"
 msgstr "فایلی بارگذاری نشد!"
 
@@ -377,7 +377,7 @@ msgstr "ایجاد گزینه برای تماس مستقیم به یک داخل�
 msgid "Recording created for IVR named '%s'"
 msgstr "پیام ضبط شده تهیه شد برای منوی صوتی به نام '%s'"
 
-#: assets/js/ivr.js:509
+#: assets/js/ivr.js:511
 msgid "Recording..."
 msgstr "در حال ضبط.."
 
@@ -413,7 +413,7 @@ msgstr "صدای زنگ"
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: assets/js/ivr.js:431
+#: assets/js/ivr.js:433
 msgid "Save Recording"
 msgstr "ذخیره ضبط شده"
 
@@ -515,7 +515,7 @@ msgstr ""
 msgid "Yes"
 msgstr "بله"
 
-#: assets/js/ivr.js:513
+#: assets/js/ivr.js:515
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr "مرورگر شما ضبط پیام را محدود کرده، لطفا تنظیمات را بررسی کنید"
 
