@@ -31,7 +31,7 @@ foreach ($entries as $e) {
 
 	//return to ivr
 	$row[] = '
-		<span class="radioset">
+		<span class="radioset" id='.$count.'>
 		<input type="radio" name="entries[ivr_ret][DESTID'.$count.']" id="entries'.$count.'DESTIDyes" value="1" '.($e['ivr_ret']?"CHECKED":"").'>
 		<label for="entries'.$count.'DESTIDyes">'. _("Yes").'</label>
 		<input type="radio" name="entries[ivr_ret][DESTID'.$count.']" id="entries'.$count.'DESTIDno" value="" '.($e['ivr_ret']?"":"CHECKED") .'>

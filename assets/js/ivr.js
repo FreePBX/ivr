@@ -3,6 +3,28 @@ $(document).ready(function(){
 	//on load, hide elememnts that may need to be hidden
 	invalid_elements();
 	timeout_elements();
+	$("select[id^='goto']").each(function(){
+		var idstr = this.id;
+		var res = idstr.split("goto");
+		if($.isNumeric(res[1])){
+			if($(this).val() != 'Extensions'){
+				$( "#"+res[1]).hide()
+			}
+		}
+	});
+	$("select[id^='goto']").change(function(){
+		var idstr = this.id;
+		var res = idstr.split("goto");
+		if ($.isNumeric(res[1])) {
+			if ($(this).val() == 'Extensions') {
+				$( "#"+res[1]).show();
+			} else {
+				$("#entries"+res[1]+"DESTIDyes").prop( "checked", false );
+				$("#entries"+res[1]+"DESTIDno").prop( "checked", true );
+				$( "#"+res[1]).hide();
+			}
+		}
+	});
 
 	$('#add_entrie').click(function(e){
 		e.preventDefault();

@@ -123,9 +123,16 @@ function ivr_get_config($engine) {
 						}
 
 						if ($e['ivr_ret']) {
-							$ext->add($c, $e['selection'], '',
+							//FREEPBX-14431 ivr return option not working : should work for extension only.//from-did-direct,111,1
+							$desarray = explode(',',$e['dest']);
+							if ($desarray[0] == 'from-did-direct') {
+								$ext->add($c, $e['selection'], '', new ext_setvar('__ivrreturn', '1'));
+								$ext->add($c, $e['selection'], '',
 								new ext_gotoif('$["x${IVR_CONTEXT_${CONTEXT}}" = "x"]',
 									$e['dest'] . ':${IVR_CONTEXT_${CONTEXT}},return,1'));
+							} else {
+								$ext->add($c, $e['selection'],'ivrsel-' . $e['selection'], new ext_goto($e['dest']));
+							}
 						} else {
 							$ext->add($c, $e['selection'],'ivrsel-' . $e['selection'], new ext_goto($e['dest']));
 						}
