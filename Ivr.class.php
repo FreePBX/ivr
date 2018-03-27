@@ -85,6 +85,9 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 				if(empty($request['id']) && empty($request['action'])){
 					$buttons = NULL;
 				}
+				if($request['action'] == "save") {
+					 $buttons = NULL;
+				}
 			break;
 		}
 		return $buttons;
