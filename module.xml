@@ -56,6 +56,9 @@
 	<menuitems>
 		<ivr needsenginedb="yes">IVR</ivr>
 	</menuitems>
+	<methods>
+            <get_config pri="600">ivr_get_config</get_config>
+	</methods>
 	<popovers>
 		<ivr>
 			<display>ivr</display>

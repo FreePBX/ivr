@@ -1,4 +1,17 @@
 var announcementRecording = null, recording = false, recordings = {}, soundBlob = null;
+ $(document).on('change',  $("select[name^='goto']"), function(){
+		 var string = $(this).attr('activeElement');
+		var id =  $(string).attr('id');
+		 var res = id.split("goto");
+		var option = $("#"+id).val();
+		 if (option == 'Extensions') {
+                     $( "#"+res[1]).show();
+                  } else {
+                        $("#entries"+res[1]+"DESTIDyes").prop( "checked", false );
+                            $("#entries"+res[1]+"DESTIDno").prop( "checked", true );
+                             $( "#"+res[1]).hide();
+                     }
+     } );
 $(document).ready(function(){
 	//on load, hide elememnts that may need to be hidden
 	invalid_elements();
@@ -12,8 +25,10 @@ $(document).ready(function(){
 			}
 		}
 	});
+
 	$("select[id^='goto']").change(function(){
 		var idstr = this.id;
+		// this is working for already build entries
 		var res = idstr.split("goto");
 		if ($.isNumeric(res[1])) {
 			if ($(this).val() == 'Extensions') {
@@ -23,9 +38,20 @@ $(document).ready(function(){
 				$("#entries"+res[1]+"DESTIDno").prop( "checked", true );
 				$( "#"+res[1]).hide();
 			}
-		}
-	});
+		}else {
+			if(res[1] == 'DESTID') {
+			 if ($(this).val() == 'Extensions') {
+			        $( "#"+res[1]).show();
+			 } else {
+				 $("#entries"+res[1]+"DESTIDyes").prop( "checked", false );
+			         $("#entries"+res[1]+"DESTIDno").prop( "checked", true );
+			          $( "#"+res[1]).hide();
+			 }
 
+			}
+		}
+
+	});
 	$('#add_entrie').click(function(e){
 		e.preventDefault();
 		// we get this each time in case a popOver has updated the array
