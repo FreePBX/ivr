@@ -7,17 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-20 15:13-0400\n"
+"POT-Creation-Date: 2018-03-28 21:27-0400\n"
 "PO-Revision-Date: 2008-11-05 17:52+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
-#: Ivr.class.php:159
+#: Ivr.class.php:162
 msgid "A PHP extension stopped the file upload"
 msgstr ""
 
@@ -91,7 +92,7 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:163
+#: Ivr.class.php:166
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
@@ -109,7 +110,7 @@ msgstr ""
 "può dare risultati inaspettati se l'IVR non è proprio quello immediatamente "
 "prima di questo"
 
-#: functions.inc.php:436
+#: functions.inc.php:437
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -137,7 +138,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ivr.class.php:69 functions.inc.php:436
+#: Ivr.class.php:69 functions.inc.php:437
 msgid "Delete"
 msgstr "Elimina"
 
@@ -153,7 +154,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:436
+#: functions.inc.php:437
 msgid "Destination"
 msgstr ""
 
@@ -165,11 +166,15 @@ msgstr ""
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
-#: functions.inc.php:436
+#: functions.inc.php:437
 msgid "Digits"
 msgstr ""
 
-#: functions.inc.php:436
+#: assets/js/ivr.js:48
+msgid "Digits are limited to 10 digits."
+msgstr ""
+
+#: functions.inc.php:437
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -191,7 +196,7 @@ msgstr ""
 msgid "Enable Direct Dial"
 msgstr "Attiva Chiamata Diretta"
 
-#: Ivr.class.php:156
+#: Ivr.class.php:159
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -199,7 +204,7 @@ msgstr ""
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
-#: views/simple_form.php:110 assets/js/ivr.js:468 assets/js/ivr.js:480
+#: views/simple_form.php:110
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
@@ -232,12 +237,12 @@ msgstr ""
 msgid "IVR Name"
 msgstr ""
 
-#: functions.inc.php:530 functions.inc.php:552
+#: functions.inc.php:531 functions.inc.php:553
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:496
+#: functions.inc.php:497
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / Opzione: %s"
@@ -272,7 +277,7 @@ msgstr ""
 msgid "List IVRs"
 msgstr ""
 
-#: Ivr.class.php:153
+#: Ivr.class.php:156
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -282,8 +287,7 @@ msgstr ""
 
 #: views/advanced_form.php:103 views/advanced_form.php:255
 #: views/advanced_form.php:282 views/advanced_form.php:413
-#: views/advanced_form.php:440 views/advanced_form.php:521
-#: views/entries.php:38
+#: views/advanced_form.php:440 views/advanced_form.php:521 views/entries.php:38
 msgid "No"
 msgstr ""
 
@@ -295,7 +299,7 @@ msgstr ""
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:150
+#: Ivr.class.php:153
 msgid "No file was uploaded"
 msgstr ""
 
@@ -327,6 +331,10 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr ""
 
+#: assets/js/ivr.js:44
+msgid "Please enter a valid value for Digits Pressed"
+msgstr ""
+
 #: views/advanced_form.php:320 views/advanced_form.php:478
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
@@ -350,7 +358,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: functions.inc.php:348
+#: functions.inc.php:349
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
@@ -363,7 +371,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:436
+#: functions.inc.php:437
 msgid "Return"
 msgstr ""
 
@@ -379,7 +387,7 @@ msgstr ""
 msgid "Return to IVR after VM"
 msgstr ""
 
-#: functions.inc.php:436
+#: functions.inc.php:437
 msgid "Return to this IVR when finished"
 msgstr ""
 
@@ -410,17 +418,17 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: Ivr.class.php:144
+#: Ivr.class.php:147
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:141
+#: Ivr.class.php:144
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:147
+#: Ivr.class.php:150
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
@@ -459,11 +467,11 @@ msgstr ""
 msgid "Unable to delete the last entry"
 msgstr ""
 
-#: Ivr.class.php:116
+#: Ivr.class.php:119
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:136
+#: Ivr.class.php:139
 msgid "Unsupported file format"
 msgstr ""
 
@@ -484,8 +492,7 @@ msgstr ""
 
 #: views/advanced_form.php:101 views/advanced_form.php:253
 #: views/advanced_form.php:280 views/advanced_form.php:411
-#: views/advanced_form.php:438 views/advanced_form.php:519
-#: views/entries.php:36
+#: views/advanced_form.php:438 views/advanced_form.php:519 views/entries.php:36
 msgid "Yes"
 msgstr ""
 
@@ -576,8 +583,8 @@ msgstr ""
 #~ "When creating a menu option, apart from the standard options of 0-9,* and "
 #~ "#, you can also use 'i' and 't' destinations."
 #~ msgstr ""
-#~ "Quando si aggiunge una voce di menu, a parte le opzioni standard tipo 0-"
-#~ "9, * e #, si possono utilizzare anche destinazioni 'i' e 't'."
+#~ "Quando si aggiunge una voce di menu, a parte le opzioni standard tipo "
+#~ "0-9, * e #, si possono utilizzare anche destinazioni 'i' e 't'."
 
 #~ msgid ""
 #~ "'i' is used when the caller pushes an invalid button, and 't' is used "

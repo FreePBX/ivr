@@ -34,6 +34,7 @@ function ivr_get_config($engine) {
 
 	switch($engine) {
 		case "asterisk":
+			$ext->splice('macro-dial-one','s', 10, new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'D_OPTIONS=${D_OPTIONS}g'));
 			$ddial_contexts = array();
 			$ivrlist = ivr_get_details();
 			if(!is_array($ivrlist)) {

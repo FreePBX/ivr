@@ -7,22 +7,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-20 15:13-0400\n"
+"POT-Creation-Date: 2018-03-28 21:27-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
 "freepbx/ivr/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: BRAZIL\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: Ivr.class.php:159
+#: Ivr.class.php:162
 msgid "A PHP extension stopped the file upload"
 msgstr "Uma extensão PHP parou o carregamento do arquivo"
 
@@ -103,7 +103,7 @@ msgstr "Tem certeza de que não quer uma gravação para este anúncio?"
 msgid "Browse"
 msgstr "Visualizar"
 
-#: Ivr.class.php:163
+#: Ivr.class.php:166
 msgid "Can Not Find Uploaded Files"
 msgstr "Não é Possível Localizar os Arquivos Carregados"
 
@@ -122,7 +122,7 @@ msgstr ""
 "caso existisse uma URA chamada neste caminho de ligação, mas não "
 "imediatamente antes desse"
 
-#: functions.inc.php:436
+#: functions.inc.php:437
 msgid "Choose a destination to route the call to"
 msgstr "Escolha um destino para encaminhar a chamada"
 
@@ -160,7 +160,7 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ivr.class.php:69 functions.inc.php:436
+#: Ivr.class.php:69 functions.inc.php:437
 msgid "Delete"
 msgstr "Apagar"
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Descrição desta URA"
 
-#: functions.inc.php:436
+#: functions.inc.php:437
 msgid "Destination"
 msgstr "Destino"
 
@@ -190,11 +190,15 @@ msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Destino para enviar a chamada após Gravação de Tempo Esgotado ser tocada."
 
-#: functions.inc.php:436
+#: functions.inc.php:437
 msgid "Digits"
 msgstr "Dígitos"
 
-#: functions.inc.php:436
+#: assets/js/ivr.js:48
+msgid "Digits are limited to 10 digits."
+msgstr ""
+
+#: functions.inc.php:437
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -216,7 +220,7 @@ msgstr "Editar:"
 msgid "Enable Direct Dial"
 msgstr "Habilitar discagem direta"
 
-#: Ivr.class.php:156
+#: Ivr.class.php:159
 msgid "Failed to write file to disk"
 msgstr "Falha ao gravar o arquivo no disco"
 
@@ -224,7 +228,7 @@ msgstr "Falha ao gravar o arquivo no disco"
 msgid "Greeting to be played on entry to the IVR."
 msgstr "Saudação a ser reproduzida na entrada para a URA."
 
-#: views/simple_form.php:110 assets/js/ivr.js:468 assets/js/ivr.js:480
+#: views/simple_form.php:110
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 "Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
@@ -258,12 +262,12 @@ msgstr "Lista URA"
 msgid "IVR Name"
 msgstr "Nome"
 
-#: functions.inc.php:530 functions.inc.php:552
+#: functions.inc.php:531 functions.inc.php:553
 #, php-format
 msgid "IVR: %s"
 msgstr "URA: %s"
 
-#: functions.inc.php:496
+#: functions.inc.php:497
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "URA: %s / Opção: %s"
@@ -300,7 +304,7 @@ msgstr "Gravação Tentativa Inválida"
 msgid "List IVRs"
 msgstr "Listar URAs"
 
-#: Ivr.class.php:153
+#: Ivr.class.php:156
 msgid "Missing a temporary folder"
 msgstr "Faltando uma pasta temporária"
 
@@ -310,8 +314,7 @@ msgstr "Nome desta URA"
 
 #: views/advanced_form.php:103 views/advanced_form.php:255
 #: views/advanced_form.php:282 views/advanced_form.php:413
-#: views/advanced_form.php:440 views/advanced_form.php:521
-#: views/entries.php:38
+#: views/advanced_form.php:440 views/advanced_form.php:521 views/entries.php:38
 msgid "No"
 msgstr "Não"
 
@@ -323,7 +326,7 @@ msgstr "Sem Astman, Não carrega a URA"
 msgid "No file to load!"
 msgstr "Nenhum arquivo para carregar!"
 
-#: Ivr.class.php:150
+#: Ivr.class.php:153
 msgid "No file was uploaded"
 msgstr "Nenhum arquivo foi carregado"
 
@@ -361,6 +364,10 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr "Reproduzir Gravação Anterior"
 
+#: assets/js/ivr.js:44
+msgid "Please enter a valid value for Digits Pressed"
+msgstr ""
+
 #: views/advanced_form.php:320 views/advanced_form.php:478
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
@@ -392,7 +399,7 @@ msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 "Fornece opções para usuários chamadores para discagem direta de um ramal."
 
-#: functions.inc.php:348
+#: functions.inc.php:349
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr "Gravação criada para URA chamada '%s'"
@@ -405,7 +412,7 @@ msgstr "Gravando..."
 msgid "Reset"
 msgstr "Reiniciar"
 
-#: functions.inc.php:436
+#: functions.inc.php:437
 msgid "Return"
 msgstr "Retornar"
 
@@ -421,7 +428,7 @@ msgstr "Retorno Quando Tempo Esgotado"
 msgid "Return to IVR after VM"
 msgstr "Retorna para URA após Caixa Postal"
 
-#: functions.inc.php:436
+#: functions.inc.php:437
 msgid "Return to this IVR when finished"
 msgstr "Retornar a esta URA quando terminar"
 
@@ -454,7 +461,7 @@ msgstr ""
 msgid "Submit"
 msgstr "Enviar"
 
-#: Ivr.class.php:144
+#: Ivr.class.php:147
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
@@ -462,11 +469,11 @@ msgstr ""
 "O arquivo enviado excede a diretiva MAX_FILE_SIZE que foi especificada no "
 "formulário HTML"
 
-#: Ivr.class.php:141
+#: Ivr.class.php:144
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "O arquivo carregado excede a diretiva upload_max_filesize no php.ini"
 
-#: Ivr.class.php:147
+#: Ivr.class.php:150
 msgid "The uploaded file was only partially uploaded"
 msgstr "O arquivo enviado foi carregado parcialmente"
 
@@ -507,11 +514,11 @@ msgstr "Não é possível excluir o primeiro elemento. Edite em vez de excluir"
 msgid "Unable to delete the last entry"
 msgstr "Não é possível excluir o último elemento"
 
-#: Ivr.class.php:116
+#: Ivr.class.php:119
 msgid "Unknown Error"
 msgstr "Erro Desconhecido"
 
-#: Ivr.class.php:136
+#: Ivr.class.php:139
 msgid "Unsupported file format"
 msgstr "Formato de arquivo não suportado"
 
@@ -535,8 +542,7 @@ msgstr ""
 
 #: views/advanced_form.php:101 views/advanced_form.php:253
 #: views/advanced_form.php:280 views/advanced_form.php:411
-#: views/advanced_form.php:438 views/advanced_form.php:519
-#: views/entries.php:36
+#: views/advanced_form.php:438 views/advanced_form.php:519 views/entries.php:36
 msgid "Yes"
 msgstr "Sim"
 

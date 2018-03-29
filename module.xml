@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>13.0.27.6</version>
+	<version>13.0.27.7</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
+		*13.0.27.7* FREEPBX-17113 Need to remove Submit,delete,reset buttons from IVR main page 
 		*13.0.27.6* FREEPBX-15878 fix simple mode drag and drop
 		*13.0.27.5* FREEPBX-15086
 		*13.0.27.4* FREEPBX-15104
@@ -49,6 +50,9 @@
 		*13.0.1alpha2* Bugfix #9072,#8993, astman connection error catching
 		*13.0.1alpha1* Visual Changes
 	</changelog>
+	<methods>
+		<get_config pri="600">ivr_get_config</get_config>
+	</methods>
 	<depends>
 		<version>13.0.188.12</version>
 		<module>recordings ge 13.0.23</module>
