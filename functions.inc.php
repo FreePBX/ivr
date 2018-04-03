@@ -40,8 +40,11 @@ function ivr_get_config($engine) {
 				break;
 			}
 			// splice into macro-dial-one
-			$ext->splice('macro-dial-one','s','dial', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'D_OPTIONS=${D_OPTIONS}g'));
-			$ext->splice('macro-dial-one','s','afterdial', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial-one','s-ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial-one','s-CHANUNAVAIL','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial-one','s-NOANSWER','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial-one','s-BUSY','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-exten-vm','s-BUSY','2', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
 			//splice into macro dial
 			//$ext->splice('macro-dial','s', 'nddialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'D_OPTIONS=${D_OPTIONS}g'));
