@@ -47,14 +47,9 @@ function ivr_get_config($engine) {
 			$ext->splice('macro-exten-vm','s-BUSY','2', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
 			//splice into macro dial
-			//$ext->splice('macro-dial','s', 'nddialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'D_OPTIONS=${D_OPTIONS}g'));
-			//$ext->splice('macro-dial','s', 'hsdialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'D_OPTIONS=${D_OPTIONS}g'));	
-
 			$ext->splice('macro-dial','ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 			$ext->splice('macro-dial','NOANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
-			//$ext->splice('macro-dial','s', 'nddialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'D_OPTIONS=${D_OPTIONS}g'));	
-			//$ext->splice('macro-dial','s','afternddialapp', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 			if (function_exists('queues_list')) {
 				//draw a list of ivrs included by any queues
 				$queues = queues_list(true);
