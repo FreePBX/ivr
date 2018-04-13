@@ -132,7 +132,6 @@ function ivr_get_config($engine) {
 							$ext->add($c, $e['selection'],'', new ext_macro('blkvm-clr'));
 							$ext->add($c, $e['selection'], '', new ext_setvar('__NODEST', ''));
 						}
-dbug('IVR arr'.print_r($e,true));
 						if ($e['ivr_ret']) {
 							//FREEPBX-14431 ivr return option not working : should work for extension only.//from-did-direct,111,1
 							$desarray = explode(',',$e['dest']);
