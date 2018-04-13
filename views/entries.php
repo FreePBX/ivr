@@ -27,15 +27,20 @@ foreach ($entries as $e) {
 	} else {
 		$row[] = drawselects($e['dest'], $count, $restrict_mods, false) . form_hidden('entries[goto][]', '');
 	}
-
-
+	if($count == count($entries)){
+		$radioid = 'DESTID';
+		$countr = '';
+	}else {
+		$radioid = $count;
+	        $countr = $count;
+	}
 	//return to ivr
 	$row[] = '
-		<span class="radioset">
-		<input type="radio" name="entries[ivr_ret][DESTID'.$count.']" id="entries'.$count.'DESTIDyes" value="1" '.($e['ivr_ret']?"CHECKED":"").'>
-		<label for="entries'.$count.'DESTIDyes">'. _("Yes").'</label>
-		<input type="radio" name="entries[ivr_ret][DESTID'.$count.']" id="entries'.$count.'DESTIDno" value="" '.($e['ivr_ret']?"":"CHECKED") .'>
-		<label for="entries'.$count.'DESTIDno">'._("No").'</label>
+		<span class="radioset" id='.$radioid.'>
+		<input type="radio" name="entries[ivr_ret][DESTID'.$countr.']" id="entries'.$countr.'DESTIDyes" value="1" '.($e['ivr_ret']?"CHECKED":"").'>
+		<label for="entries'.$countr.'DESTIDyes">'. _("Yes").'</label>
+		<input type="radio" name="entries[ivr_ret][DESTID'.$countr.']" id="entries'.$countr.'DESTIDno" value="" '.($e['ivr_ret']?"":"CHECKED") .'>
+		<label for="entries'.$countr.'DESTIDno">'._("No").'</label>
 		</span>
 	';
 
