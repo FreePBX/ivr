@@ -40,6 +40,16 @@ function ivr_get_config($engine) {
 			if(!is_array($ivrlist)) {
 				break;
 			}
+			// splice into macro-dial-one
+			$ext->splice('macro-dial-one','s-ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial-one','s-CHANUNAVAIL','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial-one','s-NOANSWER','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial-one','s-BUSY','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-exten-vm','s-BUSY','2', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+
+			//splice into macro dial
+			$ext->splice('macro-dial','ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial','NOANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
 			if (function_exists('queues_list')) {
 				//draw a list of ivrs included by any queues
@@ -122,11 +132,17 @@ function ivr_get_config($engine) {
 							$ext->add($c, $e['selection'],'', new ext_macro('blkvm-clr'));
 							$ext->add($c, $e['selection'], '', new ext_setvar('__NODEST', ''));
 						}
-
 						if ($e['ivr_ret']) {
-							$ext->add($c, $e['selection'], '',
+							//FREEPBX-14431 ivr return option not working : should work for extension only.//from-did-direct,111,1
+							$desarray = explode(',',$e['dest']);
+							if ($desarray[0] == 'from-did-direct') {
+								$ext->add($c, $e['selection'], '', new ext_setvar('__ivrreturn', '1'));
+								$ext->add($c, $e['selection'], '',
 								new ext_gotoif('$["x${IVR_CONTEXT_${CONTEXT}}" = "x"]',
 									$e['dest'] . ':${IVR_CONTEXT_${CONTEXT}},return,1'));
+							} else {
+								$ext->add($c, $e['selection'],'ivrsel-' . $e['selection'], new ext_goto($e['dest']));
+							}
 						} else {
 							$ext->add($c, $e['selection'],'ivrsel-' . $e['selection'], new ext_goto($e['dest']));
 						}
