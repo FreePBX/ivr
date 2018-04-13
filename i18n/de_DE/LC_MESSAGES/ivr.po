@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 21:27-0400\n"
+"POT-Creation-Date: 2018-04-13 19:44-0400\n"
 "PO-Revision-Date: 2018-02-16 18:13+0200\n"
 "Last-Translator: Nils <Nils@heckenkamp.info>\n"
 "Language-Team: German <http://weblate.freepbx.org/projects/freepbx/ivr/de_DE/"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Actions"
 msgstr "Aktionen"
 
-#: views/entries.php:65
+#: views/entries.php:70
 msgid "Add Another Entry"
 msgstr ""
 
@@ -91,7 +91,7 @@ msgstr ""
 msgid "Applications"
 msgstr "Anwendungen"
 
-#: assets/js/ivr.js:28
+#: assets/js/ivr.js:76
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
 "Sind Sie sicher, dass Sie keine Aufnahme für diese Ankündigung möchten?"
@@ -113,7 +113,7 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 
-#: functions.inc.php:437
+#: functions.inc.php:453
 msgid "Choose a destination to route the call to"
 msgstr "Wählen Sie ein Ziel aus, an das der Anruf weitergeleitet werden soll"
 
@@ -145,15 +145,15 @@ msgstr ""
 msgid "Default"
 msgstr "Standard"
 
-#: Ivr.class.php:69 functions.inc.php:437
+#: Ivr.class.php:69 functions.inc.php:453
 msgid "Delete"
 msgstr "Löschen"
 
-#: assets/js/ivr.js:433
+#: assets/js/ivr.js:481
 msgid "Delete Recording"
 msgstr "Aufnahme löschen"
 
-#: views/entries.php:44
+#: views/entries.php:49
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
 msgstr ""
 "Löschen Sie diesen Eintrag. Vergessen Sie nicht, auf Senden zu klicken, um "
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Beschreibung dieses IVR"
 
-#: functions.inc.php:437
+#: functions.inc.php:453
 msgid "Destination"
 msgstr "Ziel"
 
@@ -179,15 +179,15 @@ msgstr ""
 "Ziel, an das der Anruf gesendet werden soll, nachdem die Timeout-Aufnahme "
 "abgespielt wurde."
 
-#: functions.inc.php:437
+#: functions.inc.php:453
 msgid "Digits"
 msgstr "Ziffern"
 
-#: assets/js/ivr.js:48
+#: assets/js/ivr.js:96
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:437
+#: functions.inc.php:453
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -203,7 +203,7 @@ msgstr "Ankündigungs-Aufnahme hier speichern"
 msgid "Edit IVR: "
 msgstr "IVR bearbeiten: "
 
-#: assets/js/ivr.js:173
+#: assets/js/ivr.js:221
 msgid "Edit:"
 msgstr "Bearbeiten:"
 
@@ -254,17 +254,17 @@ msgstr "IVR-Liste"
 msgid "IVR Name"
 msgstr "IVR-Name"
 
-#: functions.inc.php:531 functions.inc.php:553
+#: functions.inc.php:547 functions.inc.php:569
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:497
+#: functions.inc.php:513
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "VR: %s / Optionen: %s"
 
-#: assets/js/ivr.js:22
+#: assets/js/ivr.js:70
 msgid "IVRs require a valid name"
 msgstr "IVRs benötigen einen gültigen Namen"
 
@@ -306,7 +306,7 @@ msgstr "Name dieses IVR"
 
 #: views/advanced_form.php:103 views/advanced_form.php:255
 #: views/advanced_form.php:282 views/advanced_form.php:413
-#: views/advanced_form.php:440 views/advanced_form.php:521 views/entries.php:38
+#: views/advanced_form.php:440 views/advanced_form.php:521 views/entries.php:43
 msgid "No"
 msgstr "Nein"
 
@@ -314,7 +314,7 @@ msgstr "Nein"
 msgid "No Astman, Not loading IVR"
 msgstr ""
 
-#: assets/js/ivr.js:277
+#: assets/js/ivr.js:325
 msgid "No file to load!"
 msgstr "Keine Datei zum Laden!"
 
@@ -356,7 +356,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr "Vorherige Aufnahme abspielen"
 
-#: assets/js/ivr.js:44
+#: assets/js/ivr.js:92
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
@@ -383,12 +383,12 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: functions.inc.php:349
+#: functions.inc.php:365
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
 
-#: assets/js/ivr.js:511
+#: assets/js/ivr.js:559
 msgid "Recording..."
 msgstr ""
 
@@ -396,7 +396,7 @@ msgstr ""
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: functions.inc.php:437
+#: functions.inc.php:453
 msgid "Return"
 msgstr "Zurück"
 
@@ -412,7 +412,7 @@ msgstr ""
 msgid "Return to IVR after VM"
 msgstr ""
 
-#: functions.inc.php:437
+#: functions.inc.php:453
 msgid "Return to this IVR when finished"
 msgstr ""
 
@@ -424,7 +424,7 @@ msgstr ""
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: assets/js/ivr.js:433
+#: assets/js/ivr.js:481
 msgid "Save Recording"
 msgstr ""
 
@@ -484,11 +484,11 @@ msgid ""
 "version or update your %s"
 msgstr ""
 
-#: assets/js/ivr.js:101
+#: assets/js/ivr.js:149
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr ""
 
-#: assets/js/ivr.js:97
+#: assets/js/ivr.js:145
 msgid "Unable to delete the last entry"
 msgstr ""
 
@@ -500,7 +500,7 @@ msgstr ""
 msgid "Unsupported file format"
 msgstr ""
 
-#: assets/js/ivr.js:200
+#: assets/js/ivr.js:248
 msgid "Unsupported file type"
 msgstr ""
 
@@ -517,11 +517,11 @@ msgstr ""
 
 #: views/advanced_form.php:101 views/advanced_form.php:253
 #: views/advanced_form.php:280 views/advanced_form.php:411
-#: views/advanced_form.php:438 views/advanced_form.php:519 views/entries.php:36
+#: views/advanced_form.php:438 views/advanced_form.php:519 views/entries.php:41
 msgid "Yes"
 msgstr "Ja"
 
-#: assets/js/ivr.js:515
+#: assets/js/ivr.js:563
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 "Ihr Browser hat die Aufnahme blockiert. Bitte überprüfen sie Ihre "
