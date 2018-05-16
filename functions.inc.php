@@ -34,20 +34,25 @@ function ivr_get_config($engine) {
 
 	switch($engine) {
 		case "asterisk":
-			$ext->splice('macro-dial-one','s', 10, new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'D_OPTIONS=${D_OPTIONS}g'));
+			//FREEPBX-17112 Return to IVR after VM broken
+			$ext->splice('macro-vm','exit-RETURN', 1, new ext_gotoif('$["${RETVM}" = "RETURN"]','ext-local,vmret,1'));
 			$ddial_contexts = array();
 			$ivrlist = ivr_get_details();
 			if(!is_array($ivrlist)) {
 				break;
 			}
+			//FREEPBX-14431
+			$ext->splice('macro-dial-one','s', 'dial', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'D_OPTIONS=${D_OPTIONS}g'));
 			// splice into macro-dial-one
 			$ext->splice('macro-dial-one','s-ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 			$ext->splice('macro-dial-one','s-CHANUNAVAIL','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 			$ext->splice('macro-dial-one','s-NOANSWER','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 			$ext->splice('macro-dial-one','s-BUSY','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
-			$ext->splice('macro-exten-vm','s-BUSY','2', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
-			//splice into macro dial
+			//splice into macro dial 
+			$ext->splice('macro-dial','s','nddialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'ds=${ds}g'));
+			$ext->splice('macro-dial','s','hsdialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'ds=${ds}g'));
+
 			$ext->splice('macro-dial','ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 			$ext->splice('macro-dial','NOANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
@@ -141,9 +146,11 @@ function ivr_get_config($engine) {
 								new ext_gotoif('$["x${IVR_CONTEXT_${CONTEXT}}" = "x"]',
 									$e['dest'] . ':${IVR_CONTEXT_${CONTEXT}},return,1'));
 							} else {
+								 $ext->add($c, $e['selection'], '', new ext_setvar('__ivrreturn', '0'));
 								$ext->add($c, $e['selection'],'ivrsel-' . $e['selection'], new ext_goto($e['dest']));
 							}
 						} else {
+							$ext->add($c, $e['selection'], '', new ext_setvar('__ivrreturn', '0'));
 							$ext->add($c, $e['selection'],'ivrsel-' . $e['selection'], new ext_goto($e['dest']));
 						}
 					}
