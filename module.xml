@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>13.0.27.10</version>
+	<version>14.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,47 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
-		*13.0.27.10* Depend on core
-		*13.0.27.9* FREEPBX-17112 FREEPBX-14431
-		*13.0.27.8* Bugfix/FREEPBX-14431
-		*13.0.27.7* FREEPBX-17113 Need to remove Submit,delete,reset buttons from IVR main page
-		*13.0.27.6* FREEPBX-15878 fix simple mode drag and drop
-		*13.0.27.5* FREEPBX-15086
-		*13.0.27.4* FREEPBX-15104
-		*13.0.27.3* FREEPBX-14866 Able to set negative values for Timeout, Invalid Retries and Timeout Retries under IVR module
-		*13.0.27.2* FREEPBX-14610 IVR Entries Digits Pressed field length
-		*13.0.27.1* Use edit icon not pencil
-		*13.0.27* Destination usage fixes
-		*13.0.26.1* FREEPBX-13448 - Fix MySQL error because of wrong value
-		*13.0.26* FREEPBX-13364 Ability to set ringer volume
-		*13.0.25* Add sound languages: it,fr,en_GB
-		*13.0.24* FREEPBX-12374 Regression, allow dialpatterns in ivr entries
-		*13.0.23* Allow additional destinations in simple mode
-		*13.0.22* FREEPBX-11776 Change IVR validation to allow * and #
-		*13.0.21* Dont allow 0 value recordings
-		*13.0.20* Hook more into system recordings
-		*13.0.19* Depend on framework for recordWorker
-		*13.0.18* FREEPBX-11188 Add alertinfo
-		*13.0.17* Require higher version of recordings module
-		*13.0.16* In browser recording for simple mode
-		*13.0.15* Add simple mode support
-		*13.0.14* FREEPBX-11148 return on invalid bug
-		*13.0.13* FREEPBX-10862. Fix defaults on add
-		*13.0.12* FREEPBX-9951 Japanese language prompts
-		*13.0.11* FREEPBX-10756
-		*13.0.10* FREEPBX-9773
-		*13.0.9* Slideout menu
-		*13.0.8.1* FREEPBX-10348 Fix tooltip on timeout to reflect 0 as disabled
-		*13.0.8* FREEPBX-5470 Increase col from 50 to 200 for other destinations
-		*13.0.7* FREEPBX-10312 Allow announcements to be set as none
-		*13.0.6* FREEPBX-10209 htmlentities need to use UTF-8
-		*13.0.5* FREEPBX-10169, fix action buttons after submit. FREEPBX-10168 Fix use of quotes in name or description
-		*13.0.4* FREEPBX-9774, standardize tables visual updates
-		*13.0.3* FREEPBX-9609 Option to Limit IVR Direct Dialing to a Directory
-		*13.0.2* Version bump Beta
-		*13.0.1alpha3* Add Spanish prompts
-		*13.0.1alpha2* Bugfix #9072,#8993, astman connection error catching
-		*13.0.1alpha1* Visual Changes
+		*14.0.1* Depend on core
 	</changelog>
 	<methods>
 		<get_config pri="600">ivr_get_config</get_config>
@@ -59,7 +19,7 @@
 	<depends>
 		<version>13.0.188.12</version>
 		<module>recordings ge 13.0.23</module>
-		<module>core ge 13.0.122.24</module>
+		<module>core ge 14.0.18.6</module>
 	</depends>
 	<menuitems>
 		<ivr needsenginedb="yes">IVR</ivr>
@@ -72,8 +32,6 @@
 		</ivr>
  	</popovers>
  	<supported>
- 		<version>13.0</version>
+ 		<version>14.0</version>
  	</supported>
-	<location>release/2.11/ivr-2.11.0.2.tgz</location>
-	<md5sum>57d8316dc41fcd3153cefd00a5e3bdd5</md5sum>
 </module>
