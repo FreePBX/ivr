@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-23 14:01-0400\n"
+"POT-Creation-Date: 2018-05-29 22:17-0400\n"
 "PO-Revision-Date: 2008-11-05 17:52+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
@@ -170,10 +170,6 @@ msgstr ""
 msgid "Digits"
 msgstr ""
 
-#: assets/js/ivr.js:96
-msgid "Digits are limited to 10 digits."
-msgstr ""
-
 #: functions.inc.php:460
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
@@ -204,7 +200,7 @@ msgstr ""
 msgid "Greeting to be played on entry to the IVR."
 msgstr ""
 
-#: views/simple_form.php:110
+#: views/simple_form.php:110 assets/js/ivr.js:516 assets/js/ivr.js:528
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
@@ -287,7 +283,8 @@ msgstr ""
 
 #: views/advanced_form.php:103 views/advanced_form.php:255
 #: views/advanced_form.php:282 views/advanced_form.php:413
-#: views/advanced_form.php:440 views/advanced_form.php:521 views/entries.php:43
+#: views/advanced_form.php:440 views/advanced_form.php:521
+#: views/entries.php:43
 msgid "No"
 msgstr ""
 
@@ -329,10 +326,6 @@ msgstr ""
 
 #: views/simple_form.php:62
 msgid "Play Previous Recording"
-msgstr ""
-
-#: assets/js/ivr.js:92
-msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
 #: views/advanced_form.php:320 views/advanced_form.php:478
@@ -492,7 +485,8 @@ msgstr ""
 
 #: views/advanced_form.php:101 views/advanced_form.php:253
 #: views/advanced_form.php:280 views/advanced_form.php:411
-#: views/advanced_form.php:438 views/advanced_form.php:519 views/entries.php:41
+#: views/advanced_form.php:438 views/advanced_form.php:519
+#: views/entries.php:41
 msgid "Yes"
 msgstr ""
 
@@ -583,8 +577,8 @@ msgstr ""
 #~ "When creating a menu option, apart from the standard options of 0-9,* and "
 #~ "#, you can also use 'i' and 't' destinations."
 #~ msgstr ""
-#~ "Quando si aggiunge una voce di menu, a parte le opzioni standard tipo "
-#~ "0-9, * e #, si possono utilizzare anche destinazioni 'i' e 't'."
+#~ "Quando si aggiunge una voce di menu, a parte le opzioni standard tipo 0-"
+#~ "9, * e #, si possono utilizzare anche destinazioni 'i' e 't'."
 
 #~ msgid ""
 #~ "'i' is used when the caller pushes an invalid button, and 't' is used "

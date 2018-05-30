@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-23 14:01-0400\n"
+"POT-Creation-Date: 2018-05-29 22:17-0400\n"
 "PO-Revision-Date: 2016-04-26 06:49+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
 "ivr/fa_IR/>\n"
-"Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fa_IR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -183,10 +183,6 @@ msgstr "داخلی که تماس بعد از اجرای منوی صوتی وقف
 msgid "Digits"
 msgstr "اعداد"
 
-#: assets/js/ivr.js:96
-msgid "Digits are limited to 10 digits."
-msgstr ""
-
 #: functions.inc.php:460
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
@@ -217,7 +213,7 @@ msgstr "خطا در نوشتن فایل روی دیسک"
 msgid "Greeting to be played on entry to the IVR."
 msgstr "پیام خوش آمد در هنگام ورود به منوی صوتی."
 
-#: views/simple_form.php:110
+#: views/simple_form.php:110 assets/js/ivr.js:516 assets/js/ivr.js:528
 msgid "Hit the red record button to start recording from your browser"
 msgstr "بروی کلید قرمز برای ضبط پیام کلیک کنید"
 
@@ -302,7 +298,8 @@ msgstr "نام این منوی صوتی"
 
 #: views/advanced_form.php:103 views/advanced_form.php:255
 #: views/advanced_form.php:282 views/advanced_form.php:413
-#: views/advanced_form.php:440 views/advanced_form.php:521 views/entries.php:43
+#: views/advanced_form.php:440 views/advanced_form.php:521
+#: views/entries.php:43
 msgid "No"
 msgstr "خیر"
 
@@ -345,10 +342,6 @@ msgstr ""
 #: views/simple_form.php:62
 msgid "Play Previous Recording"
 msgstr "اجرای ضبط قبلی"
-
-#: assets/js/ivr.js:92
-msgid "Please enter a valid value for Digits Pressed"
-msgstr "لطفا مقدار عددی معتبر برای فشردن وارد کنید"
 
 #: views/advanced_form.php:320 views/advanced_form.php:478
 msgid ""
@@ -517,7 +510,8 @@ msgstr ""
 
 #: views/advanced_form.php:101 views/advanced_form.php:253
 #: views/advanced_form.php:280 views/advanced_form.php:411
-#: views/advanced_form.php:438 views/advanced_form.php:519 views/entries.php:41
+#: views/advanced_form.php:438 views/advanced_form.php:519
+#: views/entries.php:41
 msgid "Yes"
 msgstr "بله"
 
@@ -528,6 +522,9 @@ msgstr "مرورگر شما ضبط پیام را محدود کرده، لطفا 
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr "شماره گرفته شده"
+
+#~ msgid "Please enter a valid value for Digits Pressed"
+#~ msgstr "لطفا مقدار عددی معتبر برای فشردن وارد کنید"
 
 #~ msgid "Digits the caller needs to dial to access said destination"
 #~ msgstr ""
