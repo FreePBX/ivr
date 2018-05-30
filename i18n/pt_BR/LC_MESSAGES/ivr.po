@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-29 22:17-0400\n"
+"POT-Creation-Date: 2018-05-29 22:23-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
 "freepbx/ivr/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 "X-Poedit-Language: Portuguese\n"
@@ -194,6 +194,10 @@ msgstr ""
 msgid "Digits"
 msgstr "Dígitos"
 
+#: assets/js/ivr.js:96
+msgid "Digits are limited to 10 digits."
+msgstr ""
+
 #: functions.inc.php:460
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
@@ -224,7 +228,7 @@ msgstr "Falha ao gravar o arquivo no disco"
 msgid "Greeting to be played on entry to the IVR."
 msgstr "Saudação a ser reproduzida na entrada para a URA."
 
-#: views/simple_form.php:110 assets/js/ivr.js:516 assets/js/ivr.js:528
+#: views/simple_form.php:110
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 "Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
@@ -310,8 +314,7 @@ msgstr "Nome desta URA"
 
 #: views/advanced_form.php:103 views/advanced_form.php:255
 #: views/advanced_form.php:282 views/advanced_form.php:413
-#: views/advanced_form.php:440 views/advanced_form.php:521
-#: views/entries.php:43
+#: views/advanced_form.php:440 views/advanced_form.php:521 views/entries.php:43
 msgid "No"
 msgstr "Não"
 
@@ -360,6 +363,10 @@ msgstr ""
 #: views/simple_form.php:62
 msgid "Play Previous Recording"
 msgstr "Reproduzir Gravação Anterior"
+
+#: assets/js/ivr.js:92
+msgid "Please enter a valid value for Digits Pressed"
+msgstr ""
 
 #: views/advanced_form.php:320 views/advanced_form.php:478
 msgid ""
@@ -535,8 +542,7 @@ msgstr ""
 
 #: views/advanced_form.php:101 views/advanced_form.php:253
 #: views/advanced_form.php:280 views/advanced_form.php:411
-#: views/advanced_form.php:438 views/advanced_form.php:519
-#: views/entries.php:41
+#: views/advanced_form.php:438 views/advanced_form.php:519 views/entries.php:41
 msgid "Yes"
 msgstr "Sim"
 

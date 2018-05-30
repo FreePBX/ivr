@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-29 22:17-0400\n"
+"POT-Creation-Date: 2018-05-29 22:23-0400\n"
 "PO-Revision-Date: 2016-12-09 21:14+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/ivr/"
 "es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -183,6 +183,10 @@ msgstr ""
 msgid "Digits"
 msgstr ""
 
+#: assets/js/ivr.js:96
+msgid "Digits are limited to 10 digits."
+msgstr ""
+
 #: functions.inc.php:460
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
@@ -213,7 +217,7 @@ msgstr ""
 msgid "Greeting to be played on entry to the IVR."
 msgstr "Saludo a ser reproducido a la entrada al IVR."
 
-#: views/simple_form.php:110 assets/js/ivr.js:516 assets/js/ivr.js:528
+#: views/simple_form.php:110
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
@@ -298,8 +302,7 @@ msgstr "Nombre de este IVR"
 
 #: views/advanced_form.php:103 views/advanced_form.php:255
 #: views/advanced_form.php:282 views/advanced_form.php:413
-#: views/advanced_form.php:440 views/advanced_form.php:521
-#: views/entries.php:43
+#: views/advanced_form.php:440 views/advanced_form.php:521 views/entries.php:43
 msgid "No"
 msgstr "No"
 
@@ -345,6 +348,10 @@ msgstr ""
 
 #: views/simple_form.php:62
 msgid "Play Previous Recording"
+msgstr ""
+
+#: assets/js/ivr.js:92
+msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
 #: views/advanced_form.php:320 views/advanced_form.php:478
@@ -513,8 +520,7 @@ msgstr ""
 
 #: views/advanced_form.php:101 views/advanced_form.php:253
 #: views/advanced_form.php:280 views/advanced_form.php:411
-#: views/advanced_form.php:438 views/advanced_form.php:519
-#: views/entries.php:41
+#: views/advanced_form.php:438 views/advanced_form.php:519 views/entries.php:41
 msgid "Yes"
 msgstr "Si"
 
