@@ -20,9 +20,7 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 	public function uninstall() {}
 	public function backup() {}
 	public function restore($backup) {}
-	public function doConfigPageInit($page) {
-
-	}
+	public function doConfigPageInit($page) {}
 	public function search($query, &$results) {
 		$ivrs = $this->getDetails();
 		foreach ($ivrs as $ivr) {
@@ -58,6 +56,7 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 			return $res;
 		}
 	}
+	
 	public function getActionBar($request) {
 		$buttons = array();
 		switch($request['display']) {
@@ -72,6 +71,11 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 						'name' => 'reset',
 						'id' => 'reset',
 						'value' => _('Reset')
+					),
+					'duplicate' => array(
+						'name' => 'duplicate',
+						'id' => 'duplicate',
+						'value' => _('Duplicate')
 					),
 					'submit' => array(
 						'name' => 'submit',
