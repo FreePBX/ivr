@@ -2,17 +2,16 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>14.0.1.1</version>
+	<version>15.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
-	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
+	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<category>Applications</category>
 	<description>
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
-		*14.0.1.1* FREEPBX-13303 Add 'Duplicate' button to IVR's
-		*14.0.1* Depend on core
+		*15.0.1* Backup 15.0
 	</changelog>
 	<methods>
 		<get_config pri="600">ivr_get_config</get_config>
@@ -25,6 +24,38 @@
 	<menuitems>
 		<ivr needsenginedb="yes">IVR</ivr>
 	</menuitems>
+    <database>
+        <table name="ivr_entries">
+            <field name="ivr_id" type="integer"/>
+            <field name="selection" type="string" length="10" notnull="false"/>
+            <field name="dest" type="string" length="200" notnull="false"/>
+            <field name="ivr_ret" type="boolean" default="0"/>
+        </table>
+        <table name="ivr_details">
+            <field name="id" type="integer" primarykey="true" autoincrement="true"/>
+            <field name="name" type="string" length="50" notnull="false"/>
+            <field name="description" type="string" length="150" notnull="false"/>
+            <field name="announcement" type="integer" notnull="false"/>
+            <field name="directdial" type="string" length="50" notnull="false"/>
+            <field name="invalid_loops" type="string" length="10" notnull="false"/>
+            <field name="invalid_retry_recording" type="string" length="25" notnull="false"/>
+            <field name="invalid_destination" type="string" length="50" notnull="false"/>
+            <field name="timeout_enabled" type="string" length="50" notnull="false"/>
+            <field name="invalid_recording" type="string" length="25" notnull="false"/>
+            <field name="retvm" type="string" length="8" notnull="false"/>
+            <field name="timeout_time" type="integer" notnull="false"/>
+            <field name="timeout_recording" type="string" length="25" notnull="false"/>
+            <field name="timeout_retry_recording" type="string" length="25" notnull="false"/>
+            <field name="timeout_destination" type="string" length="50" notnull="false"/>
+            <field name="timeout_loops" type="string" length="10" notnull="false"/>
+            <field name="timeout_append_announce" type="boolean" default="1"/>
+            <field name="invalid_append_announce" type="boolean" default="1"/>
+            <field name="timeout_ivr_ret" type="boolean" default="0"/>
+            <field name="invalid_ivr_ret" type="boolean" default="0"/>
+            <field name="alertinfo" type="string" length="150" notnull="false"/>
+            <field name="rvolume" type="string" length="2" default=""/>
+        </table>
+    </database>
 	<popovers>
 		<ivr>
 			<display>ivr</display>
@@ -33,6 +64,6 @@
 		</ivr>
  	</popovers>
  	<supported>
- 		<version>14.0</version>
+ 		<version>15.0</version>
  	</supported>
 </module>

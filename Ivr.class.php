@@ -1,6 +1,8 @@
 <?php
 namespace FreePBX\modules;
-class Ivr extends \FreePBX_Helpers implements \BMO {
+use FreePBX_Helpers;
+use BMO;
+class Ivr extends FreePBX_Helpers implements BMO {
 	private $temp = null;
 	private $db = null;
 	public function __construct($freepbx = null) {
@@ -18,8 +20,6 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 
 	public function install() {}
 	public function uninstall() {}
-	public function backup() {}
-	public function restore($backup) {}
 	public function doConfigPageInit($page) {}
 	public function search($query, &$results) {
 		$ivrs = $this->getDetails();
@@ -30,7 +30,29 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 				"dest" => "?display=ivr&action=edit&id=".$ivr['id']
 			);
 		}
-	}
+    }
+    public function saveDetails($vals){
+        if ($vals['id']) {
+            $start = 'REPLACE INTO `ivr_details` (';
+        } else {
+            unset($vals['id']);
+            $start = 'INSERT INTO `ivr_details` (';
+        }
+
+        $end = ') VALUES (';
+        foreach ($vals as $k => $v) {
+            $start .= "$k, ";
+            $end .= ":$k, ";
+        }
+
+        $sql = substr($start, 0, -2).substr($end, 0, -2).')';
+        $this->FreePBX->Database->query($sql.')');
+        // Was this a new one?
+        if (!isset($vals['id'])) {
+            $vals['id'] = $this->FreePBX->Database->lastInsertId('id');
+        }
+        return $vals['id'];
+    }
 
 	public function getDetails($id = false) {
 		$s = ini_get("default_charset");
@@ -56,7 +78,43 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 			return $res;
 		}
 	}
-	
+    
+    public function deleteEntriesById($id){
+        $this->FreePBX->Database->prepare('DELETE FROM ivr_entries WHERE ivr_id = :ivr_id')->execute([':ivr_id' => $id]);
+        return $this;
+    }
+
+    public function saveEntries($id,$entries){
+        $this->deleteEntriesById($id);
+        if ($entries) {
+            $entries['ivr_ret'] = array_values($entries['ivr_ret']);
+            $stmt = $this->FreePBX->Database->prepare('INSERT INTO ivr_entries VALUES (:ivr_id, :selection, :dest, :ivr_ret)');
+
+            for ($i = 0; $i < count($entries['ext']); ++$i) {
+
+                //make sure there is an extension & goto set - otherwise SKIP IT
+                if ('' != trim($entries['ext'][$i]) && $entries['goto'][$i]) {
+                    $stmt->execute([
+                        ':ivr_id' => $id,
+                        ':selection' => $entries['ext'][$i],
+                        ':dest' => $entries['goto'][$i],
+                        ':ivr_ret' => (isset($entries['ivr_ret'][$i]) ? $entries['ivr_ret'][$i] : '0'),
+                    ]);
+                }
+            }
+        }
+        return true;
+    }
+
+    public function getAllEntries(){
+        $final = [];
+        $all = $this->FreePBX->Database->query('SELECT * FROM ivr_entries',PDO::FETCH_ASSOC);
+        foreach ($all as $item){
+            $final[$item['ivr_id']][] = $item;
+        }
+        return $final;
+    }
+    
 	public function getActionBar($request) {
 		$buttons = array();
 		switch($request['display']) {
@@ -97,7 +155,7 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 		return $buttons;
 	}
 	public function pageHook($request){
-		return \FreePBX::Hooks()->processHooks($request);
+		return $this->FreePBX->Hooks->processHooks($request);
 	}
 	public function ajaxRequest($req, &$setting) {
 	switch ($req) {

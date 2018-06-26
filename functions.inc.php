@@ -295,6 +295,7 @@ function ivr_get_config($engine) {
 
 //replaces ivr_list(), returns all details of any ivr
 function ivr_get_details($id = '') {
+    FreePBX::Modules()->deprecatedFunction();
 	return FreePBX::Ivr()->getDetails($id);
 }
 
@@ -362,14 +363,15 @@ function ivr_configprocess(){
 		switch ($action) {
 			case 'save':
 				if(isset($_REQUEST['announcementrecording'])) {
-					$filepath = FreePBX::Config()->get("ASTSPOOLDIR") . "/tmp/".$_REQUEST['announcementrecording'];
-					$soundspath = FreePBX::Config()->get("ASTVARLIBDIR")."/sounds";
+                    $freepbx = FreePBX::Create();
+					$filepath = $freepbx->Config->get("ASTSPOOLDIR") . "/tmp/".$_REQUEST['announcementrecording'];
+					$soundspath = $freepbx->Config->get("ASTVARLIBDIR")."/sounds";
 					$codec = "wav";
 					if(file_exists($filepath)) {
-						FreePBX::Media()->load($filepath);
+						$freepbx->Media->load($filepath);
 						$filename = "ivr-".$vars['name']."-recording-".time();
-						FreePBX::Media()->convert($soundspath."/en/custom/".$filename.".".$codec);
-						$id = FreePBX::Recordings()->addRecording("ivr-".$vars['name']."-recording-".time(),sprintf(_("Recording created for IVR named '%s'"),$vars['name']),"custom/".$filename);
+						$freepbx->Media->convert($soundspath."/en/custom/".$filename.".".$codec);
+						$id = $freepbx->Recordings->addRecording("ivr-".$vars['name']."-recording-".time(),sprintf(_("Recording created for IVR named '%s'"),$vars['name']),"custom/".$filename);
 						$vars['announcement'] = $id;
 					} else {
 						$vars['announcement'] = '';
@@ -394,66 +396,16 @@ function ivr_configprocess(){
 
 //save ivr settings
 function ivr_save_details($vals){
-	global $db, $amp_conf;
-
-	if ($vals['id']) {
-		$start = "REPLACE INTO `ivr_details` (";
-	} else {
-		unset($vals['id']);
-		$start = "INSERT INTO `ivr_details` (";
-	}
-
-	$end = ") VALUES (";
-	foreach ($vals as $k => $v) {
-		$start .= "$k, ";
-		$end .= ":$k, ";
-	}
-
-	$sql = substr($start, 0, -2).substr($end, 0, -2).")";
-	$foo = $db->query($sql, $vals);
-	if($db->IsError($foo)) {
-		die_freepbx(print_r($vals,true).' '.$foo->getDebugInfo());
-	}
-	// Was this a new one?
-	if (!isset($vals['id'])) {
-		$sql = ( ($amp_conf["AMPDBENGINE"]=="sqlite3") ? 'SELECT last_insert_rowid()' : 'SELECT LAST_INSERT_ID()');
-		$id = $db->getOne($sql);
-		if ($db->IsError($id)){
-			die_freepbx($id->getDebugInfo());
-		}
-		$vals['id'] = $id;
-	}
-
-	return $vals['id'];
+    FreePBX::Modules()->deprecatedFunction();
+    return FreePBX::Ivr()->saveDetails($vals);
 }
 
 //save ivr entires
 function ivr_save_entries($id, $entries){
-	global $db;
-	$db->query('DELETE FROM ivr_entries WHERE ivr_id = ?', $id);
-	if ($entries) {
-		$entries['ivr_ret'] = array_values($entries['ivr_ret']);
-		for ($i = 0; $i < count($entries['ext']); $i++) {
-			//make sure there is an extension & goto set - otherwise SKIP IT
-			if (trim($entries['ext'][$i]) != '' && $entries['goto'][$i]) {
-				$d[] = array(
-							'ivr_id'	=> $id,
-							'selection' 	=> $entries['ext'][$i],
-							'dest'		=> $entries['goto'][$i],
-							'ivr_ret'	=> (isset($entries['ivr_ret'][$i]) ? $entries['ivr_ret'][$i] : '0')
-						);
-			}
-
-		}
-		$sql = $db->prepare('INSERT INTO ivr_entries VALUES (?, ?, ?, ?)');
-		$res = $db->executeMultiple($sql, $d);
-		if ($db->IsError($res)){
-			die_freepbx($res->getDebugInfo());
-		}
-	}
-
-	return true;
+    FreePBX::Modules()->deprecatedFunction();
+    return FreePBX::Ivr()->saveEntries($id,$entries);
 }
+
 
 //draw uvr entires table header
 function ivr_draw_entries_table_header_ivr() {
