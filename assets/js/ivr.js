@@ -16,7 +16,7 @@ $("#duplicate").click(function(e){
 		var id =  $(string).attr('id');
 		 var res = id.split("goto");
 		var option = $("#"+id).val();
-		 if (option == 'Extensions') {
+		 if (option == 'Extensions' || option == 'IVR' ) {
                      $( "#"+res[1]).show();
                   } else {
                         $("#entries"+res[1]+"DESTIDyes").prop( "checked", false );
@@ -32,8 +32,8 @@ $(document).ready(function(){
 		var idstr = this.id;
 		var res = idstr.split("goto");
 		if($.isNumeric(res[1])){
-			if($(this).val() != 'Extensions'){
-				$( "#"+res[1]).hide()
+			if($(this).val() != 'Extensions' && $(this).val() != 'IVR'){
+				$("#"+res[1]).hide();
 			}
 		}
 	});
@@ -43,22 +43,22 @@ $(document).ready(function(){
 		// this is working for already build entries
 		var res = idstr.split("goto");
 		if ($.isNumeric(res[1])) {
-			if ($(this).val() == 'Extensions') {
-				$( "#"+res[1]).show();
+			if($(this).val() == 'Extensions' || $(this).val() == 'IVR'){
+				$("#"+res[1]).show();
 			} else {
 				$("#entries"+res[1]+"DESTIDyes").prop( "checked", false );
 				$("#entries"+res[1]+"DESTIDno").prop( "checked", true );
-				$( "#"+res[1]).hide();
+				$("#"+res[1]).hide();
 			}
 		}else {
 			if(res[1] == 'DESTID') {
-			 if ($(this).val() == 'Extensions') {
-			        $( "#"+res[1]).show();
-			 } else {
-				 $("#entries"+res[1]+"DESTIDyes").prop( "checked", false );
-			         $("#entries"+res[1]+"DESTIDno").prop( "checked", true );
-			          $( "#"+res[1]).hide();
-			 }
+				if($(this).val() === 'Extensions' || $(this).val() === 'IVR'){
+					$("#"+res[1]).show();
+				} else {
+					$("#entries"+res[1]+"DESTIDyes").prop( "checked", false );
+					$("#entries"+res[1]+"DESTIDno").prop( "checked", true );
+					$("#"+res[1]).hide();
+				}
 
 			}
 		}
