@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-12 22:13-0400\n"
+"POT-Creation-Date: 2018-06-29 13:55-0400\n"
 "PO-Revision-Date: 2018-02-16 18:13+0200\n"
 "Last-Translator: Nils <Nils@heckenkamp.info>\n"
 "Language-Team: German <http://weblate.freepbx.org/projects/freepbx/ivr/de_DE/"
@@ -51,7 +51,7 @@ msgstr "Aktionen"
 msgid "Add Another Entry"
 msgstr ""
 
-#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
+#: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr ""
 
@@ -229,8 +229,8 @@ msgstr ""
 "Drücken Sie den roten Aufnahmeknopf, um die Aufnahme von Ihrem Browser aus "
 "zu starten"
 
-#: Ivr.class.php:28 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:28 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "IVR"
 
@@ -258,12 +258,17 @@ msgstr "IVR-Liste"
 msgid "IVR Name"
 msgstr "IVR-Name"
 
-#: functions.inc.php:554 functions.inc.php:576
+#: functions.inc.php:595 functions.inc.php:617
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:520
+#: functions.inc.php:542 functions.inc.php:560
+#, php-format
+msgid "IVR: %s (%s)"
+msgstr ""
+
+#: functions.inc.php:524
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "VR: %s / Optionen: %s"
