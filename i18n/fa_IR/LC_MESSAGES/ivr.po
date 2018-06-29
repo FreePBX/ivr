@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 13:55-0400\n"
+"POT-Creation-Date: 2018-06-29 13:56-0400\n"
 "PO-Revision-Date: 2016-04-26 06:49+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:166
+#: Ivr.class.php:224
 msgid "A PHP extension stopped the file upload"
 msgstr "یک PHP extension in بارگذاری فایل را متوقف کرد"
 
@@ -97,7 +97,7 @@ msgstr "آیا مطمئن هستید نمیخواهید این اعلان را �
 msgid "Browse"
 msgstr "مسیر"
 
-#: Ivr.class.php:170
+#: Ivr.class.php:228
 msgid "Can Not Find Uploaded Files"
 msgstr "ناتوان در پیدا کردن فایلهای بارگذاری شده"
 
@@ -115,7 +115,7 @@ msgstr ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Choose a destination to route the call to"
 msgstr "برای مسیردهی تماس ها یک مقصد انتخاب کنید"
 
@@ -151,7 +151,7 @@ msgstr ""
 msgid "Default"
 msgstr "پیشفرض"
 
-#: Ivr.class.php:68 functions.inc.php:460
+#: Ivr.class.php:126 functions.inc.php:412
 msgid "Delete"
 msgstr "حذف"
 
@@ -167,7 +167,7 @@ msgstr "حذف این ورودی.برای ذخیره تغییرات ارسال �
 msgid "Description of this IVR"
 msgstr "شرح این منوی صوتی"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Destination"
 msgstr "مقصد"
 
@@ -179,7 +179,7 @@ msgstr "داخلی که تماس بعد از اجرا منوی صوتی نامع
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "داخلی که تماس بعد از اجرای منوی صوتی وقفه به آن ارسال میشود."
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Digits"
 msgstr "اعداد"
 
@@ -187,7 +187,7 @@ msgstr "اعداد"
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -197,7 +197,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr "لغو اعلان ضبط تماس"
 
-#: Ivr.class.php:78
+#: Ivr.class.php:136
 msgid "Duplicate"
 msgstr ""
 
@@ -213,7 +213,7 @@ msgstr "ویرایش ："
 msgid "Enable Direct Dial"
 msgstr "فعال سازی شماره گیری مستقیم"
 
-#: Ivr.class.php:163
+#: Ivr.class.php:221
 msgid "Failed to write file to disk"
 msgstr "خطا در نوشتن فایل روی دیسک"
 
@@ -254,17 +254,17 @@ msgstr "فهرست منوی صوتی"
 msgid "IVR Name"
 msgstr "نام منوی صوتی"
 
-#: functions.inc.php:595 functions.inc.php:617
+#: functions.inc.php:547 functions.inc.php:569
 #, php-format
 msgid "IVR: %s"
 msgstr "منوی صوتی ： %s"
 
-#: functions.inc.php:542 functions.inc.php:560
+#: functions.inc.php:494 functions.inc.php:512
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:524
+#: functions.inc.php:476
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / Option : %s"
@@ -301,7 +301,7 @@ msgstr "تلاش مجدد پیام ظبط شده نامعتبر"
 msgid "List IVRs"
 msgstr "فهرست منوهای صوتی"
 
-#: Ivr.class.php:160
+#: Ivr.class.php:218
 msgid "Missing a temporary folder"
 msgstr "از دست دادن فولدر ذخیره موقت"
 
@@ -323,7 +323,7 @@ msgstr "بدون مدیریت استریسک، منوی صوتی بارگذار�
 msgid "No file to load!"
 msgstr "فایلی بارگذاری نشد!"
 
-#: Ivr.class.php:157
+#: Ivr.class.php:215
 msgid "No file was uploaded"
 msgstr "فایلی بارگذاری نشده"
 
@@ -388,7 +388,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr "ایجاد گزینه برای تماس مستقیم به یک داخلی."
 
-#: functions.inc.php:372
+#: functions.inc.php:374
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr "پیام ضبط شده تهیه شد برای منوی صوتی به نام '%s'"
@@ -397,11 +397,11 @@ msgstr "پیام ضبط شده تهیه شد برای منوی صوتی به ن�
 msgid "Recording..."
 msgstr "در حال ضبط.."
 
-#: Ivr.class.php:73
+#: Ivr.class.php:131
 msgid "Reset"
 msgstr "بازنشانی"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Return"
 msgstr "بازگشت"
 
@@ -417,7 +417,7 @@ msgstr "بازگشت برای وقفه"
 msgid "Return to IVR after VM"
 msgstr "بازگشت به منوی صوتی پس از صندوق صوتی"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Return to this IVR when finished"
 msgstr "بازگشت به منوی صوتی پس از اتمام"
 
@@ -446,21 +446,21 @@ msgstr ""
 "انتخاب صدای زنگ از لیست بالا. مشخص میکند تلفن شما با چه صدایی از این گروه "
 "زنگ میخورد."
 
-#: Ivr.class.php:83
+#: Ivr.class.php:141
 msgid "Submit"
 msgstr "ارسال"
 
-#: Ivr.class.php:151
+#: Ivr.class.php:209
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "فایل بارگذاری شده بیش از حد تعیین شده در فرم HTML میباشد"
 
-#: Ivr.class.php:148
+#: Ivr.class.php:206
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "فایل بارگذاری شده بیش از حد تعیین شده در فایل php.ini میباشد"
 
-#: Ivr.class.php:154
+#: Ivr.class.php:212
 msgid "The uploaded file was only partially uploaded"
 msgstr "فقط بخشی از فایل شما بارگذاری شد"
 
@@ -499,11 +499,11 @@ msgstr "عدم حذف ورودی اول. لطفا ورودی را ویرایش �
 msgid "Unable to delete the last entry"
 msgstr "نمیتوان آخرین ورودی را حذف کند"
 
-#: Ivr.class.php:123
+#: Ivr.class.php:181
 msgid "Unknown Error"
 msgstr "خطای ناشناخته"
 
-#: Ivr.class.php:143
+#: Ivr.class.php:201
 msgid "Unsupported file format"
 msgstr "فرمت فایل پشتیبانی نمیشود"
 

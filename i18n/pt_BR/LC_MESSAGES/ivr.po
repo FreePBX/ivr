@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 13:55-0400\n"
+"POT-Creation-Date: 2018-06-29 13:56-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-Country: BRAZIL\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: Ivr.class.php:166
+#: Ivr.class.php:224
 msgid "A PHP extension stopped the file upload"
 msgstr "Uma extensão PHP parou o carregamento do arquivo"
 
@@ -103,7 +103,7 @@ msgstr "Tem certeza de que não quer uma gravação para este anúncio?"
 msgid "Browse"
 msgstr "Visualizar"
 
-#: Ivr.class.php:170
+#: Ivr.class.php:228
 msgid "Can Not Find Uploaded Files"
 msgstr "Não é Possível Localizar os Arquivos Carregados"
 
@@ -122,7 +122,7 @@ msgstr ""
 "caso existisse uma URA chamada neste caminho de ligação, mas não "
 "imediatamente antes desse"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Choose a destination to route the call to"
 msgstr "Escolha um destino para encaminhar a chamada"
 
@@ -160,7 +160,7 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ivr.class.php:68 functions.inc.php:460
+#: Ivr.class.php:126 functions.inc.php:412
 msgid "Delete"
 msgstr "Apagar"
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Descrição desta URA"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Destination"
 msgstr "Destino"
 
@@ -190,7 +190,7 @@ msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Destino para enviar a chamada após Gravação de Tempo Esgotado ser tocada."
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Digits"
 msgstr "Dígitos"
 
@@ -198,7 +198,7 @@ msgstr "Dígitos"
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -208,7 +208,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr "Solte a Gravação do Anúncio Aqui"
 
-#: Ivr.class.php:78
+#: Ivr.class.php:136
 msgid "Duplicate"
 msgstr ""
 
@@ -224,7 +224,7 @@ msgstr "Editar:"
 msgid "Enable Direct Dial"
 msgstr "Habilitar discagem direta"
 
-#: Ivr.class.php:163
+#: Ivr.class.php:221
 msgid "Failed to write file to disk"
 msgstr "Falha ao gravar o arquivo no disco"
 
@@ -266,17 +266,17 @@ msgstr "Lista URA"
 msgid "IVR Name"
 msgstr "Nome"
 
-#: functions.inc.php:595 functions.inc.php:617
+#: functions.inc.php:547 functions.inc.php:569
 #, php-format
 msgid "IVR: %s"
 msgstr "URA: %s"
 
-#: functions.inc.php:542 functions.inc.php:560
+#: functions.inc.php:494 functions.inc.php:512
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:524
+#: functions.inc.php:476
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "URA: %s / Opção: %s"
@@ -313,7 +313,7 @@ msgstr "Gravação Tentativa Inválida"
 msgid "List IVRs"
 msgstr "Listar URAs"
 
-#: Ivr.class.php:160
+#: Ivr.class.php:218
 msgid "Missing a temporary folder"
 msgstr "Faltando uma pasta temporária"
 
@@ -335,7 +335,7 @@ msgstr "Sem Astman, Não carrega a URA"
 msgid "No file to load!"
 msgstr "Nenhum arquivo para carregar!"
 
-#: Ivr.class.php:157
+#: Ivr.class.php:215
 msgid "No file was uploaded"
 msgstr "Nenhum arquivo foi carregado"
 
@@ -408,7 +408,7 @@ msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 "Fornece opções para usuários chamadores para discagem direta de um ramal."
 
-#: functions.inc.php:372
+#: functions.inc.php:374
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr "Gravação criada para URA chamada '%s'"
@@ -417,11 +417,11 @@ msgstr "Gravação criada para URA chamada '%s'"
 msgid "Recording..."
 msgstr "Gravando..."
 
-#: Ivr.class.php:73
+#: Ivr.class.php:131
 msgid "Reset"
 msgstr "Reiniciar"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Return"
 msgstr "Retornar"
 
@@ -437,7 +437,7 @@ msgstr "Retorno Quando Tempo Esgotado"
 msgid "Return to IVR after VM"
 msgstr "Retorna para URA após Caixa Postal"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Return to this IVR when finished"
 msgstr "Retornar a esta URA quando terminar"
 
@@ -466,11 +466,11 @@ msgstr ""
 "Selecione uma opção de toque na lista de opções acima. Isto irá determinar "
 "como o seu telefone soa quando for executado a partir deste grupo."
 
-#: Ivr.class.php:83
+#: Ivr.class.php:141
 msgid "Submit"
 msgstr "Enviar"
 
-#: Ivr.class.php:151
+#: Ivr.class.php:209
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
@@ -478,11 +478,11 @@ msgstr ""
 "O arquivo enviado excede a diretiva MAX_FILE_SIZE que foi especificada no "
 "formulário HTML"
 
-#: Ivr.class.php:148
+#: Ivr.class.php:206
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "O arquivo carregado excede a diretiva upload_max_filesize no php.ini"
 
-#: Ivr.class.php:154
+#: Ivr.class.php:212
 msgid "The uploaded file was only partially uploaded"
 msgstr "O arquivo enviado foi carregado parcialmente"
 
@@ -523,11 +523,11 @@ msgstr "Não é possível excluir o primeiro elemento. Edite em vez de excluir"
 msgid "Unable to delete the last entry"
 msgstr "Não é possível excluir o último elemento"
 
-#: Ivr.class.php:123
+#: Ivr.class.php:181
 msgid "Unknown Error"
 msgstr "Erro Desconhecido"
 
-#: Ivr.class.php:143
+#: Ivr.class.php:201
 msgid "Unsupported file format"
 msgstr "Formato de arquivo não suportado"
 

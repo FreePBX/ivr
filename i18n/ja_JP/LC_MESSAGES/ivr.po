@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 13:55-0400\n"
+"POT-Creation-Date: 2018-06-29 13:56-0400\n"
 "PO-Revision-Date: 2016-08-03 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -49,7 +49,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:166
+#: Ivr.class.php:224
 msgid "A PHP extension stopped the file upload"
 msgstr ""
 "ファイルのアップロードは、PHPのエクステンションによって中断されました。"
@@ -128,7 +128,7 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:170
+#: Ivr.class.php:228
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
@@ -145,7 +145,7 @@ msgstr ""
 "よって、親IVRがこのIVRの直前でない場合は、予期しない結果を引き起こしてしまう"
 "可能性があります。注意:親IVRとは、このIVRに転送される前にあったIVRの事"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -180,7 +180,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ivr.class.php:68 functions.inc.php:460
+#: Ivr.class.php:126 functions.inc.php:412
 msgid "Delete"
 msgstr "削除"
 
@@ -196,7 +196,7 @@ msgstr "このエントリーを削除する。変更適用を忘れずに！"
 msgid "Description of this IVR"
 msgstr "このIVRの説明。"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Destination"
 msgstr "宛先"
 
@@ -208,7 +208,7 @@ msgstr "「無効な入力」の音声を再生してから転送する宛先。
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "タイムアウト音声を再生してから転送する宛先。"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Digits"
 msgstr ""
 
@@ -216,7 +216,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -226,7 +226,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr ""
 
-#: Ivr.class.php:78
+#: Ivr.class.php:136
 msgid "Duplicate"
 msgstr ""
 
@@ -242,7 +242,7 @@ msgstr "編集:"
 msgid "Enable Direct Dial"
 msgstr "ダイレクトダイヤルを許可"
 
-#: Ivr.class.php:163
+#: Ivr.class.php:221
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -283,17 +283,17 @@ msgstr "IVRリスト"
 msgid "IVR Name"
 msgstr "IVRの名前"
 
-#: functions.inc.php:595 functions.inc.php:617
+#: functions.inc.php:547 functions.inc.php:569
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:542 functions.inc.php:560
+#: functions.inc.php:494 functions.inc.php:512
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:524
+#: functions.inc.php:476
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / オプション: %s"
@@ -330,7 +330,7 @@ msgstr "無効な入力: 音声"
 msgid "List IVRs"
 msgstr "IVRを一覧表示"
 
-#: Ivr.class.php:160
+#: Ivr.class.php:218
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -352,7 +352,7 @@ msgstr "Astman接続がないためIVRはロードしない"
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:157
+#: Ivr.class.php:215
 msgid "No file was uploaded"
 msgstr ""
 
@@ -415,7 +415,7 @@ msgstr "無効な入力を検知した場合に、ユーザーに再試行を促
 msgid "Provides options for callers to direct dial an extension."
 msgstr "IVRから内線番号をそのままダイヤルすることで呼び出すことを許可します。"
 
-#: functions.inc.php:372
+#: functions.inc.php:374
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
@@ -424,11 +424,11 @@ msgstr ""
 msgid "Recording..."
 msgstr ""
 
-#: Ivr.class.php:73
+#: Ivr.class.php:131
 msgid "Reset"
 msgstr "リセット"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Return"
 msgstr "戻る"
 
@@ -444,7 +444,7 @@ msgstr "タイムアウト: 前IVRに戻る"
 msgid "Return to IVR after VM"
 msgstr "VMの後にIVRに戻る"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Return to this IVR when finished"
 msgstr ""
 
@@ -471,21 +471,21 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
-#: Ivr.class.php:83
+#: Ivr.class.php:141
 msgid "Submit"
 msgstr "送信"
 
-#: Ivr.class.php:151
+#: Ivr.class.php:209
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:148
+#: Ivr.class.php:206
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:154
+#: Ivr.class.php:212
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
@@ -524,11 +524,11 @@ msgstr ""
 msgid "Unable to delete the last entry"
 msgstr ""
 
-#: Ivr.class.php:123
+#: Ivr.class.php:181
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:143
+#: Ivr.class.php:201
 msgid "Unsupported file format"
 msgstr ""
 
