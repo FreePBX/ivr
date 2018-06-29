@@ -501,6 +501,10 @@ function ivr_check_destinations($dest=true) {
 	global $db;
 
 	$destlist = array();
+	$destlist_option = array();
+	$destlist_invalid = array();
+	$destlist_timeout = array();
+
 	if (is_array($dest) && empty($dest)) {
 		return $destlist;
 	}
@@ -515,12 +519,49 @@ function ivr_check_destinations($dest=true) {
 		$thisdest = $result['dest'];
 		$thisid   = $result['id'];
 		$name = $result['name'] ? $result['name'] : 'IVR ' . $thisid;
-		$destlist[] = array(
+		$destlist_option[] = array(
 			'dest' => $thisdest,
 			'description' => sprintf(_("IVR: %s / Option: %s"),$name,$result['selection']),
 			'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($thisid),
 		);
 	}
+
+	$sql = "SELECT invalid_destination, name, id FROM ivr_details ";
+	if ($dest !== true && is_array($dest)) {
+		$sql .= "WHERE invalid_destination in (".implode(",",array_fill(0, count($dest), "?")).")";
+	}
+	$sql .= "ORDER BY name";
+	$results = $db->getAll($sql, $dest, DB_FETCHMODE_ASSOC);
+
+	foreach ($results as $result) {
+		$thisdest = $result['invalid_destination'];
+		$thisid   = $result['id'];
+		$name = $result['name'] ? $result['name'] : 'IVR ' . $thisid;
+		$destlist_invalid[] = array(
+			'dest' => $thisdest,
+			'description' => sprintf(_("IVR: %s (%s)"),$name,"Invalid Destination"),
+			'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($thisid),
+		);
+	}
+
+	$sql = "SELECT timeout_destination, name, id FROM ivr_details ";
+	if ($dest !== true && is_array($dest)) {
+		$sql .= "WHERE timeout_destination in (".implode(",",array_fill(0, count($dest), "?")).")";
+	}
+	$sql .= "ORDER BY name";
+	$results = $db->getAll($sql, $dest, DB_FETCHMODE_ASSOC);
+
+	foreach ($results as $result) {
+		$thisdest = $result['timeout_destination'];
+		$thisid   = $result['id'];
+		$name = $result['name'] ? $result['name'] : 'IVR ' . $thisid;
+		$destlist_timeout[] = array(
+			'dest' => $thisdest,
+			'description' => sprintf(_("IVR: %s (%s)"),$name,"Timeout Destination"),
+			'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($thisid),
+		);
+	}
+	$destlist = array_merge($destlist_option, $destlist_invalid, $destlist_timeout);
 	return $destlist;
 }
 
