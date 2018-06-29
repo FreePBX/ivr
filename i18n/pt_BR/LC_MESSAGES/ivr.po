@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-12 21:53-0400\n"
+"POT-Creation-Date: 2018-06-29 13:55-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -51,7 +51,7 @@ msgstr "Ações"
 msgid "Add Another Entry"
 msgstr "Adicionar Outro Elemento"
 
-#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
+#: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Adicionar URA"
 
@@ -233,8 +233,8 @@ msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 "Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
 
-#: Ivr.class.php:30 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:30 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "URA"
 
@@ -262,12 +262,17 @@ msgstr "Lista URA"
 msgid "IVR Name"
 msgstr "Nome"
 
-#: functions.inc.php:554 functions.inc.php:576
+#: functions.inc.php:595 functions.inc.php:617
 #, php-format
 msgid "IVR: %s"
 msgstr "URA: %s"
 
-#: functions.inc.php:520
+#: functions.inc.php:542 functions.inc.php:560
+#, php-format
+msgid "IVR: %s (%s)"
+msgstr ""
+
+#: functions.inc.php:524
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "URA: %s / Opção: %s"
