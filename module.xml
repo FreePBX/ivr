@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>13.0.27.12</version>
+	<version>13.0.27.13</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
+		*13.0.27.13* FREEPBX-17668 IVR "Return" option missing when on options list 
 		*13.0.27.12* FREEPBX-17743 Used as Destination by X Objects missing an object 
 		*13.0.27.11* FREEPBX-13303 Add 'Duplicate' button to IVR's 
 		*13.0.27.10* Depend on core
