@@ -2,6 +2,7 @@
 namespace FreePBX\modules;
 use FreePBX_Helpers;
 use BMO;
+use PDO;
 class Ivr extends FreePBX_Helpers implements BMO {
 	private $temp = null;
 	private $db = null;
