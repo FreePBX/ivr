@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-12 22:13-0400\n"
+"POT-Creation-Date: 2018-06-29 13:56-0400\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: Ivr.class.php:166
+#: Ivr.class.php:224
 msgid "A PHP extension stopped the file upload"
 msgstr ""
 
@@ -48,7 +48,7 @@ msgstr "操作"
 msgid "Add Another Entry"
 msgstr ""
 
-#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
+#: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr "添加IVR"
 
@@ -96,7 +96,7 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:170
+#: Ivr.class.php:228
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
@@ -113,7 +113,7 @@ msgstr ""
 "的地。<br /><br />返回路径可能会是呼叫路径上任何先于此IVR的IVR。如果呼叫了在"
 "路径上不直接相邻的父IVR，这个设置可能回带来奇怪的结果。"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -141,7 +141,7 @@ msgstr ""
 msgid "Default"
 msgstr "默认"
 
-#: Ivr.class.php:68 functions.inc.php:460
+#: Ivr.class.php:126 functions.inc.php:412
 msgid "Delete"
 msgstr "删除"
 
@@ -157,7 +157,7 @@ msgstr "删除这个入口。 不要忘记点击提交！"
 msgid "Description of this IVR"
 msgstr "IVR描述"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Destination"
 msgstr "目的地"
 
@@ -169,7 +169,7 @@ msgstr "播放无效录音提示后转发的目的地"
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "播放超时提示后转发的目的地。"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Digits"
 msgstr ""
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -187,7 +187,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr ""
 
-#: Ivr.class.php:78
+#: Ivr.class.php:136
 msgid "Duplicate"
 msgstr ""
 
@@ -203,7 +203,7 @@ msgstr "编辑:"
 msgid "Enable Direct Dial"
 msgstr "启用直接拨号"
 
-#: Ivr.class.php:163
+#: Ivr.class.php:221
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -215,8 +215,8 @@ msgstr "播放IVR。"
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:28 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:28 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "语音IVR"
 
@@ -244,12 +244,17 @@ msgstr "IVR列表"
 msgid "IVR Name"
 msgstr "IVR 名称"
 
-#: functions.inc.php:554 functions.inc.php:576
+#: functions.inc.php:547 functions.inc.php:569
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR：%s"
 
-#: functions.inc.php:520
+#: functions.inc.php:494 functions.inc.php:512
+#, php-format
+msgid "IVR: %s (%s)"
+msgstr ""
+
+#: functions.inc.php:476
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR：%s / 选项：%s"
@@ -284,7 +289,7 @@ msgstr "无效重试录音"
 msgid "List IVRs"
 msgstr "显示IVR列表"
 
-#: Ivr.class.php:160
+#: Ivr.class.php:218
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -306,7 +311,7 @@ msgstr ""
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:157
+#: Ivr.class.php:215
 msgid "No file was uploaded"
 msgstr ""
 
@@ -366,7 +371,7 @@ msgstr "当收到无效响应时，在提示呼叫方重新呼叫钱，播放的
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: functions.inc.php:372
+#: functions.inc.php:374
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
@@ -375,11 +380,11 @@ msgstr ""
 msgid "Recording..."
 msgstr ""
 
-#: Ivr.class.php:73
+#: Ivr.class.php:131
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Return"
 msgstr "返回"
 
@@ -395,7 +400,7 @@ msgstr "超时返回处理"
 msgid "Return to IVR after VM"
 msgstr "VM后返回IVR"
 
-#: functions.inc.php:460
+#: functions.inc.php:412
 msgid "Return to this IVR when finished"
 msgstr ""
 
@@ -422,21 +427,21 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
-#: Ivr.class.php:83
+#: Ivr.class.php:141
 msgid "Submit"
 msgstr ""
 
-#: Ivr.class.php:151
+#: Ivr.class.php:209
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:148
+#: Ivr.class.php:206
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:154
+#: Ivr.class.php:212
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
@@ -475,11 +480,11 @@ msgstr ""
 msgid "Unable to delete the last entry"
 msgstr ""
 
-#: Ivr.class.php:123
+#: Ivr.class.php:181
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:143
+#: Ivr.class.php:201
 msgid "Unsupported file format"
 msgstr ""
 

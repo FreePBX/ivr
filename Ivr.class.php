@@ -99,7 +99,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
                         ':ivr_id' => $id,
                         ':selection' => $entries['ext'][$i],
                         ':dest' => $entries['goto'][$i],
-                        ':ivr_ret' => (isset($entries['ivr_ret'][$i]) ? $entries['ivr_ret'][$i] : '0'),
+                        ':ivr_ret' => (int) (isset($entries['ivr_ret'][$i]) ? $entries['ivr_ret'][$i] : '0'),
                     ]);
                 }
             }
