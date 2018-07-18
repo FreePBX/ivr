@@ -313,86 +313,6 @@ function ivr_get_entries($id) {
 }
 
 
-//draw ivr options page
-function ivr_configpageload() {
-	global $currentcomponent, $display;
-	return true;
-}
-
-function ivr_configpageinit($pagename) {
-	global $currentcomponent;
-	$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
-	$id = isset($_REQUEST['id']) ? $_REQUEST['id'] : '';
-
-	if($pagename == 'ivr'){
-		$currentcomponent->addprocessfunc('ivr_configprocess');
-
-		//dont show page if there is no action set
-		if ($action && $action != 'delete' || $id) {
-			$currentcomponent->addguifunc('ivr_configpageload');
-		}
-
-    return true;
-	}
-}
-
-//prosses received arguments
-function ivr_configprocess(){
-	if (isset($_REQUEST['display']) && $_REQUEST['display'] == 'ivr'){
-		global $db;
-		//get variables
-		$get_var = array('id', 'name', 'alertinfo', 'description', 'announcement',
-						'directdial', 'invalid_loops', 'invalid_retry_recording',
-						'invalid_destination', 'invalid_recording',
-						'retvm', 'timeout_time', 'timeout_recording',
-						'timeout_retry_recording', 'timeout_destination', 'timeout_loops',
-						'timeout_append_announce', 'invalid_append_announce',
-						'timeout_ivr_ret', 'invalid_ivr_ret','rvolume');
-		foreach($get_var as $var){
-			$vars[$var] = isset($_REQUEST[$var]) 	? $_REQUEST[$var]		: '';
-		}
-
-		$vars['timeout_append_announce'] = empty($vars['timeout_append_announce']) ? '0' : '1';
-		$vars['invalid_append_announce'] = empty($vars['invalid_append_announce']) ? '0' : '1';
-		$vars['timeout_ivr_ret'] = empty($vars['timeout_ivr_ret']) ? '0' : '1';
-		$vars['invalid_ivr_ret'] = empty($vars['invalid_ivr_ret']) ? '0' : '1';
-
-		$action		= isset($_REQUEST['action'])	? $_REQUEST['action']	: '';
-		$entries	= isset($_REQUEST['entries'])	? $_REQUEST['entries']	: '';
-
-		switch ($action) {
-			case 'save':
-				if(isset($_REQUEST['announcementrecording'])) {
-                    $freepbx = FreePBX::Create();
-					$filepath = $freepbx->Config->get("ASTSPOOLDIR") . "/tmp/".$_REQUEST['announcementrecording'];
-					$soundspath = $freepbx->Config->get("ASTVARLIBDIR")."/sounds";
-					$codec = "wav";
-					if(file_exists($filepath)) {
-						$freepbx->Media->load($filepath);
-						$filename = "ivr-".$vars['name']."-recording-".time();
-						$freepbx->Media->convert($soundspath."/en/custom/".$filename.".".$codec);
-						$id = $freepbx->Recordings->addRecording("ivr-".$vars['name']."-recording-".time(),sprintf(_("Recording created for IVR named '%s'"),$vars['name']),"custom/".$filename);
-						$vars['announcement'] = $id;
-					} else {
-						$vars['announcement'] = '';
-					}
-				}
-				//get real dest
-				$vars['id'] = ivr_save_details($vars);
-				ivr_save_entries($vars['id'], $entries);
-				needreload();
-				$this_dest = ivr_getdest($vars['id']);
-				fwmsg::set_dest($this_dest[0]);
-			break;
-			case 'delete':
-				ivr_delete($vars['id']);
-        isset($_REQUEST['id'])?$_REQUEST['id'] = null:'';
-        isset($_REQUEST['action'])?$_REQUEST['action'] = null:'';
-				needreload();
-			break;
-		}
-	}
-}
 
 //save ivr settings
 function ivr_save_details($vals){
@@ -442,9 +362,8 @@ function ivr_draw_entries($id,$restrict_mods=false){
 
 //delete an ivr + entires
 function ivr_delete($id) {
-	global $db;
-	$db->query('DELETE FROM ivr_details WHERE id = ?', $id);
-	$db->query('DELETE FROM ivr_entries WHERE ivr_id = ?', $id);
+    FreePBX::Modules()->deprecatedFunction();
+    return FreePBX::Ivr()->delete($id);
 }
 //----------------------------------------------------------------------------
 // Dynamic Destination Registry and Recordings Registry Functions

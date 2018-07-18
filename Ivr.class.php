@@ -5,7 +5,30 @@ use BMO;
 use PDO;
 class Ivr extends FreePBX_Helpers implements BMO {
 	private $temp = null;
-	private $db = null;
+    private $db = null;
+    public static $defaults = [
+        'action' => '',
+        'id' => '',
+        'display' => '',
+        'invalid_destination' => 'app-blackhole,hangup,1',
+        'timeout_destination' => 'app-blackhole,hangup,1',
+        'directdial' => 'ext-local',
+        'timeout_time' => 10,
+        'alertinfo' => '',
+        'invalid_loops' => 3,
+        'invalid_retry_recording' => 'default',
+        'invalid_append_announce' => '',
+        'invalid_ivr_ret' => '',
+        'invalid_recording' => '',
+        'timeout_loops' => 3,
+        'timeout_retry_recording' => 'default',
+        'timeout_append_announce' => '',
+        'timeout_ivr_ret' => '',
+        'timeout_recording' => 'default',
+        'retvm' => '',
+        'announcement' => '',
+        'rvolume' => '',
+    ];
 	public function __construct($freepbx = null) {
 		if ($freepbx == null) {
 			throw new Exception("Not given a FreePBX Object");
@@ -21,7 +44,22 @@ class Ivr extends FreePBX_Helpers implements BMO {
 
 	public function install() {}
 	public function uninstall() {}
-	public function doConfigPageInit($page) {}
+	public function doConfigPageInit($page) {
+        foreach (self::$defaults as $key => $value) {
+            $vars[$key] = $this->getReq($key, $value);
+        }
+        if($vars['action'] === 'delete'){
+            needreload();
+            return $this->delete($vars['id']);
+        }
+        if($vars['action'] === 'save'){
+            needreload();
+            $id = $this->saveDetails($vars);
+            $this->saveEntries($id,$vars['entries']);
+            $this_dest = ivr_getdest($id);
+            \fwmsg::set_dest($this_dest[0]);
+        }
+    }
 	public function search($query, &$results) {
 		$ivrs = $this->getDetails();
 		foreach ($ivrs as $ivr) {
@@ -32,27 +70,41 @@ class Ivr extends FreePBX_Helpers implements BMO {
 			);
 		}
     }
+
+    public function delete($id){
+        $this->deleteEntriesById($id)
+            ->deleteDetailsById($id);
+    }
+
     public function saveDetails($vals){
+        unset($vals['action']);
+        unset($vals['display']);
+        $keys = [];
+        $placeholders = [];
         if ($vals['id']) {
-            $start = 'REPLACE INTO `ivr_details` (';
+            $start = 'REPLACE INTO `ivr_details`';
         } else {
             unset($vals['id']);
-            $start = 'INSERT INTO `ivr_details` (';
+            $start = 'INSERT INTO `ivr_details`';
         }
-
-        $end = ') VALUES (';
-        foreach ($vals as $k => $v) {
-            $start .= "$k, ";
-            $end .= ":$k, ";
+        foreach($vals as $key => $value){
+            $keys[] = $key;
+            $placeholders[] = ':'.$key;
         }
-
-        $sql = substr($start, 0, -2).substr($end, 0, -2).')';
-        $this->FreePBX->Database->query($sql.')');
+        $keyString = rtrim(implode(',',$keys),',');
+        $placeString = rtrim(implode(',',$placeholders),',');
+        $sql = sprintf('%s (%s) VALUES (%s)', $start, $keyString, $placeString);
+        $this->FreePBX->Database->prepare($sql)->execute($vals);
         // Was this a new one?
         if (!isset($vals['id'])) {
             $vals['id'] = $this->FreePBX->Database->lastInsertId('id');
         }
         return $vals['id'];
+    }
+
+    public function deleteDetailsById($id){
+        $this->FreePBX->Database->prepare('DELETE FROM ivr_details WHERE id = :id')->execute([':id' => $id]);
+        return $this;
     }
 
 	public function getDetails($id = false) {
@@ -257,5 +309,15 @@ public function ajaxHandler(){
 		if(isset($request['action']) && ($request['action'] == 'edit' || $request['action'] == 'add')){
 			return load_view(__DIR__."/views/rnav.php",array('request' => $request));
 		}
-	}
+    }
+    public function showPage(){
+        if(empty($_GET['action']) && empty($_GET['id'])){
+            return load_view(__DIR__ . '/views/grid.php');
+        }
+        $vars['ivr'] = self::$defaults;
+        if(!empty($_GET['id'])){
+            $vars['ivr'] = $this->getDetails($_GET['id']);
+        }
+        return load_view(__DIR__ . '/views/form.php',$vars);
+    }
 }

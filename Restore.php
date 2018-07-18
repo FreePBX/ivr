@@ -3,7 +3,11 @@ namespace FreePBX\modules\Ivr;
 use FreePBX\modules\Backup as Base;
 class Restore Extends Base\RestoreBase{
   public function runRestore($jobid){
-    $configs = $this->getConfigs();
+    $configs = reset($this->getConfigs());
+    if(empty($config)){
+	echo _("Backup empty").PHP_EOL;
+	return;
+    }
     foreach ($configs['ivrs'] as $ivr) {
         $this->FreePBX->Ivr->saveDetails($ivr);
     }
