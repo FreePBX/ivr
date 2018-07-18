@@ -22,20 +22,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-20 15:13-0400\n"
+"POT-Creation-Date: 2018-06-29 13:55-0400\n"
 "PO-Revision-Date: 2017-05-17 01:42+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
 "ru_RU/>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:159
+#: Ivr.class.php:162
 msgid "A PHP extension stopped the file upload"
 msgstr ""
 
@@ -59,11 +59,11 @@ msgstr ""
 msgid "Actions"
 msgstr "Действия"
 
-#: views/entries.php:65
+#: views/entries.php:70
 msgid "Add Another Entry"
 msgstr "Добавить другую запись"
 
-#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
+#: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Добавить IVR"
 
@@ -107,7 +107,7 @@ msgstr "Добавить уведомление при неверном набо
 msgid "Applications"
 msgstr "Приложения"
 
-#: assets/js/ivr.js:28
+#: assets/js/ivr.js:76
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
 
@@ -115,7 +115,7 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:163
+#: Ivr.class.php:166
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
@@ -133,7 +133,7 @@ msgstr ""
 "которых также производится вызов в действующее Меню, но возврат и "
 "перенаправление может привести к неожиданным результатам"
 
-#: functions.inc.php:436
+#: functions.inc.php:460
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -168,15 +168,15 @@ msgstr ""
 msgid "Default"
 msgstr "По умолчанию"
 
-#: Ivr.class.php:69 functions.inc.php:436
+#: Ivr.class.php:69 functions.inc.php:460
 msgid "Delete"
 msgstr "Удалить"
 
-#: assets/js/ivr.js:433
+#: assets/js/ivr.js:481
 msgid "Delete Recording"
 msgstr ""
 
-#: views/entries.php:44
+#: views/entries.php:49
 msgid "Delete this entry. Dont forget to click Submit to save changes!"
 msgstr ""
 "Удалить этот вход. Не забудьте нажать ПРИМЕНИТЬ, чтобы сохранить изменения!"
@@ -185,7 +185,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Описание голосового меню"
 
-#: functions.inc.php:436
+#: functions.inc.php:460
 msgid "Destination"
 msgstr "Назначение"
 
@@ -199,11 +199,15 @@ msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Назначения направления звонка после воспроизведения записи о Тайм-ауте."
 
-#: functions.inc.php:436
+#: functions.inc.php:460
 msgid "Digits"
 msgstr ""
 
-#: functions.inc.php:436
+#: assets/js/ivr.js:96
+msgid "Digits are limited to 10 digits."
+msgstr ""
+
+#: functions.inc.php:460
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -217,7 +221,7 @@ msgstr ""
 msgid "Edit IVR: "
 msgstr "Редактировать голосовое меню: "
 
-#: assets/js/ivr.js:173
+#: assets/js/ivr.js:221
 msgid "Edit:"
 msgstr "Редактировать:"
 
@@ -225,7 +229,7 @@ msgstr "Редактировать:"
 msgid "Enable Direct Dial"
 msgstr "Разрешить прямые наборы"
 
-#: Ivr.class.php:156
+#: Ivr.class.php:159
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -233,12 +237,12 @@ msgstr ""
 msgid "Greeting to be played on entry to the IVR."
 msgstr "Приветствие , проигрываемое при входе в голосовое меню."
 
-#: views/simple_form.php:110 assets/js/ivr.js:468 assets/js/ivr.js:480
+#: views/simple_form.php:110
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:30 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:30 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "Интерактивное меню (IVR)"
 
@@ -266,17 +270,22 @@ msgstr "Список голосового емню"
 msgid "IVR Name"
 msgstr "Название Интерактивного меню"
 
-#: functions.inc.php:530 functions.inc.php:552
+#: functions.inc.php:595 functions.inc.php:617
 #, php-format
 msgid "IVR: %s"
 msgstr "Интерактивное меню: %s"
 
-#: functions.inc.php:496
+#: functions.inc.php:542 functions.inc.php:560
+#, php-format
+msgid "IVR: %s (%s)"
+msgstr ""
+
+#: functions.inc.php:524
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "Интерактивное меню: %s / Опция: %s"
 
-#: assets/js/ivr.js:22
+#: assets/js/ivr.js:70
 msgid "IVRs require a valid name"
 msgstr ""
 
@@ -308,7 +317,7 @@ msgstr "Воспроизведение при неуданой попытке "
 msgid "List IVRs"
 msgstr "Спискок голосовых меню"
 
-#: Ivr.class.php:153
+#: Ivr.class.php:156
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -318,8 +327,7 @@ msgstr "Имя голосового меню"
 
 #: views/advanced_form.php:103 views/advanced_form.php:255
 #: views/advanced_form.php:282 views/advanced_form.php:413
-#: views/advanced_form.php:440 views/advanced_form.php:521
-#: views/entries.php:38
+#: views/advanced_form.php:440 views/advanced_form.php:521 views/entries.php:43
 msgid "No"
 msgstr "Нет"
 
@@ -327,11 +335,11 @@ msgstr "Нет"
 msgid "No Astman, Not loading IVR"
 msgstr ""
 
-#: assets/js/ivr.js:277
+#: assets/js/ivr.js:325
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:150
+#: Ivr.class.php:153
 msgid "No file was uploaded"
 msgstr ""
 
@@ -363,6 +371,10 @@ msgstr ""
 
 #: views/simple_form.php:62
 msgid "Play Previous Recording"
+msgstr ""
+
+#: assets/js/ivr.js:92
+msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
 #: views/advanced_form.php:320 views/advanced_form.php:478
@@ -397,12 +409,12 @@ msgstr ""
 "Предлагает опции    вызывающим абонентам  для прямого набора внутреннего "
 "номера ."
 
-#: functions.inc.php:348
+#: functions.inc.php:372
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
 
-#: assets/js/ivr.js:511
+#: assets/js/ivr.js:559
 msgid "Recording..."
 msgstr ""
 
@@ -410,7 +422,7 @@ msgstr ""
 msgid "Reset"
 msgstr "Сброс"
 
-#: functions.inc.php:436
+#: functions.inc.php:460
 msgid "Return"
 msgstr "Возврат"
 
@@ -426,7 +438,7 @@ msgstr "Возврат по таймауту"
 msgid "Return to IVR after VM"
 msgstr "Возвращение в Интерактивное меню после Голосовой Почты"
 
-#: functions.inc.php:436
+#: functions.inc.php:460
 msgid "Return to this IVR when finished"
 msgstr ""
 
@@ -438,7 +450,7 @@ msgstr ""
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: assets/js/ivr.js:433
+#: assets/js/ivr.js:481
 msgid "Save Recording"
 msgstr ""
 
@@ -457,17 +469,17 @@ msgstr ""
 msgid "Submit"
 msgstr "Подтвердить"
 
-#: Ivr.class.php:144
+#: Ivr.class.php:147
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:141
+#: Ivr.class.php:144
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:147
+#: Ivr.class.php:150
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
@@ -498,23 +510,23 @@ msgid ""
 "version or update your %s"
 msgstr ""
 
-#: assets/js/ivr.js:101
+#: assets/js/ivr.js:149
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr ""
 
-#: assets/js/ivr.js:97
+#: assets/js/ivr.js:145
 msgid "Unable to delete the last entry"
 msgstr ""
 
-#: Ivr.class.php:116
+#: Ivr.class.php:119
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:136
+#: Ivr.class.php:139
 msgid "Unsupported file format"
 msgstr ""
 
-#: assets/js/ivr.js:200
+#: assets/js/ivr.js:248
 msgid "Unsupported file type"
 msgstr ""
 
@@ -531,12 +543,11 @@ msgstr ""
 
 #: views/advanced_form.php:101 views/advanced_form.php:253
 #: views/advanced_form.php:280 views/advanced_form.php:411
-#: views/advanced_form.php:438 views/advanced_form.php:519
-#: views/entries.php:36
+#: views/advanced_form.php:438 views/advanced_form.php:519 views/entries.php:41
 msgid "Yes"
 msgstr "Да"
 
-#: assets/js/ivr.js:515
+#: assets/js/ivr.js:563
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 
