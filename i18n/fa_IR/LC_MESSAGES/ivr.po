@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:162
+#: Ivr.class.php:166
 msgid "A PHP extension stopped the file upload"
 msgstr "یک PHP extension in بارگذاری فایل را متوقف کرد"
 
@@ -89,7 +89,7 @@ msgstr "اعمال اطلاعیه برای غیرمعتبر"
 msgid "Applications"
 msgstr "برنامه ها"
 
-#: assets/js/ivr.js:76
+#: assets/js/ivr.js:88
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr "آیا مطمئن هستید نمیخواهید این اعلان را ضبط کنید؟"
 
@@ -97,7 +97,7 @@ msgstr "آیا مطمئن هستید نمیخواهید این اعلان را �
 msgid "Browse"
 msgstr "مسیر"
 
-#: Ivr.class.php:166
+#: Ivr.class.php:170
 msgid "Can Not Find Uploaded Files"
 msgstr "ناتوان در پیدا کردن فایلهای بارگذاری شده"
 
@@ -151,11 +151,11 @@ msgstr ""
 msgid "Default"
 msgstr "پیشفرض"
 
-#: Ivr.class.php:69 functions.inc.php:460
+#: Ivr.class.php:68 functions.inc.php:460
 msgid "Delete"
 msgstr "حذف"
 
-#: assets/js/ivr.js:481
+#: assets/js/ivr.js:493
 msgid "Delete Recording"
 msgstr "حذف ضبط شده"
 
@@ -183,7 +183,7 @@ msgstr "داخلی که تماس بعد از اجرای منوی صوتی وقف
 msgid "Digits"
 msgstr "اعداد"
 
-#: assets/js/ivr.js:96
+#: assets/js/ivr.js:108
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
@@ -197,11 +197,15 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr "لغو اعلان ضبط تماس"
 
+#: Ivr.class.php:78
+msgid "Duplicate"
+msgstr ""
+
 #: views/form.php:44
 msgid "Edit IVR: "
 msgstr "ویرایش منوی صوتی ： "
 
-#: assets/js/ivr.js:221
+#: assets/js/ivr.js:233
 msgid "Edit:"
 msgstr "ویرایش ："
 
@@ -209,7 +213,7 @@ msgstr "ویرایش ："
 msgid "Enable Direct Dial"
 msgstr "فعال سازی شماره گیری مستقیم"
 
-#: Ivr.class.php:159
+#: Ivr.class.php:163
 msgid "Failed to write file to disk"
 msgstr "خطا در نوشتن فایل روی دیسک"
 
@@ -221,7 +225,7 @@ msgstr "پیام خوش آمد در هنگام ورود به منوی صوتی."
 msgid "Hit the red record button to start recording from your browser"
 msgstr "بروی کلید قرمز برای ضبط پیام کلیک کنید"
 
-#: Ivr.class.php:30 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: Ivr.class.php:28 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
 #: /dev/shm/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "منوی صوتی"
@@ -265,7 +269,7 @@ msgstr ""
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / Option : %s"
 
-#: assets/js/ivr.js:70
+#: assets/js/ivr.js:82
 msgid "IVRs require a valid name"
 msgstr "منوهای صوتی یک نام معتبر نیاز دارند"
 
@@ -297,7 +301,7 @@ msgstr "تلاش مجدد پیام ظبط شده نامعتبر"
 msgid "List IVRs"
 msgstr "فهرست منوهای صوتی"
 
-#: Ivr.class.php:156
+#: Ivr.class.php:160
 msgid "Missing a temporary folder"
 msgstr "از دست دادن فولدر ذخیره موقت"
 
@@ -315,11 +319,11 @@ msgstr "خیر"
 msgid "No Astman, Not loading IVR"
 msgstr "بدون مدیریت استریسک، منوی صوتی بارگذاری نمیشود"
 
-#: assets/js/ivr.js:325
+#: assets/js/ivr.js:337
 msgid "No file to load!"
 msgstr "فایلی بارگذاری نشد!"
 
-#: Ivr.class.php:153
+#: Ivr.class.php:157
 msgid "No file was uploaded"
 msgstr "فایلی بارگذاری نشده"
 
@@ -351,7 +355,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr "اجرای ضبط قبلی"
 
-#: assets/js/ivr.js:92
+#: assets/js/ivr.js:104
 msgid "Please enter a valid value for Digits Pressed"
 msgstr "لطفا مقدار عددی معتبر برای فشردن وارد کنید"
 
@@ -389,11 +393,11 @@ msgstr "ایجاد گزینه برای تماس مستقیم به یک داخل�
 msgid "Recording created for IVR named '%s'"
 msgstr "پیام ضبط شده تهیه شد برای منوی صوتی به نام '%s'"
 
-#: assets/js/ivr.js:559
+#: assets/js/ivr.js:571
 msgid "Recording..."
 msgstr "در حال ضبط.."
 
-#: Ivr.class.php:74
+#: Ivr.class.php:73
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -425,7 +429,7 @@ msgstr "صدای زنگ"
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: assets/js/ivr.js:481
+#: assets/js/ivr.js:493
 msgid "Save Recording"
 msgstr "ذخیره ضبط شده"
 
@@ -442,21 +446,21 @@ msgstr ""
 "انتخاب صدای زنگ از لیست بالا. مشخص میکند تلفن شما با چه صدایی از این گروه "
 "زنگ میخورد."
 
-#: Ivr.class.php:79
+#: Ivr.class.php:83
 msgid "Submit"
 msgstr "ارسال"
 
-#: Ivr.class.php:147
+#: Ivr.class.php:151
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "فایل بارگذاری شده بیش از حد تعیین شده در فرم HTML میباشد"
 
-#: Ivr.class.php:144
+#: Ivr.class.php:148
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "فایل بارگذاری شده بیش از حد تعیین شده در فایل php.ini میباشد"
 
-#: Ivr.class.php:150
+#: Ivr.class.php:154
 msgid "The uploaded file was only partially uploaded"
 msgstr "فقط بخشی از فایل شما بارگذاری شد"
 
@@ -487,23 +491,23 @@ msgid ""
 "version or update your %s"
 msgstr "برای اجرای این فایل باید مرورگر خود را به روز کنید به نسخه %s"
 
-#: assets/js/ivr.js:149
+#: assets/js/ivr.js:161
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr "عدم حذف ورودی اول. لطفا ورودی را ویرایش کنید"
 
-#: assets/js/ivr.js:145
+#: assets/js/ivr.js:157
 msgid "Unable to delete the last entry"
 msgstr "نمیتوان آخرین ورودی را حذف کند"
 
-#: Ivr.class.php:119
+#: Ivr.class.php:123
 msgid "Unknown Error"
 msgstr "خطای ناشناخته"
 
-#: Ivr.class.php:139
+#: Ivr.class.php:143
 msgid "Unsupported file format"
 msgstr "فرمت فایل پشتیبانی نمیشود"
 
-#: assets/js/ivr.js:248
+#: assets/js/ivr.js:260
 msgid "Unsupported file type"
 msgstr "نوع فایل پشتیبانی نمیشود"
 
@@ -526,7 +530,7 @@ msgstr ""
 msgid "Yes"
 msgstr "بله"
 
-#: assets/js/ivr.js:563
+#: assets/js/ivr.js:575
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr "مرورگر شما ضبط پیام را محدود کرده، لطفا تنظیمات را بررسی کنید"
 

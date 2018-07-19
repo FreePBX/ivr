@@ -1,4 +1,16 @@
 var announcementRecording = null, recording = false, recordings = {}, soundBlob = null;
+
+$("#duplicate").click(function(e){
+	e.preventDefault();
+	e.stopPropagation();
+	$('input[name="action"]').val("save");
+	name = $('input[name="name"]').val();
+	$('input[name="name"]').val(name + "_COPY_");
+	$('input[name="id"]').val("");
+	$("#extdisplay").val("");
+	$("#frm_ivr").submit();
+});
+
  $(document).on('change',  $("select[name^='goto']"), function(){
 		 var string = $(this).attr('activeElement');
 		var id =  $(string).attr('id');
