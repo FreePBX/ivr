@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 13:55-0400\n"
+"POT-Creation-Date: 2018-07-24 19:19-0400\n"
 "PO-Revision-Date: 2018-02-16 18:13+0200\n"
 "Last-Translator: Nils <Nils@heckenkamp.info>\n"
 "Language-Team: German <http://weblate.freepbx.org/projects/freepbx/ivr/de_DE/"
@@ -43,7 +43,7 @@ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 "ALERT_INFO kann zur Ruftonunterscheidung mit SIP-Geräten verwendet werden."
 
-#: page.ivr.php:46
+#: page.ivr.php:47
 msgid "Actions"
 msgstr "Aktionen"
 
@@ -234,7 +234,7 @@ msgstr "IVR"
 msgid "IVR DTMF Options"
 msgstr "IVR DTMF Optionen"
 
-#: views/advanced_form.php:41
+#: page.ivr.php:46 views/advanced_form.php:41
 msgid "IVR Description"
 msgstr "IVR Beschreibung"
 

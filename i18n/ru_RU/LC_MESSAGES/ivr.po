@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 13:55-0400\n"
+"POT-Creation-Date: 2018-07-24 19:19-0400\n"
 "PO-Revision-Date: 2017-05-17 01:42+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -55,7 +55,7 @@ msgstr "Значение \"0\" отключает данный таймаут"
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 
-#: page.ivr.php:46
+#: page.ivr.php:47
 msgid "Actions"
 msgstr "Действия"
 
@@ -250,7 +250,7 @@ msgstr "Интерактивное меню (IVR)"
 msgid "IVR DTMF Options"
 msgstr "DTMF-опции голосового меню"
 
-#: views/advanced_form.php:41
+#: page.ivr.php:46 views/advanced_form.php:41
 msgid "IVR Description"
 msgstr "Описание Интерактивного меню"
 

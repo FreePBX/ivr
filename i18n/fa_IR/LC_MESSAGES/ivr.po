@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 13:55-0400\n"
+"POT-Creation-Date: 2018-07-24 19:19-0400\n"
 "PO-Revision-Date: 2016-04-26 06:49+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -41,7 +41,7 @@ msgstr "مقدار ۰ تایم اوت را غیرفعال میکند"
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr "ALERT_INFO can  be used for distinctive ring with SIP devices."
 
-#: page.ivr.php:46
+#: page.ivr.php:47
 msgid "Actions"
 msgstr "عملیات"
 
@@ -230,7 +230,7 @@ msgstr "منوی صوتی"
 msgid "IVR DTMF Options"
 msgstr "گزینه های DTMF منوی صوتی"
 
-#: views/advanced_form.php:41
+#: page.ivr.php:46 views/advanced_form.php:41
 msgid "IVR Description"
 msgstr "شرح منوی صوتی"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 13:55-0400\n"
+"POT-Creation-Date: 2018-07-24 19:19-0400\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -40,7 +40,7 @@ msgstr "如果值是0，则关闭超时"
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 
-#: page.ivr.php:46
+#: page.ivr.php:47
 msgid "Actions"
 msgstr "操作"
 
@@ -220,7 +220,7 @@ msgstr "语音IVR"
 msgid "IVR DTMF Options"
 msgstr "IVR语音提示选项"
 
-#: views/advanced_form.php:41
+#: page.ivr.php:46 views/advanced_form.php:41
 msgid "IVR Description"
 msgstr "IVR 描述"
 

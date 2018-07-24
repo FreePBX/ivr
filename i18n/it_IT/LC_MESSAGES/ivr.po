@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 13:55-0400\n"
+"POT-Creation-Date: 2018-07-24 19:19-0400\n"
 "PO-Revision-Date: 2008-11-05 17:52+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
@@ -36,7 +36,7 @@ msgstr ""
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 
-#: page.ivr.php:46
+#: page.ivr.php:47
 msgid "Actions"
 msgstr ""
 
@@ -217,7 +217,7 @@ msgstr ""
 msgid "IVR DTMF Options"
 msgstr ""
 
-#: views/advanced_form.php:41
+#: page.ivr.php:46 views/advanced_form.php:41
 msgid "IVR Description"
 msgstr ""
 
