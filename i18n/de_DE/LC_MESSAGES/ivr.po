@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-24 19:19-0400\n"
-"PO-Revision-Date: 2018-06-28 01:00+0000\n"
+"PO-Revision-Date: 2018-07-27 15:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ivr/de/>\n"
 "Language: de_DE\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.19.1\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: Ivr.class.php:166
 msgid "A PHP extension stopped the file upload"
@@ -40,7 +40,8 @@ msgstr "Ein Wert von 0 deaktiviert das Zeitlimit"
 #: views/advanced_form.php:159
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
-"ALERT_INFO kann zur Ruftonunterscheidung mit SIP-Geräten verwendet werden."
+"ALERT_INFO kann für einen charakteristischen Klingelton auf SIP-Geräten "
+"genutzt werden."
 
 #: page.ivr.php:47
 msgid "Actions"
@@ -235,7 +236,7 @@ msgstr "IVR"
 
 #: views/advanced_form.php:60
 msgid "IVR DTMF Options"
-msgstr "IVR DTMF Optionen"
+msgstr "IVR-MFV-Optionen"
 
 #: page.ivr.php:46 views/advanced_form.php:41
 msgid "IVR Description"
@@ -340,7 +341,7 @@ msgstr "Nichts"
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr ""
-"Anzahl der Wiederholungen, wenn kein DTMF gehört wird und die IVR-Auswahl "
+"Anzahl der Wiederholungen, wenn kein MFV gehört wird und die IVR-Auswahl "
 "abläuft."
 
 #: views/advanced_form.php:210
@@ -357,8 +358,8 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
-"Überschreiben Sie die Ruftonlautstärke. Hinweis: Dies gilt nur für Telefone "
-"von %s zu diesem Zeitpunkt"
+"Ruftonlautstärke übersteuern. Hinweis: Dies gilt zur Zeit nur für Telefone "
+"von %s"
 
 #: views/simple_form.php:62
 msgid "Play Previous Recording"
@@ -502,7 +503,7 @@ msgstr ""
 
 #: Ivr.class.php:123
 msgid "Unknown Error"
-msgstr ""
+msgstr "Unbekannter Fehler"
 
 #: Ivr.class.php:143
 msgid "Unsupported file format"
@@ -510,11 +511,11 @@ msgstr ""
 
 #: assets/js/ivr.js:260
 msgid "Unsupported file type"
-msgstr ""
+msgstr "Nicht unterstützter Dateityp"
 
 #: views/simple_form.php:65 views/simple_form.php:113
 msgid "Update Required"
-msgstr ""
+msgstr "Aktualisierung erforderlich"
 
 #: views/simple_form.php:131
 #, php-format
