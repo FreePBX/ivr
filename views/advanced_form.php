@@ -333,7 +333,7 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="gotoinvalid"></i>
 						</div>
 						<div class="col-md-9">
-							<?php echo drawselects($ivr['invalid_destination'], 'invalid', false, false, '', true)?>
+							<?php echo drawselects($ivr['invalid_destination'], 'invalid', false, false, _('None'))?>
 						</div>
 					</div>
 				</div>
@@ -491,7 +491,7 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="gototimeout"></i>
 						</div>
 						<div class="col-md-9">
-							<?php echo drawselects($ivr['timeout_destination'], 'timeout', false, false, '', true)?>
+							<?php echo drawselects($ivr['timeout_destination'], 'timeout', false, false, _('None'))?>
 						</div>
 					</div>
 				</div>
