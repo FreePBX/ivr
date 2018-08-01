@@ -541,6 +541,7 @@ function ivr_check_destinations($dest=true) {
 			'dest' => $thisdest,
 			'description' => sprintf(_("IVR: %s (%s)"),$name,"Invalid Destination"),
 			'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($thisid),
+			'allow_empty' => true,
 		);
 	}
 
@@ -559,6 +560,7 @@ function ivr_check_destinations($dest=true) {
 			'dest' => $thisdest,
 			'description' => sprintf(_("IVR: %s (%s)"),$name,"Timeout Destination"),
 			'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($thisid),
+			'allow_empty' => true,
 		);
 	}
 	$destlist = array_merge($destlist_option, $destlist_invalid, $destlist_timeout);
