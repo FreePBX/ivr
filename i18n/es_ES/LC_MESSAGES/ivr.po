@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-24 19:19-0400\n"
+"POT-Creation-Date: 2018-08-01 16:52-0400\n"
 "PO-Revision-Date: 2016-12-09 21:14+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -254,12 +254,12 @@ msgstr "Lista IVR"
 msgid "IVR Name"
 msgstr "Nombre de IVR"
 
-#: functions.inc.php:595 functions.inc.php:617
+#: functions.inc.php:597 functions.inc.php:619
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR : %s"
 
-#: functions.inc.php:542 functions.inc.php:560
+#: functions.inc.php:542 functions.inc.php:561
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
@@ -327,7 +327,8 @@ msgstr ""
 msgid "No file was uploaded"
 msgstr ""
 
-#: views/advanced_form.php:175 views/form.php:50 views/form.php:56
+#: views/advanced_form.php:175 views/advanced_form.php:336
+#: views/advanced_form.php:494 views/form.php:50 views/form.php:56
 #: views/form.php:62 views/form.php:68 views/form.php:74
 #: views/simple_form.php:171
 msgid "None"
