@@ -5,10 +5,10 @@ class Backup Extends Base\BackupBase{
   public function runBackup($id,$transaction){
     $this->addDependency('core');
     $this->addDependency('recordings');
-    $congfigs = [
+    $configs = [
         'ivrs' => $this->FreePBX->Ivr->getDetails(),
         'entries' => $this->FreePBX->Ivr->getAllEntries(),
     ];
-    $this->addConfigs($this->FreePBX->Ivr->getDetails());
+    $this->addConfigs($configs);
   }
 }

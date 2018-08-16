@@ -42,6 +42,16 @@ class Ivr extends FreePBX_Helpers implements BMO {
 		}
 	}
 
+	public function setDatabase($pdo){
+	$this->db = $pdo;
+	return $this;
+	}
+	
+	public function resetDatabase(){
+	$this->db = $this->FreePBX->Database;
+	return $this;
+	}
+
 	public function install() {}
 	public function uninstall() {}
 	public function doConfigPageInit($page) {
