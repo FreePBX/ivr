@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 13:56-0400\n"
+"POT-Creation-Date: 2018-08-20 14:58-0400\n"
 "PO-Revision-Date: 2017-05-17 01:42+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -35,17 +35,9 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:224
+#: Ivr.class.php:287
 msgid "A PHP extension stopped the file upload"
 msgstr ""
-
-#: page.ivr.php:18
-msgid ""
-"A connection to Asterisk Manager could not be made. This module requires "
-"Asterisk to be running and have proper credentials"
-msgstr ""
-"Невозможно подключиться к Asterisk-менеджеру. Этот модуль требует "
-"запущенного процесса Asterisk  и должен иметь необходимые полномочия"
 
 #: views/advanced_form.php:135
 msgid "A value of 0 disables the timeout"
@@ -55,7 +47,7 @@ msgstr "Значение \"0\" отключает данный таймаут"
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 
-#: page.ivr.php:46
+#: views/grid.php:35
 msgid "Actions"
 msgstr "Действия"
 
@@ -63,7 +55,7 @@ msgstr "Действия"
 msgid "Add Another Entry"
 msgstr "Добавить другую запись"
 
-#: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
+#: views/grid.php:12 /usr/src/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr "Добавить IVR"
 
@@ -111,11 +103,15 @@ msgstr "Приложения"
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
 
+#: Restore.php:8
+msgid "Backup empty"
+msgstr ""
+
 #: views/simple_form.php:73
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:228
+#: Ivr.class.php:291
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
@@ -133,7 +129,7 @@ msgstr ""
 "которых также производится вызов в действующее Меню, но возврат и "
 "перенаправление может привести к неожиданным результатам"
 
-#: functions.inc.php:412
+#: functions.inc.php:332
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -149,10 +145,6 @@ msgstr ""
 "НЕТ , то вызов пойдёт на выбранное направление . Если имеются  вложенные  "
 "меню ,то это может привести к неоднозначному поведению"
 
-#: page.ivr.php:16
-msgid "Connection Error"
-msgstr "Ошибка подключения"
-
 #: ivr.i18n.php:8
 msgid ""
 "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
@@ -164,11 +156,11 @@ msgstr ""
 "звонящих в разные назначения (например. Нажмите 1 для отдела продаж) и/или "
 "разрешить прямой донабор внутренних номеров."
 
-#: views/form.php:55 views/form.php:61 views/form.php:67 views/form.php:73
+#: views/form.php:12 views/form.php:18 views/form.php:24 views/form.php:30
 msgid "Default"
 msgstr "По умолчанию"
 
-#: Ivr.class.php:126 functions.inc.php:412
+#: Ivr.class.php:189 functions.inc.php:332
 msgid "Delete"
 msgstr "Удалить"
 
@@ -185,7 +177,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Описание голосового меню"
 
-#: functions.inc.php:412
+#: functions.inc.php:332
 msgid "Destination"
 msgstr "Назначение"
 
@@ -199,7 +191,7 @@ msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Назначения направления звонка после воспроизведения записи о Тайм-ауте."
 
-#: functions.inc.php:412
+#: functions.inc.php:332
 msgid "Digits"
 msgstr ""
 
@@ -207,7 +199,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:412
+#: functions.inc.php:332
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -217,13 +209,9 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr ""
 
-#: Ivr.class.php:136
+#: Ivr.class.php:199
 msgid "Duplicate"
 msgstr ""
-
-#: views/form.php:44
-msgid "Edit IVR: "
-msgstr "Редактировать голосовое меню: "
 
 #: assets/js/ivr.js:233
 msgid "Edit:"
@@ -233,7 +221,7 @@ msgstr "Редактировать:"
 msgid "Enable Direct Dial"
 msgstr "Разрешить прямые наборы"
 
-#: Ivr.class.php:221
+#: Ivr.class.php:284
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -245,8 +233,8 @@ msgstr "Приветствие , проигрываемое при входе в
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:28 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:77 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "Интерактивное меню (IVR)"
 
@@ -254,7 +242,7 @@ msgstr "Интерактивное меню (IVR)"
 msgid "IVR DTMF Options"
 msgstr "DTMF-опции голосового меню"
 
-#: views/advanced_form.php:41
+#: views/advanced_form.php:41 views/grid.php:32
 msgid "IVR Description"
 msgstr "Описание Интерактивного меню"
 
@@ -270,21 +258,21 @@ msgstr "Основыне настройки Интерактивного мен�
 msgid "IVR List"
 msgstr "Список голосового емню"
 
-#: page.ivr.php:45 views/advanced_form.php:17 views/simple_form.php:8
+#: views/advanced_form.php:17 views/grid.php:29 views/simple_form.php:8
 msgid "IVR Name"
 msgstr "Название Интерактивного меню"
 
-#: functions.inc.php:547 functions.inc.php:569
+#: functions.inc.php:468 functions.inc.php:490
 #, php-format
 msgid "IVR: %s"
 msgstr "Интерактивное меню: %s"
 
-#: functions.inc.php:494 functions.inc.php:512
+#: functions.inc.php:413 functions.inc.php:432
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:476
+#: functions.inc.php:395
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "Интерактивное меню: %s / Опция: %s"
@@ -321,7 +309,7 @@ msgstr "Воспроизведение при неуданой попытке "
 msgid "List IVRs"
 msgstr "Спискок голосовых меню"
 
-#: Ivr.class.php:218
+#: Ivr.class.php:281
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -335,21 +323,18 @@ msgstr "Имя голосового меню"
 msgid "No"
 msgstr "Нет"
 
-#: page.ivr.php:15
-msgid "No Astman, Not loading IVR"
-msgstr ""
-
 #: assets/js/ivr.js:337
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:215
+#: Ivr.class.php:278
 msgid "No file was uploaded"
 msgstr ""
 
-#: views/advanced_form.php:175 views/form.php:50 views/form.php:56
-#: views/form.php:62 views/form.php:68 views/form.php:74
-#: views/simple_form.php:171
+#: views/advanced_form.php:175 views/advanced_form.php:336
+#: views/advanced_form.php:494 views/form.php:7
+#: /usr/src/freepbx/ivr/views/form.php:13 views/form.php:19 views/form.php:25
+#: views/form.php:31 views/simple_form.php:171
 msgid "None"
 msgstr "Нет"
 
@@ -413,20 +398,15 @@ msgstr ""
 "Предлагает опции    вызывающим абонентам  для прямого набора внутреннего "
 "номера ."
 
-#: functions.inc.php:374
-#, php-format
-msgid "Recording created for IVR named '%s'"
-msgstr ""
-
 #: assets/js/ivr.js:571
 msgid "Recording..."
 msgstr ""
 
-#: Ivr.class.php:131
+#: Ivr.class.php:194
 msgid "Reset"
 msgstr "Сброс"
 
-#: functions.inc.php:412
+#: functions.inc.php:332
 msgid "Return"
 msgstr "Возврат"
 
@@ -442,7 +422,7 @@ msgstr "Возврат по таймауту"
 msgid "Return to IVR after VM"
 msgstr "Возвращение в Интерактивное меню после Голосовой Почты"
 
-#: functions.inc.php:412
+#: functions.inc.php:332
 msgid "Return to this IVR when finished"
 msgstr ""
 
@@ -469,21 +449,21 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
-#: Ivr.class.php:141
+#: Ivr.class.php:204
 msgid "Submit"
 msgstr "Подтвердить"
 
-#: Ivr.class.php:209
+#: Ivr.class.php:272
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:206
+#: Ivr.class.php:269
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:212
+#: Ivr.class.php:275
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
@@ -522,11 +502,11 @@ msgstr ""
 msgid "Unable to delete the last entry"
 msgstr ""
 
-#: Ivr.class.php:181
+#: Ivr.class.php:244
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:201
+#: Ivr.class.php:264
 msgid "Unsupported file format"
 msgstr ""
 
@@ -558,6 +538,19 @@ msgstr ""
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr "нажатии цифры"
+
+#~ msgid ""
+#~ "A connection to Asterisk Manager could not be made. This module requires "
+#~ "Asterisk to be running and have proper credentials"
+#~ msgstr ""
+#~ "Невозможно подключиться к Asterisk-менеджеру. Этот модуль требует "
+#~ "запущенного процесса Asterisk  и должен иметь необходимые полномочия"
+
+#~ msgid "Connection Error"
+#~ msgstr "Ошибка подключения"
+
+#~ msgid "Edit IVR: "
+#~ msgstr "Редактировать голосовое меню: "
 
 #~ msgid "Checking for invalid_append_announce.."
 #~ msgstr "Проверка на invalid_append_announce.."
