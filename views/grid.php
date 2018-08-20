@@ -12,21 +12,24 @@
 							<?php echo _("Add IVR") ?>
 						</a>
 					</div>
-					<table id="ivrgrid" 
-						data-url="ajax.php?module=ivr&amp;command=getJSON&amp;jdata=grid" 
-						data-cache="false" 
+					<table id="ivrgrid"
+						data-url="ajax.php?module=ivr&amp;command=getJSON&amp;jdata=grid"
+						data-cache="false"
 						data-toggle="table"
-						data-cookie="true" 
-						data-cookie-id-table="ivrgrid" 
-						data-toolbar="#toolbar-all" 
+						data-cookie="true"
+						data-cookie-id-table="ivrgrid"
+						data-toolbar="#toolbar-all"
 						data-maintain-selected="true"
-						data-pagination="true" 
-						data-search="true" 
+						data-pagination="true"
+						data-search="true"
 						class="table table-striped">
 						<thead>
 							<tr>
 								<th data-sortable="true" data-field="name">
 									<?php echo _("IVR Name") ?>
+								</th>
+								<th data-sortable="true" data-field="description">
+									<?php echo _("IVR Description")?>
 								</th>
 								<th class="col-md-2" data-field="link" data-formatter="actionFormatter">
 									<?php echo _("Actions") ?>

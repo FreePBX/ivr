@@ -49,7 +49,7 @@ function ivr_get_config($engine) {
 			$ext->splice('macro-dial-one','s-NOANSWER','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 			$ext->splice('macro-dial-one','s-BUSY','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
-			//splice into macro dial 
+			//splice into macro dial
 			$ext->splice('macro-dial','s','nddialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'ds=${ds}g'));
 			$ext->splice('macro-dial','s','hsdialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'ds=${ds}g'));
 
@@ -412,6 +412,7 @@ function ivr_check_destinations($dest=true) {
 			'dest' => $thisdest,
 			'description' => sprintf(_("IVR: %s (%s)"),$name,"Invalid Destination"),
 			'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($thisid),
+			'allow_empty' => true,
 		);
 	}
 
@@ -430,6 +431,7 @@ function ivr_check_destinations($dest=true) {
 			'dest' => $thisdest,
 			'description' => sprintf(_("IVR: %s (%s)"),$name,"Timeout Destination"),
 			'edit_url' => 'config.php?display=ivr&action=edit&id='.urlencode($thisid),
+			'allow_empty' => true,
 		);
 	}
 	$destlist = array_merge($destlist_option, $destlist_invalid, $destlist_timeout);

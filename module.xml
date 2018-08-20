@@ -11,8 +11,8 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
-		*15.0.3* FREEPBX-17668 IVR "Return" option missing when on options list 
-		*15.0.2* FREEPBX-17743 Used as Destination by X Objects missing an object 
+		*15.0.3* FREEPBX-17668 IVR "Return" option missing when on options list
+		*15.0.2* FREEPBX-17743 Used as Destination by X Objects missing an object
 		*15.0.1* Backup 15.0
 	</changelog>
 	<methods>
@@ -29,7 +29,7 @@
     <database>
         <table name="ivr_entries">
             <field name="ivr_id" type="integer"/>
-            <field name="selection" type="string" length="10" notnull="false"/>
+            <field name="selection" type="string" length="30" notnull="false"/>
             <field name="dest" type="string" length="200" notnull="false"/>
             <field name="ivr_ret" type="boolean" default="0"/>
         </table>

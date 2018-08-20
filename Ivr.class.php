@@ -297,8 +297,10 @@ public function ajaxHandler(){
 					$ret = array();
 					foreach ($ivrs as $r) {
 						$r['name'] = $r['name'] ? $r['name'] : 'IVR ID: ' . $r['id'];
+						$r['description'] = $r['description'] ? $r['description'] : '';
 						$ret[] = array(
 								'name' => $r['name'],
+								'description' => $r['description'],
 								'id' => $r['id'],
 								'link' => array($r['id'],$r['name'])
 							);
