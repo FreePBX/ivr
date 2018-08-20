@@ -17,7 +17,7 @@ class Restore Extends Base\RestoreBase{
   }
   public function processLegacy($pdo, $data, $tables, $unknownTables, $tmpfiledir){
       $tables = array_flip($tables+$unknownTables);
-      if(!isset($tables['ivr_entries']))
+      if(!isset($tables['ivr_entries'])){
           return $this;
       }
       $bmo = $this->FreePBX->$Ivr;
