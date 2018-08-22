@@ -20,7 +20,7 @@ class Restore Extends Base\RestoreBase{
       if(!isset($tables['ivr_entries'])){
           return $this;
       }
-      $bmo = $this->FreePBX->$Ivr;
+      $bmo = $this->FreePBX->Ivr;
       $bmo->setDatabase($pdo);
       $configs = [
         'ivrs' => $this->FreePBX->Ivr->getDetails(),
