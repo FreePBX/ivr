@@ -351,10 +351,17 @@ function ivr_configprocess(){
 			$vars[$var] = isset($_REQUEST[$var]) 	? $_REQUEST[$var]		: '';
 		}
 
-		$vars['timeout_append_announce'] = empty($vars['timeout_append_announce']) ? '0' : '1';
-		$vars['invalid_append_announce'] = empty($vars['invalid_append_announce']) ? '0' : '1';
-		$vars['timeout_ivr_ret'] = empty($vars['timeout_ivr_ret']) ? '0' : '1';
-		$vars['invalid_ivr_ret'] = empty($vars['invalid_ivr_ret']) ? '0' : '1';
+		// These are all booleans, not strings.
+		$bools = [ "invalid_append_announce", "timeout_append_announce", "timeout_ivr_ret", "invalid_ivr_ret" ];
+		foreach ($bools as $b) {
+			// If they're NOT empty, set them to (int)1. If they ARE empty, set them to (int)0.
+			$vars[$b] = (int) !empty($vars[$b]);
+		}
+
+		// If announcement is 'None', that's actually NULL.
+		if (isset($vars['announcement']) && !is_numeric($vars['announcement'])) {
+			$vars['announcement'] = null;
+		}
 
 		$action		= isset($_REQUEST['action'])	? $_REQUEST['action']	: '';
 		$entries	= isset($_REQUEST['entries'])	? $_REQUEST['entries']	: '';
