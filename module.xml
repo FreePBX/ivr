@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>14.0.1.7</version>
+	<version>14.0.2</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
+		*14.0.2* FREEPBX-17908 Do not error when creating IVRs
 		*14.0.1.7* FREEPBX-18024 apply to 14
 		*14.0.1.6* FREEPBX-18024 Update the allowed entry length
 		*14.0.1.5* FREEPBX-17851 IVR 13.0.27.12 generates empty destination warnings
