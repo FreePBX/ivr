@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-19 23:25-0400\n"
+"POT-Creation-Date: 2018-08-22 04:08+0000\n"
 "PO-Revision-Date: 2016-08-03 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -145,7 +145,7 @@ msgstr ""
 "よって、親IVRがこのIVRの直前でない場合は、予期しない結果を引き起こしてしまう"
 "可能性があります。注意:親IVRとは、このIVRに転送される前にあったIVRの事"
 
-#: functions.inc.php:460
+#: functions.inc.php:467
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -180,7 +180,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ivr.class.php:68 functions.inc.php:460
+#: Ivr.class.php:68 functions.inc.php:467
 msgid "Delete"
 msgstr "削除"
 
@@ -196,7 +196,7 @@ msgstr "このエントリーを削除する。変更適用を忘れずに！"
 msgid "Description of this IVR"
 msgstr "このIVRの説明。"
 
-#: functions.inc.php:460
+#: functions.inc.php:467
 msgid "Destination"
 msgstr "宛先"
 
@@ -208,7 +208,7 @@ msgstr "「無効な入力」の音声を再生してから転送する宛先。
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "タイムアウト音声を再生してから転送する宛先。"
 
-#: functions.inc.php:460
+#: functions.inc.php:467
 msgid "Digits"
 msgstr ""
 
@@ -216,7 +216,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:460
+#: functions.inc.php:467
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -283,17 +283,17 @@ msgstr "IVRリスト"
 msgid "IVR Name"
 msgstr "IVRの名前"
 
-#: functions.inc.php:597 functions.inc.php:619
+#: functions.inc.php:604 functions.inc.php:626
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:542 functions.inc.php:561
+#: functions.inc.php:549 functions.inc.php:568
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:524
+#: functions.inc.php:531
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / オプション: %s"
@@ -416,7 +416,7 @@ msgstr "無効な入力を検知した場合に、ユーザーに再試行を促
 msgid "Provides options for callers to direct dial an extension."
 msgstr "IVRから内線番号をそのままダイヤルすることで呼び出すことを許可します。"
 
-#: functions.inc.php:372
+#: functions.inc.php:379
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
@@ -429,7 +429,7 @@ msgstr ""
 msgid "Reset"
 msgstr "リセット"
 
-#: functions.inc.php:460
+#: functions.inc.php:467
 msgid "Return"
 msgstr "戻る"
 
@@ -445,7 +445,7 @@ msgstr "タイムアウト: 前IVRに戻る"
 msgid "Return to IVR after VM"
 msgstr "VMの後にIVRに戻る"
 
-#: functions.inc.php:460
+#: functions.inc.php:467
 msgid "Return to this IVR when finished"
 msgstr ""
 
