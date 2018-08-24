@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-22 04:08+0000\n"
-"PO-Revision-Date: 2018-07-27 15:00+0000\n"
+"PO-Revision-Date: 2018-08-25 12:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ivr/de/>\n"
 "Language: de_DE\n"
@@ -451,21 +451,25 @@ msgstr ""
 
 #: Ivr.class.php:83
 msgid "Submit"
-msgstr ""
+msgstr "Absenden"
 
 #: Ivr.class.php:151
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
+"Die hochgeladene Datei überschreitet die maximal zulässige Dateigröße, die "
+"als Wert \"MAX_FILE_SIZE\" im HTML-Formular festgelegt wurde"
 
 #: Ivr.class.php:148
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
+"Die hochgeladene Datei überschreitet die maximal zulässige Dateigröße, die "
+"in der 'upload_max_filesize'-Direktive in der php.ini festgelegt wurde"
 
 #: Ivr.class.php:154
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
+msgstr "Die hochgeladene Datei wurde nur teilweise hochgeladen"
 
 #: views/advanced_form.php:123
 msgid "Timeout"
@@ -508,7 +512,7 @@ msgstr "Unbekannter Fehler"
 
 #: Ivr.class.php:143
 msgid "Unsupported file format"
-msgstr ""
+msgstr "Nicht unterstütztes Dateiformat"
 
 #: assets/js/ivr.js:260
 msgid "Unsupported file type"
