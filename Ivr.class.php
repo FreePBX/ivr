@@ -6,15 +6,19 @@ use PDO;
 class Ivr extends FreePBX_Helpers implements BMO {
 	private $temp = null;
     private $db = null;
-    public static $defaults = [
+    const DEFAULTS = [
+		'display' => '',
         'action' => '',
-        'id' => '',
-        'display' => '',
-        'invalid_destination' => 'app-blackhole,hangup,1',
-        'timeout_destination' => 'app-blackhole,hangup,1',
-        'directdial' => 'ext-local',
+		'id' => '',
+		'invalid_destination' => 'app-blackhole,hangup,1',
+		'timeout_destination' => 'app-blackhole,hangup,1',
+		'name' => 'New IVR',
+		'description' => '',
+		'announcement' => '',
+		'directdial' => 'ext-local',
         'timeout_time' => 10,
-        'alertinfo' => '',
+		'alertinfo' => '',
+		'rvolume' => '',
         'invalid_loops' => 3,
         'invalid_retry_recording' => 'default',
         'invalid_append_announce' => '',
@@ -25,9 +29,8 @@ class Ivr extends FreePBX_Helpers implements BMO {
         'timeout_append_announce' => '',
         'timeout_ivr_ret' => '',
         'timeout_recording' => 'default',
-        'retvm' => '',
-        'announcement' => '',
-        'rvolume' => '',
+		'retvm' => '',
+		'entries' => [],
     ];
 	public function __construct($freepbx = null) {
 		if ($freepbx == null) {
@@ -55,15 +58,16 @@ class Ivr extends FreePBX_Helpers implements BMO {
 	public function install() {}
 	public function uninstall() {}
 	public function doConfigPageInit($page) {
-        foreach (self::$defaults as $key => $value) {
-            $vars[$key] = $this->getReq($key, $value);
-        }
+
+        foreach (self::DEFAULTS as $key => $value) {
+			$vars[$key] = isset($_REQUEST[$key])?$_REQUEST[$key]:$value;
+		}
         if($vars['action'] === 'delete'){
             needreload();
             return $this->delete($vars['id']);
         }
         if($vars['action'] === 'save'){
-            needreload();
+			needreload();
             $id = $this->saveDetails($vars);
             $this->saveEntries($id,$vars['entries']);
             $this_dest = ivr_getdest($id);
@@ -88,7 +92,8 @@ class Ivr extends FreePBX_Helpers implements BMO {
 
     public function saveDetails($vals){
         unset($vals['action']);
-        unset($vals['display']);
+		unset($vals['display']);
+		unset($vals['entries']);
         $keys = [];
         $placeholders = [];
         if ($vals['id']) {
@@ -104,16 +109,16 @@ class Ivr extends FreePBX_Helpers implements BMO {
         $keyString = rtrim(implode(',',$keys),',');
         $placeString = rtrim(implode(',',$placeholders),',');
         $sql = sprintf('%s (%s) VALUES (%s)', $start, $keyString, $placeString);
-        $this->FreePBX->Database->prepare($sql)->execute($vals);
+        $this->db->prepare($sql)->execute($vals);
         // Was this a new one?
         if (!isset($vals['id'])) {
-            $vals['id'] = $this->FreePBX->Database->lastInsertId('id');
+            $vals['id'] = $this->db->lastInsertId('id');
         }
         return $vals['id'];
     }
 
     public function deleteDetailsById($id){
-        $this->FreePBX->Database->prepare('DELETE FROM ivr_details WHERE id = :id')->execute([':id' => $id]);
+        $this->db->prepare('DELETE FROM ivr_details WHERE id = :id')->execute([':id' => $id]);
         return $this;
     }
 
@@ -143,7 +148,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 	}
     
     public function deleteEntriesById($id){
-        $this->FreePBX->Database->prepare('DELETE FROM ivr_entries WHERE ivr_id = :ivr_id')->execute([':ivr_id' => $id]);
+        $this->db->prepare('DELETE FROM ivr_entries WHERE ivr_id = :ivr_id')->execute([':ivr_id' => $id]);
         return $this;
     }
 
@@ -151,7 +156,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
         $this->deleteEntriesById($id);
         if ($entries) {
             $entries['ivr_ret'] = array_values($entries['ivr_ret']);
-            $stmt = $this->FreePBX->Database->prepare('INSERT INTO ivr_entries VALUES (:ivr_id, :selection, :dest, :ivr_ret)');
+            $stmt = $this->db->prepare('INSERT INTO ivr_entries VALUES (:ivr_id, :selection, :dest, :ivr_ret)');
 
             for ($i = 0; $i < count($entries['ext']); ++$i) {
 
@@ -171,7 +176,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 
     public function getAllEntries(){
         $final = [];
-        $all = $this->FreePBX->Database->query('SELECT * FROM ivr_entries',PDO::FETCH_ASSOC);
+        $all = $this->db->query('SELECT * FROM ivr_entries',PDO::FETCH_ASSOC);
         foreach ($all as $item){
             $final[$item['ivr_id']][] = $item;
         }
@@ -323,10 +328,10 @@ public function ajaxHandler(){
 		}
     }
     public function showPage(){
-        if(empty($_GET['action']) && empty($_GET['id'])){
+        if(empty($_GET['action']) && empty($_GET['id']) || $_GET['action'] === 'delete'){
             return load_view(__DIR__ . '/views/grid.php');
         }
-        $vars['ivr'] = self::$defaults;
+        $vars['ivr'] = self::DEFAULTS;
         if(!empty($_GET['id'])){
             $vars['ivr'] = $this->getDetails($_GET['id']);
         }
