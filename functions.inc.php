@@ -312,8 +312,6 @@ function ivr_get_entries($id) {
 	return $res;
 }
 
-
-
 //save ivr settings
 function ivr_save_details($vals){
     FreePBX::Modules()->deprecatedFunction();
