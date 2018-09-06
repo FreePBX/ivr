@@ -3,6 +3,53 @@
 //	Copyright 2015 Sangoma Technologies.
 //
 $freepbx = FreePBX::Create();
+$request = $_REQUEST;
+extract($request, EXTR_SKIP);
+$infohtml = '';
+$delURL = '';
+if ($action == 'add') {
+	$ivr = array();
+	$heading = _("Add IVR");
+	$deet = array(
+		'id', 'name', 'description', 'announcement', 'directdial',
+		'invalid_loops', 'invalid_retry_recording',
+		'invalid_recording', 'invalid_destination', 'invalid_ivr_ret',
+		'timeout_loops', 'timeout_time', 'timeout_retry_recording',
+		'timeout_recording', 'timeout_destination', 'timeout_ivr_ret',
+		'retvm', 'rvolume'
+	);
+
+	//keep vairables set on new ivr's
+	foreach ($deet as $d) {
+		switch ($d) {
+			case 'invalid_loops':
+			case 'timeout_loops';
+			$ivr[$d] = 3;
+			break;
+		case 'announcement':
+			$ivr[$d] = '';
+			break;
+		case 'invalid_recording':
+		case 'invalid_retry_recording':
+		case 'timeout_retry_recording':
+		case 'timeout_recording':
+			$ivr[$d] = 'default';
+			break;
+		case 'timeout_time':
+			$ivr[$d] = 10;
+			break;
+		default:
+			$ivr[$d] = '';
+			break;
+	}
+}
+} else {
+	$ivr = ivr_get_details($id);
+	$heading = _('Edit IVR: ');
+	$heading .= ($ivr['name'] ? $ivr['name'] : 'ID ' . $ivr['id']);
+	$infohtml = FreePBX::View()->destinationUsage(ivr_getdest($ivr['id']));
+	$delURL = '?display=ivr&action=delete&id=' . $id;
+}
 $recordingList = recordings_list();
 $annopts = '<option>'._('None').'</option>';
 foreach($recordingList as $r){
