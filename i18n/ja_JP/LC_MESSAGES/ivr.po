@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-22 04:08+0000\n"
+"POT-Creation-Date: 2018-09-06 14:14-0400\n"
 "PO-Revision-Date: 2016-08-03 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -62,11 +62,11 @@ msgstr ""
 "Asterisk Managerへの接続に失敗しました。このモジュールを使うには、Asteriskが"
 "稼働しており、認証設定が正しい値になっている必要があります。"
 
-#: views/advanced_form.php:135
+#: views/advanced_form.php:162
 msgid "A value of 0 disables the timeout"
 msgstr "0を設定するとタイムアウトは無効になります。"
 
-#: views/advanced_form.php:159
+#: views/advanced_form.php:186
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr "SIPデバイスの鳴り分けを実現するにはALERT_INFOを活用できます。"
 
@@ -78,11 +78,11 @@ msgstr "アクション"
 msgid "Add Another Entry"
 msgstr "新規エントリー"
 
-#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
+#: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr "IVRを追加"
 
-#: views/advanced_form.php:263
+#: views/advanced_form.php:290
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
@@ -90,17 +90,17 @@ msgstr ""
 "発信者から無効な入力を検知した場合は、リトライの音声を再生してからIVRのメイン"
 "アナウンスをもう一度再生します。"
 
-#: views/advanced_form.php:421
+#: views/advanced_form.php:448
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr "リトライ音声を再生した後、IVRのメインアナウンスをもう一度再生します。"
 
-#: views/advanced_form.php:147
+#: views/advanced_form.php:174
 msgid "Alert Info"
 msgstr ""
 
-#: views/advanced_form.php:135
+#: views/advanced_form.php:162
 msgid "Amount of time to be considered a timeout."
 msgstr "タイムアウトと見なす時間。"
 
@@ -108,11 +108,11 @@ msgstr "タイムアウトと見なす時間。"
 msgid "Announcement"
 msgstr "アナウンス"
 
-#: views/advanced_form.php:406
+#: views/advanced_form.php:433
 msgid "Append Announcement on Timeout"
 msgstr "タイムアウト後のメインアナウンス"
 
-#: views/advanced_form.php:248
+#: views/advanced_form.php:275
 msgid "Append Announcement to Invalid"
 msgstr "無効な入力: メインアナウナス"
 
@@ -132,7 +132,7 @@ msgstr ""
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
-#: views/advanced_form.php:448
+#: views/advanced_form.php:475
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -145,11 +145,11 @@ msgstr ""
 "よって、親IVRがこのIVRの直前でない場合は、予期しない結果を引き起こしてしまう"
 "可能性があります。注意:親IVRとは、このIVRに転送される前にあったIVRの事"
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid "Choose a destination to route the call to"
 msgstr ""
 
-#: views/advanced_form.php:290
+#: views/advanced_form.php:317
 msgid ""
 "Choose yes to have this option return to a parent IVR if it was called from "
 "a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -180,7 +180,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ivr.class.php:68 functions.inc.php:467
+#: Ivr.class.php:68 functions.inc.php:477
 msgid "Delete"
 msgstr "削除"
 
@@ -196,19 +196,19 @@ msgstr "このエントリーを削除する。変更適用を忘れずに！"
 msgid "Description of this IVR"
 msgstr "このIVRの説明。"
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid "Destination"
 msgstr "宛先"
 
-#: views/advanced_form.php:344
+#: views/advanced_form.php:371
 msgid "Destination to send the call to after Invalid Recording is played"
 msgstr "「無効な入力」の音声を再生してから転送する宛先。"
 
-#: views/advanced_form.php:502
+#: views/advanced_form.php:529
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "タイムアウト音声を再生してから転送する宛先。"
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid "Digits"
 msgstr ""
 
@@ -216,7 +216,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -246,6 +246,10 @@ msgstr "ダイレクトダイヤルを許可"
 msgid "Failed to write file to disk"
 msgstr ""
 
+#: views/advanced_form.php:123
+msgid "Force Strict Dial Timeout"
+msgstr ""
+
 #: views/simple_form.php:131
 msgid "Greeting to be played on entry to the IVR."
 msgstr "IVRに入ったときに再生する音声。"
@@ -254,8 +258,8 @@ msgstr "IVRに入ったときに再生する音声。"
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:28 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:28 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "IVR"
 
@@ -267,7 +271,7 @@ msgstr "IVR DTMFオプション"
 msgid "IVR Description"
 msgstr "IVRの説明"
 
-#: views/advanced_form.php:536
+#: views/advanced_form.php:563
 msgid "IVR Entries"
 msgstr "IVRエントリー"
 
@@ -283,17 +287,17 @@ msgstr "IVRリスト"
 msgid "IVR Name"
 msgstr "IVRの名前"
 
-#: functions.inc.php:604 functions.inc.php:626
+#: functions.inc.php:614 functions.inc.php:636
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:549 functions.inc.php:568
+#: functions.inc.php:559 functions.inc.php:578
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:531
+#: functions.inc.php:541
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / オプション: %s"
@@ -302,7 +306,7 @@ msgstr "IVR: %s / オプション: %s"
 msgid "IVRs require a valid name"
 msgstr ""
 
-#: views/advanced_form.php:529
+#: views/advanced_form.php:556
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
@@ -310,19 +314,29 @@ msgstr ""
 "「はい」に設定すると、このIVRを出てから、ユーザのボイスメールにつながった場合"
 "には、ボイスメール終了後にこのIVRに戻ります。"
 
-#: views/advanced_form.php:332
+#: views/advanced_form.php:138
+msgid ""
+"If set to 'Yes' then IVR will wait the specified timeout length for the full "
+"entry. If set to 'No' then IVR will match on the first digit(s) that match "
+"IVR entries, thus if you have entries of 1 and 123 when the caller presses 1 "
+"it will dial entry 1, when they press 123 it will match on the first entry "
+"so it will dial 1. Changing this setting to 'Yes' will wait the full timeout "
+"for the entry so that 123 will match 123. Default is 'No'"
+msgstr ""
+
+#: views/advanced_form.php:359
 msgid "Invalid Destination"
 msgstr "無効な入力: 宛先"
 
-#: views/advanced_form.php:306
+#: views/advanced_form.php:333
 msgid "Invalid Recording"
 msgstr "無効な入力: 音声"
 
-#: views/advanced_form.php:198
+#: views/advanced_form.php:225
 msgid "Invalid Retries"
 msgstr "無効な入力: リトライ数"
 
-#: views/advanced_form.php:222
+#: views/advanced_form.php:249
 msgid "Invalid Retry Recording"
 msgstr "無効な入力: 音声"
 
@@ -338,9 +352,10 @@ msgstr ""
 msgid "Name of this IVR"
 msgstr "このIVRの名前"
 
-#: views/advanced_form.php:103 views/advanced_form.php:255
-#: views/advanced_form.php:282 views/advanced_form.php:413
-#: views/advanced_form.php:440 views/advanced_form.php:521 views/entries.php:43
+#: views/advanced_form.php:103 views/advanced_form.php:130
+#: views/advanced_form.php:282 views/advanced_form.php:309
+#: views/advanced_form.php:440 views/advanced_form.php:467
+#: views/advanced_form.php:548 views/entries.php:43
 msgid "No"
 msgstr "いいえ"
 
@@ -356,25 +371,25 @@ msgstr ""
 msgid "No file was uploaded"
 msgstr ""
 
-#: views/advanced_form.php:175 views/advanced_form.php:336
-#: views/advanced_form.php:494 views/form.php:50 views/form.php:56
+#: views/advanced_form.php:202 views/advanced_form.php:363
+#: views/advanced_form.php:521 views/form.php:50 views/form.php:56
 #: views/form.php:62 views/form.php:68 views/form.php:74
 #: views/simple_form.php:171
 msgid "None"
 msgstr "なし"
 
-#: views/advanced_form.php:368
+#: views/advanced_form.php:395
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr "DTMFを検知できず、IVRでタイムアウトとなった場合のリトライ数。"
 
-#: views/advanced_form.php:210
+#: views/advanced_form.php:237
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
 msgstr "発信者から無効な入力を検知したときにリトライする回数。"
 
-#: views/advanced_form.php:187 views/simple_form.php:183
+#: views/advanced_form.php:214 views/simple_form.php:183
 #, php-format
 msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
@@ -389,7 +404,7 @@ msgstr ""
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
-#: views/advanced_form.php:320 views/advanced_form.php:478
+#: views/advanced_form.php:347 views/advanced_form.php:505
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
@@ -398,7 +413,7 @@ msgstr ""
 "発信者を別の宛先に転送する前に再生する音声。発信者が 0 を押した場合や、最大の"
 "失敗数 (無効な入力リトライ設定の値) に達したときに再生します。"
 
-#: views/advanced_form.php:394
+#: views/advanced_form.php:421
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
@@ -406,7 +421,7 @@ msgstr ""
 "タイムアウトとなったときに再生する音声。この音声は、入力し直すように促す前に"
 "再生するアナウンスです。例: 「入力が確認できません」"
 
-#: views/advanced_form.php:236
+#: views/advanced_form.php:263
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
@@ -416,7 +431,7 @@ msgstr "無効な入力を検知した場合に、ユーザーに再試行を促
 msgid "Provides options for callers to direct dial an extension."
 msgstr "IVRから内線番号をそのままダイヤルすることで呼び出すことを許可します。"
 
-#: functions.inc.php:379
+#: functions.inc.php:389
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
@@ -429,23 +444,23 @@ msgstr ""
 msgid "Reset"
 msgstr "リセット"
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid "Return"
 msgstr "戻る"
 
-#: views/advanced_form.php:275
+#: views/advanced_form.php:302
 msgid "Return on Invalid"
 msgstr "無効な入力: 前IVRに戻る"
 
-#: views/advanced_form.php:433
+#: views/advanced_form.php:460
 msgid "Return on Timeout"
 msgstr "タイムアウト: 前IVRに戻る"
 
-#: views/advanced_form.php:514
+#: views/advanced_form.php:541
 msgid "Return to IVR after VM"
 msgstr "VMの後にIVRに戻る"
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid "Return to this IVR when finished"
 msgstr ""
 
@@ -453,7 +468,7 @@ msgstr ""
 msgid "Ring Tone"
 msgstr ""
 
-#: views/advanced_form.php:170 views/simple_form.php:166
+#: views/advanced_form.php:197 views/simple_form.php:166
 msgid "Ringer Volume Override"
 msgstr ""
 
@@ -490,23 +505,23 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
-#: views/advanced_form.php:123
+#: views/advanced_form.php:150
 msgid "Timeout"
 msgstr "タイムアウト"
 
-#: views/advanced_form.php:490
+#: views/advanced_form.php:517
 msgid "Timeout Destination"
 msgstr "タイムアウトの宛先"
 
-#: views/advanced_form.php:464
+#: views/advanced_form.php:491
 msgid "Timeout Recording"
 msgstr "タイムアウト音声"
 
-#: views/advanced_form.php:356
+#: views/advanced_form.php:383
 msgid "Timeout Retries"
 msgstr "タイムアウトリトライ数"
 
-#: views/advanced_form.php:380
+#: views/advanced_form.php:407
 msgid "Timeout Retry Recording"
 msgstr "タイムアウトリトライ音声"
 
@@ -548,9 +563,10 @@ msgid ""
 "includes archives (that include multiple files) and multiple files"
 msgstr ""
 
-#: views/advanced_form.php:101 views/advanced_form.php:253
-#: views/advanced_form.php:280 views/advanced_form.php:411
-#: views/advanced_form.php:438 views/advanced_form.php:519 views/entries.php:41
+#: views/advanced_form.php:101 views/advanced_form.php:128
+#: views/advanced_form.php:280 views/advanced_form.php:307
+#: views/advanced_form.php:438 views/advanced_form.php:465
+#: views/advanced_form.php:546 views/entries.php:41
 msgid "Yes"
 msgstr "はい"
 

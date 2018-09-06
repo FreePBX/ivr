@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-22 04:08+0000\n"
+"POT-Creation-Date: 2018-09-06 14:14-0400\n"
 "PO-Revision-Date: 2017-07-20 13:20+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -33,11 +33,11 @@ msgstr ""
 "Không thể tạo một kết nối đến Bộ quản lý Asterisk ( Asterisk Manager). Mô "
 "đun này yêu cầu Asterisk phải đang chạy và có những chứng thực phù hợp"
 
-#: views/advanced_form.php:135
+#: views/advanced_form.php:162
 msgid "A value of 0 disables the timeout"
 msgstr "Gía trị bằng 0 sẽ vô hiệu thời gian chờ"
 
-#: views/advanced_form.php:159
+#: views/advanced_form.php:186
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr ""
 "ALERT_INFO  có thể được sử dụng để phân biệt chuông với các thiết bị SIP."
@@ -50,11 +50,11 @@ msgstr "Các thao tác"
 msgid "Add Another Entry"
 msgstr "Thêm mục nhập khác"
 
-#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
+#: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Thêm IVR"
 
-#: views/advanced_form.php:263
+#: views/advanced_form.php:290
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
@@ -62,7 +62,7 @@ msgstr ""
 "Sau khi phát bản ghi phép thử lại không hợp lệ hệ thống sẽ phát lại thông "
 "báo IVR chính"
 
-#: views/advanced_form.php:421
+#: views/advanced_form.php:448
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
@@ -70,11 +70,11 @@ msgstr ""
 "Sau khi phát bản ghi thời gian chờ để thử lại (Timeout Retry Recording), hệ "
 "thống sẽ phát lại thông báo IVR chính"
 
-#: views/advanced_form.php:147
+#: views/advanced_form.php:174
 msgid "Alert Info"
 msgstr "Thông tin cảnh báo"
 
-#: views/advanced_form.php:135
+#: views/advanced_form.php:162
 msgid "Amount of time to be considered a timeout."
 msgstr "Lượng thời gian được xem là thời gian chờ."
 
@@ -82,11 +82,11 @@ msgstr "Lượng thời gian được xem là thời gian chờ."
 msgid "Announcement"
 msgstr "Thông báo"
 
-#: views/advanced_form.php:406
+#: views/advanced_form.php:433
 msgid "Append Announcement on Timeout"
 msgstr "Kèm thông báo trên Timeout"
 
-#: views/advanced_form.php:248
+#: views/advanced_form.php:275
 msgid "Append Announcement to Invalid"
 msgstr "Kèm thông báo vào Invalid"
 
@@ -106,7 +106,7 @@ msgstr "Trình duyệt"
 msgid "Can Not Find Uploaded Files"
 msgstr "Không tìm thấy các tệp đã tải lên"
 
-#: views/advanced_form.php:448
+#: views/advanced_form.php:475
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -120,11 +120,11 @@ msgstr ""
 "đem đến một kết quả lạ nếu có một IVR đã gọi trong đường dẫn cuộc gọi nhưng "
 "không phải trước nó"
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid "Choose a destination to route the call to"
 msgstr "Chọn một điểm đích để định tuyến cuộc gọi tới"
 
-#: views/advanced_form.php:290
+#: views/advanced_form.php:317
 msgid ""
 "Choose yes to have this option return to a parent IVR if it was called from "
 "a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -157,7 +157,7 @@ msgstr ""
 msgid "Default"
 msgstr "Mặc định"
 
-#: Ivr.class.php:68 functions.inc.php:467
+#: Ivr.class.php:68 functions.inc.php:477
 msgid "Delete"
 msgstr "Xóa"
 
@@ -175,21 +175,21 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Mô tả của IVR này"
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid "Destination"
 msgstr "Điểm đích"
 
-#: views/advanced_form.php:344
+#: views/advanced_form.php:371
 msgid "Destination to send the call to after Invalid Recording is played"
 msgstr "Điểm đích để gửi cuộc gọi sau khi phát các khi bản ghi không hợp lệ"
 
-#: views/advanced_form.php:502
+#: views/advanced_form.php:529
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Điểm đích để gửi cuộc gọi đến sau khi phát bản ghi thời gian chờ (Timeout "
 "Recording)."
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid "Digits"
 msgstr "Các chữ số"
 
@@ -197,7 +197,7 @@ msgstr "Các chữ số"
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -229,6 +229,10 @@ msgstr "Kích hoạt Direct Dial (quay số trực tiếp)"
 msgid "Failed to write file to disk"
 msgstr "Ghi tệp vào đĩa không thành công"
 
+#: views/advanced_form.php:123
+msgid "Force Strict Dial Timeout"
+msgstr ""
+
 #: views/simple_form.php:131
 msgid "Greeting to be played on entry to the IVR."
 msgstr "Lời chào sẽ được phá trên mục nhập tới IVR."
@@ -237,8 +241,8 @@ msgstr "Lời chào sẽ được phá trên mục nhập tới IVR."
 msgid "Hit the red record button to start recording from your browser"
 msgstr "Nhấn nút ghi màu đỏ để bắt đầu ghi từ trình duyệt của bạn"
 
-#: Ivr.class.php:28 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:28 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "IVR (Interactive Voice Response) hệ thống tương tác tự động"
 
@@ -250,7 +254,7 @@ msgstr "Tùy chọn DTMF của IVR"
 msgid "IVR Description"
 msgstr "Mô tả IVR"
 
-#: views/advanced_form.php:536
+#: views/advanced_form.php:563
 msgid "IVR Entries"
 msgstr "Các mục nhập IVR"
 
@@ -266,17 +270,17 @@ msgstr "Danh sách IVR"
 msgid "IVR Name"
 msgstr "Tên IVR"
 
-#: functions.inc.php:604 functions.inc.php:626
+#: functions.inc.php:614 functions.inc.php:636
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR:%s"
 
-#: functions.inc.php:549 functions.inc.php:568
+#: functions.inc.php:559 functions.inc.php:578
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:531
+#: functions.inc.php:541
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s/ Tùy chọn: %s"
@@ -285,7 +289,7 @@ msgstr "IVR: %s/ Tùy chọn: %s"
 msgid "IVRs require a valid name"
 msgstr "Các IVR yêu cầu một tên hợp lệ"
 
-#: views/advanced_form.php:529
+#: views/advanced_form.php:556
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
@@ -293,19 +297,29 @@ msgstr ""
 "Nếu Yes, khi thoát khỏi hộp thư thoại một người gọi sẽ được trở lại IVR này "
 "nếu chúng có một thư thoại người dùng"
 
-#: views/advanced_form.php:332
+#: views/advanced_form.php:138
+msgid ""
+"If set to 'Yes' then IVR will wait the specified timeout length for the full "
+"entry. If set to 'No' then IVR will match on the first digit(s) that match "
+"IVR entries, thus if you have entries of 1 and 123 when the caller presses 1 "
+"it will dial entry 1, when they press 123 it will match on the first entry "
+"so it will dial 1. Changing this setting to 'Yes' will wait the full timeout "
+"for the entry so that 123 will match 123. Default is 'No'"
+msgstr ""
+
+#: views/advanced_form.php:359
 msgid "Invalid Destination"
 msgstr "Điểm đích không hợp lệ"
 
-#: views/advanced_form.php:306
+#: views/advanced_form.php:333
 msgid "Invalid Recording"
 msgstr "Bản ghi không hợp lệ"
 
-#: views/advanced_form.php:198
+#: views/advanced_form.php:225
 msgid "Invalid Retries"
 msgstr "Phép thử lại không hợp lệ"
 
-#: views/advanced_form.php:222
+#: views/advanced_form.php:249
 msgid "Invalid Retry Recording"
 msgstr "Bản ghi phép thử lại không hợp lệ"
 
@@ -321,9 +335,10 @@ msgstr "Thiếu một thư mục tạm"
 msgid "Name of this IVR"
 msgstr "Tên của IVR này"
 
-#: views/advanced_form.php:103 views/advanced_form.php:255
-#: views/advanced_form.php:282 views/advanced_form.php:413
-#: views/advanced_form.php:440 views/advanced_form.php:521 views/entries.php:43
+#: views/advanced_form.php:103 views/advanced_form.php:130
+#: views/advanced_form.php:282 views/advanced_form.php:309
+#: views/advanced_form.php:440 views/advanced_form.php:467
+#: views/advanced_form.php:548 views/entries.php:43
 msgid "No"
 msgstr "Không"
 
@@ -339,21 +354,21 @@ msgstr "Không có tệp nào để tải!"
 msgid "No file was uploaded"
 msgstr "Đã không có tệp nào được tải lên"
 
-#: views/advanced_form.php:175 views/advanced_form.php:336
-#: views/advanced_form.php:494 views/form.php:50 views/form.php:56
+#: views/advanced_form.php:202 views/advanced_form.php:363
+#: views/advanced_form.php:521 views/form.php:50 views/form.php:56
 #: views/form.php:62 views/form.php:68 views/form.php:74
 #: views/simple_form.php:171
 msgid "None"
 msgstr "Không có"
 
-#: views/advanced_form.php:368
+#: views/advanced_form.php:395
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr ""
 "Số lần cho phép thử lại khi không có nào DTMF nhận nghe và IVR được chọn hết "
 "giờ."
 
-#: views/advanced_form.php:210
+#: views/advanced_form.php:237
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
@@ -361,7 +376,7 @@ msgstr ""
 "Lượng thời gian để thử lại khi nhận trả lời không hợp lệ/ không khớp từ "
 "người gọi"
 
-#: views/advanced_form.php:187 views/simple_form.php:183
+#: views/advanced_form.php:214 views/simple_form.php:183
 #, php-format
 msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
@@ -378,7 +393,7 @@ msgstr "Phát bản ghi trước đó"
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
-#: views/advanced_form.php:320 views/advanced_form.php:478
+#: views/advanced_form.php:347 views/advanced_form.php:505
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
@@ -389,7 +404,7 @@ msgstr ""
 "khớp ( như được quy định bởi các pháp thử lại không hợp lệ ( Invalid "
 "Retries))"
 
-#: views/advanced_form.php:394
+#: views/advanced_form.php:421
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
@@ -397,7 +412,7 @@ msgstr ""
 "Phát lại nhắc nhở khi xảy ra thời gian chờ (timeout), trước khi nhắc nhở "
 "người dùng thử lại lần nữa"
 
-#: views/advanced_form.php:236
+#: views/advanced_form.php:263
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
@@ -410,7 +425,7 @@ msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 "Cung cấp các tùy chọn cho người gọi có thể quay số một máy nhánh trực tiếp."
 
-#: functions.inc.php:379
+#: functions.inc.php:389
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr "Bản ghi được tạo cho IVR có tên '%s'"
@@ -423,23 +438,23 @@ msgstr "Đang ghi ..."
 msgid "Reset"
 msgstr "Cài đặt lại"
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid "Return"
 msgstr "Trả lại"
 
-#: views/advanced_form.php:275
+#: views/advanced_form.php:302
 msgid "Return on Invalid"
 msgstr "Trả lại trên Invalid"
 
-#: views/advanced_form.php:433
+#: views/advanced_form.php:460
 msgid "Return on Timeout"
 msgstr "Trả lại trên Timeout"
 
-#: views/advanced_form.php:514
+#: views/advanced_form.php:541
 msgid "Return to IVR after VM"
 msgstr "Trả lại tới IVR sau VM"
 
-#: functions.inc.php:467
+#: functions.inc.php:477
 msgid "Return to this IVR when finished"
 msgstr "Trả lại tới IVR này khi hoàn thành"
 
@@ -447,7 +462,7 @@ msgstr "Trả lại tới IVR này khi hoàn thành"
 msgid "Ring Tone"
 msgstr "Nhạc chuông"
 
-#: views/advanced_form.php:170 views/simple_form.php:166
+#: views/advanced_form.php:197 views/simple_form.php:166
 msgid "Ringer Volume Override"
 msgstr "Ghi đè âm lượng chuông"
 
@@ -486,23 +501,23 @@ msgstr "Tệp đã tải lên vượt qua kích cỡ tối đa quy định trong
 msgid "The uploaded file was only partially uploaded"
 msgstr "Tệp đã tải lên chỉ được tải lên từng phần"
 
-#: views/advanced_form.php:123
+#: views/advanced_form.php:150
 msgid "Timeout"
 msgstr "Thời gian chờ"
 
-#: views/advanced_form.php:490
+#: views/advanced_form.php:517
 msgid "Timeout Destination"
 msgstr "Điểm đích thời gian chờ"
 
-#: views/advanced_form.php:464
+#: views/advanced_form.php:491
 msgid "Timeout Recording"
 msgstr "Bản ghi thời gian chờ"
 
-#: views/advanced_form.php:356
+#: views/advanced_form.php:383
 msgid "Timeout Retries"
 msgstr "Thời gian chờ cho phép thử lại"
 
-#: views/advanced_form.php:380
+#: views/advanced_form.php:407
 msgid "Timeout Retry Recording"
 msgstr "Bản ghi thời gian chờ của Phép thử lại"
 
@@ -548,9 +563,10 @@ msgstr ""
 "Tải lên các tệp từ hệ thống tại chỗ của bạn. Các định dạng tải lên được hỗ "
 "trợ là: %s. Điều này bao gồm các tệp nén ( gồm các tệp) và nhiều tệp"
 
-#: views/advanced_form.php:101 views/advanced_form.php:253
-#: views/advanced_form.php:280 views/advanced_form.php:411
-#: views/advanced_form.php:438 views/advanced_form.php:519 views/entries.php:41
+#: views/advanced_form.php:101 views/advanced_form.php:128
+#: views/advanced_form.php:280 views/advanced_form.php:307
+#: views/advanced_form.php:438 views/advanced_form.php:465
+#: views/advanced_form.php:546 views/entries.php:41
 msgid "Yes"
 msgstr "Có"
 
