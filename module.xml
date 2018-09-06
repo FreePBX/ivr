@@ -62,6 +62,7 @@
 			<field name="invalid_ivr_ret" type="boolean" default="0"/>
 			<field name="alertinfo" type="string" length="150" notnull="false"/>
 			<field name="rvolume" type="string" length="2" default=""/>
+			<field name="strict_dial_timeout" type="boolean" default="0"/>
 	</table>
 </database>
 	<popovers>
