@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ivr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 14:35-0400\n"
+"POT-Creation-Date: 2018-09-06 19:03-0400\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -51,7 +51,7 @@ msgstr ""
 msgid "Add Another Entry"
 msgstr ""
 
-#: views/grid.php:12 /usr/src/freepbx/ivr/views/rnav.php:3
+#: views/form.php:12 views/grid.php:12 /dev/shm/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr "Lägg till IVR"
 
@@ -143,7 +143,7 @@ msgstr ""
 "upp en röststyrd meny, t.ex. Tryck ett för försäljning och/eller "
 "direktnummer till anknytningar"
 
-#: views/form.php:12 views/form.php:18 views/form.php:24 views/form.php:30
+#: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 msgid "Default"
 msgstr ""
 
@@ -197,6 +197,10 @@ msgstr ""
 msgid "Duplicate"
 msgstr ""
 
+#: views/form.php:48
+msgid "Edit IVR: "
+msgstr ""
+
 #: assets/js/ivr.js:233
 msgid "Edit:"
 msgstr ""
@@ -221,8 +225,8 @@ msgstr ""
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:97 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "IVR"
 
@@ -329,9 +333,9 @@ msgid "No file was uploaded"
 msgstr ""
 
 #: views/advanced_form.php:202 views/advanced_form.php:363
-#: views/advanced_form.php:521 views/form.php:7
-#: /usr/src/freepbx/ivr/views/form.php:13 views/form.php:19 views/form.php:25
-#: views/form.php:31 views/simple_form.php:171
+#: views/advanced_form.php:521 views/form.php:54 views/form.php:60
+#: views/form.php:66 views/form.php:72 views/form.php:78
+#: views/simple_form.php:171
 msgid "None"
 msgstr "Inget"
 

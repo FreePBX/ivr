@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 14:35-0400\n"
+"POT-Creation-Date: 2018-09-06 19:03-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -42,7 +42,7 @@ msgstr "Ações"
 msgid "Add Another Entry"
 msgstr "Adicionar Outro Elemento"
 
-#: views/grid.php:12 /usr/src/freepbx/ivr/views/rnav.php:3
+#: views/form.php:12 views/grid.php:12 /dev/shm/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr "Adicionar URA"
 
@@ -147,7 +147,7 @@ msgstr ""
 "(por exemplo, para suporte pressione 1) e / ou autoriza discar direto para "
 "um ramal do sistema."
 
-#: views/form.php:12 views/form.php:18 views/form.php:24 views/form.php:30
+#: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 msgid "Default"
 msgstr "Padrão"
 
@@ -203,6 +203,10 @@ msgstr "Solte a Gravação do Anúncio Aqui"
 msgid "Duplicate"
 msgstr ""
 
+#: views/form.php:48
+msgid "Edit IVR: "
+msgstr "Editar URA: "
+
 #: assets/js/ivr.js:233
 msgid "Edit:"
 msgstr "Editar:"
@@ -228,8 +232,8 @@ msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 "Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
 
-#: Ivr.class.php:97 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "URA"
 
@@ -338,9 +342,9 @@ msgid "No file was uploaded"
 msgstr "Nenhum arquivo foi carregado"
 
 #: views/advanced_form.php:202 views/advanced_form.php:363
-#: views/advanced_form.php:521 views/form.php:7
-#: /usr/src/freepbx/ivr/views/form.php:13 views/form.php:19 views/form.php:25
-#: views/form.php:31 views/simple_form.php:171
+#: views/advanced_form.php:521 views/form.php:54 views/form.php:60
+#: views/form.php:66 views/form.php:72 views/form.php:78
+#: views/simple_form.php:171
 msgid "None"
 msgstr "Nenhum"
 
@@ -568,9 +572,6 @@ msgstr "dígitos pressionados"
 
 #~ msgid "Connection Error"
 #~ msgstr "Erro de Conexão"
-
-#~ msgid "Edit IVR: "
-#~ msgstr "Editar URA: "
 
 #~ msgid "No Astman, Not loading IVR"
 #~ msgstr "Sem Astman, Não carrega a URA"
