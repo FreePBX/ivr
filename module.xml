@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>15.0.7</version>
+	<version>15.0.8</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,7 +11,8 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
-		*15.0.7* FREEPBX-18125 Fix delete from form 
+		*15.0.8* FREEPBX-18094
+		*15.0.7* FREEPBX-18125 Fix delete from form
 		*15.0.6* Packaging of ver 15.0.6
 		*15.0.5* FREEPBX-18113 Fix saving of IVR data.
 		*15.0.4* Packaging of ver 15.0.4
@@ -60,6 +61,7 @@
             <field name="invalid_ivr_ret" type="boolean" default="0"/>
             <field name="alertinfo" type="string" length="150" notnull="false"/>
             <field name="rvolume" type="string" length="2" default=""/>
+            <field name="strict_dial_timeout" type="boolean" default="0"/>
         </table>
     </database>
 	<popovers>
