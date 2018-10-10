@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 14:14-0400\n"
+"POT-Creation-Date: 2018-10-10 11:21-0400\n"
 "PO-Revision-Date: 2016-04-26 06:49+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -155,7 +155,7 @@ msgstr "پیشفرض"
 msgid "Delete"
 msgstr "حذف"
 
-#: assets/js/ivr.js:493
+#: assets/js/ivr.js:495
 msgid "Delete Recording"
 msgstr "حذف ضبط شده"
 
@@ -183,7 +183,7 @@ msgstr "داخلی که تماس بعد از اجرای منوی صوتی وقف
 msgid "Digits"
 msgstr "اعداد"
 
-#: assets/js/ivr.js:108
+#: assets/js/ivr.js:110
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
@@ -205,7 +205,7 @@ msgstr ""
 msgid "Edit IVR: "
 msgstr "ویرایش منوی صوتی ： "
 
-#: assets/js/ivr.js:233
+#: assets/js/ivr.js:235
 msgid "Edit:"
 msgstr "ویرایش ："
 
@@ -334,7 +334,7 @@ msgstr "خیر"
 msgid "No Astman, Not loading IVR"
 msgstr "بدون مدیریت استریسک، منوی صوتی بارگذاری نمیشود"
 
-#: assets/js/ivr.js:337
+#: assets/js/ivr.js:339
 msgid "No file to load!"
 msgstr "فایلی بارگذاری نشد!"
 
@@ -371,7 +371,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr "اجرای ضبط قبلی"
 
-#: assets/js/ivr.js:104
+#: assets/js/ivr.js:106
 msgid "Please enter a valid value for Digits Pressed"
 msgstr "لطفا مقدار عددی معتبر برای فشردن وارد کنید"
 
@@ -409,7 +409,7 @@ msgstr "ایجاد گزینه برای تماس مستقیم به یک داخل�
 msgid "Recording created for IVR named '%s'"
 msgstr "پیام ضبط شده تهیه شد برای منوی صوتی به نام '%s'"
 
-#: assets/js/ivr.js:571
+#: assets/js/ivr.js:573
 msgid "Recording..."
 msgstr "در حال ضبط.."
 
@@ -445,7 +445,7 @@ msgstr "صدای زنگ"
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: assets/js/ivr.js:493
+#: assets/js/ivr.js:495
 msgid "Save Recording"
 msgstr "ذخیره ضبط شده"
 
@@ -507,11 +507,11 @@ msgid ""
 "version or update your %s"
 msgstr "برای اجرای این فایل باید مرورگر خود را به روز کنید به نسخه %s"
 
-#: assets/js/ivr.js:161
+#: assets/js/ivr.js:163
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr "عدم حذف ورودی اول. لطفا ورودی را ویرایش کنید"
 
-#: assets/js/ivr.js:157
+#: assets/js/ivr.js:159
 msgid "Unable to delete the last entry"
 msgstr "نمیتوان آخرین ورودی را حذف کند"
 
@@ -523,7 +523,7 @@ msgstr "خطای ناشناخته"
 msgid "Unsupported file format"
 msgstr "فرمت فایل پشتیبانی نمیشود"
 
-#: assets/js/ivr.js:260
+#: assets/js/ivr.js:262
 msgid "Unsupported file type"
 msgstr "نوع فایل پشتیبانی نمیشود"
 
@@ -547,7 +547,7 @@ msgstr ""
 msgid "Yes"
 msgstr "بله"
 
-#: assets/js/ivr.js:575
+#: assets/js/ivr.js:577
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr "مرورگر شما ضبط پیام را محدود کرده، لطفا تنظیمات را بررسی کنید"
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 14:14-0400\n"
+"POT-Creation-Date: 2018-10-10 11:21-0400\n"
 "PO-Revision-Date: 2018-10-09 21:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ivr/de/>\n"
@@ -149,7 +149,7 @@ msgstr "Standard"
 msgid "Delete"
 msgstr "Löschen"
 
-#: assets/js/ivr.js:493
+#: assets/js/ivr.js:495
 msgid "Delete Recording"
 msgstr "Aufnahme löschen"
 
@@ -183,7 +183,7 @@ msgstr ""
 msgid "Digits"
 msgstr "Ziffern"
 
-#: assets/js/ivr.js:108
+#: assets/js/ivr.js:110
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
@@ -207,7 +207,7 @@ msgstr ""
 msgid "Edit IVR: "
 msgstr "IVR bearbeiten: "
 
-#: assets/js/ivr.js:233
+#: assets/js/ivr.js:235
 msgid "Edit:"
 msgstr "Bearbeiten:"
 
@@ -338,7 +338,7 @@ msgstr "Nein"
 msgid "No Astman, Not loading IVR"
 msgstr ""
 
-#: assets/js/ivr.js:337
+#: assets/js/ivr.js:339
 msgid "No file to load!"
 msgstr "Keine Datei zum Laden!"
 
@@ -381,7 +381,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr "Vorherige Aufnahme abspielen"
 
-#: assets/js/ivr.js:104
+#: assets/js/ivr.js:106
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
@@ -413,7 +413,7 @@ msgstr ""
 msgid "Recording created for IVR named '%s'"
 msgstr ""
 
-#: assets/js/ivr.js:571
+#: assets/js/ivr.js:573
 msgid "Recording..."
 msgstr ""
 
@@ -449,7 +449,7 @@ msgstr ""
 msgid "Ringer Volume Override"
 msgstr "Ruftonlautstärke überschreiben"
 
-#: assets/js/ivr.js:493
+#: assets/js/ivr.js:495
 msgid "Save Recording"
 msgstr "Aufnahme speichern"
 
@@ -513,11 +513,11 @@ msgid ""
 "version or update your %s"
 msgstr ""
 
-#: assets/js/ivr.js:161
+#: assets/js/ivr.js:163
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr ""
 
-#: assets/js/ivr.js:157
+#: assets/js/ivr.js:159
 msgid "Unable to delete the last entry"
 msgstr ""
 
@@ -529,7 +529,7 @@ msgstr "Unbekannter Fehler"
 msgid "Unsupported file format"
 msgstr "Nicht unterstütztes Dateiformat"
 
-#: assets/js/ivr.js:260
+#: assets/js/ivr.js:262
 msgid "Unsupported file type"
 msgstr "Nicht unterstützter Dateityp"
 
@@ -551,7 +551,7 @@ msgstr ""
 msgid "Yes"
 msgstr "Ja"
 
-#: assets/js/ivr.js:575
+#: assets/js/ivr.js:577
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 "Ihr Browser hat die Aufnahme blockiert. Bitte überprüfen sie Ihre "

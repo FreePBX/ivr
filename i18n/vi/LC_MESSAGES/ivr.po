@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 14:14-0400\n"
+"POT-Creation-Date: 2018-10-10 11:21-0400\n"
 "PO-Revision-Date: 2017-07-20 13:20+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -161,7 +161,7 @@ msgstr "Mặc định"
 msgid "Delete"
 msgstr "Xóa"
 
-#: assets/js/ivr.js:493
+#: assets/js/ivr.js:495
 msgid "Delete Recording"
 msgstr "Xóa bản ghi"
 
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Digits"
 msgstr "Các chữ số"
 
-#: assets/js/ivr.js:108
+#: assets/js/ivr.js:110
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
@@ -217,7 +217,7 @@ msgstr ""
 msgid "Edit IVR: "
 msgstr "Chỉnh sửa IVR: "
 
-#: assets/js/ivr.js:233
+#: assets/js/ivr.js:235
 msgid "Edit:"
 msgstr "Chỉnh sửa:"
 
@@ -346,7 +346,7 @@ msgstr "Không"
 msgid "No Astman, Not loading IVR"
 msgstr "Không có Astman, không tải IVR"
 
-#: assets/js/ivr.js:337
+#: assets/js/ivr.js:339
 msgid "No file to load!"
 msgstr "Không có tệp nào để tải!"
 
@@ -389,7 +389,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr "Phát bản ghi trước đó"
 
-#: assets/js/ivr.js:104
+#: assets/js/ivr.js:106
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
@@ -430,7 +430,7 @@ msgstr ""
 msgid "Recording created for IVR named '%s'"
 msgstr "Bản ghi được tạo cho IVR có tên '%s'"
 
-#: assets/js/ivr.js:571
+#: assets/js/ivr.js:573
 msgid "Recording..."
 msgstr "Đang ghi ..."
 
@@ -466,7 +466,7 @@ msgstr "Nhạc chuông"
 msgid "Ringer Volume Override"
 msgstr "Ghi đè âm lượng chuông"
 
-#: assets/js/ivr.js:493
+#: assets/js/ivr.js:495
 msgid "Save Recording"
 msgstr "Lưu bản ghi"
 
@@ -530,11 +530,11 @@ msgstr ""
 "Để phát media bạn cần phải cập nhật phiên bản gần nhất cho trình duyệt của "
 "mình  hoặc cập nhật %s"
 
-#: assets/js/ivr.js:161
+#: assets/js/ivr.js:163
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr "Không thể xóa mục nhập đầu tiên. Vui lòng chỉnh sửa thay thế"
 
-#: assets/js/ivr.js:157
+#: assets/js/ivr.js:159
 msgid "Unable to delete the last entry"
 msgstr "Không thể xóa mục nhập mới nhất"
 
@@ -546,7 +546,7 @@ msgstr "Lỗ không xác định"
 msgid "Unsupported file format"
 msgstr "Định dạng tệp không được hỗ trợ"
 
-#: assets/js/ivr.js:260
+#: assets/js/ivr.js:262
 msgid "Unsupported file type"
 msgstr "Kiểu tệp không được hỗ trợ"
 
@@ -570,7 +570,7 @@ msgstr ""
 msgid "Yes"
 msgstr "Có"
 
-#: assets/js/ivr.js:575
+#: assets/js/ivr.js:577
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 "Trình duyệt của bạn đã chặn Recording, vui lòng kiểm tra cài đặt của bạn"
