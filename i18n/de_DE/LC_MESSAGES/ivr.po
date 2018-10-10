@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-06 14:14-0400\n"
-"PO-Revision-Date: 2018-08-25 12:00+0000\n"
+"PO-Revision-Date: 2018-10-09 21:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ivr/de/>\n"
 "Language: de_DE\n"
@@ -488,7 +488,7 @@ msgstr "Die hochgeladene Datei wurde nur teilweise hochgeladen"
 
 #: views/advanced_form.php:150
 msgid "Timeout"
-msgstr ""
+msgstr "Zeitlimit"
 
 #: views/advanced_form.php:517
 msgid "Timeout Destination"
