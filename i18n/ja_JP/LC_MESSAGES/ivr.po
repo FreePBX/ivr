@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-07 12:58-0400\n"
+"POT-Creation-Date: 2018-10-10 11:22-0400\n"
 "PO-Revision-Date: 2016-08-03 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -70,7 +70,7 @@ msgstr "アクション"
 msgid "Add Another Entry"
 msgstr "新規エントリー"
 
-#: views/form.php:12 views/grid.php:12 /usr/src/freepbx/ivr/views/rnav.php:3
+#: views/form.php:12 views/grid.php:12 /dev/shm/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr "IVRを追加"
 
@@ -176,7 +176,7 @@ msgstr "デフォルト"
 msgid "Delete"
 msgstr "削除"
 
-#: assets/js/ivr.js:493
+#: assets/js/ivr.js:495
 msgid "Delete Recording"
 msgstr ""
 
@@ -204,7 +204,7 @@ msgstr "タイムアウト音声を再生してから転送する宛先。"
 msgid "Digits"
 msgstr ""
 
-#: assets/js/ivr.js:108
+#: assets/js/ivr.js:110
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
@@ -226,7 +226,7 @@ msgstr ""
 msgid "Edit IVR: "
 msgstr "IVRを編集: "
 
-#: assets/js/ivr.js:233
+#: assets/js/ivr.js:235
 msgid "Edit:"
 msgstr "編集:"
 
@@ -250,8 +250,8 @@ msgstr "IVRに入ったときに再生する音声。"
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:97 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "IVR"
 
@@ -351,7 +351,7 @@ msgstr "このIVRの名前"
 msgid "No"
 msgstr "いいえ"
 
-#: assets/js/ivr.js:337
+#: assets/js/ivr.js:339
 msgid "No file to load!"
 msgstr ""
 
@@ -388,7 +388,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr ""
 
-#: assets/js/ivr.js:104
+#: assets/js/ivr.js:106
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
@@ -419,7 +419,7 @@ msgstr "無効な入力を検知した場合に、ユーザーに再試行を促
 msgid "Provides options for callers to direct dial an extension."
 msgstr "IVRから内線番号をそのままダイヤルすることで呼び出すことを許可します。"
 
-#: assets/js/ivr.js:571
+#: assets/js/ivr.js:573
 msgid "Recording..."
 msgstr ""
 
@@ -455,7 +455,7 @@ msgstr ""
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: assets/js/ivr.js:493
+#: assets/js/ivr.js:495
 msgid "Save Recording"
 msgstr ""
 
@@ -515,11 +515,11 @@ msgid ""
 "version or update your %s"
 msgstr ""
 
-#: assets/js/ivr.js:161
+#: assets/js/ivr.js:163
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr ""
 
-#: assets/js/ivr.js:157
+#: assets/js/ivr.js:159
 msgid "Unable to delete the last entry"
 msgstr ""
 
@@ -531,7 +531,7 @@ msgstr ""
 msgid "Unsupported file format"
 msgstr ""
 
-#: assets/js/ivr.js:260
+#: assets/js/ivr.js:262
 msgid "Unsupported file type"
 msgstr ""
 
@@ -553,7 +553,7 @@ msgstr ""
 msgid "Yes"
 msgstr "はい"
 
-#: assets/js/ivr.js:575
+#: assets/js/ivr.js:577
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 

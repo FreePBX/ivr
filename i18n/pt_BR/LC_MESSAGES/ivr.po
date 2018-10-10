@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-07 12:58-0400\n"
+"POT-Creation-Date: 2018-10-10 11:22-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -42,7 +42,7 @@ msgstr "Ações"
 msgid "Add Another Entry"
 msgstr "Adicionar Outro Elemento"
 
-#: views/form.php:12 views/grid.php:12 /usr/src/freepbx/ivr/views/rnav.php:3
+#: views/form.php:12 views/grid.php:12 /dev/shm/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr "Adicionar URA"
 
@@ -155,7 +155,7 @@ msgstr "Padrão"
 msgid "Delete"
 msgstr "Apagar"
 
-#: assets/js/ivr.js:493
+#: assets/js/ivr.js:495
 msgid "Delete Recording"
 msgstr "Apagar Gravação"
 
@@ -185,7 +185,7 @@ msgstr ""
 msgid "Digits"
 msgstr "Dígitos"
 
-#: assets/js/ivr.js:108
+#: assets/js/ivr.js:110
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
@@ -207,7 +207,7 @@ msgstr ""
 msgid "Edit IVR: "
 msgstr "Editar URA: "
 
-#: assets/js/ivr.js:233
+#: assets/js/ivr.js:235
 msgid "Edit:"
 msgstr "Editar:"
 
@@ -232,8 +232,8 @@ msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 "Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
 
-#: Ivr.class.php:97 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "URA"
 
@@ -333,7 +333,7 @@ msgstr "Nome desta URA"
 msgid "No"
 msgstr "Não"
 
-#: assets/js/ivr.js:337
+#: assets/js/ivr.js:339
 msgid "No file to load!"
 msgstr "Nenhum arquivo para carregar!"
 
@@ -376,7 +376,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr "Reproduzir Gravação Anterior"
 
-#: assets/js/ivr.js:104
+#: assets/js/ivr.js:106
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
@@ -411,7 +411,7 @@ msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 "Fornece opções para usuários chamadores para discagem direta de um ramal."
 
-#: assets/js/ivr.js:571
+#: assets/js/ivr.js:573
 msgid "Recording..."
 msgstr "Gravando..."
 
@@ -447,7 +447,7 @@ msgstr "Opção de Toque"
 msgid "Ringer Volume Override"
 msgstr "Substituição do volume do toque"
 
-#: assets/js/ivr.js:493
+#: assets/js/ivr.js:495
 msgid "Save Recording"
 msgstr "Salvar Gravação"
 
@@ -513,11 +513,11 @@ msgstr ""
 "Para reproduzir a mídia, você precisará atualizar seu navegador para uma "
 "versão recente ou atualizar seu %s"
 
-#: assets/js/ivr.js:161
+#: assets/js/ivr.js:163
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr "Não é possível excluir o primeiro elemento. Edite em vez de excluir"
 
-#: assets/js/ivr.js:157
+#: assets/js/ivr.js:159
 msgid "Unable to delete the last entry"
 msgstr "Não é possível excluir o último elemento"
 
@@ -529,7 +529,7 @@ msgstr "Erro Desconhecido"
 msgid "Unsupported file format"
 msgstr "Formato de arquivo não suportado"
 
-#: assets/js/ivr.js:260
+#: assets/js/ivr.js:262
 msgid "Unsupported file type"
 msgstr "Tipo de arquivo não suportado"
 
@@ -554,7 +554,7 @@ msgstr ""
 msgid "Yes"
 msgstr "Sim"
 
-#: assets/js/ivr.js:575
+#: assets/js/ivr.js:577
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr "Seu Navegador Bloqueou a Gravação, verifique suas configurações"
 
