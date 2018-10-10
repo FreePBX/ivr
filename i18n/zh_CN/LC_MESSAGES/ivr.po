@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-01 16:51-0400\n"
+"POT-Creation-Date: 2018-10-10 11:21-0400\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -145,7 +145,7 @@ msgstr "默认"
 msgid "Delete"
 msgstr "删除"
 
-#: assets/js/ivr.js:481
+#: assets/js/ivr.js:483
 msgid "Delete Recording"
 msgstr ""
 
@@ -173,7 +173,7 @@ msgstr "播放超时提示后转发的目的地。"
 msgid "Digits"
 msgstr ""
 
-#: assets/js/ivr.js:96
+#: assets/js/ivr.js:98
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
@@ -191,7 +191,7 @@ msgstr ""
 msgid "Edit IVR: "
 msgstr "编辑IVR: "
 
-#: assets/js/ivr.js:221
+#: assets/js/ivr.js:223
 msgid "Edit:"
 msgstr "编辑:"
 
@@ -303,7 +303,7 @@ msgstr ""
 msgid "No Astman, Not loading IVR"
 msgstr ""
 
-#: assets/js/ivr.js:325
+#: assets/js/ivr.js:327
 msgid "No file to load!"
 msgstr ""
 
@@ -340,7 +340,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr ""
 
-#: assets/js/ivr.js:92
+#: assets/js/ivr.js:94
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
@@ -373,7 +373,7 @@ msgstr ""
 msgid "Recording created for IVR named '%s'"
 msgstr ""
 
-#: assets/js/ivr.js:559
+#: assets/js/ivr.js:561
 msgid "Recording..."
 msgstr ""
 
@@ -409,7 +409,7 @@ msgstr ""
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: assets/js/ivr.js:481
+#: assets/js/ivr.js:483
 msgid "Save Recording"
 msgstr ""
 
@@ -469,11 +469,11 @@ msgid ""
 "version or update your %s"
 msgstr ""
 
-#: assets/js/ivr.js:149
+#: assets/js/ivr.js:151
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr ""
 
-#: assets/js/ivr.js:145
+#: assets/js/ivr.js:147
 msgid "Unable to delete the last entry"
 msgstr ""
 
@@ -485,7 +485,7 @@ msgstr ""
 msgid "Unsupported file format"
 msgstr ""
 
-#: assets/js/ivr.js:248
+#: assets/js/ivr.js:250
 msgid "Unsupported file type"
 msgstr ""
 
@@ -506,7 +506,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: assets/js/ivr.js:563
+#: assets/js/ivr.js:565
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 

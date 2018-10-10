@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-01 16:51-0400\n"
+"POT-Creation-Date: 2018-10-10 11:21-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -164,7 +164,7 @@ msgstr "Padrão"
 msgid "Delete"
 msgstr "Apagar"
 
-#: assets/js/ivr.js:481
+#: assets/js/ivr.js:483
 msgid "Delete Recording"
 msgstr "Apagar Gravação"
 
@@ -194,7 +194,7 @@ msgstr ""
 msgid "Digits"
 msgstr "Dígitos"
 
-#: assets/js/ivr.js:96
+#: assets/js/ivr.js:98
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
@@ -212,7 +212,7 @@ msgstr "Solte a Gravação do Anúncio Aqui"
 msgid "Edit IVR: "
 msgstr "Editar URA: "
 
-#: assets/js/ivr.js:221
+#: assets/js/ivr.js:223
 msgid "Edit:"
 msgstr "Editar:"
 
@@ -327,7 +327,7 @@ msgstr "Não"
 msgid "No Astman, Not loading IVR"
 msgstr "Sem Astman, Não carrega a URA"
 
-#: assets/js/ivr.js:325
+#: assets/js/ivr.js:327
 msgid "No file to load!"
 msgstr "Nenhum arquivo para carregar!"
 
@@ -370,7 +370,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr "Reproduzir Gravação Anterior"
 
-#: assets/js/ivr.js:92
+#: assets/js/ivr.js:94
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
@@ -410,7 +410,7 @@ msgstr ""
 msgid "Recording created for IVR named '%s'"
 msgstr "Gravação criada para URA chamada '%s'"
 
-#: assets/js/ivr.js:559
+#: assets/js/ivr.js:561
 msgid "Recording..."
 msgstr "Gravando..."
 
@@ -446,7 +446,7 @@ msgstr "Opção de Toque"
 msgid "Ringer Volume Override"
 msgstr "Substituição do volume do toque"
 
-#: assets/js/ivr.js:481
+#: assets/js/ivr.js:483
 msgid "Save Recording"
 msgstr "Salvar Gravação"
 
@@ -512,11 +512,11 @@ msgstr ""
 "Para reproduzir a mídia, você precisará atualizar seu navegador para uma "
 "versão recente ou atualizar seu %s"
 
-#: assets/js/ivr.js:149
+#: assets/js/ivr.js:151
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr "Não é possível excluir o primeiro elemento. Edite em vez de excluir"
 
-#: assets/js/ivr.js:145
+#: assets/js/ivr.js:147
 msgid "Unable to delete the last entry"
 msgstr "Não é possível excluir o último elemento"
 
@@ -528,7 +528,7 @@ msgstr "Erro Desconhecido"
 msgid "Unsupported file format"
 msgstr "Formato de arquivo não suportado"
 
-#: assets/js/ivr.js:248
+#: assets/js/ivr.js:250
 msgid "Unsupported file type"
 msgstr "Tipo de arquivo não suportado"
 
@@ -552,7 +552,7 @@ msgstr ""
 msgid "Yes"
 msgstr "Sim"
 
-#: assets/js/ivr.js:563
+#: assets/js/ivr.js:565
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr "Seu Navegador Bloqueou a Gravação, verifique suas configurações"
 
