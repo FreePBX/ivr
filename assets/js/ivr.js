@@ -88,11 +88,13 @@ $(document).ready(function(){
 			var stop = false;
 			$('#ivr_entries tr > td:first-child input').each(function() {
 				var digit = $(this).val().trim();
+				var nb_digit = digit.replace(/\[(.+?)\]/g, "0"); // Remove [0-9] and replace by 0 : _14[0-9][0-9] gives _1400
+				var nb_digit = nb_digit.replace(/_|\-/, "");	 // Remove underscore to get a real length. : _1400 gives 1400 => LENGHT = 4
 				if(digit === '' || isDialpattern(digit) === false) {
 					alert(_("Please enter a valid value for Digits Pressed"));
 					stop = true;
 					return false;
-				}else if(digit.length > 10){
+				}else if(nb_digit.length > 10){
 					alert(_("Digits are limited to 10 digits."));
 					stop = true;
 					return false;
