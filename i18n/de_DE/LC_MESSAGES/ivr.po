@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-10 11:21-0400\n"
-"PO-Revision-Date: 2018-10-09 21:00+0000\n"
+"PO-Revision-Date: 2018-10-15 01:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ivr/de/>\n"
 "Language: de_DE\n"
@@ -77,11 +77,11 @@ msgstr ""
 
 #: views/advanced_form.php:70 views/simple_form.php:33
 msgid "Announcement"
-msgstr ""
+msgstr "Ansage"
 
 #: views/advanced_form.php:433
 msgid "Append Announcement on Timeout"
-msgstr ""
+msgstr "Ansage bei Zeitüberschreitung anfügen"
 
 #: views/advanced_form.php:275
 msgid "Append Announcement to Invalid"
