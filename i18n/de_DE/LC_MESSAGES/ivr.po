@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-10 11:21-0400\n"
-"PO-Revision-Date: 2018-10-15 01:00+0000\n"
+"PO-Revision-Date: 2018-10-17 12:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ivr/de/>\n"
 "Language: de_DE\n"
@@ -201,7 +201,7 @@ msgstr "Ankündigungs-Aufnahme hier speichern"
 
 #: Ivr.class.php:78
 msgid "Duplicate"
-msgstr ""
+msgstr "Doppelt"
 
 #: views/form.php:44
 msgid "Edit IVR: "
