@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-10 11:21-0400\n"
-"PO-Revision-Date: 2018-10-17 12:00+0000\n"
+"PO-Revision-Date: 2018-10-18 19:35+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ivr/de/>\n"
 "Language: de_DE\n"
@@ -49,31 +49,35 @@ msgstr "Aktionen"
 
 #: views/entries.php:70
 msgid "Add Another Entry"
-msgstr ""
+msgstr "Einen weiteren Eintrag hinzufügen"
 
 #: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
-msgstr ""
+msgstr "IVR hinzufügen"
 
 #: views/advanced_form.php:290
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
+"Nachdem die Aufforderung für die Wiederholung eines ungültigen Versuchs "
+"abgespielt wurde, wiederholt das System die Hauptansage des Sprachdialogs"
 
 #: views/advanced_form.php:448
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
 msgstr ""
+"Nachdem die Aufforderung für die Wiederholung nach einer Zeitüberschreitung "
+"abgespielt wurde, wiederholt das System die Hauptansage des Sprachdialogs"
 
 #: views/advanced_form.php:174
 msgid "Alert Info"
-msgstr ""
+msgstr "Alarminfo"
 
 #: views/advanced_form.php:162
 msgid "Amount of time to be considered a timeout."
-msgstr ""
+msgstr "Zeit, nach der eine Zeitüberschreitung auftritt."
 
 #: views/advanced_form.php:70 views/simple_form.php:33
 msgid "Announcement"
@@ -85,7 +89,7 @@ msgstr "Ansage bei Zeitüberschreitung anfügen"
 
 #: views/advanced_form.php:275
 msgid "Append Announcement to Invalid"
-msgstr ""
+msgstr "Hauptansage nach Hinweis auf Fehleingabe"
 
 #: ivr.i18n.php:6
 msgid "Applications"
@@ -112,6 +116,11 @@ msgid ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 msgstr ""
+"Markieren Sie dieses Kästchen, damit diese Option zu einem übergeordneten "
+"Sprachdialog zurückkehrt, falls sie von einem aufgerufen wurde. Falls nicht, "
+"wird zum ausgewählten Ziel gegangen.<br /><br />Der Rückweg führt zu einem "
+"Sprachdialog, der im Pfad vor diesem liegt, was zu ungewollten Ergebnissen "
+"führen kann, wenn ein Sprachdialog nicht direkt vor diesem angerufen wurde"
 
 #: functions.inc.php:477
 msgid "Choose a destination to route the call to"
@@ -125,6 +134,11 @@ msgid ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 msgstr ""
+"Wählen Sie „Ja“, damit diese Option zu einem übergeordneten Sprachdialog "
+"zurückkehrt, falls sie von einem aufgerufen wurde. Falls nicht, wird zum "
+"ausgewählten Ziel gegangen.<br /><br />Der Rückweg führt zu einem "
+"Sprachdialog, der im Pfad vor diesem liegt, was zu ungewollten Ergebnissen "
+"führen kann, wenn ein Sprachdialog nicht direkt vor diesem angerufen wurde"
 
 #: page.ivr.php:16
 msgid "Connection Error"
@@ -136,10 +150,10 @@ msgid ""
 "Response) menus. These can be used to send callers to different locations "
 "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 msgstr ""
-"Erstellt Menüs für Digital Receptionist (aka Auto Attendant, auch bekannt "
-"als Interactive Voice Response). Diese können verwendet werden, um Anrufer "
-"an verschiedene Orte zu senden (z. B. Drücken Sie 1 für Verkäufe) und / oder "
-"erlauben Sie die direkte Wahl von Nebenstellennummern."
+"Erstellt Menüs für Sprachdialoge , auch bekannt als <i>Interactive Voice "
+"Response</i>(IVR). Diese können verwendet werden, um Anrufer an verschiedene "
+"Orte zu senden (z. B. „Drücken Sie 1 für Vertrieb“) und / oder erlauben Sie "
+"die direkte Wahl von Nebenstellennummern."
 
 #: views/form.php:55 views/form.php:61 views/form.php:67 views/form.php:73
 msgid "Default"
@@ -161,7 +175,7 @@ msgstr ""
 
 #: views/advanced_form.php:53
 msgid "Description of this IVR"
-msgstr "Beschreibung dieses IVR"
+msgstr "Beschreibung dieses Sprachdialogs"
 
 #: functions.inc.php:477
 msgid "Destination"
@@ -170,14 +184,14 @@ msgstr "Ziel"
 #: views/advanced_form.php:371
 msgid "Destination to send the call to after Invalid Recording is played"
 msgstr ""
-"Ziel, an das der Anruf gesendet wird, nachdem die ungültige Aufnahme "
-"abgespielt wurde"
+"Ziel, an das der Anruf gesendet wird, nachdem die Aufnahme bei ungültiger "
+"Eingabe abgespielt wurde"
 
 #: views/advanced_form.php:529
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
-"Ziel, an das der Anruf gesendet werden soll, nachdem die Timeout-Aufnahme "
-"abgespielt wurde."
+"Ziel, an das der Anruf gesendet werden soll, nachdem die Aufnahme bei "
+"Zeitüberschreitung abgespielt wurde."
 
 #: functions.inc.php:477
 msgid "Digits"
@@ -185,19 +199,19 @@ msgstr "Ziffern"
 
 #: assets/js/ivr.js:110
 msgid "Digits are limited to 10 digits."
-msgstr ""
+msgstr "Die Länge ist auf zehn Ziffern begrenzt."
 
 #: functions.inc.php:477
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
 msgstr ""
-"Ziffern, die der Anrufer wählen muss, um auf das Ziel zuzugreifen. Ziffern "
-"sind auf 10 Ziffern begrenzt."
+"Ziffern, die der Anrufer wählen muss, um auf das Ziel zuzugreifen. Die Länge "
+"ist auf zehn Ziffern begrenzt."
 
 #: views/simple_form.php:80
 msgid "Drop Annoucement Recording Here"
-msgstr "Ankündigungs-Aufnahme hier speichern"
+msgstr "Ankündigungs-Aufnahme hier ablegen"
 
 #: Ivr.class.php:78
 msgid "Duplicate"
@@ -205,7 +219,7 @@ msgstr "Doppelt"
 
 #: views/form.php:44
 msgid "Edit IVR: "
-msgstr "IVR bearbeiten: "
+msgstr "Sprachdialog bearbeiten: "
 
 #: assets/js/ivr.js:235
 msgid "Edit:"
@@ -221,11 +235,11 @@ msgstr "Fehler beim Speichern der Datei"
 
 #: views/advanced_form.php:123
 msgid "Force Strict Dial Timeout"
-msgstr ""
+msgstr "Strikte Zeitüberschreitung erzwingen"
 
 #: views/simple_form.php:131
 msgid "Greeting to be played on entry to the IVR."
-msgstr ""
+msgstr "Begrüßung, die zu Beginn des Sprachdialogs abgespielt werden soll."
 
 #: views/simple_form.php:110
 msgid "Hit the red record button to start recording from your browser"
@@ -244,7 +258,7 @@ msgstr "IVR-MFV-Optionen"
 
 #: page.ivr.php:46 views/advanced_form.php:41
 msgid "IVR Description"
-msgstr "IVR Beschreibung"
+msgstr "IVR-Beschreibung"
 
 #: views/advanced_form.php:563
 msgid "IVR Entries"
@@ -270,24 +284,24 @@ msgstr "IVR: %s"
 #: functions.inc.php:559 functions.inc.php:578
 #, php-format
 msgid "IVR: %s (%s)"
-msgstr ""
+msgstr "IVR: %s (%s)"
 
 #: functions.inc.php:541
 #, php-format
 msgid "IVR: %s / Option: %s"
-msgstr "VR: %s / Optionen: %s"
+msgstr "IVR: %s / Optione: %s"
 
 #: assets/js/ivr.js:82
 msgid "IVRs require a valid name"
-msgstr "IVRs benötigen einen gültigen Namen"
+msgstr "Sprachdialoge benötigen einen gültigen Namen"
 
 #: views/advanced_form.php:556
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
 msgstr ""
-"Wenn Ja, wird ein Anrufer nach dem Beenden der Voicemail an dieses IVR "
-"zurückgeleitet, wenn er eine Voicemail für die Benutzer erhält"
+"Wenn Ja, wird ein Anrufer nach dem Beenden der Voicemail an diesen "
+"Sprachdialog zurückgeleitet, wenn er eine Voicemail für die Benutzer erhält"
 
 #: views/advanced_form.php:138
 msgid ""
@@ -298,6 +312,12 @@ msgid ""
 "so it will dial 1. Changing this setting to 'Yes' will wait the full timeout "
 "for the entry so that 123 will match 123. Default is 'No'"
 msgstr ""
+"Wird dies auf „Ja“ gesetzt, wartet der Sprachdialog für die angegebene Zeit "
+"auf den vollständigen Eintrag. Bei „Nein“ gleicht der Sprachdialog nur die "
+"erste(n) Ziffer(n) ab, wenn Sie also die Einträge 1 und 123 haben und der "
+"Anrufer drückt 1, wird Eintrag 1 gewählt und wenn er 123 wählt, wird "
+"ebenfalls die 1 gewählt. Bei „Ja“ würde die gesamte Zeit abgewartet und 123 "
+"gewählt. Standardwert ist „Nein“."
 
 #: views/advanced_form.php:359
 msgid "Invalid Destination"
@@ -305,19 +325,19 @@ msgstr "Ungültiges Ziel"
 
 #: views/advanced_form.php:333
 msgid "Invalid Recording"
-msgstr "Ungültige Aufzeichnung"
+msgstr "Aufzeichnung für ungültiges Ziel"
 
 #: views/advanced_form.php:225
 msgid "Invalid Retries"
-msgstr "Ungültige Wiederholungen"
+msgstr "Wiederholungen für ungültige Eingabe"
 
 #: views/advanced_form.php:249
 msgid "Invalid Retry Recording"
-msgstr "Ungültige Aufnahme wiederholen"
+msgstr "Aufnahme für Wiederholung nach ungültiger Eingabe"
 
 #: views/rnav.php:2
 msgid "List IVRs"
-msgstr "Liste IVRs"
+msgstr "IVRs auflisten"
 
 #: Ivr.class.php:160
 msgid "Missing a temporary folder"
@@ -336,7 +356,7 @@ msgstr "Nein"
 
 #: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
-msgstr ""
+msgstr "Kein <i>Astman</i>, lade IVR nicht"
 
 #: assets/js/ivr.js:339
 msgid "No file to load!"
@@ -351,7 +371,7 @@ msgstr "Es wurde keine Datei hochgeladen"
 #: views/form.php:62 views/form.php:68 views/form.php:74
 #: views/simple_form.php:171
 msgid "None"
-msgstr "Nichts"
+msgstr "Kein*e"
 
 #: views/advanced_form.php:395
 msgid ""
@@ -383,7 +403,7 @@ msgstr "Vorherige Aufnahme abspielen"
 
 #: assets/js/ivr.js:106
 msgid "Please enter a valid value for Digits Pressed"
-msgstr ""
+msgstr "Bitte geben Sie einen gültigen Wert für die gedrückten Ziffern an"
 
 #: views/advanced_form.php:347 views/advanced_form.php:505
 msgid ""
@@ -391,31 +411,40 @@ msgid ""
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
 "unmatched responses (as determined by Invalid Retries)"
 msgstr ""
+"Aufforderung, die abgespielt werden soll, bevor der Anrufer zu einem "
+"alternativen Ziel verbunden wird, weil er entweder die 0 gewählt oder das "
+"Maximum an ungültigen/nicht übereinstimmenden Antworten (durch „Ungültige "
+"Wiederholungen“ festgelegt) erhalten hat"
 
 #: views/advanced_form.php:421
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
 msgstr ""
+"Aufforderung, die vor der Aufforderung, es noch einmal zu versuchen, "
+"abgespielt werden soll, wenn es zu einer Zeitüberschreitung kommt"
 
 #: views/advanced_form.php:263
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
 msgstr ""
+"Aufforderung, die abgespielt werden soll, wenn eine ungültige/nicht "
+"übereinstimmende Antwort erhalten wird und bevor der Anrufer aufgefordert "
+"wird, es erneut zu versuchen"
 
 #: views/advanced_form.php:111
 msgid "Provides options for callers to direct dial an extension."
-msgstr ""
+msgstr "Bietet Möglichkeiten, dass Anrufer eine Nebenstelle direkt anwählen."
 
 #: functions.inc.php:389
 #, php-format
 msgid "Recording created for IVR named '%s'"
-msgstr ""
+msgstr "Aufnahme für den Sprachdialog „%s“ erzeugt"
 
 #: assets/js/ivr.js:573
 msgid "Recording..."
-msgstr ""
+msgstr "Wird aufgezeichnet ..."
 
 #: Ivr.class.php:73
 msgid "Reset"
@@ -427,23 +456,23 @@ msgstr "Zurück"
 
 #: views/advanced_form.php:302
 msgid "Return on Invalid"
-msgstr ""
+msgstr "Zurück bei Fehleingabe"
 
 #: views/advanced_form.php:460
 msgid "Return on Timeout"
-msgstr ""
+msgstr "Zurück bei Zeitüberschreitung"
 
 #: views/advanced_form.php:541
 msgid "Return to IVR after VM"
-msgstr ""
+msgstr "Nach VM zurück zu IVR"
 
 #: functions.inc.php:477
 msgid "Return to this IVR when finished"
-msgstr ""
+msgstr "Abschließend zurück zu diesem IVR"
 
 #: views/simple_form.php:143
 msgid "Ring Tone"
-msgstr ""
+msgstr "Klingelton"
 
 #: views/advanced_form.php:197 views/simple_form.php:166
 msgid "Ringer Volume Override"
@@ -457,12 +486,16 @@ msgstr "Aufnahme speichern"
 msgid ""
 "Select a 'System Recording' here that will be played on entry to the IVR."
 msgstr ""
+"Wählen Sie hier eine „Systemaufnahme“ aus, die am Anfang des Sprachdialogs "
+"abgespielt werden soll."
 
 #: views/simple_form.php:155
 msgid ""
 "Select a Ring Tone from the list of options above. This will determine how "
 "your phone sounds when it is rung from this group."
 msgstr ""
+"Wählen Sie aus der obigen Liste einen Klingelton. Hierdurch wird festgelegt, "
+"wie Ihr Telefon klingt, wenn es aus dieser Gruppe angeläutet wird."
 
 #: Ivr.class.php:83
 msgid "Submit"
@@ -492,19 +525,19 @@ msgstr "Zeitlimit"
 
 #: views/advanced_form.php:517
 msgid "Timeout Destination"
-msgstr ""
+msgstr "Ziel bei Zeitüberschreitung"
 
 #: views/advanced_form.php:491
 msgid "Timeout Recording"
-msgstr ""
+msgstr "Aufnahme für Zeitüberschreitung"
 
 #: views/advanced_form.php:383
 msgid "Timeout Retries"
-msgstr ""
+msgstr "Wiederholungen für Zeitüberschreitung"
 
 #: views/advanced_form.php:407
 msgid "Timeout Retry Recording"
-msgstr ""
+msgstr "Aufnahme für Wiederholung nach Zeitüberschreitung"
 
 #: views/simple_form.php:66 views/simple_form.php:114
 #, php-format
@@ -512,14 +545,17 @@ msgid ""
 "To play the media you will need to either update your browser to a recent "
 "version or update your %s"
 msgstr ""
+"Zur Wiedergabe der Medien, die Sie benötigen, um Ihren Browser auf eine "
+"aktuelle Version zu aktualisieren oder Ihr %s zu aktualisieren"
 
 #: assets/js/ivr.js:163
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr ""
+"Kann den ersten Eintrag nicht löschen. Bitte bearbeiten Sie ihn stattdessen"
 
 #: assets/js/ivr.js:159
 msgid "Unable to delete the last entry"
-msgstr ""
+msgstr "Kann den letzten Eintrag nicht löschen"
 
 #: Ivr.class.php:123
 msgid "Unknown Error"
@@ -543,6 +579,9 @@ msgid ""
 "Upload files from your local system. Supported upload formats are: %s. This "
 "includes archives (that include multiple files) and multiple files"
 msgstr ""
+"Dateien von Ihrem lokalen System hochladen. Die folgenden Formate werden "
+"unterstützt: %s. Dies schließt Archive (mit mehreren Dateien) und mehrere "
+"einzelne Dateien ein"
 
 #: views/advanced_form.php:101 views/advanced_form.php:128
 #: views/advanced_form.php:280 views/advanced_form.php:307
@@ -559,4 +598,4 @@ msgstr ""
 
 #: views/entries.php:20
 msgid "digits pressed"
-msgstr "Ziffern gedrückt"
+msgstr "Gedrückte Ziffern"
