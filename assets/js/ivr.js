@@ -69,6 +69,9 @@ $(document).ready(function(){
 			if($("#name").val() === "") {
 				return warnInvalid($("#name"),_("IVRs require a valid name"));
 			}
+			if (ivrsnames.indexOf($("#name").val()) >= 0) {
+				return warnInvalid($("#name"),_("IVRs name already exist"));
+			}
 			if($("#fileupload-container").length) {
 				if(announcementRecording !== null) {
 					$('#frm_ivr').append('<input type="hidden" name="announcementrecording" value="'+announcementRecording+'" />');
