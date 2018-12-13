@@ -31,6 +31,18 @@ class Ivr extends \FreePBX_Helpers implements \BMO {
 			);
 		}
 	}
+	public function getallivrsname($id){
+		$sql = 'SELECT name FROM ivr_details';
+		if ($id) {
+			$sql .= ' where  id != :id ';
+		}
+		$sql .= ' ORDER BY name';
+		$sth = $this->Database->prepare($sql);
+		$sth->execute(array(":id" => $id));
+		$res = array();
+		$res = $sth->fetchAll(\PDO::FETCH_COLUMN, 0);
+		return $res;
+}
 
 	public function getDetails($id = false) {
 		$s = ini_get("default_charset");
