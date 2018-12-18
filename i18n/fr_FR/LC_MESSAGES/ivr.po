@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-10 11:21-0400\n"
+"POT-Creation-Date: 2018-12-18 10:19+0530\n"
 "PO-Revision-Date: 2017-03-13 01:48+0200\n"
 "Last-Translator: Nicolas <freepbx@riendeau.org>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/ivr/fr_FR/"
@@ -31,7 +31,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:166
+#: Ivr.class.php:178
 msgid "A PHP extension stopped the file upload"
 msgstr ""
 
@@ -57,7 +57,7 @@ msgstr "Actions"
 msgid "Add Another Entry"
 msgstr ""
 
-#: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
+#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Ajouter IVR"
 
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Applications"
 msgstr ""
 
-#: assets/js/ivr.js:88
+#: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
 
@@ -105,7 +105,7 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:170
+#: Ivr.class.php:182
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
@@ -152,11 +152,11 @@ msgstr ""
 msgid "Default"
 msgstr "Par défaut"
 
-#: Ivr.class.php:68 functions.inc.php:477
+#: Ivr.class.php:80 functions.inc.php:477
 msgid "Delete"
 msgstr "Supprimer"
 
-#: assets/js/ivr.js:495
+#: assets/js/ivr.js:498
 msgid "Delete Recording"
 msgstr ""
 
@@ -186,7 +186,7 @@ msgstr ""
 msgid "Digits"
 msgstr ""
 
-#: assets/js/ivr.js:110
+#: assets/js/ivr.js:113
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
@@ -200,7 +200,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr ""
 
-#: Ivr.class.php:78
+#: Ivr.class.php:90
 msgid "Duplicate"
 msgstr ""
 
@@ -208,7 +208,7 @@ msgstr ""
 msgid "Edit IVR: "
 msgstr "Éditer le IVR : "
 
-#: assets/js/ivr.js:235
+#: assets/js/ivr.js:238
 msgid "Edit:"
 msgstr "Éditer :"
 
@@ -216,7 +216,7 @@ msgstr "Éditer :"
 msgid "Enable Direct Dial"
 msgstr "Activer Numérotation Directe"
 
-#: Ivr.class.php:163
+#: Ivr.class.php:175
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -232,8 +232,8 @@ msgstr ""
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:28 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:28 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "IVR"
 
@@ -276,6 +276,10 @@ msgstr ""
 msgid "IVR: %s / Option: %s"
 msgstr "IVR : %s / Option : %s"
 
+#: assets/js/ivr.js:85
+msgid "IVRs name already exist"
+msgstr ""
+
 #: assets/js/ivr.js:82
 msgid "IVRs require a valid name"
 msgstr ""
@@ -316,7 +320,7 @@ msgstr ""
 msgid "List IVRs"
 msgstr "Liste des IVRs"
 
-#: Ivr.class.php:160
+#: Ivr.class.php:172
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -335,11 +339,11 @@ msgstr "Non"
 msgid "No Astman, Not loading IVR"
 msgstr ""
 
-#: assets/js/ivr.js:339
+#: assets/js/ivr.js:342
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:157
+#: Ivr.class.php:169
 msgid "No file was uploaded"
 msgstr ""
 
@@ -372,7 +376,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr ""
 
-#: assets/js/ivr.js:106
+#: assets/js/ivr.js:109
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
@@ -404,11 +408,11 @@ msgstr ""
 msgid "Recording created for IVR named '%s'"
 msgstr ""
 
-#: assets/js/ivr.js:573
+#: assets/js/ivr.js:576
 msgid "Recording..."
 msgstr ""
 
-#: Ivr.class.php:73
+#: Ivr.class.php:85
 msgid "Reset"
 msgstr "Réinitialiser"
 
@@ -440,7 +444,7 @@ msgstr ""
 msgid "Ringer Volume Override"
 msgstr ""
 
-#: assets/js/ivr.js:495
+#: assets/js/ivr.js:498
 msgid "Save Recording"
 msgstr ""
 
@@ -455,21 +459,21 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
-#: Ivr.class.php:83
+#: Ivr.class.php:95
 msgid "Submit"
 msgstr "Soumettre"
 
-#: Ivr.class.php:151
+#: Ivr.class.php:163
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:148
+#: Ivr.class.php:160
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:154
+#: Ivr.class.php:166
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
@@ -500,23 +504,23 @@ msgid ""
 "version or update your %s"
 msgstr ""
 
-#: assets/js/ivr.js:163
+#: assets/js/ivr.js:166
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr ""
 
-#: assets/js/ivr.js:159
+#: assets/js/ivr.js:162
 msgid "Unable to delete the last entry"
 msgstr ""
 
-#: Ivr.class.php:123
+#: Ivr.class.php:135
 msgid "Unknown Error"
 msgstr "Erreur inconnue"
 
-#: Ivr.class.php:143
+#: Ivr.class.php:155
 msgid "Unsupported file format"
 msgstr "Format de fichier non supporté"
 
-#: assets/js/ivr.js:262
+#: assets/js/ivr.js:265
 msgid "Unsupported file type"
 msgstr "Type de fichier non supporté"
 
@@ -538,7 +542,7 @@ msgstr ""
 msgid "Yes"
 msgstr "Oui"
 
-#: assets/js/ivr.js:577
+#: assets/js/ivr.js:580
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 

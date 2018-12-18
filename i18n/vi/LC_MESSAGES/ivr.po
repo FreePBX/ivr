@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-10 11:21-0400\n"
+"POT-Creation-Date: 2018-12-18 10:19+0530\n"
 "PO-Revision-Date: 2017-07-20 13:20+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:166
+#: Ivr.class.php:178
 msgid "A PHP extension stopped the file upload"
 msgstr "Máy nhánh PHP đã ngừng tải tệp lên"
 
@@ -50,7 +50,7 @@ msgstr "Các thao tác"
 msgid "Add Another Entry"
 msgstr "Thêm mục nhập khác"
 
-#: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
+#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Thêm IVR"
 
@@ -94,7 +94,7 @@ msgstr "Kèm thông báo vào Invalid"
 msgid "Applications"
 msgstr "Các ứng dụng"
 
-#: assets/js/ivr.js:88
+#: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr "Bạn có chắc không muốn một bản ghi cho thông báo này?"
 
@@ -102,7 +102,7 @@ msgstr "Bạn có chắc không muốn một bản ghi cho thông báo này?"
 msgid "Browse"
 msgstr "Trình duyệt"
 
-#: Ivr.class.php:170
+#: Ivr.class.php:182
 msgid "Can Not Find Uploaded Files"
 msgstr "Không tìm thấy các tệp đã tải lên"
 
@@ -157,11 +157,11 @@ msgstr ""
 msgid "Default"
 msgstr "Mặc định"
 
-#: Ivr.class.php:68 functions.inc.php:477
+#: Ivr.class.php:80 functions.inc.php:477
 msgid "Delete"
 msgstr "Xóa"
 
-#: assets/js/ivr.js:495
+#: assets/js/ivr.js:498
 msgid "Delete Recording"
 msgstr "Xóa bản ghi"
 
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Digits"
 msgstr "Các chữ số"
 
-#: assets/js/ivr.js:110
+#: assets/js/ivr.js:113
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
@@ -209,7 +209,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr "Thả bản ghi thông báo (Annoucement Recording)  ở đây"
 
-#: Ivr.class.php:78
+#: Ivr.class.php:90
 msgid "Duplicate"
 msgstr ""
 
@@ -217,7 +217,7 @@ msgstr ""
 msgid "Edit IVR: "
 msgstr "Chỉnh sửa IVR: "
 
-#: assets/js/ivr.js:235
+#: assets/js/ivr.js:238
 msgid "Edit:"
 msgstr "Chỉnh sửa:"
 
@@ -225,7 +225,7 @@ msgstr "Chỉnh sửa:"
 msgid "Enable Direct Dial"
 msgstr "Kích hoạt Direct Dial (quay số trực tiếp)"
 
-#: Ivr.class.php:163
+#: Ivr.class.php:175
 msgid "Failed to write file to disk"
 msgstr "Ghi tệp vào đĩa không thành công"
 
@@ -241,8 +241,8 @@ msgstr "Lời chào sẽ được phá trên mục nhập tới IVR."
 msgid "Hit the red record button to start recording from your browser"
 msgstr "Nhấn nút ghi màu đỏ để bắt đầu ghi từ trình duyệt của bạn"
 
-#: Ivr.class.php:28 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:28 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "IVR (Interactive Voice Response) hệ thống tương tác tự động"
 
@@ -284,6 +284,10 @@ msgstr ""
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s/ Tùy chọn: %s"
+
+#: assets/js/ivr.js:85
+msgid "IVRs name already exist"
+msgstr ""
 
 #: assets/js/ivr.js:82
 msgid "IVRs require a valid name"
@@ -327,7 +331,7 @@ msgstr "Bản ghi phép thử lại không hợp lệ"
 msgid "List IVRs"
 msgstr "Danh sách các IVR"
 
-#: Ivr.class.php:160
+#: Ivr.class.php:172
 msgid "Missing a temporary folder"
 msgstr "Thiếu một thư mục tạm"
 
@@ -346,11 +350,11 @@ msgstr "Không"
 msgid "No Astman, Not loading IVR"
 msgstr "Không có Astman, không tải IVR"
 
-#: assets/js/ivr.js:339
+#: assets/js/ivr.js:342
 msgid "No file to load!"
 msgstr "Không có tệp nào để tải!"
 
-#: Ivr.class.php:157
+#: Ivr.class.php:169
 msgid "No file was uploaded"
 msgstr "Đã không có tệp nào được tải lên"
 
@@ -389,7 +393,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr "Phát bản ghi trước đó"
 
-#: assets/js/ivr.js:106
+#: assets/js/ivr.js:109
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
@@ -430,11 +434,11 @@ msgstr ""
 msgid "Recording created for IVR named '%s'"
 msgstr "Bản ghi được tạo cho IVR có tên '%s'"
 
-#: assets/js/ivr.js:573
+#: assets/js/ivr.js:576
 msgid "Recording..."
 msgstr "Đang ghi ..."
 
-#: Ivr.class.php:73
+#: Ivr.class.php:85
 msgid "Reset"
 msgstr "Cài đặt lại"
 
@@ -466,7 +470,7 @@ msgstr "Nhạc chuông"
 msgid "Ringer Volume Override"
 msgstr "Ghi đè âm lượng chuông"
 
-#: assets/js/ivr.js:495
+#: assets/js/ivr.js:498
 msgid "Save Recording"
 msgstr "Lưu bản ghi"
 
@@ -483,21 +487,21 @@ msgstr ""
 "Chọn một Nhạc chuông từ danh sách các tùy chọn ở trên. Điều này sẽ xác định "
 "điện thoại sẽ có âm thanh như thế nào khi nó đổ chuông từ nhóm này."
 
-#: Ivr.class.php:83
+#: Ivr.class.php:95
 msgid "Submit"
 msgstr "Gửi đi"
 
-#: Ivr.class.php:151
+#: Ivr.class.php:163
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Tệp đã tải lên vượt quá kích cỡ tối đa được quy định trong mẫu HTML"
 
-#: Ivr.class.php:148
+#: Ivr.class.php:160
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Tệp đã tải lên vượt qua kích cỡ tối đa quy định trong php.ini"
 
-#: Ivr.class.php:154
+#: Ivr.class.php:166
 msgid "The uploaded file was only partially uploaded"
 msgstr "Tệp đã tải lên chỉ được tải lên từng phần"
 
@@ -530,23 +534,23 @@ msgstr ""
 "Để phát media bạn cần phải cập nhật phiên bản gần nhất cho trình duyệt của "
 "mình  hoặc cập nhật %s"
 
-#: assets/js/ivr.js:163
+#: assets/js/ivr.js:166
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr "Không thể xóa mục nhập đầu tiên. Vui lòng chỉnh sửa thay thế"
 
-#: assets/js/ivr.js:159
+#: assets/js/ivr.js:162
 msgid "Unable to delete the last entry"
 msgstr "Không thể xóa mục nhập mới nhất"
 
-#: Ivr.class.php:123
+#: Ivr.class.php:135
 msgid "Unknown Error"
 msgstr "Lỗ không xác định"
 
-#: Ivr.class.php:143
+#: Ivr.class.php:155
 msgid "Unsupported file format"
 msgstr "Định dạng tệp không được hỗ trợ"
 
-#: assets/js/ivr.js:262
+#: assets/js/ivr.js:265
 msgid "Unsupported file type"
 msgstr "Kiểu tệp không được hỗ trợ"
 
@@ -570,7 +574,7 @@ msgstr ""
 msgid "Yes"
 msgstr "Có"
 
-#: assets/js/ivr.js:577
+#: assets/js/ivr.js:580
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr ""
 "Trình duyệt của bạn đã chặn Recording, vui lòng kiểm tra cài đặt của bạn"
