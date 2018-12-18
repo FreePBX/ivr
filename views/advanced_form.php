@@ -539,3 +539,6 @@
 	<?php echo ivr_draw_entries($ivr['id'])?>
 </div>
 <?php echo $hookhtml?>
+<script>
+var ivrsnames = <?php print json_encode(\FreePBX::Ivr()->getallivrsname($ivr['id'])); ?>;
+</script>
