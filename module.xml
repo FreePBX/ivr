@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>15.0.9</version>
+	<version>15.0.10</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
+		*15.0.10* FREEPBX-18641 IVR module is forced to wait till full timeout for the dtmf entry 
 		*15.0.9* FREEPBX-18024 
 		*15.0.8* FREEPBX-18094
 		*15.0.7* FREEPBX-18125 Fix delete from form
