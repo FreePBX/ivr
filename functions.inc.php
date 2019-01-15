@@ -112,8 +112,8 @@ function ivr_get_config($engine) {
 				$ext->add($c, 's', 'skip', new ext_set('IVR_MSG', $ivr_announcement));
 				//force strict dial timeout :: no
 				if(!$ivr['strict_dial_timeout']) {
-					$ext->add($c, 's', '', new ext_setvar("DIGITS",""));
-					$ext->add($c, 's', 'start', new ext_setvar("NODEFOUND","0"));
+					$ext->add($c, 's', 'start', new ext_setvar("DIGITS",""));
+					$ext->add($c, 's', '', new ext_setvar("NODEFOUND","0"));
 					$ext->add($c, 's', 'beforewhile', new ext_execif('$["${IVREXT}" != ""]', 'Set', 'DIGITS=${DIGITS}${IVREXT}'));
 					$ext->add($c, 's', '', new ext_while('$["${NODEFOUND}" = "0"] '));
 					$ext->add($c, 's', '', new ext_read('IVREXT', '${IVR_MSG}', '1', '', '0', $ivr['timeout_time']));
