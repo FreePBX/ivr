@@ -119,7 +119,6 @@ function ivr_get_config($engine) {
 					$ext->add($c, 's', '', new ext_read('IVREXT', '${IVR_MSG}', '1', '', '0', $ivr['timeout_time']));
 					$ext->add($c, 's', '', new ext_set('IVR_MSG', ''));
 					$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "TIMEOUT" & "${IVREXT}" = ""]','t,1'));
-					$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" != "OK"]','i,1'));
 					$ext->add($c, 's', '', new ext_execif('$["${DIALPLAN_EXISTS(${CONTEXT},${DIGITS}${IVREXT},1)}" != "0"]', 'Set', 'NODEFOUND=1'));
 					$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${DIGITS}${IVREXT},1)}" = "0"]','beforewhile:nodedial'));
 					$ext->add($c, 's', '', new ext_endwhile(''));
@@ -131,7 +130,6 @@ function ivr_get_config($engine) {
 					$ext->add($c, 's', '', new ext_execif('$["${IVR_MSG}" != ""]','Background','${IVR_MSG}'));
 					$ext->add($c, 's', '', new ext_read('IVREXT', '', '', '', '0', $ivr['timeout_time']));
 					$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "TIMEOUT" & "${IVREXT}" = ""]','t,1'));
-					$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" != "OK"]','i,1'));
 					if ($ivr['directdial']) {
 						if ($ivr['directdial'] == 'ext-local') {
 							$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${IVREXT},1)}" = "0" & "${DIALPLAN_EXISTS(from-did-direct-ivr,${IVREXT},1)}" = "0"]','i,1'));
