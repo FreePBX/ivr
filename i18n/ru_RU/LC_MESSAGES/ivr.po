@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-15 16:44-0500\n"
+"POT-Creation-Date: 2019-01-22 10:50+0530\n"
 "PO-Revision-Date: 2017-05-17 01:42+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -55,7 +55,7 @@ msgstr "Действия"
 msgid "Add Another Entry"
 msgstr "Добавить другую запись"
 
-#: views/form.php:12 views/grid.php:12 /dev/shm/freepbx/ivr/views/rnav.php:3
+#: views/form.php:12 views/grid.php:12 /usr/src/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr "Добавить IVR"
 
@@ -129,7 +129,7 @@ msgstr ""
 "которых также производится вызов в действующее Меню, но возврат и "
 "перенаправление может привести к неожиданным результатам"
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -160,7 +160,7 @@ msgstr ""
 msgid "Default"
 msgstr "По умолчанию"
 
-#: Ivr.class.php:222 functions.inc.php:356
+#: Ivr.class.php:222 functions.inc.php:354
 msgid "Delete"
 msgstr "Удалить"
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Описание голосового меню"
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid "Destination"
 msgstr "Назначение"
 
@@ -191,7 +191,7 @@ msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Назначения направления звонка после воспроизведения записи о Тайм-ауте."
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid "Digits"
 msgstr ""
 
@@ -199,7 +199,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -241,8 +241,8 @@ msgstr "Приветствие , проигрываемое при входе в
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "Интерактивное меню (IVR)"
 
@@ -270,17 +270,17 @@ msgstr "Список голосового емню"
 msgid "IVR Name"
 msgstr "Название Интерактивного меню"
 
-#: functions.inc.php:492 functions.inc.php:514
+#: functions.inc.php:490 functions.inc.php:512
 #, php-format
 msgid "IVR: %s"
 msgstr "Интерактивное меню: %s"
 
-#: functions.inc.php:437 functions.inc.php:456
+#: functions.inc.php:435 functions.inc.php:454
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:419
+#: functions.inc.php:417
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "Интерактивное меню: %s / Опция: %s"
@@ -429,7 +429,7 @@ msgstr ""
 msgid "Reset"
 msgstr "Сброс"
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid "Return"
 msgstr "Возврат"
 
@@ -445,7 +445,7 @@ msgstr "Возврат по таймауту"
 msgid "Return to IVR after VM"
 msgstr "Возвращение в Интерактивное меню после Голосовой Почты"
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid "Return to this IVR when finished"
 msgstr ""
 

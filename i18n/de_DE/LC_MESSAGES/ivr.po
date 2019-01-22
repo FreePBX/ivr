@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-15 16:44-0500\n"
+"POT-Creation-Date: 2019-01-22 10:50+0530\n"
 "PO-Revision-Date: 2018-02-16 18:13+0200\n"
 "Last-Translator: Nils <Nils@heckenkamp.info>\n"
 "Language-Team: German <http://weblate.freepbx.org/projects/freepbx/ivr/de_DE/"
@@ -42,7 +42,7 @@ msgstr "Aktionen"
 msgid "Add Another Entry"
 msgstr ""
 
-#: views/form.php:12 views/grid.php:12 /dev/shm/freepbx/ivr/views/rnav.php:3
+#: views/form.php:12 views/grid.php:12 /usr/src/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr ""
 
@@ -108,7 +108,7 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid "Choose a destination to route the call to"
 msgstr "Wählen Sie ein Ziel aus, an das der Anruf weitergeleitet werden soll"
 
@@ -136,7 +136,7 @@ msgstr ""
 msgid "Default"
 msgstr "Standard"
 
-#: Ivr.class.php:222 functions.inc.php:356
+#: Ivr.class.php:222 functions.inc.php:354
 msgid "Delete"
 msgstr "Löschen"
 
@@ -154,7 +154,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Beschreibung dieses IVR"
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid "Destination"
 msgstr "Ziel"
 
@@ -170,7 +170,7 @@ msgstr ""
 "Ziel, an das der Anruf gesendet werden soll, nachdem die Timeout-Aufnahme "
 "abgespielt wurde."
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid "Digits"
 msgstr "Ziffern"
 
@@ -178,7 +178,7 @@ msgstr "Ziffern"
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -224,8 +224,8 @@ msgstr ""
 "Drücken Sie den roten Aufnahmeknopf, um die Aufnahme von Ihrem Browser aus "
 "zu starten"
 
-#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "IVR"
 
@@ -253,17 +253,17 @@ msgstr "IVR-Liste"
 msgid "IVR Name"
 msgstr "IVR-Name"
 
-#: functions.inc.php:492 functions.inc.php:514
+#: functions.inc.php:490 functions.inc.php:512
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:437 functions.inc.php:456
+#: functions.inc.php:435 functions.inc.php:454
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:419
+#: functions.inc.php:417
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "VR: %s / Optionen: %s"
@@ -407,7 +407,7 @@ msgstr ""
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid "Return"
 msgstr "Zurück"
 
@@ -423,7 +423,7 @@ msgstr ""
 msgid "Return to IVR after VM"
 msgstr ""
 
-#: functions.inc.php:356
+#: functions.inc.php:354
 msgid "Return to this IVR when finished"
 msgstr ""
 
