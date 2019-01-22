@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-15 16:43-0500\n"
+"POT-Creation-Date: 2019-01-22 10:49+0530\n"
 "PO-Revision-Date: 2018-07-18 19:11+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/ivr/bg/>\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Add Another Entry"
 msgstr ""
 
-#: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
+#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Добави IVR"
 
@@ -113,7 +113,7 @@ msgstr ""
 "този IVR, което може да доведе до странни резултати ако има IVR извикан в "
 "пътя на обаждането, но не веднага преди този"
 
-#: functions.inc.php:486
+#: functions.inc.php:484
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -145,7 +145,7 @@ msgstr ""
 msgid "Default"
 msgstr "По-Подразбиране"
 
-#: Ivr.class.php:80 functions.inc.php:486
+#: Ivr.class.php:80 functions.inc.php:484
 msgid "Delete"
 msgstr "Изтрий"
 
@@ -161,7 +161,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:486
+#: functions.inc.php:484
 msgid "Destination"
 msgstr "Направление"
 
@@ -173,7 +173,7 @@ msgstr ""
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
-#: functions.inc.php:486
+#: functions.inc.php:484
 msgid "Digits"
 msgstr ""
 
@@ -181,7 +181,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:486
+#: functions.inc.php:484
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -223,8 +223,8 @@ msgstr ""
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:28 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:28 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "IVR"
 
@@ -252,17 +252,17 @@ msgstr ""
 msgid "IVR Name"
 msgstr "Име на IVR"
 
-#: functions.inc.php:623 functions.inc.php:645
+#: functions.inc.php:621 functions.inc.php:643
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR : %s"
 
-#: functions.inc.php:568 functions.inc.php:587
+#: functions.inc.php:566 functions.inc.php:585
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:550
+#: functions.inc.php:548
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / Опция: %s"
@@ -394,7 +394,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: functions.inc.php:398
+#: functions.inc.php:396
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
@@ -407,7 +407,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:486
+#: functions.inc.php:484
 msgid "Return"
 msgstr "Обратно"
 
@@ -423,7 +423,7 @@ msgstr ""
 msgid "Return to IVR after VM"
 msgstr "Върни се към IVR след ГП"
 
-#: functions.inc.php:486
+#: functions.inc.php:484
 msgid "Return to this IVR when finished"
 msgstr ""
 
