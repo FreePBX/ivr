@@ -10,16 +10,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-22 10:49+0530\n"
-"PO-Revision-Date: 2016-04-26 06:49+0200\n"
-"Last-Translator: Media <mousavi.media@gmail.com>\n"
-"Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
-"ivr/fa_IR/>\n"
+"PO-Revision-Date: 2019-01-25 13:49+0000\n"
+"Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
+"Language-Team: Persian <http://*/projects/freepbx/ivr/fa/>\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.4\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: Ivr.class.php:178
 msgid "A PHP extension stopped the file upload"
@@ -185,13 +184,15 @@ msgstr "اعداد"
 
 #: assets/js/ivr.js:113
 msgid "Digits are limited to 10 digits."
-msgstr ""
+msgstr "رقم ها به 10 رقم محدود می شوند."
 
 #: functions.inc.php:484
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
 msgstr ""
+"شماره تماس گیرنده نیاز به شماره گیری برای دسترسی به گفتار مقصد دارد. رقم ها "
+"به 10 رقم محدود می شوند."
 
 #: views/simple_form.php:80
 msgid "Drop Annoucement Recording Here"
@@ -199,7 +200,7 @@ msgstr "لغو اعلان ضبط تماس"
 
 #: Ivr.class.php:90
 msgid "Duplicate"
-msgstr ""
+msgstr "تکرار"
 
 #: views/form.php:44
 msgid "Edit IVR: "
@@ -219,7 +220,7 @@ msgstr "خطا در نوشتن فایل روی دیسک"
 
 #: views/advanced_form.php:123
 msgid "Force Strict Dial Timeout"
-msgstr ""
+msgstr "وقفه شماره گیری اجباری"
 
 #: views/simple_form.php:131
 msgid "Greeting to be played on entry to the IVR."
@@ -266,7 +267,7 @@ msgstr "منوی صوتی ： %s"
 #: functions.inc.php:566 functions.inc.php:585
 #, php-format
 msgid "IVR: %s (%s)"
-msgstr ""
+msgstr "IVR: %s1 (%s2)"
 
 #: functions.inc.php:548
 #, php-format
@@ -275,7 +276,7 @@ msgstr "IVR: %s / Option : %s"
 
 #: assets/js/ivr.js:85
 msgid "IVRs name already exist"
-msgstr ""
+msgstr "نام IVR موجود است"
 
 #: assets/js/ivr.js:82
 msgid "IVRs require a valid name"
@@ -298,6 +299,12 @@ msgid ""
 "so it will dial 1. Changing this setting to 'Yes' will wait the full timeout "
 "for the entry so that 123 will match 123. Default is 'No'"
 msgstr ""
+"If set to 'Yes' then IVR will wait the specified timeout length for the full "
+"entry. If set to 'No' then IVR will match on the first digit(s) that match "
+"IVR entries, thus if you have entries of 1 and 123 when the caller presses 1 "
+"it will dial entry 1, when they press 123 it will match on the first entry "
+"so it will dial 1. Changing this setting to 'Yes' will wait the full timeout "
+"for the entry so that 123 will match 123. Default is 'No'."
 
 #: views/advanced_form.php:359
 msgid "Invalid Destination"
@@ -370,6 +377,8 @@ msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
 "time"
 msgstr ""
+"Override the ringer volume. Note: This is only valid for %s1 phones at this "
+"time"
 
 #: views/simple_form.php:62
 msgid "Play Previous Recording"
@@ -447,7 +456,7 @@ msgstr "صدای زنگ"
 
 #: views/advanced_form.php:197 views/simple_form.php:166
 msgid "Ringer Volume Override"
-msgstr ""
+msgstr "بازنویسی صدای زنگ"
 
 #: assets/js/ivr.js:498
 msgid "Save Recording"
@@ -457,6 +466,7 @@ msgstr "ذخیره ضبط شده"
 msgid ""
 "Select a 'System Recording' here that will be played on entry to the IVR."
 msgstr ""
+"اینجا یک سیستم ضبط را انتخاب کنید که در هنگام ورود به IVR بازی خواهد کرد."
 
 #: views/simple_form.php:155
 msgid ""
