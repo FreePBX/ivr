@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 10:50+0530\n"
+"POT-Creation-Date: 2019-02-19 08:50+0530\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -117,7 +117,7 @@ msgstr ""
 "caso existisse uma URA chamada neste caminho de ligação, mas não "
 "imediatamente antes desse"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Choose a destination to route the call to"
 msgstr "Escolha um destino para encaminhar a chamada"
 
@@ -151,7 +151,7 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ivr.class.php:222 functions.inc.php:354
+#: Ivr.class.php:222 functions.inc.php:369
 msgid "Delete"
 msgstr "Apagar"
 
@@ -168,7 +168,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Descrição desta URA"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Destination"
 msgstr "Destino"
 
@@ -181,7 +181,7 @@ msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Destino para enviar a chamada após Gravação de Tempo Esgotado ser tocada."
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Digits"
 msgstr "Dígitos"
 
@@ -189,7 +189,7 @@ msgstr "Dígitos"
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -261,17 +261,17 @@ msgstr "Lista URA"
 msgid "IVR Name"
 msgstr "Nome"
 
-#: functions.inc.php:490 functions.inc.php:512
+#: functions.inc.php:505 functions.inc.php:527
 #, php-format
 msgid "IVR: %s"
 msgstr "URA: %s"
 
-#: functions.inc.php:435 functions.inc.php:454
+#: functions.inc.php:450 functions.inc.php:469
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:417
+#: functions.inc.php:432
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "URA: %s / Opção: %s"
@@ -423,7 +423,7 @@ msgstr "Gravando..."
 msgid "Reset"
 msgstr "Reiniciar"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Return"
 msgstr "Retornar"
 
@@ -439,7 +439,7 @@ msgstr "Retorno Quando Tempo Esgotado"
 msgid "Return to IVR after VM"
 msgstr "Retorna para URA após Caixa Postal"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Return to this IVR when finished"
 msgstr "Retornar a esta URA quando terminar"
 

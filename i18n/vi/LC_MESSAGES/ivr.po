@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 10:50+0530\n"
+"POT-Creation-Date: 2019-02-19 08:50+0530\n"
 "PO-Revision-Date: 2017-07-20 13:20+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -116,7 +116,7 @@ msgstr ""
 "đem đến một kết quả lạ nếu có một IVR đã gọi trong đường dẫn cuộc gọi nhưng "
 "không phải trước nó"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Choose a destination to route the call to"
 msgstr "Chọn một điểm đích để định tuyến cuộc gọi tới"
 
@@ -149,7 +149,7 @@ msgstr ""
 msgid "Default"
 msgstr "Mặc định"
 
-#: Ivr.class.php:222 functions.inc.php:354
+#: Ivr.class.php:222 functions.inc.php:369
 msgid "Delete"
 msgstr "Xóa"
 
@@ -167,7 +167,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Mô tả của IVR này"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Destination"
 msgstr "Điểm đích"
 
@@ -181,7 +181,7 @@ msgstr ""
 "Điểm đích để gửi cuộc gọi đến sau khi phát bản ghi thời gian chờ (Timeout "
 "Recording)."
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Digits"
 msgstr "Các chữ số"
 
@@ -189,7 +189,7 @@ msgstr "Các chữ số"
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -262,17 +262,17 @@ msgstr "Danh sách IVR"
 msgid "IVR Name"
 msgstr "Tên IVR"
 
-#: functions.inc.php:490 functions.inc.php:512
+#: functions.inc.php:505 functions.inc.php:527
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR:%s"
 
-#: functions.inc.php:435 functions.inc.php:454
+#: functions.inc.php:450 functions.inc.php:469
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:417
+#: functions.inc.php:432
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s/ Tùy chọn: %s"
@@ -425,7 +425,7 @@ msgstr "Đang ghi ..."
 msgid "Reset"
 msgstr "Cài đặt lại"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Return"
 msgstr "Trả lại"
 
@@ -441,7 +441,7 @@ msgstr "Trả lại trên Timeout"
 msgid "Return to IVR after VM"
 msgstr "Trả lại tới IVR sau VM"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Return to this IVR when finished"
 msgstr "Trả lại tới IVR này khi hoàn thành"
 

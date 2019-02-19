@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 10:50+0530\n"
+"POT-Creation-Date: 2019-02-19 08:50+0530\n"
 "PO-Revision-Date: 2006-10-17 17:30+0300\n"
 "Last-Translator: Shimi <shimi@shimi.net>\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +99,7 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -123,7 +123,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ivr.class.php:222 functions.inc.php:354
+#: Ivr.class.php:222 functions.inc.php:369
 msgid "Delete"
 msgstr ""
 
@@ -139,7 +139,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Destination"
 msgstr ""
 
@@ -151,7 +151,7 @@ msgstr ""
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Digits"
 msgstr ""
 
@@ -159,7 +159,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -230,17 +230,17 @@ msgstr ""
 msgid "IVR Name"
 msgstr ""
 
-#: functions.inc.php:490 functions.inc.php:512
+#: functions.inc.php:505 functions.inc.php:527
 #, php-format
 msgid "IVR: %s"
 msgstr ""
 
-#: functions.inc.php:435 functions.inc.php:454
+#: functions.inc.php:450 functions.inc.php:469
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:417
+#: functions.inc.php:432
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr ""
@@ -376,7 +376,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Return"
 msgstr ""
 
@@ -392,7 +392,7 @@ msgstr ""
 msgid "Return to IVR after VM"
 msgstr ""
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Return to this IVR when finished"
 msgstr ""
 

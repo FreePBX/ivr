@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 10:50+0530\n"
+"POT-Creation-Date: 2019-02-19 08:50+0530\n"
 "PO-Revision-Date: 2017-05-17 01:42+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -129,7 +129,7 @@ msgstr ""
 "которых также производится вызов в действующее Меню, но возврат и "
 "перенаправление может привести к неожиданным результатам"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -160,7 +160,7 @@ msgstr ""
 msgid "Default"
 msgstr "По умолчанию"
 
-#: Ivr.class.php:222 functions.inc.php:354
+#: Ivr.class.php:222 functions.inc.php:369
 msgid "Delete"
 msgstr "Удалить"
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Описание голосового меню"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Destination"
 msgstr "Назначение"
 
@@ -191,7 +191,7 @@ msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Назначения направления звонка после воспроизведения записи о Тайм-ауте."
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Digits"
 msgstr ""
 
@@ -199,7 +199,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -270,17 +270,17 @@ msgstr "Список голосового емню"
 msgid "IVR Name"
 msgstr "Название Интерактивного меню"
 
-#: functions.inc.php:490 functions.inc.php:512
+#: functions.inc.php:505 functions.inc.php:527
 #, php-format
 msgid "IVR: %s"
 msgstr "Интерактивное меню: %s"
 
-#: functions.inc.php:435 functions.inc.php:454
+#: functions.inc.php:450 functions.inc.php:469
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:417
+#: functions.inc.php:432
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "Интерактивное меню: %s / Опция: %s"
@@ -429,7 +429,7 @@ msgstr ""
 msgid "Reset"
 msgstr "Сброс"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Return"
 msgstr "Возврат"
 
@@ -445,7 +445,7 @@ msgstr "Возврат по таймауту"
 msgid "Return to IVR after VM"
 msgstr "Возвращение в Интерактивное меню после Голосовой Почты"
 
-#: functions.inc.php:354
+#: functions.inc.php:369
 msgid "Return to this IVR when finished"
 msgstr ""
 
