@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 10:49+0530\n"
+"POT-Creation-Date: 2019-02-19 08:49+0530\n"
 "PO-Revision-Date: 2017-07-20 13:20+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -120,7 +120,7 @@ msgstr ""
 "đem đến một kết quả lạ nếu có một IVR đã gọi trong đường dẫn cuộc gọi nhưng "
 "không phải trước nó"
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid "Choose a destination to route the call to"
 msgstr "Chọn một điểm đích để định tuyến cuộc gọi tới"
 
@@ -157,7 +157,7 @@ msgstr ""
 msgid "Default"
 msgstr "Mặc định"
 
-#: Ivr.class.php:80 functions.inc.php:484
+#: Ivr.class.php:80 functions.inc.php:499
 msgid "Delete"
 msgstr "Xóa"
 
@@ -175,7 +175,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Mô tả của IVR này"
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid "Destination"
 msgstr "Điểm đích"
 
@@ -189,7 +189,7 @@ msgstr ""
 "Điểm đích để gửi cuộc gọi đến sau khi phát bản ghi thời gian chờ (Timeout "
 "Recording)."
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid "Digits"
 msgstr "Các chữ số"
 
@@ -197,7 +197,7 @@ msgstr "Các chữ số"
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -270,17 +270,17 @@ msgstr "Danh sách IVR"
 msgid "IVR Name"
 msgstr "Tên IVR"
 
-#: functions.inc.php:621 functions.inc.php:643
+#: functions.inc.php:636 functions.inc.php:658
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR:%s"
 
-#: functions.inc.php:566 functions.inc.php:585
+#: functions.inc.php:581 functions.inc.php:600
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:548
+#: functions.inc.php:563
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s/ Tùy chọn: %s"
@@ -429,7 +429,7 @@ msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 "Cung cấp các tùy chọn cho người gọi có thể quay số một máy nhánh trực tiếp."
 
-#: functions.inc.php:396
+#: functions.inc.php:411
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr "Bản ghi được tạo cho IVR có tên '%s'"
@@ -442,7 +442,7 @@ msgstr "Đang ghi ..."
 msgid "Reset"
 msgstr "Cài đặt lại"
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid "Return"
 msgstr "Trả lại"
 
@@ -458,7 +458,7 @@ msgstr "Trả lại trên Timeout"
 msgid "Return to IVR after VM"
 msgstr "Trả lại tới IVR sau VM"
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid "Return to this IVR when finished"
 msgstr "Trả lại tới IVR này khi hoàn thành"
 

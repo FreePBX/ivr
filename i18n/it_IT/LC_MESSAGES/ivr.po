@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 10:49+0530\n"
+"POT-Creation-Date: 2019-02-19 08:49+0530\n"
 "PO-Revision-Date: 2018-05-29 13:20+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/ivr/it/>\n"
@@ -121,7 +121,7 @@ msgstr ""
 "può dare risultati inaspettati se l'IVR non è proprio quello immediatamente "
 "prima di questo"
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid "Choose a destination to route the call to"
 msgstr "Scegli una destinazione per indirizzare la chiamata a"
 
@@ -159,7 +159,7 @@ msgstr ""
 msgid "Default"
 msgstr "Predefinito"
 
-#: Ivr.class.php:80 functions.inc.php:484
+#: Ivr.class.php:80 functions.inc.php:499
 msgid "Delete"
 msgstr "Elimina"
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Descrizione di questo IVR"
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid "Destination"
 msgstr "Destinazione"
 
@@ -192,7 +192,7 @@ msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Destinazione per l'invio della chiamata dopo la registrazione del timeout."
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid "Digits"
 msgstr "Cifre"
 
@@ -200,7 +200,7 @@ msgstr "Cifre"
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -275,17 +275,17 @@ msgstr "Lista IVR"
 msgid "IVR Name"
 msgstr "Nome IVR"
 
-#: functions.inc.php:621 functions.inc.php:643
+#: functions.inc.php:636 functions.inc.php:658
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:566 functions.inc.php:585
+#: functions.inc.php:581 functions.inc.php:600
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:548
+#: functions.inc.php:563
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / Opzione: %s"
@@ -433,7 +433,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr "Fornisce opzioni per i chiamanti per dirigere comporre un'estensione."
 
-#: functions.inc.php:396
+#: functions.inc.php:411
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr "Registrazione creata per IVR denominata '%s1'"
@@ -446,7 +446,7 @@ msgstr "Registrazione..."
 msgid "Reset"
 msgstr "Azzera"
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid "Return"
 msgstr "ritorno"
 
@@ -462,7 +462,7 @@ msgstr "ritorno al timeout"
 msgid "Return to IVR after VM"
 msgstr "Ritorna a IVR dopo VM"
 
-#: functions.inc.php:484
+#: functions.inc.php:499
 msgid "Return to this IVR when finished"
 msgstr "Torna a questo IVR quando hai finito"
 
