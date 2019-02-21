@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 08:50+0530\n"
+"POT-Creation-Date: 2019-02-21 17:34-0500\n"
 "PO-Revision-Date: 2018-02-16 18:13+0200\n"
 "Last-Translator: Nils <Nils@heckenkamp.info>\n"
 "Language-Team: German <http://weblate.freepbx.org/projects/freepbx/ivr/de_DE/"
@@ -86,10 +86,6 @@ msgstr "Anwendungen"
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
 "Sind Sie sicher, dass Sie keine Aufnahme für diese Ankündigung möchten?"
-
-#: Restore.php:8
-msgid "Backup empty"
-msgstr ""
 
 #: views/simple_form.php:73
 msgid "Browse"

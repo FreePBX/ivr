@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 08:50+0530\n"
+"POT-Creation-Date: 2019-02-21 17:34-0500\n"
 "PO-Revision-Date: 2016-04-26 06:49+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -84,10 +84,6 @@ msgstr "برنامه ها"
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr "آیا مطمئن هستید نمیخواهید این اعلان را ضبط کنید؟"
-
-#: Restore.php:8
-msgid "Backup empty"
-msgstr ""
 
 #: views/simple_form.php:73
 msgid "Browse"

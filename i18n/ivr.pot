@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 08:50+0530\n"
+"POT-Creation-Date: 2019-02-21 17:34-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,10 +82,6 @@ msgstr ""
 
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
-msgstr ""
-
-#: Restore.php:8
-msgid "Backup empty"
 msgstr ""
 
 #: views/simple_form.php:73

@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 08:50+0530\n"
+"POT-Creation-Date: 2019-02-21 17:34-0500\n"
 "PO-Revision-Date: 2017-05-17 01:42+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -101,10 +101,6 @@ msgstr "Приложения"
 
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
-msgstr ""
-
-#: Restore.php:8
-msgid "Backup empty"
 msgstr ""
 
 #: views/simple_form.php:73

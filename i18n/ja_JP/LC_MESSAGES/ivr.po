@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-19 08:50+0530\n"
+"POT-Creation-Date: 2019-02-21 17:34-0500\n"
 "PO-Revision-Date: 2016-08-03 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -114,10 +114,6 @@ msgstr "アプリケーション"
 
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
-msgstr ""
-
-#: Restore.php:8
-msgid "Backup empty"
 msgstr ""
 
 #: views/simple_form.php:73
