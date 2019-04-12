@@ -111,6 +111,7 @@ function ivr_get_config($engine) {
 				//force strict dial timeout :: no
 				if(!$ivr['strict_dial_timeout']) {
 					$ext->add($c, 's', 'start', new ext_setvar("DIGITS",""));
+					$ext->add($c, 's', '', new ext_setvar("IVREXT",""));
 					$ext->add($c, 's', '', new ext_setvar("NODEFOUND","0"));
 					$ext->add($c, 's', '', new ext_setvar("LOCALEXT","0"));
 					$ext->add($c, 's', '', new ext_setvar("DIREXT","0"));
