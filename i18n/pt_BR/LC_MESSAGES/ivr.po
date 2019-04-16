@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 17:34-0500\n"
+"POT-Creation-Date: 2019-04-15 22:39-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -26,11 +26,11 @@ msgstr ""
 msgid "A PHP extension stopped the file upload"
 msgstr "Uma extensão PHP parou o carregamento do arquivo"
 
-#: views/advanced_form.php:162
+#: views/advanced_form.php:164
 msgid "A value of 0 disables the timeout"
 msgstr "O valor 0 desabilita o tempo limite"
 
-#: views/advanced_form.php:186
+#: views/advanced_form.php:188
 msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 msgstr "ALERT_INFO pode ser usado para toque diferenciado em dispositivos SIP."
 
@@ -46,7 +46,7 @@ msgstr "Adicionar Outro Elemento"
 msgid "Add IVR"
 msgstr "Adicionar URA"
 
-#: views/advanced_form.php:290
+#: views/advanced_form.php:292
 msgid ""
 "After playing the Invalid Retry Recording the system will replay the main "
 "IVR Announcement"
@@ -54,7 +54,7 @@ msgstr ""
 "Após tocar a Gravação Tentativa Inválida o sistema tocará o Anuncio "
 "principal da URA"
 
-#: views/advanced_form.php:448
+#: views/advanced_form.php:450
 msgid ""
 "After playing the Timeout Retry Recording the system will replay the main "
 "IVR Announcement"
@@ -62,11 +62,11 @@ msgstr ""
 "Após tocar a Gravação de Tempo Esgotado da Tentativa o sistema tocará o "
 "Anuncio principal da URA"
 
-#: views/advanced_form.php:174
+#: views/advanced_form.php:176
 msgid "Alert Info"
 msgstr "Informação de Alerta"
 
-#: views/advanced_form.php:162
+#: views/advanced_form.php:164
 msgid "Amount of time to be considered a timeout."
 msgstr "Período de tempo a ser considerado tempo limite."
 
@@ -74,11 +74,11 @@ msgstr "Período de tempo a ser considerado tempo limite."
 msgid "Announcement"
 msgstr "Anuncio"
 
-#: views/advanced_form.php:433
+#: views/advanced_form.php:435
 msgid "Append Announcement on Timeout"
 msgstr "Juntar Anuncio em Tempo Esgotado"
 
-#: views/advanced_form.php:275
+#: views/advanced_form.php:277
 msgid "Append Announcement to Invalid"
 msgstr "Anexar Anúncio a Inválido"
 
@@ -98,7 +98,7 @@ msgstr "Visualizar"
 msgid "Can Not Find Uploaded Files"
 msgstr "Não é Possível Localizar os Arquivos Carregados"
 
-#: views/advanced_form.php:475
+#: views/advanced_form.php:477
 msgid ""
 "Check this box to have this option return to a parent IVR if it was called "
 "from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -113,11 +113,11 @@ msgstr ""
 "caso existisse uma URA chamada neste caminho de ligação, mas não "
 "imediatamente antes desse"
 
-#: functions.inc.php:369
+#: functions.inc.php:376
 msgid "Choose a destination to route the call to"
 msgstr "Escolha um destino para encaminhar a chamada"
 
-#: views/advanced_form.php:317
+#: views/advanced_form.php:319
 msgid ""
 "Choose yes to have this option return to a parent IVR if it was called from "
 "a parent IVR. If not, it will go to the chosen destination.<br><br>The "
@@ -147,7 +147,7 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ivr.class.php:222 functions.inc.php:369
+#: Ivr.class.php:222 functions.inc.php:376
 msgid "Delete"
 msgstr "Apagar"
 
@@ -164,20 +164,20 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Descrição desta URA"
 
-#: functions.inc.php:369
+#: functions.inc.php:376
 msgid "Destination"
 msgstr "Destino"
 
-#: views/advanced_form.php:371
+#: views/advanced_form.php:373
 msgid "Destination to send the call to after Invalid Recording is played"
 msgstr "Destino para enviar a chamada depois reproduzir a Gravação Inválida"
 
-#: views/advanced_form.php:529
+#: views/advanced_form.php:531
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Destino para enviar a chamada após Gravação de Tempo Esgotado ser tocada."
 
-#: functions.inc.php:369
+#: functions.inc.php:376
 msgid "Digits"
 msgstr "Dígitos"
 
@@ -185,7 +185,7 @@ msgstr "Dígitos"
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:369
+#: functions.inc.php:376
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -241,7 +241,7 @@ msgstr "Opções URA DTMF"
 msgid "IVR Description"
 msgstr "Descrição"
 
-#: views/advanced_form.php:563
+#: views/advanced_form.php:565
 msgid "IVR Entries"
 msgstr "Entradas URA"
 
@@ -257,17 +257,17 @@ msgstr "Lista URA"
 msgid "IVR Name"
 msgstr "Nome"
 
-#: functions.inc.php:505 functions.inc.php:527
+#: functions.inc.php:512 functions.inc.php:534
 #, php-format
 msgid "IVR: %s"
 msgstr "URA: %s"
 
-#: functions.inc.php:450 functions.inc.php:469
+#: functions.inc.php:457 functions.inc.php:476
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:432
+#: functions.inc.php:439
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "URA: %s / Opção: %s"
@@ -280,7 +280,7 @@ msgstr ""
 msgid "IVRs require a valid name"
 msgstr "URAs requerem um nome válido"
 
-#: views/advanced_form.php:556
+#: views/advanced_form.php:558
 msgid ""
 "If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
 "got a users voicemail"
@@ -288,29 +288,32 @@ msgstr ""
 "Se Sim, ao sair do correio de voz, o usuário chamador será devolvido a esta "
 "URA se tiver uma caixa de correio de voz"
 
-#: views/advanced_form.php:138
+#: views/advanced_form.php:140
 msgid ""
-"If set to 'Yes' then IVR will wait the specified timeout length for the full "
-"entry. If set to 'No' then IVR will match on the first digit(s) that match "
-"IVR entries, thus if you have entries of 1 and 123 when the caller presses 1 "
-"it will dial entry 1, when they press 123 it will match on the first entry "
-"so it will dial 1. Changing this setting to 'Yes' will wait the full timeout "
-"for the entry so that 123 will match 123. Default is 'No'"
+"If set to 'No' then IVR will match on the first digit(s) that match IVR "
+"entries, thus if you have entries of 1 and 123 when the caller presses 1 it "
+"will dial entry 1, when they press 123 it will match on the first entry so "
+"it will dial 1. If set to 'Yes' then IVR will wait the full timeout for the "
+"entry so that 123 will match 123. If set to 'No - Legacy' then the IVR will "
+"work as it did in previous PBX versions, utilizing the extenwait "
+"functionality, if ivr codes conflict with mapped extensions there could "
+"possibly be undesired results, however this is the typical default setting "
+"for the PBX. Default is 'No - Legacy'"
 msgstr ""
 
-#: views/advanced_form.php:359
+#: views/advanced_form.php:361
 msgid "Invalid Destination"
 msgstr "Destino Invalido"
 
-#: views/advanced_form.php:333
+#: views/advanced_form.php:335
 msgid "Invalid Recording"
 msgstr "Gravação Inválida"
 
-#: views/advanced_form.php:225
+#: views/advanced_form.php:227
 msgid "Invalid Retries"
 msgstr "Tentativas Invalidas"
 
-#: views/advanced_form.php:249
+#: views/advanced_form.php:251
 msgid "Invalid Retry Recording"
 msgstr "Gravação Tentativa Inválida"
 
@@ -327,11 +330,15 @@ msgid "Name of this IVR"
 msgstr "Nome desta URA"
 
 #: views/advanced_form.php:103 views/advanced_form.php:130
-#: views/advanced_form.php:282 views/advanced_form.php:309
-#: views/advanced_form.php:440 views/advanced_form.php:467
-#: views/advanced_form.php:548 views/entries.php:43
+#: views/advanced_form.php:284 views/advanced_form.php:311
+#: views/advanced_form.php:442 views/advanced_form.php:469
+#: views/advanced_form.php:550 views/entries.php:43
 msgid "No"
 msgstr "Não"
+
+#: views/advanced_form.php:132
+msgid "No - Legacy"
+msgstr ""
 
 #: assets/js/ivr.js:342
 msgid "No file to load!"
@@ -341,21 +348,21 @@ msgstr "Nenhum arquivo para carregar!"
 msgid "No file was uploaded"
 msgstr "Nenhum arquivo foi carregado"
 
-#: views/advanced_form.php:202 views/advanced_form.php:363
-#: views/advanced_form.php:521 views/form.php:54 views/form.php:60
+#: views/advanced_form.php:204 views/advanced_form.php:365
+#: views/advanced_form.php:523 views/form.php:54 views/form.php:60
 #: views/form.php:66 views/form.php:72 views/form.php:78
 #: views/simple_form.php:171
 msgid "None"
 msgstr "Nenhum"
 
-#: views/advanced_form.php:395
+#: views/advanced_form.php:397
 msgid ""
 "Number of times to retry when no DTMF is heard and the IVR choice times out."
 msgstr ""
 "Número de vezes a tentar quando nenhum DTMF é ouvido e a opção da URA "
 "esgotar o tempo."
 
-#: views/advanced_form.php:237
+#: views/advanced_form.php:239
 msgid ""
 "Number of times to retry when receiving an invalid/unmatched response from "
 "the caller"
@@ -363,7 +370,7 @@ msgstr ""
 "Número de vezes a tentar quando receber uma resposta inválida/não "
 "coincidente do chamador"
 
-#: views/advanced_form.php:214 views/simple_form.php:183
+#: views/advanced_form.php:216 views/simple_form.php:183
 #, php-format
 msgid ""
 "Override the ringer volume. Note: This is only valid for %s phones at this "
@@ -380,7 +387,7 @@ msgstr "Reproduzir Gravação Anterior"
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
-#: views/advanced_form.php:347 views/advanced_form.php:505
+#: views/advanced_form.php:349 views/advanced_form.php:507
 msgid ""
 "Prompt to be played before sending the caller to an alternate destination "
 "due to the caller pressing 0 or receiving the maximum amount of invalid/"
@@ -390,7 +397,7 @@ msgstr ""
 "devido ao chamador pressionar 0 ou receber a máxima quantidade de respostas "
 "inválidas/não coincidentes (como determinado pelas Tentativas Inválidas)"
 
-#: views/advanced_form.php:421
+#: views/advanced_form.php:423
 msgid ""
 "Prompt to be played when a timeout occurs, before prompting the caller to "
 "try again"
@@ -398,7 +405,7 @@ msgstr ""
 "Mensagem a ser tocada quando um tempo esgotado ocorrer, antes de pedir ao "
 "chamador para tentar novamente"
 
-#: views/advanced_form.php:263
+#: views/advanced_form.php:265
 msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
@@ -419,23 +426,23 @@ msgstr "Gravando..."
 msgid "Reset"
 msgstr "Reiniciar"
 
-#: functions.inc.php:369
+#: functions.inc.php:376
 msgid "Return"
 msgstr "Retornar"
 
-#: views/advanced_form.php:302
+#: views/advanced_form.php:304
 msgid "Return on Invalid"
 msgstr "Retorno Quando Inválido"
 
-#: views/advanced_form.php:460
+#: views/advanced_form.php:462
 msgid "Return on Timeout"
 msgstr "Retorno Quando Tempo Esgotado"
 
-#: views/advanced_form.php:541
+#: views/advanced_form.php:543
 msgid "Return to IVR after VM"
 msgstr "Retorna para URA após Caixa Postal"
 
-#: functions.inc.php:369
+#: functions.inc.php:376
 msgid "Return to this IVR when finished"
 msgstr "Retornar a esta URA quando terminar"
 
@@ -443,7 +450,7 @@ msgstr "Retornar a esta URA quando terminar"
 msgid "Ring Tone"
 msgstr "Opção de Toque"
 
-#: views/advanced_form.php:197 views/simple_form.php:166
+#: views/advanced_form.php:199 views/simple_form.php:166
 msgid "Ringer Volume Override"
 msgstr "Substituição do volume do toque"
 
@@ -484,23 +491,23 @@ msgstr "O arquivo carregado excede a diretiva upload_max_filesize no php.ini"
 msgid "The uploaded file was only partially uploaded"
 msgstr "O arquivo enviado foi carregado parcialmente"
 
-#: views/advanced_form.php:150
+#: views/advanced_form.php:152
 msgid "Timeout"
 msgstr "Tempo Final (Timeout)"
 
-#: views/advanced_form.php:517
+#: views/advanced_form.php:519
 msgid "Timeout Destination"
 msgstr "Tempo Esgotado Destino"
 
-#: views/advanced_form.php:491
+#: views/advanced_form.php:493
 msgid "Timeout Recording"
 msgstr "Tempo Esgotado Gravação"
 
-#: views/advanced_form.php:383
+#: views/advanced_form.php:385
 msgid "Timeout Retries"
 msgstr "Tempo Esgotado Tentativas"
 
-#: views/advanced_form.php:407
+#: views/advanced_form.php:409
 msgid "Timeout Retry Recording"
 msgstr "Tempo Esgotado Gravação de Tentativa"
 
@@ -548,9 +555,9 @@ msgstr ""
 "múltiplos arquivos"
 
 #: views/advanced_form.php:101 views/advanced_form.php:128
-#: views/advanced_form.php:280 views/advanced_form.php:307
-#: views/advanced_form.php:438 views/advanced_form.php:465
-#: views/advanced_form.php:546 views/entries.php:41
+#: views/advanced_form.php:282 views/advanced_form.php:309
+#: views/advanced_form.php:440 views/advanced_form.php:467
+#: views/advanced_form.php:548 views/entries.php:41
 msgid "Yes"
 msgstr "Sim"
 
