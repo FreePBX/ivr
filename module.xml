@@ -11,13 +11,13 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
-		*14.0.9* FREEPBX-18641 IVR module is forced to wait till full timeout for the dtmf entry 
-		*14.0.8* FREEPBX-18641 VR module is forced to wait till full timeout for the dtmf entry 
-		*14.0.7* FREEPBX-18641 IVR module is forced to wait till full timeout for the dtmf entry 
-		*14.0.6* FREEPBX-18641 IVR module is forced to wait till full timeout for the dtmf entry 
-		*14.0.5* Fixing FREEPBX-15212 IVR duplicate name check 
-		*14.0.4* FREEPBX-18024 
-		*14.0.3* FREEPBX-18115 strict matching 
+		*14.0.9* FREEPBX-18641 IVR module is forced to wait till full timeout for the dtmf entry
+		*14.0.8* FREEPBX-18641 VR module is forced to wait till full timeout for the dtmf entry
+		*14.0.7* FREEPBX-18641 IVR module is forced to wait till full timeout for the dtmf entry
+		*14.0.6* FREEPBX-18641 IVR module is forced to wait till full timeout for the dtmf entry
+		*14.0.5* Fixing FREEPBX-15212 IVR duplicate name check
+		*14.0.4* FREEPBX-18024
+		*14.0.3* FREEPBX-18115 strict matching
 		*14.0.2* FREEPBX-17908 Do not error when creating IVRs
 		*14.0.1.7* FREEPBX-18024 apply to 14
 		*14.0.1.6* FREEPBX-18024 Update the allowed entry length
@@ -69,7 +69,7 @@
 			<field name="invalid_ivr_ret" type="boolean" default="0"/>
 			<field name="alertinfo" type="string" length="150" notnull="false"/>
 			<field name="rvolume" type="string" length="2" default=""/>
-			<field name="strict_dial_timeout" type="boolean" default="0"/>
+			<field name="strict_dial_timeout" type="boolean" default="2"/>
 	</table>
 </database>
 	<popovers>

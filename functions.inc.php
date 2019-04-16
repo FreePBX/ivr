@@ -108,54 +108,61 @@ function ivr_get_config($engine) {
 
 				$ivr_announcement = recordings_get_file($ivr['announcement']);
 				$ext->add($c, 's', 'skip', new ext_set('IVR_MSG', $ivr_announcement));
-				//force strict dial timeout :: no
-				if(!$ivr['strict_dial_timeout']) {
-					$ext->add($c, 's', 'start', new ext_setvar("DIGITS",""));
-					$ext->add($c, 's', '', new ext_setvar("NODEFOUND","0"));
-					$ext->add($c, 's', '', new ext_setvar("LOCALEXT","0"));
-					$ext->add($c, 's', '', new ext_setvar("DIREXT","0"));
-					$ext->add($c, 's', 'beforewhile', new ext_execif('$["${IVREXT}" != ""]', 'Set', 'DIGITS=${DIGITS}${IVREXT}'));
-					$ext->add($c, 's', '', new ext_while('$["${NODEFOUND}" = "0"] '));
-					$ext->add($c, 's', '', new ext_read('IVREXT', '${IVR_MSG}', '1', '', '0', $ivr['timeout_time']));
-					$ext->add($c, 's', '', new ext_set('IVR_MSG', ''));
-					$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "TIMEOUT" & "${IVREXT}" = ""]','t,1'));
-					$ext->add($c, 's', '', new ext_noop('${DB(DEVICE/${DIGITS}${IVREXT}/user)}'));
-					if ($ivr['directdial']!= "" && $ivr['directdial'] !="Disabled" ) {
-						if ($ivr['directdial'] == 'ext-local') {
-							$ext->add($c, 's', '', new ext_execif('$["${DB(DEVICE/${DIGITS}${IVREXT}/user)}" != ""]', 'Set', 'LOCALEXT=1'));
-							$ext->add($c, 's', '', new ext_gotoif('$["${LOCALEXT}" = "1"]','from-did-direct-ivr,${DIGITS}${IVREXT},1'));
-							$ext->add($c, 's', '', new ext_noop('${CONTEXT}${DIGITS},${IVREXT},1'));
-							$ext->add($c, 's', '', new ext_execif('$["${DIALPLAN_EXISTS(${CONTEXT},${DIGITS}${IVREXT},1)}" != "0"]', 'Set', 'NODEFOUND=1'));
-							$ext->add($c, 's', '', new ext_gotoif('$["${NODEFOUND}" = "0"]','beforewhile:nodedial'));
-						} else {// this should be a ivr node or directory exten
-							$ext->add($c, 's', '', new ext_execif('"${DIALPLAN_EXISTS(from-ivr-directory-' . $ivr['directdial'].',${DIGITS}${IVREXT},1)}" != "0"]', 'Set', 'DIREXT=1'));
-							$ext->add($c, 's', '', new ext_execif('$["${DIALPLAN_EXISTS(${CONTEXT},${DIGITS}${IVREXT},1)}" != "0"]', 'Set', 'NODEFOUND=1'));
-							$ext->add($c, 's', '', new ext_gotoif('$["${NODEFOUND}" = "0"]','beforewhile:nodedial'));
+				switch($ivr['strict_dial_timeout']) {
+					case "0": //force strict dial timeout :: no
+						$ext->add($c, 's', 'start', new ext_setvar("DIGITS",""));
+						$ext->add($c, 's', '', new ext_setvar("NODEFOUND","0"));
+						$ext->add($c, 's', '', new ext_setvar("LOCALEXT","0"));
+						$ext->add($c, 's', '', new ext_setvar("DIREXT","0"));
+						$ext->add($c, 's', 'beforewhile', new ext_execif('$["${IVREXT}" != ""]', 'Set', 'DIGITS=${DIGITS}${IVREXT}'));
+						$ext->add($c, 's', '', new ext_while('$["${NODEFOUND}" = "0"] '));
+						$ext->add($c, 's', '', new ext_read('IVREXT', '${IVR_MSG}', '1', '', '0', $ivr['timeout_time']));
+						$ext->add($c, 's', '', new ext_set('IVR_MSG', ''));
+						$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "TIMEOUT" & "${IVREXT}" = ""]','t,1'));
+						$ext->add($c, 's', '', new ext_noop('${DB(DEVICE/${DIGITS}${IVREXT}/user)}'));
+						if ($ivr['directdial']!= "" && $ivr['directdial'] !="Disabled" ) {
+							if ($ivr['directdial'] == 'ext-local') {
+								$ext->add($c, 's', '', new ext_execif('$["${DB(DEVICE/${DIGITS}${IVREXT}/user)}" != ""]', 'Set', 'LOCALEXT=1'));
+								$ext->add($c, 's', '', new ext_gotoif('$["${LOCALEXT}" = "1"]','from-did-direct-ivr,${DIGITS}${IVREXT},1'));
+								$ext->add($c, 's', '', new ext_noop('${CONTEXT}${DIGITS},${IVREXT},1'));
+								$ext->add($c, 's', '', new ext_execif('$["${DIALPLAN_EXISTS(${CONTEXT},${DIGITS}${IVREXT},1)}" != "0"]', 'Set', 'NODEFOUND=1'));
+								$ext->add($c, 's', '', new ext_gotoif('$["${NODEFOUND}" = "0"]','beforewhile:nodedial'));
+							} else {// this should be a ivr node or directory exten
+								$ext->add($c, 's', '', new ext_execif('"${DIALPLAN_EXISTS(from-ivr-directory-' . $ivr['directdial'].',${DIGITS}${IVREXT},1)}" != "0"]', 'Set', 'DIREXT=1'));
+								$ext->add($c, 's', '', new ext_execif('$["${DIALPLAN_EXISTS(${CONTEXT},${DIGITS}${IVREXT},1)}" != "0"]', 'Set', 'NODEFOUND=1'));
+								$ext->add($c, 's', '', new ext_gotoif('$["${NODEFOUND}" = "0"]','beforewhile:nodedial'));
+							}
+						}else {
+							$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${DIGITS}${IVREXT},1)}" = "0"]','beforewhile:nodedial'));
 						}
-					}else {
-						$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${DIGITS}${IVREXT},1)}" = "0"]','beforewhile:nodedial'));
-					}
-					$ext->add($c, 's', '', new ext_endwhile(''));
-					$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${DIGITS},1)}" = "0"]','i,1'));
-					$ext->add($c, 's', 'nodedial', new ext_goto('${DIGITS}${IVREXT},1'));
-				//force strict dial timeout :: yes
-				} else {
-					$ext->add($c, 's', 'start', new ext_digittimeout($ivr['timeout_time']));
-					$ext->add($c, 's', '', new ext_read('IVREXT', '${IVR_MSG}', '', '', '0', $ivr['timeout_time']));
-					$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "TIMEOUT" & "${IVREXT}" = ""]','t,1'));
-					if ($ivr['directdial']) {
-						if ($ivr['directdial'] == 'ext-local') {
-							$ext->add($c, 's', '', new ext_execif('$["${DB(DEVICE/${IVREXT}/user)}" != ""]', 'Set', 'LOCALEXT=1'));
-							$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${IVREXT},1)}" = "0" & "${DIALPLAN_EXISTS(from-did-direct-ivr,${IVREXT},1)}" = "0"]','i,1'));
+						$ext->add($c, 's', '', new ext_endwhile(''));
+						$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${DIGITS},1)}" = "0"]','i,1'));
+						$ext->add($c, 's', 'nodedial', new ext_goto('${DIGITS}${IVREXT},1'));
+					break;
+					case "1": //force strict dial timeout :: yes
+						$ext->add($c, 's', 'start', new ext_digittimeout($ivr['timeout_time']));
+						$ext->add($c, 's', '', new ext_read('IVREXT', '${IVR_MSG}', '', '', '0', $ivr['timeout_time']));
+						$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "TIMEOUT" & "${IVREXT}" = ""]','t,1'));
+						if ($ivr['directdial']) {
+							if ($ivr['directdial'] == 'ext-local') {
+								$ext->add($c, 's', '', new ext_execif('$["${DB(DEVICE/${IVREXT}/user)}" != ""]', 'Set', 'LOCALEXT=1'));
+								$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${IVREXT},1)}" = "0" & "${DIALPLAN_EXISTS(from-did-direct-ivr,${IVREXT},1)}" = "0"]','i,1'));
+							} else {
+								//generated by directory
+								$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${IVREXT},1)}" = "0" & "${DIALPLAN_EXISTS(from-ivr-directory-' . $ivr['directdial'].',${IVREXT},1)}" = "0"]','i,1'));
+							}
 						} else {
-							//generated by directory
-							$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${IVREXT},1)}" = "0" & "${DIALPLAN_EXISTS(from-ivr-directory-' . $ivr['directdial'].',${IVREXT},1)}" = "0"]','i,1'));
+							$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${IVREXT},1)}" = "0"]','i,1'));
 						}
-					} else {
-						$ext->add($c, 's', '', new ext_gotoif('$["${DIALPLAN_EXISTS(${CONTEXT},${IVREXT},1)}" = "0"]','i,1'));
-					}
-					$ext->add($c, 's', '', new ext_gotoif('$["${LOCALEXT}" = "1"]','from-did-direct-ivr,${IVREXT},1'));
-					$ext->add($c, 's', '', new ext_goto('${IVREXT},1'));
+						$ext->add($c, 's', '', new ext_gotoif('$["${LOCALEXT}" = "1"]','from-did-direct-ivr,${IVREXT},1'));
+						$ext->add($c, 's', '', new ext_goto('${IVREXT},1'));
+					break;
+					case "2": //force strict dial timeout :: instant
+						$ext->addInclude($c, 'from-did-direct-ivr'); //generated in core module
+						$ext->add($c, 's', 'start', new ext_digittimeout(3));
+						$ext->add($c, 's', '', new ext_execif('$["${IVR_MSG}" != ""]','Background','${IVR_MSG}'));
+						$ext->add($c, 's', '', new ext_waitexten($ivr['timeout_time']));
+					break;
 				}
 
 				// Actually add the IVR entires now
