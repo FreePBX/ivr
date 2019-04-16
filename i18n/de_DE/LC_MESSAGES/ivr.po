@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-19 08:49+0530\n"
-"PO-Revision-Date: 2018-10-19 20:00+0000\n"
-"Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
+"PO-Revision-Date: 2019-02-20 10:46+0000\n"
+"Last-Translator: hammer125 <auswertung@mariner.at>\n"
 "Language-Team: German <http://*/projects/freepbx/ivr/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -293,7 +293,7 @@ msgstr "IVR: %s / Optione: %s"
 
 #: assets/js/ivr.js:85
 msgid "IVRs name already exist"
-msgstr ""
+msgstr "IVRs Name existiert bereits"
 
 #: assets/js/ivr.js:82
 msgid "IVRs require a valid name"
