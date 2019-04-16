@@ -28,7 +28,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 		'timeout_retry_recording' => 'default',
 		'timeout_append_announce' => 0,
 		'timeout_ivr_ret' => 0,
-		'strict_dial_timeout' => 0,
+		'strict_dial_timeout' => 2,
 		'timeout_recording' => 'default',
 		'retvm' => '',
 		'entries' => [],
@@ -68,7 +68,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 		foreach (self::DEFAULTS as $key => $value) {
 			$vars[$key] = isset($_REQUEST[$key])?$_REQUEST[$key]:$value;
 		}
-		$bools = [ "invalid_append_announce", "timeout_append_announce", "timeout_ivr_ret", "invalid_ivr_ret", "strict_dial_timeout" ];
+		$bools = [ "invalid_append_announce", "timeout_append_announce", "timeout_ivr_ret", "invalid_ivr_ret" ];
 		foreach ($bools as $b) {
 			// If they're NOT empty, set them to (int)1. If they ARE empty, set them to (int)0.
 			$vars[$b] = (int) !empty($vars[$b]);

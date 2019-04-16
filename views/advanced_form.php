@@ -128,6 +128,8 @@
 							<label for="strict_dial_timeoutyes"><?php echo _("Yes");?></label>
 							<input type="radio" name="strict_dial_timeout" id="strict_dial_timeoutno" value="0" <?php echo ($ivr['strict_dial_timeout'] == "0"?"CHECKED":"") ?>>
 							<label for="strict_dial_timeoutno"><?php echo _("No");?></label>
+							<input type="radio" name="strict_dial_timeout" id="strict_dial_timeoutinstant" value="2" <?php echo ($ivr['strict_dial_timeout'] == "2" || !isset($ivr['strict_dial_timeout']) ?"CHECKED":"") ?>>
+							<label for="strict_dial_timeoutinstant"><?php echo _("No - Legacy");?></label>
 						</div>
 					</div>
 				</div>
@@ -135,7 +137,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<span id="strict_dial_timeout-help" class="help-block fpbx-help-block"><?php echo _("If set to 'Yes' then IVR will wait the specified timeout length for the full entry. If set to 'No' then IVR will match on the first digit(s) that match IVR entries, thus if you have entries of 1 and 123 when the caller presses 1 it will dial entry 1, when they press 123 it will match on the first entry so it will dial 1. Changing this setting to 'Yes' will wait the full timeout for the entry so that 123 will match 123. Default is 'No'")?></span>
+				<span id="strict_dial_timeout-help" class="help-block fpbx-help-block"><?php echo _("If set to 'No' then IVR will match on the first digit(s) that match IVR entries, thus if you have entries of 1 and 123 when the caller presses 1 it will dial entry 1, when they press 123 it will match on the first entry so it will dial 1. If set to 'Yes' then IVR will wait the full timeout for the entry so that 123 will match 123. If set to 'No - Legacy' then the IVR will work as it did in previous PBX versions, utilizing the extenwait functionality, if ivr codes conflict with mapped extensions there could possibly be undesired results, however this is the typical default setting for the PBX. Default is 'No - Legacy'")?></span>
 			</div>
 		</div>
 	</div>
