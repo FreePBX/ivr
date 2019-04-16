@@ -118,6 +118,7 @@ function ivr_get_config($engine) {
 						$ext->add($c, 's', '', new ext_while('$["${NODEFOUND}" = "0"] '));
 						$ext->add($c, 's', '', new ext_read('IVREXT', '${IVR_MSG}', '1', '', '0', $ivr['timeout_time']));
 						$ext->add($c, 's', '', new ext_set('IVR_MSG', ''));
+						$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "TIMEOUT" & "${DIGITS}" != ""]','i,1'));
 						$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "TIMEOUT" & "${IVREXT}" = ""]','t,1'));
 						$ext->add($c, 's', '', new ext_noop('${DB(DEVICE/${DIGITS}${IVREXT}/user)}'));
 						if ($ivr['directdial']!= "" && $ivr['directdial'] !="Disabled" ) {
