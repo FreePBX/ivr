@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-15 22:35-0400\n"
+"POT-Creation-Date: 2019-04-23 17:22+0530\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -113,7 +113,7 @@ msgstr ""
 "的地。<br /><br />返回路径可能会是呼叫路径上任何先于此IVR的IVR。如果呼叫了在"
 "路径上不直接相邻的父IVR，这个设置可能回带来奇怪的结果。"
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -141,7 +141,7 @@ msgstr ""
 msgid "Default"
 msgstr "默认"
 
-#: Ivr.class.php:80 functions.inc.php:506
+#: Ivr.class.php:80 functions.inc.php:507
 msgid "Delete"
 msgstr "删除"
 
@@ -157,7 +157,7 @@ msgstr "删除这个入口。 不要忘记点击提交！"
 msgid "Description of this IVR"
 msgstr "IVR描述"
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid "Destination"
 msgstr "目的地"
 
@@ -169,7 +169,7 @@ msgstr "播放无效录音提示后转发的目的地"
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "播放超时提示后转发的目的地。"
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid "Digits"
 msgstr ""
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -248,17 +248,17 @@ msgstr "IVR列表"
 msgid "IVR Name"
 msgstr "IVR 名称"
 
-#: functions.inc.php:643 functions.inc.php:665
+#: functions.inc.php:644 functions.inc.php:666
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR：%s"
 
-#: functions.inc.php:588 functions.inc.php:607
+#: functions.inc.php:589 functions.inc.php:608
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:570
+#: functions.inc.php:571
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR：%s / 选项：%s"
@@ -398,7 +398,7 @@ msgstr "当收到无效响应时，在提示呼叫方重新呼叫钱，播放的
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: functions.inc.php:418
+#: functions.inc.php:419
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
@@ -411,7 +411,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid "Return"
 msgstr "返回"
 
@@ -427,7 +427,7 @@ msgstr "超时返回处理"
 msgid "Return to IVR after VM"
 msgstr "VM后返回IVR"
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid "Return to this IVR when finished"
 msgstr ""
 

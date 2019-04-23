@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-15 22:35-0400\n"
+"POT-Creation-Date: 2019-04-23 17:22+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,7 +107,7 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -139,7 +139,7 @@ msgid "Default"
 msgstr ""
 
 #: Ivr.class.php:80
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid "Delete"
 msgstr ""
 
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid "Destination"
 msgstr ""
 
@@ -167,7 +167,7 @@ msgstr ""
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid "Digits"
 msgstr ""
 
@@ -175,7 +175,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -249,19 +249,19 @@ msgstr ""
 msgid "IVR Name"
 msgstr ""
 
-#: functions.inc.php:643
-#: functions.inc.php:665
+#: functions.inc.php:644
+#: functions.inc.php:666
 #, php-format
 msgid "IVR: %s"
 msgstr ""
 
-#: functions.inc.php:588
-#: functions.inc.php:607
+#: functions.inc.php:589
+#: functions.inc.php:608
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:570
+#: functions.inc.php:571
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr ""
@@ -412,7 +412,7 @@ msgstr ""
 msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 
-#: functions.inc.php:418
+#: functions.inc.php:419
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr ""
@@ -425,7 +425,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid "Return"
 msgstr ""
 
@@ -441,7 +441,7 @@ msgstr ""
 msgid "Return to IVR after VM"
 msgstr ""
 
-#: functions.inc.php:506
+#: functions.inc.php:507
 msgid "Return to this IVR when finished"
 msgstr ""
 
