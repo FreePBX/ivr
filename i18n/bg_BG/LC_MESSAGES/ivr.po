@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-15 22:39-0400\n"
+"POT-Creation-Date: 2019-04-23 17:20+0530\n"
 "PO-Revision-Date: 2014-07-22 09:45+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/ivr/bg/>\n"
@@ -107,7 +107,7 @@ msgstr ""
 "този IVR, което може да доведе до странни резултати ако има IVR извикан в "
 "пътя на обаждането, но не веднага преди този"
 
-#: functions.inc.php:376
+#: functions.inc.php:377
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Default"
 msgstr "По-Подразбиране"
 
-#: Ivr.class.php:222 functions.inc.php:376
+#: Ivr.class.php:222 functions.inc.php:377
 msgid "Delete"
 msgstr "Изтрий"
 
@@ -151,7 +151,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:376
+#: functions.inc.php:377
 msgid "Destination"
 msgstr "Направление"
 
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
-#: functions.inc.php:376
+#: functions.inc.php:377
 msgid "Digits"
 msgstr ""
 
@@ -171,7 +171,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:376
+#: functions.inc.php:377
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -242,17 +242,17 @@ msgstr ""
 msgid "IVR Name"
 msgstr "Име на IVR"
 
-#: functions.inc.php:512 functions.inc.php:534
+#: functions.inc.php:513 functions.inc.php:535
 #, fuzzy, php-format
 msgid "IVR: %s"
 msgstr "IVR : %s"
 
-#: functions.inc.php:457 functions.inc.php:476
+#: functions.inc.php:458 functions.inc.php:477
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:439
+#: functions.inc.php:440
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / Опция: %s"
@@ -395,7 +395,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:376
+#: functions.inc.php:377
 msgid "Return"
 msgstr "Обратно"
 
@@ -411,7 +411,7 @@ msgstr ""
 msgid "Return to IVR after VM"
 msgstr "Върни се към IVR след ГП"
 
-#: functions.inc.php:376
+#: functions.inc.php:377
 msgid "Return to this IVR when finished"
 msgstr ""
 
