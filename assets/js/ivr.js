@@ -20,7 +20,7 @@ $(document).ready(function(){
 		var idstr = this.id;
 		var res = idstr.split("goto");
 		if($.isNumeric(res[1])){
-			if($(this).val() != 'Extensions' && $(this).val() != 'IVR'){
+			if($(this).val() != 'Extensions' && $(this).val() != 'IVR' && $(this).val() != 'Directory'){
 				$("#"+res[1]).hide();
 			}
 		}
@@ -31,7 +31,7 @@ $(document).ready(function(){
 		// this is working for already build entries
 		var res = idstr.split("goto");
 		if ($.isNumeric(res[1])) {
-			if($(this).val() == 'Extensions' || $(this).val() == 'IVR'){
+			if($(this).val() == 'Extensions' || $(this).val() == 'IVR' || $(this).val() == 'Directory'){
 				$("#"+res[1]).show();
 			} else {
 				$("#entries"+res[1]+"DESTIDyes").prop( "checked", false );
@@ -40,7 +40,7 @@ $(document).ready(function(){
 			}
 		}else {
 			if(res[1] == 'DESTID') {
-				if($(this).val() === 'Extensions' || $(this).val() === 'IVR'){
+				if($(this).val() == 'Extensions' || $(this).val() == 'IVR' || $(this).val() == 'Directory'){
 					$("#"+res[1]).show();
 				} else {
 					$("#entries"+res[1]+"DESTIDyes").prop( "checked", false );
