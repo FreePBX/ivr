@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 10:55+0530\n"
+"POT-Creation-Date: 2019-06-10 13:56+0530\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: Ivr.class.php:320
+#: Ivr.class.php:361
 msgid "A PHP extension stopped the file upload"
 msgstr ""
 
@@ -42,7 +42,7 @@ msgstr "操作"
 msgid "Add Another Entry"
 msgstr ""
 
-#: views/form.php:12 views/grid.php:12 /dev/shm/freepbx/ivr/views/rnav.php:3
+#: views/form.php:12 views/grid.php:12 /usr/src/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr "添加IVR"
 
@@ -90,7 +90,7 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:324
+#: Ivr.class.php:365
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgstr ""
 msgid "Default"
 msgstr "默认"
 
-#: Ivr.class.php:222 functions.inc.php:378
+#: Ivr.class.php:263 functions.inc.php:378
 msgid "Delete"
 msgstr "删除"
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr ""
 
-#: Ivr.class.php:232
+#: Ivr.class.php:273
 msgid "Duplicate"
 msgstr ""
 
@@ -193,7 +193,7 @@ msgstr "编辑:"
 msgid "Enable Direct Dial"
 msgstr "启用直接拨号"
 
-#: Ivr.class.php:317
+#: Ivr.class.php:358
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -209,8 +209,8 @@ msgstr "播放IVR。"
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "语音IVR"
 
@@ -300,7 +300,7 @@ msgstr "无效重试录音"
 msgid "List IVRs"
 msgstr "显示IVR列表"
 
-#: Ivr.class.php:314
+#: Ivr.class.php:355
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -323,7 +323,7 @@ msgstr ""
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:311
+#: Ivr.class.php:352
 msgid "No file was uploaded"
 msgstr ""
 
@@ -388,7 +388,7 @@ msgstr ""
 msgid "Recording..."
 msgstr ""
 
-#: Ivr.class.php:227
+#: Ivr.class.php:268
 msgid "Reset"
 msgstr ""
 
@@ -435,21 +435,21 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
-#: Ivr.class.php:237
+#: Ivr.class.php:278
 msgid "Submit"
 msgstr ""
 
-#: Ivr.class.php:305
+#: Ivr.class.php:346
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:302
+#: Ivr.class.php:343
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:308
+#: Ivr.class.php:349
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
@@ -488,11 +488,11 @@ msgstr ""
 msgid "Unable to delete the last entry"
 msgstr ""
 
-#: Ivr.class.php:277
+#: Ivr.class.php:318
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:297
+#: Ivr.class.php:338
 msgid "Unsupported file format"
 msgstr ""
 
