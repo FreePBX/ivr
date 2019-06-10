@@ -4,11 +4,12 @@ use FreePBX\modules\Backup as Base;
 class Restore Extends Base\RestoreBase{
 	public function runRestore($jobid){
 		$configs = $this->getConfigs();
-		foreach ($configs['ivrs'] as $ivr) {
-			$this->FreePBX->Ivr->saveDetails($ivr);
+		foreach ($configs['ivrs'] as $id => $ivr) {
+			$this->FreePBX->Ivr->saveDetail($ivr['0']);
 		}
-		foreach($configs['entries'] as $id => $entries){
-				$this->FreePBX->Ivr->saveEntries($id, $enrties);
+
+		foreach($configs['entries'] as $id => $entry) {
+			$this->FreePBX->Ivr->saveEntry($id, $entry['0']);
 		}
 	}
 

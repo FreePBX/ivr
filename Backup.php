@@ -6,7 +6,7 @@ class Backup Extends Base\BackupBase{
     $this->addDependency('core');
     $this->addDependency('recordings');
     $configs = [
-        'ivrs' => $this->FreePBX->Ivr->getDetails(),
+        'ivrs' => $this->FreePBX->Ivr->getAllDetails(),
         'entries' => $this->FreePBX->Ivr->getAllEntries(),
     ];
     $this->addConfigs($configs);

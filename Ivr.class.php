@@ -202,6 +202,47 @@ class Ivr extends FreePBX_Helpers implements BMO {
 		return true;
 	}
 
+	public function saveEntry($id,$entry) {
+		$this->deleteEntriesById($id);
+		if ($entry) {
+			$stmt = $this->db->prepare('INSERT INTO ivr_entries VALUES (:ivr_id, :selection, :dest, :ivr_ret)');
+			$stmt->execute([
+				':ivr_id' => $entry['ivr_id'],
+				':selection' => $entry['selection'],
+				':dest' => $entry['dest'],
+				':ivr_ret' =>(int) (isset($entry['ivr_ret']) ? $entry['ivr_ret'] : '0'),
+				]);
+		}
+		return true;
+	}
+
+	public function saveDetail($vals) {
+		unset($vals['action']);
+		unset($vals['display']);
+		unset($vals['entries']);
+		$keys = [];
+		$placeholders = [];
+		$start = 'REPLACE INTO `ivr_details`';
+		foreach($vals as $key => $value){
+			$keys[] = $key;
+			$placeholders[] = ':'.$key;
+		}
+		$keyString = rtrim(implode(',',$keys),',');
+		$placeString = rtrim(implode(',',$placeholders),',');
+		$sql = sprintf('%s (%s) VALUES (%s)', $start, $keyString, $placeString);
+		$this->db->prepare($sql)->execute($vals);
+		return $vals['id'];
+	}
+
+	public function getAllDetails() {
+		$final = [];
+		$all = $this->db->query('SELECT * FROM ivr_details ORDER BY name',PDO::FETCH_ASSOC);
+		foreach ($all as $item) {
+			$final[$item['id']][] = $item;
+		}
+		return $final;
+	}
+
 	public function getAllEntries(){
 		$final = [];
 		$all = $this->db->query('SELECT * FROM ivr_entries',PDO::FETCH_ASSOC);
