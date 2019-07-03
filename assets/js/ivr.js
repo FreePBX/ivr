@@ -16,7 +16,7 @@ $("#duplicate").click(function(e){
 		var id =  $(string).attr('id');
 		 var res = id.split("goto");
 		var option = $("#"+id).val();
-		 if (option == 'Extensions' || option == 'IVR' ) {
+		 if (option == 'Extensions' || option == 'IVR' || option == 'Directory') {
                      $( "#"+res[1]).show();
                   } else {
                         $("#entries"+res[1]+"DESTIDyes").prop( "checked", false );
