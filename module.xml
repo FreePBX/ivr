@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>14.0.9.3</version>
+	<version>14.0.9.4</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
+		*14.0.9.4* FREEPBX-19957 Need to add return option to Directories under IVR module. 
 		*14.0.9.3* FREEPBX-19957 Need to add return option to Directories under IVR module. 
 		*14.0.9.2* FREEPBX-19760 
 		*14.0.9.1* FREEPBX-19475 
