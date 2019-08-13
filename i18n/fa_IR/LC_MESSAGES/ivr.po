@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-20 10:54+0530\n"
-"PO-Revision-Date: 2019-01-25 13:49+0000\n"
+"PO-Revision-Date: 2019-08-13 11:57+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/ivr/fa/>\n"
 "Language: fa_IR\n"
@@ -302,6 +302,15 @@ msgid ""
 "possibly be undesired results, however this is the typical default setting "
 "for the PBX. Default is 'No - Legacy'"
 msgstr ""
+"If set to 'No' then IVR will match on the first digit(s) that match IVR "
+"entries, thus if you have entries of 1 and 123 when the caller presses 1 it "
+"will dial entry 1, when they press 123 it will match on the first entry so "
+"it will dial 1. If set to 'Yes' then IVR will wait the full timeout for the "
+"entry so that 123 will match 123. If set to 'No - Legacy' then the IVR will "
+"work as it did in previous PBX versions, utilizing the extenwait "
+"functionality,  if ivr codes conflict with mapped extensions there could "
+"possibly be undesired results, however this is the typical default setting "
+"for the PBX. Default is 'No - Legacy'"
 
 #: views/advanced_form.php:361
 msgid "Invalid Destination"
@@ -340,7 +349,7 @@ msgstr "خیر"
 
 #: views/advanced_form.php:132
 msgid "No - Legacy"
-msgstr ""
+msgstr "No -  Legacy"
 
 #: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
