@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-20 10:54+0530\n"
-"PO-Revision-Date: 2019-02-20 10:46+0000\n"
-"Last-Translator: hammer125 <auswertung@mariner.at>\n"
+"PO-Revision-Date: 2019-09-14 14:00+0000\n"
+"Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/ivr/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -357,7 +357,7 @@ msgstr "Nein"
 
 #: views/advanced_form.php:132
 msgid "No - Legacy"
-msgstr ""
+msgstr "Nein - veraltet"
 
 #: page.ivr.php:15
 msgid "No Astman, Not loading IVR"
