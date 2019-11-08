@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 10:54+0530\n"
+"POT-Creation-Date: 2019-11-08 22:11+0530\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -122,7 +122,7 @@ msgstr ""
 "caso existisse uma URA chamada neste caminho de ligação, mas não "
 "imediatamente antes desse"
 
-#: functions.inc.php:508
+#: functions.inc.php:510
 msgid "Choose a destination to route the call to"
 msgstr "Escolha um destino para encaminhar a chamada"
 
@@ -160,7 +160,7 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ivr.class.php:80 functions.inc.php:508
+#: Ivr.class.php:80 functions.inc.php:510
 msgid "Delete"
 msgstr "Apagar"
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr "Descrição desta URA"
 
-#: functions.inc.php:508
+#: functions.inc.php:510
 msgid "Destination"
 msgstr "Destino"
 
@@ -190,7 +190,7 @@ msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 "Destino para enviar a chamada após Gravação de Tempo Esgotado ser tocada."
 
-#: functions.inc.php:508
+#: functions.inc.php:510
 msgid "Digits"
 msgstr "Dígitos"
 
@@ -198,7 +198,7 @@ msgstr "Dígitos"
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:508
+#: functions.inc.php:510
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -270,17 +270,17 @@ msgstr "Lista URA"
 msgid "IVR Name"
 msgstr "Nome"
 
-#: functions.inc.php:645 functions.inc.php:667
+#: functions.inc.php:647 functions.inc.php:669
 #, php-format
 msgid "IVR: %s"
 msgstr "URA: %s"
 
-#: functions.inc.php:590 functions.inc.php:609
+#: functions.inc.php:592 functions.inc.php:611
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:572
+#: functions.inc.php:574
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "URA: %s / Opção: %s"
@@ -435,7 +435,7 @@ msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 "Fornece opções para usuários chamadores para discagem direta de um ramal."
 
-#: functions.inc.php:420
+#: functions.inc.php:422
 #, php-format
 msgid "Recording created for IVR named '%s'"
 msgstr "Gravação criada para URA chamada '%s'"
@@ -448,7 +448,7 @@ msgstr "Gravando..."
 msgid "Reset"
 msgstr "Reiniciar"
 
-#: functions.inc.php:508
+#: functions.inc.php:510
 msgid "Return"
 msgstr "Retornar"
 
@@ -464,7 +464,7 @@ msgstr "Retorno Quando Tempo Esgotado"
 msgid "Return to IVR after VM"
 msgstr "Retorna para URA após Caixa Postal"
 
-#: functions.inc.php:508
+#: functions.inc.php:510
 msgid "Return to this IVR when finished"
 msgstr "Retornar a esta URA quando terminar"
 
