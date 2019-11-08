@@ -119,6 +119,7 @@ function ivr_get_config($engine) {
 						$ext->add($c, 's', '', new ext_while('$["${NODEFOUND}" = "0"] '));
 						$ext->add($c, 's', '', new ext_read('IVREXT', '${IVR_MSG}', '1', '', '0', $ivr['timeout_time']));
 						$ext->add($c, 's', '', new ext_set('IVR_MSG', ''));
+                    	$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "OK" & "${IVREXT}" = ""]','#,1'));
 						$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "TIMEOUT" & "${DIGITS}" != ""]','i,1'));
 						$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "TIMEOUT" & "${IVREXT}" = ""]','t,1'));
 						$ext->add($c, 's', '', new ext_noop('${DB(DEVICE/${DIGITS}${IVREXT}/user)}'));
@@ -144,6 +145,7 @@ function ivr_get_config($engine) {
 					case "1": //force strict dial timeout :: yes
 						$ext->add($c, 's', 'start', new ext_digittimeout($ivr['timeout_time']));
 						$ext->add($c, 's', '', new ext_read('IVREXT', '${IVR_MSG}', '', '', '0', $ivr['timeout_time']));
+                    	$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "OK" & "${IVREXT}" = ""]','#,1'));
 						$ext->add($c, 's', '', new ext_gotoif('$["${READSTATUS}" = "TIMEOUT" & "${IVREXT}" = ""]','t,1'));
 						if ($ivr['directdial']) {
 							if ($ivr['directdial'] == 'ext-local') {
