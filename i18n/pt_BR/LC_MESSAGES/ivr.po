@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-08 22:13+0530\n"
+"POT-Creation-Date: 2019-12-03 16:16+0530\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-Country: BRAZIL\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: Ivr.class.php:361
+#: Ivr.class.php:367
 msgid "A PHP extension stopped the file upload"
 msgstr "Uma extensão PHP parou o carregamento do arquivo"
 
@@ -94,7 +94,7 @@ msgstr "Tem certeza de que não quer uma gravação para este anúncio?"
 msgid "Browse"
 msgstr "Visualizar"
 
-#: Ivr.class.php:365
+#: Ivr.class.php:371
 msgid "Can Not Find Uploaded Files"
 msgstr "Não é Possível Localizar os Arquivos Carregados"
 
@@ -147,7 +147,7 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ivr.class.php:263 functions.inc.php:380
+#: Ivr.class.php:269 functions.inc.php:380
 msgid "Delete"
 msgstr "Apagar"
 
@@ -195,7 +195,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr "Solte a Gravação do Anúncio Aqui"
 
-#: Ivr.class.php:273
+#: Ivr.class.php:279
 msgid "Duplicate"
 msgstr ""
 
@@ -211,7 +211,7 @@ msgstr "Editar:"
 msgid "Enable Direct Dial"
 msgstr "Habilitar discagem direta"
 
-#: Ivr.class.php:358
+#: Ivr.class.php:364
 msgid "Failed to write file to disk"
 msgstr "Falha ao gravar o arquivo no disco"
 
@@ -321,7 +321,7 @@ msgstr "Gravação Tentativa Inválida"
 msgid "List IVRs"
 msgstr "Listar URAs"
 
-#: Ivr.class.php:355
+#: Ivr.class.php:361
 msgid "Missing a temporary folder"
 msgstr "Faltando uma pasta temporária"
 
@@ -344,7 +344,7 @@ msgstr ""
 msgid "No file to load!"
 msgstr "Nenhum arquivo para carregar!"
 
-#: Ivr.class.php:352
+#: Ivr.class.php:358
 msgid "No file was uploaded"
 msgstr "Nenhum arquivo foi carregado"
 
@@ -422,7 +422,7 @@ msgstr ""
 msgid "Recording..."
 msgstr "Gravando..."
 
-#: Ivr.class.php:268
+#: Ivr.class.php:274
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -471,11 +471,11 @@ msgstr ""
 "Selecione uma opção de toque na lista de opções acima. Isto irá determinar "
 "como o seu telefone soa quando for executado a partir deste grupo."
 
-#: Ivr.class.php:278
+#: Ivr.class.php:284
 msgid "Submit"
 msgstr "Enviar"
 
-#: Ivr.class.php:346
+#: Ivr.class.php:352
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
@@ -483,11 +483,11 @@ msgstr ""
 "O arquivo enviado excede a diretiva MAX_FILE_SIZE que foi especificada no "
 "formulário HTML"
 
-#: Ivr.class.php:343
+#: Ivr.class.php:349
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "O arquivo carregado excede a diretiva upload_max_filesize no php.ini"
 
-#: Ivr.class.php:349
+#: Ivr.class.php:355
 msgid "The uploaded file was only partially uploaded"
 msgstr "O arquivo enviado foi carregado parcialmente"
 
@@ -528,11 +528,11 @@ msgstr "Não é possível excluir o primeiro elemento. Edite em vez de excluir"
 msgid "Unable to delete the last entry"
 msgstr "Não é possível excluir o último elemento"
 
-#: Ivr.class.php:318
+#: Ivr.class.php:324
 msgid "Unknown Error"
 msgstr "Erro Desconhecido"
 
-#: Ivr.class.php:338
+#: Ivr.class.php:344
 msgid "Unsupported file format"
 msgstr "Formato de arquivo não suportado"
 
