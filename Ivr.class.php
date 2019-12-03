@@ -217,9 +217,15 @@ class Ivr extends FreePBX_Helpers implements BMO {
 	}
 
 	public function saveDetail($vals) {
-		unset($vals['action']);
-		unset($vals['display']);
-		unset($vals['entries']);
+		if (isset($vals['action'])) {
+			unset($vals['action']);
+		}
+		if (isset($vals['display'])) {
+			unset($vals['display']);
+		}
+		if (isset($vals['entries'])) {
+			unset($vals['entries']);
+		}
 		$keys = [];
 		$placeholders = [];
 		$start = 'REPLACE INTO `ivr_details`';
