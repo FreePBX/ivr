@@ -162,7 +162,9 @@ function ivr_get_config($engine) {
 						$ext->add($c, 's', '', new ext_goto('${IVREXT},1'));
 					break;
 					case "2": //force strict dial timeout :: instant
-						$ext->addInclude($c, 'from-did-direct-ivr'); //generated in core module
+						if ($ivr['directdial'] != "" && $ivr['directdial'] == "ext-local" ) {
+							$ext->addInclude($c, 'from-did-direct-ivr'); //generated in core module
+						}
 						$ext->add($c, 's', 'start', new ext_digittimeout(3));
 						$ext->add($c, 's', '', new ext_execif('$["${IVR_MSG}" != ""]','Background','${IVR_MSG}'));
 						$ext->add($c, 's', '', new ext_waitexten($ivr['timeout_time']));
