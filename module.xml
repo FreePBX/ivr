@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>15.0.23</version>
+	<version>15.0.24</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,6 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
+		*15.0.24* FREEPBX-20683: mention the RFC7462 setting 
 		*15.0.23* FREEPBX-20876 IVR Direct Dial with No - Legacy 
 		*15.0.22* FREEI-978 Whoops\Exception\ErrorException 
 		*15.0.21* FREEI-846 IVR module upgrade breaks # entry 

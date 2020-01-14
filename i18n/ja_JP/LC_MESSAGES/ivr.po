@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-09 12:38+0530\n"
+"POT-Creation-Date: 2020-01-14 15:58+0530\n"
 "PO-Revision-Date: 2016-08-03 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -59,8 +59,15 @@ msgid "A value of 0 disables the timeout"
 msgstr "0を設定するとタイムアウトは無効になります。"
 
 #: views/advanced_form.php:188
-msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
-msgstr "SIPデバイスの鳴り分けを実現するにはALERT_INFOを活用できます。"
+msgid ""
+"ALERT_INFO can be used for distinctive ring with SIP devices.<br>If you are "
+"having issues, see the \"Enforce RFC7462\" option found in Settings-"
+">Advanced Settings. <br><br>Whether to enforce RFC7462 for Alert-Info. With "
+"this enabled all Alert Infos will be prefixed with "
+"\"<lt&>http://127.0.0.1<gt&>;info=\" if it was not previously defined. This "
+"is to be in accordance with RFC7462. Disaling this enforcement will remove "
+"the prefix entirely"
+msgstr ""
 
 #: views/grid.php:35
 msgid "Actions"
@@ -108,10 +115,6 @@ msgstr "タイムアウト後のメインアナウンス"
 msgid "Append Announcement to Invalid"
 msgstr "無効な入力: メインアナウナス"
 
-#: ivr.i18n.php:6
-msgid "Applications"
-msgstr "アプリケーション"
-
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
@@ -153,16 +156,6 @@ msgstr ""
 "設定しない場合は通常どおり、指定した宛先に転送します。<br><br>注意: 戻るIVR"
 "は、このIVRまでのコールフローにおいての最後のIVRになりますので、前のステップ"
 "がIVR以外の宛先だった場合には予想外の流れになる可能性があります。"
-
-#: ivr.i18n.php:8
-msgid ""
-"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These can be used to send callers to different locations "
-"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-msgstr ""
-"デジタルレセプショニストメニュー (自動応答やIVRとして知られている) を作成しま"
-"す。これらは発信者を異なる場所に移動させるのに使用します。例:(1番を押した場合"
-"は営業) さらに/もしくは、内線番号を直接ダイヤルできるようにします。"
 
 #: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 msgid "Default"
@@ -246,8 +239,7 @@ msgstr "IVRに入ったときに再生する音声。"
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "IVR"
 
@@ -567,6 +559,22 @@ msgstr ""
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr "発信者が入力した数字"
+
+#~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
+#~ msgstr "SIPデバイスの鳴り分けを実現するにはALERT_INFOを活用できます。"
+
+#~ msgid "Applications"
+#~ msgstr "アプリケーション"
+
+#~ msgid ""
+#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+#~ "Response) menus. These can be used to send callers to different locations "
+#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+#~ msgstr ""
+#~ "デジタルレセプショニストメニュー (自動応答やIVRとして知られている) を作成"
+#~ "します。これらは発信者を異なる場所に移動させるのに使用します。例:(1番を押"
+#~ "した場合は営業) さらに/もしくは、内線番号を直接ダイヤルできるようにしま"
+#~ "す。"
 
 #~ msgid ""
 #~ "A connection to Asterisk Manager could not be made. This module requires "

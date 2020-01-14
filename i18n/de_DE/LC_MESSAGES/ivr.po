@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-09 12:38+0530\n"
+"POT-Creation-Date: 2020-01-14 15:58+0530\n"
 "PO-Revision-Date: 2018-02-16 18:13+0200\n"
 "Last-Translator: Nils <Nils@heckenkamp.info>\n"
 "Language-Team: German <http://weblate.freepbx.org/projects/freepbx/ivr/de_DE/"
@@ -30,9 +30,15 @@ msgid "A value of 0 disables the timeout"
 msgstr "Ein Wert von 0 deaktiviert das Zeitlimit"
 
 #: views/advanced_form.php:188
-msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
+msgid ""
+"ALERT_INFO can be used for distinctive ring with SIP devices.<br>If you are "
+"having issues, see the \"Enforce RFC7462\" option found in Settings-"
+">Advanced Settings. <br><br>Whether to enforce RFC7462 for Alert-Info. With "
+"this enabled all Alert Infos will be prefixed with "
+"\"<lt&>http://127.0.0.1<gt&>;info=\" if it was not previously defined. This "
+"is to be in accordance with RFC7462. Disaling this enforcement will remove "
+"the prefix entirely"
 msgstr ""
-"ALERT_INFO kann zur Ruftonunterscheidung mit SIP-Geräten verwendet werden."
 
 #: views/grid.php:35
 msgid "Actions"
@@ -78,10 +84,6 @@ msgstr ""
 msgid "Append Announcement to Invalid"
 msgstr ""
 
-#: ivr.i18n.php:6
-msgid "Applications"
-msgstr "Anwendungen"
-
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
@@ -116,17 +118,6 @@ msgid ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 msgstr ""
-
-#: ivr.i18n.php:8
-msgid ""
-"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These can be used to send callers to different locations "
-"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-msgstr ""
-"Erstellt Menüs für Digital Receptionist (aka Auto Attendant, auch bekannt "
-"als Interactive Voice Response). Diese können verwendet werden, um Anrufer "
-"an verschiedene Orte zu senden (z. B. Drücken Sie 1 für Verkäufe) und / oder "
-"erlauben Sie die direkte Wahl von Nebenstellennummern."
 
 #: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 msgid "Default"
@@ -220,8 +211,7 @@ msgstr ""
 "Drücken Sie den roten Aufnahmeknopf, um die Aufnahme von Ihrem Browser aus "
 "zu starten"
 
-#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "IVR"
 
@@ -545,6 +535,23 @@ msgstr ""
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr "Ziffern gedrückt"
+
+#~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
+#~ msgstr ""
+#~ "ALERT_INFO kann zur Ruftonunterscheidung mit SIP-Geräten verwendet werden."
+
+#~ msgid "Applications"
+#~ msgstr "Anwendungen"
+
+#~ msgid ""
+#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+#~ "Response) menus. These can be used to send callers to different locations "
+#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+#~ msgstr ""
+#~ "Erstellt Menüs für Digital Receptionist (aka Auto Attendant, auch bekannt "
+#~ "als Interactive Voice Response). Diese können verwendet werden, um "
+#~ "Anrufer an verschiedene Orte zu senden (z. B. Drücken Sie 1 für Verkäufe) "
+#~ "und / oder erlauben Sie die direkte Wahl von Nebenstellennummern."
 
 #~ msgid ""
 #~ "A connection to Asterisk Manager could not be made. This module requires "
