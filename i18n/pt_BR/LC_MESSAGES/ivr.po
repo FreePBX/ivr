@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-09 12:36+0530\n"
+"POT-Creation-Date: 2020-01-14 15:57+0530\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -40,8 +40,15 @@ msgid "A value of 0 disables the timeout"
 msgstr "O valor 0 desabilita o tempo limite"
 
 #: views/advanced_form.php:188
-msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
-msgstr "ALERT_INFO pode ser usado para toque diferenciado em dispositivos SIP."
+msgid ""
+"ALERT_INFO can be used for distinctive ring with SIP devices.<br>If you are "
+"having issues, see the \"Enforce RFC7462\" option found in Settings-"
+">Advanced Settings. <br><br>Whether to enforce RFC7462 for Alert-Info. With "
+"this enabled all Alert Infos will be prefixed with "
+"\"<lt&>http://127.0.0.1<gt&>;info=\" if it was not previously defined. This "
+"is to be in accordance with RFC7462. Disaling this enforcement will remove "
+"the prefix entirely"
+msgstr ""
 
 #: page.ivr.php:47
 msgid "Actions"
@@ -90,10 +97,6 @@ msgstr "Juntar Anuncio em Tempo Esgotado"
 #: views/advanced_form.php:277
 msgid "Append Announcement to Invalid"
 msgstr "Anexar Anúncio a Inválido"
-
-#: ivr.i18n.php:6
-msgid "Applications"
-msgstr "Aplicações"
 
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
@@ -144,17 +147,6 @@ msgstr ""
 #: page.ivr.php:16
 msgid "Connection Error"
 msgstr "Erro de Conexão"
-
-#: ivr.i18n.php:8
-msgid ""
-"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These can be used to send callers to different locations "
-"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-msgstr ""
-"Cria um menu como Recepcionista Digital (conhecido como URA - Unidade de "
-"Resposta Audível). Esse menu envia ligações para diferentes departamentos "
-"(por exemplo, para suporte pressione 1) e / ou autoriza discar direto para "
-"um ramal do sistema."
 
 #: views/form.php:55 views/form.php:61 views/form.php:67 views/form.php:73
 msgid "Default"
@@ -241,8 +233,7 @@ msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 "Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
 
-#: Ivr.class.php:28 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:28 /dev/shm/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "URA"
 
@@ -590,6 +581,23 @@ msgstr "Seu Navegador Bloqueou a Gravação, verifique suas configurações"
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr "dígitos pressionados"
+
+#~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
+#~ msgstr ""
+#~ "ALERT_INFO pode ser usado para toque diferenciado em dispositivos SIP."
+
+#~ msgid "Applications"
+#~ msgstr "Aplicações"
+
+#~ msgid ""
+#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+#~ "Response) menus. These can be used to send callers to different locations "
+#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+#~ msgstr ""
+#~ "Cria um menu como Recepcionista Digital (conhecido como URA - Unidade de "
+#~ "Resposta Audível). Esse menu envia ligações para diferentes departamentos "
+#~ "(por exemplo, para suporte pressione 1) e / ou autoriza discar direto "
+#~ "para um ramal do sistema."
 
 #~ msgid "Digits the caller needs to dial to access said destination"
 #~ msgstr ""

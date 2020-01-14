@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-09 12:36+0530\n"
+"POT-Creation-Date: 2020-01-14 15:57+0530\n"
 "PO-Revision-Date: 2018-07-18 19:11+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/ivr/bg/>\n"
@@ -36,7 +36,14 @@ msgid "A value of 0 disables the timeout"
 msgstr ""
 
 #: views/advanced_form.php:188
-msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
+msgid ""
+"ALERT_INFO can be used for distinctive ring with SIP devices.<br>If you are "
+"having issues, see the \"Enforce RFC7462\" option found in Settings-"
+">Advanced Settings. <br><br>Whether to enforce RFC7462 for Alert-Info. With "
+"this enabled all Alert Infos will be prefixed with "
+"\"<lt&>http://127.0.0.1<gt&>;info=\" if it was not previously defined. This "
+"is to be in accordance with RFC7462. Disaling this enforcement will remove "
+"the prefix entirely"
 msgstr ""
 
 #: page.ivr.php:47
@@ -83,10 +90,6 @@ msgstr ""
 msgid "Append Announcement to Invalid"
 msgstr ""
 
-#: ivr.i18n.php:6
-msgid "Applications"
-msgstr "Приложения"
-
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
@@ -129,17 +132,6 @@ msgstr ""
 #: page.ivr.php:16
 msgid "Connection Error"
 msgstr ""
-
-#: ivr.i18n.php:8
-msgid ""
-"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These can be used to send callers to different locations "
-"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-msgstr ""
-"Създава менюта за Цифров Администратор (Автоматично Обслужване или Система "
-"за Интерактивен Отговор). Използват се за насочване на обаждащите се към "
-"различни направления (например, Изберете 1 за продажби) и/или позволява "
-"директно избиране на вътрешни номера."
 
 #: views/form.php:55 views/form.php:61 views/form.php:67 views/form.php:73
 msgid "Default"
@@ -223,8 +215,7 @@ msgstr ""
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:28 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:28 /dev/shm/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "IVR"
 
@@ -547,6 +538,19 @@ msgstr ""
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr ""
+
+#~ msgid "Applications"
+#~ msgstr "Приложения"
+
+#~ msgid ""
+#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+#~ "Response) menus. These can be used to send callers to different locations "
+#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+#~ msgstr ""
+#~ "Създава менюта за Цифров Администратор (Автоматично Обслужване или "
+#~ "Система за Интерактивен Отговор). Използват се за насочване на обаждащите "
+#~ "се към различни направления (например, Изберете 1 за продажби) и/или "
+#~ "позволява директно избиране на вътрешни номера."
 
 #~ msgid "Checking for invalid_id.."
 #~ msgstr "Проверка за invalid_id.."
