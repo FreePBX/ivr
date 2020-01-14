@@ -185,7 +185,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<span id="alertinfo-help" class="help-block fpbx-help-block"><?php echo _("ALERT_INFO can be used for distinctive ring with SIP devices.")?></span>
+				<span id="alertinfo-help" class="help-block fpbx-help-block"><?php echo _("ALERT_INFO can be used for distinctive ring with SIP devices.<br>If you are having issues, see the \"Enforce RFC7462\" option found in Settings->Advanced Settings. <br><br>Whether to enforce RFC7462 for Alert-Info. With this enabled all Alert Infos will be prefixed with \"<lt&>http://127.0.0.1<gt&>;info=\" if it was not previously defined. This is to be in accordance with RFC7462. Disaling this enforcement will remove the prefix entirely")?></span>
 			</div>
 		</div>
 	</div>
