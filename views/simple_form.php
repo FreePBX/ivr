@@ -222,4 +222,6 @@ echo ivr_draw_entries($ivr['id'], $restrict_mods);
 <input type="hidden" class="form-control" id="timeout_ivr_ret" name="timeout_ivr_ret" value="<?php echo $ivr['timeout_ivr_ret']?>">
 <input type="hidden" class="form-control" id="timeout_recording" name="timeout_recording" value="<?php echo !empty($ivr['timeout_recording']) ? $ivr['timeout_recording'] : ""?>">
 <input type="hidden" class="form-control" id="retvm" name="retvm" value="<?php echo $ivr['retvm']?>">
-<script>var supportedRegExp = "<?php echo implode("|",array_keys($supported['in']))?>";var supportedHTML5 = "<?php echo implode(",",FreePBX::Media()->getSupportedHTML5Formats())?>"</script>
+<script>var supportedRegExp = "<?php echo implode("|",array_keys($supported['in']))?>";var supportedHTML5 = "<?php echo implode(",",FreePBX::Media()->getSupportedHTML5Formats())?>"
+var ivrsnames = <?php print json_encode(\FreePBX::Ivr()->getallivrsname($ivr['id'])); ?>
+</script>
