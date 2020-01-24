@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 10:53+0530\n"
+"POT-Creation-Date: 2020-01-24 05:32+0530\n"
 "PO-Revision-Date: 2016-08-03 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -116,10 +116,6 @@ msgstr "タイムアウト後のメインアナウンス"
 msgid "Append Announcement to Invalid"
 msgstr "無効な入力: メインアナウナス"
 
-#: ivr.i18n.php:6
-msgid "Applications"
-msgstr "アプリケーション"
-
 #: assets/js/ivr.js:79
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
@@ -165,16 +161,6 @@ msgstr ""
 #: page.ivr.php:16
 msgid "Connection Error"
 msgstr "接続エラー"
-
-#: ivr.i18n.php:8
-msgid ""
-"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These can be used to send callers to different locations "
-"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-msgstr ""
-"デジタルレセプショニストメニュー (自動応答やIVRとして知られている) を作成しま"
-"す。これらは発信者を異なる場所に移動させるのに使用します。例:(1番を押した場合"
-"は営業) さらに/もしくは、内線番号を直接ダイヤルできるようにします。"
 
 #: views/form.php:55 views/form.php:61 views/form.php:67 views/form.php:73
 msgid "Default"
@@ -250,8 +236,7 @@ msgstr "IVRに入ったときに再生する音声。"
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:30 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /dev/shm/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:30 /dev/shm/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "IVR"
 
@@ -561,6 +546,19 @@ msgstr ""
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr "発信者が入力した数字"
+
+#~ msgid "Applications"
+#~ msgstr "アプリケーション"
+
+#~ msgid ""
+#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+#~ "Response) menus. These can be used to send callers to different locations "
+#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+#~ msgstr ""
+#~ "デジタルレセプショニストメニュー (自動応答やIVRとして知られている) を作成"
+#~ "します。これらは発信者を異なる場所に移動させるのに使用します。例:(1番を押"
+#~ "した場合は営業) さらに/もしくは、内線番号を直接ダイヤルできるようにしま"
+#~ "す。"
 
 #~ msgid "Checking for invalid_append_announce.."
 #~ msgstr "invalid_append_announceをチェック中.."
