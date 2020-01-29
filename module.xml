@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>15.0.25</version>
+	<version>16.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,31 +11,7 @@
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
 	<changelog>
-		*15.0.25* FREEI-1150 PBXAct QA - IVR In basic mode not able to add ivr 
-		*15.0.24* FREEPBX-20683: mention the RFC7462 setting 
-		*15.0.23* FREEPBX-20876 IVR Direct Dial with No - Legacy 
-		*15.0.22* FREEI-978 Whoops\Exception\ErrorException 
-		*15.0.21* FREEI-846 IVR module upgrade breaks # entry 
-		*15.0.20* Related to FREEPBX-20414: removed $jobid from runRestore() 
-		*15.0.19* FREEPBX-19957 Need to add return option to Directories under IVR module. 
-		*15.0.18* FREEPBX-20069 Implementing Backup and Restore properly
-		*15.0.17* FREEPBX-19957 Need to add return option to Directories under IVR module. 
-		*15.0.16* FREEPBX-19760 
-		*15.0.14* FREEPBX-19475
-		*15.0.14* fixing legacy restore
-		*15.0.13* FREEPBX-18641 IVR module is forced to wait till full timeout for the dtmf entry
-		*15.0.12* FREEPBX-18641 VR module is forced to wait till full timeout for the dtmf entry
-		*15.0.11* FREEPBX-18641 IVR module is forced to wait till full timeout for the dtmf entry
-		*15.0.10* FREEPBX-18641 IVR module is forced to wait till full timeout for the dtmf entry
-		*15.0.9* FREEPBX-18024
-		*15.0.8* FREEPBX-18094
-		*15.0.7* FREEPBX-18125 Fix delete from form
-		*15.0.6* Packaging of ver 15.0.6
-		*15.0.5* FREEPBX-18113 Fix saving of IVR data.
-		*15.0.4* Packaging of ver 15.0.4
-		*15.0.3* FREEPBX-17668 IVR "Return" option missing when on options list
-		*15.0.2* FREEPBX-17743 Used as Destination by X Objects missing an object
-		*15.0.1* Backup 15.0
+		*16.0.1alpha* 16.0.1 alpha release
 	</changelog>
 	<methods>
 		<get_config pri="600">ivr_get_config</get_config>
@@ -89,6 +65,6 @@
 		</ivr>
  	</popovers>
  	<supported>
- 		<version>15.0</version>
+ 		<version>16.0</version>
  	</supported>
 </module>
