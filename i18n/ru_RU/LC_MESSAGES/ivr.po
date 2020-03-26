@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-14 15:58+0530\n"
+"POT-Creation-Date: 2020-03-26 12:31+0530\n"
 "PO-Revision-Date: 2017-05-17 01:42+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -35,7 +35,7 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:367
+#: Ivr.class.php:369
 msgid "A PHP extension stopped the file upload"
 msgstr ""
 
@@ -102,6 +102,10 @@ msgstr "Добавьте уведомление о Тайм-ауте"
 msgid "Append Announcement to Invalid"
 msgstr "Добавить уведомление при неверном наборе"
 
+#: ivr.i18n.php:6
+msgid "Applications"
+msgstr "Приложения"
+
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
@@ -110,7 +114,7 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:371
+#: Ivr.class.php:373
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
@@ -144,11 +148,22 @@ msgstr ""
 "НЕТ , то вызов пойдёт на выбранное направление . Если имеются  вложенные  "
 "меню ,то это может привести к неоднозначному поведению"
 
+#: ivr.i18n.php:8
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+msgstr ""
+"Создает Цифровой Автоответчик (или Авто-Секретаря, или Интерактивное "
+"Голосовое меню). Эта функция может быть использована для перенаправления "
+"звонящих в разные назначения (например. Нажмите 1 для отдела продаж) и/или "
+"разрешить прямой донабор внутренних номеров."
+
 #: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 msgid "Default"
 msgstr "По умолчанию"
 
-#: Ivr.class.php:269 functions.inc.php:382
+#: Ivr.class.php:271 functions.inc.php:382
 msgid "Delete"
 msgstr "Удалить"
 
@@ -197,7 +212,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr ""
 
-#: Ivr.class.php:279
+#: Ivr.class.php:281
 msgid "Duplicate"
 msgstr ""
 
@@ -213,7 +228,7 @@ msgstr "Редактировать:"
 msgid "Enable Direct Dial"
 msgstr "Разрешить прямые наборы"
 
-#: Ivr.class.php:364
+#: Ivr.class.php:366
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -229,7 +244,8 @@ msgstr "Приветствие , проигрываемое при входе в
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:97 /dev/shm/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "Интерактивное меню (IVR)"
 
@@ -321,7 +337,7 @@ msgstr "Воспроизведение при неуданой попытке "
 msgid "List IVRs"
 msgstr "Спискок голосовых меню"
 
-#: Ivr.class.php:361
+#: Ivr.class.php:363
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -344,7 +360,7 @@ msgstr ""
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:358
+#: Ivr.class.php:360
 msgid "No file was uploaded"
 msgstr ""
 
@@ -419,7 +435,7 @@ msgstr ""
 msgid "Recording..."
 msgstr ""
 
-#: Ivr.class.php:274
+#: Ivr.class.php:276
 msgid "Reset"
 msgstr "Сброс"
 
@@ -466,21 +482,21 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
-#: Ivr.class.php:284
+#: Ivr.class.php:286
 msgid "Submit"
 msgstr "Подтвердить"
 
-#: Ivr.class.php:352
+#: Ivr.class.php:354
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:349
+#: Ivr.class.php:351
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:355
+#: Ivr.class.php:357
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
@@ -519,11 +535,11 @@ msgstr ""
 msgid "Unable to delete the last entry"
 msgstr ""
 
-#: Ivr.class.php:324
+#: Ivr.class.php:326
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:344
+#: Ivr.class.php:346
 msgid "Unsupported file format"
 msgstr ""
 
@@ -556,19 +572,6 @@ msgstr ""
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr "нажатии цифры"
-
-#~ msgid "Applications"
-#~ msgstr "Приложения"
-
-#~ msgid ""
-#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-#~ "Response) menus. These can be used to send callers to different locations "
-#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-#~ msgstr ""
-#~ "Создает Цифровой Автоответчик (или Авто-Секретаря, или Интерактивное "
-#~ "Голосовое меню). Эта функция может быть использована для перенаправления "
-#~ "звонящих в разные назначения (например. Нажмите 1 для отдела продаж) и/"
-#~ "или разрешить прямой донабор внутренних номеров."
 
 #~ msgid ""
 #~ "A connection to Asterisk Manager could not be made. This module requires "

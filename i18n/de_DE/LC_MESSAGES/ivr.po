@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-14 15:58+0530\n"
+"POT-Creation-Date: 2020-03-26 12:31+0530\n"
 "PO-Revision-Date: 2018-02-16 18:13+0200\n"
 "Last-Translator: Nils <Nils@heckenkamp.info>\n"
 "Language-Team: German <http://weblate.freepbx.org/projects/freepbx/ivr/de_DE/"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:367
+#: Ivr.class.php:369
 msgid "A PHP extension stopped the file upload"
 msgstr "Eine PHP Erweiterung hat den Datei Upload gestoppt"
 
@@ -84,6 +84,10 @@ msgstr ""
 msgid "Append Announcement to Invalid"
 msgstr ""
 
+#: ivr.i18n.php:6
+msgid "Applications"
+msgstr "Anwendungen"
+
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
@@ -93,7 +97,7 @@ msgstr ""
 msgid "Browse"
 msgstr "Durchsuchen"
 
-#: Ivr.class.php:371
+#: Ivr.class.php:373
 msgid "Can Not Find Uploaded Files"
 msgstr "Es können keine hochgeladenen Dateien gefunden werden"
 
@@ -119,11 +123,22 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 
+#: ivr.i18n.php:8
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+msgstr ""
+"Erstellt Menüs für Digital Receptionist (aka Auto Attendant, auch bekannt "
+"als Interactive Voice Response). Diese können verwendet werden, um Anrufer "
+"an verschiedene Orte zu senden (z. B. Drücken Sie 1 für Verkäufe) und / oder "
+"erlauben Sie die direkte Wahl von Nebenstellennummern."
+
 #: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 msgid "Default"
 msgstr "Standard"
 
-#: Ivr.class.php:269 functions.inc.php:382
+#: Ivr.class.php:271 functions.inc.php:382
 msgid "Delete"
 msgstr "Löschen"
 
@@ -177,7 +192,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr "Ankündigungs-Aufnahme hier speichern"
 
-#: Ivr.class.php:279
+#: Ivr.class.php:281
 msgid "Duplicate"
 msgstr ""
 
@@ -193,7 +208,7 @@ msgstr "Bearbeiten:"
 msgid "Enable Direct Dial"
 msgstr "Direktwahl aktivieren"
 
-#: Ivr.class.php:364
+#: Ivr.class.php:366
 msgid "Failed to write file to disk"
 msgstr "Fehler beim Speichern der Datei"
 
@@ -211,7 +226,8 @@ msgstr ""
 "Drücken Sie den roten Aufnahmeknopf, um die Aufnahme von Ihrem Browser aus "
 "zu starten"
 
-#: Ivr.class.php:97 /dev/shm/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "IVR"
 
@@ -303,7 +319,7 @@ msgstr "Ungültige Aufnahme wiederholen"
 msgid "List IVRs"
 msgstr "Liste IVRs"
 
-#: Ivr.class.php:361
+#: Ivr.class.php:363
 msgid "Missing a temporary folder"
 msgstr "Fehlender temporärer Ordner"
 
@@ -326,7 +342,7 @@ msgstr ""
 msgid "No file to load!"
 msgstr "Keine Datei zum Laden!"
 
-#: Ivr.class.php:358
+#: Ivr.class.php:360
 msgid "No file was uploaded"
 msgstr "Es wurde keine Datei hochgeladen"
 
@@ -396,7 +412,7 @@ msgstr ""
 msgid "Recording..."
 msgstr ""
 
-#: Ivr.class.php:274
+#: Ivr.class.php:276
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -443,21 +459,21 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
-#: Ivr.class.php:284
+#: Ivr.class.php:286
 msgid "Submit"
 msgstr ""
 
-#: Ivr.class.php:352
+#: Ivr.class.php:354
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:349
+#: Ivr.class.php:351
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:355
+#: Ivr.class.php:357
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
@@ -496,11 +512,11 @@ msgstr ""
 msgid "Unable to delete the last entry"
 msgstr ""
 
-#: Ivr.class.php:324
+#: Ivr.class.php:326
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:344
+#: Ivr.class.php:346
 msgid "Unsupported file format"
 msgstr ""
 
@@ -539,19 +555,6 @@ msgstr "Ziffern gedrückt"
 #~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 #~ msgstr ""
 #~ "ALERT_INFO kann zur Ruftonunterscheidung mit SIP-Geräten verwendet werden."
-
-#~ msgid "Applications"
-#~ msgstr "Anwendungen"
-
-#~ msgid ""
-#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-#~ "Response) menus. These can be used to send callers to different locations "
-#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-#~ msgstr ""
-#~ "Erstellt Menüs für Digital Receptionist (aka Auto Attendant, auch bekannt "
-#~ "als Interactive Voice Response). Diese können verwendet werden, um "
-#~ "Anrufer an verschiedene Orte zu senden (z. B. Drücken Sie 1 für Verkäufe) "
-#~ "und / oder erlauben Sie die direkte Wahl von Nebenstellennummern."
 
 #~ msgid ""
 #~ "A connection to Asterisk Manager could not be made. This module requires "
