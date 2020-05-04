@@ -204,14 +204,16 @@ class Ivr extends FreePBX_Helpers implements BMO {
 
 	public function saveEntry($id,$entry) {
 		$this->deleteEntriesById($id);
-		if ($entry) {
-			$stmt = $this->db->prepare('INSERT INTO ivr_entries VALUES (:ivr_id, :selection, :dest, :ivr_ret)');
-			$stmt->execute([
-				':ivr_id' => $entry['ivr_id'],
-				':selection' => $entry['selection'],
-				':dest' => $entry['dest'],
-				':ivr_ret' =>(int) (isset($entry['ivr_ret']) ? $entry['ivr_ret'] : '0'),
-				]);
+		if (is_array($entry) && !empty($entry)) {
+			foreach($entry as $entries) {
+				$stmt = $this->db->prepare('INSERT INTO ivr_entries VALUES (:ivr_id, :selection, :dest, :ivr_ret)');
+				$stmt->execute([
+					':ivr_id' => $entries['ivr_id'],
+					':selection' => $entries['selection'],
+					':dest' => $entries['dest'],
+					':ivr_ret' =>(int) (isset($entries['ivr_ret']) ? $entries['ivr_ret'] : '0'),
+					]);
+			}
 		}
 		return true;
 	}

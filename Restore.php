@@ -9,7 +9,7 @@ class Restore Extends Base\RestoreBase{
 		}
 
 		foreach($configs['entries'] as $id => $entry) {
-			$this->FreePBX->Ivr->saveEntry($id, $entry['0']);
+			$this->FreePBX->Ivr->saveEntry($id, $entry);
 		}
 	}
 

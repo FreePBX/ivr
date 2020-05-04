@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-14 15:58+0530\n"
+"POT-Creation-Date: 2020-03-26 12:31+0530\n"
 "PO-Revision-Date: 2016-04-26 06:49+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:367
+#: Ivr.class.php:369
 msgid "A PHP extension stopped the file upload"
 msgstr "یک PHP extension in بارگذاری فایل را متوقف کرد"
 
@@ -84,6 +84,10 @@ msgstr "اعمال اطلاعیه برای وقفه"
 msgid "Append Announcement to Invalid"
 msgstr "اعمال اطلاعیه برای غیرمعتبر"
 
+#: ivr.i18n.php:6
+msgid "Applications"
+msgstr "برنامه ها"
+
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr "آیا مطمئن هستید نمیخواهید این اعلان را ضبط کنید؟"
@@ -92,7 +96,7 @@ msgstr "آیا مطمئن هستید نمیخواهید این اعلان را �
 msgid "Browse"
 msgstr "مسیر"
 
-#: Ivr.class.php:371
+#: Ivr.class.php:373
 msgid "Can Not Find Uploaded Files"
 msgstr "ناتوان در پیدا کردن فایلهای بارگذاری شده"
 
@@ -128,11 +132,21 @@ msgstr ""
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
 
+#: ivr.i18n.php:8
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+msgstr ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These  can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+
 #: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 msgid "Default"
 msgstr "پیشفرض"
 
-#: Ivr.class.php:269 functions.inc.php:382
+#: Ivr.class.php:271 functions.inc.php:382
 msgid "Delete"
 msgstr "حذف"
 
@@ -178,7 +192,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr "لغو اعلان ضبط تماس"
 
-#: Ivr.class.php:279
+#: Ivr.class.php:281
 msgid "Duplicate"
 msgstr ""
 
@@ -194,7 +208,7 @@ msgstr "ویرایش ："
 msgid "Enable Direct Dial"
 msgstr "فعال سازی شماره گیری مستقیم"
 
-#: Ivr.class.php:364
+#: Ivr.class.php:366
 msgid "Failed to write file to disk"
 msgstr "خطا در نوشتن فایل روی دیسک"
 
@@ -210,7 +224,8 @@ msgstr "پیام خوش آمد در هنگام ورود به منوی صوتی."
 msgid "Hit the red record button to start recording from your browser"
 msgstr "بروی کلید قرمز برای ضبط پیام کلیک کنید"
 
-#: Ivr.class.php:97 /dev/shm/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "منوی صوتی"
 
@@ -302,7 +317,7 @@ msgstr "تلاش مجدد پیام ظبط شده نامعتبر"
 msgid "List IVRs"
 msgstr "فهرست منوهای صوتی"
 
-#: Ivr.class.php:361
+#: Ivr.class.php:363
 msgid "Missing a temporary folder"
 msgstr "از دست دادن فولدر ذخیره موقت"
 
@@ -325,7 +340,7 @@ msgstr ""
 msgid "No file to load!"
 msgstr "فایلی بارگذاری نشد!"
 
-#: Ivr.class.php:358
+#: Ivr.class.php:360
 msgid "No file was uploaded"
 msgstr "فایلی بارگذاری نشده"
 
@@ -395,7 +410,7 @@ msgstr "ایجاد گزینه برای تماس مستقیم به یک داخل�
 msgid "Recording..."
 msgstr "در حال ضبط.."
 
-#: Ivr.class.php:274
+#: Ivr.class.php:276
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -444,21 +459,21 @@ msgstr ""
 "انتخاب صدای زنگ از لیست بالا. مشخص میکند تلفن شما با چه صدایی از این گروه "
 "زنگ میخورد."
 
-#: Ivr.class.php:284
+#: Ivr.class.php:286
 msgid "Submit"
 msgstr "ارسال"
 
-#: Ivr.class.php:352
+#: Ivr.class.php:354
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "فایل بارگذاری شده بیش از حد تعیین شده در فرم HTML میباشد"
 
-#: Ivr.class.php:349
+#: Ivr.class.php:351
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "فایل بارگذاری شده بیش از حد تعیین شده در فایل php.ini میباشد"
 
-#: Ivr.class.php:355
+#: Ivr.class.php:357
 msgid "The uploaded file was only partially uploaded"
 msgstr "فقط بخشی از فایل شما بارگذاری شد"
 
@@ -497,11 +512,11 @@ msgstr "عدم حذف ورودی اول. لطفا ورودی را ویرایش �
 msgid "Unable to delete the last entry"
 msgstr "نمیتوان آخرین ورودی را حذف کند"
 
-#: Ivr.class.php:324
+#: Ivr.class.php:326
 msgid "Unknown Error"
 msgstr "خطای ناشناخته"
 
-#: Ivr.class.php:344
+#: Ivr.class.php:346
 msgid "Unsupported file format"
 msgstr "فرمت فایل پشتیبانی نمیشود"
 
@@ -539,19 +554,6 @@ msgstr "شماره گرفته شده"
 
 #~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 #~ msgstr "ALERT_INFO can  be used for distinctive ring with SIP devices."
-
-#~ msgid "Applications"
-#~ msgstr "برنامه ها"
-
-#~ msgid ""
-#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-#~ "Response) menus. These can be used to send callers to different locations "
-#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-#~ msgstr ""
-#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-#~ "Response) menus. These  can be used to send callers to different "
-#~ "locations (eg, Press 1 for sales) and/or allow direct-dialing of "
-#~ "extension numbers."
 
 #~ msgid ""
 #~ "A connection to Asterisk Manager could not be made. This module requires "

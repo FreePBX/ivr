@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-14 15:58+0530\n"
+"POT-Creation-Date: 2020-03-26 12:31+0530\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: Ivr.class.php:367
+#: Ivr.class.php:369
 msgid "A PHP extension stopped the file upload"
 msgstr ""
 
@@ -85,6 +85,10 @@ msgstr "超时中附加一个主系统公告"
 msgid "Append Announcement to Invalid"
 msgstr "在无效输入后附加语音提示"
 
+#: ivr.i18n.php:6
+msgid "Applications"
+msgstr "应用"
+
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
@@ -93,7 +97,7 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:371
+#: Ivr.class.php:373
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
@@ -123,11 +127,18 @@ msgid ""
 "path but not immediately before this"
 msgstr ""
 
+#: ivr.i18n.php:8
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+msgstr ""
+
 #: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 msgid "Default"
 msgstr "默认"
 
-#: Ivr.class.php:269 functions.inc.php:382
+#: Ivr.class.php:271 functions.inc.php:382
 msgid "Delete"
 msgstr "删除"
 
@@ -173,7 +184,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr ""
 
-#: Ivr.class.php:279
+#: Ivr.class.php:281
 msgid "Duplicate"
 msgstr ""
 
@@ -189,7 +200,7 @@ msgstr "编辑:"
 msgid "Enable Direct Dial"
 msgstr "启用直接拨号"
 
-#: Ivr.class.php:364
+#: Ivr.class.php:366
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -205,7 +216,8 @@ msgstr "播放IVR。"
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:97 /dev/shm/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "语音IVR"
 
@@ -295,7 +307,7 @@ msgstr "无效重试录音"
 msgid "List IVRs"
 msgstr "显示IVR列表"
 
-#: Ivr.class.php:361
+#: Ivr.class.php:363
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -318,7 +330,7 @@ msgstr ""
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:358
+#: Ivr.class.php:360
 msgid "No file was uploaded"
 msgstr ""
 
@@ -383,7 +395,7 @@ msgstr ""
 msgid "Recording..."
 msgstr ""
 
-#: Ivr.class.php:274
+#: Ivr.class.php:276
 msgid "Reset"
 msgstr ""
 
@@ -430,21 +442,21 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
-#: Ivr.class.php:284
+#: Ivr.class.php:286
 msgid "Submit"
 msgstr ""
 
-#: Ivr.class.php:352
+#: Ivr.class.php:354
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:349
+#: Ivr.class.php:351
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:355
+#: Ivr.class.php:357
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
@@ -483,11 +495,11 @@ msgstr ""
 msgid "Unable to delete the last entry"
 msgstr ""
 
-#: Ivr.class.php:324
+#: Ivr.class.php:326
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:344
+#: Ivr.class.php:346
 msgid "Unsupported file format"
 msgstr ""
 
@@ -520,9 +532,6 @@ msgstr ""
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr ""
-
-#~ msgid "Applications"
-#~ msgstr "应用"
 
 #~ msgid ""
 #~ "A connection to Asterisk Manager could not be made. This module requires "
