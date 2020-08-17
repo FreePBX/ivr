@@ -10,6 +10,7 @@
 	<description>
 		Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice Response) menus. These can be used to send callers to different locations (eg, Press 1 for sales) and/or allow direct-dialing of extension numbers.
 	</description>
+  	<more-info>https://wiki.freepbx.org/display/F2/IVR+Module</more-info>
 	<changelog>
 		*13.0.27.21* FREEI-1150 PBXAct QA - IVR In basic mode not able to add ivr 
 		*13.0.27.20* FREEPBX-19957 Need to add return option to Directories under IVR module. 
