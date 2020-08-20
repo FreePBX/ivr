@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-24 05:32+0530\n"
+"POT-Creation-Date: 2020-08-20 04:04+0000\n"
 "PO-Revision-Date: 2016-12-09 21:14+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -42,7 +42,7 @@ msgstr "Acciones"
 msgid "Add Another Entry"
 msgstr ""
 
-#: page.ivr.php:30 /dev/shm/freepbx/ivr/views/form.php:10 views/rnav.php:3
+#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10 views/rnav.php:3
 msgid "Add IVR"
 msgstr "Añadir IVR"
 
@@ -81,6 +81,10 @@ msgstr "Anexar Anuncio activado agotado"
 #: views/advanced_form.php:248
 msgid "Append Announcement to Invalid"
 msgstr "Agregar anuncio a inválido"
+
+#: ivr.i18n.php:6
+msgid "Applications"
+msgstr "Aplicaciones"
 
 #: assets/js/ivr.js:79
 msgid "Are you sure you don't want a recording for this announcement?"
@@ -129,6 +133,18 @@ msgstr ""
 #: page.ivr.php:16
 msgid "Connection Error"
 msgstr "Error de conexión"
+
+#: ivr.i18n.php:8
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+msgstr ""
+"Crea menús recepcionista digital (también conocido como operadora "
+"automática, también conocido como Respuesta de Voz Interactiva). Estos "
+"pueden ser utilizados para enviar las llamadas a diferentes lugares (por "
+"ejemplo, Pulse 1 para las ventas) y / o permitir marcación directa de "
+"números de extensión."
 
 #: views/form.php:55 views/form.php:61 views/form.php:67 views/form.php:73
 msgid "Default"
@@ -205,7 +221,8 @@ msgstr "Saludo a ser reproducido a la entrada al IVR."
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:30 /dev/shm/freepbx/ivr/page.ivr.php:24
+#: Ivr.class.php:30 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /usr/src/freepbx/ivr/page.ivr.php:24
 msgid "IVR"
 msgstr "IVR"
 
@@ -524,20 +541,6 @@ msgstr ""
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr "Dígitos entrados"
-
-#~ msgid "Applications"
-#~ msgstr "Aplicaciones"
-
-#~ msgid ""
-#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-#~ "Response) menus. These can be used to send callers to different locations "
-#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-#~ msgstr ""
-#~ "Crea menús recepcionista digital (también conocido como operadora "
-#~ "automática, también conocido como Respuesta de Voz Interactiva). Estos "
-#~ "pueden ser utilizados para enviar las llamadas a diferentes lugares (por "
-#~ "ejemplo, Pulse 1 para las ventas) y / o permitir marcación directa de "
-#~ "números de extensión."
 
 #~ msgid "Checking for invalid_append_announce.."
 #~ msgstr "Chequeando por invalid_append_announce.."

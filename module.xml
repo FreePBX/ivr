@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>13.0.27.21</version>
+	<version>13.0.27.22</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 	</description>
   	<more-info>https://wiki.freepbx.org/display/F2/IVR+Module</more-info>
 	<changelog>
+		*13.0.27.22* Packaging of ver 13.0.27.22
 		*13.0.27.21* FREEI-1150 PBXAct QA - IVR In basic mode not able to add ivr 
 		*13.0.27.20* FREEPBX-19957 Need to add return option to Directories under IVR module. 
 		*13.0.27.19* FREEPBX-19957 Need to add return option to Directories under IVR module. 
