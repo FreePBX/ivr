@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 04:06+0000\n"
+"POT-Creation-Date: 2020-09-07 06:36+0000\n"
 "PO-Revision-Date: 2017-05-17 01:42+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -62,7 +62,7 @@ msgstr "Действия"
 msgid "Add Another Entry"
 msgstr "Добавить другую запись"
 
-#: views/form.php:12 views/grid.php:12 /usr/src/freepbx/ivr/views/rnav.php:3
+#: views/form.php:12 views/grid.php:12 /dev/shm/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr "Добавить IVR"
 
@@ -244,8 +244,8 @@ msgstr "Приветствие , проигрываемое при входе в
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:97 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "Интерактивное меню (IVR)"
 

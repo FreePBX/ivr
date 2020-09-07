@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>15.0.27</version>
+	<version>15.0.28</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
 	</description>
   	<more-info>https://wiki.freepbx.org/display/F2/IVR+Module</more-info>
 	<changelog>
+		*15.0.28* FREEI-2061 IVR strict_dial_timeoutset set to no_legacy if it's no 
 		*15.0.27* Packaging of ver 15.0.27
 		*15.0.26* FREEPBX-21327 Backup/Restore missing IVR entries 
 		*15.0.25* FREEI-1150 PBXAct QA - IVR In basic mode not able to add ivr 

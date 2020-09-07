@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 04:06+0000\n"
+"POT-Creation-Date: 2020-09-07 06:36+0000\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -49,7 +49,7 @@ msgstr "Ações"
 msgid "Add Another Entry"
 msgstr "Adicionar Outro Elemento"
 
-#: views/form.php:12 views/grid.php:12 /usr/src/freepbx/ivr/views/rnav.php:3
+#: views/form.php:12 views/grid.php:12 /dev/shm/freepbx/ivr/views/rnav.php:3
 msgid "Add IVR"
 msgstr "Adicionar URA"
 
@@ -235,8 +235,8 @@ msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 "Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
 
-#: Ivr.class.php:97 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:97 /dev/shm/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: /dev/shm/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "URA"
 
