@@ -15,6 +15,7 @@ class Restore Extends Base\RestoreBase{
 
 	public function processLegacy($pdo, $data, $tables, $unknownTables){
 		$this->restoreLegacyDatabase($pdo);
+		$this->FreePBX->Database->query("UPDATE `ivr_details` SET `strict_dial_timeout`=2 WHERE `strict_dial_timeout`=0"); //changing Force Strict Dial Timeout to No_Legacy if No.
 	}
 }
 
