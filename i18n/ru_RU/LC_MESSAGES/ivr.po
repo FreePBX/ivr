@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 04:05+0000\n"
-"PO-Revision-Date: 2021-11-19 16:00+0000\n"
-"Last-Translator: Dmitriy Kuznetsov <krotesk@ya.ru>\n"
+"PO-Revision-Date: 2021-11-23 07:00+0000\n"
+"Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/ru/>"
 "\n"
 "Language: ru_RU\n"
@@ -505,7 +505,7 @@ msgstr ""
 
 #: Ivr.class.php:95
 msgid "Submit"
-msgstr "Подтвердить"
+msgstr "Применить"
 
 #: Ivr.class.php:163
 msgid ""
