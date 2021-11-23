@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 04:05+0000\n"
-"PO-Revision-Date: 2021-11-23 07:00+0000\n"
+"PO-Revision-Date: 2021-11-24 14:00+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/ru/>"
 "\n"
@@ -226,7 +226,7 @@ msgstr ""
 
 #: Ivr.class.php:90
 msgid "Duplicate"
-msgstr ""
+msgstr "Скопировать"
 
 #: views/form.php:44
 msgid "Edit IVR: "
