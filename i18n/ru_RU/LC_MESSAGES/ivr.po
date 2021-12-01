@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 04:05+0000\n"
-"PO-Revision-Date: 2021-12-01 12:06+0000\n"
+"PO-Revision-Date: 2021-12-02 13:00+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/ru/>"
 "\n"
@@ -364,7 +364,7 @@ msgstr "Неудачные попытки"
 
 #: views/advanced_form.php:251
 msgid "Invalid Retry Recording"
-msgstr "Воспроизведение при неуданой попытке "
+msgstr "Сообщение при неудачной попытке"
 
 #: views/rnav.php:2
 msgid "List IVRs"
@@ -461,8 +461,8 @@ msgid ""
 "Prompt to be played when an invalid/unmatched response is received, before "
 "prompting the caller to try again"
 msgstr ""
-"Сообщение воспроизводимое когда произошла неудачная/несовпадающая попытка "
-"ввода, вопроизводится перед очередной попыткой повторить ввод. "
+"Сообщение воспроизводимое при неудачной/несовпадающей попытке ввода, "
+"вопроизводится перед очередной попыткой повторить ввод"
 
 #: views/advanced_form.php:111
 msgid "Provides options for callers to direct dial an extension."
