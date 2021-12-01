@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 04:05+0000\n"
-"PO-Revision-Date: 2021-11-30 13:00+0000\n"
+"PO-Revision-Date: 2021-12-01 12:06+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/ru/>"
 "\n"
@@ -549,7 +549,7 @@ msgstr ""
 
 #: Ivr.class.php:166
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
+msgstr "Файл был загружен частично"
 
 #: views/advanced_form.php:152
 msgid "Timeout"
@@ -577,30 +577,33 @@ msgid ""
 "To play the media you will need to either update your browser to a recent "
 "version or update your %s"
 msgstr ""
+"Для воспроизведения медиаданных вам потребуется либо обновить браузер до "
+"последней версии, либо обновить %s"
 
 #: assets/js/ivr.js:166
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr ""
+"Не удалось удалить первую запись. Пожалуйста, отредактируйте вместо этого"
 
 #: assets/js/ivr.js:162
 msgid "Unable to delete the last entry"
-msgstr ""
+msgstr "Не удалось удалить последнюю запись"
 
 #: Ivr.class.php:135
 msgid "Unknown Error"
-msgstr ""
+msgstr "Неизвестная ошибка"
 
 #: Ivr.class.php:155
 msgid "Unsupported file format"
-msgstr ""
+msgstr "Неподдерживаемый формат файла"
 
 #: assets/js/ivr.js:265
 msgid "Unsupported file type"
-msgstr ""
+msgstr "Неподдерживаемый тип файла"
 
 #: views/simple_form.php:65 views/simple_form.php:113
 msgid "Update Required"
-msgstr ""
+msgstr "Требуется обновление"
 
 #: views/simple_form.php:131
 #, php-format
@@ -608,6 +611,8 @@ msgid ""
 "Upload files from your local system. Supported upload formats are: %s. This "
 "includes archives (that include multiple files) and multiple files"
 msgstr ""
+"Загрузка файлов из вашей локальной системы. Поддерживаемые форматы загрузки: "
+"%s, включая архивы (состоящие из нескольких файлов) и списки файлов"
 
 #: views/advanced_form.php:101 views/advanced_form.php:128
 #: views/advanced_form.php:282 views/advanced_form.php:309
@@ -618,7 +623,7 @@ msgstr "Да"
 
 #: assets/js/ivr.js:580
 msgid "Your Browser Blocked The Recording, Please check your settings"
-msgstr ""
+msgstr "Ваш браузер заблокировал запись, Пожалуйста, проверьте свои настройки"
 
 #: views/entries.php:20
 msgid "digits pressed"
