@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: IVR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-24 05:33+0530\n"
-"PO-Revision-Date: 2022-04-19 05:11+0000\n"
+"PO-Revision-Date: 2022-04-21 13:00+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/ru/>"
 "\n"
@@ -285,12 +285,12 @@ msgstr "Название IVR"
 #: functions.inc.php:649 functions.inc.php:671
 #, php-format
 msgid "IVR: %s"
-msgstr "IVR: %s"
+msgstr "IVR:  %s"
 
 #: functions.inc.php:594 functions.inc.php:613
 #, php-format
 msgid "IVR: %s (%s)"
-msgstr "IVR: %s (%s)"
+msgstr "IVR:  %s (%s)"
 
 #: functions.inc.php:576
 #, php-format
