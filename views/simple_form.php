@@ -34,7 +34,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="announcement"></i>
 					</div>
 					<div class="col-md-9">
-						<div class="browser-player-container hidden">
+						<div class="browser-player-container d-none">
 							<div id="jquery_jplayer_announcement" data-container="jp_container_announcement" class="jp-jplayer" data-key="announcement" data-recording-id="<?php echo $ivr['announcement']?>" data-recording-type="system"></div>
 							<div id="jp_container_announcement" data-player="jquery_jplayer_announcement" class="jp-audio-freepbx" role="application" aria-label="media player">
 								<div class="jp-type-single">
@@ -80,7 +80,7 @@
 								<div class="message"><?php echo _("Drop Annoucement Recording Here")?></div>
 							</div>
 						</div>
-						<div id="browser-recorder-container" class="hidden">
+						<div id="browser-recorder-container" class="d-none">
 							<div id="browser-recorder">
 								<div id="jquery_jplayer_1" class="jp-jplayer" data-key="announcement"></div>
 								<div id="jp_container_1" data-player="jquery_jplayer_1" class="jp-audio-freepbx" role="application" aria-label="media player">
@@ -116,7 +116,7 @@
 									</div>
 								</div>
 							</div>
-							<div id="browser-recorder-progress" class="progress fade hidden">
+							<div id="browser-recorder-progress" class="progress fade d-none">
 								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
 								</div>
 							</div>
