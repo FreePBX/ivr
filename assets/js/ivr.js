@@ -70,7 +70,7 @@ $(document).ready(function(){
 		new_entrie = '<tr>' + $('#gotoDESTID').parents('tr').html() + '</tr>';
 		id = new Date().getTime();//must be cached, as we have many replaces to do and the time can shift
 		thisrow = $('#ivr_entries > tbody:last').find('tr:last').after(new_entrie.replace(/DESTID/g, id));
-		$('.destdropdown2', $(thisrow).next()).addClass('hidden');
+		$('.destdropdown2', $(thisrow).next()).addClass('d-none');
 		bind_dests_double_selects();
 	});
 
@@ -283,7 +283,7 @@ $('#fileupload').fileupload({
 			$("#jquery_jplayer_announcement").jPlayer( "clearMedia" );
 			var key = $(".browser-player-container .jp-jplayer").data("key");
 			recordings[key] = announcementRecording;
-			$(".browser-player-container").removeClass("hidden");
+			$(".browser-player-container").removeClass("d-none");
 		} else {
 			alert(data.result.message);
 		}
@@ -304,7 +304,7 @@ $(".browser-player-container").each(function() {
 			recID = parseInt(player.data("recording-id")),
 			key = player.data("key");
 	if(!isNaN(recID) && recID > 0) {
-		$(this).removeClass("hidden");
+		$(this).removeClass("d-none");
 	}
 	player.jPlayer({
 		ready: function(event) {
@@ -410,7 +410,7 @@ $(".browser-player-container").each(function() {
 //check if this browser supports WebRTC
 if (Modernizr.getusermedia && window.location.protocol == "https:") {
 	//show in browser recording if it does
-	$("#browser-recorder-container").removeClass("hidden");
+	$("#browser-recorder-container").removeClass("d-none");
 	$("#jquery_jplayer_1").jPlayer({
 		ready: function(event) {
 
@@ -507,7 +507,7 @@ $("#record").click(function() {
 				type: "POST",
 				url: "ajax.php?module=ivr&command=savebrowserrecording&filename=" + encodeURIComponent(name),
 				xhr: function() {
-					$("#browser-recorder-progress").removeClass("hidden").addClass("in");
+					$("#browser-recorder-progress").removeClass("d-none").addClass("in");
 					var xhr = new window.XMLHttpRequest();
 					//Upload progress
 					xhr.upload.addEventListener("progress", function(evt) {
@@ -516,7 +516,7 @@ $("#record").click(function() {
 							progress = Math.round(percentComplete * 100);
 							$("#browser-recorder-progress .progress-bar").css("width", progress + "%");
 							if(progress == 100) {
-								$("#browser-recorder-progress").addClass("hidden").removeClass("in");
+								$("#browser-recorder-progress").addClass().removeClass("in");
 								$("#browser-recorder-progress .progress-bar").css("width", "0%");
 							}
 						}
