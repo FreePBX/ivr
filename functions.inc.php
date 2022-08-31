@@ -337,7 +337,7 @@ function ivr_get_config($engine) {
 						}
 						$ext->add($c, $exten, '', new ext_macro('blkvm-clr'));
 						$ext->add($c, $exten, '', new ext_setvar('__NODEST', ''));
-						$ext->add($c, $exten, '', new ext_goto('1', $exten, 'from-internal'));
+						$ext->add($c, $exten, '', new ext_goto('1', '${EXTEN}', 'from-internal'));
 					}
 				}
 			}
