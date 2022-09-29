@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>16.0.5</version>
+	<version>17.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,11 +12,7 @@
 	</description>
   	<more-info>https://wiki.freepbx.org/display/F2/IVR+Module</more-info>
 	<changelog>
-		*16.0.5* FREEPBX-23693 
-		*16.0.4* Packaging of ver 16.0.4
-		*16.0.3* Packaging of ver 16.0.3
-		*16.0.2* Packaging of ver 16.0.2
-		*16.0.1alpha* 16.0.1 alpha release
+		*17.0.1alpha* 17.0.1 alpha release
 	</changelog>
 	<methods>
 		<get_config pri="600">ivr_get_config</get_config>
@@ -70,6 +66,6 @@
 		</ivr>
  	</popovers>
  	<supported>
- 		<version>16.0</version>
+ 		<version>17.0</version>
  	</supported>
 </module>
