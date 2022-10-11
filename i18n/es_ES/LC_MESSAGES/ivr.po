@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 04:05+0000\n"
-"PO-Revision-Date: 2022-10-11 23:07+0000\n"
+"PO-Revision-Date: 2022-10-13 01:00+0000\n"
 "Last-Translator: Santiago Pioli <spioli@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/ivr/es/>"
 "\n"
@@ -608,7 +608,7 @@ msgstr "Su navegador ha bloqueado la grabación, por favor verifique sus ajustes
 
 #: views/entries.php:20
 msgid "digits pressed"
-msgstr "Dígitos entrados"
+msgstr "Dígitos presionados"
 
 #~ msgid "Checking for invalid_append_announce.."
 #~ msgstr "Chequeando por invalid_append_announce.."
