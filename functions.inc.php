@@ -35,26 +35,26 @@ function ivr_get_config($engine) {
 	switch($engine) {
 		case "asterisk":
 			//FREEPBX-17112 Return to IVR after VM broken
-			$ext->splice('sub-vm','exit-RETURN', 1, new ext_gotoif('$["${RETVM}" = "RETURN"]','ext-local,vmret,1'));
+			$ext->splice('macro-vm','exit-RETURN', 1, new ext_gotoif('$["${RETVM}" = "RETURN"]','ext-local,vmret,1'));
 			$ddial_contexts = array();
 			$ivrlist = ivr_get_details();
 			if(!is_array($ivrlist)) {
 				break;
 			}
 			//FREEPBX-14431
-			$ext->splice('sub-dial-one','s', 'dial', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'D_OPTIONS=${D_OPTIONS}g'));
-			// splice into sub-dial-one
-			$ext->splice('sub-dial-one','s-ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
-			$ext->splice('sub-dial-one','s-CHANUNAVAIL','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
-			$ext->splice('sub-dial-one','s-NOANSWER','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
-			$ext->splice('sub-dial-one','s-BUSY','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial-one','s', 'dial', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'D_OPTIONS=${D_OPTIONS}g'));
+			// splice into macro-dial-one
+			$ext->splice('macro-dial-one','s-ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial-one','s-CHANUNAVAIL','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial-one','s-NOANSWER','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial-one','s-BUSY','return', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
-			//splice into sub-dial
-			$ext->splice('sub-dial','s','nddialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'ds=${ds}g'));
-			$ext->splice('sub-dial','s','hsdialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'ds=${ds}g'));
+			//splice into macro dial
+			$ext->splice('macro-dial','s','nddialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'ds=${ds}g'));
+			$ext->splice('macro-dial','s','hsdialapp', new ext_execif('$["${ivrreturn}" = "1"]', 'Set', 'ds=${ds}g'));
 
-			$ext->splice('sub-dial','ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
-			$ext->splice('sub-dial','NOANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial','ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
+			$ext->splice('macro-dial','NOANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
 			if (function_exists('queues_list')) {
 				//draw a list of ivrs included by any queues
@@ -186,7 +186,7 @@ function ivr_get_config($engine) {
 
 						//only display these two lines if the ivr is included in any queues
 						if (function_exists('queues_list') && in_array($ivr['id'], $qivr)) {
-							$ext->add($c, $e['selection'],'', new ext_gosub('1','s','sub-blkvm-clr'));
+							$ext->add($c, $e['selection'],'', new ext_macro('blkvm-clr'));
 							$ext->add($c, $e['selection'], '', new ext_setvar('__NODEST', ''));
 						}
 						if ($e['ivr_ret']) {
@@ -335,7 +335,7 @@ function ivr_get_config($engine) {
 						if ($exten == '' || $exten == 'custom') {
 							continue;
 						}
-						$ext->add($c, $exten, '', new ext_gosub('1','s','sub-blkvm-clr'));
+						$ext->add($c, $exten, '', new ext_macro('blkvm-clr'));
 						$ext->add($c, $exten, '', new ext_setvar('__NODEST', ''));
 						$ext->add($c, $exten, '', new ext_goto('1', '${EXTEN}', 'from-internal'));
 					}
