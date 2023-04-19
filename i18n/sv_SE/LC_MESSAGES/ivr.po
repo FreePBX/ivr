@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ivr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-18 03:58+0000\n"
+"POT-Creation-Date: 2023-04-19 03:10+0000\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -123,7 +123,7 @@ msgstr ""
 "precis innan denna. Detta kan leda till konstiga resultat om en IVR "
 "anropades men inte precis innan denna."
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -150,7 +150,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ivr.class.php:272 functions.inc.php:391
+#: Ivr.class.php:272 functions.inc.php:392
 msgid "Delete"
 msgstr "Ta bort"
 
@@ -166,7 +166,7 @@ msgstr ""
 msgid "Description of this IVR"
 msgstr ""
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid "Destination"
 msgstr ""
 
@@ -178,7 +178,7 @@ msgstr ""
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr ""
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid "Digits"
 msgstr ""
 
@@ -186,7 +186,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -257,17 +257,17 @@ msgstr ""
 msgid "IVR Name"
 msgstr ""
 
-#: functions.inc.php:527 functions.inc.php:549
+#: functions.inc.php:528 functions.inc.php:550
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:472 functions.inc.php:491
+#: functions.inc.php:473 functions.inc.php:492
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:454
+#: functions.inc.php:455
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / Funktion: %s"
@@ -414,7 +414,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid "Return"
 msgstr ""
 
@@ -430,7 +430,7 @@ msgstr ""
 msgid "Return to IVR after VM"
 msgstr ""
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid "Return to this IVR when finished"
 msgstr ""
 

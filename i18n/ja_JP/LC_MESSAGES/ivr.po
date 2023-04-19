@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-18 03:58+0000\n"
+"POT-Creation-Date: 2023-04-19 03:10+0000\n"
 "PO-Revision-Date: 2016-08-03 12:41+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -144,7 +144,7 @@ msgstr ""
 "よって、親IVRがこのIVRの直前でない場合は、予期しない結果を引き起こしてしまう"
 "可能性があります。注意:親IVRとは、このIVRに転送される前にあったIVRの事"
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid "Choose a destination to route the call to"
 msgstr ""
 
@@ -175,7 +175,7 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-#: Ivr.class.php:272 functions.inc.php:391
+#: Ivr.class.php:272 functions.inc.php:392
 msgid "Delete"
 msgstr "削除"
 
@@ -191,7 +191,7 @@ msgstr "このエントリーを削除する。変更適用を忘れずに！"
 msgid "Description of this IVR"
 msgstr "このIVRの説明。"
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid "Destination"
 msgstr "宛先"
 
@@ -203,7 +203,7 @@ msgstr "「無効な入力」の音声を再生してから転送する宛先。
 msgid "Destination to send the call to after Timeout Recording is played."
 msgstr "タイムアウト音声を再生してから転送する宛先。"
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid "Digits"
 msgstr ""
 
@@ -211,7 +211,7 @@ msgstr ""
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid ""
 "Digits the caller needs to dial to access said destination. Digits are "
 "limited to 10 digits."
@@ -282,17 +282,17 @@ msgstr "IVRリスト"
 msgid "IVR Name"
 msgstr "IVRの名前"
 
-#: functions.inc.php:527 functions.inc.php:549
+#: functions.inc.php:528 functions.inc.php:550
 #, php-format
 msgid "IVR: %s"
 msgstr "IVR: %s"
 
-#: functions.inc.php:472 functions.inc.php:491
+#: functions.inc.php:473 functions.inc.php:492
 #, php-format
 msgid "IVR: %s (%s)"
 msgstr ""
 
-#: functions.inc.php:454
+#: functions.inc.php:455
 #, php-format
 msgid "IVR: %s / Option: %s"
 msgstr "IVR: %s / オプション: %s"
@@ -445,7 +445,7 @@ msgstr ""
 msgid "Reset"
 msgstr "リセット"
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid "Return"
 msgstr "戻る"
 
@@ -461,7 +461,7 @@ msgstr "タイムアウト: 前IVRに戻る"
 msgid "Return to IVR after VM"
 msgstr "VMの後にIVRに戻る"
 
-#: functions.inc.php:391
+#: functions.inc.php:392
 msgid "Return to this IVR when finished"
 msgstr ""
 
