@@ -113,7 +113,34 @@
 		</div>
 	</div>
 	<!--END Direct Dial-->
-	<!--Direct Dial-->
+	<!--Accept pound/hash key-->
+	<div class="element-container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="form-group">
+						<div class="col-md-3">
+							<label class="control-label" for="accept_pound_key"><?php echo _("Ignore Trailing # Key") ?></label>
+							<i class="fa fa-question-circle fpbx-help-icon" data-for="accept_pound_key"></i>
+						</div>
+						<div class="col-md-9 radioset">
+							<input type="radio" name="accept_pound_key" id="accept_pound_keyyes" value="1" <?php echo ($ivr['accept_pound_key'] == "1"?"CHECKED":"") ?>>
+							<label for="accept_pound_keyyes"><?php echo _("Yes");?></label>
+							<input type="radio" name="accept_pound_key" id="accept_pound_keyno" value="0" <?php echo ($ivr['accept_pound_key'] == "0"?"CHECKED":"") ?>>
+							<label for="accept_pound_keyno"><?php echo _("No");?></label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<span id="accept_pound_key-help" class="help-block fpbx-help-block"><?php echo _("When enabled, callers can enter a trailing # and it will not be considered part of the IVR entry.")?></span>
+			</div>
+		</div>
+	</div>
+	<!--END Accept pound/hash key-->
+	<!--Strict Dial Timeout-->
 	<div class="element-container">
 		<div class="row">
 			<div class="col-md-12">

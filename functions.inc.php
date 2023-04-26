@@ -56,6 +56,9 @@ function ivr_get_config($engine) {
 			$ext->splice('macro-dial','ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 			$ext->splice('macro-dial','NOANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
+			// splice into from-did-direct-ivr to strip off trailing # as needed
+			$ext->splice('from-did-direct-ivr', '_X.', 0, new ext_gotoif('$["${IVR_ACCEPT_POUND}" = "1" & "${EXTEN:-1:1}" = "#"]', 'from-did-direct-ivr,${EXTEN:0:-1},1'));
+
 			if (function_exists('queues_list')) {
 				//draw a list of ivrs included by any queues
 				$queues = queues_list(true);
@@ -103,6 +106,7 @@ function ivr_get_config($engine) {
 				if (!empty($ivr['rvolume'])) {
 					$ext->add($c, 's', '', new ext_setvar("__RVOL", $ivr['rvolume']));
 				}
+				$ext->add($c, 's', '', new ext_setvar("__IVR_ACCEPT_POUND", $ivr['accept_pound_key'] ? 1 : 0));
 				$ext->add($c, 's', '', new ext_gotoif('$["${CHANNEL(state)}" = "Up"]','skip'));
 				$ext->add($c, 's', '', new ext_answer(''));
 
@@ -184,6 +188,10 @@ function ivr_get_config($engine) {
 						 	continue;
 						}
 
+						// for entries ending with a # just trim it off
+						if ($ivr['accept_pound_key']) {
+							$ext->add($c, $e['selection'] . '#', '', new ext_goto(1, $e['selection']));
+						}
 						//only display these two lines if the ivr is included in any queues
 						if (function_exists('queues_list') && in_array($ivr['id'], $qivr)) {
 							$ext->add($c, $e['selection'],'', new ext_macro('blkvm-clr'));
@@ -338,6 +346,8 @@ function ivr_get_config($engine) {
 						$ext->add($c, $exten, '', new ext_macro('blkvm-clr'));
 						$ext->add($c, $exten, '', new ext_setvar('__NODEST', ''));
 						$ext->add($c, $exten, '', new ext_goto('1', '${EXTEN}', 'from-internal'));
+						// this only gets reached with force strict dial timeout set to "no-legacy" which uses Background() instead of Read()
+						$ext->add($c, $exten . '#', '', new ext_gotoif('$["${IVR_ACCEPT_POUND}" = "1"]', $exten . ',1', '${IVR_CONTEXT},i,1'));
 					}
 				}
 			}
