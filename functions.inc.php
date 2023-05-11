@@ -56,9 +56,6 @@ function ivr_get_config($engine) {
 			$ext->splice('macro-dial','ANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 			$ext->splice('macro-dial','NOANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
-			// splice into from-did-direct-ivr to strip off trailing # as needed
-			$ext->splice('from-did-direct-ivr', '_X.', 0, new ext_gotoif('$["${IVR_ACCEPT_POUND}" = "1" & "${EXTEN:-1:1}" = "#"]', 'from-did-direct-ivr,${EXTEN:0:-1},1'));
-
 			if (function_exists('queues_list')) {
 				//draw a list of ivrs included by any queues
 				$queues = queues_list(true);
@@ -106,7 +103,6 @@ function ivr_get_config($engine) {
 				if (!empty($ivr['rvolume'])) {
 					$ext->add($c, 's', '', new ext_setvar("__RVOL", $ivr['rvolume']));
 				}
-				$ext->add($c, 's', '', new ext_setvar("__IVR_ACCEPT_POUND", $ivr['accept_pound_key'] ? 1 : 0));
 				$ext->add($c, 's', '', new ext_gotoif('$["${CHANNEL(state)}" = "Up"]','skip'));
 				$ext->add($c, 's', '', new ext_answer(''));
 
@@ -188,10 +184,6 @@ function ivr_get_config($engine) {
 						 	continue;
 						}
 
-						// for entries ending with a # just trim it off
-						if ($ivr['accept_pound_key']) {
-							$ext->add($c, '_' . $e['selection'] . '#', '', new ext_goto(1, $e['selection']));
-						}
 						//only display these two lines if the ivr is included in any queues
 						if (function_exists('queues_list') && in_array($ivr['id'], $qivr)) {
 							$ext->add($c, $e['selection'],'', new ext_macro('blkvm-clr'));
@@ -337,7 +329,6 @@ function ivr_get_config($engine) {
 			if (!empty($directdial_contexts)) {
 				foreach($directdial_contexts as $dir_id) {
 					$c = 'from-ivr-directory-' . $dir_id;
-					$ext->add($c, '_X.', '', new ext_gotoif('$["${IVR_ACCEPT_POUND}" = "1" & "${EXTEN:-1:1}" = "#"]', '${EXTEN:0:-1},1'));
 					$entries = function_exists('directory_get_dir_entries') ? directory_get_dir_entries($dir_id) : array();
 					foreach ($entries as $dstring) {
 						$exten = $dstring['dial'] == '' ? $dstring['foreign_id'] : $dstring['dial'];
