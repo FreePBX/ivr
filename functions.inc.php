@@ -190,7 +190,7 @@ function ivr_get_config($engine) {
 
 						// for entries ending with a # just trim it off
 						if ($ivr['accept_pound_key']) {
-							$ext->add($c, $e['selection'] . '#', '', new ext_goto(1, $e['selection']));
+							$ext->add($c, '_' . $e['selection'] . '#', '', new ext_goto(1, $e['selection']));
 						}
 						//only display these two lines if the ivr is included in any queues
 						if (function_exists('queues_list') && in_array($ivr['id'], $qivr)) {
@@ -337,6 +337,7 @@ function ivr_get_config($engine) {
 			if (!empty($directdial_contexts)) {
 				foreach($directdial_contexts as $dir_id) {
 					$c = 'from-ivr-directory-' . $dir_id;
+					$ext->add($c, '_X.', '', new ext_gotoif('$["${IVR_ACCEPT_POUND}" = "1" & "${EXTEN:-1:1}" = "#"]', '${EXTEN:0:-1},1'));
 					$entries = function_exists('directory_get_dir_entries') ? directory_get_dir_entries($dir_id) : array();
 					foreach ($entries as $dstring) {
 						$exten = $dstring['dial'] == '' ? $dstring['foreign_id'] : $dstring['dial'];
@@ -346,8 +347,6 @@ function ivr_get_config($engine) {
 						$ext->add($c, $exten, '', new ext_macro('blkvm-clr'));
 						$ext->add($c, $exten, '', new ext_setvar('__NODEST', ''));
 						$ext->add($c, $exten, '', new ext_goto('1', '${EXTEN}', 'from-internal'));
-						// this only gets reached with force strict dial timeout set to "no-legacy" which uses Background() instead of Read()
-						$ext->add($c, $exten . '#', '', new ext_gotoif('$["${IVR_ACCEPT_POUND}" = "1"]', $exten . ',1', '${IVR_CONTEXT},i,1'));
 					}
 				}
 			}
