@@ -56,6 +56,7 @@
             <field name="alertinfo" type="string" length="150" notnull="false"/>
             <field name="rvolume" type="string" length="2" default=""/>
             <field name="strict_dial_timeout" type="boolean" default="2"/>
+            <field name="accept_pound_key" type="boolean" default="0"/>
         </table>
     </database>
 	<popovers>
