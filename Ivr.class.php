@@ -103,12 +103,14 @@ class Ivr extends FreePBX_Helpers implements BMO {
 	}
 	public function getallivrsname($id){
 		$sql = 'SELECT name FROM ivr_details';
+		$bindvalues = array();
 		if ($id) {
 			$sql .= ' where  id != :id ';
+			$bindvalues[':id'] = $id;
 		}
 		$sql .= ' ORDER BY name';
 		$sth = $this->Database->prepare($sql);
-		$sth->execute(array(":id" => $id));
+		$sth->execute($bindvalues);
 		$res = array();
 		$res = $sth->fetchAll(\PDO::FETCH_COLUMN, 0);
 		return $res;
@@ -154,13 +156,15 @@ class Ivr extends FreePBX_Helpers implements BMO {
 	public function getDetails($id = false) {
 		$s = ini_get("default_charset");
 		$sql = 'SELECT * FROM ivr_details';
+		$bindvalues = array();
 		if ($id) {
 			$sql .= ' where  id = :id ';
+			$bindvalues[':id'] = $id;
 		}
 		$sql .= ' ORDER BY name';
 
 		$sth = $this->Database->prepare($sql);
-		$sth->execute(array(":id" => $id));
+		$sth->execute($bindvalues);
 		$res = $sth->fetchAll();
 		if ($id && isset($res[0])) {
 			$res[0]['name'] = htmlentities($res[0]['name'],ENT_COMPAT | ENT_HTML401, "UTF-8");

@@ -151,11 +151,11 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="strict_dial_timeout"></i>
 						</div>
 						<div class="col-md-9 radioset">
-							<input type="radio" name="strict_dial_timeout" id="strict_dial_timeoutyes" value="1" <?php echo ($ivr['strict_dial_timeout'] == "1"?"CHECKED":"") ?>>
+							<input type="radio" name="strict_dial_timeout" id="strict_dial_timeoutyes" value="1" <?php echo ((isset($ivr['strict_dial_timeout']) && $ivr['strict_dial_timeout'] == "1")?"CHECKED":"") ?>>
 							<label for="strict_dial_timeoutyes"><?php echo _("Yes");?></label>
-							<input type="radio" name="strict_dial_timeout" id="strict_dial_timeoutno" value="0" <?php echo ($ivr['strict_dial_timeout'] == "0"?"CHECKED":"") ?>>
+							<input type="radio" name="strict_dial_timeout" id="strict_dial_timeoutno" value="0" <?php echo ((isset($ivr['strict_dial_timeout']) && $ivr['strict_dial_timeout'] == "0")?"CHECKED":"") ?>>
 							<label for="strict_dial_timeoutno"><?php echo _("No");?></label>
-							<input type="radio" name="strict_dial_timeout" id="strict_dial_timeoutinstant" value="2" <?php echo ($ivr['strict_dial_timeout'] == "2" || !isset($ivr['strict_dial_timeout']) ?"CHECKED":"") ?>>
+							<input type="radio" name="strict_dial_timeout" id="strict_dial_timeoutinstant" value="2" <?php echo ((isset($ivr['strict_dial_timeout']) && $ivr['strict_dial_timeout'] == "2")?"CHECKED":"") ?>>
 							<label for="strict_dial_timeoutinstant"><?php echo _("No - Legacy");?></label>
 						</div>
 					</div>
