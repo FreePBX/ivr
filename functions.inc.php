@@ -106,7 +106,7 @@ function ivr_get_config($engine) {
 				if (!empty($ivr['rvolume'])) {
 					$ext->add($c, 's', '', new ext_setvar("__RVOL", $ivr['rvolume']));
 				}
-				$ext->add($c, 's', '', new ext_setvar("__IVR_ACCEPT_POUND", $ivr['accept_pound_key'] ? 1 : 0));
+				$ext->add($c, 's', '', new ext_setvar("__IVR_ACCEPT_POUND", (isset($ivr['accept_pound_key']) && $ivr['accept_pound_key']) ? 1 : 0));
 				$ext->add($c, 's', '', new ext_gotoif('$["${CHANNEL(state)}" = "Up"]','skip'));
 				$ext->add($c, 's', '', new ext_answer(''));
 
@@ -189,7 +189,7 @@ function ivr_get_config($engine) {
 						}
 
 						// for entries ending with a # just trim it off
-						if ($ivr['accept_pound_key']) {
+						if (isset($ivr['accept_pound_key'])) {
 							$ext->add($c, $e['selection'] . '#', '', new ext_goto(1, $e['selection']));
 						}
 						//only display these two lines if the ivr is included in any queues
