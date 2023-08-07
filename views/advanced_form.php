@@ -124,9 +124,9 @@
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="accept_pound_key"></i>
 						</div>
 						<div class="col-md-9 radioset">
-							<input type="radio" name="accept_pound_key" id="accept_pound_keyyes" value="1" <?php echo ($ivr['accept_pound_key'] == "1"?"CHECKED":"") ?>>
+							<input type="radio" name="accept_pound_key" id="accept_pound_keyyes" value="1" <?php echo ((isset($ivr['accept_pound_key']) && $ivr['accept_pound_key'] == "1")?"CHECKED":"") ?>>
 							<label for="accept_pound_keyyes"><?php echo _("Yes");?></label>
-							<input type="radio" name="accept_pound_key" id="accept_pound_keyno" value="0" <?php echo ($ivr['accept_pound_key'] == "0"?"CHECKED":"") ?>>
+							<input type="radio" name="accept_pound_key" id="accept_pound_keyno" value="0" <?php echo ((isset($ivr['accept_pound_key']) && $ivr['accept_pound_key'] == "0")?"CHECKED":"") ?>>
 							<label for="accept_pound_keyno"><?php echo _("No");?></label>
 						</div>
 					</div>
