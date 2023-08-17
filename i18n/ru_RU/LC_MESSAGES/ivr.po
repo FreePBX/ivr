@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: IVR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-24 05:33+0530\n"
-"PO-Revision-Date: 2022-04-21 13:00+0000\n"
+"PO-Revision-Date: 2023-08-18 07:00+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/ivr/ru/>"
 "\n"
@@ -251,7 +251,7 @@ msgstr "Приветствие, воспроизводимое при попад
 
 #: views/simple_form.php:110
 msgid "Hit the red record button to start recording from your browser"
-msgstr "Нажмите красную кнопку записи, чтобы начать запись из Вашего браузера"
+msgstr "Нажмите красную кнопку записи для начала записи из браузера"
 
 #: Ivr.class.php:28 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
 #: /usr/src/freepbx/ivr/page.ivr.php:24
