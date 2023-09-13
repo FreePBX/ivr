@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-13 12:02+0000\n"
+"POT-Creation-Date: 2023-09-13 06:18+0000\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -89,10 +89,6 @@ msgstr "Juntar Anuncio em Tempo Esgotado"
 msgid "Append Announcement to Invalid"
 msgstr "Anexar Anúncio a Inválido"
 
-#: ivr.i18n.php:6
-msgid "Applications"
-msgstr "Aplicações"
-
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr "Tem certeza de que não quer uma gravação para este anúncio?"
@@ -138,17 +134,6 @@ msgstr ""
 "chamada antes desta URA, a qual poderia levar a resultados estranhos se "
 "houvesse uma URA chamando no caminho da chamada, mas não imediatamente antes "
 "desta"
-
-#: ivr.i18n.php:8
-msgid ""
-"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These can be used to send callers to different locations "
-"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
-msgstr ""
-"Cria um menu como Recepcionista Digital (conhecido como URA - Unidade de "
-"Resposta Audível). Esse menu envia ligações para diferentes departamentos "
-"(por exemplo, para suporte pressione 1) e / ou autoriza discar direto para "
-"um ramal do sistema."
 
 #: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
 msgid "Default"
@@ -235,8 +220,7 @@ msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 "Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
 
-#: Ivr.class.php:98 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:98 /usr/src/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "URA"
 
@@ -585,6 +569,19 @@ msgstr "Seu Navegador Bloqueou a Gravação, verifique suas configurações"
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr "dígitos pressionados"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicações"
+
+#~ msgid ""
+#~ "Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+#~ "Response) menus. These can be used to send callers to different locations "
+#~ "(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+#~ msgstr ""
+#~ "Cria um menu como Recepcionista Digital (conhecido como URA - Unidade de "
+#~ "Resposta Audível). Esse menu envia ligações para diferentes departamentos "
+#~ "(por exemplo, para suporte pressione 1) e / ou autoriza discar direto "
+#~ "para um ramal do sistema."
 
 #~ msgid "ALERT_INFO can be used for distinctive ring with SIP devices."
 #~ msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-13 12:02+0000\n"
+"POT-Creation-Date: 2023-09-13 06:18+0000\n"
 "PO-Revision-Date: 2015-11-12 12:35+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -85,10 +85,6 @@ msgstr "超时中附加一个主系统公告"
 msgid "Append Announcement to Invalid"
 msgstr "在无效输入后附加语音提示"
 
-#: ivr.i18n.php:6
-msgid "Applications"
-msgstr "应用"
-
 #: assets/js/ivr.js:91
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr ""
@@ -125,13 +121,6 @@ msgid ""
 "return path will be to any IVR that was in the call path prior to this IVR "
 "which could lead to strange results if there was an IVR called in the call "
 "path but not immediately before this"
-msgstr ""
-
-#: ivr.i18n.php:8
-msgid ""
-"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
-"Response) menus. These can be used to send callers to different locations "
-"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
 msgstr ""
 
 #: views/form.php:59 views/form.php:65 views/form.php:71 views/form.php:77
@@ -216,8 +205,7 @@ msgstr "播放IVR。"
 msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 
-#: Ivr.class.php:98 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
-#: /usr/src/freepbx/ivr/views/grid.php:3
+#: Ivr.class.php:98 /usr/src/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "语音IVR"
 
@@ -542,6 +530,9 @@ msgstr ""
 #: views/entries.php:20
 msgid "digits pressed"
 msgstr ""
+
+#~ msgid "Applications"
+#~ msgstr "应用"
 
 #~ msgid ""
 #~ "A connection to Asterisk Manager could not be made. This module requires "
