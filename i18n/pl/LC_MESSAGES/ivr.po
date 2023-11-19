@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 04:05+0000\n"
-"PO-Revision-Date: 2023-11-19 00:39+0000\n"
+"PO-Revision-Date: 2023-11-20 01:00+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/ivr/pl/>\n"
 "Language: pl\n"
@@ -301,13 +301,13 @@ msgstr "Nazwa IVR"
 #: functions.inc.php:671
 #, php-format
 msgid "IVR: %s"
-msgstr "IVR: %s"
+msgstr "IVR : %s"
 
 #: functions.inc.php:594
 #: functions.inc.php:613
 #, php-format
 msgid "IVR: %s (%s)"
-msgstr "IVR: %s (%s)"
+msgstr "IVR : %s (%s)"
 
 #: functions.inc.php:576
 #, php-format
