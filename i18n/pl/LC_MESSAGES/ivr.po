@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 04:05+0000\n"
-"PO-Revision-Date: 2023-11-20 01:00+0000\n"
+"PO-Revision-Date: 2023-12-14 08:22+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/ivr/pl/>\n"
 "Language: pl\n"
@@ -547,7 +547,7 @@ msgstr ""
 
 #: Ivr.class.php:95
 msgid "Submit"
-msgstr "Wyślij"
+msgstr "Zatwierdź"
 
 #: Ivr.class.php:163
 msgid ""
