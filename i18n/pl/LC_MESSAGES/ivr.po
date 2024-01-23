@@ -1,0 +1,648 @@
+# This file is part of FreePBX.
+#
+# For licensing information, please see the file named LICENSE located in the module directory
+#
+# FreePBX language template for ivr
+# Copyright (C) 2008-2020 Sangoma Technologies, Inc.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-20 04:05+0000\n"
+"PO-Revision-Date: 2023-12-14 08:22+0000\n"
+"Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
+"Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/ivr/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.0.1\n"
+
+#: Ivr.class.php:178
+msgid "A PHP extension stopped the file upload"
+msgstr "Rozszerzenie PHP zatrzymało przesyłanie plików"
+
+#: page.ivr.php:18
+msgid ""
+"A connection to Asterisk Manager could not be made. This module requires "
+"Asterisk to be running and have proper credentials"
+msgstr ""
+"Nie można nawiązać połączenia z Asterisk Managerem. Ten moduł wymaga, aby "
+"Asterisk był uruchomiony i miał odpowiednie poświadczenia"
+
+#: views/advanced_form.php:164
+msgid "A value of 0 disables the timeout"
+msgstr "Wartość 0 wyłącza limit czasu"
+
+#: views/advanced_form.php:188
+msgid ""
+"ALERT_INFO can be used for distinctive ring with SIP devices.<br>If you are "
+"having issues, see the \"Enforce RFC7462\" option found in Settings-"
+">Advanced Settings. <br><br>Whether to enforce RFC7462 for Alert-Info. With "
+"this enabled all Alert Infos will be prefixed with "
+"\"<lt&>http://127.0.0.1<gt&>;info=\" if it was not previously defined. This "
+"is to be in accordance with RFC7462. Disaling this enforcement will remove "
+"the prefix entirely"
+msgstr ""
+"ALERT_INFO może być używany do charakterystycznego dzwonka z urządzeniami "
+"SIP. <br>Jeśli masz problemy, zapoznaj się z opcją \"Wymuszaj RFC7462\" "
+"znajdującą się w Ustawienia->Ustawienia zaawansowane. <br><br>Określa, czy "
+"wymuszać RFC7462 dla Alert-Info. Po włączeniu tej opcji wszystkie informacje "
+"o alertach będą poprzedzone prefiksem \"<lt&>http://127.0.0.1<gt&>; info=\", "
+"jeśli nie został wcześniej zdefiniowany. Ma to być zgodne z RFC7462. "
+"Usunięcie tego wymuszania spowoduje całkowite usunięcie prefiksu"
+
+#: page.ivr.php:47
+msgid "Actions"
+msgstr "Działania"
+
+#: views/entries.php:70
+msgid "Add Another Entry"
+msgstr "Dodaj kolejny wpis"
+
+#: page.ivr.php:30 /usr/src/freepbx/ivr/views/form.php:10
+#: views/rnav.php:3
+msgid "Add IVR"
+msgstr "Dodaj IVR"
+
+#: views/advanced_form.php:292
+msgid ""
+"After playing the Invalid Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+"Po odtworzeniu \"nieprawidłowego nagrania dla ponowienia\" system odtworzy "
+"główny komunikat IVR"
+
+#: views/advanced_form.php:450
+msgid ""
+"After playing the Timeout Retry Recording the system will replay the main "
+"IVR Announcement"
+msgstr ""
+"Po odtworzeniu nagrania \"ponowienia po upłynięciu limitu czasu\" system "
+"odtworzy główny komunikat IVR"
+
+#: views/advanced_form.php:176
+msgid "Alert Info"
+msgstr "Informacje o alertach"
+
+#: views/advanced_form.php:164
+msgid "Amount of time to be considered a timeout."
+msgstr "Czas, który należy uznać za limit czasu."
+
+#: views/advanced_form.php:70
+#: views/simple_form.php:33
+msgid "Announcement"
+msgstr "Zapowiedź"
+
+#: views/advanced_form.php:435
+msgid "Append Announcement on Timeout"
+msgstr "Dołącz zapowiedź o przekroczeniu limitu czasu"
+
+#: views/advanced_form.php:277
+msgid "Append Announcement to Invalid"
+msgstr "Dołącz zapowiedź do nieprawidłowego wyboru"
+
+#: ivr.i18n.php:6
+msgid "Applications"
+msgstr "Aplikacje"
+
+#: assets/js/ivr.js:91
+msgid "Are you sure you don't want a recording for this announcement?"
+msgstr "Czy na pewno nie chcesz nagrania dla tej zapowiedzi?"
+
+#: views/simple_form.php:73
+msgid "Browse"
+msgstr "Przeglądaj"
+
+#: Ivr.class.php:182
+msgid "Can Not Find Uploaded Files"
+msgstr "Nie znaleziono przesłanych plików"
+
+#: views/advanced_form.php:477
+msgid ""
+"Check this box to have this option return to a parent IVR if it was called "
+"from a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
+"Zaznacz to pole, aby ta opcja powróciła do nadrzędnego IVR, jeśli został "
+"wywołany z nadrzędnego IVR. Jeśli nie, trafi do wybranego miejsca "
+"docelowego. <br><br>Ścieżka powrotna będzie do dowolnego IVR, który "
+"znajdował się na ścieżce wywołania przed tym IVR, co może prowadzić do "
+"dziwnych wyników, jeśli IVR został wywołany na ścieżce wywołania, ale nie "
+"bezpośrednio przed tym"
+
+#: functions.inc.php:512
+msgid "Choose a destination to route the call to"
+msgstr "Wybierz miejsce docelowe, do którego chcesz przekierować połączenie"
+
+#: views/advanced_form.php:319
+msgid ""
+"Choose yes to have this option return to a parent IVR if it was called from "
+"a parent IVR. If not, it will go to the chosen destination.<br><br>The "
+"return path will be to any IVR that was in the call path prior to this IVR "
+"which could lead to strange results if there was an IVR called in the call "
+"path but not immediately before this"
+msgstr ""
+"Wybierz opcję Tak, aby ta opcja powróciła do nadrzędnego IVR, jeśli został "
+"wywołany z nadrzędnego IVR. Jeśli nie, trafi do wybranego miejsca "
+"docelowego. <br><br>Ścieżka powrotna będzie do dowolnego IVR, który "
+"znajdował się na ścieżce wywołania przed tym IVR, co może prowadzić do "
+"dziwnych wyników, jeśli IVR został wywołany na ścieżce wywołania, ale nie "
+"bezpośrednio przed tym"
+
+#: page.ivr.php:16
+msgid "Connection Error"
+msgstr "Błąd połączenia"
+
+#: ivr.i18n.php:8
+msgid ""
+"Creates Digital Receptionist (aka Auto-Attendant, aka Interactive Voice "
+"Response) menus. These can be used to send callers to different locations "
+"(eg, Press 1 for sales) and/or allow direct-dialing of extension numbers."
+msgstr ""
+"Tworzy menu cyfrowej recepcjonistki (Automatyczna zapowiedź, Interactive "
+"Voice Response). Może ono służyć do odsyłania dzwoniących do różnych "
+"lokalizacji (np. Naciśnij 1 dla działu sprzedaży) i/lub umożliwiać "
+"bezpośrednie wybieranie numerów wewnętrznych."
+
+#: views/form.php:55
+#: views/form.php:61
+#: views/form.php:67
+#: views/form.php:73
+msgid "Default"
+msgstr "Domyślne"
+
+#: Ivr.class.php:80
+#: functions.inc.php:512
+msgid "Delete"
+msgstr "Usuń"
+
+#: assets/js/ivr.js:498
+msgid "Delete Recording"
+msgstr "Usuń nagranie"
+
+#: views/entries.php:49
+msgid "Delete this entry. Dont forget to click Submit to save changes!"
+msgstr ""
+"Usuń ten wpis. Nie zapomnij kliknąć przycisk Prześlij, aby zapisać zmiany!"
+
+#: views/advanced_form.php:53
+msgid "Description of this IVR"
+msgstr "Opis tego IVR"
+
+#: functions.inc.php:512
+msgid "Destination"
+msgstr "Miejsce docelowe"
+
+#: views/advanced_form.php:373
+msgid "Destination to send the call to after Invalid Recording is played"
+msgstr ""
+"Miejsce docelowe, do którego ma zostać przekierowane połączenie po "
+"odtworzeniu nagrania po wybraniu nieprawidłowej opcji"
+
+#: views/advanced_form.php:531
+msgid "Destination to send the call to after Timeout Recording is played."
+msgstr ""
+"Miejsce docelowe, do którego ma zostać wysłane połączenie po odtworzeniu "
+"nagrywania po upłynięciu limitu czasu."
+
+#: functions.inc.php:512
+msgid "Digits"
+msgstr "Cyfry"
+
+#: assets/js/ivr.js:113
+msgid "Digits are limited to 10 digits."
+msgstr "Cyfry są ograniczone do 10 cyfr."
+
+#: functions.inc.php:512
+msgid ""
+"Digits the caller needs to dial to access said destination. Digits are "
+"limited to 10 digits."
+msgstr ""
+"Cyfry, które dzwoniący musi wybrać, aby uzyskać dostęp do miejsca "
+"docelowego. Cyfry są ograniczone do 10 cyfr."
+
+#: views/simple_form.php:80
+msgid "Drop Annoucement Recording Here"
+msgstr "Upuść plik nagrania tutaj"
+
+#: Ivr.class.php:90
+msgid "Duplicate"
+msgstr "Duplikat"
+
+#: views/form.php:44
+msgid "Edit IVR: "
+msgstr "Edytuj IVR: "
+
+#: assets/js/ivr.js:238
+msgid "Edit:"
+msgstr "Edytuj:"
+
+#: views/advanced_form.php:96
+msgid "Enable Direct Dial"
+msgstr "Włącz bezpośrednie wybieranie"
+
+#: Ivr.class.php:175
+msgid "Failed to write file to disk"
+msgstr "Nie udało się zapisać pliku na dysku"
+
+#: views/advanced_form.php:123
+msgid "Force Strict Dial Timeout"
+msgstr "Wymuś ścisły limit czasu wybierania"
+
+#: views/simple_form.php:131
+msgid "Greeting to be played on entry to the IVR."
+msgstr "Powitanie do odtworzenia przy wejściu do IVR."
+
+#: views/simple_form.php:110
+msgid "Hit the red record button to start recording from your browser"
+msgstr ""
+"Naciśnij czerwony przycisk nagrywania, aby rozpocząć nagrywanie z "
+"przeglądarki"
+
+#: Ivr.class.php:28 /usr/src/freepbx/ivr/ivr.i18n.php:4
+#: ivr.i18n.php:10 /usr/src/freepbx/ivr/page.ivr.php:24
+msgid "IVR"
+msgstr "IVR"
+
+#: views/advanced_form.php:60
+msgid "IVR DTMF Options"
+msgstr "Opcje IVR DTMF"
+
+#: page.ivr.php:46
+#: views/advanced_form.php:41
+msgid "IVR Description"
+msgstr "Opis IVR"
+
+#: views/advanced_form.php:565
+msgid "IVR Entries"
+msgstr "Wpisy IVR"
+
+#: views/advanced_form.php:7
+msgid "IVR General Options"
+msgstr "Opcje ogólne IVR"
+
+#: views/rnav.php:14
+msgid "IVR List"
+msgstr "Lista IVR"
+
+#: page.ivr.php:45
+#: views/advanced_form.php:17
+#: views/simple_form.php:8
+msgid "IVR Name"
+msgstr "Nazwa IVR"
+
+#: functions.inc.php:649
+#: functions.inc.php:671
+#, php-format
+msgid "IVR: %s"
+msgstr "IVR : %s"
+
+#: functions.inc.php:594
+#: functions.inc.php:613
+#, php-format
+msgid "IVR: %s (%s)"
+msgstr "IVR : %s (%s)"
+
+#: functions.inc.php:576
+#, php-format
+msgid "IVR: %s / Option: %s"
+msgstr "IVR: %s / Opcja: %s"
+
+#: assets/js/ivr.js:85
+msgid "IVRs name already exist"
+msgstr "Nazwa IVR już istnieje"
+
+#: assets/js/ivr.js:82
+msgid "IVRs require a valid name"
+msgstr "IVR wymaga prawidłowej nazwy"
+
+#: views/advanced_form.php:558
+msgid ""
+"If Yes, upon exiting voicemail a caller will be returned to this IVR if they "
+"got a users voicemail"
+msgstr ""
+"Jeśli tak, po wyjściu z poczty głosowej dzwoniący zostanie powrócony do tego "
+"IVR, jeśli otrzymał pocztę głosową użytkownika"
+
+#: views/advanced_form.php:140
+msgid ""
+"If set to 'No' then IVR will match on the first digit(s) that match IVR "
+"entries, thus if you have entries of 1 and 123 when the caller presses 1 it "
+"will dial entry 1, when they press 123 it will match on the first entry so "
+"it will dial 1. If set to 'Yes' then IVR will wait the full timeout for the "
+"entry so that 123 will match 123. If set to 'No - Legacy' then the IVR will "
+"work as it did in previous PBX versions, utilizing the extenwait "
+"functionality, if ivr codes conflict with mapped extensions there could "
+"possibly be undesired results, however this is the typical default setting "
+"for the PBX. Default is 'No - Legacy'"
+msgstr ""
+"Jeśli ustawisz na \"Nie\", IVR dopasuje się do pierwszej cyfry (cyfr), które "
+"pasują do wpisów IVR, więc jeśli masz wpisy 1 i 123, gdy dzwoniący naciśnie "
+"1, wybierze wpis 1, po naciśnięciu 123 dopasuje się do pierwszego wpisu, "
+"więc wybierze 1. Jeśli jest ustawiony na \"Tak\", IVR będzie czekał na pełny "
+"limit czasu na wpis, tak aby 123 pasowało do 123. Jeśli jest ustawiona na \""
+"Nie - starsza wersja\", IVR będzie działał tak, jak w poprzednich wersjach "
+"PBX, wykorzystując funkcjonalność extenwait, jeśli kody ivr kolidują z "
+"mapowanymi numerami wewnętrznymi, mogą wystąpić niepożądane wyniki, jednak "
+"jest to typowe ustawienie domyślne dla PBX. Wartość domyślna to \"Nie — "
+"starsza wersja\""
+
+#: views/advanced_form.php:361
+msgid "Invalid Destination"
+msgstr "Nieprawidłowe miejsce docelowe"
+
+#: views/advanced_form.php:335
+msgid "Invalid Recording"
+msgstr "Nieprawidłowe nagranie"
+
+#: views/advanced_form.php:227
+msgid "Invalid Retries"
+msgstr "Nieprawidłowe ponawianie"
+
+#: views/advanced_form.php:251
+msgid "Invalid Retry Recording"
+msgstr "Nieprawidłowe nagranie dla ponownej próby"
+
+#: views/rnav.php:2
+msgid "List IVRs"
+msgstr "Lista IVR"
+
+#: Ivr.class.php:172
+msgid "Missing a temporary folder"
+msgstr "Brak folderu tymczasowego"
+
+#: views/advanced_form.php:29
+#: views/simple_form.php:20
+msgid "Name of this IVR"
+msgstr "Nazwa tego IVR"
+
+#: views/advanced_form.php:103
+#: views/advanced_form.php:130
+#: views/advanced_form.php:284
+#: views/advanced_form.php:311
+#: views/advanced_form.php:442
+#: views/advanced_form.php:469
+#: views/advanced_form.php:550
+#: views/entries.php:43
+msgid "No"
+msgstr "Nie"
+
+#: views/advanced_form.php:132
+msgid "No - Legacy"
+msgstr "Nie - starsza wersja"
+
+#: page.ivr.php:15
+msgid "No Astman, Not loading IVR"
+msgstr "Brak Astman, nie ładuję IVR"
+
+#: assets/js/ivr.js:342
+msgid "No file to load!"
+msgstr "Brak pliku do załadowania!"
+
+#: Ivr.class.php:169
+msgid "No file was uploaded"
+msgstr "Nie przesłano pliku"
+
+#: views/advanced_form.php:204
+#: views/advanced_form.php:365
+#: views/advanced_form.php:523
+#: views/form.php:50
+#: views/form.php:56
+#: views/form.php:62
+#: views/form.php:68
+#: views/form.php:74
+#: views/simple_form.php:171
+msgid "None"
+msgstr "Żaden"
+
+#: views/advanced_form.php:397
+msgid ""
+"Number of times to retry when no DTMF is heard and the IVR choice times out."
+msgstr ""
+"Ilość ponownych prób, gdy nie słychać DTMF i upłynął limit czasu wyboru IVR."
+
+#: views/advanced_form.php:239
+msgid ""
+"Number of times to retry when receiving an invalid/unmatched response from "
+"the caller"
+msgstr ""
+"Liczba ponownych prób w przypadku otrzymania nieprawidłowej/niepasującej "
+"odpowiedzi od dzwoniącego"
+
+#: views/advanced_form.php:216
+#: views/simple_form.php:183
+#, php-format
+msgid ""
+"Override the ringer volume. Note: This is only valid for %s phones at this "
+"time"
+msgstr "Zastąp głośność dzwonka. Uwaga: To obecnie dotyczy tylko telefonów %s"
+
+#: views/simple_form.php:62
+msgid "Play Previous Recording"
+msgstr "Odtwórz poprzednie nagranie"
+
+#: assets/js/ivr.js:109
+msgid "Please enter a valid value for Digits Pressed"
+msgstr "Podaj prawidłową wartość w polu wciśnięte cyfry"
+
+#: views/advanced_form.php:349
+#: views/advanced_form.php:507
+msgid ""
+"Prompt to be played before sending the caller to an alternate destination "
+"due to the caller pressing 0 or receiving the maximum amount of invalid/"
+"unmatched responses (as determined by Invalid Retries)"
+msgstr ""
+"Monituj o odtworzenie przed wysłaniem rozmówcy do alternatywnego miejsca "
+"docelowego z powodu naciśnięcia przez rozmówcę 0 lub otrzymania maksymalnej "
+"liczby nieprawidłowych/niedopasowanych odpowiedzi (określonych jako "
+"nieprawidłowe próby)"
+
+#: views/advanced_form.php:423
+msgid ""
+"Prompt to be played when a timeout occurs, before prompting the caller to "
+"try again"
+msgstr ""
+"Zapowiedź która zostanie odtworzona dzwoniącemu, gdy nastąpi przekroczenie "
+"limitu czasu, zanim pozwolisz dzwoniącemu aby spróbował ponownie"
+
+#: views/advanced_form.php:265
+msgid ""
+"Prompt to be played when an invalid/unmatched response is received, before "
+"prompting the caller to try again"
+msgstr ""
+"Zapowiedź odtworzona po odebraniu nieprawidłowej/niedopasowanej odpowiedzi, "
+"zanim poprosisz dzwoniącego o ponowną próbę"
+
+#: views/advanced_form.php:111
+msgid "Provides options for callers to direct dial an extension."
+msgstr ""
+"Udostępnia dzwoniącym opcje bezpośredniego wybierania numeru wewnętrznego."
+
+#: functions.inc.php:424
+#, php-format
+msgid "Recording created for IVR named '%s'"
+msgstr "Nagranie utworzone dla IVR o nazwie '%s'"
+
+#: assets/js/ivr.js:576
+msgid "Recording..."
+msgstr "Nagrywanie..."
+
+#: Ivr.class.php:85
+msgid "Reset"
+msgstr "Zresetuj"
+
+#: functions.inc.php:512
+msgid "Return"
+msgstr "Wróć"
+
+#: views/advanced_form.php:304
+msgid "Return on Invalid"
+msgstr "Wróć gdy nieprawidłowy"
+
+#: views/advanced_form.php:462
+msgid "Return on Timeout"
+msgstr "Wróć przy przekroczeniu czasu"
+
+#: views/advanced_form.php:543
+msgid "Return to IVR after VM"
+msgstr "Wróć do IVR po poczcie głosowej"
+
+#: functions.inc.php:512
+msgid "Return to this IVR when finished"
+msgstr "Wróć do tego IVR po zakończeniu"
+
+#: views/simple_form.php:143
+msgid "Ring Tone"
+msgstr "Dzwonek"
+
+#: views/advanced_form.php:199
+#: views/simple_form.php:166
+msgid "Ringer Volume Override"
+msgstr "Nadpisanie głośności dzwonka"
+
+#: assets/js/ivr.js:498
+msgid "Save Recording"
+msgstr "Zapisz nagranie"
+
+#: views/advanced_form.php:84
+msgid ""
+"Select a 'System Recording' here that will be played on entry to the IVR."
+msgstr ""
+"Wybierz \"Nagranie systemowe\", które zostanie odtworzone przy wejściu do "
+"IVR."
+
+#: views/simple_form.php:155
+msgid ""
+"Select a Ring Tone from the list of options above. This will determine how "
+"your phone sounds when it is rung from this group."
+msgstr ""
+"Wybierz dzwonek z powyższej listy opcji. To określi, jak brzmi Twój telefon, "
+"gdy dzwoni z tej grupy."
+
+#: Ivr.class.php:95
+msgid "Submit"
+msgstr "Zatwierdź"
+
+#: Ivr.class.php:163
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr ""
+"Przesłany plik przekracza parametr MAX_FILE_SIZE określony w formularzu HTML"
+
+#: Ivr.class.php:160
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "Przesłany plik przekracza parametr upload_max_filesize w php.ini"
+
+#: Ivr.class.php:166
+msgid "The uploaded file was only partially uploaded"
+msgstr "Załadowany plik został przesłany tylko częściowo"
+
+#: views/advanced_form.php:152
+msgid "Timeout"
+msgstr "Koniec czasu"
+
+#: views/advanced_form.php:519
+msgid "Timeout Destination"
+msgstr "Miejsce docelowe po przekroczeniu limitu czasu"
+
+#: views/advanced_form.php:493
+msgid "Timeout Recording"
+msgstr "Nagranie po przekroczeniu limitu czasu"
+
+#: views/advanced_form.php:385
+msgid "Timeout Retries"
+msgstr "Próby ponawiania po przekroczeniu limitu czasu"
+
+#: views/advanced_form.php:409
+msgid "Timeout Retry Recording"
+msgstr "Nagranie po przekroczeniu limitu czasu"
+
+#: views/simple_form.php:66
+#: views/simple_form.php:114
+#, php-format
+msgid ""
+"To play the media you will need to either update your browser to a recent "
+"version or update your %s"
+msgstr ""
+"Aby odtworzyć multimedia, musisz zaktualizować przeglądarkę do najnowszej "
+"wersji lub zaktualizować swój %s"
+
+#: assets/js/ivr.js:166
+msgid "Unable to delete the first entry. Please edit instead"
+msgstr "Nie można usunąć pierwszego wpisu. Zamiast tego edytuj"
+
+#: assets/js/ivr.js:162
+msgid "Unable to delete the last entry"
+msgstr "Nie można usunąć ostatniego wpisu"
+
+#: Ivr.class.php:135
+msgid "Unknown Error"
+msgstr "Nieznany błąd"
+
+#: Ivr.class.php:155
+msgid "Unsupported file format"
+msgstr "Nieobsługiwany format pliku"
+
+#: assets/js/ivr.js:265
+msgid "Unsupported file type"
+msgstr "Niewspierany typ plików"
+
+#: views/simple_form.php:65
+#: views/simple_form.php:113
+msgid "Update Required"
+msgstr "Wymagana aktualizacja"
+
+#: views/simple_form.php:131
+#, php-format
+msgid ""
+"Upload files from your local system. Supported upload formats are: %s. This "
+"includes archives (that include multiple files) and multiple files"
+msgstr ""
+"Załąduj pliki z systemu lokalnego. Obsługiwane formaty przesyłania to: %s. "
+"Obejmuje to archiwa (zawierające wiele plików) oraz wiele plików"
+
+#: views/advanced_form.php:101
+#: views/advanced_form.php:128
+#: views/advanced_form.php:282
+#: views/advanced_form.php:309
+#: views/advanced_form.php:440
+#: views/advanced_form.php:467
+#: views/advanced_form.php:548
+#: views/entries.php:41
+msgid "Yes"
+msgstr "Tak"
+
+#: assets/js/ivr.js:580
+msgid "Your Browser Blocked The Recording, Please check your settings"
+msgstr "Twoja przeglądarka zablokowała nagranie, sprawdź swoje ustawienia"
+
+#: views/entries.php:20
+msgid "digits pressed"
+msgstr "wciśnięte cyfry"
