@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX ivr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-11 07:15+0000\n"
+"POT-Creation-Date: 2024-01-23 05:25+0000\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -31,7 +31,7 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
-#: Ivr.class.php:369
+#: Ivr.class.php:373
 msgid "A PHP extension stopped the file upload"
 msgstr ""
 
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
-#: Ivr.class.php:373
+#: Ivr.class.php:377
 msgid "Can Not Find Uploaded Files"
 msgstr ""
 
@@ -150,7 +150,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: Ivr.class.php:271 functions.inc.php:382
+#: Ivr.class.php:275 functions.inc.php:382
 msgid "Delete"
 msgstr "Ta bort"
 
@@ -196,7 +196,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr ""
 
-#: Ivr.class.php:281
+#: Ivr.class.php:285
 msgid "Duplicate"
 msgstr ""
 
@@ -212,7 +212,7 @@ msgstr ""
 msgid "Enable Direct Dial"
 msgstr "Tillåt direktsamtal"
 
-#: Ivr.class.php:366
+#: Ivr.class.php:370
 msgid "Failed to write file to disk"
 msgstr ""
 
@@ -319,7 +319,7 @@ msgstr ""
 msgid "List IVRs"
 msgstr ""
 
-#: Ivr.class.php:363
+#: Ivr.class.php:367
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -342,7 +342,7 @@ msgstr ""
 msgid "No file to load!"
 msgstr ""
 
-#: Ivr.class.php:360
+#: Ivr.class.php:364
 msgid "No file was uploaded"
 msgstr ""
 
@@ -406,7 +406,7 @@ msgstr ""
 msgid "Recording..."
 msgstr ""
 
-#: Ivr.class.php:276
+#: Ivr.class.php:280
 msgid "Reset"
 msgstr ""
 
@@ -453,21 +453,21 @@ msgid ""
 "your phone sounds when it is rung from this group."
 msgstr ""
 
-#: Ivr.class.php:286
+#: Ivr.class.php:290
 msgid "Submit"
 msgstr ""
 
-#: Ivr.class.php:354
+#: Ivr.class.php:358
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: Ivr.class.php:351
+#: Ivr.class.php:355
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: Ivr.class.php:357
+#: Ivr.class.php:361
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
@@ -506,11 +506,11 @@ msgstr ""
 msgid "Unable to delete the last entry"
 msgstr ""
 
-#: Ivr.class.php:326
+#: Ivr.class.php:330
 msgid "Unknown Error"
 msgstr ""
 
-#: Ivr.class.php:346
+#: Ivr.class.php:350
 msgid "Unsupported file format"
 msgstr ""
 

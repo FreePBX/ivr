@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-11 07:15+0000\n"
+"POT-Creation-Date: 2024-01-23 05:25+0000\n"
 "PO-Revision-Date: 2017-07-20 13:20+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/ivr/"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: Ivr.class.php:369
+#: Ivr.class.php:373
 msgid "A PHP extension stopped the file upload"
 msgstr "Máy nhánh PHP đã ngừng tải tệp lên"
 
@@ -100,7 +100,7 @@ msgstr "Bạn có chắc không muốn một bản ghi cho thông báo này?"
 msgid "Browse"
 msgstr "Trình duyệt"
 
-#: Ivr.class.php:373
+#: Ivr.class.php:377
 msgid "Can Not Find Uploaded Files"
 msgstr "Không tìm thấy các tệp đã tải lên"
 
@@ -151,7 +151,7 @@ msgstr ""
 msgid "Default"
 msgstr "Mặc định"
 
-#: Ivr.class.php:271 functions.inc.php:382
+#: Ivr.class.php:275 functions.inc.php:382
 msgid "Delete"
 msgstr "Xóa"
 
@@ -203,7 +203,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr "Thả bản ghi thông báo (Annoucement Recording)  ở đây"
 
-#: Ivr.class.php:281
+#: Ivr.class.php:285
 msgid "Duplicate"
 msgstr ""
 
@@ -219,7 +219,7 @@ msgstr "Chỉnh sửa:"
 msgid "Enable Direct Dial"
 msgstr "Kích hoạt Direct Dial (quay số trực tiếp)"
 
-#: Ivr.class.php:366
+#: Ivr.class.php:370
 msgid "Failed to write file to disk"
 msgstr "Ghi tệp vào đĩa không thành công"
 
@@ -328,7 +328,7 @@ msgstr "Bản ghi phép thử lại không hợp lệ"
 msgid "List IVRs"
 msgstr "Danh sách các IVR"
 
-#: Ivr.class.php:363
+#: Ivr.class.php:367
 msgid "Missing a temporary folder"
 msgstr "Thiếu một thư mục tạm"
 
@@ -351,7 +351,7 @@ msgstr ""
 msgid "No file to load!"
 msgstr "Không có tệp nào để tải!"
 
-#: Ivr.class.php:360
+#: Ivr.class.php:364
 msgid "No file was uploaded"
 msgstr "Đã không có tệp nào được tải lên"
 
@@ -430,7 +430,7 @@ msgstr ""
 msgid "Recording..."
 msgstr "Đang ghi ..."
 
-#: Ivr.class.php:276
+#: Ivr.class.php:280
 msgid "Reset"
 msgstr "Cài đặt lại"
 
@@ -479,21 +479,21 @@ msgstr ""
 "Chọn một Nhạc chuông từ danh sách các tùy chọn ở trên. Điều này sẽ xác định "
 "điện thoại sẽ có âm thanh như thế nào khi nó đổ chuông từ nhóm này."
 
-#: Ivr.class.php:286
+#: Ivr.class.php:290
 msgid "Submit"
 msgstr "Gửi đi"
 
-#: Ivr.class.php:354
+#: Ivr.class.php:358
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Tệp đã tải lên vượt quá kích cỡ tối đa được quy định trong mẫu HTML"
 
-#: Ivr.class.php:351
+#: Ivr.class.php:355
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Tệp đã tải lên vượt qua kích cỡ tối đa quy định trong php.ini"
 
-#: Ivr.class.php:357
+#: Ivr.class.php:361
 msgid "The uploaded file was only partially uploaded"
 msgstr "Tệp đã tải lên chỉ được tải lên từng phần"
 
@@ -534,11 +534,11 @@ msgstr "Không thể xóa mục nhập đầu tiên. Vui lòng chỉnh sửa tha
 msgid "Unable to delete the last entry"
 msgstr "Không thể xóa mục nhập mới nhất"
 
-#: Ivr.class.php:326
+#: Ivr.class.php:330
 msgid "Unknown Error"
 msgstr "Lỗ không xác định"
 
-#: Ivr.class.php:346
+#: Ivr.class.php:350
 msgid "Unsupported file format"
 msgstr "Định dạng tệp không được hỗ trợ"
 
