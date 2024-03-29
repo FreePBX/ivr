@@ -57,7 +57,7 @@ function ivr_get_config($engine) {
 			$ext->splice('macro-dial','NOANSWER','bye', new ext_gotoif('$["${ivrreturn}" = "1"]','${IVR_CONTEXT},return,1'));
 
 			// splice into from-did-direct-ivr to strip off trailing # as needed
-			$ext->splice('from-did-direct-ivr', '_X.', 0, new ext_gotoif('$["${IVR_ACCEPT_POUND}" = "1" & "${EXTEN:-1:1}" = "#"]', 'from-did-direct-ivr,${EXTEN:0:-1},1'));
+			$ext->splice('from-did-direct-ivr', '_.', 0, new ext_gotoif('$["${IVR_ACCEPT_POUND}" = "1" & "${EXTEN:-1:1}" = "#"]', 'from-did-direct-ivr,${EXTEN:0:-1},1'));
 
 			if (function_exists('queues_list')) {
 				//draw a list of ivrs included by any queues
