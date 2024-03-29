@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>17.0.4</version>
+	<version>17.0.5</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -28,7 +28,7 @@
 	<menuitems>
 		<ivr needsenginedb="yes">IVR</ivr>
 	</menuitems>
-    <database>
+	<database>
         <table name="ivr_entries">
             <field name="ivr_id" type="integer"/>
             <field name="selection" type="string" length="30" notnull="false"/>
