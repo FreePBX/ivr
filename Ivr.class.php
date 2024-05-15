@@ -167,14 +167,14 @@ class Ivr extends FreePBX_Helpers implements BMO {
 		$sth->execute($bindvalues);
 		$res = $sth->fetchAll();
 		if ($id && isset($res[0])) {
-			$res[0]['name'] = htmlentities($res[0]['name'],ENT_COMPAT | ENT_HTML401, "UTF-8");
-			$res[0]['description'] = htmlentities($res[0]['description'],ENT_COMPAT | ENT_HTML401, "UTF-8");
+			$res[0]['name'] = htmlentities($res[0]['name'] ?? '',ENT_COMPAT | ENT_HTML401, "UTF-8");
+			$res[0]['description'] = htmlentities($res[0]['description'] ?? '',ENT_COMPAT | ENT_HTML401, "UTF-8");
 			return $res[0];
 		} else {
 			$res = is_array($res)?$res:array();
 			foreach ($res as $key => $value) {
-				$res[$key]['name'] = htmlentities($res[$key]['name'],ENT_COMPAT | ENT_HTML401, "UTF-8");
-				$res[$key]['description'] = htmlentities($res[$key]['description'],ENT_COMPAT | ENT_HTML401, "UTF-8");
+				$res[$key]['name'] = htmlentities($res[$key]['name'] ?? '',ENT_COMPAT | ENT_HTML401, "UTF-8");
+				$res[$key]['description'] = htmlentities($res[$key]['description'] ?? '',ENT_COMPAT | ENT_HTML401, "UTF-8");
 			}
 			return $res;
 		}
