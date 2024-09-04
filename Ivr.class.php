@@ -409,13 +409,16 @@ class Ivr extends FreePBX_Helpers implements BMO {
 		}
 	}
 	public function showPage(){
-		if(empty($_GET['action']) && empty($_GET['id']) || $_GET['action'] === 'delete'){
+		if((isset($_GET['view']) && $_GET['view'] == 'form') || (isset($_GET['action']) && $_GET['action'] != 'delete')) {
+			$vars['ivr'] = self::DEFAULTS;
+			if(!empty($_GET['id'])){
+				$vars['ivr'] = $this->getDetails($_GET['id']);
+			} else {
+				$vars['action'] = 'add';
+			}
+			return load_view(__DIR__ . '/views/form.php',$vars);
+		} else {
 			return load_view(__DIR__ . '/views/grid.php');
 		}
-		$vars['ivr'] = self::DEFAULTS;
-		if(!empty($_GET['id'])){
-			$vars['ivr'] = $this->getDetails($_GET['id']);
-		}
-		return load_view(__DIR__ . '/views/form.php',$vars);
 	}
 }
