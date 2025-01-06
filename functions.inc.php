@@ -189,7 +189,7 @@ function ivr_get_config($engine) {
 						}
 
 						// for entries ending with a # just trim it off
-						if (isset($ivr['accept_pound_key'])) {
+						if (isset($ivr['accept_pound_key']) && $ivr['accept_pound_key']) {
 							$ext->add($c, $e['selection'] . '#', '', new ext_goto(1, $e['selection']));
 						}
 						//only display these two lines if the ivr is included in any queues
