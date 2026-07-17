@@ -2,7 +2,7 @@
 	<rawname>ivr</rawname>
 	<repo>standard</repo>
 	<name>IVR</name>
-	<version>17.0.9</version>
+	<version>18.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,19 +12,15 @@
 	</description>
   	<more-info>https://sangomakb.atlassian.net/wiki/spaces/PG/pages/23953486/IVR+Module</more-info>
 	<changelog>
-		*17.0.9* #604 ivr digit timeout fix 
-		*17.0.8* Fixing ivr option in destination dropdown
-		*17.0.3* Packaging of ver 17.0.3
-		*17.0.2* Packaging of ver 17.0.2
-		*17.0.1alpha* 17.0.1 alpha release
+		*18.0.1* initial release
 	</changelog>
 	<methods>
 		<get_config pri="600">ivr_get_config</get_config>
 	</methods>
 	<depends>
-		<version>17.0.1</version>
-		<module>recordings ge 17.0.1</module>
-		<module>core ge 17.0.1</module>
+		<version>18.0</version>
+		<module>recordings ge 18.0.1</module>
+		<module>core ge 18.0.1</module>
 	</depends>
 	<menuitems>
 		<ivr needsenginedb="yes">IVR</ivr>
@@ -71,6 +67,6 @@
 		</ivr>
  	</popovers>
  	<supported>
- 		<version>17.0</version>
+ 		<version>18.0</version>
  	</supported>
 </module>
