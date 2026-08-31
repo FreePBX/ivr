@@ -265,6 +265,12 @@ class Ivr extends FreePBX_Helpers implements BMO {
 		return $final;
 	}
 
+	public function getEntries($id){
+		$sth = $this->db->prepare('SELECT * FROM ivr_entries WHERE ivr_id = :id ORDER BY selection + 0');
+		$sth->execute([':id' => $id]);
+		return $sth->fetchAll(PDO::FETCH_ASSOC);
+	}
+
 	public function getActionBar($request) {
 		$buttons = array();
 		switch($request['display']) {
