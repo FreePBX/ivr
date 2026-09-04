@@ -4,8 +4,15 @@ use FreePBX_Helpers;
 use BMO;
 use PDO;
 class Ivr extends FreePBX_Helpers implements BMO {
+	/** @var \FreePBX */
+	public $FreePBX;
+
+	/** @var string|null */
 	private $temp = null;
+
+	/** @var PDO|null */
 	private $db = null;
+
 	const DEFAULTS = [
 		'display' => '',
 		'action' => '',
@@ -36,7 +43,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 	];
 	public function __construct($freepbx = null) {
 		if ($freepbx == null) {
-			throw new Exception("Not given a FreePBX Object");
+			throw new \Exception("Not given a FreePBX Object");
 		}
 
 		$this->FreePBX = $freepbx;
@@ -84,6 +91,23 @@ class Ivr extends FreePBX_Helpers implements BMO {
 		}
 		if($vars['action'] === 'save'){
 			needreload();
+			if (isset($_REQUEST['announcementrecording'])) {
+				$localFilename = basename((string) $_REQUEST['announcementrecording']);
+				$filepath = $this->temp . "/" . $localFilename;
+				if (file_exists($filepath)) {
+					$this->FreePBX->Media->load($filepath);
+					$recordingName = "ivr-" . $vars['name'] . "-recording-" . time();
+					$soundspath = $this->FreePBX->Config->get("ASTVARLIBDIR") . "/sounds";
+					$this->FreePBX->Media->convert($soundspath . "/en/custom/" . $recordingName . ".wav");
+					$vars['announcement'] = $this->FreePBX->Recordings->addRecording(
+						$recordingName,
+						sprintf(_("Recording created for IVR named '%s'"), $vars['name']),
+						"custom/" . $recordingName
+					);
+				} else {
+					$vars['announcement'] = '';
+				}
+			}
 			$id = $this->saveDetails($vars);
 			$this->saveEntries($id,$vars['entries']);
 			$this_dest = ivr_getdest($id);
@@ -109,7 +133,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 			$bindvalues[':id'] = $id;
 		}
 		$sql .= ' ORDER BY name';
-		$sth = $this->Database->prepare($sql);
+		$sth = $this->db->prepare($sql);
 		$sth->execute($bindvalues);
 		$res = array();
 		$res = $sth->fetchAll(\PDO::FETCH_COLUMN, 0);
@@ -163,7 +187,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 		}
 		$sql .= ' ORDER BY name';
 
-		$sth = $this->Database->prepare($sql);
+		$sth = $this->db->prepare($sql);
 		$sth->execute($bindvalues);
 		$res = $sth->fetchAll();
 		if ($id && isset($res[0])) {
@@ -188,7 +212,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 	public function saveEntries($id,$entries){
 		$this->deleteEntriesById($id);
 		if ($entries) {
-			$entries['ivr_ret'] = array_values($entries['ivr_ret']);
+			$entries['ivr_ret'] = array_values($entries['ivr_ret'] ?? []);
 			$stmt = $this->db->prepare('INSERT INTO ivr_entries VALUES (:ivr_id, :selection, :dest, :ivr_ret)');
 
 			for ($i = 0; $i < count($entries['ext']); ++$i) {
@@ -267,7 +291,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 
 	public function getActionBar($request) {
 		$buttons = array();
-		switch($request['display']) {
+		switch($request['display'] ?? '') {
 			case 'ivr':
 			$buttons = array(
 				'delete' => array(
@@ -297,7 +321,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 			if(empty($request['id']) && empty($request['action'])){
 				$buttons = NULL;
 			}
-			if($request['action'] == "save") {
+			if(($request['action'] ?? '') == "save") {
 				$buttons = NULL;
 			}
 			break;
@@ -320,7 +344,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 		}
 	}
 	public function ajaxHandler(){
-		switch ($_REQUEST['command']) {
+		switch ($_REQUEST['command'] ?? '') {
 			case "savebrowserrecording":
 			if ($_FILES["file"]["error"] == UPLOAD_ERR_OK) {
 				$time = time().rand(1,1000);
@@ -378,7 +402,7 @@ class Ivr extends FreePBX_Helpers implements BMO {
 			return array("status" => false, "message" => _("Can Not Find Uploaded Files"));
 			break;
 			case 'getJSON':
-			switch ($_REQUEST['jdata']) {
+			switch ($_REQUEST['jdata'] ?? '') {
 				case 'grid':
 				$ivrs = $this->getDetails();
 				$ret = array();

@@ -502,7 +502,7 @@ function ivr_check_destinations($dest=true) {
 
 function ivr_change_destination($old_dest, $new_dest) {
 	global $db;
- 	$sql = "UPDATE ivr_entires SET dest = ? WHERE dest = ?";
+	$sql = "UPDATE ivr_entries SET dest = ? WHERE dest = ?";
 	$params = array($new_dest, $old_dest);
  	$db->query($sql, $params);
 
