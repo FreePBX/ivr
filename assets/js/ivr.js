@@ -11,9 +11,8 @@ $("#duplicate").click(function(e){
 	$("#frm_ivr").submit();
 });
 
- $(document).on('change',  $("select[name^='goto']"), function(){
-		 var string = $(this).attr('activeElement');
-		var id =  $(string).attr('id');
+ $(document).on('change', "select[name^='goto']", function(){
+		var id = this.id;
 		 var res = id.split("goto");
 		var option = $("#"+id).val();
 		 if (option == 'Extensions' || option == 'IVR' || option == 'Directory') {
