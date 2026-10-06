@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX IVR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-29 05:20-0400\n"
+"POT-Creation-Date: 2026-10-06 07:19-0400\n"
 "PO-Revision-Date: 2016-12-12 01:21+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-Country: BRAZIL\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: Ivr.class.php:374
+#: Ivr.class.php:398
 msgid "A PHP extension stopped the file upload"
 msgstr "Uma extensão PHP parou o carregamento do arquivo"
 
@@ -93,7 +93,7 @@ msgstr "Anexar Anúncio a Inválido"
 msgid "Applications"
 msgstr "Aplicações"
 
-#: assets/js/ivr.js:91
+#: assets/js/ivr.js:90
 msgid "Are you sure you don't want a recording for this announcement?"
 msgstr "Tem certeza de que não quer uma gravação para este anúncio?"
 
@@ -101,7 +101,7 @@ msgstr "Tem certeza de que não quer uma gravação para este anúncio?"
 msgid "Browse"
 msgstr "Visualizar"
 
-#: Ivr.class.php:378
+#: Ivr.class.php:402
 msgid "Can Not Find Uploaded Files"
 msgstr "Não é Possível Localizar os Arquivos Carregados"
 
@@ -154,11 +154,11 @@ msgstr ""
 msgid "Default"
 msgstr "Padrão"
 
-#: Ivr.class.php:276 functions.inc.php:392
+#: Ivr.class.php:300 functions.inc.php:392
 msgid "Delete"
 msgstr "Apagar"
 
-#: assets/js/ivr.js:498
+#: assets/js/ivr.js:497
 msgid "Delete Recording"
 msgstr "Apagar Gravação"
 
@@ -188,7 +188,7 @@ msgstr ""
 msgid "Digits"
 msgstr "Dígitos"
 
-#: assets/js/ivr.js:113
+#: assets/js/ivr.js:112
 msgid "Digits are limited to 10 digits."
 msgstr ""
 
@@ -202,7 +202,7 @@ msgstr ""
 msgid "Drop Annoucement Recording Here"
 msgstr "Solte a Gravação do Anúncio Aqui"
 
-#: Ivr.class.php:286
+#: Ivr.class.php:310
 msgid "Duplicate"
 msgstr ""
 
@@ -210,7 +210,7 @@ msgstr ""
 msgid "Edit IVR: "
 msgstr "Editar URA: "
 
-#: assets/js/ivr.js:238
+#: assets/js/ivr.js:237
 msgid "Edit:"
 msgstr "Editar:"
 
@@ -218,7 +218,7 @@ msgstr "Editar:"
 msgid "Enable Direct Dial"
 msgstr "Habilitar discagem direta"
 
-#: Ivr.class.php:371
+#: Ivr.class.php:395
 msgid "Failed to write file to disk"
 msgstr "Falha ao gravar o arquivo no disco"
 
@@ -235,7 +235,7 @@ msgid "Hit the red record button to start recording from your browser"
 msgstr ""
 "Pressione o botão vermelho para iniciar a gravação a partir do seu navegador"
 
-#: Ivr.class.php:98 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
+#: Ivr.class.php:122 /usr/src/freepbx/ivr/ivr.i18n.php:4 ivr.i18n.php:10
 #: /usr/src/freepbx/ivr/views/grid.php:3
 msgid "IVR"
 msgstr "URA"
@@ -279,11 +279,11 @@ msgstr ""
 msgid "IVR: %s / Option: %s"
 msgstr "URA: %s / Opção: %s"
 
-#: assets/js/ivr.js:85
+#: assets/js/ivr.js:84
 msgid "IVRs name already exist"
 msgstr ""
 
-#: assets/js/ivr.js:82
+#: assets/js/ivr.js:81
 msgid "IVRs require a valid name"
 msgstr "URAs requerem um nome válido"
 
@@ -332,7 +332,7 @@ msgstr "Gravação Tentativa Inválida"
 msgid "List IVRs"
 msgstr "Listar URAs"
 
-#: Ivr.class.php:368
+#: Ivr.class.php:392
 msgid "Missing a temporary folder"
 msgstr "Faltando uma pasta temporária"
 
@@ -351,11 +351,11 @@ msgstr "Não"
 msgid "No - Legacy"
 msgstr ""
 
-#: assets/js/ivr.js:342
+#: assets/js/ivr.js:341
 msgid "No file to load!"
 msgstr "Nenhum arquivo para carregar!"
 
-#: Ivr.class.php:365
+#: Ivr.class.php:389
 msgid "No file was uploaded"
 msgstr "Nenhum arquivo foi carregado"
 
@@ -394,7 +394,7 @@ msgstr ""
 msgid "Play Previous Recording"
 msgstr "Reproduzir Gravação Anterior"
 
-#: assets/js/ivr.js:109
+#: assets/js/ivr.js:108
 msgid "Please enter a valid value for Digits Pressed"
 msgstr ""
 
@@ -429,11 +429,16 @@ msgid "Provides options for callers to direct dial an extension."
 msgstr ""
 "Fornece opções para usuários chamadores para discagem direta de um ramal."
 
-#: assets/js/ivr.js:576
+#: Ivr.class.php:104
+#, php-format
+msgid "Recording created for IVR named '%s'"
+msgstr "Gravação criada para URA chamada '%s'"
+
+#: assets/js/ivr.js:575
 msgid "Recording..."
 msgstr "Gravando..."
 
-#: Ivr.class.php:281
+#: Ivr.class.php:305
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -465,7 +470,7 @@ msgstr "Opção de Toque"
 msgid "Ringer Volume Override"
 msgstr "Substituição do volume do toque"
 
-#: assets/js/ivr.js:498
+#: assets/js/ivr.js:497
 msgid "Save Recording"
 msgstr "Salvar Gravação"
 
@@ -482,11 +487,11 @@ msgstr ""
 "Selecione uma opção de toque na lista de opções acima. Isto irá determinar "
 "como o seu telefone soa quando for executado a partir deste grupo."
 
-#: Ivr.class.php:291
+#: Ivr.class.php:315
 msgid "Submit"
 msgstr "Enviar"
 
-#: Ivr.class.php:359
+#: Ivr.class.php:383
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
@@ -494,11 +499,11 @@ msgstr ""
 "O arquivo enviado excede a diretiva MAX_FILE_SIZE que foi especificada no "
 "formulário HTML"
 
-#: Ivr.class.php:356
+#: Ivr.class.php:380
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "O arquivo carregado excede a diretiva upload_max_filesize no php.ini"
 
-#: Ivr.class.php:362
+#: Ivr.class.php:386
 msgid "The uploaded file was only partially uploaded"
 msgstr "O arquivo enviado foi carregado parcialmente"
 
@@ -531,23 +536,23 @@ msgstr ""
 "Para reproduzir a mídia, você precisará atualizar seu navegador para uma "
 "versão recente ou atualizar seu %s"
 
-#: assets/js/ivr.js:166
+#: assets/js/ivr.js:165
 msgid "Unable to delete the first entry. Please edit instead"
 msgstr "Não é possível excluir o primeiro elemento. Edite em vez de excluir"
 
-#: assets/js/ivr.js:162
+#: assets/js/ivr.js:161
 msgid "Unable to delete the last entry"
 msgstr "Não é possível excluir o último elemento"
 
-#: Ivr.class.php:331
+#: Ivr.class.php:355
 msgid "Unknown Error"
 msgstr "Erro Desconhecido"
 
-#: Ivr.class.php:351
+#: Ivr.class.php:375
 msgid "Unsupported file format"
 msgstr "Formato de arquivo não suportado"
 
-#: assets/js/ivr.js:265
+#: assets/js/ivr.js:264
 msgid "Unsupported file type"
 msgstr "Tipo de arquivo não suportado"
 
@@ -578,7 +583,7 @@ msgstr ""
 msgid "Yes"
 msgstr "Sim"
 
-#: assets/js/ivr.js:580
+#: assets/js/ivr.js:579
 msgid "Your Browser Blocked The Recording, Please check your settings"
 msgstr "Seu Navegador Bloqueou a Gravação, verifique suas configurações"
 
@@ -603,9 +608,6 @@ msgstr "dígitos pressionados"
 
 #~ msgid "No Astman, Not loading IVR"
 #~ msgstr "Sem Astman, Não carrega a URA"
-
-#~ msgid "Recording created for IVR named '%s'"
-#~ msgstr "Gravação criada para URA chamada '%s'"
 
 #~ msgid "Digits the caller needs to dial to access said destination"
 #~ msgstr ""
